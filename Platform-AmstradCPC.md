@@ -1,24 +1,20 @@
-======= Amstrad CPC =======
-
-{{:platform:amstrad_cpc.jpg|}}
+![](images/platform/amstrad_cpc.jpg)
 
 
 # Quick start
 
 
-zcc +cpc -lndos -lm -subtype=wav -create-app -o program adv_a.c
+    zcc +cpc -lndos -lm -subtype=wav -create-app -o program adv_a.c
 
 -or-
 
-zcc +cpc -lcpcfs -lmz -subtype=wav -create-app -o program adv_a.c
+    zcc +cpc -lcpcfs -lmz -subtype=wav -create-app -o program adv_a.c
 
 -or-
 
-zcc +cpc -clib=ansi -lcpcfs -lmz -subtype=wav -create-app -o program adv_a.c
-
+    zcc +cpc -clib=ansi -lcpcfs -lmz -subtype=wav -create-app -o program adv_a.c
 
 Historically interrupts were disabled to improve the stability, now it is normally not necessary; by the way the old option can still be activated via the "-subtype=noint" parameter.
-
 
 '-subtype=fastwav' can shorten the loading time by producing a non standard audio format.
 
