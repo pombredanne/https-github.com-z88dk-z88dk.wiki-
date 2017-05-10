@@ -39,20 +39,17 @@ call &1200
 
 If you produce code under $1200 and needs to get loaded then run from BASIC, the "memory" command is required; in example, to compile and run a program located at $400:
 
-`<file>`
+```
 zcc +cpc -lcpcfs -lmz -zorg=1024 -create-app -o program adv_a.c
-`</file>`
+```
 
-`<file>`
-
+```
 openout"d"
 memory &3ff
 closeout
 load"mybin",&400
 call &400
-
-`</file>`
-
+```
 
 #### Floating Point Support
 
@@ -62,11 +59,9 @@ The library that is linked in by default supports 3 models of CPC - CPC464, CPC6
 
 Should memory be in short supply and you wish to compile for a specific CPC then you can do the following:
 
-`<file>`
-
+```
 zcc +cpc [...] -lmz -l6128_math
-
-`</file>`
+```
 
 or -l464_math or -l664_math which will save about 600 bytes of memory.
 
@@ -78,29 +73,28 @@ The generic floating point functions are still available via the "-lm" flag.
 
 The additional functions introduced with the developement of the native CPC library, are now available in all the implementations; these are:
 
-`<file>`
+```
 void deg();
+```
 
 Switch the FP engine into degrees mode
-`</file>`
 
-`<file>`
+```
 void rad();
-
+```
 Switch the FP engine into radians mode
-`</file>`
 
-`<file>`
+```
 double pi();
+```
 
 Return the value of pi.
-`</file>`
 
-`<file>`
+```
 double pow10(int x);
+```
 
 Returns 10^x
-`</file>`
 
 
 
@@ -115,7 +109,7 @@ and output. This buffer is statically built into the program.
 
 The following routines are not supported by the CPC fcntl library:
 
-`<file>`
+```
 ftell()
 fgetpos()
 fsetpos()
@@ -127,7 +121,7 @@ mkdir()
 getcwd()
 rmdir()
 getwd()
-`</file>`
+```
 
 Moreover, open() only supports the O_RDONLY and O_WRONLY flags.
 
@@ -164,7 +158,7 @@ It will create both a raw block (a.bin) and a special binary file called "a.cpc"
 
     xti -incl tst.dsk
 
-`<file>`
+```
     C:\cpcemu>xti -incl tst.dsk
     Disk Image Extender v1.4 (c) 1998 Pierre Guerrier,
     DOS port by Ulrich Doewich
@@ -174,8 +168,7 @@ It will create both a raw block (a.bin) and a special binary file called "a.cpc"
     Include ? .
     
     C:\cpcemu>
-`</file>`
-
+```
 
 *  Load and run the new program from within your favourite emulator, after having properly configured the virtual disk drives
 
@@ -188,7 +181,7 @@ It will create both a raw block (a.bin) and a special binary file called "a.cpc"
 
 This note is still *partially* valid, but please note that the "-create-app" flag makes life easier.
 
-`<file>`
+```
 	Compile the program (optionally you can set another address for ORG)
 		zcc +cpc -zorg=24576 program.c
 	Prepare an empty snapshot with your preferred Amstrad emulator 
@@ -199,8 +192,7 @@ This note is still *partially* valid, but please note that the "-create-app" fla
 		sna_mng i a.bin loader.sna 24576 30000
 	Re-run the emulator, load the modified snapshot and type:
 		call &6000
-`</file>`
-
+```
 
 
 # Tricks using the WinAPE emulator
