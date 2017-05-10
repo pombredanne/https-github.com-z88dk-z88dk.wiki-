@@ -13,6 +13,15 @@
 
 * [Introduction](front)
 
+## Misc
+
+* [Debugging](debugging)
+* [Far Memory](farmem)
+* [Creating Libraries](creating_libaries)
+* [Inline assembler](inline_asm)
+* [Deficiencies](deficient)
+
+
 ## Tools
 
 * [copt](Tool--copt)
