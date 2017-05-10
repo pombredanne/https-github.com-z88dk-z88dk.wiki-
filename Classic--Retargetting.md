@@ -1,5 +1,3 @@
-======= Retargetting the Compiler For Other Z80 Based Machines =======
-
 #  Introduction 
 
 As can be seen from the number of platforms that z88dk can generate code for, retargetting the kit for a new platform can be a trivial process.
@@ -20,7 +18,7 @@ The name of the file should be something along the lines of [3/4 letter id]_crt0
 In addition to the .asm file, a file with the suffix .opt is required, this should include the .asm, each for the z88, this file contains:
 
 	
-	        INCLUDE         "#z88_crt0.asm"
+	        INCLUDE         "z80_crt0.asm"
 
 
 Whilst in the lib/ directory, a .cfg file should be created lib/config directory for the target. Base it on the configuration file for the startup that was used.
@@ -46,7 +44,6 @@ Create a directory z88dk/libsrc/stdio/[machine id]. This is the directory that w
 
 ##  Required Functions 
 
-	:::c
 	int fgetc_cons(void)
 
 
@@ -55,13 +52,11 @@ key value in hl. This routine should return 0 if no key
 is pressed, however unless an error occurs it should wait
 for a keypress.
 
-	:::c
 	void fputc_cons(char code)
 
 
 Should print code to the screen
 
-	:::c
 	int fgets_cons(char *buf, int maxlen)
 
 
@@ -69,7 +64,6 @@ Should read a string from the keyboard. Done this way because
 some computers (i.e. z88) have an OS call to do this which
 offers editing facilities
 
-	:::c
 	void puts_cons(char *str)
 
 
@@ -77,7 +71,6 @@ offers editing facilities
 is provided to conserve memory usage should no other stdio
 routines be required
 
-	:::c
 	int getk(void)
 
 
@@ -94,7 +87,6 @@ Create a directory libsrc/fcntl/machine_id
 Should file handling be required, then the following standard routines
 from fcntl.h (or unistd.h as it is sometimes known), alternatively, should file handling not be required, then linking with the -lndos library will satisfy any compile-time requirements.
 
-	:::c
 	int open(far char *name, int flags, mode_t mode);
 	int creat(far char *name, mode_t mode);
 	int close(int fd);
@@ -103,16 +95,6 @@ from fcntl.h (or unistd.h as it is sometimes known), alternatively, should file 
 	long lseek(int fd,long posn, int whence);
 
 
-	:::c
-	int open_z88(far char *name, int flags, mode_t mode, char *explicit, size_t len)
-
-
-This is a non-standard routine and on most machines will
-probably just call open() however this provides the facility
-to return the explicit file name (which is placed in explicit,
-up to a maximum length len)
-
-	:::c
 	int __FASTCALL__ readbyte(int fd);
 
 
@@ -122,17 +104,13 @@ should return EOF (-1) and return with carry set. Otherwise
 it should return with carry reset and hl holding the byte
 just read
 
-	:::c
 	int writebyte(int fd, int c);
-
 
 This function writes byte c to filehandle fd, once more if
 an error occurs it should return EOF and carry set, otherwise
 hl holds the byte just written and carry is reset
 
-	:::c
 	void fabandon(FILE *fp)
-
 
 Abandon file with the handle fd - this is called by the system
 on program exit should it not be able to close a file. This
