@@ -1,5 +1,3 @@
-======= Amstrad NC family portable computers  hints & tools =======
-
 ![](images/platform/nc200.jpg)
 
 
