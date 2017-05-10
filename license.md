@@ -1,8 +1,7 @@
 Unless otherwise stated in the appropriate file, z88dk is distributed under the following license.
 
-`<file>`
 
-
+```
 		     The Clarified Artistic License
 
 				Preamble
@@ -139,7 +138,7 @@ IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
 WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 				The End
-`</file>`
+```
 
 The basic intention of my (dom) choice of this licence (and hence my interpretation of it) was as follows:
 
