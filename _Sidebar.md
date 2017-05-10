@@ -13,8 +13,6 @@
 
 ### Platform Independent Library Functions
 
-* [Abstract Data Types](adt)
-
 ## New Library
 
 * [Introduction](front)
@@ -23,10 +21,18 @@
 
 * [Debugging](debugging)
 * [Far Memory](farmem)
-* [Creating Libraries](creating_libaries)
-* [Inline assembler](inline_asm)
 * [Deficiencies](deficient)
+* [Importing routines written in 8080 assembly mnemonics](8080toz80)
+* [Using CP/M libraries in REL format with z88dk](relformat)
+** [Linking external libraries](libraries)
+** [Linking Basic, Fortran, Pascal Programs with z88dk](programs)
 
+## Mixing C and Z80 Assembler
+
+* [Inline Assembler(inlineasm)
+* [The Stack frame (Parameter passing)](stackframe)
+* [Pragma Directives](pragma)
+* [Sharing Code by Creating Libraries](creating_libaries)
 
 ## Tools
 
