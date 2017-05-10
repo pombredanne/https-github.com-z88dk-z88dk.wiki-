@@ -24,8 +24,8 @@
 * [Deficiencies](deficient)
 * [Importing routines written in 8080 assembly mnemonics](8080toz80)
 * [Using CP/M libraries in REL format with z88dk](relformat)
-** [Linking external libraries](libraries)
-** [Linking Basic, Fortran, Pascal Programs with z88dk](programs)
+  * [Linking external libraries](libraries)
+  * [Linking Basic, Fortran, Pascal Programs with z88dk](programs)
 
 ## Mixing C and Z80 Assembler
 
