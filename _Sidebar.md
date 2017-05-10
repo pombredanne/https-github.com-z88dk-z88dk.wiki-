@@ -29,7 +29,7 @@
 
 ## Mixing C and Z80 Assembler
 
-* [Inline Assembler(inlineasm)
+* [Inline Assembler](inlineasm)
 * [The Stack frame (Parameter passing)](stackframe)
 * [Pragma Directives](pragma)
 * [Sharing Code by Creating Libraries](creating_libaries)
