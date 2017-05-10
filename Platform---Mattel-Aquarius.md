@@ -1,8 +1,3 @@
-======= Mattel Aquarius hints & tools =======
-
-
-
-
 # Quick start
 
     zcc +aquarius -lm -create-app -o adventure adv_a.c
