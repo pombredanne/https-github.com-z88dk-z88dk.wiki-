@@ -6,7 +6,7 @@ An arrow is displayed near the drive icon while it is being inspected.
 {{examples:snippets:zxspectrum:mdvtest.gif|}}
 
 
-`<file>`
+```
 
 /*
     Demonstrates the power of the low-level microdrive functions:
@@ -103,6 +103,6 @@ char a_mask[] = { 6, 6, 0x30 , 0x78 , 0xFC , 0xFC , 0xFC , 0xFC  };
     printf("%u cartridge(s) have 'run' for autoboot\n\n",runcount);
  }
 
-`</file>`
+```
 
 

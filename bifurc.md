@@ -4,7 +4,7 @@
 
 
 
-`<file>`
+```
 
 /* z88dk Maths and graphics demo */
 /* Bifurcation diagram of the logistic map */
@@ -49,5 +49,5 @@ void main()
 		r=r+.005;
 	}
 }
-`</file>`
+```
 

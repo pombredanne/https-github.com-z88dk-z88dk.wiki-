@@ -52,7 +52,7 @@ The "-zorg=`<location>`" option locates the code at the desired position; it has
 It is an advanced way to pass parameters to the appmake tool; in this case we've specified a different file name.
 The available options are:
 
-`<file>`
+```
 
  1. h   --help            (bool)    Display this help
  2. b   --binfile         (string)  Linked binary file
@@ -62,7 +62,7 @@ The available options are:
        --blockname       (string)  Name of the binary block in tape
        --org             (integer) Origin of the binary
 
-`</file>`
+```
 
 
 ## Tips and tricks

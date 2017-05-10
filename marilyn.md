@@ -10,7 +10,7 @@ Compare the original picture (follow the link above) to this, considering that t
 
 ======= Example code =======
 
-`<file>`
+```
 
 #include `<stdio.h>`
 
@@ -799,4 +799,4 @@ int main ()
 	draw_profile(160, 90, 55, marilyn);
 }
 
-`</file>`
+```

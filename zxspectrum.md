@@ -317,9 +317,9 @@ The AMX mouse is designed to operate in the z80's interrupt mode 2.  To use the 
 
 The library also requires that the program declares a few global variables in RAM to hold position data:
 
-`<file>`
+```
 unsigned int in_AMXcoordX, in_AMXcoordY, in_AMXdeltaX, in_AMXdeltaY;
-`</file>`
+```
 
 The call to *in_MouseAMXInit()* initializes these variables to sensible values.
 
@@ -336,9 +336,9 @@ The call to *in_MouseAMXInit()* initializes these variables to sensible values.
 
 The library requires that the program declare a few global variables in RAM to hold position data:
 
-`<file>`
+```
 uchar in_KempcoordX, in_KempcoordY, in_KemprawX, in_KemprawY;
-`</file>`
+```
 
 These variables are initialized when *in_MouseKempInit()* is called.
 
@@ -371,7 +371,7 @@ A collection of functions designed to make access to the Spectrum's display file
 
 In the following, *screen address* refers to the pixel address within the display file (16384-22527) and *attribute address* refers to an address in the attributes area (22528-23295).
 
-`<file>`
+```
 Function names are constructed from the following atoms:
 
 saddr = screen address
@@ -384,7 +384,7 @@ pxy   = pixel (x,y) coordinate
 cx    = character x coordinate (0..31)
 cy    = character y coordinate (0..23)
 cyx   = character (y,x) coordinate - ordering borrowed from Sinclair Basic
-`</file>`
+```
 
 So for example:
 

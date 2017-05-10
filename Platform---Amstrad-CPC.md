@@ -26,7 +26,7 @@ Historically interrupts were disabled to improve the stability, now it is normal
 
 The code is compiled by default to address $1200, to run the code on a CPC you should do the following:
 
-`<file>`
+```
 
  | tape
  | ----
@@ -34,7 +34,7 @@ memory &11ff
 load "",&1200
 call &1200
 
-`</file>`
+```
 
 
 If you produce code under $1200 and needs to get loaded then run from BASIC, the "memory" command is required; in example, to compile and run a program located at $400:

@@ -12,7 +12,7 @@ The z88dk `<conio.h>` emulation layer provides many conversion facilities, expec
 
 {{:examples:snippets:snakeosca.gif|}}
 
-`<file>`
+```
 /*
 
  * 
@@ -442,4 +442,4 @@ void add_segment()
 }
 
 
-`</file>`
+```

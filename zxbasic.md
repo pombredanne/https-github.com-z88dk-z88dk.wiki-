@@ -4,7 +4,7 @@ This example shows the capabilities of the functions to interface to the ZX Spec
 It is possible to pass parameters and to call "subroutines".
 
 
-`<file>`
+```
 
 /*
 	Interfacing to the ZX Spectrum BASIC
@@ -74,7 +74,7 @@ int main()
 
 }
 
-`</file>`
+```
 
 
 ## Running on the ZX Spectrum

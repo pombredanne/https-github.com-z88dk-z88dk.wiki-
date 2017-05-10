@@ -3,7 +3,7 @@
 Note the character code **12** used to clear the screen.
 
 
-`<file>`
+```
 /*
 
  *	Hello World
@@ -15,7 +15,7 @@ main()
 {
 	printf("%cHello world!\n",12);
 }
-`</file>`
+```
 
 
 ## Running on the ZX Spectrum

@@ -1,6 +1,6 @@
 # Interfacing to the Currah uSpeech
 
-`<file>`
+```
 
 /*
 	ZX Spectrum and the Currah uSpeech lib demo
@@ -39,6 +39,6 @@ int main()
 	printf ("\n\n\n(Program end).\n");
 }
 
-`</file>`
+```
 
 

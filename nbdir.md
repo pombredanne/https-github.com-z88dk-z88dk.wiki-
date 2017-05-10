@@ -1,6 +1,6 @@
 # Seeking the disk directory in an expanded NewBrain
 
-`<file>`
+```
 /*
 
  *	Example of advanced use of the NewBrain specific functions
@@ -32,4 +32,4 @@ char buf[150];
 	nb_close( NBCHAN );
 }
 
-`</file>`
+```

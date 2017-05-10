@@ -34,7 +34,7 @@ Can be useful to create sound effects in software loops (i.e. engine noise for a
 ## bit_fx
 
 Preset sound effects; every library contains 8 different sounds:
-`<file>`
+```
 bit_fx(0)	Short hi-pitch decreasing "gulp/fall" sound
 bit_fx(1)	Fast increasing scale
 bit_fx(2)	Fast increasing squeak, mid duration, high pitch
@@ -70,7 +70,7 @@ bit_fx4(4)	High pitch fall-down sound, long duration
 bit_fx4(5)	Short high pitch slightly noisy decreasing sound
 bit_fx4(6)	Short jump sound
 bit_fx4(7)	Very quick duck squeak
-`</file>`
+```
 
 ## bit_synth
 
@@ -104,7 +104,7 @@ bit_play(unsigned char melody[]);
 
 
 EXAMPLE:
-`<file>`
+```
 bit_play("2A--A-B-CDEFGAB5C+");
-`</file>`
+```
 

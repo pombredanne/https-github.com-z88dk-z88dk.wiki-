@@ -1,6 +1,6 @@
 #  ZX Spectrum  Platform
 
-![](images/platform/spectrum.gif)
+![](images/platform/spectrum.jpg)
 
 
 ## Introduction
@@ -24,7 +24,7 @@ Tools are provided to package it in various ways, but the default one is the ".T
 This command will build a .TAP tape image, linking a foo file library and the default math support.
 To save some memory it is possible to use the ZX Spectrum specific math library, by changing the "-lm" parameter with "-lmzx" or "-lmzx_tiny", but it will run slower and with less precision.
 
-The -pragma-need=ansiterminal parameter enables the full VT/ANSI emulation (see below).
+The -clib=ansi parameter enables the full VT/ANSI emulation (see below).
 
 If file support is required it is possible to change the "-lndos" parameter and pass a library name (see the [ZX Spectrum libraries](library/zxspectrum/fcntl) section).
 
@@ -52,19 +52,17 @@ This command will compile the program in [CP/M](platform/cpm) mode permitting th
 
 ### Pragma directives
 
-`<file>`
+```
 #pragma output nostreams   - Don't allocate storage for file streams
 
 #pragma output norom3      - Don't include code for calling into the BASIC ROM - certain library functions may need this
-`</file>`
+```
 
 ### The 'appmake' tool
 
 
 The 'appmake' tool is activated by passing the "-create-app" parameter to the compiler, as already shown.
 Here are some other examples:
-
-
 
     zcc  +zx -lndos -lm -zorg=25000 -create-app program.c
 
@@ -74,8 +72,7 @@ The "-zorg=`<location>`" option locates the code at the desired position; it has
 Edit {z88dk}/lib/config/zx.cfg to customize your binary package (i.e. -Cz--screen -Czscreen.scr adds a picture while loading).
 The available options are:
 
-`<file>`
-
+```
 -h   --help            (bool)    Display this help
 -b   --binfile         (string)  Linked binary file
 -c   --crt0file        (string)  crt0 file used in linking
@@ -93,8 +90,7 @@ The available options are:
      --merge           (string)  Merge a custom loader from external TAP file
      --org             (integer) Origin of the binary
      --blockname       (string)  Name of the code block in tap file
-
-`</file>`
+```
 
 
 The 'patchpos' and 'patchdata' are for the turbo tape loader mods.
@@ -141,9 +137,6 @@ watch out!
 Creates .TAP file with a very simple BASIC loader at the beginning.
 After converting, a LOAD "" is sufficient to run the code.
 
-
-
-
 #### bin2bas-rem
 
 ** Warning:  this tool overwrites the specified .TAP file **
@@ -155,19 +148,19 @@ Creates a new TAP file (overwriting if necessary) with a BASIC program line in w
 The relocation routine is patched by this tool to fit with the ZX Spectrum behaviour.
 
 To compile a relocatable program:
-`<file>`
+```
 	zcc +zx -Ca-R -lm -lndos program.c
 	bin2bas-rem a.bin a.tap <line number>
-`</file>`
+```
 
 To run the machine code:
-`<file>`
+```
 	PRINT USR (PEEK 23635+256*PEEK 23636+5)
-`</file>`
+```
 
 Alternatively it is possible to make use of the system variable 23637 (location of the next line to be run) and stuff different programs in a single BASIC source: 
-`<file>`
 
+```
 	  1 DEF FN l()=USR(PEEK 23637+256*PEEK 23638+5)
 	100 LET x=FN l()
 	101 REM (program)
@@ -177,8 +170,7 @@ Alternatively it is possible to make use of the system variable 23637 (location 
 Hints:   DO NOT edit the REM line.  You need to place it at its right position with this tool.
          If you are in trouble try to re-MERGE the REM lines onto you main BASIC block.
 
-`</file>`
-
+```
 
 ## Advanced use of the ZX Spectrum libraries
 
@@ -190,8 +182,7 @@ The new screen driver is still fairly minimal but it does feature 64 column text
 
 Here are the byte sequences for it:
 
-`<file>`
-
+```
 1,64	  - Switch to 64 column mode
 1,32	  - Switch to 32 column mode
 2,hh,ll   - Set the address of the 32 column font. ll is low byte, hh = high
@@ -199,9 +190,9 @@ Here are the byte sequences for it:
 3,hh,ll   - Set the address for the UDGs by default this points to
 	    65368
 
-8,9,10,11 - Move in x and y as you would expect
+8,9,11 - Move in x and y as you would expect
 12	  - Form feed - clears the screen and moves print posn to 0,0
-13	  - Carriage return - advances y and sets x to 0
+10	  - Carriage return - advances y and sets x to 0
 
 16,x	  - Set the ink colour  (x = 48-55 ('0'-'7'))
 17,x	  - Set the paper colour (x = 48-55 ('0'-'7'))
@@ -213,8 +204,7 @@ Here are the byte sequences for it:
 	    NB. y and x are displaced by 32 eg to move the print position
 	    to (0,0) use 22,32,32. 32 column mode also uses 64 column
 	    coordinates.
-
-`</file>`
+```
 
 All the commands, except for the udg address/font address  can be embedded 
 in strings using either octal or hexadecimal representation. Address changes

@@ -22,7 +22,7 @@ Its text output helps to understand cross-references between the modules.
 You might want to disassemble them, I.E. with dz80: in that case a batch command could help.
 See the following example, for the MS-DOS command prompt:
 
-`<file>`
+```
 rel2bin %1 > %1.txt
 md %1.dir
 move /y *. %1.dir
@@ -32,6 +32,6 @@ copy *. *.bin
 for %%x in (*.) do ..\dz80 %%x
 del *.
 del *.bin
-`</file>`
+```
 
 

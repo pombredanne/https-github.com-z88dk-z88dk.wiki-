@@ -18,7 +18,7 @@ Details on the configuration of a port can be revealed with:
 
 ### Options to control the action of the frontend
 
-`<file>`
+```
      +[file]       Name of alternate config file 
      		   (must be the first argument)
      -a            Produce .asm (or .opt) file only
@@ -38,12 +38,12 @@ Details on the configuration of a port can be revealed with:
      -clib=[lib]   Switch to the specified standard library
      -subtype=[x]  Generate output for the platform subtype x
      -compiler=X   X=sdcc or X=sccz80
-`</file>`
+```
 
 
 ### Options to control library usage
 
-`<file>`
+```
      Parameters valid for the Z88 (see the platform sections for more options)
 
      -Lpath        Add to the library search path
@@ -60,13 +60,13 @@ Details on the configuration of a port can be revealed with:
      -m            Generate .map files when assembling/linking
      -s            Generate .sym files when assembling/linking
      --list        Generate list files
-`</file>`
+```
 
 Other libraries are available
 
 ### Options to control the type code produced
 
-`<file>`
+```
      -unsigned        Implicitly define everything as unsigned unless explicitly
                       told otherwise (sccz80)
      -create-app      Create an application image (i.e. bank 63,62 etc)
@@ -82,11 +82,11 @@ Other libraries are available
                       -pragma-redirect:fputc_cons=xyz123
                       will make xyz123 the assembler label that is used for console 
                       output
-`</file>`
+```
 
 ### Miscellaneous options
 
-`<file>`
+```
      --c-code-in-asm Intersperse C code as comments in the assembler output, warning:
                      this *will* clobber some optimisations for sccz80
      -Cp[option]   Pass an option through to the pre-processor
@@ -95,7 +95,7 @@ Other libraries are available
      -Cz[option]   Pass an option through to appmake
      -Cc[option]   Pass an option through to sccz80
      -Cs[option]   Pass an option through to sdcc
-`</file>`
+```
 
 
 In addition, the flags, -D, -I, -U are passed through to the preprocessor.

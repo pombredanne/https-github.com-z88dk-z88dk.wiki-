@@ -2,7 +2,7 @@
 
 This program will draw the madelbrot function in low resolution mode, then will color-cycle the picture.
 
-`<file>`
+```
 
 /*
 	Coloured mandelbrot demo - shows the zxlowgfx capabilities
@@ -104,7 +104,7 @@ for(k=100; k>=0; k--) {
 }
 
 
-`</file>`
+```
 
 
 {{examples:snippets:zxspectrum:cmandel1.gif|}}

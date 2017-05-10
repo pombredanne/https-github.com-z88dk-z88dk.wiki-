@@ -2,7 +2,7 @@
 
 This program will display the cos(x²+y²) function using the z-buffer algorithm.
 
-`<file>`
+```
 
 #include `<graphics.h>`
 
@@ -30,7 +30,7 @@ char z,buf;
 	}
 }
 
-`</file>`
+```
 
 
 

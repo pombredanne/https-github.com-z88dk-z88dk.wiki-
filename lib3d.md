@@ -36,7 +36,7 @@ Use these functions to rotate a vector around the origin. The variable 'rot' is 
 Note: Do not rotate the original coordinates! This will distort an object after a few times of use. Use ozcopyvector() to first copy the coordinates into a temporary variable and rotate them there.
 
 Example:
-`<file>`
+```
 ...
 Vector_t v;
 ...
@@ -47,7 +47,7 @@ ozrotatepointx(&v, 90);
 ozrotatepointy(&v, 90);
 ozrotatepointz(&v, 90);
 ...
-`</file>`
+```
 
 
 ### Copy a vector
@@ -59,14 +59,14 @@ This function copies a vector's X, Y, and Z coordinates from *src to *dest.
 
 Example:
 
-`<file>`
+```
 ...
 Vector_t v1;
 Vector_t v2;
 ...
 ozcopyvector(&v2, &v1);
 ...
-`</file>`
+```
 
 
 ### Translate a vector
@@ -87,14 +87,14 @@ Subtract vector v1 by v2, result in r.
 Offset a vector by using this function. It will add the X, Y and Z coordinates from *offset to *v.
 
 Example:
-`<file>`
+```
 ...
 Vector_t v1;
 Vector_t v2;
 ...
 oztranslatevector(&v2, &v1);
 ...
-`</file>`
+```
 
 
 ### Scale vector
@@ -159,7 +159,7 @@ Dot product of v1 by v2.
 This function will convert 3D vectors (X, Y, Z) into 2D Points (X, Y). This will even compensate for camera's position and angle. If you do not wish to use a camera in your program, use ozplotpoint() instead (see next function.)
 
 Example:
-`<file>`
+```
 ...
 Vector_t v;
 Point_t p;
@@ -167,7 +167,7 @@ Cam_t mycam;
 ...
 ozplotpointcam(&v, &mycam, &p);
 ...
-`</file>`
+```
 
 
 ### Fast 3D to 2D vector conversion
@@ -179,14 +179,14 @@ This function converts 3D vectors to 2D points without compensating for camera's
 
 Example:
 
-`<file>`
+```
 ...
 Vector_t v;
 Point_t p;
 ...
 ozplotpoint(&v, &p);
 ...
-`</file>`
+```
 
 
 

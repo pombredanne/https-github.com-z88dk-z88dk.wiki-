@@ -12,7 +12,7 @@ In despite to its little success, it is still a nice example on how to take bene
 
 This is just the base algorithm which can be compared to the extended versions.
 
-`<file>`
+```
 
 /*   TIC TAC TOE  (TRIS)  Game
      By Stefano Bodrato
@@ -208,7 +208,7 @@ int main()
 
 }
 
-`</file>`
+```
 
 ## Commodore 128
 
@@ -220,7 +220,7 @@ The progam has been loaded from a 1541 drive.
 
 {{examples:snippets:tictac128.jpg|}}
 
-`<file>`
+```
 
 /*	     TIC TAC ZAC  (TRIS)  Game
 	        C128 inline assembly version
@@ -755,13 +755,13 @@ wloop:
 
 #endasm
 
-`</file>`
+```
 
 ## ZX 81
 
 The ZX 81 version has been written long time before the latest fixes. The assembler portions permitted the program to run flicker-free. 
 
-`<file>`
+```
 
 /*
 	     TIC TAC ZAC  (TRIS)  Game
@@ -1254,7 +1254,7 @@ jr	printmsg
 
 #endasm
 
-`</file>`
+```
 
 
 ## Links

@@ -3,8 +3,7 @@
 This program will produce VT/ANSI compatible ESCAPE sequences to test the emulation engine.
 
 
-`<file>`
-
+```
 #include "stdio.h"
 
 main()
@@ -68,7 +67,7 @@ int x;
 
 }
 
-`</file>`
+```
 
 
 ## Running on the ZX Spectrum
@@ -186,7 +185,7 @@ Use the Z80RUN loader to run it in z80mode; the following output is generated:
 This is a different version of the same example code for tiny, monochrome displays.
 It is meant for the LCD based devices.
 
-`<file>`
+```
 
 #include "stdio.h"
 
@@ -236,7 +235,7 @@ int x;
 
 }
 
-`</file>`
+```
 
 
 

@@ -345,9 +345,9 @@ You can include non-parsed blocks into your documents by either indenting them b
 	This is preformatted code all spaces are preserved: like              <-this
 
 
-`<file>`
+```
 This is pretty much the same, but you could use it to show that you quoted a file.  
-`</file>`
+```
 
 To let the parser ignore an area completely (ie. do no formatting on it), enclose the area either with ''nowiki'' tags or even simpler, with double percent signs `<nowiki>`%%`</nowiki>`.
 

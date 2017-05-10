@@ -88,15 +88,15 @@ There is a growing list of m4 macros that can be used in your .asm.m4 source fil
 
 An example compile line involving multiple source files:
 
-`<file>`
+```
 zcc +z80 -vn -O3 -clib=new test.c asmroutine.asm objfile.o @manyfiles.lst -o test -create-app
-`</file>`
+```
 "manyfiles.lst"
-`<file>`
+```
 test2.c
 myasm.asm
 res/graphics.asm.m4
-`</file>`
+```
 *(A .lst file can contain a complete list of source files in the project so naming individual source files in addition to the .lst file only clutters up the compile line and is only done here to serve as illustration.  A leading semicolon character can be used to comment out an individual source file listed in a list file.)*
 
 ASM code and data must be assigned to appropriate sections defined by the memory map to be made part of the main executable.  The [mixing c and assembly language](libnew/target_embedded#mixing_c_and_assembly_language) section has more information.
@@ -482,7 +482,7 @@ Here's an example compile line and associated output from a simple "Hello World"
 	zcc +z80 -vn -clib=sdcc_iy -SO3 --max-allocs-per-node200000 hw2.c -o hw2 -Cl--split-bin
 
 
-`<file>`
+```
     1 hw2_BSS.bin
     100 hw2_bss_compiler.bin
     2 hw2_bss_error.bin
@@ -515,7 +515,7 @@ Here's an example compile line and associated output from a simple "Hello World"
     1 hw2_rodata_error_string_end.bin
     
 30 File(s)          2,548 bytes
-`</file>`
+```
 
 From this directory listing it can be seen that the total program size is 2548 bytes (that is the CODE + DATA + BSS sizes and does not include the stack, heap or a stored data section).
 
@@ -882,7 +882,7 @@ The [zx7 documentation](https///github.com/z88dk/z88dk/blob/master/libsrc/_DEVEL
 
 Compressed data is easy to bring into a project using the assembler's **BINARY** directive which will include binary data into an asm file.  A short example composed of one .c file and one .asm file will illustrate its use.
 
-`<file>`
+```
 // main.c
 
 #include `<compress/zx7.h>`
@@ -896,9 +896,9 @@ void main(void)
    dzx7_standard(cdata, data);
    ...
 }
-`</file>`
+```
 
-`<file>`
+```
 ;; data.asm
 
 SECTION rodata_user
@@ -908,7 +908,7 @@ _cdata:
 
    ; name of compressed file
    BINARY "mydata.txt.zx7"
-`</file>`
+```
 
 The compressed data file "mydata.txt.zx7" can be generated from "mydata.txt" with:
 

@@ -17,7 +17,7 @@ It is now part of the X11 emulation library.
 
 ## gui_win structure
 
-`<file>`
+```
 struct gui_win {
         char    *back;
         char    x;
@@ -26,7 +26,7 @@ struct gui_win {
         char    height;
         char    flags;
 };
-`</file>`
+```
 
 The gui_win structure includes a pointer to a sprite-like formatted memory area, the x and y coordinates and its size.
 The flags describe the graphical appearance and can combine the following features:
@@ -46,7 +46,7 @@ There is a further possibility: defining the "ALTGUI" flag at compile time the "
 Allocates a memory space for storing the background area (see malloc) and paints a clean box.
 
 Example:
-`<file>`
+```
 // #include "malloc.h"  <--  This should be defined, in a real case
 #include "gui.h"
 
@@ -60,7 +60,7 @@ main()
     win_open (win);
 }
 
-`</file>`
+```
 
 
 ## win_close(struct gui_win win)
@@ -69,8 +69,8 @@ Recovers the background area and frees the relative memory area.
 
 Example:
 
-`<file>`
+```
 
     win_close (win);
 
-`</file>`
+```

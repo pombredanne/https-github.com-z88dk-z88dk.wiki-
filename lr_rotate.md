@@ -7,7 +7,7 @@ You can zoom in/out pressing '1' and '2'.
 {{examples:snippets:zxspectrum:c3d.gif|}}
 
 
-`<file>`
+```
 
 /*
 	Coloured lib3d demo - uses the "buffer" feature to avoid flicker
@@ -138,5 +138,5 @@ void main()
 	
 }
 
-`</file>`
+```
 

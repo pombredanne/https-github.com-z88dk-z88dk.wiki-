@@ -2,7 +2,7 @@
 
 {{:examples:snippets:diffusion.gif|}}
 
-`<file>`
+```
 
 #include `<stdio.h>`
 
@@ -32,5 +32,5 @@ void main()
 	}
 }
 
-`</file>`
+```
 

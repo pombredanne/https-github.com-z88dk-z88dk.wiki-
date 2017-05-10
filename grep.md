@@ -3,7 +3,7 @@
 This 'grep' command implementation is a piece of history.   It was originally developed for the PDP-11 and then ported to several targets (CP/M, VAX, earlier MS DOS compilers, etc..).  Due to the very simple operating systems it had run on, some of its earlier implementations included internal tricks to simulate the file redirection and other similar workarounds which inspired some z88dk feature.
 
 
-`<file>`
+```
 
 /*
 
@@ -684,11 +684,11 @@ char *s;
    exit(0);
 }
 
-`</file>`
+```
 
 grep.txt
 
-`<file>`
+```
 grep searches a file for a given pattern
 Execute by
    grep [flags] regular_expr file_list
@@ -772,5 +772,5 @@ x    An ordinary character
     while [z-a] never matches.
     The concatenation of regular 
     expressions is a regular expression.
-`</file>`
+```
 

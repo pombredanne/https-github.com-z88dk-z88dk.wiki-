@@ -26,9 +26,9 @@ Download and build from http://repo.or.cz/w/virtual-nascom.git
 
 To run
 
-`<file>`
+```
 ./virtualnascom adventure.nas
-`</file>`
+```
 
 Once the monitor is running, enter "E 1000"
 
@@ -38,9 +38,9 @@ Once the monitor is running, enter "E 1000"
 
 To run a compiled program:
 
-`<file>`
+```
 vnascom ROM=nassys1.nas RAM=adventure.nas KBD=E1000
-`</file>`
+```
 
 
 

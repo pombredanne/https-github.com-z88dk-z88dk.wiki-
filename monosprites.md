@@ -56,7 +56,7 @@ Saves the screen area in a sprite-like structure. Position and size are saved in
 
 Example:
 
-`<file>`
+```
 
 char  *background;
 
@@ -64,7 +64,7 @@ background=malloc( 4 + (width/8+1) * (height) );
 sprintf(background, "%c%c",width,height);
 bksave(x,y,back);
 
-`</file>`
+```
 
 ## void bkrestore(void *sprite)
 
@@ -72,11 +72,11 @@ Restores the background area.
 
 Example:
 
-`<file>`
+```
 
 bkrestore(background);
 
-`</file>`
+```
 
 
 # Functions in graphics.h
