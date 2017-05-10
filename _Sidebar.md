@@ -9,6 +9,11 @@
 ## Classic Library
 
 * [Retargetting](Classic--Retargetting)
+* [Building the libraries](libsrc)
+
+### Platform Independent Library Functions
+
+* [Abstract Data Types](adt)
 
 ## New Library
 
@@ -25,5 +30,6 @@
 
 ## Tools
 
+* [The Compiler Frontend (zcc)](Tool-zcc)
 * [copt](Tool--copt)
-* [zcc](Tool-zcc)
+* [Various tools](tools)
