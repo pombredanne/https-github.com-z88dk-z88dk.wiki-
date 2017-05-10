@@ -13,5 +13,4 @@ z88dk supports the concept of a ''far'' pointer. This a type qualifier that can 
 
 The far pointers used by z88dk are 24 bits long i.e. 3 bytes, this enables the theoretical access of 16Mb of memory. The far pointer allows for a *flat* memory model - i.e. they are treated as "normal" 24 bit number by the compiler. Far pointers are always handled in ''ehl'' where e contains bits 16-23 and hl bits 0-15 of the pointer. If e holds 0 then hl is taken to be an absolute address in the current memory configuration.
 
-At present, an [implementation](farmemory) is only available for the [Z88](platform/z88) platform.
-
+At present, an [implementation](Implementing-Far-Memory-Support) is only available for the [Z88](platform/z88) platform.
