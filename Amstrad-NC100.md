@@ -1,6 +1,6 @@
 ======= Amstrad NC family portable computers  hints & tools =======
 
-{{platform:nc200.jpg|}}
+![](images/platform/nc200.jpg)
 
 
 This port covers the Amstrad NC-100, NC-150, NC-200 models and the NTS  Dreamwriter 225.
@@ -67,4 +67,3 @@ To run the emulation you must pick "zcn.bin" from the ZCN package and use it to 
 # Links
 
 https://www.ncus.org.uk/
-
