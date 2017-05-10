@@ -1,7 +1,6 @@
 Unless otherwise stated in the appropriate file, z88dk is distributed under the following license.
 
 ```
-
 		     The Clarified Artistic License
 
 				Preamble
