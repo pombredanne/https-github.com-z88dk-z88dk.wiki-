@@ -1,10 +1,7 @@
-======= Implementing Far Memory Support =======
-
 Implementing of support for far memory is of course machine specific and depends on the target machines memory model. Z88dk makes certain assumptions that routines are available, in order to have a functioning far memory system for your target the functions detailed in this file will need to be implemented.
 
 # stdlib functionality
 
-	:::c
 	far void *malloc_far(long num_bytes)
 
 
@@ -12,14 +9,12 @@ This function should reserve ''num_bytes'' space in the system, and return a val
 
 Correspondingly the following functions are also required:
 
-	:::c
 	far void *calloc_far(int count, int size);
 	void free_far(far void *ptr);
 
 
 The following function might be useful to deallocate all allocated memory by an application, this would normally be called by the [[porting::startupcode|startup] code just before exiting.
 
-	:::c
 	void freeall_far()
 
 
@@ -33,7 +28,6 @@ The compiler will generate various calls to functions whenever data is required 
 
 These have entry ehl = memory pool address:
 
-	:::c
 	lp_gchar   - read char
 	Exit:   a=l = byte at that location
 	        h=0
@@ -60,7 +54,6 @@ FA -> FA+5 are 6 bytes presently located in the crt0 file.
 
 These have entry e'h'l' = far address and the following additional entry parameters:
 
-	:::c
 	lp_pchar        - write char
 	Entry:     l = byte to write
 	
