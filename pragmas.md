@@ -1,4 +1,3 @@
- ====== Pragma Directives ======
 
 ### Introduction
 
@@ -6,8 +5,6 @@ Pragma directives allow a source file to issue directives to the compiler (and t
 
 ### Available Pragma Commands
 
-
-*  #pragma [sccz80 option] Turns on an option with z88dk
 
 *  #pragma asm Start an assembler block (equivalent of #asm)
 
