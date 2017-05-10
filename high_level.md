@@ -1,13 +1,13 @@
 
 # STANDARD I/O HIGH LEVEL API
 
- | Header     | not available yet                                                                                               |  
- | ------------------------------------------------------------------------------------------------------------------------------  
- | Source     | [{z88dk}/libsrc/stdio_new](https///github.com/z88dk/z88dk/tree/master/libsrc/stdio_new/)                     |     
- | Include    | #include `<stdio.h>`                                                                                              |  
- | Linking    | n/a                                                                                                             |  
- | Compile    | n/a                                                                                                             |  
- | Comments   | These library functions are compiled as part of each target’s implicit library.                                 |
+| Header     | not available yet                                                                                               |
+| -----------|-----------------------------------------------------------------------------------------------------------------|
+| Source     | [{z88dk}/libsrc/stdio_new](https///github.com/z88dk/z88dk/tree/master/libsrc/stdio_new/)                     |
+| Include    | #include `<stdio.h>`                                                                                              |
+| Linking    | n/a                                                                                                             |
+| Compile    | n/a                                                                                                             |
+| Comments   | These library functions are compiled as part of each target’s implicit library.                                 |
 
 Some of the text descriptions below are taken from __The C Programming Language, 2nd Editon__ (Kernighan and Ritchie) and the [GNU Portability Library Manual](http://www.gnu.org/software/gnulib/manual/).
 

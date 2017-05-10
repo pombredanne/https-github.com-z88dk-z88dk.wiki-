@@ -1,12 +1,13 @@
 # INTERRUPTS (im2.h, im2.lib)
 
- | Header     | [{z88dk}/include/im2.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/im2.h)               | 
- | ------------------------------------------------------------------------------------------------------------------------ 
- | Source     | [{z88dk}/libsrc/im2](https///github.com/z88dk/z88dk/tree/master/libsrc/im2/)                              | 
- | Include    | #include `<im2.h>`                                                                                           |
- | Linking    | -lim2                                                                                                      |
- | Compile    | from {z88dk}/libsrc : make im2.lib ; make install                                                          |
- | Comments   | none                                                                                                       |
+| | |
+|-|-|
+| Header     | [{z88dk}/include/im2.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/im2.h)               |
+| Source     | [{z88dk}/libsrc/im2](https///github.com/z88dk/z88dk/tree/master/libsrc/im2/)                              |
+| Include    | #include `<im2.h>`                                                                                        |
+| Linking    | -lim2                                                                                                     |
+| Compile    | from {z88dk}/libsrc : make im2.lib ; make install                                                         |
+| Comments   | none                                                                                                      |
 
 The interrupts library provides functions supporting the im2 interrupt mode on the z80.  Although specifically designed with im2 in mind, im0 and im1 are also supported with appropriate [C startup](C startup) code that contains JPs to either C ISRs or Generic ISRs as described below.
 

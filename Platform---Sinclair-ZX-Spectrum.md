@@ -1,6 +1,6 @@
 #  ZX Spectrum  Platform
 
-{{platform:spectrum.jpg|}}
+![](images/platform/spectrum.gif)
 
 
 ## Introduction

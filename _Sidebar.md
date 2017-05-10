@@ -1,6 +1,7 @@
 ## Getting Started
 
 * [Installation](installation)
+* [Licence](license)
 
 ## Platforms
 
@@ -8,6 +9,7 @@
 
 ## Classic Library
 
+* [Memory Allocation](memory_allocation)
 * [Retargetting](Classic--Retargetting)
 * [Building the libraries](libsrc)
 

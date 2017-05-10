@@ -1,9 +1,11 @@
 # MALLOC.H
 
- | Include    | #include `<malloc.h>` or #include `<alloc/malloc.h>`      |                                                                                                                         
- | --------------------------------------------------------------------                                                                                                                         
- | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/alloc/malloc.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/alloc/malloc.h?content-type=text%2Fplain) |
- | | [{z88dk}/include/_DEVELOPMENT/sdcc/alloc/malloc.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/alloc/malloc.h?content-type=text%2Fplain) |               
+
+| | |
+|----|---|
+| Include    | #include `<malloc.h>` or #include `<alloc/malloc.h>`      |
+| Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/alloc/malloc.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/alloc/malloc.h?content-type=text%2Fplain) |
+| | [{z88dk}/include/_DEVELOPMENT/sdcc/alloc/malloc.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/alloc/malloc.h?content-type=text%2Fplain) |
 
 Other References:
 
@@ -35,9 +37,10 @@ When allocating or freeing from a heap, the entire heap must be paged in.
 
 ## TYPES
 
- | heap_info_t  | struct { int type; void *address; size_t size };  |
- | ------------------------------------------------------------------
-
+```
+heap_info_t  | struct { int type; void *address; size_t size };
+```
+ 
 # MEMORY MANAGEMENT FUNCTIONS
 
 ### void *aligned_alloc(size_t alignment, size_t size)
@@ -119,7 +122,6 @@ If allocation fails, 0 is returned, the carry flag is set and errno is set to:
 
 Creates a heap of *size* bytes at address *heap*.  *size* must be at least 14 bytes (no error checking is done).  Returns *heap*, the address of the heap.
 
-	:::c
 	char myheap[5000];
 	...
 	heap_init(myheap, 5000);      // initialize heap, 5000 bytes available
@@ -139,14 +141,16 @@ Iterates over all the blocks in *heap*, calling *callback* with a pointer to blo
 
 The *callback* function receives information about the block in a *heap_info_t* structure:
 
+```
  | hi->type     | 0 for header, 1 for allocated, 2 for available  |
  | ----------------------------------------------------------------
  | hi->address  | the address of the block  |                      
  | hi->size     | the size of the block in bytes  |                
+ ```
 
 # NAMED HEAP - MEMORY MANAGEMENT FUNCTIONS
 
-*%%__malloc_heap%%* holds the address of the standard library's heap.  The 16-bit value stored there is the address that should be passed as *heap* in the functions below if allocation out of the standard library's heap is desired.  *heap* is the address of the memory block used for allocation.
+*``__malloc_heap``* holds the address of the standard library's heap.  The 16-bit value stored there is the address that should be passed as *heap* in the functions below if allocation out of the standard library's heap is desired.  *heap* is the address of the memory block used for allocation.
 
 ### void *heap_alloc(void *heap, size_t size)
 
