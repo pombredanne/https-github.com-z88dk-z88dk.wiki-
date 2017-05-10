@@ -5,7 +5,7 @@ Only minimal graphic support is available at the moment, but some special output
 The CP/M implementation of the time() function includes the automatic detection and support of the special Epson BIOS.
 
 
-{{:platform:coswave-px8.gif|}}
+![](images/platform/coswave-px8.gif)
 
 
 ### Quick Start

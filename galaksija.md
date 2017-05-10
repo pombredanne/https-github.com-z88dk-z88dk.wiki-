@@ -1,6 +1,6 @@
 ======= Galaksija =======
 
-{{:platform:galaksija.jpg|}}
+![](images/platform/galaksija.jpg)
 
 
 

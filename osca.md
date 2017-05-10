@@ -1,6 +1,6 @@
 #  Old School Computer Architecture
 
-{{:platform:osca.jpg|}}
+![](images/platform/osca.jpg)
 
 ## Building applications
 

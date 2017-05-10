@@ -4,7 +4,7 @@ Known clones:  Personal Systems Consulting PS-80,  Dynasty smart-ALEC II
 
 The Sorcerer Exidy has been tested on the MESS emulator by transferring the programs in WAV file format.
 
-{{:platform:sorcerer-dstar.jpg|}}
+![](images/platform/sorcerer-dstar.jpg)
 
 The example above is taken by a specific version capable of reprogramming a part of the text font.
 

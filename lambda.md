@@ -1,7 +1,7 @@
 
 ======= Lambda 8300 / Power 3000 =======
 
-{{:platform:lambda.jpg|}}
+![](images/platform/lambda.jpg)
 
 The Lambda 8300 is an improved chinese clone of the [ZX81](platform/zx81).
 
@@ -47,7 +47,7 @@ The latter option will use the ROM for Floating Point, which will produce small 
 
 The programs will work in SLOW mode by default; to run your program in FAST mode, the "-subtype=fast" flag is required.  By default the compiler inserts new interrupt handlers, protecting the registers needed by the z88dk programs while the screen is being refreshed; the FAST mode does not require such handler, so the output program gets slightly smaller.
 
-{{:platform:lambda-example.gif|}}
+![](images/platform/lambda-example.gif)
 
 
 ### Startup modes

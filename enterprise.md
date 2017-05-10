@@ -1,6 +1,6 @@
 #  Enterprise 64/128 Platform
 
-{{:platform:enterprise.gif|}}
+![](images/platform/enterprise.gif)
 
 
 ## Building applications

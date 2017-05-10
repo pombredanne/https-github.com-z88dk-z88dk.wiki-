@@ -1,6 +1,6 @@
  ======  TRS 80  Platform ======
 
-{{:platform:trs80.gif|}}
+![](images/platform/trs80.gif)
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 ======= Sharp MZ family  hints & tools =======
 
-{{:platform:sharplogo.gif|}}
+![](images/platform/sharplogo.gif)
 
 
 # Quick start (MZ-80K/700 series)

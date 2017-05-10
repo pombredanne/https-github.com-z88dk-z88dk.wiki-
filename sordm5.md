@@ -1,6 +1,6 @@
 ======= Sord M5 =======
 
-{{:platform:m5b.jpg|}}
+![](images/platform/m5b.jpg)
 
 AKA Gold Star Electronics FC-150 (Famicom-150).
 

@@ -1,6 +1,6 @@
 ======= Memotech MTX =======
 
-{{:platform:mtx.jpg|}}
+![](images/platform/mtx.jpg)
 
 
 

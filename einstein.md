@@ -2,7 +2,8 @@
 
 The Tatung Einstein is a CP/M compatible platform, so the [same base library](platform/cpm) can be used, but extra functionalities are available.
 
-{{:platform:einstein-wall.jpg|}}    {{:platform:einstein.jpg|}}
+![](images/platform/einstein-wall.jpg)
+![](images/platform/einstein.jpg)
 
 ### Command Line
 

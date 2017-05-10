@@ -5,7 +5,7 @@ Library extras include the sound support for the Yamaha PSG chip and the BW grap
 
 Target specific tricks permit to draw in 4 or 16 color mode as well.
 
-{{:platform:tikimandel.png|}}
+![](images/platform/tikimandel.png)
 
 ### Command Line
 

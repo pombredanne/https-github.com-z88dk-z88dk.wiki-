@@ -1,6 +1,6 @@
 ~~NOTOC~~
 
-{{logo.gif|z88dk logo}}
+![](images/logo.gif)
 
 z88dk is a collection of software development tools that targets z80 machines.  It consists of a C compiler, a set of libraries implementing the C standard library, an assembler / linker and a variety of utilities for profiling and generating executables in a number of formats.  Development in C, assembly language or a mixture of the two is directly supported.
 
@@ -49,7 +49,7 @@ Some modules have been imported into the project from other sources.  They may b
     * [Link to the git repository](https///github.com/z88dk/z88dk/)
  2.  **An Introduction to Using z88dk**
 
-    * {{ptfdep.jpg|}}
+    * ![](images/ptfdep.jpg)
     * Environment
     * [The Compiler Front End: ZCC](zcc)
     * The Assembler and Linker: Z80ASM ([z80asm.txt](http://z88dk.cvs.sourceforge.net/*checkout*/z88dk/z88dk/doc/z80asm.txt))
@@ -66,7 +66,7 @@ Some modules have been imported into the project from other sources.  They may b
 ======= Library Documentation =======
  1.  **Platform Independent Library Functions**
 
-    * {{pli.jpg|}}
+    * ![](images/pli.jpg)
     * [Abstract Data Types](library/adt) ([adt.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/adt.h))
     * [Algorithm](library/algorithm) ([algorithm.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/algorithm.h))
     * [conio.h (MS-DOS compatibility)](library/conio) ([conio.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/conio.h))
@@ -99,7 +99,7 @@ Some modules have been imported into the project from other sources.  They may b
     * [Time, clock and date functions](library/time) ([time.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/time.h))
  2.  **Platform Dependent Library Functions**
 
-    * {{pld.jpg|}}
+    * ![](images/pld.jpg)
     * [Luxor ABC 80](library/abc80) ([abc80.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/abc80.h))
     * [Luxor ABC 800](library/abc800) ([abc800.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/abc800.h))
     * [Enterprise 64/128](library/enterprise) ([enterprise.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/enterprise.h))
@@ -137,7 +137,7 @@ Some modules have been imported into the project from other sources.  They may b
 ======= Advanced Topics =======
  1.  **Mixing C and z80 Assembler**
 
-    * {{mixcz80b.jpg|}}
+    * ![](images/mixcz80b.jpg)
     * Start-Up Code
     * [The Inline Assembler](usage/inlineasm)
     * [The Stack Frame (Parameter Passing)](usage/stackframe)
@@ -146,7 +146,7 @@ Some modules have been imported into the project from other sources.  They may b
     * [Sharing Code by Creating Libraries](usage/creating_libaries)
  2.  **Miscellaneous**
 
-    * {{bulb.jpg|}}
+    * ![](images/bulb.jpg)
     * [Adding a New z80 Target](porting/retargeting)
     * [Handling More Than 64k](advanced/farmem)
     * [Importing routines written in 8080 assembly mnemonics](advanced/8080toz80)
@@ -156,7 +156,7 @@ Some modules have been imported into the project from other sources.  They may b
 
 ======= Examples =======
 
-      * {{writetyper.jpg|}}
+      * ![](images/writetyper.jpg)
       * [Code Snippets](examples/snippets)
       * [Completed Projects with Screenshots](examples/projects)
 
@@ -183,8 +183,8 @@ You can read more about it and find details on how to try it [here](temp/front).
 ======= Supported Targets =======
 
       * [Overview](targets)
-      * {{supported.jpg|}}
-      * [Amstrad CPC](platform/amstradcpc)
+      * ![](images/supported.jpg)
+      * [Amstrad CPC](Platform-AmstradCPC)
       * [Amstrad NC portable computers family](platform/amstradnc)
       * [Knight 2000 (Aussie Byte)](platform/aussie)
       * [Cambridge Z88](platform/z88)

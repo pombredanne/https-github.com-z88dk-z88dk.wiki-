@@ -29,7 +29,7 @@ ROM file formats:
 
 The ANSI VT emulation can work in several column size variants:
 
-{{:platform:adva_px4.jpg|}}
+![](images/platform/adva_px4.jpg)
 
 ''-pragma-define:ansicolumns=30''
 

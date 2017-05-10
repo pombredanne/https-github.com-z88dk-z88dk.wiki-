@@ -1,6 +1,6 @@
 # Not Yet Supported Targets
 
-{{:platform:retro.gif|}}
+![](images/platform/retro.gif)
 
 In this page we're listing those z80 targets platforms which might be included in future.
 

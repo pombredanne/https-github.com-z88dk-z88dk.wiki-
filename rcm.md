@@ -1,6 +1,6 @@
 #  Rabbit Control Module 2000, 3000, 4000
 
-{{:platform:rcm2200.jpg|}}
+![](images/platform/rcm2200.jpg)
 
 
 This port is mostly from Erik Brage.

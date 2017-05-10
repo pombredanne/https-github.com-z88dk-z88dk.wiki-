@@ -1,6 +1,6 @@
 ======= Pac-Man Hardware =======
 
-{{:platform:dstar-pacman.png|}}
+![](images/platform/dstar-pacman.png)
 
 
 # Quick start

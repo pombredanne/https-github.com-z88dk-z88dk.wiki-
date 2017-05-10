@@ -52,7 +52,7 @@ On the Premimium models, standard 16K video memory for 8 PCG pages, 512x256 (fas
     *-lgfxbee512
     *-lgfxbee320
 
-{{:platform:coswave.png|}}
+![](images/platform/coswave.png)
     
 
 ### Audio options

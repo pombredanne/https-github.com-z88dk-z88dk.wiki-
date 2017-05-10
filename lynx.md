@@ -1,6 +1,6 @@
 ======= Camputers Lynx =======
 
-{{:platform:lynx.gif|}}
+![](images/platform/lynx.gif)
 
 (About 30000 units were sold).
 

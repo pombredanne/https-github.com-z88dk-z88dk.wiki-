@@ -1,6 +1,6 @@
 ======= S-OS (The Sentinel) =======
 
-{{:platform:s-os-mz1500.jpg|}}
+![](images/platform/s-os-mz1500.jpg)
 
 S-OS is a simple but highly portable monitor with minimal console functionalities and a simple file access interface, enough to support text based interactive fiction games.
 It was thought for systems having little or no ROM memory on lower positions accordig to what was known as the "Clean Computer" philosophy.
