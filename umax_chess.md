@@ -10,7 +10,7 @@ Because u-Max is aiming to be short, its [source code](http://home.hccnet.nl/h.g
 
 So this program is really a test of the compilers to see if they can parse an obfuscated C program.  When compiling a program originally written for a 32-bit machine, special attention has to be paid to the data types.  Ints are 32-bit on 32-bit machines so, without understanding the range of values that the variables can actually take on within the program, they have to be changed to long type.  Longs that appear on 32-bit machines are likely 64-bit data types and these have no equivalent under z88dk.  Thankfully most 32-bit programs don't use long types.
 
-Before we tackle compilation, a brief note on how to play.  The program will print the chessboard in ascii prior to each move.  To make the computer take the move, just press enter without any input.  Your move is entered in [algebraic notation](https///en.wikipedia.org/wiki/Algebraic_notation_%28chess%29), for example "e2e4".
+Before we tackle compilation, a brief note on how to play.  The program will print the chessboard in ascii prior to each move.  To make the computer take the move, just press enter without any input.  Your move is entered in [algebraic notation](https://en.wikipedia.org/wiki/Algebraic_notation_%28chess%29), for example "e2e4".
 
 ## sccz80
 

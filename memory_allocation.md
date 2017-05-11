@@ -3,8 +3,8 @@
 
 | | |
 |-|-|
-| Header     | [{z88dk}/include/balloc.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/balloc.h)  | [{z88dk}/include/malloc.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/malloc.h)  |
-| Source     | [{z88dk}/libsrc/balloc](https///github.com/z88dk/z88dk/tree/master/libsrc/balloc/)  | [{z88dk}/libsrc/malloc](https///github.com/z88dk/z88dk/tree/master/libsrc/malloc/) |
+| Header     | [{z88dk}/include/balloc.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/balloc.h)  | [{z88dk}/include/malloc.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/malloc.h)  |
+| Source     | [{z88dk}/libsrc/balloc](https://github.com/z88dk/z88dk/tree/master/libsrc/balloc/)  | [{z88dk}/libsrc/malloc](https://github.com/z88dk/z88dk/tree/master/libsrc/malloc/) |
 | Include    | #include `<balloc.h>`  | #include `<malloc.h>`  | 
 | Linking    | -lballoc  | -lmalloc  |
 | Compile    | from {z88dk}/libsrc : make balloc.lib ; make install  | from {z88dk}/libsrc : make malloc.lib ; make install |

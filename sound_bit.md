@@ -2,9 +2,9 @@
 
  | Include    | #include `<sound/bit.h>`                                                                                              |                                                     
  | ----------------------------------------------------------------------------------------------------------------------------------                                                     
- | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/sound/bit.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/sound/bit.h?content-type=text%2Fplain) |
- | | [{z88dk}/include/_DEVELOPMENT/sdcc/sound/bit.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/sound/bit.h?content-type=text%2Fplain) |               
- | Source     | [{z88dk}/libsrc/_DEVELOPMENT/sound/bit](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/sound/bit/z80/)                     |                     
+ | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/sound/bit.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sccz80/sound/bit.h?content-type=text%2Fplain) |
+ | | [{z88dk}/include/_DEVELOPMENT/sdcc/sound/bit.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/sound/bit.h?content-type=text%2Fplain) |               
+ | Source     | [{z88dk}/libsrc/_DEVELOPMENT/sound/bit](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/sound/bit/z80/)                     |                     
 
 # SOUND EFFECTS
 

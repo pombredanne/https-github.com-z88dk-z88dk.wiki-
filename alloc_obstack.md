@@ -3,9 +3,9 @@
 | | |
 |-|-|
 | Include    | #include `<obstack.h>` or #include `<alloc/obstack.h>`     |                                                                  
-| Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/alloc/obstack.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/alloc/obstack.h) |
-| | [{z88dk}/include/_DEVELOPMENT/sdcc/alloc/obstack.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/alloc/obstack.h) |
-| Source     | [{z88dk}/libsrc/_DEVELOPMENT/alloc/obstack](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/stdlib/z80/) |
+| Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/alloc/obstack.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sccz80/alloc/obstack.h) |
+| | [{z88dk}/include/_DEVELOPMENT/sdcc/alloc/obstack.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/alloc/obstack.h) |
+| Source     | [{z88dk}/libsrc/_DEVELOPMENT/alloc/obstack](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/stdlib/z80/) |
 http://gcc.gnu.org/onlinedocs/libiberty/Obstacks.html
 
 # CREATING OBSTACKS

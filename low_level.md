@@ -3,7 +3,7 @@
 
  | Header     | not available yet                                                                                               |  
  | ------------------------------------------------------------------------------------------------------------------------------  
- | Source     | [{z88dk}/libsrc/stdio_new/fd](https///github.com/z88dk/z88dk/tree/master/libsrc/stdio_new/fd/)               |     
+ | Source     | [{z88dk}/libsrc/stdio_new/fd](https://github.com/z88dk/z88dk/tree/master/libsrc/stdio_new/fd/)               |     
  | Include    | #include `<stdio.h>`                                                                                              |  
  | Linking    | n/a                                                                                                             |  
  | Compile    | n/a                                                                                                             |  

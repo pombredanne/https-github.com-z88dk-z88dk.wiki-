@@ -3,9 +3,9 @@
 | | |
 |-|-|
 | Include    | #include `<font/fzx.h>`                                                                                              |
-| Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/font/fzx.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/font/fzx.h?content-type=text%2Fplain) |
-| | [{z88dk}/include/_DEVELOPMENT/sdcc/font/fzx.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/font/fzx.h?content-type=text%2Fplain) |
-| Source     | [{z88dk}/libsrc/_DEVELOPMENT/font/fzx](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/font/fzx/)                     |
+| Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/font/fzx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sccz80/font/fzx.h?content-type=text%2Fplain) |
+| | [{z88dk}/include/_DEVELOPMENT/sdcc/font/fzx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/font/fzx.h?content-type=text%2Fplain) |
+| Source     | [{z88dk}/libsrc/_DEVELOPMENT/font/fzx](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/font/fzx/)                     |
 
 
 [fonts list](fonts list)

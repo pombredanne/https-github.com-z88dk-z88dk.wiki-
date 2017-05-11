@@ -1,8 +1,8 @@
 # Gray Library (gray.h)
 
- | Header     | [{z88dk}/include/gray.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/gray.h)      | 
+ | Header     | [{z88dk}/include/gray.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/gray.h)      | 
  | ----------------------------------------------------------------------------------------------------------------- 
- | Source     | [{z88dk}/libsrc/graphics/gray](https///github.com/z88dk/z88dk/tree/master/libsrc/graphics/gray/)   | 
+ | Source     | [{z88dk}/libsrc/graphics/gray](https://github.com/z88dk/z88dk/tree/master/libsrc/graphics/gray/)   | 
  | Include    | #include `<gray.h>`                                                                                   |
  | Linking    | n/a                                                                                                 |
  | Compile    | n/a                                                                                                 |

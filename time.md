@@ -1,8 +1,8 @@
 # Time, clock and date functions (time.h)
 
- | Header     | [{z88dk}/include/time.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/time.h)    |
+ | Header     | [{z88dk}/include/time.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/time.h)    |
  | ---------------------------------------------------------------------------------------------------------------
- | Source     | [{z88dk}/z88dk/libsrc/time](https///github.com/z88dk/z88dk/tree/master/libsrc/time)              |
+ | Source     | [{z88dk}/z88dk/libsrc/time](https://github.com/z88dk/z88dk/tree/master/libsrc/time)              |
  | Include    | #include `<time.h>`            |                                                                    
  | Linking    | n/a                          |                                                                    
  | Compile    | n/a                          |                                                                    

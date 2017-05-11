@@ -2,7 +2,7 @@
 
  | Version    | all                                                                                                             |
  | ------------------------------------------------------------------------------------------------------------------------------
- | Header     | [{z88dk}/include/ti.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/ti.h)                  |     
+ | Header     | [{z88dk}/include/ti.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/ti.h)                  |     
  | Source     |                                                                                                                 |
  | Include    | #include `<ti.h>`                                                                                                 |
  | Linking    | -                                                                                                               |

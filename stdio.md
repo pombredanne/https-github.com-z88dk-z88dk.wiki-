@@ -1,8 +1,8 @@
  ====== STANDARD I/O (stdio.h) ======
 
- | Header     | [{z88dk}/include/stdio.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/stdio.h)            |       
+ | Header     | [{z88dk}/include/stdio.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/stdio.h)            |       
  | -------------------------------------------------------------------------------------------------------------------------       
- | Source     | [{z88dk}/libsrc/stdio](https///github.com/z88dk/z88dk/tree/master/libsrc/stdio/)                             |     
+ | Source     | [{z88dk}/libsrc/stdio](https://github.com/z88dk/z88dk/tree/master/libsrc/stdio/)                             |     
  | Include    | #include `<stdio.h>`                                                                                              |  
  | Linking    | n/a                                                                                                             |  
  | Compile    | n/a                                                                                                             |  

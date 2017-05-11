@@ -1,8 +1,8 @@
 # MONOCHROME SPRITES FUNCTIONS (part of games.h)
 
- | Header     | [{z88dk}/include/games.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/games.h)      |           
+ | Header     | [{z88dk}/include/games.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/games.h)      |           
  | -------------------------------------------------------------------------------------------------------------------           
- | Source     | [{z88dk}/libsrc/graphics](https///github.com/z88dk/z88dk/tree/master/libsrc/graphics/)                       |   
+ | Source     | [{z88dk}/libsrc/graphics](https://github.com/z88dk/z88dk/tree/master/libsrc/graphics/)                       |   
  | Include    | #include `<games.h>`                                                                                           |   
  | Linking    | n/a                                                                                                             |
  | Compile    | n/a                                                                                                             |

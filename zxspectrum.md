@@ -1,8 +1,8 @@
 # ZX Spectrum LIBRARY (spectrum.h)
 
- | Header     | [{z88dk}/include/spectrum.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/spectrum.h)               | 
+ | Header     | [{z88dk}/include/spectrum.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/spectrum.h)               | 
  | ---------------------------------------------------------------------------------------------------------------------------------- 
- | Source     | [{z88dk}/libsrc/spectrum](https///github.com/z88dk/z88dk/tree/master/libsrc/spectrum/)                              | 
+ | Source     | [{z88dk}/libsrc/spectrum](https://github.com/z88dk/z88dk/tree/master/libsrc/spectrum/)                              | 
  | Include    | #include `<spectrum.h>`                                                                                                |
  | Linking    | n/a                                                                                                                  |
  | Compile    | n/a                                                                                                                  |

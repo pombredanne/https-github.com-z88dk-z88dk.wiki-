@@ -2,8 +2,8 @@
 
  | Include    | #include `<intrinsic.h>`                                                                                              |                                                     
  | ----------------------------------------------------------------------------------------------------------------------------------                                                     
- | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/intrinsic.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/intrinsic.h?content-type=text%2Fplain) |
- | | [{z88dk}/include/_DEVELOPMENT/sdcc/intrinsic.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/intrinsic.h?content-type=text%2Fplain) |               
+ | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/intrinsic.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sccz80/intrinsic.h?content-type=text%2Fplain) |
+ | | [{z88dk}/include/_DEVELOPMENT/sdcc/intrinsic.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/intrinsic.h?content-type=text%2Fplain) |               
 
 Inlined assembly interferes with sdcc's peephole optimizer.  The peepholer is not normally allowed to look into an inlined asm block so it must assume all registers leading to the block are live.  This prevents optimizations from occurring close to inlined asm blocks.
 

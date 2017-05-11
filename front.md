@@ -20,7 +20,7 @@ There are a few things that make z88dk unique:
 
  | Mandelbrot                                                      | Twitter Client                         | File Transfer                                  |                                                     
  | ----------                                                      | --------------                         | ------------------------------------------------                                                     
- | {{:examples:snippets:enterprise:ep_mandel.gif?245}}             | {{:temp:twitter.gif                    | Click on the link on the right for the video}} [YouTube](https///www.youtube.com/watch?v=-ECnN7jdgA4) | {{:examples:snippets:zxspectrum:opusdump.gif?256}} | 
+ | {{:examples:snippets:enterprise:ep_mandel.gif?245}}             | {{:temp:twitter.gif                    | Click on the link on the right for the video}} [YouTube](https://www.youtube.com/watch?v=-ECnN7jdgA4) | {{:examples:snippets:zxspectrum:opusdump.gif?256}} | 
  | Ninjajar!                                                       | 3D Globe                               | Forest Raider Cherry                           |                                                     
  | {{http://www.mojontwins.com/wp-content/uploads/2014/05/06.png}} | {{:examples:snippets:3dglobe.gif?256}} | {{http://www.worldofspectrum.org/pub/sinclair/screens/in-game/f/ForestRaiderCherry.gif?256}}          |                                                   
 
@@ -48,7 +48,7 @@ z88dk has seen significant development in the past two years.  Among the changes
 *  z80asm has been updated to support sections and modern operator syntax.
 
 
-*  zsdcc has been added as a second C compiler option.  zsdcc is a modification of [sdcc](https///sourceforge.net/projects/sdcc/) for the z88dk toolchain.  The choice between using zsdcc or sccz80 is made on the compile line with an appropriate compile line switch.
+*  zsdcc has been added as a second C compiler option.  zsdcc is a modification of [sdcc](https://sourceforge.net/projects/sdcc/) for the z88dk toolchain.  The choice between using zsdcc or sccz80 is made on the compile line with an appropriate compile line switch.
 
 
 *  A second C library has been introduced.  To distinguish between the two C library options, the existing one has been named the "classiclib" and the new one the "newlib".  The new C library aims for as much C11 compliance as is reasonable for an 8-bit target and is intended to be similar to 32-bit libraries in its functionality.  In the future there will be a consolidation of the two C libraries but they will always be separate; the newclib is intended to implement a unix i/o model and the classiclib is intended to implement a small i/o model.
@@ -110,9 +110,9 @@ sdcc 3.5.5 #9392 is used to translate C code with z88dk supplying its (new) C li
 
 ## Dhrystone 2.1
 
-[ Dhrystone](https///en.wikipedia.org/wiki/Dhrystone ) was a common synthetic benchmark for measuring the integer performance of compilers in the 1980s until more modern benchmarks replaced it.  It attempts to simulate typical programs by executing a set of statements statistically determined from common programs in the wild.
+[ Dhrystone](https://en.wikipedia.org/wiki/Dhrystone ) was a common synthetic benchmark for measuring the integer performance of compilers in the 1980s until more modern benchmarks replaced it.  It attempts to simulate typical programs by executing a set of statements statistically determined from common programs in the wild.
 
-The benchmark package is available for [download](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/dhrystone21.zip).
+The benchmark package is available for [download](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/dhrystone21.zip).
 
  | ^  SIZE             ^^  TIME                                       ^^^  DHRYSTONES/S ^  DMIPS  ^
  | ------------------------------------------------------------------------------------------------
@@ -130,11 +130,11 @@ Notes:
 
 *  Hitech-C Z80 v7.50 must be compiled with global optimizer set to two; higher causes the program to hang.
 
-[ Dhrystone 1.1](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/dhrystone11.c?view=markup ) is deprecated because optimizing compilers can eliminate redundant statements that were intended to add to execution time.  However many z80-era compilers ran this benchmark so it is also available in the z88dk repository.  Beginning at line 106 Dhry1.1 results can be found, at line 142 Dhry1.0 results and at line 394 a few results for the 6502. 
+[ Dhrystone 1.1](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/dhrystone11.c?view=markup ) is deprecated because optimizing compilers can eliminate redundant statements that were intended to add to execution time.  However many z80-era compilers ran this benchmark so it is also available in the z88dk repository.  Beginning at line 106 Dhry1.1 results can be found, at line 142 Dhry1.0 results and at line 394 a few results for the 6502. 
 
 ## Pi
 
-[ Pi.c](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/pi.zip ) computes pi to 800 decimal places.  It is based on an implementation found at [ crypto.stanford.edu](https///crypto.stanford.edu/pbc/notes/pi/code.html ).
+[ Pi.c](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/pi.zip ) computes pi to 800 decimal places.  It is based on an implementation found at [ crypto.stanford.edu](https://crypto.stanford.edu/pbc/notes/pi/code.html ).
 
 Pi.c measures 32-bit integer math performance.  The computation can make good use of ldiv() but not all compilers supply this function so the program is run with and without ldiv() for comparison purposes.
 
@@ -166,7 +166,7 @@ Notes:
 
 ## Sieve of Eratosthenes (Prime Numbers)
 
-[ Sieve.c](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/sieve.zip ) finds all the prime numbers in [2,7999].  The algorithm is known as the [ Sieve of Eratosthenes](https///en.wikipedia.org/wiki/Sieve_of_Eratosthenes ).
+[ Sieve.c](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/sieve.zip ) finds all the prime numbers in [2,7999].  The algorithm is known as the [ Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes ).
 
 This is a popular benchmark for small machine compilers because just about every compiler is able to compile it.  As a benchmarking tool it's mainly measuring loop overhead.
 
@@ -188,7 +188,7 @@ Notes:
 
 ## Whetstone 1.2
 
-[ Whetstone](https///en.wikipedia.org/wiki/Whetstone_%28benchmark%29 ) is a synthetic floating point benchmark.  The benchmark package is available for [ download](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/whetstone.zip ).
+[ Whetstone](https://en.wikipedia.org/wiki/Whetstone_%28benchmark%29 ) is a synthetic floating point benchmark.  The benchmark package is available for [ download](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/whetstone.zip ).
 
 Floating point performance depends strongly on the number of mantissa bits in the float type.
 
@@ -220,7 +220,7 @@ Notes:
 
 Program size is often more important than performance in the small 64k space available to standard z80 programs.
 
-A selection of programs from z88dk's [examples directory](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/EXAMPLES/) were compiled to compare binary sizes using the widely supported CP/M target.
+A selection of programs from z88dk's [examples directory](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/EXAMPLES/) were compiled to compare binary sizes using the widely supported CP/M target.
 
  | ^  backgammon.c (703 lines)  ^^  clisp.c (1279 lines)  ^^  eliza.c (352 lines)   ^^  startrek.c (2153 lines)  ^^
  | ----------------------------------------------------------------------------------------------------------------
@@ -248,7 +248,7 @@ Notes:
 
 # Installation
 
-The [nightly build](http://nightly.z88dk.org/) is the most current version.  The package available for download from [sourceforge](https///sourceforge.net/projects/z88dk/) is dated 10 Jan 2017.
+The [nightly build](http://nightly.z88dk.org/) is the most current version.  The package available for download from [sourceforge](https://sourceforge.net/projects/z88dk/) is dated 10 Jan 2017.
 
 The nightly build should be preferred unless you have a reason to install an older version of z88dk.  The documentation on this page will apply to the nightly build.
 
@@ -363,7 +363,7 @@ These tools are supplied by third parties.
 
 ## m4
 
-[M4 Manual (v1.4.14)](https///www.gnu.org/software/m4/manual/m4-1.4.14/m4.html) \\ 
+[M4 Manual (v1.4.14)](https://www.gnu.org/software/m4/manual/m4-1.4.14/m4.html) \\ 
 [Notes on the M4 Macro Language](http://mbreen.com/m4.html)
 
 m4 is the standard macro processor used on Linux and Unix machines.  It has now been adopted as an optional macro pre-processor in z88dk.  The nightly build and latest windows package downloadable at sourceforge now include the m4 binary for windows machines so that m4 is now available to all installs.
@@ -379,7 +379,7 @@ m4 is also used by the new c library to generate its crts from macros.
 
 ## sdcc
 
-[SDCC Main Page @ Sourceforge](https///sourceforge.net/projects/sdcc/) \\ 
+[SDCC Main Page @ Sourceforge](https://sourceforge.net/projects/sdcc/) \\ 
 [SDCC Nightly Build Page](http://sdcc.sourceforge.net/snap.php) \\ 
 [SDCC Manual](http://sdcc.sourceforge.net/doc/sdccman.pdf)
 
@@ -387,7 +387,7 @@ sdcc is an open source optimizing C compiler that can target the z80.  A patched
 
 ** 1. Windows **
 
-The [z88dk nightly build](http://nightly.z88dk.org/) for windows is now self-contained and includes the zsdcc binary in z88dk/bin.  Separate installation of sdcc is no longer necessary.  [sdcc_z88dk_patch.zip](https///github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/sdcc_z88dk_patch.zip) will often contain a more recent windows build of zsdcc that can be copied into z88dk/bin.
+The [z88dk nightly build](http://nightly.z88dk.org/) for windows is now self-contained and includes the zsdcc binary in z88dk/bin.  Separate installation of sdcc is no longer necessary.  [sdcc_z88dk_patch.zip](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/sdcc_z88dk_patch.zip) will often contain a more recent windows build of zsdcc that can be copied into z88dk/bin.
 
 ** 2. Mac OSX **
 
@@ -395,14 +395,14 @@ The [z88dk nightly build](http://nightly.z88dk.org/) for mac osx is now self-con
 
 ** 3. Linux / Unix **
 
-Other users will have to apply the svn patch found in [sdcc_z88dk_patch.zip](https///github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/sdcc_z88dk_patch.zip) and build sdcc from source.
+Other users will have to apply the svn patch found in [sdcc_z88dk_patch.zip](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/sdcc_z88dk_patch.zip) and build sdcc from source.
 
 A typical linux install process for sdcc would look like this:
 
 
 *  **%%svn checkout svn://svn.code.sf.net/p/sdcc/code/trunk sdcc-code%%**  This will check out the current development version of sdcc.  If you already have the sdcc-code tree from a previous checkout you can instead perform an update.
 
-*  **copy "sdcc-z88dk.patch" from inside [sdcc_z88dk_patch.zip](https///github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/sdcc_z88dk_patch.zip) into the sdcc-code directory**
+*  **copy "sdcc-z88dk.patch" from inside [sdcc_z88dk_patch.zip](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/sdcc_z88dk_patch.zip) into the sdcc-code directory**
 
 *  **cd sdcc-code**
 
@@ -441,7 +441,7 @@ To complete sdcc installation continue with these steps:
 
 Entering "zsdcc -v" and "zsdcpp --version" should print version information.  The version information for zsdcc should begin with "ZSDCC is a modification of SDCC for Z88DK".  If that is not the case, the system is executing an older version of zsdcc from the sdcc/bin directory rather than the new version in z88dk/bin.  The older version would have been installed by following an older version of these instructions.  Find the zsdcc executable in sdcc/bin and remove it.
 
-To verify that sdcc is usable from z88dk, try compiling [sudoku.c](https///raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/EXAMPLES/sudoku.c) for the cp/m target using sdcc:
+To verify that sdcc is usable from z88dk, try compiling [sudoku.c](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/EXAMPLES/sudoku.c) for the cp/m target using sdcc:
 
 	
 	zcc +cpm -vn -SO3 -clib=sdcc_iy --max-allocs-per-node200000 sudoku.c -o sudoku -create-app
@@ -706,7 +706,7 @@ Information on what occupies space in the final binary can be learned by adding 
 
 ## Compiling with SDCC
 
-[SDCC](https///sourceforge.net/projects/sdcc/) is a third party C compiler that must be [patched](#sdcc1) to work with z88dk.  The patched executable "zsdcc", aside from changes made to accommodate the z88dk backend, also fixes bugs connected with sdcc's peephole optimizer that allows zsdcc to produce better code than the current version of sdcc.
+[SDCC](https://sourceforge.net/projects/sdcc/) is a third party C compiler that must be [patched](#sdcc1) to work with z88dk.  The patched executable "zsdcc", aside from changes made to accommodate the z88dk backend, also fixes bugs connected with sdcc's peephole optimizer that allows zsdcc to produce better code than the current version of sdcc.
 
 The temporary overview that was here gave some details on using sdcc in combination with the new c library for targetting embedded z80 systems.  This information has been replaced by a much more complete discussion of the new c library's [embedded target](libnew/target_embedded).  Even if your intention is to compile for another target, this discussion is very insightful regarding how the new c library and its crts function.  In terms of internal implementation, the embedded target is the base target with other targets applying variations to it.
 
@@ -787,7 +787,7 @@ Because the new C library is section aware, the generated output will be one or 
 
 *  **-Cl--split-bin** Causes z80asm to generate one output binary per section defined in the source.  A directory listing afterward can tell you at a glance what is taking up the space in the final executable.
 
-*  **-D%%__SDCC_DISABLE_BUILTIN%%** Disable sdcc's builtin functions.  sdcc will sometimes inline a handful of common string functions by default (see the end of [string.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/string.h?view=markup)).
+*  **-D%%__SDCC_DISABLE_BUILTIN%%** Disable sdcc's builtin functions.  sdcc will sometimes inline a handful of common string functions by default (see the end of [string.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/string.h?view=markup)).
 
 *  **--fsigned-char** (zsdcc updated after v1.99) "char" means "signed char".  New versions of sdcc treat "char" as "unsigned char".
 
@@ -958,7 +958,7 @@ __clumsy access of static variables__
 
 Code generated to access globals and static variables can often be sub-optimal.  Peephole rules have been added at -SO3 level to help mitigate this.
 
-[sdcc bug tracker](https///sourceforge.net/p/sdcc/bugs/)
+[sdcc bug tracker](https://sourceforge.net/p/sdcc/bugs/)
 
 ## Data Types
 
@@ -985,7 +985,7 @@ The most common surprise to C programmers used to programming 32- and 64-bit mac
 
 2. Always prefer to use unsigned types whenever possible.  Careless use if signed types can lead to superfluous sign extension code inserted by the compiler.  The z80's instruction set is better suited to unsigned types.
 
-New C code intended to be portable should use the data types defined in [`<stdint.h>`](http://http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/stdint.h?view=markup).  These data types explicitly define the bit width in their names.  See int8_t, int16_t, int32_t, int64_t, uint8_t, uint16_t, uint32_t, uint64_t in particular.
+New C code intended to be portable should use the data types defined in [`<stdint.h>`](http://https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/stdint.h?view=markup).  These data types explicitly define the bit width in their names.  See int8_t, int16_t, int32_t, int64_t, uint8_t, uint16_t, uint32_t, uint64_t in particular.
 
 ## Function Call Linkage
 
@@ -1306,17 +1306,17 @@ The library was written to be compatible with sdcc; some effort has been made to
 
 Each target has a library configuration file that selects among various options when the target's library is built.  The defaults are suitable for most projects but if you would like to experiment with generating smaller or faster code the options can be edited and the library re-built.  Because the config file belongs to the target, only that target's library is affected.
 
-All information concerning a particular port is found in [z88dk/libsrc/_DEVELOPMENT/target](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/).  There are currently three targets implemented:  cpm, embedded and zx (zx spectrum).  We will use the "embedded" target for discussion purposes since it's a generic target suitable for any z80 machine.
+All information concerning a particular port is found in [z88dk/libsrc/_DEVELOPMENT/target](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/).  There are currently three targets implemented:  cpm, embedded and zx (zx spectrum).  We will use the "embedded" target for discussion purposes since it's a generic target suitable for any z80 machine.
 
 Two library configuration files along with backups with default settings can be found in the embedded subdirectory:
 
 
-*  [clib_cfg.asm](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/clib_cfg.asm?content-type=text%2Fplain)
+*  [clib_cfg.asm](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/embedded/clib_cfg.asm?content-type=text%2Fplain)
 
 *  clib_cfg.bak
 
 
-*  [clib_target_cfg.asm](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/clib_target_cfg.asm?content-type=text%2Fplain)
+*  [clib_target_cfg.asm](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/embedded/clib_target_cfg.asm?content-type=text%2Fplain)
 
 *  clib_target_cfg.bak
 
@@ -1401,7 +1401,7 @@ The startups and crts are target-specific of course so details should be gathere
 
 ### embedded_crt.asm
 
-The specific crt used in the compile is found from the target's _crt.asm file.  For the embedded target this is [target/embedded/embedded_crt.asm](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/embedded_crt.asm?content-type=text%2Fplain).  The file is just a switch on the startup value specified on the compile line, eg "zcc +embedded -vn -startup=0 ....".  At the top of the file, if startup was not defined on the compile line, a default is selected for you (2 in this case).  An important value is -1 which allows the user to supply his own crt file.
+The specific crt used in the compile is found from the target's _crt.asm file.  For the embedded target this is [target/embedded/embedded_crt.asm](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/embedded/embedded_crt.asm?content-type=text%2Fplain).  The file is just a switch on the startup value specified on the compile line, eg "zcc +embedded -vn -startup=0 ....".  At the top of the file, if startup was not defined on the compile line, a default is selected for you (2 in this case).  An important value is -1 which allows the user to supply his own crt file.
 
 For each startup value, a memory model is selected by number %%(__MMAP=n)%%, a crt configuation is chosen %%(__CRTDEF=n)%% and a real crt.asm file is included from the target's startup directory.
 
@@ -1414,9 +1414,9 @@ This sets up the following:
 
 *  **%%__MMAP = 0%%** selects memory map number zero.
 
-*  [startup/embedded_crt_0.asm](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/startup/embedded_crt_0.asm?content-type=text%2Fplain) is the start-up code.
+*  [startup/embedded_crt_0.asm](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/embedded/startup/embedded_crt_0.asm?content-type=text%2Fplain) is the start-up code.
 
-The actual start-up code contains static data structure definitions to satisfy stdio which is both difficult to read and difficult to understand so the original macro file it was generated from is preferable to refer to: [startup/embedded_crt_rom.m4](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/startup/embedded_crt_rom.m4?view=markup).
+The actual start-up code contains static data structure definitions to satisfy stdio which is both difficult to read and difficult to understand so the original macro file it was generated from is preferable to refer to: [startup/embedded_crt_rom.m4](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/embedded/startup/embedded_crt_rom.m4?view=markup).
 
 Of particular interest are lines 32-43 which list statically instantiated devices.  The order of instantiation determines the file descriptor each instantiated driver will be associated with.  The embedded target is a general one so there are no drivers instantiated.
 
@@ -1424,7 +1424,7 @@ Lines 45 and up contains the first start-up assembly code.  The embedded start-u
 
 ### crt configuration
 
-The crt configuration defines properties of the execution environment.  The value of the **%%__CRTDEF%%** variable selects a configuration from a number of options in the target's "crt_target_defaults.inc".  For the embedded target this is [target/embedded/crt_target_defaults.inc](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/crt_target_defaults.inc?content-type=text%2Fplain).
+The crt configuration defines properties of the execution environment.  The value of the **%%__CRTDEF%%** variable selects a configuration from a number of options in the target's "crt_target_defaults.inc".  For the embedded target this is [target/embedded/crt_target_defaults.inc](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/embedded/crt_target_defaults.inc?content-type=text%2Fplain).
 
 For **%%__CRTDEF = 0%%** the following defaults are set:
 
@@ -1524,7 +1524,7 @@ If you find that you are overriding many defaults you may want to edit the targe
 
 ### memory map
 
-The memory map is defined in the target's "memory_model.inc".  For the embedded target this is [target/embedded/memory_model.inc](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/memory_model.inc?content-type=text%2Fplain) which includes [crt_memory_model.inc](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/crt_memory_model.inc?content-type=text%2Fplain).  If you recall, the selection of "startup=0" on the compile line as discussed above set the variable **%%__MMAP = 0%%**.  This selects the one and only memory map defined in the memory model file.  This memory map is almost universally used and would only need to be different for bankswitched targets.  The model sets up the standard CODE/DATA/BSS sections.
+The memory map is defined in the target's "memory_model.inc".  For the embedded target this is [target/embedded/memory_model.inc](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/embedded/memory_model.inc?content-type=text%2Fplain) which includes [crt_memory_model.inc](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/crt_memory_model.inc?content-type=text%2Fplain).  If you recall, the selection of "startup=0" on the compile line as discussed above set the variable **%%__MMAP = 0%%**.  This selects the one and only memory map defined in the memory model file.  This memory map is almost universally used and would only need to be different for bankswitched targets.  The model sets up the standard CODE/DATA/BSS sections.
 
 ### user initialization and exit code
 
@@ -1790,7 +1790,7 @@ This [forum posting](http://www.z88dk.org/forum/viewtopic.php?pid=13383#p13383) 
 
 As with all grand projects, the first step in creating a target is settling on a name.  The name will appear in the compile line "**zcc +yourname .... test.c -o test**" so keeping it short will save a little typing but it must be long enough that it is descriptive of your target and that it won't collide with names for already existing targets in z88dk.  
 
-The list of current targets can be found in [z88dk/lib/config](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/lib/config/) where the name of each cfg file corresponds to a target name.  For purposes of this discussion we will create a target called "**temp**".
+The list of current targets can be found in [z88dk/lib/config](https://raw.githubusercontent.com/z88dk/z88dk/master/lib/config/) where the name of each cfg file corresponds to a target name.  For purposes of this discussion we will create a target called "**temp**".
 
 To make zcc aware of the target a new file "temp.cfg" must be added to this directory:
 
@@ -1827,7 +1827,7 @@ In the file above, the target name used is "temp" so for your own target, you'll
 
 ##### 2. Create the Target Directory Structure and Add Initial Contents
 
-All information concerning a target for the new C library is located in [z88dk/libsrc/_DEVELOPMENT/target](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/).  Unfortunately the CVS view of the repository on the internet tends to show dead directories mixed with current ones and this is something that will have to be coped with.  The list of currently supported targets are **cpm**, **embedded** and **zx** and you can see that each of these have their own directory here.  **m** is a pseudo-target used to compile the floating point library.
+All information concerning a target for the new C library is located in [z88dk/libsrc/_DEVELOPMENT/target](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/).  Unfortunately the CVS view of the repository on the internet tends to show dead directories mixed with current ones and this is something that will have to be coped with.  The list of currently supported targets are **cpm**, **embedded** and **zx** and you can see that each of these have their own directory here.  **m** is a pseudo-target used to compile the floating point library.
 
 Create a new directory for your target using its config name.  In this example, that's "**z88dk/libsrc/_DEVELOPMENT/target/temp**".
 
@@ -1858,7 +1858,7 @@ Here is a brief description of each file and subdirectory:
 
 When the target's C library is built, the list of files assembled into the library are read from the target's library subdirectory.  In the present example that is **z88dk/libsrc/_DEVELOPMENT/target/temp/library**.  Three libraries are built corresponding to the three list files found here:  sccz80, sdcc_ix and sdcc_iy.  The sccz80 library is used when sccz80 is chosen as compiler.  The sdcc_ix and sdcc_iy libraries are chosen when sdcc is the compiler and are selected between by either "-clib=sdcc_ix" or "-clib=sdcc_iy" on the compile line.  The difference between the two is which index register the C library uses.  "sdcc_ix" corresponds to the library using ix and "sdcc_iy" corresponds to the library using iy.  It's always preferable to use the "sdcc_iy" version of the library because this gives sdcc sole use of ix for its frame pointer while the library uses iy.  If "sdcc_ix" is selected, sdcc and the library must share ix which means the library must insert extra code to preserve the ix register when it is used.  This means the "sdcc_iy" compile will be smaller.  The choice is present because some targets reserve one of the index registers for themselves.
 
-The new C library's source code is located just above the target directories in [z88dk/libsrc/_DEVELOPMENT](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/).  Just to rule out the few dead directories, the currently valid source code directories are listed below.
+The new C library's source code is located just above the target directories in [z88dk/libsrc/_DEVELOPMENT](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/).  Just to rule out the few dead directories, the currently valid source code directories are listed below.
 
  | adt      | Abstract data types:  arrays, vectors, stacks, queues, lists                              | 
  | ---      | ------------------------------------------------------------                              | 
@@ -1933,7 +1933,7 @@ Keep the **clib_cfg.bak** file consistent as it serves as backup if the user mak
 
 The target library configuration serves the same function as the regular library configuration but it applies to target-specific code only.  The target-specific customizations are found in **clib_target_cfg.asm**.  The file provided defines two things that all targets should define:  the z80 clock rate in Hz and some bit flags that define whether the z80 is nmos or cmos.  The latter is important because the nmos z80 has a bug that makes the determination of interrupt state (enabled or disabled) more difficult.  The library can be compiled to use the simpler cmos code or the more complicated nmos code as needed.  If your code must run on all manner of z80s, choose nmos.
 
-If you will be writing target-specific library code, this is the place to put any required configuration information that will be available when the library code is built.  As an example, you can have a look at the **zx** target's [clib_target_cfg.asm](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/zx/clib_target_cfg.asm?content-type=text%2Fplain) file.  It has the same architecture information at the top but it also has more defines that customize the sp1 sprite library and define how 1-bit sound is generated.
+If you will be writing target-specific library code, this is the place to put any required configuration information that will be available when the library code is built.  As an example, you can have a look at the **zx** target's [clib_target_cfg.asm](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/zx/clib_target_cfg.asm?content-type=text%2Fplain) file.  It has the same architecture information at the top but it also has more defines that customize the sp1 sprite library and define how 1-bit sound is generated.
 
 Keep the **clib_target_cfg.bak** file consistent as it serves as backup if the user makes his own customizations later.
 
@@ -2105,7 +2105,7 @@ Applicable CRT options:
 
 Some hosts will set the stack pointer before starting a machine code program so it can make sense not to alter the stack pointer value.
 
-See lines [110-116 of this CRT](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/zx/startup/zx_crt_ram.m4?revision=1.7&view=markup) for an example.
+See lines [110-116 of this CRT](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/zx/startup/zx_crt_ram.m4?revision=1.7&view=markup) for an example.
 
 	
 	   ; parse command line
@@ -2117,15 +2117,15 @@ Applicable CRT options:
  | %%__crt_enable_commandline%% | if non-zero the user is requesting the command line to be parsed and argc + argv to be generated. | 
  | ---------------------------- | ------------------------------------------------------------------------------------------------- | 
 
-If the target does not have a means to communicate a command line, a course of action you can take is to generate an empty command line.  See [lines 118-142 of this CRT](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/zx/startup/zx_crt_ram.m4?revision=1.7&view=markup) for an example.
+If the target does not have a means to communicate a command line, a course of action you can take is to generate an empty command line.  See [lines 118-142 of this CRT](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/zx/startup/zx_crt_ram.m4?revision=1.7&view=markup) for an example.
 
 The library supplies two functions to help parse command lines:
 
 
-*  [l_command_line_parse](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/l/z80/l_command_line_parse.asm?content-type=text%2Fplain)  This function is intended for parsing command lines from a region in memory that is likely to be overwritten during program execution.  An example is the cp/m target which leaves the command line at address 0x80 which also happens to be the location of the primary FCB.  The first time a file is read or written from disk, the command line will be overwritten.  What this function does is copy the words to the stack as they are parsed so that the command line will be available throughout program execution.  See [lines 110-164 of this CRT](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/cpm/startup/cpm_crt.m4?revision=1.7&view=markup) for an example.
+*  [l_command_line_parse](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/l/z80/l_command_line_parse.asm?content-type=text%2Fplain)  This function is intended for parsing command lines from a region in memory that is likely to be overwritten during program execution.  An example is the cp/m target which leaves the command line at address 0x80 which also happens to be the location of the primary FCB.  The first time a file is read or written from disk, the command line will be overwritten.  What this function does is copy the words to the stack as they are parsed so that the command line will be available throughout program execution.  See [lines 110-164 of this CRT](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/cpm/startup/cpm_crt.m4?revision=1.7&view=markup) for an example.
 
 
-*  [l_command_line_parse_in_place](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/l/z80/l_command_line_parse_in_place.asm?content-type=text%2Fplain)  This function is intended for parsing command lines from a region in memory that will not be overwritten during program execution.  The command line will be parsed into words in place, with terminating NUL bytes written into the command line as needed.  See [lines 162-194 of this CRT](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/symbos/startup/symbos_crt.m4?revision=1.2&view=markup) for an example.  At the time of writing this CRT is only partially implemented.
+*  [l_command_line_parse_in_place](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/l/z80/l_command_line_parse_in_place.asm?content-type=text%2Fplain)  This function is intended for parsing command lines from a region in memory that will not be overwritten during program execution.  The command line will be parsed into words in place, with terminating NUL bytes written into the command line as needed.  See [lines 162-194 of this CRT](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/symbos/startup/symbos_crt.m4?revision=1.2&view=markup) for an example.  At the time of writing this CRT is only partially implemented.
 
 Both these functions stop parsing when a file re-director ("`<" or ">`") is encountered.  In the future this part of the command line will be interpretted to redirect i/o to files.  Neither function currently groups quoted strings into a single argument.  This will also change in a future update.
 
@@ -2263,7 +2263,7 @@ Applicable CRT options:
 
 Further discussion of these CRT options can be found [here](#crt_configuration).
 
-The embedded target has a [CRT which will generate the z80 restarts](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/startup/embedded_crt_rom.m4?revision=1.11&view=markup) if the ORG address is 0.  The CRT is written to apply to both 0 ORG and non-zero ORG so there is conditional code present for the 0 ORG case.  You can see how the restarts were implemented by examining that code.
+The embedded target has a [CRT which will generate the z80 restarts](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/embedded/startup/embedded_crt_rom.m4?revision=1.11&view=markup) if the ORG address is 0.  The CRT is written to apply to both 0 ORG and non-zero ORG so there is conditional code present for the 0 ORG case.  You can see how the restarts were implemented by examining that code.
 
 \\ 
 ----
@@ -2359,7 +2359,7 @@ Small talk aside, as with CRTs and CRT options, many memory maps can be defined 
 
 
 The include actually defining the memory map is found one directory above:
-[z88dk/libsrc/_DEVELOPMENT/target/crt_memory_model.inc](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/crt_memory_model.inc?content-type=text%2Fplain)
+[z88dk/libsrc/_DEVELOPMENT/target/crt_memory_model.inc](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/crt_memory_model.inc?content-type=text%2Fplain)
 
 Three major sections are defined (CODE, DATA, BSS) with optional ORG addresses and many smaller sections are sequenced such that they merge into these bigger ones.
 
@@ -2536,7 +2536,7 @@ The driver code itself should be placed in the most appropriate code section:
 
 Once the device driver is ready, the target's libraries will need to be rebuilt by running "Winmake TARGETNAME" or "make TARGET=TARGETNAME" from z88dk/libsrc/_DEVELOPMENT.
 
-The [cp/m target's driver directory](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/cpm/) can be used as a model.
+The [cp/m target's driver directory](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/cpm/) can be used as a model.
 
 #### The Raw Device Driver
 
@@ -2618,7 +2618,7 @@ In **ioctl_f0** and **ioctl_f1** (offsets 6 and 7).  In an effort to reduce bina
  | OUT:               | carry set on error (likely ignored)                                                                                         |                                                                    | 
  | NOTE:              | A flush message is always sent ahead of close.  Deallocate any resources this driver has allocated.                         |                                                                    | 
 
-These messages, error numbers and library ioctls are defined in [z88dk/libsrc/_DEVELOPMENT/target/clib_constants.inc](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/clib_constants.inc?content-type=text%2Fplain) which is included into every CRT.
+These messages, error numbers and library ioctls are defined in [z88dk/libsrc/_DEVELOPMENT/target/clib_constants.inc](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/target/clib_constants.inc?content-type=text%2Fplain) which is included into every CRT.
 
 While writing device drivers or any other code with z88dk, it can be very helpful to be familiar with the library code supplied by z88dk.  Using it can keep binary sizes down and speed up development time substantially.  The root source directory is **z88dk/libsrc/_DEVELOPMENT**.  Many of the subdirectories will have familiar names as they implement portions of the C standard.  Two other important subdirectories might be "**l**" which contains many small subroutines and "**error**" which provides exit points for functions.  These exit points can be used to balance the stack and return after optionally setting errno and a return value appropriately.
 
@@ -2666,7 +2666,7 @@ Given the above, a driver might be structured like this:
 
 Drivers are allowed to change any registers except ix and iy unless otherwise documented.
 
-The above is an abstract base class driver implemented in the library.  The entire driver can be found in [z88dk/libsrc/_DEVELOPMENT/drivers/character/character00/input](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/drivers/character/character_00/input/).
+The above is an abstract base class driver implemented in the library.  The entire driver can be found in [z88dk/libsrc/_DEVELOPMENT/drivers/character/character00/input](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/drivers/character/character_00/input/).
 
 If your driver properly ignores messages that do not apply and implements messages from the list above that do apply, your driver is finished.  This is the .asm file mentioned in the last section.  The message functions are placed in the driver's subdirectory and the list file will list all of the driver's source files.  The last piece is the .m4 macro that will allow the driver to be instantiated as a file in the CRT.  This is discussed in the **Driver Instantiation** topic below.
 

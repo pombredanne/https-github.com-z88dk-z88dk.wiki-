@@ -1,8 +1,8 @@
 # INPUT LIBRARY (input.h)
 
- | Header     | [{z88dk}/include/input.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/input.h?view=markup)    |   
+ | Header     | [{z88dk}/include/input.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/input.h?view=markup)    |   
  | -----------------------------------------------------------------------------------------------------------------------------   
- | Source     | [{z88dk}/libsrc/input](https///github.com/z88dk/z88dk/tree/master/libsrc/input/)                               |   
+ | Source     | [{z88dk}/libsrc/input](https://github.com/z88dk/z88dk/tree/master/libsrc/input/)                               |   
  | Include    | #include `<input.h>`                                                                                              |  
  | Linking    | n/a                                                                                                             |  
  | Compile    | n/a                                                                                                             |  

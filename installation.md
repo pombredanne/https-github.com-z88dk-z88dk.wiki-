@@ -146,7 +146,7 @@ It is the root path for the library files.  It should be set to point to `<appli
 
 # Navigating z88dk's Directory Tree
 
-The current z88dk tree can be navigated online, on the [git repository](https///github.com/z88dk/z88dk/).
+The current z88dk tree can be navigated online, on the [git repository](https://github.com/z88dk/z88dk/).
 
 Here is a short description on how the sources are divided:
 

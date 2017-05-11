@@ -11,14 +11,14 @@ It is a text adventure game, for its history look at [the Planet Of Death home p
 Because of its peculiarities (big size and little platform-specific code requirements) it is a good choice to test a new z88dk target.
 
 
-*  [Source code](http://z88dk.cvs.sourceforge.net/*checkout*/z88dk/z88dk/examples/console/adv_a.c)
+*  [Source code](https://raw.githubusercontent.com/z88dk/z88dk/masterexamples/console/adv_a.c)
 
 *  {{:examples:adv_at.wav.gz|ZX Spectrum version, built with turbo loading, pictures and 'save game' options}}
 
 ## The 'Campus LIsP' Language port
 
 
-*  [Current devel folder](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/examples/clisp/)
+*  [Current devel folder](https://raw.githubusercontent.com/z88dk/z88dk/master/examples/clisp/)
 
 ## The 'Death Star' game
 
@@ -35,13 +35,13 @@ Some old versions are still used as examples on how to access directly to machin
 
 *  [ZX Spectrum Interface II cartridge version](http://www.fruitcake.plus.com/Sinclair/Interface2/Cartridges/Interface2_RC_New_3rdParty_DeathStar.htm)
 
-*  Older ZX Spectrum specific version: [dstar.c](http://z88dk.cvs.sourceforge.net/*checkout*/z88dk/z88dk/examples/spectrum/dstar.c) [dstar.h](http://z88dk.cvs.sourceforge.net/*checkout*/z88dk/z88dk/examples/spectrum/dstar.h)
+*  Older ZX Spectrum specific version: [dstar.c](https://raw.githubusercontent.com/z88dk/z88dk/masterexamples/spectrum/dstar.c) [dstar.h](https://raw.githubusercontent.com/z88dk/z88dk/masterexamples/spectrum/dstar.h)
 
-*  ZX80 and ZX81 text based version, graphics for the ZX81 programmable character mods, plus an attempt to get stable pictures on the zx80 : [dstar.c](http://z88dk.cvs.sourceforge.net/*checkout*/z88dk/z88dk/examples/zx81/dstar.c)
+*  ZX80 and ZX81 text based version, graphics for the ZX81 programmable character mods, plus an attempt to get stable pictures on the zx80 : [dstar.c](https://raw.githubusercontent.com/z88dk/z88dk/masterexamples/zx81/dstar.c)
 
-*  Older VZ 200 version: [dstar.c](http://z88dk.cvs.sourceforge.net/*checkout*/z88dk/z88dk/examples/vz/dstar.c) [dstar.h](http://z88dk.cvs.sourceforge.net/*checkout*/z88dk/z88dk/examples/vz/dstar.h)
+*  Older VZ 200 version: [dstar.c](https://raw.githubusercontent.com/z88dk/z88dk/masterexamples/vz/dstar.c) [dstar.h](https://raw.githubusercontent.com/z88dk/z88dk/masterexamples/vz/dstar.h)
 
-*  Yet another old version for TI calculators and Spectrum: [dstar2.c](http://z88dk.cvs.sourceforge.net/*checkout*/z88dk/z88dk/examples/ticalc/dstar2.c) [dstar2.h](http://z88dk.cvs.sourceforge.net/*checkout*/z88dk/z88dk/examples/ticalc/dstar2.h)
+*  Yet another old version for TI calculators and Spectrum: [dstar2.c](https://raw.githubusercontent.com/z88dk/z88dk/masterexamples/ticalc/dstar2.c) [dstar2.h](https://raw.githubusercontent.com/z88dk/z88dk/masterexamples/ticalc/dstar2.h)
 
 *  Videos of the game running on [MSX](http://www.youtube.com/watch?v=uHvMlGFof2U), [Jupiter ACE](http://www.youtube.com/watch?v=pQUt7r5OMC8)
 

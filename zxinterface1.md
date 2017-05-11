@@ -1,8 +1,8 @@
 # ZX Interface 1 functions (zxinterface1.h)
 
- | Header     | [{z88dk}/include/zxinterface1.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/zxinterface1.h)    |
+ | Header     | [{z88dk}/include/zxinterface1.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/zxinterface1.h)    |
  | -------------------------------------------------------------------------------------------------------------------------------
- | Source     | [{z88dk}/libsrc/spectrum](https///github.com/z88dk/z88dk/tree/master/libsrc/spectrum)                   |         
+ | Source     | [{z88dk}/libsrc/spectrum](https://github.com/z88dk/z88dk/tree/master/libsrc/spectrum)                   |         
  | Include    | #include `<zxinterface1.h>`             |                                                                           
  | Linking    | n/a                          |                                                                                    
  | Compile    | n/a                          |                                                                                    

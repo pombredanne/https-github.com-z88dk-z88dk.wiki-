@@ -1,6 +1,6 @@
 # The portable version of the 'Death Star' game
 
-Click here to view the source code of [dstar.c](http://z88dk.cvs.sourceforge.net/*checkout*/z88dk/z88dk/examples/dstar.c) or its [header file](http://z88dk.cvs.sourceforge.net/*checkout*/z88dk/z88dk/examples/dstar.h)
+Click here to view the source code of [dstar.c](https://raw.githubusercontent.com/z88dk/z88dk/masterexamples/dstar.c) or its [header file](https://raw.githubusercontent.com/z88dk/z88dk/masterexamples/dstar.h)
 
 
 ## TI Calculators

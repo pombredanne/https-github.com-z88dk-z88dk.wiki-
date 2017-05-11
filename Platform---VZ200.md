@@ -63,8 +63,8 @@ http://bushy.vzalive.bangrocks.com/
 
 http://www.vz200.org/bushy/
 
-[Scrolly demo (YouTube Video)](https///www.youtube.com/watch?v=80nJ4RiR8xs)
+[Scrolly demo (YouTube Video)](https://www.youtube.com/watch?v=80nJ4RiR8xs)
 
-[Flappy bird game code](https///github.com/gameblabla/flappybird_vz200/releases/tag/1.0) ..see also the [video](https///m.youtube.com/watch?v=mXtx4F2rmVg)
+[Flappy bird game code](https://github.com/gameblabla/flappybird_vz200/releases/tag/1.0) ..see also the [video](https://m.youtube.com/watch?v=mXtx4F2rmVg)
 
-[Experimenting with the z88dk examples](https///m.youtube.com/watch?v=u8amUYLfi18)
+[Experimenting with the z88dk examples](https://m.youtube.com/watch?v=u8amUYLfi18)

@@ -13,7 +13,7 @@ z88dk will link a C/asm program against libraries, only pulling out functions th
 
 *  PUBLIC and EXTERN are about controlling scope across user files, not libraries.  If the user program is spread across two files, 'PUBLIC name' will cause the assembler label 'name' to become global and therefore visible in the other file if an "EXTERN name' is added in the second file.
 
-For example, the beginning of [this](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/libsrc/sprites/software/sp1/spectrum/sprites/sp1_IterateSprChar_callee.asm?view=markup) asm function looks like:
+For example, the beginning of [this](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/spectrum/sprites/sp1_IterateSprChar_callee.asm?view=markup) asm function looks like:
 
 	
 	    5 PUBLIC sp1_IterateSprChar_callee
@@ -37,7 +37,7 @@ To compile a library you can use this command:
 
 where 'file.lst' contains a list of asm functions to include in the library.
 
-Example code snippet from "[/z88dk/libsrc/sprites/software/sp1/spectrum.lst](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/libsrc/sprites/software/sp1/spectrum.lst?view=markup)"
+Example code snippet from "[/z88dk/libsrc/sprites/software/sp1/spectrum.lst](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/spectrum.lst?view=markup)"
 
 	
 	spectrum/sprites/_sp1_struct_cs_prototype
@@ -89,7 +89,7 @@ eg:
 
 ### Combineing different linkage types
 
-One more complication regarding %%__CALLEE__%% functions: the C compiler can only call functions through function pointers using standard C linkage. There is a nice way to allow the function to be called both normally (with %%__CALLEE__%%), and as a function pointer (standard). In [this](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h?revision=1.1&view=markup) header file you will spot this:
+One more complication regarding %%__CALLEE__%% functions: the C compiler can only call functions through function pointers using standard C linkage. There is a nice way to allow the function to be called both normally (with %%__CALLEE__%%), and as a function pointer (standard). In [this](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h?revision=1.1&view=markup) header file you will spot this:
 
 	:::c
 	  218 extern void               __LIB__   sp1_IterateSprChar(struct sp1_ss *s, void *hook1);
@@ -106,29 +106,29 @@ The C program will call the library function using this much nicer name as in "s
 	(function_pointer)(s,f);
 
 
-The preprocessor does not make the callee substitution because the number of parameters doesn't match.  In this case the library function "sp1_IterateSprChar" is called using normal C linkage.  You can see that this function is only a shell that calls into the real callee function: [sp1_IterateSprChar.asm](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/libsrc/sprites/software/sp1/spectrum/sprites/sp1_IterateSprChar.asm?view=markup)
+The preprocessor does not make the callee substitution because the number of parameters doesn't match.  In this case the library function "sp1_IterateSprChar" is called using normal C linkage.  You can see that this function is only a shell that calls into the real callee function: [sp1_IterateSprChar.asm](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/spectrum/sprites/sp1_IterateSprChar.asm?view=markup)
 
-For this to work the [sp1_IterateSprChar_callee](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/libsrc/sprites/software/sp1/spectrum/sprites/sp1_IterateSprChar_callee.asm?view=markup) function needs to pass the address of the code after popping off the parameters, or the displacement between this and the entry point. It makes this public by useing the XDEF directive. This also gives asm programmers the option of calling your library functions setting up parameters in registers rather than in the C-way.  This is well worth doing!
+For this to work the [sp1_IterateSprChar_callee](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/spectrum/sprites/sp1_IterateSprChar_callee.asm?view=markup) function needs to pass the address of the code after popping off the parameters, or the displacement between this and the entry point. It makes this public by useing the XDEF directive. This also gives asm programmers the option of calling your library functions setting up parameters in registers rather than in the C-way.  This is well worth doing!
 
 ### Examples
 
-Makefile:  [/z88dk/libsrc/sprites/software/sp1/Makefile](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/libsrc/sprites/software/sp1/Makefile?view=markup)
+Makefile:  [/z88dk/libsrc/sprites/software/sp1/Makefile](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/Makefile?view=markup)
 
-The Makefile variables are defined in: [/z88dk/libsrc/Make.config](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/libsrc/Make.config?view=markup)
+The Makefile variables are defined in: [/z88dk/libsrc/Make.config](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/Make.config?view=markup)
 
 A lst file listing all the asm files to include in the library when "make sp1-spectrum" is run:
 
-[/z88dk/libsrc/sprites/software/sp1/spectrum.lst](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/libsrc/sprites/software/sp1/spectrum.lst?view=markup)
+[/z88dk/libsrc/sprites/software/sp1/spectrum.lst](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/spectrum.lst?view=markup)
 
 The corresponding header file for inclusion in C programs showing use of %%__FASTCALL__%% and %%__CALLEE__%%:
 
-[/z88dk/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h?view=markup)
+[/z88dk/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h?view=markup)
 
 One of the asm implementations "sp1_IterateSprChar_callee" whose function prototype can be found in the header above:
 
 %%extern void __CALLEE__ __LIB__  sp1_IterateSprChar_callee(struct sp1_ss *s, void *hook1);%%
 
-[/z88dk/libsrc/sprites/software/sp1/spectrum/sprites/sp1_IterateSprChar_callee.asm](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/libsrc/sprites/software/sp1/spectrum/sprites/sp1_IterateSprChar_callee.asm?view=markup)
+[/z88dk/libsrc/sprites/software/sp1/spectrum/sprites/sp1_IterateSprChar_callee.asm](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/spectrum/sprites/sp1_IterateSprChar_callee.asm?view=markup)
 
 
 This page is based on a forum post by Alvin (http://www.z88dk.org/forum/viewtopic.php?id=2637)

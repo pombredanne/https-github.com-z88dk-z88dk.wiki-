@@ -266,7 +266,7 @@ They were mostly CP/M systems, but the model 1080 had a resident program only.
 
 Already supported as CP/M and S-OS systems but deserving specific extras 
 
-[NEC systems overview](https///classictech.wordpress.com/computer-companies/nec-home-electronics-usa-elk-grove-village-ill/)
+[NEC systems overview](https://classictech.wordpress.com/computer-companies/nec-home-electronics-usa-elk-grove-village-ill/)
 
 [NEC systems overview, Retro Computer People, JP](http://www.geocities.jp/retro_zzz/machines/nec/index.html)
 [PC-8801 on Wikipedia](http://en.wikipedia.org/wiki/PC-8801)
@@ -351,7 +351,7 @@ Peaturing the PIPS spreadsheed as operating system, optional ROM could be added.
 
 ##### Ondra
 
-[https://sites.google.com/site/ondraspo186/](https///sites.google.com/site/ondraspo186/)
+[https://sites.google.com/site/ondraspo186/](https://sites.google.com/site/ondraspo186/)
 
 ##### Orion
 
@@ -426,7 +426,7 @@ CP/M compatible, low and high resolution graphics might be supported
 
 The SPC-1100 was the SPC-1000 version for education, schools, etc.. (some of them had few connections removed).    The SPC-1000A had audio output function and volume control function from data recorder.
 
-[https://no-ssl.namu.wiki/w/SPC-1000](https///no-ssl.namu.wiki/w/SPC-1500) (if in trouble, use Google Translator!)
+[https://no-ssl.namu.wiki/w/SPC-1000](https://no-ssl.namu.wiki/w/SPC-1500) (if in trouble, use Google Translator!)
 
 [Tech tips for SDCC](http://blog.naver.com/PostView.nhn?blogId=mayhouse&logNo=20038926005&beginTime=0&jumpingVid=&from=search&redirect=Log&widgetTypeCall=true) (as above..)
 
@@ -435,7 +435,7 @@ The SPC-1100 was the SPC-1000 version for education, schools, etc.. (some of the
 
 Very close to the Sharp X1 rather than to the SPC-1000
 
-[Korean website about SPC-1500](https///no-ssl.namu.wiki/w/SPC-1500) (if in trouble, use Google Translator)
+[Korean website about SPC-1500](https://no-ssl.namu.wiki/w/SPC-1500) (if in trouble, use Google Translator)
 
 
 ### S-100 cards
@@ -742,9 +742,9 @@ This one had an optional i8088 add-in board and nice CP/M graphics extensions.
 GDOS is mentioned: is it the same of the GSX ?  Doesn't seem so.
 
 
-[NorthStar Graphics CP/M](https///archive.org/stream/bitsavers_northstaravantageGraphicsCPMPreface1982partial_4535300/North_Star_Advantage_Graphics_CPM_Preface_1982_partial#page/n0/mode/2up)
+[NorthStar Graphics CP/M](https://archive.org/stream/bitsavers_northstaravantageGraphicsCPMPreface1982partial_4535300/North_Star_Advantage_Graphics_CPM_Preface_1982_partial#page/n0/mode/2up)
 
-[NorthStar Addendum to Graphics CPM Preface](https///archive.org/details/bitsavers_northstaradumtoGraphicsCPMPreface_1780469)
+[NorthStar Addendum to Graphics CPM Preface](https://archive.org/details/bitsavers_northstaradumtoGraphicsCPMPreface_1780469)
 
 
 

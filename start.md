@@ -46,13 +46,13 @@ Some modules have been imported into the project from other sources.  They may b
     * [Environment Variables](installation#environment_variables)
     * [Navigating z88dk's Directory Structure](installation#navigating_z88dk_s_directory_tree)
     * [Compiling z88dk from C Source](installation#compiling_the_z88dk_binaries)
-    * [Link to the git repository](https///github.com/z88dk/z88dk/)
+    * [Link to the git repository](https://github.com/z88dk/z88dk/)
  2.  **An Introduction to Using z88dk**
 
     * ![](images/ptfdep.jpg)
     * Environment
     * [The Compiler Front End: ZCC](zcc)
-    * The Assembler and Linker: Z80ASM ([z80asm.txt](http://z88dk.cvs.sourceforge.net/*checkout*/z88dk/z88dk/doc/z80asm.txt))
+    * The Assembler and Linker: Z80ASM ([z80asm.txt](https://raw.githubusercontent.com/z88dk/z88dk/masterdoc/z80asm.txt))
     * [The Peep-Hole Optimizer](copt)
     * [Various Tools Included with z88dk](tools)
     * [MAKEing the z80 Libraries](libsrc)
@@ -67,64 +67,64 @@ Some modules have been imported into the project from other sources.  They may b
  1.  **Platform Independent Library Functions**
 
     * ![](images/pli.jpg)
-    * [Abstract Data Types](library/adt) ([adt.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/adt.h))
-    * [Algorithm](library/algorithm) ([algorithm.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/algorithm.h))
-    * [conio.h (MS-DOS compatibility)](library/conio) ([conio.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/conio.h))
-    * [Debug](library/debug) ([debug.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/debug.h))
-    * [Fast 3D rotation library](library/lib3d) ([lib3d.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/lib3d.h))
-    * [Input](library/input) ([input.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/input.h))
-    * [Interrupts](library/interrupts) ([im2.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/im2.h))
-    * [Maths](library/maths) ([maths.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/maths.h),[float.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/float.h))
-    * [Memory Allocation](library/memory allocation) ([malloc.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/malloc.h), [balloc.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/balloc.h))
-    * [microc.h (Micro C compatibility)](library/microc) ([microc.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/microc.h))
-    * [Monochrome Graphics](library/monographics) ([graphics.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/graphics.h))
-      * [Turbo C BGI emulation functions](library/bgi) ([bgi.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/bgi.h))
-      * [GUI functions (windowing)](library/wingui) ([gui.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/gui.h))
-      * [Xlib emulation](library/xlib) ([X.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/X11/X.h),[Xlib.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/X11/Xlib.h),[Xos.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/X11/Xos.h),[Xutil.h ](https///raw.githubusercontent.com/z88dk/z88dk/master/include/X11/Xutil.h),[Xz88dk.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/X11/Xz88dk.h))
-    * [RS232 Serial](library/serial) ([rs232.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/rs232.h))
-    * [Sound](library/sound) ([sound.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/sound.h))
-    * [Programmable Sound Generator (PSG)](library/psg) ([psg.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/psg.h))
+    * [Abstract Data Types](library/adt) ([adt.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/adt.h))
+    * [Algorithm](library/algorithm) ([algorithm.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/algorithm.h))
+    * [conio.h (MS-DOS compatibility)](library/conio) ([conio.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/conio.h))
+    * [Debug](library/debug) ([debug.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/debug.h))
+    * [Fast 3D rotation library](library/lib3d) ([lib3d.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/lib3d.h))
+    * [Input](library/input) ([input.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/input.h))
+    * [Interrupts](library/interrupts) ([im2.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/im2.h))
+    * [Maths](library/maths) ([maths.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/maths.h),[float.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/float.h))
+    * [Memory Allocation](library/memory allocation) ([malloc.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/malloc.h), [balloc.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/balloc.h))
+    * [microc.h (Micro C compatibility)](library/microc) ([microc.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/microc.h))
+    * [Monochrome Graphics](library/monographics) ([graphics.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/graphics.h))
+      * [Turbo C BGI emulation functions](library/bgi) ([bgi.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/bgi.h))
+      * [GUI functions (windowing)](library/wingui) ([gui.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/gui.h))
+      * [Xlib emulation](library/xlib) ([X.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/X11/X.h),[Xlib.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/X11/Xlib.h),[Xos.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/X11/Xos.h),[Xutil.h ](https://raw.githubusercontent.com/z88dk/z88dk/master/include/X11/Xutil.h),[Xz88dk.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/X11/Xz88dk.h))
+    * [RS232 Serial](library/serial) ([rs232.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/rs232.h))
+    * [Sound](library/sound) ([sound.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/sound.h))
+    * [Programmable Sound Generator (PSG)](library/psg) ([psg.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/psg.h))
     * [Sprites](library/sprites)
       * Hardware
         * Amstrad CPC+
         * MSX1
       * Software
-        * [SP1](library/sprites/sp1) ([sp1.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/spectrum-sp1.h))
-        * [Monochrome graphics sprite library](library/sprites/monosprites) ([games.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/games.h))
-    * [Low Level file I/O](library/fcntl) ([fcntl.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/fcntl.h))
-    * [Standard I/O](library/stdio) ([stdio.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/stdio.h))
+        * [SP1](library/sprites/sp1) ([sp1.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/spectrum-sp1.h))
+        * [Monochrome graphics sprite library](library/sprites/monosprites) ([games.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/games.h))
+    * [Low Level file I/O](library/fcntl) ([fcntl.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/fcntl.h))
+    * [Standard I/O](library/stdio) ([stdio.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/stdio.h))
     * [New Standard I/O](library/new_stdio)
-    * [Standard Library](library/stdlib) ([stdlib.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/stdlib.h))
-    * [String Functions](library/string) ([string.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/string.h))
-    * [Time, clock and date functions](library/time) ([time.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/time.h))
+    * [Standard Library](library/stdlib) ([stdlib.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/stdlib.h))
+    * [String Functions](library/string) ([string.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/string.h))
+    * [Time, clock and date functions](library/time) ([time.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/time.h))
  2.  **Platform Dependent Library Functions**
 
     * ![](images/pld.jpg)
-    * [Luxor ABC 80](library/abc80) ([abc80.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/abc80.h))
-    * [Luxor ABC 800](library/abc800) ([abc800.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/abc800.h))
-    * [Enterprise 64/128](library/enterprise) ([enterprise.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/enterprise.h))
-    * [CP/M](library/cpm) ([cpm.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/cpm.h))
+    * [Luxor ABC 80](library/abc80) ([abc80.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/abc80.h))
+    * [Luxor ABC 800](library/abc800) ([abc800.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/abc800.h))
+    * [Enterprise 64/128](library/enterprise) ([enterprise.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/enterprise.h))
+    * [CP/M](library/cpm) ([cpm.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/cpm.h))
     * [Commodore 128](library/c128)
       * [SG Tools library by Steve Goldsmith](library/c128/sgtools)
-    * [MSX](library/msx) ([msx.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/msx.h))
-      * ['gfx' library by Rafael de Oliveira Jannone](library/msx/gfx) ([msx/gfx.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/msx/gfx.h))
-    * [Grundy NewBrain](library/newbrain) ([newbrain.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/newbrain.h))
-    * [Sinclair ZX 81](library/zx81) ([zx81.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/zx81.h))
-      * [Gray scale LCD library](library/graylib) ([gray.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/gray.h))
-    * [Sinclair ZX Spectrum](library/zxspectrum) ([spectrum.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/spectrum.h))
-      * [Low resolution color graphics](library/zxspectrum/zxlowgfx) ([zxlowgfx.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/zxlowgfx.h))
-      * [Currah uSpeech support](library/zxspectrum/currah) ([zxcurrah.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/zxcurrah.h))
-      * [Opus Discovery](library/zxspectrum/zxopus) ([zxopus.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/zxopus.h)) 
-      * [ZX Interface 1](library/zxspectrum/zxinterface1) ([zxinterface1.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/zxinterface1.h))
-      * [The ZXVGS system](platform/zxvgs) ([zxvgs.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/zxvgs.h))
+    * [MSX](library/msx) ([msx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/msx.h))
+      * ['gfx' library by Rafael de Oliveira Jannone](library/msx/gfx) ([msx/gfx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/msx/gfx.h))
+    * [Grundy NewBrain](library/newbrain) ([newbrain.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/newbrain.h))
+    * [Sinclair ZX 81](library/zx81) ([zx81.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/zx81.h))
+      * [Gray scale LCD library](library/graylib) ([gray.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/gray.h))
+    * [Sinclair ZX Spectrum](library/zxspectrum) ([spectrum.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/spectrum.h))
+      * [Low resolution color graphics](library/zxspectrum/zxlowgfx) ([zxlowgfx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/zxlowgfx.h))
+      * [Currah uSpeech support](library/zxspectrum/currah) ([zxcurrah.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/zxcurrah.h))
+      * [Opus Discovery](library/zxspectrum/zxopus) ([zxopus.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/zxopus.h)) 
+      * [ZX Interface 1](library/zxspectrum/zxinterface1) ([zxinterface1.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/zxinterface1.h))
+      * [The ZXVGS system](platform/zxvgs) ([zxvgs.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/zxvgs.h))
       * [Available fcntl drivers](library/zxspectrum/fcntl)
-    * [Sharp X1](library/x1) ([x1.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/x1.h))
-    * [S-OS](library/sos) ([sos.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/sos.h))
+    * [Sharp X1](library/x1) ([x1.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/x1.h))
+    * [S-OS](library/sos) ([sos.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/sos.h))
     * [Sharp OZ700 family, functions from the OZ development kit](library/sharpoz)
-    * [TI calculators](TI calculators) ([ti.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/ti.h))
-      * [Gray scale LCD library](library/graylib) ([gray.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/gray.h))
-    * [Z88](library/z88) ([z88.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/z88.h))
-    * [VZ 200](library/vz200) ([vz.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/vz.h))
+    * [TI calculators](TI calculators) ([ti.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/ti.h))
+      * [Gray scale LCD library](library/graylib) ([gray.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/gray.h))
+    * [Z88](library/z88) ([z88.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/z88.h))
+    * [VZ 200](library/vz200) ([vz.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/vz.h))
  3.  **Third Party Libraries**
 
     * {{extlib.gif|}}
@@ -207,7 +207,7 @@ You can read more about it and find details on how to try it [here](temp/front).
       * [CCE MC-1000](platform/mc1000)
       * [MSX](platform/msx)
       * [Memotech MTX](platform/mtx)
-      * [MK2 Z80 board project by Derek Baker at allthingsmicro.com](https///www.allthingsmicro.com/index.php/tutorials/creating-a-z80-development-environment)
+      * [MK2 Z80 board project by Derek Baker at allthingsmicro.com](https://www.allthingsmicro.com/index.php/tutorials/creating-a-z80-development-environment)
       * [MK3 Z80 board project by Stefano Bianchini](http://www.zilog80.eu/), based on MK2
       * [MicroBee](platform/microbee)
       * [NASCOM 1 and NASCOM 2](platform/nascom)
@@ -216,7 +216,7 @@ You can read more about it and find details on how to try it [here](temp/front).
       * [Philips Videopac C7420](platform/c7420)
       * [Philips VG-5000](platform/vg5000)
       * [NEC PC-6001](platform/pc6001)
-      * [rc2014 z80 hobby board](https///groups.google.com/forum/#!topic/rc2014-z80/cGiPYtc4O8o)
+      * [rc2014 z80 hobby board](https://groups.google.com/forum/#!topic/rc2014-z80/cGiPYtc4O8o)
       * [Rabbit Control Modules 2000, 3000, 4000](platform/rcm)
       * [Robotron Z1013](platform/z1013)
       * [Robotron Z9001, KC85/1, KC87](platform/z9001)
@@ -243,7 +243,7 @@ You can read more about it and find details on how to try it [here](temp/front).
       * [V6Z80P, "Old School Computer Architecture"](platform/osca)
       * [VZ 200 / Laser 200](platform/vz200)
       * [Xircom REX 6000](platform/xircomrex)
-      * [YAZ180 hobby board](https///www.hackster.io/feilipu/yet-another-z180-yaz180-project-864253)
+      * [YAZ180 hobby board](https://www.hackster.io/feilipu/yet-another-z180-yaz180-project-864253)
 
 ======= Unsupported Targets =======
 
@@ -293,7 +293,7 @@ You can read more about it and find details on how to try it [here](temp/front).
 
 *  [Lattice Tri-Speed Ethernet Media Access Controller (TSMAC) IP demo](http://www.latticesemi.com/~/media/LatticeSemi/Documents/ApplicationNotes/L/NZ/LatticeXPTri-SpeedEthernetMACDemo.PDF) Copyright 2006 Lattice Semiconductors, it includes a tutorial on how to use z88dk and uIP with their hardware
 
-*  [ZALT, a Z80 computer prototype](https///jacobielectronix.wordpress.com/category/zalt), it also aims to provide a specific [z88dk extension](https///github.com/obiwanjacobi/Zalt/tree/master/Source/z88dk_target)
+*  [ZALT, a Z80 computer prototype](https://jacobielectronix.wordpress.com/category/zalt), it also aims to provide a specific [z88dk extension](https://github.com/obiwanjacobi/Zalt/tree/master/Source/z88dk_target)
 
 
 # z88dk related articles in online magazines
@@ -318,23 +318,23 @@ You can read more about it and find details on how to try it [here](temp/front).
 # z88dk related videos
 
 
-*  [ZX Spectrum twitter client](https///www.youtube.com/watch?v=-ECnN7jdgA4)
+*  [ZX Spectrum twitter client](https://www.youtube.com/watch?v=-ECnN7jdgA4)
 
-*  [Networking with a Sinclair ZX81: Network Filemanager and Web-Browser](https///www.youtube.com/watch?v=Y4PRiQq5VZs)
+*  [Networking with a Sinclair ZX81: Network Filemanager and Web-Browser](https://www.youtube.com/watch?v=Y4PRiQq5VZs)
 
-*  [Matrix digital rain on ZX Spectrum](https///www.youtube.com/watch?v=-ekUpkBVr8g)
+*  [Matrix digital rain on ZX Spectrum](https://www.youtube.com/watch?v=-ekUpkBVr8g)
 
-*  [Death Star running on the Jupiter Ace Computer](https///www.youtube.com/watch?v=pQUt7r5OMC8)
+*  [Death Star running on the Jupiter Ace Computer](https://www.youtube.com/watch?v=pQUt7r5OMC8)
 
-*  [MSX Sprite library test](https///www.youtube.com/watch?v=HFGxFIgmwqg)
+*  [MSX Sprite library test](https://www.youtube.com/watch?v=HFGxFIgmwqg)
 
-*  [MicroMan game running on the MC-1000](https///www.youtube.com/watch?v=i1sAPT6IZ3U)
+*  [MicroMan game running on the MC-1000](https://www.youtube.com/watch?v=i1sAPT6IZ3U)
 
-*  [Radastán experiments with z88dk and his new game](https///www.youtube.com/watch?v=7c0_q7OQ-YM)
+*  [Radastán experiments with z88dk and his new game](https://www.youtube.com/watch?v=7c0_q7OQ-YM)
 
-*  [Double buffer implementation for ZX-Uno (ZX-SPectrum FPGA Clone) in Radastian Mode using Z88DK v199a](https///www.youtube.com/watch?v=L322tYnXdiU)
+*  [Double buffer implementation for ZX-Uno (ZX-SPectrum FPGA Clone) in Radastian Mode using Z88DK v199a](https://www.youtube.com/watch?v=L322tYnXdiU)
 
-*  [Z88dk compile for Olduino/Z](https///www.youtube.com/watch?v=ceDnamhnZio)
+*  [Z88dk compile for Olduino/Z](https://www.youtube.com/watch?v=ceDnamhnZio)
 
 
 
@@ -347,7 +347,7 @@ You can read more about it and find details on how to try it [here](temp/front).
 
 *  The z88dk mailing lists can be joined via the [Sourceforge Project page](http://sourceforge.net/projects/z88dk/).
 
-*  The current [z88dk git repository](https///github.com/z88dk/z88dk/) can be browsed online.
+*  The current [z88dk git repository](https://github.com/z88dk/z88dk/) can be browsed online.
 
 *  The [forums](http://www.z88dk.org/forum/forums.php) are the best way to get a quick response from the developers and other users.
 

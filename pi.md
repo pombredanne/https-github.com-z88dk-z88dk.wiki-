@@ -8,7 +8,7 @@ The purpose of this example is to show how a program's performance can be improv
 
 ## Original Source Code
 
-The [original source code](https///crypto.stanford.edu/pbc/notes/pi/code.html) was written for a 32-bit machine.  On 32-bit machines, ints are 32-bit so a straightforward adaptation to z88dk simply replaces ints with longs.
+The [original source code](https://crypto.stanford.edu/pbc/notes/pi/code.html) was written for a 32-bit machine.  On 32-bit machines, ints are 32-bit so a straightforward adaptation to z88dk simply replaces ints with longs.
 
 	:::c
 	#include `<stdio.h>`

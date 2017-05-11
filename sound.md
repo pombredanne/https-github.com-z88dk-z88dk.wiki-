@@ -1,8 +1,8 @@
 # Sound (sound.h)
 
- | Header     | [{z88dk}/include/sound.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/sound.h)    |        
+ | Header     | [{z88dk}/include/sound.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/sound.h)    |        
  | -----------------------------------------------------------------------------------------------------------------        
- | Source     | [{z88dk}/z88dk/libsrc/games](https///github.com/z88dk/z88dk/tree/master/libsrc/games/)                     |
+ | Source     | [{z88dk}/z88dk/libsrc/games](https://github.com/z88dk/z88dk/tree/master/libsrc/games/)                     |
  | Include    | #include `<sound.h>`             |                                                                            
  | Linking    | n/a                          |                                                                              
  | Compile    | n/a                          |                                                                              

@@ -1,8 +1,8 @@
 # MATHS LIBRARY (math.h, float.h, m.lib)
 
- | Header     | [{z88dk}/include/math.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/math.h), [{z88dk}/include/float.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/float.h)          |
+ | Header     | [{z88dk}/include/math.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/math.h), [{z88dk}/include/float.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/float.h)          |
  | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- | Source     | [{z88dk}/libsrc/math](https///github.com/z88dk/z88dk/tree/master/libsrc/math/)                                 |                                                                                         
+ | Source     | [{z88dk}/libsrc/math](https://github.com/z88dk/z88dk/tree/master/libsrc/math/)                                 |                                                                                         
  | Include    | #include `<math.h>`      |                                                                                                                                                                                 
  | Linking    | -lm    (or target specific alternative, i.e. -lmzx) |                                                                                                                                                    
  | Compile    |                        |                                                                                                                                                                                 

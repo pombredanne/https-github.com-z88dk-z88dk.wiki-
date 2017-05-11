@@ -1,8 +1,8 @@
 # PSG (psg.h)
 
- | Header     | [{z88dk}/include/psg.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/psg.h)    |        
+ | Header     | [{z88dk}/include/psg.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/psg.h)    |        
  | -------------------------------------------------------------------------------------------------------------        
- | Source     | [{z88dk}/z88dk/libsrc/psg](https///github.com/z88dk/z88dk/tree/master/libsrc/psg/)                     |
+ | Source     | [{z88dk}/z88dk/libsrc/psg](https://github.com/z88dk/z88dk/tree/master/libsrc/psg/)                     |
  | Include    | #include `<psg.h>`             |                                                                          
  | Linking    | n/a                          |                                                                          
  | Compile    | n/a                          |                                                                          

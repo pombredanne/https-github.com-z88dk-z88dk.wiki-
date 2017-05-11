@@ -21,13 +21,13 @@ Google may also fare better than the site search/index.
 
 ## Using Z88DK
 
-If you have a Unix/Linux system you can compile the utilities in [z88dk/support/rcmx000](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/support/rcmx000/) with the make command.
+If you have a Unix/Linux system you can compile the utilities in [z88dk/support/rcmx000](https://raw.githubusercontent.com/z88dk/z88dk/master/support/rcmx000/) with the make command.
 
 
 
 ### Example programs
 
-The example programs are in [z88dk/examples/rcmx000](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/examples/rcmx000/).
+The example programs are in [z88dk/examples/rcmx000](https://raw.githubusercontent.com/z88dk/z88dk/master/examples/rcmx000/).
 A Makefile is provided for the Unix users.
 
 
@@ -36,7 +36,7 @@ A Makefile is provided for the Unix users.
 
 ### The download utility (boot)
 
-You should be able to run the [boot](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/support/rcmx000/boot.c?view=markup) program, either directly or by including this also into your PATH.
+You should be able to run the [boot](https://raw.githubusercontent.com/z88dk/z88dk/master/support/rcmx000/boot.c?view=markup) program, either directly or by including this also into your PATH.
 
 'boot' on its own on a command line will give a short hint of its usage.
 The lines run_example: and run_baudmeas in the Makefile should also give you a hint on how to use this tool.
@@ -48,7 +48,7 @@ Since the Rabbit serial boot loader derives its clock speed from the CPU clock i
 
 What needs to be set is the baudrate divisor, which will be different for different clocks.
 
-The [baudmeas.c](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/support/rcmx000/baudmeas.c?view=markup) and [baudmeas.asm](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/support/rcmx000/baudmeas.asm?view=markup) routines will do this for you, replace the ttyXXX in the Makefile and run 'make run_baudmeas', *NOTE* This will download several kBytes of data at 2400 baud so it will take about 19-20 seconds to complete.   Be Patient!!!   The good news is that this needs to be run only once for each new target!
+The [baudmeas.c](https://raw.githubusercontent.com/z88dk/z88dk/master/support/rcmx000/baudmeas.c?view=markup) and [baudmeas.asm](https://raw.githubusercontent.com/z88dk/z88dk/master/support/rcmx000/baudmeas.asm?view=markup) routines will do this for you, replace the ttyXXX in the Makefile and run 'make run_baudmeas', *NOTE* This will download several kBytes of data at 2400 baud so it will take about 19-20 seconds to complete.   Be Patient!!!   The good news is that this needs to be run only once for each new target!
 
 If it takes longer than that, you might want to check your cabling the power supply to the rabbit board, if you are using the correct serial port etc.   It has also proved necessary in some cases to initialize the serial port, via the 'minicom' program once after each reboot.
 
@@ -59,11 +59,11 @@ If all goes well you should see a few lines of text and after that a number will
 
 Now that you know your baudrate divisor you can patch that into the Makefile at the run_example line.
 
-Run this example via the 'make run_example' command line. The [example.c](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/examples/rcmx000/example.c?view=markup) program will ask you to enter a few characters and then `<enter>`
+Run this example via the 'make run_example' command line. The [example.c](https://raw.githubusercontent.com/z88dk/z88dk/master/examples/rcmx000/example.c?view=markup) program will ask you to enter a few characters and then `<enter>`
 
 The example.c program will then echo the characters one-by-one including the newline character, thus demonstrating rudimentary stdio capabilities.
 
-Another example program, valid only for the Rabbit 2000 boards, is the [twinkle2000.c](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/examples/rcmx000/twinkle2000.c?view=markup) It will set the output bits of port "A" on the processor to flash on and off each second (using the RTC to get the timing).
+Another example program, valid only for the Rabbit 2000 boards, is the [twinkle2000.c](https://raw.githubusercontent.com/z88dk/z88dk/master/examples/rcmx000/twinkle2000.c?view=markup) It will set the output bits of port "A" on the processor to flash on and off each second (using the RTC to get the timing).
 
 The final example program will flash the diodes on the Rabbit 3000 dev boards, located on port PGx, surprisingly named twinkle3000.c ;-)
 

@@ -2,9 +2,9 @@
 
  | Include    | #include `<math.h>`                                                                                              |                                   
  | -----------------------------------------------------------------------------------------------------------------------------                                   
- | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/math.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/math.h) |             
- | | [{z88dk}/include/_DEVELOPMENT/sdcc/math.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/math.h) |                            
- | Source     | [{z88dk}/libsrc/_DEVELOPMENT/math/float](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/math/float/)                     |
+ | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/math.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sccz80/math.h) |             
+ | | [{z88dk}/include/_DEVELOPMENT/sdcc/math.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/math.h) |                            
+ | Source     | [{z88dk}/libsrc/_DEVELOPMENT/math/float](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/math/float/)                     |
 
 .... not all math libs supply all functions ....
 

@@ -35,7 +35,7 @@ Load the BASIC kickstarter (but a simple SYS jump could also work):
 
 The code is built by default at $3000, different locations can be specified (e.g. '-zorg=16384).
 
-Specific audio conversion tools can be used to transfer the ".T64" file (e.g. [WAV-PRG](https///sourceforge.net/projects/wav-prg/)).
+Specific audio conversion tools can be used to transfer the ".T64" file (e.g. [WAV-PRG](https://sourceforge.net/projects/wav-prg/)).
 
 
 # Disk file build

@@ -1,8 +1,8 @@
 # Opus Discovery functions (zxopus.h)
 
- | Header     | [{z88dk}/include/zxopus.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/zxopus.h)    |             
+ | Header     | [{z88dk}/include/zxopus.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/zxopus.h)    |             
  | -------------------------------------------------------------------------------------------------------------------             
- | Source     | [{z88dk}/libsrc/spectrum/opus](https///github.com/z88dk/z88dk/tree/master/libsrc/spectrum/opus)                   |
+ | Source     | [{z88dk}/libsrc/spectrum/opus](https://github.com/z88dk/z88dk/tree/master/libsrc/spectrum/opus)                   |
  | Include    | #include `<zxopus.h>`             |                                                                                  
  | Linking    | n/a                          |                                                                                     
  | Compile    | n/a                          |                                                                                     

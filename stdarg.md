@@ -2,8 +2,8 @@
 
  | Include    | #include `<stdlib.h>`                                                                                              |                        
  | -------------------------------------------------------------------------------------------------------------------------------                        
- | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/stdarg.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/stdlib.h) |
- | | [{z88dk}/include/_DEVELOPMENT/sdcc/stdarg.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/stdlib.h) |               
+ | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/stdarg.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sccz80/stdlib.h) |
+ | | [{z88dk}/include/_DEVELOPMENT/sdcc/stdarg.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/stdlib.h) |               
  | Source     | -                      |                                                                                                                  
 
 ## type va_arg(va_list ap, type)

@@ -1,8 +1,8 @@
 # GUI (gui.h)
 
- | Header     | [{z88dk}/include/gui.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/gui.h)    |                       
+ | Header     | [{z88dk}/include/gui.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/gui.h)    |                       
  | -------------------------------------------------------------------------------------------------------------                       
- | Source     | [{z88dk}/libsrc/graphics/x11](https///github.com/z88dk/z88dk/tree/master/libsrc/graphics/x11) (part of)               |
+ | Source     | [{z88dk}/libsrc/graphics/x11](https://github.com/z88dk/z88dk/tree/master/libsrc/graphics/x11) (part of)               |
  | Include    | #include `<gui.h>`             |                                                                                         
  | Linking    | -lx11                        |                                                                                         
  | Compile    | n/a                          |                                                                                         

@@ -2,7 +2,7 @@
 
  | Header     | not available yet                                                                                               |  
  | ------------------------------------------------------------------------------------------------------------------------------  
- | Source     | [{z88dk}/libsrc/stdio_new](https///github.com/z88dk/z88dk/tree/master/libsrc/stdio_new/)                     |     
+ | Source     | [{z88dk}/libsrc/stdio_new](https://github.com/z88dk/z88dk/tree/master/libsrc/stdio_new/)                     |     
  | Include    | #include `<stdio.h>`                                                                                              |  
  | Linking    | n/a                                                                                                             |  
  | Compile    | n/a                                                                                                             |  

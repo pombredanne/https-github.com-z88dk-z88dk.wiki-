@@ -1,8 +1,8 @@
 # Debug (debug.h)
 
- | Header     | [{z88dk}/include/debug.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/debug.h)   |
+ | Header     | [{z88dk}/include/debug.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/debug.h)   |
  | ----------------------------------------------------------------------------------------------------------------
- | Source     | [{z88dk}/libsrc/debug](https///github.com/z88dk/z88dk/tree/master/libsrc/debug/)                  |
+ | Source     | [{z88dk}/libsrc/debug](https://github.com/z88dk/z88dk/tree/master/libsrc/debug/)                  |
  | Include    | #include `<debug.h>`           |                                                                     
  | Linking    | -ldebug                      |                                                                     
  | Compile    | n/a                          |                                                                     

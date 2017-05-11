@@ -1,8 +1,8 @@
 # RS232 Serial Interfaces API (rs232.h)
 
- | Header     | [{z88dk}/include/rs232.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/rs232.h?view=markup)    |
+ | Header     | [{z88dk}/include/rs232.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/rs232.h?view=markup)    |
  | -----------------------------------------------------------------------------------------------------------------------------
- | Source     | [{z88dk}/z88dk/libsrc/rs232](https///github.com/z88dk/z88dk/tree/master/libsrc/rs232)                     |     
+ | Source     | [{z88dk}/z88dk/libsrc/rs232](https://github.com/z88dk/z88dk/tree/master/libsrc/rs232)                     |     
  | Include    | #include `<rs232.h>`           |                                                                                  
  | Linking    | n/a                          |                                                                                  
  | Compile    | n/a                          |                                                                                  

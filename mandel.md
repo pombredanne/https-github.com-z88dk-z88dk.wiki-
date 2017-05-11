@@ -1,4 +1,4 @@
-[Source code](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/examples/enterprise/mandel.c?view=markup)
+[Source code](https://raw.githubusercontent.com/z88dk/z88dk/master/examples/enterprise/mandel.c?view=markup)
 
 
 {{:examples:snippets:enterprise:ep_mandel.gif|}}

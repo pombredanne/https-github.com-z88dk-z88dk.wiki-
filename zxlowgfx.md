@@ -1,8 +1,8 @@
 # ZX Spectrum Low Resolution Colour Graphics (zxlowgfx.h)
 
- | Header     | [{z88dk}/include/zxlowgfx.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/zxlowgfx.h)    |               
+ | Header     | [{z88dk}/include/zxlowgfx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/zxlowgfx.h)    |               
  | -----------------------------------------------------------------------------------------------------------------------               
- | Source     | [{z88dk/include/zxlowgfx.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include//zxlowgfx.h)                   |
+ | Source     | [{z88dk/include/zxlowgfx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include//zxlowgfx.h)                   |
  | Include    | #include `<zxlowgfx.h>`             |                                                                                      
  | Linking    | n/a                          |                                                                                           
  | Compile    | n/a                          |                                                                                           

@@ -2,9 +2,9 @@
 
  | Include    | #include `<compress/zx7.h>`                                                                                              |                              
  | -------------------------------------------------------------------------------------------------------------------------------------                              
- | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/compress/zx7.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/compress/zx7.h) |
- | | [{z88dk}/include/_DEVELOPMENT/sdcc/compress/zx7.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/compress/zx7.h) |               
- | Source     | [{z88dk}/libsrc/_DEVELOPMENT/compress/zx7](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/compress/zx7)                     |
+ | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/compress/zx7.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sccz80/compress/zx7.h) |
+ | | [{z88dk}/include/_DEVELOPMENT/sdcc/compress/zx7.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/compress/zx7.h) |               
+ | Source     | [{z88dk}/libsrc/_DEVELOPMENT/compress/zx7](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/compress/zx7)                     |
 
 # STANDARD DECOMPRESSION
 

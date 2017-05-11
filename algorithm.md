@@ -1,8 +1,8 @@
 # ALGORITHM (algorithm.h)
 
- | Header     | [{z88dk}/include/algorithm.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/algorithm.h)        | 
+ | Header     | [{z88dk}/include/algorithm.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/algorithm.h)        | 
  | ----------------------------------------------------------------------------------------------------------------------------- 
- | Source     | [{z88dk}/libsrc/algorithm](https///github.com/z88dk/z88dk/tree/master/libsrc/algorithm/)                       | 
+ | Source     | [{z88dk}/libsrc/algorithm](https://github.com/z88dk/z88dk/tree/master/libsrc/algorithm/)                       | 
  | Include    | #include `<algorithm.h>`                                                                                          |
  | Linking    | -lalgorithm                                                                                                     |
  | Compile    | from {z88dk}/libsrc : make algorithm.lib ; make install                                                         |

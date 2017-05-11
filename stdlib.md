@@ -1,8 +1,8 @@
 # STANDARD LIBRARY (stdlib.h)
 
- | Header     | [{z88dk}/include/stdlib.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/stdlib.h)          |       
+ | Header     | [{z88dk}/include/stdlib.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/stdlib.h)          |       
  | -------------------------------------------------------------------------------------------------------------------------       
- | Source     | [{z88dk}/libsrc/stdlib](https///github.com/z88dk/z88dk/tree/master/libsrc/stdlib/)                           |     
+ | Source     | [{z88dk}/libsrc/stdlib](https://github.com/z88dk/z88dk/tree/master/libsrc/stdlib/)                           |     
  | Include    | #include `<stdlib.h>`                                                                                             |  
  | Linking    | n/a                                                                                                             |  
  | Compile    | n/a                                                                                                             |  

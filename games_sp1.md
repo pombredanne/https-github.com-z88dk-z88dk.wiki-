@@ -2,11 +2,11 @@
 
  | Include    | #include `<games/sp1.h>`                                                                                              |                              
  | ----------------------------------------------------------------------------------------------------------------------------------                              
- | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/games/sp1.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/games/sp1.h) |   
- | | [{z88dk}/include/_DEVELOPMENT/sccz80/games/sp1/sp1_zx.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/games/sp1/sp1_zx.h) |
- | | [{z88dk}/include/_DEVELOPMENT/sdcc/games/sp1.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/games/sp1.h) |                  
- | | [{z88dk}/include/_DEVELOPMENT/sdcc/games/sp1/sp1_zx.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/games/sp1/sp1_zx.h) |    
- | Source     | [{z88dk}/libsrc/_DEVELOPMENT/temp/sp1](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/temp/sp1)                     |     
+ | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/games/sp1.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sccz80/games/sp1.h) |   
+ | | [{z88dk}/include/_DEVELOPMENT/sccz80/games/sp1/sp1_zx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sccz80/games/sp1/sp1_zx.h) |
+ | | [{z88dk}/include/_DEVELOPMENT/sdcc/games/sp1.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/games/sp1.h) |                  
+ | | [{z88dk}/include/_DEVELOPMENT/sdcc/games/sp1/sp1_zx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/games/sp1/sp1_zx.h) |    
+ | Source     | [{z88dk}/libsrc/_DEVELOPMENT/temp/sp1](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/temp/sp1)                     |     
 
 # UPDATER
 

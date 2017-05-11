@@ -2,9 +2,9 @@
 
  | Include    | #include `<stropts.h>`                                                                                              |                                                   
  | --------------------------------------------------------------------------------------------------------------------------------                                                   
- | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/stropts.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/stropts.h?content-type=text%2Fplain) |
- | | [{z88dk}/include/_DEVELOPMENT/sdcc/stropts.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/stropts.h?content-type=text%2Fplain) |               
- | Source     | [{z88dk}/libsrc/_DEVELOPMENT/fcntl](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/stdio/z80/)                     |                         
+ | Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/stropts.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sccz80/stropts.h?content-type=text%2Fplain) |
+ | | [{z88dk}/include/_DEVELOPMENT/sdcc/stropts.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/stropts.h?content-type=text%2Fplain) |               
+ | Source     | [{z88dk}/libsrc/_DEVELOPMENT/fcntl](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/stdio/z80/)                     |                         
 
 All functions are re-entrant.
 

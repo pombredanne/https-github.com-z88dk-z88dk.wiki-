@@ -249,6 +249,6 @@ You can switch to the ROM font by specifying the following options to the compil
 
 [Death Star game, ZX Interface 2 ROM version](http://www.fruitcake.plus.com/Sinclair/Interface2/Cartridges/Interface2_RC_New_3rdParty_DeathStar.htm)
 
-[Black Star game, a Space Invaders clone + sources](https///www.usebox.net/jjm/blackstar/)
+[Black Star game, a Space Invaders clone + sources](https://www.usebox.net/jjm/blackstar/)
 
 [Introducción a Z88DK (Spanish)](http://wiki.speccy.org/cursos/z88dk/contenidos)

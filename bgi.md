@@ -1,10 +1,10 @@
 # Turbo C BGI emulation macros (bgi.h)
 
 
-| Header     | [{z88dk}/include/bgi.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/bgi.h)    |
+| Header     | [{z88dk}/include/bgi.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/bgi.h)    |
 | -----------|-------------------------------------------------------------------------------------------------|
-| Source     | [{z88dk}/libsrc/graphics/x11](https///github.com/z88dk/z88dk/tree/master/libsrc/graphics/x11)    |
-| | [{z88dk}/libsrc/graphics/lib3d](https///github.com/z88dk/z88dk/tree/master/libsrc/lib3d) (part of)   |
+| Source     | [{z88dk}/libsrc/graphics/x11](https://github.com/z88dk/z88dk/tree/master/libsrc/graphics/x11)    |
+| | [{z88dk}/libsrc/graphics/lib3d](https://github.com/z88dk/z88dk/tree/master/libsrc/lib3d) (part of)   |
 | Include    | #include `<bgi.h>`                             |
 | Linking    | -lx11 -llib3d                                |
 | Compile    | -DGFXSCALEX=2/5 (256x192)                    |

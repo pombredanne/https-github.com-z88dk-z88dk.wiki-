@@ -1,8 +1,8 @@
 # MONOCHROME GRAPHICS FUNCTIONS (graphics.h)
 
- | Header     | [{z88dk}/include/graphics.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/graphics.h)      |     
+ | Header     | [{z88dk}/include/graphics.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/graphics.h)      |     
  | -------------------------------------------------------------------------------------------------------------------------     
- | Source     | [{z88dk}/libsrc/graphics](https///github.com/z88dk/z88dk/tree/master/libsrc/graphics/)                       |   
+ | Source     | [{z88dk}/libsrc/graphics](https://github.com/z88dk/z88dk/tree/master/libsrc/graphics/)                       |   
  | Include    | #include `<graphics.h>`                                                                                           |
  | Linking    | n/a                                                                                                             |
  | Compile    | n/a                                                                                                             |
@@ -181,7 +181,7 @@ The putsprite function is documented in detail in the [monochrome sprites](libra
 # Monochrome vector pictures
 
 'Graphic Profiles' are byte streams containing vector and surface descriptions.
-Their components are defined in [`<gfxprofile.h>`](http://z88dk.cvs.sourceforge.net/z88dk/z88dk/include/gfxprofile.h?view=markup).
+Their components are defined in [`<gfxprofile.h>`](https://raw.githubusercontent.com/z88dk/z88dk/master/include/gfxprofile.h?view=markup).
 
 A data converter called 'z80svg' is provided.   It converts data from the SVG format to a 'profile' stream.
 A programmer might prepare his own pictures by just drawing them with InkScape, or directly describing the paths in data structures.

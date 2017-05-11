@@ -1,8 +1,8 @@
 # STRING FUNCTIONS (string.h)
 
- | Header     | [{z88dk}/include/string.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/string.h?view=markup)          |
+ | Header     | [{z88dk}/include/string.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/string.h?view=markup)          |
  | -------------------------------------------------------------------------------------------------------------------------------------
- | Source     | [{z88dk}/libsrc/strings](https///github.com/z88dk/z88dk/tree/master/libsrc/strings/)                         |          
+ | Source     | [{z88dk}/libsrc/strings](https://github.com/z88dk/z88dk/tree/master/libsrc/strings/)                         |          
  | Include    | #include `<string.h>`                                                                                             |       
  | Linking    | n/a                                                                                                             |       
  | Compile    | n/a                                                                                                             |       

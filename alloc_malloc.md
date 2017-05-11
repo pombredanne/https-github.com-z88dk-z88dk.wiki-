@@ -4,8 +4,8 @@
 | | |
 |----|---|
 | Include    | #include `<malloc.h>` or #include `<alloc/malloc.h>`      |
-| Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/alloc/malloc.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sccz80/alloc/malloc.h?content-type=text%2Fplain) |
-| | [{z88dk}/include/_DEVELOPMENT/sdcc/alloc/malloc.h](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/include/_DEVELOPMENT/sdcc/alloc/malloc.h?content-type=text%2Fplain) |
+| Header     | [{z88dk}/include/_DEVELOPMENT/sccz80/alloc/malloc.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sccz80/alloc/malloc.h?content-type=text%2Fplain) |
+| | [{z88dk}/include/_DEVELOPMENT/sdcc/alloc/malloc.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/_DEVELOPMENT/sdcc/alloc/malloc.h?content-type=text%2Fplain) |
 
 Other References:
 
@@ -14,7 +14,7 @@ Other References:
 
 *  [The Open Group](http://pubs.opengroup.org/onlinepubs/9699919799/)
 
-*  [The C11 Draft Standard](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/c11_n1570.pdf)
+*  [The C11 Draft Standard](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/c11_n1570.pdf)
 
 The C11 standard requires that the malloc-related functions be protected by a lock against simultaneous access from multiple threads.  The library implements these locks but they are deactivated by default in the [library configuration](temp/front#library_configuration).  These locks should remain deactivated until the library has incorporated multithreading.
 

@@ -1,8 +1,8 @@
 # SP1 SOFTWARE SPRITE LIBRARY (sp1.h)
 
- | Header     | [{z88dk}/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h](https///raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h)  |                                                   
+ | Header     | [{z88dk}/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h)  |                                                   
  | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------                                                   
- | Source     | [{z88dk}/libsrc/sprites/software/sp1](https///github.com/z88dk/z88dk/tree/master/libsrc/sprites/software/sp1)  |                                                                                                             
+ | Source     | [{z88dk}/libsrc/sprites/software/sp1](https://github.com/z88dk/z88dk/tree/master/libsrc/sprites/software/sp1)  |                                                                                                             
  | Include    | #include `<sprites/sp1.h>`                                                                                                |                                                                                                    
  | Linking    | -lsp1                                                                                                           |                                                                                                            
  | Compile    | make sp1 from {z88dk}/libsrc for instructions                                                                 |                                                                                                              

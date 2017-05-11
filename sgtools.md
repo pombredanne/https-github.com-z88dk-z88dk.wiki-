@@ -4,13 +4,13 @@ For updated notes on the actual port for the Z88dk, see the [Commodore 128 targe
 
 
 
-*  [CIA](library/c128/cia) ([cia.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/c128/cia.h))
+*  [CIA](library/c128/cia) ([cia.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/c128/cia.h))
 
-*  [PCX image decoding](library/c128/pcx) ([pcx.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/c128/pcx.h))
+*  [PCX image decoding](library/c128/pcx) ([pcx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/c128/pcx.h))
 
-*  [SID](library/c128/sid) ([sid.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/c128/sid.h))
+*  [SID](library/c128/sid) ([sid.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/c128/sid.h))
 
-*  [VDC](library/c128/sid) ([vdc.h](https///raw.githubusercontent.com/z88dk/z88dk/master/include/c128/vdc.h))
+*  [VDC](library/c128/sid) ([vdc.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/c128/vdc.h))
 
 
 ======= Original doc and credits follow. ======

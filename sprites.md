@@ -21,5 +21,5 @@ Keep in mind nothing says you cannot use both hardware and software sprites in y
 
 # Porting Sprite Libraries
 
-If your favourite machine is not currently supported and you would like to help port one of the sprite libraries, why not familiarize yourself with the library and then contact us offering assistance on the [z88dk forum](https///www.z88dk.org/).
+If your favourite machine is not currently supported and you would like to help port one of the sprite libraries, why not familiarize yourself with the library and then contact us offering assistance on the [z88dk forum](https://www.z88dk.org/).
 

@@ -42,7 +42,7 @@ To run:
 # WEB Links
 
 
-[KC-Club Homepage](https///www.iee.et.tu-dresden.de/~kc-club/)
+[KC-Club Homepage](https://www.iee.et.tu-dresden.de/~kc-club/)
 
 [Ulrich Zander](http://www.sax.de/~zander/index2h.html) hobby pages.   Lots of technical information and software.
 
