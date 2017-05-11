@@ -39,5 +39,6 @@
 ## Tools
 
 * [The Compiler Frontend (zcc)](Tool-zcc)
+* [The Assembler / Linker (z80asm)](Tool-z80asm)
 * [copt](Tool--copt)
 * [Various tools](tools)
