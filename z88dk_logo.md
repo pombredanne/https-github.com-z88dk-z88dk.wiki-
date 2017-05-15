@@ -1,5 +1,5 @@
 
-{{ logo.gif }}
+![](images/logo.gif)
 
 
  ======= The Z88DK logo =======
