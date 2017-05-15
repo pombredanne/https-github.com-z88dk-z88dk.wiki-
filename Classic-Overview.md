@@ -74,10 +74,6 @@ The library provides ready-to-use [abstract data types](Classic-adt) that implem
 
 # Emulation Libraries
 
-
-## MS-DOS compatibility
-
-## Turbo C BGI Emulation
-
+The classic library provides both [MS-DOS](Classic-conio) emulation and Turbo C BGI Emulation to assist the porting of software.
 
 
