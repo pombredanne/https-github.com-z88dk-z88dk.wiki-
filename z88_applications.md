@@ -10,7 +10,6 @@ dor.h contains some constants for the application type and application.h uses th
 
 The information is given courtesy of #define in between the including of dor.h and application.h, you should define the following:
 
-	:::c
 	#define HELP1   "..."
 	#define HELP2   "..."
 	#define HELP3   "..."
@@ -21,31 +20,26 @@ The information is given courtesy of #define in between the including of dor.h a
 
 The information for the application help page, if HELP1 is not defined then the standard HELP page is used `<grin>`, if any of the others (HELP2 to HELP6) is not defined then "" is substituted
 
-	:::c
 	#define APP_NAME "..."
 
 
 The name of the application (as appears in the Index)
 
-	:::c
 	#define APP_KEY  '[KEY]'
 
 
 The hotkey for the application
 
-	:::c
 	#define APP_INFO "..."
 
 
 The equivalent of *name from BASIC
 
-	:::c
 	#define APP_TYPE [constants or'd together as from dor.def]
 
 
 The application type, if you don't define this then the default type is bad with OZ preserving the screen (i.e. very, very bad!)
 
-	:::c
 	#define APP_TYPE2 [constants]
 
 
@@ -58,7 +52,6 @@ All of the constants above are in z80asm format - not C style, so insert Z88 con
 As mentioned above, the default application type is bad and to let OZ redraw the screen, this isn't particularly friendly as you can imagine so you can turn off the redraw screen flag by ''#define APP_TYPE'' yourself, this does however leave you with a bit of a problem - you won't be able to redraw your screen, so, to this end, I've provided an facility for you to be able to do it - simply define a function as follows:
 
 
-	:::c
 	#pragma redirect redrawscreen = _my_redrawfunction 
 	void my_redrawfunction() 
 	{
@@ -78,7 +71,6 @@ As an aside, topics also have an attribute byte, which can be defined by #define
 
 In order to handle menu selections you should define a function thus:
 
-	:::c
 	#pragma redirect handlecmds = _my_handlecmds_func
 	
 	void my_handlecmds_func(int code)
@@ -136,7 +128,6 @@ Packages may use far pointers as parameters passed to them by applications, but 
 
 Using the far memory allocation words in your Z88 applications is quite straightforward. Firstly, you must signal that you will be using the far memory functions with the following line:
 
-	:::c
 	  #define FARDATA 1
 
 
@@ -144,7 +135,6 @@ This line should be before any includes, as the standard library header files us
 
 Secondly, specify the size of the far heap your application requires with a line as follows:
 
-	:::c
 	  #pragma -farheap=65536
 
 
@@ -159,19 +149,16 @@ For example, if you have a maximum heapsize of 65536 bytes, the amount of static
 
 Within your C application, you can now use the following functions:
 
-	:::c
 	far void *malloc(long size)
 
 
 Returns a far pointer to a region of memory "size" bytes in size
 
-	:::c
 	void free(far *ptr)
 
 
 Free the previously allocated region of memory at "ptr"
 
-	:::c
 	void freeall(void)
 
 

@@ -1,6 +1,6 @@
 # Z88 Platform
 
-{{platform:z88.jpg|}}
+![](images/platform/z88.jpg)
 
 
 ## Introduction
@@ -9,6 +9,11 @@ The z88 operating system, OZ, provides a lot of functionality for programmers wh
 
 For details of the functionality OZ exposes, it's advisable to read the [Z88 Developer Notes](http://www.worldofspectrum.org/z88forever/dn327/index.htm). The notes describe a lot of detail that is skipped over here.
 
+## Maths Library
+
+The z88's floating point routines are supported, to use them, add `-lmz` to the command line. **Note:** if you are using zsdcc to compile an application then
+only `-lmath48` is available.
+
 ## BBC Basic Target
 
 By default, z88dk generates binaries that can be LOADed into the BBC Basic application and run. Using this target is the easiest way to get an application up and running on the z88.
@@ -16,33 +21,31 @@ By default, z88dk generates binaries that can be LOADed into the BBC Basic appli
 ### Command Line
 
 	
-	zcc +z88
-
-
+	zcc +z88 .....
+e
 ## Z88 Application Target
 
-Z88dk can be used to create a z88 [Applications](platform/z88_applications) that can be run from the Main Menu. Both good, bad and ugly applications can be constructed.
+Z88dk can be used to create a z88 [Applications](z88_applications) that can be run from the Main Menu. Both good, bad and ugly applications can be constructed.
 
 ### Command Line
 
 	
-	zcc +z88 -create-app -make-app
-
-
+	zcc +z88 -create-app ...
 
 ## Z88 Packages
 
-Z88dk can create [Packages](platform/z88_packages) (shared libraries) that allow code to be shared between applications. [ZSock](http://www.rst38.org.uk/zsock) was built using this technique to provide TCP/IP services for the z88.
+Z88dk can create [Packages](z88_packages) (shared libraries) that allow code to be shared between applications. [ZSock](http://www.rst38.org.uk/zsock) was built using this technique to provide TCP/IP services for the z88.
 
 ### Command Line
 
 As for applications, i.e.:
 
-    zcc +z88 -create-app -oapp.bas -make-app app.c
+    zcc +z88 -create-app -oapp.bas app.c
 
 ## Z88 Shell Target
 
 The z88 shell is a unix-like shell providing command line file manipulation on the z88. Naturally, z88dk supports generating applications that can be run from the command line.
+
 ### Command Line
 
     zcc +z88 -subtype=z88shell -create-app

@@ -16,7 +16,6 @@ The package DOR is the structure which informs the Package system about
 your package. Creating the DOR with z88dk is incredibly simple. Normally
 to create an application DOR you would do the following:
 
-	:::c
 	#include `<dor.h>`
 	
 	/* Define application paramaters */
@@ -26,7 +25,6 @@ to create an application DOR you would do the following:
 
 In a similar vein, to build the package DOR you do the following:
 
-	:::c
 	#include `<dor.h>`
 	
 	/* Define package parameters */
@@ -41,25 +39,21 @@ In a similar vein, to build the package DOR you do the following:
 
 The package parameters are as follows:
 
-	:::c
 	#define MAKE_PACKAGE 1
 
 
 Say that you do want to create a package(!
 
-	:::c
 	#define PACK_VERSION    $MMmm
 
 
 The version of the package you are creating - MM=major, mm=minor
 
-	:::c
 	#define PACK_NAME       "[name]"
 
 
 The name of the package (without the [] of course!)
 
-	:::c
 	#define PACK_BOOT
 
 
@@ -67,13 +61,11 @@ This should be set to either 0 or 1 depending on whether the package
 should autoboot or not (This is of course bypassed by holding down 'P'
 on reset)
 
-	:::c
 	#define PACKAGE_ID      $xx
 
 
 The package number as allocated by Garry Lancaster
 
-	:::c
 	#define MAX_CALL_NUM $nn
 
 
@@ -83,7 +75,6 @@ The maximum LSB of a call to your package.
 
 The jump table can be easily defined using the following construct:
 
-	:::c
 	package_str jumptable[] = {
 	        {Func1},
 	        {Func2},
