@@ -195,6 +195,26 @@ Hints:   DO NOT edit the REM line.  You need to place it at its right position w
 
 ```
 
+## ZX Library Features
+
+### Interface 1
+
+### Opus Discovery
+
+### TRDOS/Betadisk support
+
+### ZXMMC Support
+
+### Currah Speech Support
+
+### Low resolution (32x48 or 64x48) Graphics
+
+### SP1 Sprite Library
+
+### Mouse Support
+
+
+## Console driver modes
 
 ### The standard ZX Spectrum console driver
 
@@ -238,6 +258,7 @@ printing a string.
 
 The screen scrolls when line 24 is "hit", the routine used is in the
 48k ROM.
+
 
 
 
