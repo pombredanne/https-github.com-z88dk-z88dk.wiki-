@@ -1,4 +1,4 @@
-![](images/logo.gif)
+![](https://raw.githubusercontent.com/wiki/z88dk/z88dk/images/logo.gif)
 
 # An Introduction to Z88DK
 
@@ -65,4 +65,3 @@ These tools are not normally directly invoked by the user:
 * **ZPRAGMA** is used by the toolchain to process pragmas embedded in c source.
 
 * **COPT** is a regular expression engine that is used as peephole optimizer for sccz80 and as a post-processing tool for both sccz80 and zsdcc.
-
