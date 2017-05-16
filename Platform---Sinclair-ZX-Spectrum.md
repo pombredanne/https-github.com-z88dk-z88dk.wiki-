@@ -18,15 +18,12 @@ Tools are provided to package it in various ways, but the default one is the ".T
 ### Command Line
 
     zcc +zx -lndos -create-app adv_a.c
--or-
+
+or with the ANSI terminal:
+
     zcc +zx -clib=ansi -lndos -create-app adv_a.c
 
-This command will build a .TAP tape image, linking a foo file library and the default math support.
-To save some memory it is possible to use the ZX Spectrum specific math library, by changing the "-lm" parameter with "-lmzx" or "-lmzx_tiny", but it will run slower and with less precision.
-
 The -clib=ansi parameter enables the full VT/ANSI emulation (see below).
-
-If file support is required it is possible to change the "-lndos" parameter and pass a library name (see the [ZX Spectrum libraries](library/zxspectrum/fcntl) section).
 
 To get an audio file ready for the real hardware use the following command:
     zcc  +zx -clib=ansi -lm -create-app -subtype=wav program.c
@@ -48,28 +45,62 @@ Note that some of the libraries are not ready to work in ROM, thus a bit of twea
 
     zcc  +cpm -startup=3 -lzxcpm -lm -create-app program.c
 
-This command will compile the program in [CP/M](platform/cpm) mode permitting the use of some of the ZX Spectrum sound and graphics extensions.
-
-### Pragma directives
-
-```
-#pragma output nostreams   - Don't allocate storage for file streams
-
-#pragma output norom3      - Don't include code for calling into the BASIC ROM - certain library functions may need this
-```
-
-### The 'appmake' tool
+This command will compile the program in [CP/M](Platform---CPM) mode permitting the use of some of the ZX Spectrum sound and graphics extensions.
 
 
-The 'appmake' tool is activated by passing the "-create-app" parameter to the compiler, as already shown.
+## Math Libraries
+
+The ROM calculator is supported by use of the `-lmzx` library. A more compact version of the library is available with `-lmzx_tiny` however this version lacks support for conversion to and from `long` variable types and parsing of scientific notation.
+
+It should be noted that the ZX Maths libraries are of a lower precision than both _genmath_ and _math48_ and are also less performant. As a trade off, the amount of memory used is much reduced.
+
+
+## File I/O
+
+You can choose to link with a single library that implements file I/O functionality. 
+
+### Spectrum +3 or Residos
+
+    zcc +zx -DPLUS3 file.c -lp3
+
+or:
+
+    zcc +zx -DRESIDOS file.c -lp3
+
+### Microdrive Support
+
+Interface 1 can be supported by both the [generic basic driver](Platform-ZX-Basic-Driver) and a lowlevel library that will talk to the Interface 1 directly.
+
+
+    zcc +zx file.c -lzxmdv
+
+When using zxmdv.lib you'll have a very powerful tool, because the library talks to the Interface 1 at a very low level, permitting a true random access, and a real rename functionality (the only one we're aware of being able to rename files as big as the whole cartridge).
+The library has been tested on the real hardware.
+
+The number of contemporairly open file is limited only by the tape and the memory available space, but to achieve this the _malloc_ functions is used (see documentation for malloc).
+
+The files created via the **open** function are of the so-called "PRINT" type, which means that you can create and edit them also with the BASIC OPEN command.
+
+
+### ZX Basic Abstraction
+
+To support the many disc systems that are available for the Spectrum, a [generic basic driver](Platform-ZX-Basic-Driver) can be linked in. You will have
+to implement the BASIC program yourself and adapt to your disc system.
+
+
+## The 'appmake' tool
+
+
+The 'appmake' tool is activated by passing the "-create-app" parameter to the compiler.
+
 Here are some other examples:
 
     zcc  +zx -lndos -lm -zorg=25000 -create-app program.c
 
 The "-zorg=`<location>`" option locates the code at the desired position; it has effect both on the compiler and on the "appmake" tool, which will adapt the loader for the new location.
 
+You can add options to the command line to modify the output .TAP file, for example: -Cz--screen -Czscreen.scr adds a picture while loading.
 
-Edit {z88dk}/lib/config/zx.cfg to customize your binary package (i.e. -Cz--screen -Czscreen.scr adds a picture while loading).
 The available options are:
 
 ```
@@ -87,11 +118,12 @@ The available options are:
      --fast            (bool)    Create a fast loading WAV
      --dumb            (bool)    Just convert to WAV a tape file
      --noloader        (bool)    Don't create the loader block
+     --noheader        (bool)    Don't create the header
      --merge           (string)  Merge a custom loader from external TAP file
      --org             (integer) Origin of the binary
      --blockname       (string)  Name of the code block in tap file
+     --clearaddr       (integer) Address to CLEAR at
 ```
-
 
 The 'patchpos' and 'patchdata' are for the turbo tape loader mods.
 
@@ -116,9 +148,9 @@ An advanced feature can glue together binary blocks to get a ready made package;
 
 The screen can be passed in 'tap' or 'tzx' format too.
 
-### Other Tools
+## Other Tools
 
-#### tapmaker
+### tapmaker
 
 This is a quick and dirty hack originally written for
 mymzx - this takes any file and creates a .TAP file for it
@@ -128,16 +160,7 @@ This tool appends to the end of the specified .TAP file so
 watch out!
 
 
-#### bin2tap
-
-** Warning:  this tool overwrites the specified .TAP file **
-
-(this one is also included in the standard compiler command line options):
-
-Creates .TAP file with a very simple BASIC loader at the beginning.
-After converting, a LOAD "" is sufficient to run the code.
-
-#### bin2bas-rem
+### bin2bas-rem
 
 ** Warning:  this tool overwrites the specified .TAP file **
 
@@ -171,9 +194,6 @@ Hints:   DO NOT edit the REM line.  You need to place it at its right position w
          If you are in trouble try to re-MERGE the REM lines onto you main BASIC block.
 
 ```
-
-## Advanced use of the ZX Spectrum libraries
-
 
 
 ### The standard ZX Spectrum console driver
@@ -233,17 +253,17 @@ The screen scrolls when line 24 is "hit", the routine used is in the
 
 The selection of columns is now a link time option, for example with ansi test you can compile as follows:
 
-   zcc +zx ansitest.c -create-app -lndos -clib=ansi -pragma-define:ansicolumns=64
+    zcc +zx ansitest.c -create-app -lndos -clib=ansi -pragma-define:ansicolumns=64
 
 Valid columns are:
 
-    24, 28, 32, 36, 40, 42, 51, 64, 80, 85, 128, ROM24, ROM28, ROM32 and ROM36.
+     24, 28, 32, 36, 40, 42, 51, 64, 80, 85, 128, ROM24, ROM28, ROM32 and ROM36.
 
 #### How to change the font that is used
 
 You can switch to the ROM font by specifying the following options to the compile line:
 
-   -pragma-define:ansifont=15616 -pragma-define:ansifont_is_packed=0
+    -pragma-define:ansifont=15616 -pragma-define:ansifont_is_packed=0
 
 ### Links
 

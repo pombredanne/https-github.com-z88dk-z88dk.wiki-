@@ -1,5 +1,3 @@
-~~NOTOC~~
-
 ![](images/logo.gif)
 
 z88dk is a collection of software development tools that targets z80 machines.  It consists of a C compiler, a set of libraries implementing the C standard library, an assembler / linker and a variety of utilities for profiling and generating executables in a number of formats.  Development in C, assembly language or a mixture of the two is directly supported.
