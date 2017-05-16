@@ -5,11 +5,12 @@
 
 ## Platforms
 
-* [Platform List](Platform)
 
 ## Classic Library
 
-* [Memory Allocation](memory_allocation)
+* [Overview](Classic-Overview)
+* [Platform List](Platform)
+* [Memory Allocation](Classic-allocation)
 * [Retargetting](Classic--Retargetting)
 * [Building the libraries](libsrc)
 
