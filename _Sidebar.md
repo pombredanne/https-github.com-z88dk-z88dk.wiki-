@@ -14,8 +14,6 @@
 * [Retargetting](Classic--Retargetting)
 * [Building the libraries](libsrc)
 
-### Platform Independent Library Functions
-
 ## New Library
 
 * [Introduction](front)
