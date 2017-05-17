@@ -160,52 +160,30 @@ This tool appends to the end of the specified .TAP file so
 watch out!
 
 
-### bin2bas-rem
-
-** Warning:  this tool overwrites the specified .TAP file **
-
-For skilled developers only.
-
-Creates a new TAP file (overwriting if necessary) with a BASIC program line in which we store the self-relocating binary file as if it was a REMark.
-
-The relocation routine is patched by this tool to fit with the ZX Spectrum behaviour.
-
-To compile a relocatable program:
-```
-	zcc +zx -Ca-R -lm -lndos program.c
-	bin2bas-rem a.bin a.tap <line number>
-```
-
-To run the machine code:
-```
-	PRINT USR (PEEK 23635+256*PEEK 23636+5)
-```
-
-Alternatively it is possible to make use of the system variable 23637 (location of the next line to be run) and stuff different programs in a single BASIC source: 
-
-```
-	  1 DEF FN l()=USR(PEEK 23637+256*PEEK 23638+5)
-	100 LET x=FN l()
-	101 REM (program)
-	200 LET x=FN l()
-	201 REM (another merged program)
-
-Hints:   DO NOT edit the REM line.  You need to place it at its right position with this tool.
-         If you are in trouble try to re-MERGE the REM lines onto you main BASIC block.
-
-```
-
 ## ZX Library Features
+
+### Calling Basic
+
+Basic routines can be called using the routines in the `[<spectrum.h>]`(zxbasic) header file. This file also provides
+facilities for manipulating screen addresses and Kempston and AMX mouse handling.
 
 ### Interface 1
 
+Low level access to microdrives is available through the `[<zxinterface1.h>]`(zxinterface1) header file.
+
 ### Opus Discovery
+
+Support for the Opus Discovery is available through the `[<zxopus.h>]`(zxopus) header file.
+
 
 ### TRDOS/Betadisk support
 
 ### ZXMMC Support
 
-### Currah Speech Support
+### Currah uSpeech Support
+
+The Currah uSpeech is supported using the `[<zxcurrah.h>]`(zxcurrah) header file.
+
 
 ### Low resolution (32x48 or 64x48) Graphics
 
