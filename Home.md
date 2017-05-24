@@ -1,5 +1,7 @@
 ![](https://raw.githubusercontent.com/wiki/z88dk/z88dk/images/logo.gif)
 
+This is a WiP conversion and rewrite of the z88dk wiki. The original content is available at [http://www.z88dk.org/wiki](http://www.z88dk.org/wiki)
+
 # An Introduction to Z88DK
 
 Z88DK is a complete development toolkit for the z80, z180 and rabbit processors.
