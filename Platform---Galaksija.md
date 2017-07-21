@@ -1,4 +1,4 @@
-======= Galaksija =======
+
 
 ![](images/platform/galaksija.jpg)
 
