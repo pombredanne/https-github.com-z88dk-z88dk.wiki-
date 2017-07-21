@@ -66,7 +66,7 @@ The CP/M target support can be extended with C128 specific functions, grouped in
 
 z88dk style graphics libraries can be including by adding "-lgfx128", "-lgfx128hr" or "-gfx128hr480" (this last video mode is still untested and not supported by the current VICE emulator version).
 
-The above options are also listed in the [CP/M section](cpm#hardware_specific_extensions) of this Wiki.
+The above options are also listed in the [CP/M section](Platform---CPM#hardware-specific-extensions) in this Wiki.
 
 A good option to transfer a CP/M program is the "[ctools04.zip](http://zimmers.net/anonftp/pub/cbm/crossplatform/converters/unix/ctools04.zip)" program by Jochen Metzinger.
 
