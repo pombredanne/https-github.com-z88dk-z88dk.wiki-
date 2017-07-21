@@ -1,9 +1,8 @@
-======= Luxor ABC80 =======
+# Luxor ABC80
 
-{{platform:abc80.jpg|}}
+![](images/platform/abc80.jpg)
 
-
-# Quick start
+### Quick start
 
     zcc +abc80 -lm -o adventure -create-app adv_a.c
 
@@ -20,7 +19,7 @@ This will also create a WAV audio version
 This will build "adventure.ihx", an Intel-HEX encoded binary file.   It can be passed as a command line parameter to the ABC80SIM emulator and run directly with the command "A=CALL(49200)".
 
 
-# Advanced options
+## Advanced options
 
     zcc +abc80 -zorg=50000 -create-app program.c
 
@@ -29,7 +28,7 @@ The **-zorg** oprion permits to specify the location of the compiled program.
 The BASIC loader will put it into the new position
 
 
-# Hints for emulators
+## Hints for emulators
 
 #### WINABC80
 
@@ -44,12 +43,12 @@ To run the program:
 The BAC format is a BASIC program with the machine code inserted in DATA program lines.   You must wait a little for the program to be copied in memory.
 
 
-# Graphics
+## Graphics
 
 The pseudo graphics mode is supported.
 You first need to issue a **clg ()** command to set up the graphics page.
 
-# Links
+## Links
 
 [ABC80 club (Sweden)](http://abc.se/index.html)
 
