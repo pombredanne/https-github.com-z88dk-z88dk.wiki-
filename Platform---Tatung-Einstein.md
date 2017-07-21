@@ -1,6 +1,6 @@
 #  Tatung Einstein
 
-The Tatung Einstein is a CP/M compatible platform, so the [same base library](platform/cpm) can be used, but extra functionalities are available.
+The Tatung Einstein is a CP/M compatible platform, so the [same base library](Platform---CPM) can be used, but extra functionalities are available.
 
 ![](images/platform/einstein-wall.jpg)
 ![](images/platform/einstein.jpg)
