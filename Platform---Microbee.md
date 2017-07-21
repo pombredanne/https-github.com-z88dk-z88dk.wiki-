@@ -1,6 +1,5 @@
-#  MicroBEE
 
-The MicroBEE is a CP/M compatible platform, so the [same base library](platform/cpm) can be used, but extra functionalities are available.
+The MicroBEE is a CP/M compatible platform, so the [same base library](Platform---CPM) can be used, but extra functionalities are available.
 Library extras include the 160x100 low resolution graphics, the sound support for the 1-bit sound, and joystick (real and emulated via keyboard scanning).
 
 
