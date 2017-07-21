@@ -1,4 +1,4 @@
- ======  EACA Colour Genie EG2000 ======
+ # EACA Colour Genie EG2000
 
 The EG2000 was a TRS80 relative, with a different video card.
 The monochrome library permits fast drawing working on a single color (RED).
