@@ -1,6 +1,5 @@
 
-![](images/platform/mc1000-adva.jpg|}} {{:platform:mc1000_rabbits.jpg)
-
+![](images/platform/mc1000-adva.jpg) ![](images/platform/mc1000_rabbits.jpg)
 
 
 # Quick start
