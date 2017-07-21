@@ -1,5 +1,5 @@
 
-======= Lambda 8300 / Power 3000 =======
+# Lambda 8300 / Power 3000
 
 ![](images/platform/lambda.jpg)
 
@@ -55,7 +55,7 @@ The programs will work in SLOW mode by default; to run your program in FAST mode
 Using directly the startup modes is not normally necessary: the -subtype=____ and -clib=____ do it transparently; for advanced developers it may be useful to know that the same 'zx81_crt0.asm' is used for the LAMBDA, passing startup values > 100.
 
 
-======= Links =======
+### Links
 
 [Historien bag Lambda computeren (DK)](http://www.2kb.dk/lambda_historie.html)
 
