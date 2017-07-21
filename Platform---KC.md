@@ -1,4 +1,3 @@
-======= VEB Mikroelektronik (formerly Robotron) HC-900, KC85/2..KC85/5 =======
 
 
 ![](images/platform/dstar-kc.jpg)
