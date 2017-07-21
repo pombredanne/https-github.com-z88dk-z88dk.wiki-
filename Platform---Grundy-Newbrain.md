@@ -1,4 +1,3 @@
- ======  Grundy Newbrain  Platform ======
 
 ## Introduction
 
@@ -78,7 +77,7 @@ Then you can use the LOAD command as usual.
 
 ### Using CP/M
 
-The [CP/M](platform/cpm) target environment can be extended with Newbrain specific functions simply linking the "nbcpm" library.
+The [CP/M](Platform---CPM) target environment can be extended with Newbrain specific functions simply linking the "nbcpm" library.
 
 Refer to the [library documentation](library/newbrain) for details.
 
