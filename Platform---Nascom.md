@@ -1,6 +1,7 @@
-======= NASCOM 1 & 2  hints & tools =======
+# NASCOM 1 & NASCOM 2
 
-{{platform:nascom3.jpg|}}
+
+![](images/platform/nascom3.jpg)
 
 The code should work with both NASSYS and T MONITORs, and is located by default at $1000.
 
