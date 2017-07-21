@@ -104,7 +104,7 @@ Sharp calculators PC-G850/S/V/VS
 
 #!
 
-======= Links =======
+### Links
 
 Google translator might be your friend, here..
 
