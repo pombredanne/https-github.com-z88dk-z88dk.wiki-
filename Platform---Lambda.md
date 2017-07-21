@@ -35,11 +35,11 @@ This same product was probably always made in Hong Kong and sold locally and aro
 
 # Quick start
 
-zcc  +lambda -lzx81_math -create-app program.c
+     zcc  +lambda -lzx81_math -create-app program.c
 
 --or--
 
-zcc +lambda -lm -create-app program.c
+     zcc +lambda -lm -create-app program.c
 
 The latter option will use the ROM for Floating Point, which will produce small but slower and less accurate code.
 
