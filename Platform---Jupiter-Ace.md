@@ -1,9 +1,8 @@
-======= The Jupiter ACE =======
 
 The Jupiter ACE has a built-in FORTH interpreter in ROM (no BASIC, here!)
 There is very little software for it;  maybe the Z88DK will help !
 
-{{platform:ace.jpg|}}
+![](images/platform/ace.jpg)
 
 
 
