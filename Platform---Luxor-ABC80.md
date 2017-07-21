@@ -1,8 +1,7 @@
-# Luxor ABC80
 
 ![](images/platform/abc80.jpg)
 
-### Quick start
+# Quick start
 
     zcc +abc80 -lm -o adventure -create-app adv_a.c
 
