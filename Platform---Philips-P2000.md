@@ -1,4 +1,4 @@
-======= Philips P2000 =======
+
 
 ![](images/platform/p2000gif.gif)
 
