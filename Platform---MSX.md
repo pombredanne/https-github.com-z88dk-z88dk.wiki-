@@ -1,6 +1,5 @@
-======= MSX hints & tools =======
 
-{{platform:msx.jpg|}}
+![](images/platform/msx.jpg)
 
 
 # Quick start
