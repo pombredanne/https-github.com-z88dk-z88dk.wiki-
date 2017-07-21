@@ -36,7 +36,7 @@ This is untested, add "-subtype=rom".
 
 # Supported libraries
 
-Most of the [monochrome gaphics](Library---monographics) lib and most of the [MSX](Platform---CPM) stuff are supported, but still experimental.
+Most of the [monochrome gaphics](Library---monographics) lib and most of the [MSX](Platform---MSX) stuff are supported, but still experimental.
 
 
 # Appmake extras
