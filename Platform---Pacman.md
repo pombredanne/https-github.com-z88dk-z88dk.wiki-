@@ -1,4 +1,4 @@
-======= Pac-Man Hardware =======
+# Pac-Man Hardware
 
 ![](images/platform/dstar-pacman.png)
 
@@ -12,7 +12,7 @@ Use the Makefile provided in the {z88dk}/examples/pacman folder.
 
 # Links
 
-      * [http://forum.gadgetfactory.net/index.php?/articles.html/papilio-arcade/homebrew-for-pacman-r30](http://forum.gadgetfactory.net/index.php?/articles.html/papilio-arcade/homebrew-for-pacman-r30)
-      * [http://forum.gadgetfactory.net/index.php?/topic/1265-homebrew-for-pacman/](http://forum.gadgetfactory.net/index.php?/topic/1265-homebrew-for-pacman/)
-      * [Technical information](http://www.lomont.org/Software/Games/PacMan/PacmanEmulation.pdf)
+[http://forum.gadgetfactory.net/index.php?/articles.html/papilio-arcade/homebrew-for-pacman-r30](http://forum.gadgetfactory.net/index.php?/articles.html/papilio-arcade/homebrew-for-pacman-r30)
+[http://forum.gadgetfactory.net/index.php?/topic/1265-homebrew-for-pacman/](http://forum.gadgetfactory.net/index.php?/topic/1265-homebrew-for-pacman/)
+[Technical information](http://www.lomont.org/Software/Games/PacMan/PacmanEmulation.pdf)
 
