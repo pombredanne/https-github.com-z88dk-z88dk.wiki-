@@ -71,7 +71,7 @@ The above options are also listed in the [CP/M section](Platform---CPM#hardware-
 A good option to transfer a CP/M program is the "[ctools04.zip](http://zimmers.net/anonftp/pub/cbm/crossplatform/converters/unix/ctools04.zip)" program by Jochen Metzinger.
 
 
-### graphics
+### Graphics
 
 Graphics support libraries are available for three different resolution modes:  lorez (gfx128), hirez (gfx128hr) and ultra-hirez (gfx128hr480)
 
