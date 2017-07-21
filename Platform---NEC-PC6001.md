@@ -1,4 +1,4 @@
-======= NEC PC-6001 =======
+
 
 ![](images/platform/pc6001c.gif)
 
@@ -14,9 +14,11 @@ PC-6601
 
 # Quick start
 
-	zcc +pc6001 -create-app -lm program.c
-- or -
-	zcc +pc6001 -clib=ansi -subtype=32k -oprogram -create-app -lm program.c
+    zcc +pc6001 -create-app -lm program.c
+
+-- or --
+
+    zcc +pc6001 -clib=ansi -subtype=32k -oprogram -create-app -lm program.c
 
 
 
@@ -30,9 +32,12 @@ The following "subtype" options are supported:
 Except forom the ROM mode, a file named 'program.cas' will be created.
 To use the ezperimental audio options, try the following:
 
-	zcc +pc6001 -create-app -lm -Cz--audio program.c
-- or -
-	zcc +pc6001 -create-app -lm -Cz--audio -Cz--fast program.c
+    zcc +pc6001 -create-app -lm -Cz--audio program.c
+
+-- or --
+
+    zcc +pc6001 -create-app -lm -Cz--audio -Cz--fast program.c
+
 
 It will create a WAV file too.
 
