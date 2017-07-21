@@ -1,4 +1,3 @@
-======= CCE MC-1000 =======
 
 ![](images/platform/mc1000-adva.jpg|}} {{:platform:mc1000_rabbits.jpg)
 
