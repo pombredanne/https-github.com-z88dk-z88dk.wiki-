@@ -1,4 +1,4 @@
-======= Robotron Z1013 =======
+
 
 ![](images/platform/z1013.jpg)
 
@@ -6,7 +6,9 @@
 # Quick start
 
     zcc +z1013 -lm -o adventure -create-app adv_a.c
--or-
+
+--or--
+
     zcc +z1013 -clib=ansi -lm -o adventure -create-app adv_a.c
 
 This command will build a file called "adventure.z80", a binary file suitable to be run on the existing emulators.
