@@ -6,7 +6,7 @@ It was thought for systems having little or no ROM memory on lower positions acc
 
 It was presented in the "Oh!X" magazine, in a section called "The Sentinel" in 1986 and in the following years it was ported to many Japanese z80 based computers.   
 
-======= Quick start =======
+# Quick start
 
     zcc +sos -lndos -oadva -create-app adv_a.c
 
