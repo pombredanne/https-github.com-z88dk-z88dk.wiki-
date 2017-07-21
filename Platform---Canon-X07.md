@@ -1,4 +1,3 @@
-======= Canon X-07 =======
 
 NOTE: This target port is highly experimental, any kind of feedback is welcome, please post your comment in the z88dk.org forum.
 
