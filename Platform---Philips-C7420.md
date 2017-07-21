@@ -1,6 +1,5 @@
-# Philips Videopac C7420
 
-The Philips C7420 was an expansion for the Philips Videopac gaming console.
+The Philips Videopac C7420 was an expansion for the Philips Videopac gaming console.
 It consists in a second CPU (Z80), extra memory and a Microsoft BASIC interpreter.
 
 # Quick start
