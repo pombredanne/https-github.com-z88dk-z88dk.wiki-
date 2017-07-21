@@ -13,8 +13,7 @@ Other NTS-Dreamwriter models and clones are based on the NEC V20 CPU rather than
 
 ### Program to be stored onto the PCMCIA card
 
-
-  zcc +nc -lm -create-app application.c
+    zcc +nc -lm -create-app application.c
 
 A file with the ".ROM" extension will be created.
 
@@ -24,17 +23,18 @@ You need to rename it to "nc100.card" (or nc150, nc200) to run it on the emulato
 
 ### Program to be loaded (transferred) into RAM
 
-  zcc +nc -subtype=ram -lm -create-app application.c
+    zcc +nc -subtype=ram -lm -create-app application.c
 
 
 Press CTRL-B (Fn-B) to enter the BASIC interpreter, then use the *LOAD command.
 
+
 Loader example:
-<code>
-10 IF LOMEM>=&5400 THEN PRINT "Error - need 19k of lower memory free!":END
-20 *LOAD A.COM 8C00
-30 CALL &8C00
-</code>
+
+    10 IF LOMEM>=&5400 THEN PRINT "Error - need 19k of lower memory free!":END
+    20 *LOAD A.COM 8C00
+    30 CALL &8C00
+
 
 ## Graphics
 
