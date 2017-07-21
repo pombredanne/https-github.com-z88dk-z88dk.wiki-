@@ -1,6 +1,5 @@
-======= CP/M Hints And Tools =======
 
-{{platform:cpm.jpg|}}
+![](images/platform/cpm.jpg)
 
 
 The CP/M platform is a surprisingly useful port when used in combination with [ZXCC](http://www.seasip.demon.co.uk/Unix/Zxcc/), the two together can easily test whether an algorithm works, or whether there's an issue in the compiled output code.
