@@ -1,4 +1,4 @@
-======= Camputers Lynx =======
+
 
 ![](images/platform/lynx.gif)
 
