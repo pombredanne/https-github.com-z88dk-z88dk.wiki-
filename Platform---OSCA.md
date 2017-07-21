@@ -8,10 +8,15 @@
 ### Command Line
 
     zcc  +osca -lm -lndos -o program.exe program.c
+
 -- or --
+
     zcc  +osca -lm -lflosdos -o program.exe program.c
+
 -- or --
+
     zcc  +osca -subtype=ansi -lm -lflosdos -o program.exe program.c
+
 
 The resulting 'a.bin' program can then be renamed to 'application.exe'.
 Optionally the code can be relocated as specified in the more recent FLOS version by using the '-zorg' parameter.
