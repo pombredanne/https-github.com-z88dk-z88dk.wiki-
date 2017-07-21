@@ -1,4 +1,3 @@
-======= S-OS (The Sentinel) =======
 
 ![](images/platform/s-os-mz1500.jpg)
 
@@ -27,7 +26,7 @@ After the program being loaded (#L adva.obj), the user can pass the parameters i
 
 The program location can be changed with the "-zorg=" option
 
-======= Existing S-OS versions =======
+### Existing S-OS versions
 
 Wikipedia lists the following machines being supported:
 
