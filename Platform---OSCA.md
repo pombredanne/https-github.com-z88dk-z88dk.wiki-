@@ -34,9 +34,9 @@ Set the memory bank for locations > 32768 before loading program
     #pragma output osca_stack=`<value>` 
 Put the stack in a differen place, i.e. 32767
 
-###  compiler command line
 
- 1. zorg=`<location>`
+###  compiler command line options
 
-Permits to specify the program position
+zorg=`<location>`
+   -> Permits to specify the program position
 
