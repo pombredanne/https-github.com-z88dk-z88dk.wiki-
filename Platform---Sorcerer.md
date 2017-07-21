@@ -1,4 +1,4 @@
-======= Sorcerer Exidy =======
+# Sorcerer Exidy
 
 Known clones:  Personal Systems Consulting PS-80,  Dynasty smart-ALEC II
 
