@@ -154,12 +154,12 @@ The "bogomips" tool gives the following results, it is supposed the ZX81 in fast
 The Alan's ARX816 HRG mode is based on a RAM expansion overlapping the ROM locations, in such a way to make the ROM accessible when the instructions have to be executed and the RAM when the data is being read/written.
 
 
-![](images/arx816.gif)
+![](images/platform/arx816.gif)
 
 
 The Wilf's WRX HRG mode uses a different trick.. the historical tweak is done with germanium diodes: *"The RAMPACK is modified to enable the data output at RFSH time by cutting the RD and RFSH lines at the edge connector and installing 2 only 1N34A Germanium diodes and a 4.7K pull-up resistor. Modify at your own risk!"*
 
-![](images/wrx-txt.gif)
+![](images/platform/wrx-txt.gif)
 
 Matthias Swatosh describes it: //"With this modification the refresh-signal to the ram-pack will be always high or disabled. The read-signal to the ram-pack is now
 activ low either if the CPU generated a read or a refresh. This makes the ram-pack send the memory data to the bus when a refresh cycle happens. For normal operation of the computer or
@@ -169,7 +169,7 @@ He also suggests, since the Germanium diodes are now quite rare, to use "Schottk
 
 A variant of this scheme is described by Martin van der Zwan in his "The International ZX81 Magazine", issue two, October 1996.  Pitcure follows, but you should refer to the original article for details.
 
-![](images/zx81hrg.gif)
+![](images/platform/zx81hrg.gif)
 
 ### UDG Mid Resolution mode hints
 
@@ -211,7 +211,7 @@ The original SP value will be restored on exit.
 In High Resolution mode it is possible to have a full featured VT/ANSI emulator, with extra ASCII characters and visual attributes.
 When the 256x192 mode is used it can have exactly the same resolution as the ZX Spectrum (with the exception of the colors).
 
-{{platform:zx81ansi.gif|}}
+![](images/platform/zx81ansi.gif)
 
 
 #### How to change the font size in the VT/ANSI emulation library
