@@ -22,7 +22,7 @@ ROM file formats:
 
     zcc +cpm -subtype=px4 -Cz--32k -create-app -oname name.c
 
-  zcc +cpm -subtype=px4ansi  -create-app -oname name.c -pragma-define:ansicolumns=60
+    zcc +cpm -subtype=px4ansi  -create-app -oname name.c -pragma-define:ansicolumns=60
 
 
 ## The VT/ANSI console driver
