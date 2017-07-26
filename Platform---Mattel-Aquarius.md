@@ -1,7 +1,3 @@
-# Mattel Aquarius
-
-
-
 
 # Quick start
 
