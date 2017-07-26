@@ -1,11 +1,13 @@
-======= Robotron Z9001, KC85/1 and KC87 =======
+# Robotron Z9001, KC85/1 and KC87
 
 
 
 # Quick start
 
     zcc +z9001 -lm -o adventure -create-app adv_a.c
+
 -or-
+
     zcc +z9001 -clib=ansi -lm -o adventure -create-app adv_a.c
 
 
