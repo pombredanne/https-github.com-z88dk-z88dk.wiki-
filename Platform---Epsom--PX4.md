@@ -11,16 +11,16 @@ The CP/M implementation of the time() function includes the automatic detection 
 
 COM file format:
 
-  zcc +cpm -lpx4  -create-app -oname name.c
+    zcc +cpm -lpx4  -create-app -oname name.c
 
-  zcc +cpm -lpx4  -create-app -oname name.c -pragma-need=ansiterminal -pragma-define:ansipixels=240 -pragma-define:ansicolumns=60
+    zcc +cpm -lpx4  -create-app -oname name.c -pragma-need=ansiterminal -pragma-define:ansipixels=240 -pragma-define:ansicolumns=60
 
 
 ROM file formats:
 
-  zcc +cpm -subtype=px4  -create-app -oname name.c
+    zcc +cpm -subtype=px4  -create-app -oname name.c
 
-  zcc +cpm -subtype=px4 -Cz--32k -create-app -oname name.c
+    zcc +cpm -subtype=px4 -Cz--32k -create-app -oname name.c
 
   zcc +cpm -subtype=px4ansi  -create-app -oname name.c -pragma-define:ansicolumns=60
 
