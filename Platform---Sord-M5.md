@@ -1,4 +1,4 @@
-======= Sord M5 =======
+
 
 ![](images/platform/m5b.jpg)
 
