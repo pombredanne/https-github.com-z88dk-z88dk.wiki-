@@ -50,13 +50,16 @@ Get pixel status
 
 Draw a line
 
+
 ## g_drawr(int px, int py, int GrayLevel)
 
 Relative draw 
 
+
 ## g_drawb(int tlx, int tly, int width, int height, int GrayLevel)
 
 Draw a box
+
 
 ## g_circle(int x, int y, int radius, int skip, int GrayLevel)
 
