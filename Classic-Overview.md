@@ -6,6 +6,8 @@ The classic library can be used with both _sccz80_ and _zsdcc_ and the final bin
 requirements).
 
 
+
+
 ## Floating Point Maths
 
 Two generic maths libraries are available with the classic library [_genmath_](https://github.com/z88dk/z88dk/tree/master/libsrc/math/genmath) and [_math48_](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float). 
@@ -45,9 +47,15 @@ The classic library additionally provides [named heap](Classic-allocation) and [
 
 # Graphics Libraries
 
-## Black and White
+## Mono Graphics
 
-## Chunky
+If a platform supports graphics then a [mono graphics](monographics) library is available via `<graphics.h>` that provides several
+drawing primitives and some additional features to render vector graphics.
+
+## Mono Sprites
+
+Software driven [mono sprites](monosprites.md) are available on all platforms with graphics. Some platforms, for example the ZX Spectrum, have
+more optimised sprite libraries available offering additional features.
 
 ## X11 emulation
 
@@ -55,11 +63,19 @@ The classic library additionally provides [named heap](Classic-allocation) and [
 
 ## VDP Support
 
-## SP1 Sprite Library
+## SP1 Sprite Library
+
+The ZX Spectrum and clones support the [sp1](sp1) sprite library that provides advanced features ideal for writing performant games.
 
 # Interrupt Handling
 
+The Classic library provides functionality to implement general purpose [interrupts](interrupts) without having to drop down to machine code.
+
 ## Preemptive multitasking
+
+A simple preemptive multitasking driver is available in `[<threading/preempt.h>` this allows multiple tasks to concurrently execute (for example
+a game simulation and the user interaction) without the need to implement coroutines.
+
 
 # Serial (RS232)
 

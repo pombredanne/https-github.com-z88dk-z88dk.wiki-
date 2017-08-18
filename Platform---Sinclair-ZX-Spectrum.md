@@ -164,8 +164,7 @@ watch out!
 
 ### Calling Basic
 
-Basic routines can be called using the routines in the `[<spectrum.h>]`(zxbasic) header file. This file also provides
-facilities for manipulating screen addresses and Kempston and AMX mouse handling.
+Basic routines can be called using the routines in the `[<spectrum.h>]`(zxbasic) header file. 
 
 ### Interface 1
 
@@ -175,7 +174,6 @@ Low level access to microdrives is available through the `[<zxinterface1.h>]`(zx
 
 Support for the Opus Discovery is available through the `[<zxopus.h>]`(zxopus) header file.
 
-
 ### TRDOS/Betadisk support
 
 ### ZXMMC Support
@@ -184,12 +182,18 @@ Support for the Opus Discovery is available through the `[<zxopus.h>]`(zxopus) h
 
 The Currah uSpeech is supported using the `[<zxcurrah.h>]`(zxcurrah) header file.
 
-
 ### Low resolution (32x48 or 64x48) Graphics
+
+A low resolution colour graphics mode is available using the `[<zxlowgfx.h]`(zxlowgfx) header file. This feature is unfortunately not fully
+librarified and the header file contains the implementation.
 
 ### SP1 Sprite Library
 
+The [sp1](sp1) sprite library is available in the classic library.
+
 ### Mouse Support
+
+Direct access to both Kempston and AMX mouse hardware is defined in the `<spectrum.h>`  header file. 
 
 
 ## Console driver modes
@@ -238,15 +242,18 @@ The screen scrolls when line 24 is "hit", the routine used is in the
 48k ROM.
 
 
+### The ROM driver
 
+The classic library can alternatively use the rst 16 routine within the ZX ROM. This is a compile time option and can be selected by adding the following to the command line:
 
+    -pragma-redirect:fputc_cons=fputc_cons_rom_rst
 
-
+The routine disables the scroll? feature and naturally supports all of the standard ZX control codes. ASCII value 0x0a (10) is mapped through to 0x0d (13) for line return compatibility. In this mode, only the standard 24/26 UDGs are supported.
 
 
 ### The VT/ANSI console driver
 
-
+The ANSI driver provides a VT100 emulation, accepting escape codes that are compatible across the platforms that support the ANSI driver and of course unix terminals.
 
 #### How to change the font size in the VT/ANSI emulation library
 
