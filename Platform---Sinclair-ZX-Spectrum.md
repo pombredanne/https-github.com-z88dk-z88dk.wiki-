@@ -241,6 +241,27 @@ printing a string.
 The screen scrolls when line 24 is "hit", the routine used is in the
 48k ROM.
 
+#### Fonts
+
+By default the screen driver uses the ZX font for 32 column display and a custom one for 64 column
+display. These can be easily changed at command line using a pragma directive:
+
+    -pragma-redirect=CRT_FONT=<some label>
+
+Or for the 64 column font:
+
+    -pragma-redirect=CRT_FONT_64=<some label>
+
+Some extra fonts are included within the classic library ZX library and can be activated using the
+following pragma directives:
+
+    -pragma-redirect=CRT_FONT=_font_8x8_bbc_system
+    -pragma-redirect=CRT_FONT=_font_8x8_clairsys
+    -pragma-redirect=CRT_FONT=_font_8x8_clairsys_bold
+
+Alternatively, the 32 column font can be switched at runtime using the 0x02 escape code detailed
+earlier.
+
 
 ### The ROM driver
 
