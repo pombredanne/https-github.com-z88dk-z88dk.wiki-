@@ -24,3 +24,22 @@ A label is defined by prefixing a symbol with a dot (```.```) or suffixing it wi
 
 ```.A_Label```  
 ```AnotherLabel:```  
+
+## Copyright
+
+The original z80asm module assembler was written by Gunther Strube. 
+It was converted from QL SuperBASIC version 0.956, initially ported to Lattice C,
+and then to C68 on QDOS.
+
+It has been maintained since 2011 by Paulo Custodio.
+
+Copyright (C) Gunther Strube, InterLogic 1993-99  
+Copyright (C) Paulo Custodio, 2011-2017
+
+## Repository
+
+The z80asm assembler is maintained in [z88dk GitHub](https://github.com/z88dk/z88dk/tree/master/src/z80asm) repository.
+
+## License
+
+Artistic License 2.0 [http://www.perlfoundation.org/artisticlicense2_0](http://www.perlfoundation.org/artisticlicense2_0 "Artistic License 2.0")
