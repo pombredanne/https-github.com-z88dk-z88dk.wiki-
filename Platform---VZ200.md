@@ -20,7 +20,7 @@ Using The "-subtype=basic" option a BASIC loader block is embedded in the CRT0 s
 To get a WAV version of the program it is necessary to add the "-create-app" and the "-Cz--audio" options.
 To tweak the speed and gain little time "-Cz--fast" is available.
 
-======= appmake extras =======
+# appmake extras
 
 Appmake is able to convert the compiled program from VZ to the newer CAS format; optionally a wav can be created for loading onto the original hardware, even in a slightly 'faster' mode.
 
