@@ -11,7 +11,7 @@ The Sharp PC-Gxxx are programmable calculators featuring C and assembly low leve
 
 
 
-6 rows text:
+6 rows text, (progam must first initialize the screen by clearing it [e.g. fputc_cons(12)] ):
 
     zcc +g800 -create-app -clib=g850 enigma.c
 
