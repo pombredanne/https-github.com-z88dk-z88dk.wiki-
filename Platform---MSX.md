@@ -71,7 +71,7 @@ The selection of columns is now a link time option, for example with ansi test y
 
 Valid columns are:
 
-     24, 28, 32, 36, 40, 42, 51, 64, 80, 85, 128, ROM24, ROM28, ROM32 and ROM36.
+     24, 28, 32, 36, 40, 42, 51, 64, 80, 85, 128
 
 #### How to change the font that is used
 
