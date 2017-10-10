@@ -203,6 +203,11 @@ Just add the following line in your C program:
 
     #pragma output STACKPTR=49151
 
+-- or use the equivalent option at compile time:
+
+    -pragma-define:STACKPTR=49151
+
+
 The original SP value will be restored on exit.
 
 
@@ -227,6 +232,10 @@ Valid columns in WRX and ARX mode are:
 
 
 When possible the library will be built with a "packed" font to save memory.
+
+If you have 32K or more you can move the "graphics" page on the upper half, e.g.:
+
+    -pragma-define:hrgpage=36096
 
 If you need to save further space, you can rebuild the graphics libraries to use the standard ROM font (note that no undercase letters will be displayed in that case: a converter will re-map the missing symbols).
 THIS LAST OPTION IS FOR EXPERT USERS ONLY and requires the ROMFONT option set for "ansi/zx81/f_ansi_char.asm".
