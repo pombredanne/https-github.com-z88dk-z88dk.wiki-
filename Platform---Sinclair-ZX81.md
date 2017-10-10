@@ -210,6 +210,7 @@ The original SP value will be restored on exit.
 
 In High Resolution mode it is possible to have a full featured VT/ANSI emulator, with extra ASCII characters and visual attributes.
 When the 256x192 mode is used it can have exactly the same resolution as the ZX Spectrum (with the exception of the colors).
+The conio.h variant provided by z88dk is tightly interconnected to this driver and provides useful extra features like cursor positioning and detection of the current txt resolution.
 
 ![](images/platform/zx81ansi.gif)
 
@@ -227,7 +228,7 @@ Valid columns in WRX and ARX mode are:
 
 When possible the library will be built with a "packed" font to save memory.
 
-If you need to save further space, you can reguild the graphics libraries to use the standard ROM font (note that no undercase letters will be displayed in that case: a converter will re-map the missing symbols).
+If you need to save further space, you can rebuild the graphics libraries to use the standard ROM font (note that no undercase letters will be displayed in that case: a converter will re-map the missing symbols).
 THIS LAST OPTION IS FOR EXPERT USERS ONLY and requires the ROMFONT option set for "ansi/zx81/f_ansi_char.asm".
 
 
