@@ -87,7 +87,7 @@ The High Resolution can be activated by passing a value greater than 2 to the "s
 If you are testing your program with the EightyOne emulator please be aware that at the moment only the earlier versions do correctly emulate the G007 and the MemoTech HRG boards.  Version 0.42 (TestZ) is a good option for the Memotech board; the 1.0 (Test a) can still support the G007 but already fails with Memotech.
 
 
-See also the [HRG section](library/zx81#high_resolution_library_related_functions) of the [ZX81 library description page](library/zx81). 
+See also the [HRG section](library-zx81#high-resolution-library-related-functions) of the [ZX81 library description page](library-zx81). 
 It contaings important informations on how to manage the memory locations for the HRG page.
 
 
