@@ -75,7 +75,7 @@ Valid columns are:
 
 #### How to change the font that is used
 
-You can switch to the ROM font by specifying the following options to the compile line:
+On the MSX you can switch to the ROM font by specifying the following options to the compile line:
 
     -pragma-define:ansifont=7359 -pragma-define:ansifont_is_packed=0 -pragma-define:ansicolumns=32
 
