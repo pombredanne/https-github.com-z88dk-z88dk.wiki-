@@ -254,6 +254,7 @@ The routine disables the scroll? feature and naturally supports all of the stand
 ### The VT/ANSI console driver
 
 The ANSI driver provides a VT100 emulation, accepting escape codes that are compatible across the platforms that support the ANSI driver and of course unix terminals.
+The conio.h variant provided by z88dk is tightly interconnected to this driver and provides useful extra features like cursor positioning and detection of the current txt resolution.
 
 #### How to change the font size in the VT/ANSI emulation library
 
