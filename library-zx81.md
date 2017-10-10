@@ -1,12 +1,12 @@
 # ZX 81 LIBRARY (zx81.h)
 
-^ Header     | [[https://raw.githubusercontent.com/z88dk/z88dk/master/include/zx81.h|{z88dk}/include/zx81.h]]                |
-^ Source     | [[https://github.com/z88dk/z88dk/tree/master/libsrc/zx81/|{z88dk}/libsrc/zx81]]                               |
-^ Include    | #include <zx81.h>                                                                                             |
-^ Linking    | n/a                                                                                                           |
-^ Compile    | n/a                                                                                                           |
-^ Supported  | [[platform:zx81|zx 81]]                                                                                       |
-^ Comments   | n/a                                                                                                           |
+    | Header     | [[https://raw.githubusercontent.com/z88dk/z88dk/master/include/zx81.h|{z88dk}/include/zx81.h]]  |
+    | Source     | [[https://github.com/z88dk/z88dk/tree/master/libsrc/zx81/|{z88dk}/libsrc/zx81]]                 |
+    | Include    | #include <zx81.h>                                                                               |
+    | Linking    | n/a                                                                                             |
+    | Compile    | n/a                                                                                             |
+    | Supported  | [[platform:zx81|zx 81]]                                                                         |
+    | Comments   | n/a                                                                                             |
 
 The ZX 81 library contains functions specific to the Sinclair ZX81 / Timex 1000 family machines.
 
@@ -15,76 +15,76 @@ The ZX 81 library contains functions specific to the Sinclair ZX81 / Timex 1000 
 ## Constants
 
 
-===== BASIC language keyword tokens =====
+### BASIC language keyword tokens
 
-|RND|TK_RND|64|
-|INKEY$|TK_INKEYS|65|
-|PI|TK_PI|66|
-|" "|TK_DBLQUOTE|192|
-|AT|TK_AT|193|
-|TAB|TK_TAB|194|
-|CODE|TK_CODE|196|
-|VAL|TK_VAL|197|
-|LEN|TK_LEN|198|
-|SIN|TK_SIN|199|
-|COS|TK_COS|200|
-|TAN|TK_TAN|201|
-|ASN|TK_ASN|202|
-|ACS|TK_ACS|203|
-|ATN|TK_ATN|204|
-|LN|TK_LN|205|
-|EXP|TK_EXP|206|
-|INT|TK_INT|207|
-|SQR|TK_SQR|208|
-|SGN|TK_SGN|209|
-|ABS|TK_ABS|210|
-|PEEK|TK_PEEK|211|
-|USR|TK_USR|212|
-|STR$|TK_STRS|213|
-|CHR$|TK_CHRS|214|
-|NOT|TK_NOT|215|
-|* *|TK_STARSTAR|216|
-|OR|TK_OR|217|
-|AND|TK_AND|218|
-| < = |TK_LEQ|219|
-| > = |TK_GEQ|220|
-| < > |TK_NEQ|221|
-|THEN|TK_THEN|222|
-|TO|TK_TO|223|
-|STEP|TK_STEP|224|
-|LPRINT|TK_LPRINT|225|
-|LLIST|TK_LLIST|226|
-|STOP|TK_STOP|227|
-|SLOW|TK_SLOW|228|
-|FAST|TK_FAST|229|
-|NEW|TK_NEW|230|
-|SCROLL|TK_SCROLL|231|
-|CONTINUE|TK_CONTINUE|232|
-|CONT|TK_CONT|232|
-|DIM|TK_DIM|233|
-|REM|TK_REM|234|
-|FOR|TK_FOR|235|
-|GO TO|TK_GO_TO|236|
-|GO SUB|TK_GO_SUB|237|
-|INPUT|TK_INPUT|238|
-|LOAD|TK_LOAD|239|
-|LIST|TK_LIST|240|
-|LET|TK_LET|241|
-|PAUSE|TK_PAUSE|242|
-|NEXT|TK_NEXT|243|
-|POKE|TK_POKE|244|
-|PRINT|TK_PRINT|245|
-|PLOT|TK_PLOT|246|
-|RUN|TK_RUN|247|
-|SAVE|TK_SAVE|248|
-|RANDOMIZE|TK_RANDOMIZE|249|
-|RANDOMIZE|TK_RAND|249|
-|IF|TK_IF|250|
-|CLS|TK_CLS|251|
-|UNPLOT|TK_UNPLOT|252|
-|CLEAR|TK_CLEAR|253|
-|RETURN|TK_RETURN|254|
-|COPY|TK_COPY|255|
+    | RND    | TK_RND      | 64  | 
+    | INKEY$ | TK_INKEYS   | 65  | 
+    | PI     | TK_PI       | 66  | 
+    | " "    | TK_DBLQUOTE | 192 | 
+    | AT     | TK_AT       | 193 | 
+    | TAB    | TK_TAB      | 194 | 
+    |CODE|TK_CODE|196| 
+    |VAL|TK_VAL|197| 
+    |LEN|TK_LEN|198|
+    |SIN|TK_SIN|199|
+    |COS|TK_COS|200|
+    |TAN|TK_TAN|201|
+    |ASN|TK_ASN|202|
+    |ACS|TK_ACS|203|
+    |ATN|TK_ATN|204|
+    |LN|TK_LN|205|
+    |EXP|TK_EXP|206|
+    |INT|TK_INT|207|
+    |SQR|TK_SQR|208|
+    |SGN|TK_SGN|209|
+    |ABS|TK_ABS|210|
+    |PEEK|TK_PEEK|211|
+    |USR|TK_USR|212|
+    |STR$|TK_STRS|213|
+    |CHR$|TK_CHRS|214|
+    |NOT|TK_NOT|215|
+    |* *|TK_STARSTAR|216|
+    |OR|TK_OR|217|
+    |AND|TK_AND|218|
+    | < = |TK_LEQ|219|
+    | > = |TK_GEQ|220|
+    | < > |TK_NEQ|221|
+    |THEN|TK_THEN|222|
+    |TO|TK_TO|223|
+    |STEP|TK_STEP|224|
+    |LPRINT|TK_LPRINT|225|
+    |LLIST|TK_LLIST|226|
+    |STOP|TK_STOP|227|
+    |SLOW|TK_SLOW|228|
+    |FAST|TK_FAST|229|
+    |NEW|TK_NEW|230|
+    |SCROLL|TK_SCROLL|231|
+    |CONTINUE|TK_CONTINUE|232|
+    |CONT|TK_CONT|232|
+    |DIM|TK_DIM|233|
+    |REM|TK_REM|234|
+    |FOR|TK_FOR|235|
+    |GO TO|TK_GO_TO|236|
+    |GO SUB|TK_GO_SUB|237|
+    |INPUT|TK_INPUT|238|
+    |LOAD|TK_LOAD|239|
+    |LIST|TK_LIST|240|
+    |LET|TK_LET|241|
+    |PAUSE|TK_PAUSE|242|
+    |NEXT|TK_NEXT|243|
+    |POKE|TK_POKE|244|
+    |PRINT|TK_PRINT|245|
+    |PLOT|TK_PLOT|246|
+    |RUN|TK_RUN|247|
+    |SAVE|TK_SAVE|248|
+    | RANDOMIZE | TK_RANDOMIZE | 249 |
+    | RANDOMIZE | TK_RAND      | 249 |
+    | IF        | TK_IF        | 250 |
+    | CLS       | TK_CLS       | 251 |
+    | UNPLOT    | TK_UNPLOT    | 252 |
+    | CLEAR     | TK_CLEAR     | 253 |
+    | RETURN    | TK_RETURN    | 254 |
+    | COPY      | TK_COPY      | 255 |
 
 ## Configuration diagnostics
 
