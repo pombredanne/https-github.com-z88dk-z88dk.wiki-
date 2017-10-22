@@ -19,6 +19,9 @@ For the above examples the BASIC command is  BLOAD "CAS:",R
 
 This will genetrate a file, **adva.com** which is located at $100, as required by MSXDOS.
 
+#### 16K model
+To run on a 16K machine, you need to move the code origin to the upper half.
+'-zorg=49200' should be a good option for you zcc command line.  Any working address for the 16k model will still work on the 32k models.
 
 #### ROM mode
 
