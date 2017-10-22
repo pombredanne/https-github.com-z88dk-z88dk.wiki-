@@ -1,11 +1,11 @@
-======= Spectravideo SVI =======
+# Spectravideo SVI
 
 The Spectravideo SVI-318 and SVI-328 are now well supported.
 Most of the generic functions (monochrome graphics, 1 bit sound, stdio, etc) are supported as well as most of the [MSX](platform/msx) specific ones.
 
 
 
-# Quick start
+#### Quick start
 
     zcc  +svi -lm -create-app program.c
 
