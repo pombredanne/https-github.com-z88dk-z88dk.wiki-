@@ -22,3 +22,7 @@ A WAV audio file can be created too, with the following option:
 
     zcc  +svi -lm -create-app -subtype=wav program.c
 
+
+#### 16K model
+To run on a 16K machine, you need to move the code origin to the upper half.
+'-zorg=49200' should be a good option for you zcc command line.  Any working address for the 16k model will still work on the 32k models.
