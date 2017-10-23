@@ -1,4 +1,3 @@
-======= Sharp MZ family  hints & tools =======
 
 ![](images/platform/sharplogo.gif)
 
