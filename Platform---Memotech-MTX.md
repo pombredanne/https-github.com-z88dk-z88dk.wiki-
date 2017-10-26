@@ -55,6 +55,19 @@ This is an example command sequence to build and run the ANSI demo in 64 columns
     RUN
 
 
+### Recent MESS versions (now grouped into MAME)
+
+    zcc +mtx  -lndos -create-app -oANSITEST.o -clib=ansi ansitest.c
+    copy ANSITEST.wav /mame/ANSITEST.wav
+    (move into the 'mame' folder)
+    mame mtx512 -cass1 ANSITEST.wav
+    POKE 64122,0
+    NEW
+    LOAD ""
+    (enable "play" on the virtual cassette recorder)
+    RUN
+
+
 ### MEMU MTX emulator
 
 This is a very comfortable solution:
