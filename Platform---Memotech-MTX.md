@@ -38,6 +38,37 @@ This is untested, add "-subtype=rom".
 
 Most of the [monochrome gaphics](Library---monographics) lib and most of the [MSX](Platform---MSX) stuff are supported, but still experimental.
 
+# Emulator hints
+
+### MESS v0.118b (Aug 11 2007)
+
+This old version of the MESS emulator wasn't yet ready to fully support the WAV tape format but it is able to patch the BASIC LOAD command and directly import a file, provided that the file name is copied in the MESS folder and that it has the same name of the MTX program to be loaded.
+The default configuration in z88dk creates both the WAV file and the binary program block.
+This is an example command sequence to build and run the ANSI demo in 64 columns (default) mode.
+
+    zcc +mtx  -lndos -create-app -oANSITEST.o -clib=ansi ansitest.c
+    copy ANSITEST /mess0118/ANSITEST
+    (run messgui.exe in MTX512 mode)
+    POKE 64122,0
+    NEW
+    LOAD "A"
+    RUN
+
+
+### MEMU MTX emulator
+
+This is a very comfortable solution:
+
+    zcc +mtx  -Cz--mtx -lndos -create-app -oansitest.o -clib=ansi ansitest.c
+    copy ansitest.mtx /memu/ansitest.mtx
+    memu -v ansitest.mtx
+    POKE 64122,0
+    NEW
+    LOAD ""
+    RUN
+
+
+
 
 # Appmake extras
 
