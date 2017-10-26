@@ -27,6 +27,7 @@ This memory model works with the MTX512 too, but before loading the user must ty
 The binary converter (appmake) will create a file named "adventure.wav" (along with binary file in MtxEmu format, used also in older MESS versions).
 
 Other options for appmake include a 'turboload' mode (-Cz ––fast) and the MacTX MTB binary format (-Cz ––mtb).
+To automatically exclude the wav format and change the output file extension to ".mtx", it is possible to use the "subtype=mtx" option or to pass the directive directly to appmake (-Cz ––mtx).
 
 
 ### ROM mode
@@ -72,7 +73,7 @@ This is an example command sequence to build and run the ANSI demo in 64 columns
 
 This is a very comfortable solution:
 
-    zcc +mtx  -Cz--mtx -lndos -create-app -oansitest.o -clib=ansi ansitest.c
+    zcc +mtx  -subtype=mtx -lndos -create-app -oansitest.o -clib=ansi ansitest.c
     copy ansitest.mtx /memu/ansitest.mtx
     memu -v ansitest.mtx
     POKE 64122,0
