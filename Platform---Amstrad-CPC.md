@@ -184,7 +184,7 @@ This note is still *partially* valid, but please note that the "-create-app" fla
 ```
 	Compile the program (optionally you can set another address for ORG)
 		zcc +cpc -zorg=24576 program.c
-	Prepare an empty snapshot with your preferred Amstrad emulator 
+	Prepare an empty uncompressed snapshot with your preferred Amstrad emulator 
 	(the snapshot format may be a bit different, but normally the locations are the same)
 		memory &1fff  (BASIC command)
 	Save the snapshot and exit from the emulator
