@@ -5,7 +5,7 @@
 
 -or-
 
-    zcc +aquarius -subtype=ansi -lm -create-app -o adventure adv_a.c
+    zcc +aquarius -clib=ansi -lm -create-app -o adventure adv_a.c
 
 The binary converter (appmake) will create two files: _adventure.caq and adventure.caq
 

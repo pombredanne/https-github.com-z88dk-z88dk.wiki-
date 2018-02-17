@@ -1,4 +1,3 @@
-======= VZ 200 =======
 
 z88dk is able to compile programs for the "VZ 200 family".
 Such group of computers includes the Dick Smith VZ200 and VZ300 the Video Technology Laser 210 and Laser 310, the Texet TX 8000 and the Salora Fellow.
@@ -10,7 +9,9 @@ The graphics mode is automatically switched on by calling "clg" or printing CHR$
 # Quick start
 
     zcc +vz -lm -o adventure.vz adv_a.c
+
 -or-
+
     zcc +vz -clib=ansi -lm -o adventure.vz adv_a.c
 
 
@@ -19,7 +20,7 @@ Using The "-subtype=basic" option a BASIC loader block is embedded in the CRT0 s
 To get a WAV version of the program it is necessary to add the "-create-app" and the "-Cz--audio" options.
 To tweak the speed and gain little time "-Cz--fast" is available.
 
-======= appmake extras =======
+# appmake extras
 
 Appmake is able to convert the compiled program from VZ to the newer CAS format; optionally a wav can be created for loading onto the original hardware, even in a slightly 'faster' mode.
 

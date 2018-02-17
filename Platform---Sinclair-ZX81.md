@@ -87,7 +87,7 @@ The High Resolution can be activated by passing a value greater than 2 to the "s
 If you are testing your program with the EightyOne emulator please be aware that at the moment only the earlier versions do correctly emulate the G007 and the MemoTech HRG boards.  Version 0.42 (TestZ) is a good option for the Memotech board; the 1.0 (Test a) can still support the G007 but already fails with Memotech.
 
 
-See also the [HRG section](library/zx81#high_resolution_library_related_functions) of the [ZX81 library description page](library/zx81). 
+See also the [HRG section](library-zx81#high-resolution-library-related-functions) of the [ZX81 library description page](library-zx81). 
 It contaings important informations on how to manage the memory locations for the HRG page.
 
 
@@ -203,6 +203,11 @@ Just add the following line in your C program:
 
     #pragma output STACKPTR=49151
 
+-- or use the equivalent option at compile time:
+
+    -pragma-define:STACKPTR=49151
+
+
 The original SP value will be restored on exit.
 
 
@@ -210,6 +215,7 @@ The original SP value will be restored on exit.
 
 In High Resolution mode it is possible to have a full featured VT/ANSI emulator, with extra ASCII characters and visual attributes.
 When the 256x192 mode is used it can have exactly the same resolution as the ZX Spectrum (with the exception of the colors).
+The conio.h variant provided by z88dk is tightly interconnected to this driver and provides useful extra features like cursor positioning and detection of the current txt resolution.
 
 ![](images/platform/zx81ansi.gif)
 
@@ -227,8 +233,16 @@ Valid columns in WRX and ARX mode are:
 
 When possible the library will be built with a "packed" font to save memory.
 
-If you need to save further space, you can reguild the graphics libraries to use the standard ROM font (note that no undercase letters will be displayed in that case: a converter will re-map the missing symbols).
-THIS LAST OPTION IS FOR EXPERT USERS ONLY and requires the ROMFONT option set for "ansi/zx81/f_ansi_char.asm".
+If you have 32K or more you can move the "graphics" page on the upper half, e.g.:
+
+    -pragma-define:hrgpage=36096
+
+If you need to save further space, you can rebuild the graphics libraries to use the standard ROM font (note that no undercase letters will be displayed in that case: a converter will re-map the missing symbols).
+THIS LAST OPTION IS FOR EXPERT USERS ONLY and requires the ROMFONT option set in "ansi/zx81/f_ansi_char.asm" and a rebuild of the graphics libraries.
+This custom library variant requires special command line parameters.
+Good values for "ansicolumns" is between 24 and 42, (please refer to the list above):
+
+    -pragma-define:ansifont=0 -pragma-define:ansifont_is_packed=0 -pragma-define:ansicolumns=36
 
 
 # Appmake extras

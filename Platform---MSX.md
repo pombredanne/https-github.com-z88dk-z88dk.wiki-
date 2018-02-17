@@ -2,7 +2,7 @@
 ![](images/platform/msx.jpg)
 
 
-# Quick start
+### Quick start
 
     zcc +msx -create-app adv_a.c
 
@@ -19,15 +19,18 @@ For the above examples the BASIC command is  BLOAD "CAS:",R
 
 This will genetrate a file, **adva.com** which is located at $100, as required by MSXDOS.
 
+#### 16K model
+To run on a 16K machine, you need to move the code origin to the upper half.
+'-zorg=49200' should be a good option for you zcc command line.  Any working address for the 16k model will still work on the 32k models.
 
-### ROM mode
+#### ROM mode
 
 This is an experimental mode to create ROM cartridges, add "-subtype=rom".
 Please be aware that not all the functions will work in ROM mode.
 
 
 
-# Disk subtype notes
+### Disk subtype notes
 
 The bin2msx tool is no longer necessary
 
@@ -57,7 +60,30 @@ It generates two files, a.bin, (pure binary file) and a.msx (binary file with so
 	bload "a.msx",r
 
 
-# External Links
+
+### The VT/ANSI console driver
+
+The ANSI driver provides a VT100 emulation, accepting escape codes that are compatible across the platforms that support the ANSI driver and of course unix terminals.
+The conio.h variant provided by z88dk is tightly interconnected to this driver and provides useful extra features like cursor positioning and detection of the current txt resolution.
+
+#### How to change the font size in the VT/ANSI emulation library
+
+The selection of columns is now a link time option, for example with ansi test you can compile as follows:
+
+    zcc +msx ansitest.c -create-app -lndos -pragma-need=ansiterminal -pragma-define:ansicolumns=64
+
+Valid columns are:
+
+     24, 28, 32, 36, 40, 42, 51, 64, 80, 85, 128
+
+#### How to change the font that is used
+
+On the MSX you can switch to the ROM font by specifying the following options to the compile line:
+
+    -pragma-define:ansifont=7359 -pragma-define:ansifont_is_packed=0 -pragma-define:ansicolumns=32
+
+
+### External Links
 
 
 
