@@ -262,7 +262,6 @@ following pragma directives:
 Alternatively, the 32 column font can be switched at runtime using the 0x02 escape code detailed
 earlier.
 
-
 ### The ROM driver
 
 The classic library can alternatively use the rst 16 routine within the ZX ROM. This is a compile time option and can be selected by adding the following to the command line:
@@ -271,6 +270,19 @@ The classic library can alternatively use the rst 16 routine within the ZX ROM. 
 
 The routine disables the scroll? feature and naturally supports all of the standard ZX control codes. ASCII value 0x0a (10) is mapped through to 0x0d (13) for line return compatibility. In this mode, only the standard 24/26 UDGs are supported.
 
+### The FZX driver
+
+Alternatively FZX fonts can be used as the console output, to enable them compile with the flag:
+
+    -pragma-need=fzxterminal
+
+The font can be configured with the following pragma:
+
+    -pragma-redirect:CRT_FONT_FZX=_ff..
+
+Where the font name is the same as defined by newlib.
+
+Scrolling is handled by the screen routine in ROM3 once more.
 
 ### The VT/ANSI console driver
 
