@@ -1,17 +1,22 @@
-======= Sharp X1  hints & tools =======
 
 
 # Quick start
 
 IM1 mode (org at address 0)
-    zcc +x1 -lm adv_a.c
+    zcc +x1 -create-app -lm adv_a.c
 80 columns mode (still IM1)
-    zcc +x1 -pragma-define:ansicolumns=80 vtstone.c
+    zcc +x1 -create-app -pragma-define:ansicolumns=80 vtstone.c
 IM2 mode (org address = 32768 or more)
-    zcc +x1 -subtype=im2 -zorg=`<address>` -lm adv_a.c
+    zcc +x1 -create-app -subtype=im2 -zorg=`<address>` -lm adv_a.c
 
 
-# Hints & Tools
+An autoboot RAW disk image (.2D extension) is created automatically by appmake.
+A .D88 disk image format is obtainable with the SamDisk or XBrowser88 tools.
+
+
+# Do-it-yourself a boot disk (old method)
+
+This is an uncomfortable alternative to "appmake".
 
 The compiler will produce a binary file.
 All you need to do is put that .bin on a disk image. 
