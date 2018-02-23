@@ -1,5 +1,3 @@
-======= Sega Master System =======
-
 
 {{platform:sms.jpg|}}
 
