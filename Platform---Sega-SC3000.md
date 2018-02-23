@@ -1,4 +1,3 @@
-======= SEGA SC-3000 =======
 
 
 ![](images/platform/sc3000.jpg)
