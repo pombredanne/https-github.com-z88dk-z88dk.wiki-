@@ -31,6 +31,6 @@ Note that in the sorcerer case the binary 'format' is probably not used by diffe
     
 The optional "--300bps" flag will make a 300 baud audio track compatible with the Kansas City Standard, (monitor command SE T=1).
 
-
+"-Cz--fast" slightly speeds up the wav stream varying the tones in a non-standard way.
 
 
