@@ -3,7 +3,7 @@
 
 ## Links
 
-["stevepro studios" - z88dk Programming Sample](http://steveproxna.blogspot.it/2014/11/z88dk-programming-and-sample.html)
+["stevepro studios" - z88dk Programming Sample](http://steveproxna.blogspot.it/search/label/z88dk)
 
 [King Kong game](http://hirudov.com/sega/KingKongSMS.php)
 
@@ -13,4 +13,4 @@
 
 [SMSBomberman preview (YouTube video)](https://www.youtube.com/watch?v=akYolXhhL1Q)
 
-[z88dk setup instructions by stevepro](http://steveproxna.blogspot.it/2014/09/z88dk-and-programming-setup.html)
+[z88dk setup instructions by stevepro](http://steveproxna.blogspot.it/search/label/z88dk)
