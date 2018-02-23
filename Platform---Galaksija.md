@@ -10,9 +10,9 @@
 
     zcc +gal -create-app -o adventure adv_a.c
 
-The binary converter (appmake) will create a file named "adventure.gtp".
+The binary converter (appmake) will create a file named "adventure.gtp" and an audio WAV file.
 
-Such file can be used directly on an emulator (i.e. MESS), or converted to WAV with the [Galaksija Tools](http://www.tablix.org/~avian/blog/articles/galaksija-tools/) by Tomaz Solc.
+The GTP file can be used directly on an emulator (i.e. MESS), or converted to WAV with the [Galaksija Tools](http://www.tablix.org/~avian/blog/articles/galaksija-tools/) by Tomaz Solc.
 
 
 
