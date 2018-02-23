@@ -2,12 +2,12 @@
 
 # Quick start
 
-IM1 mode (org at address 0)
-    zcc +x1 -create-app -lm adv_a.c
-80 columns mode (still IM1)
-    zcc +x1 -create-app -pragma-define:ansicolumns=80 vtstone.c
-IM2 mode (org address = 32768 or more)
-    zcc +x1 -create-app -subtype=im2 -zorg=`<address>` -lm adv_a.c
+    IM1 mode (org at address 0)
+        zcc +x1 -create-app -lm adv_a.c
+    80 columns mode (still IM1)
+        zcc +x1 -create-app -pragma-define:ansicolumns=80 vtstone.c
+    IM2 mode (org address = 32768 or more)
+        zcc +x1 -create-app -subtype=im2 -zorg=`<address>` -lm adv_a.c
 
 
 An autoboot RAW disk image (.2D extension) is created automatically by appmake.
