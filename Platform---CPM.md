@@ -42,20 +42,20 @@ There are a couple of #pragma commands which might be used to cut down the size 
 Some hardware specific functions have been adapted to run on both native platorm and generic CP/M environment (the 'gfx' prefix is used for library modules including graphics extensions only).
 
 
-      * **-laussie** ([Aussie Byte](platform/aussie))
-      * **-lcpccpm** ([Amstrad CPC](platform/amstradcpc))
-      * **-lc128cpm**, **-lgfx128**, **-lgfx128hr**, **-lgfx128hr480** ([Commodore 128](platform/c128))
-      * **-leinstein** ([Tatung Einstein](platform/einstein))
-      * **-lpx4** ([Epson PX4 (HC-40)](platform/px4))
-      * **-lmicrobee** ([MicroBEE](platform/microbee))
-      * **-lnbcpm** ([Grundy NewBrain](platform/newbrain))
-      * **-ltiki100**, -startup=2 ([Tiki-100 (formerly Kon-Tiki)](platform/tiki100))
-      * **-ltrs80cpm**, **-lgfxtrs80**, **-lgfxeg2000** ([Tandy Radio Shack 80 and clones](platform/trs80))
-      * **-startup=3 -lzxcpm** ([Sinclair ZX Spectrum](platform/zx))
-      * **-lgfxzcn** ([Amstrad NC-100/NC-200 480x64 graphics on ZCN](platform/amstradnc))
-      * **-lgfxkp** ([Kaypro 160x100 graphics](platform/kaypro), excluding earlier '83 models)
-      * (untested) **-lgfxep**, **-lgfxephr** ([Enterprise 64 / 128](platform/enterprise))
-      * (untested) **-lgfx9001**, **-lgfx9001krt** ([Robotron Z9001, KC85/1, KC87](platform/z9001))
+* **-laussie** ([Aussie Byte](platform/aussie))
+* **-lcpccpm** ([Amstrad CPC](platform/amstradcpc))
+* **-lc128cpm**, **-lgfx128**, **-lgfx128hr**, **-lgfx128hr480** ([Commodore 128](platform/c128))
+* **-leinstein** ([Tatung Einstein](platform/einstein))
+* **-lpx4** ([Epson PX4 (HC-40)](platform/px4))
+* **-lmicrobee** ([MicroBEE](platform/microbee))
+* **-lnbcpm** ([Grundy NewBrain](platform/newbrain))
+* **-ltiki100**, -startup=2 ([Tiki-100 (formerly Kon-Tiki)](platform/tiki100))
+* **-ltrs80cpm**, **-lgfxtrs80**, **-lgfxeg2000** ([Tandy Radio Shack 80 and clones](platform/trs80))
+* **-startup=3 -lzxcpm** ([Sinclair ZX Spectrum](platform/zx))
+* **-lgfxzcn** ([Amstrad NC-100/NC-200](platform/amstradnc) 480x64 graphics on ZCN)
+* **-lgfxkp** ([Kaypro](platform/kaypro) 160x100 graphics, excluding earlier '83 models)
+* (untested) **-lgfxep**, **-lgfxephr** ([Enterprise 64 / 128](platform/enterprise))
+* (untested) **-lgfx9001**, **-lgfx9001krt** ([Robotron Z9001, KC85/1, KC87](platform/z9001))
 
 
 NOTE: for [MSXDOS](platform/msx), use the specific target instructions.
