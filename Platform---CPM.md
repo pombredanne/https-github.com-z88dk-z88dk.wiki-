@@ -42,23 +42,23 @@ There are a couple of #pragma commands which might be used to cut down the size 
 Some hardware specific functions have been adapted to run on both native platorm and generic CP/M environment (the 'gfx' prefix is used for library modules including graphics extensions only).
 
 
-* **-laussie** ([Aussie Byte](Platform---aussie))
-* **-lcpccpm** ([Amstrad CPC](Platform---amstradcpc))
-* **-lc128cpm**, **-lgfx128**, **-lgfx128hr**, **-lgfx128hr480** ([Commodore 128](Platform---c128))
-* **-leinstein** ([Tatung Einstein](Platform---einstein))
-* **-lpx4** ([Epson PX4 (HC-40)](Platform---px4))
-* **-lmicrobee** ([MicroBEE](Platform---microbee))
-* **-lnbcpm** ([Grundy NewBrain](Platform---newbrain))
-* **-ltiki100**, -startup=2 ([Tiki-100 (formerly Kon-Tiki)](Platform---tiki100))
-* **-ltrs80cpm**, **-lgfxtrs80**, **-lgfxeg2000** ([Tandy Radio Shack 80 and clones](Platform---trs80))
-* **-startup=3 -lzxcpm** ([Sinclair ZX Spectrum](Platform---zx))
-* **-lgfxzcn** ([Amstrad NC-100/NC-200](Platform---amstradnc) 480x64 graphics on ZCN)
-* **-lgfxkp** ([Kaypro](Platform---kaypro) 160x100 graphics, excluding earlier '83 models)
+* **-laussie** ([Aussie Byte](Platform---Aussie))
+* **-lcpccpm** ([Amstrad CPC](Platform---Amstrad-CPC))
+* **-lc128cpm**, **-lgfx128**, **-lgfx128hr**, **-lgfx128hr480** ([Commodore 128](Platform---Commodore-c128))
+* **-leinstein** ([Tatung Einstein](Platform---Tatung-Einstein))
+* **-lpx4** ([Epson PX4 (HC-40)](Platform---Epson-px4))
+* **-lmicrobee** ([MicroBEE](Platform---Microbee))
+* **-lnbcpm** ([Grundy NewBrain](Platform---Grundy-Newbrain))
+* **-ltiki100**, -startup=2 ([Tiki-100 (formerly Kon-Tiki)](Platform---Tiki100))
+* **-ltrs80cpm**, **-lgfxtrs80**, **-lgfxeg2000** ([Tandy Radio Shack 80 and clones](Platform---TRS80))
+* **-startup=3 -lzxcpm** ([Sinclair ZX Spectrum](Platform---Sinclair-ZX-Spectrum))
+* **-lgfxzcn** ([Amstrad NC-100/NC-200](Platform---Amstrad-NC) 480x64 graphics on ZCN)
+* **-lgfxkp** ([Kaypro](Platform---Kaypro) 160x100 graphics, excluding earlier '83 models)
 * (untested) **-lgfxep**, **-lgfxephr** ([Enterprise 64 / 128](Platform---Enterprise64))
-* (untested) **-lgfx9001**, **-lgfx9001krt** ([Robotron Z9001, KC85/1, KC87](Platform---z9001))
+* (untested) **-lgfx9001**, **-lgfx9001krt** ([Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001))
 
 
-NOTE: for [MSXDOS](platform/msx), use the specific target instructions.
+NOTE: for [MSXDOS](Platform---MSX), use the specific target instructions.
 
 ## Program boot protection
 
