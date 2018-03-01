@@ -51,5 +51,5 @@ The command line options to boot CP/M and use the created disk image is somethin
 
 ### Screenshots
 
-![](images/kaypro/kp-dstar.png)
-![](images/kaypro/kp-globe.png)
+![](images/platform/kp-dstar.png)
+![](images/platform/kp-globe.png)
