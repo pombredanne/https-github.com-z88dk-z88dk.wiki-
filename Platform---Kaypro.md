@@ -49,3 +49,7 @@ The command line options to boot CP/M and use the created disk image is somethin
     mame kaypro484 -flop1 cpmboot.td0 -flop2 a.imd
 
 
+### Screenshots
+
+![](images/kaypro/kp-dstar.png)
+![](images/kaypro/kp-globe.png)
