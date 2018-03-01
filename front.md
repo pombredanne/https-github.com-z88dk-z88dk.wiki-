@@ -643,19 +643,6 @@ __Structs cannot be assigned, passed by value to functions or returned by functi
 
 Passing structures around is an inefficient operation since their entire contents have to be duplicated on the stack.  It is always preferable to pass pointers to the structures instead.  However this is not quite the same semantic since a struct passed by value can be modified inside the function without changing the original struct outside the function.  If this semantic is required you will have to supply alternate code to get the same effect that will most likely involve using memcpy() to make copies of structures before and after calls.  The lack of support for struct assignment and parameters does affect a small number of C library functions such as div() and family.  These functions have been modified to exchange pointers to structs rather than the structs themselves.
 
-__Multi-dimensional arrays are not directly supported.__
-
-This means, for example, arrays like "int a[10][20];" cannot be declared.  So-called jagged arrays (arrays of arrays in which all indices prior to the last are actually pointers) are in fact supported and the a[x][y] syntax used to access them work fine.
-
-One workaround for multi-dimensional arrays is to create a jagged array.  For the example given this would involve creating an array of 10 pointers to int as in "int *a[10];" and assigning to each index a pointer to its own array of 20 ints.  The a[x][y] syntax can then be used unchanged.
-
-A second work-around is to declare a single dimension array of the required number of elements and then manually calculate the location of an element from its two indices.  For this example one might declare "int a[200];" and then index the array as in "a[x*20+y];"  If this looks cpu intensive to you, it is.  This is how the compiler must implement multi-dimensional array indexing for you; jagged arrays have better performance at the expense of space.
-
-__Function pointers cannot be defined with parameters.__
-
-All function pointers must be declared using the style type (*f)(), for example double (*f)() and called as usual as in "(f)(16384, 32768, 6192);"  The consequence of this is that there is no parameter information carried with the function pointer.  You must be careful to call via the function pointer using the correct number of parameters and the correct parameter types using explicit casting as required.
-
-Since the compiler has no idea how many parameters a void function pointer is supposed to have, it will happily generate calls with too few or too many parameters.  And since the compiler has no idea what the parameter types should be it cannot cast to the type expected by the function; instead it simply pushes the type of the parameter onto the stack.  This can be disastrous if the parameter passed is a 4-byte long while the function expects a two-byte int; the target function will not read parameters properly from the stack.  Explicitly casting that long parameter to the int expected by the function solves the problem.
 
 #### Known Issues
 

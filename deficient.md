@@ -9,42 +9,6 @@ When in trouble try renaming your files.
 Also avoid program/module names beginning with numbers or symbols.
 
 
-### Multi-dimensional Arrays
-
-Multi-dimensional arrays are not supported. They can be emulated in software by partitioning creating a single large array and calculating offsets.
-
-
-### Function pointers
-
-Are supported, but they can't be prototyped, for example:
-
-	:::c
-	int (*func)();
-
-
-is supported, but:
-
-	:::c
-	int (*func)(int val, char *str);
-
-
-is not. This is unfortunate in terms of type safety, but during development you could use something like this to provide type safety:
-
-	:::c
-	#ifdef DEVELOPMENT
-	#define CALLIT(f,v,s)  callmyfunc(f,v,s)
-	#else
-	#define CALLIT(f,v,s) f(v,s)
-	#endif   
-	
-	#ifdef DEVELOPMENT
-	int callmyfunc(int (*func)(), int val, char *str)
-	{
-	   return func(val,str);
-	}
-	#endif
-
-
 ### Bitfields
 
 Bitfields are not supported.
