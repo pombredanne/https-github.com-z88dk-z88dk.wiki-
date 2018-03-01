@@ -61,7 +61,7 @@ You can choose to link with a single library that implements file I/O functional
 
 ### Spectrum +3 or Residos
 
-    zcc +zx -DPLUS3 file.c -lp3
+    zcc +zx file.c -lp3
 
 or:
 
@@ -211,10 +211,12 @@ Here are the byte sequences for it:
 	    byte. By default this points to the ROM font at 15616
 3,hh,ll   - Set the address for the UDGs by default this points to
 	    65368
+4,x       - Disable (0) or enable (1) vertical scrolling
 
-8,9,11 - Move in x and y as you would expect
+8,9,11    - Move in x and y as you would expect
 12	  - Form feed - clears the screen and moves print posn to 0,0
 10	  - Carriage return - advances y and sets x to 0
+13        - Moves down a row
 
 16,x	  - Set the ink colour  (x = 48-55 ('0'-'7'))
 17,x	  - Set the paper colour (x = 48-55 ('0'-'7'))
@@ -259,8 +261,16 @@ following pragma directives:
     -pragma-redirect=CRT_FONT=_font_8x8_clairsys
     -pragma-redirect=CRT_FONT=_font_8x8_clairsys_bold
 
-Alternatively, the 32 column font can be switched at runtime using the 0x02 escape code detailed
-earlier.
+Alternatively, the font can be switched at runtime using the 0x02 escape code detailed earlier - to change the 32 column font, switch to 32 column mode and
+similarly switch to 64 column mode to change the 64 column font.
+
+The available fonts can be seen in the screenshots below:
+
+![](images/platform/fonts/font1.png)
+![](images/platform/fonts/font2.png)
+![](images/platform/fonts/font3.png)
+![](images/platform/fonts/font4.png)
+![](images/platform/fonts/font5.png)
 
 ### The ROM driver
 
