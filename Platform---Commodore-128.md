@@ -1,11 +1,9 @@
-======= Commodore 128 =======
-
-![](images/platform/c128b.png)
+![](images/platform/c128b.jpg)
 
 z88dk is able to generate code for the Commodore 128's Z80 CPU.
 Two versions of the library are provided for both "native" mode and CP/M.
 
-![](images/platform/c128chess.png)
+![](images/platform/c128chess.jpg)
 ![](images/platform/c128rabbit.png)
 
 # Target specific functions
