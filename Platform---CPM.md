@@ -54,6 +54,7 @@ Some hardware specific functions have been adapted to run on both native platorm
 * **-startup=3 -lzxcpm** ([Sinclair ZX Spectrum](Platform---Sinclair-ZX-Spectrum))
 * **-lgfxzcn** ([Amstrad NC-100/NC-200](Platform---Amstrad-NC) 480x64 graphics on ZCN)
 * **-lgfxkp**,**-lgfxkp83**  ([Kaypro](Platform---Kaypro) 160x100 graphics, 80x50 on earlier '83 models)
+* **-lgfxattache**  ([Otrona Attachè](Platform---Otrona) 320x240 graphics)
 * (untested) **-lgfxep**, **-lgfxephr** ([Enterprise 64 / 128](Platform---Enterprise64))
 * (untested) **-lgfx9001**, **-lgfx9001krt** ([Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001))
 
