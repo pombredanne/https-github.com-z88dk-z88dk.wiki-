@@ -1,6 +1,6 @@
 #  Kaypro
 
-The Kaypro computers are CP/M compatible, so the [same base library](platform/cpm) can be used, but extra functionalities are available.
+The Kaypro computers are CP/M compatible, so the [same base library](Platform---CPM) can be used, but extra functionalities are available.
 Library extras include the graphics support for '84 models (160x100).
 
 
@@ -14,7 +14,6 @@ Graphics on the earlier '83 models is very limited and emulates an 80x50 resolut
 
 ### Emulator hints
 
-The emulator used to test the graphics lib is .
 Please be aware that [MAME](http://www.mamedev.org/) is not yet working correctly and the graphics will be occasionally garbled.   It is *not* a bug in z88dk, but rather a limit in the accuracy on how MESS currently deals with text attributes when emulating all the late Kaypro models.
 
 
