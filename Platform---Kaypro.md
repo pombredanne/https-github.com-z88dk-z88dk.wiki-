@@ -1,7 +1,7 @@
 #  Kaypro
 
 The Kaypro computers are CP/M compatible, so the [same base library](Platform---CPM) can be used, but extra functionalities are available.
-Library extras include the graphics support for '84 models (160x100).
+Library extras include the graphics support for '84 models (160x100) and '83 models (80x50).
 
 
 ### Command Line
