@@ -1,6 +1,6 @@
 #  Otrona Attachè
 
-The Otrona Attachè computers are CP/M compatible, so the [same base library](platform/cpm) can be used, but extra functionalities are available.
+The Otrona Attachè computers are CP/M compatible, so the [same base library](Platform---CPM) can be used, but extra functionalities are available.
 Library extras include the graphics support (320x240).
 
 
