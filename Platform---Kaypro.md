@@ -6,7 +6,7 @@ Library extras include the graphics support for '84 models (160x100).
 
 ### Command Line
 
-    zcc  +cpm -lm -lgfxkp -oPROGRAM.COM program.c
+    zcc  +cpm -lgfxkp -create-app program.c
 
 
 Graphics on the earlier '83 models is very limited and emulates an 80x50 resolution.  To access to the video page the "startup=2" option is needed together with '-lgfxkp83';  this relocating option reduces the max program size to about 27K.
