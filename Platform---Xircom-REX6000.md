@@ -1,6 +1,6 @@
 # Xircom REX 6000 / DataSlim  hints & tools
 
-{{images/platform:xircom.jpg|}}
+{{images/platform:xircom.jpg}}
 
 
 ## Quick start
