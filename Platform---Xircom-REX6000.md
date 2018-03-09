@@ -1,6 +1,6 @@
 # Xircom REX 6000 / DataSlim  hints & tools
 
-{{images/platform:xircom.jpg}}
+![](images/platform/xircom.jpg)
 
 
 ## Quick start
@@ -65,4 +65,3 @@ Mame has some support, but the hacked DS2 emulator may be better bet (if it can 
 * [connected to the above link.. extra tools page](http://www.bth.se/people/ska/sim_home/rex_utils.html)
 * [REX 6000 historical page](http://www.oocities.org/wh_hsn/rex6k/rex_6000_intro.htm)
 * [A REXDK (derived from an earlier z88dk version) tutorial in Japanese](http://www.asahi-net.or.jp/~qn6omrtm/ds2new/dev/make_rex/index.htm)
-
