@@ -1,10 +1,7 @@
- ======  Timex TS2068 and TS2048 (ZX Spectrum clones) ======
-
-
-
 ### Introduction
 
 This port is an improvement of the ZX Spectrum one, which already includes some automatic fix to solve the compatibility problems on the TS2068.
+
 Most of the extra functionalities permit to take benefit of the extended video mode for text and graphics.
 
 Please refer to the [ZX Spectrum platform](platform/zx) docs for further information about most of the available features (appmake, etc).
