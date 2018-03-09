@@ -1,9 +1,9 @@
-======= Xircom REX 6000 / DataSlim  hints & tools =======
+# Xircom REX 6000 / DataSlim  hints & tools
 
-{{platform:xircom.jpg|}}
+{{images/platform:xircom.jpg|}}
 
 
-# Quick start
+## Quick start
 
     zcc +rex -create-app -lm hello.c
 
@@ -54,22 +54,15 @@ The command optionally uses a file called game.res which contains resources for 
 	X......................................X
 	XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	
+## Emulators
 
+Mame has some support, but the hacked DS2 emulator may be better bet (if it can be found)
 
-# Tools
+## Links
 
-
-#### mkaddin
-
-Support program to produce Rex Addins, this has been integrated into the appmake program so an addin can be generated in a single command.
-
-
-# Links
-
-    * [Wikipedia about the REX 6000, a good overview](http://en.wikipedia.org/wiki/REX_6000)
-    * [REX 6000 related page](http://www.ipd.bth.se/ska/sim_home/rex.html)
-    * [connected to the above link.. extra tools page](http://www.bth.se/people/ska/sim_home/rex_utils.html)
-    * [REX 6000 historical page](http://www.oocities.org/wh_hsn/rex6k/rex_6000_intro.htm)
-    * [A REXDK (derived from an earlier z88dk version) tutorial in Japanese](http://www.asahi-net.or.jp/~qn6o-mrtm/ds2new/dev/make_rex/index.htm)
-
+* [Wikipedia about the REX 6000, a good overview](http://en.wikipedia.org/wiki/REX_6000)
+* [REX 6000 related page](http://www.ipd.bth.se/ska/sim_home/rex.html)
+* [connected to the above link.. extra tools page](http://www.bth.se/people/ska/sim_home/rex_utils.html)
+* [REX 6000 historical page](http://www.oocities.org/wh_hsn/rex6k/rex_6000_intro.htm)
+* [A REXDK (derived from an earlier z88dk version) tutorial in Japanese](http://www.asahi-net.or.jp/~qn6omrtm/ds2new/dev/make_rex/index.htm)
 
