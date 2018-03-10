@@ -1,8 +1,3 @@
-======= Peters Plus Sprinter  hints & tools =======
-
-
-
-
 # Quick start
 
     zcc +pps -o adventure.exe adv_a.c
@@ -20,6 +15,9 @@ http://nixbit.com/software/sprint-may-24-review/
 Updated version of the emulator that can be compiled with 64 bit and works on MacOS:
 
 https://github.com/suborb/sprint
+
+To run a compiled application, copy the .exe file to a local directory and run `./sprint [exe file]`
+
 
 #  Documentation 
 
