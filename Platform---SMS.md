@@ -1,5 +1,5 @@
 
-{{platform:sms.jpg|}}
+![](images/platform/sms.jpg)
 
 ## Links
 
