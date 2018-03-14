@@ -41,8 +41,4 @@ The command line options to boot CP/M and use the created disk image will be som
 After the CP/M boot, just enter 'b:' and the program name to run it !
 
 
-The 'sq.com' utility present on another disk image (otr-util.td0) can be patched at 133120 to overwrite DU.COM and run correctly up to 4.5K long programs, but the emulator will need a system disk to boot:
-
-    mame attache -flop1 oattache.td0 -flop2 A.IMD
-
 
