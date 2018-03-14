@@ -16,7 +16,7 @@ Library extras include the graphics support (320x240).
 Please be aware that [MAME](http://www.mamedev.org/) is not yet working correctly and instabilities may happen.  Some program size limit could be still present also with the updated appmake tool.
 
 
-#### ImageDisk and "Appmake +cpm"
+#### ImageDisk and "appmake +cpm"
 
 We suggest to use the [ImageDisk](http://www.classiccmp.org/dunfield/img/index.htm).    The same file created with the described procedure should be valid for ImageDisk to transfer the disk image onto a real floppy.
 
