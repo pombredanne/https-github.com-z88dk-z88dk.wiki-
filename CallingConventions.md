@@ -28,7 +28,7 @@ z88dk supports the following calling conventions:
 
 |  Decorator|  Usage|
 |--|--|
-| __z88dk_shortcall(RR, VV) |  Allows a function to be called via a rst RR trampoline. If value < 256 then generated code is rst RR; defb VV, otherwise rst RR; defb VV. This can be used to access functions located in non-paged memory banks. |
+| __z88dk_shortcall(RR, VV) |  Allows a function to be called via a rst RR trampoline. If value < 256 then generated code is rst RR; defb VV, otherwise rst RR; defw VV. This can be used to access functions located in non-paged memory banks. |
 | __z88dk_params_offset(VV) |  When called via a trampoline it is likely that the parameters for a function will not be located starting at sp+2. This annotation defines the additional offset required to reach the parameters.   | 
 
 With __z88dk_shortcall() only direct calls will use the rst trampoline, calling via a function pointer will call as usual. Thus, when shipping a library or providing an interface you will need to provide a matching function stub which will call via the rst trampoline.
