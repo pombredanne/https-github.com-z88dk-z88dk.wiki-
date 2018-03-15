@@ -4,7 +4,7 @@ z88dk provides several different conventions for calling functions. Understandin
 
 The conventions and modifiers are indicated to the compiler by adding them as a suffix to the function prototype, for example:
 
-> int function(long val) __z88dk_callee;
+    int function(long val) __z88dk_callee;
 
 z88dk supports the following calling conventions:
 
