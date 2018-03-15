@@ -22,7 +22,7 @@
 
 * [Debugging](debugging)
 * [Far Memory](FarMemory)
-* [Deficiencies](deficient)
+* [Deficiencies](Suite-deficiencies)
 * [Importing routines written in 8080 assembly mnemonics](8080toz80)
 * [Using CP/M libraries in REL format with z88dk](relformat)
   * [Linking external libraries](libraries)
@@ -41,6 +41,5 @@
 * [The Assembler / Linker (z80asm)](Tool-z80asm)
 * [copt](Tool--copt)
 * [Various tools](tools)
-
 
 
