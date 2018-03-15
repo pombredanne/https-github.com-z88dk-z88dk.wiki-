@@ -21,7 +21,7 @@
 ## Misc
 
 * [Debugging](debugging)
-* [Far Memory](farmem)
+* [Far Memory](FarMemory)
 * [Deficiencies](deficient)
 * [Importing routines written in 8080 assembly mnemonics](8080toz80)
 * [Using CP/M libraries in REL format with z88dk](relformat)

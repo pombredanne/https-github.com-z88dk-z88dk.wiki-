@@ -1,17 +1,43 @@
+# Far Memory
+
+## Breaking the 64k barrier
+
+The Z80 processor is an old processor, and it's based on an even older one - the Intel 8080. These two processors are 8 bit accumulator based and can access an address space of 65536 bytes (or 64k).
+
+Quite early on it was realised that this simply isn't enough address space to implement a comprehensive operating system and leave sufficient user RAM for their own programs.
+
+The solution to this is quite straightforward, have more ROM/RAM in the system and page it in when required. This trick isn't just used on the Z80 but also for the 6500 processors.
+
+## Abstracted Handling
+
+z88dk supports the concept of a `__far` pointer. This a type qualifier that can be prefixed to any pointer type, and as far as the programmer is concerned, handling of them should be transparent.
+
+The far pointers used by z88dk are 24 bits long i.e. 3 bytes, this enables the theoretical access of 16Mb of memory. The far pointer allows for a *flat* memory model - i.e. they are treated as "normal" 24 bit number by the compiler. Far pointers are always handled in ''ehl'' where e contains bits 16-23 and hl bits 0-15 of the pointer. If e holds 0 then hl is taken to be an absolute address in the current memory configuration.
+
+## Compiler support
+
+Out of the two compilers with z88dk, only sccz80 supports far pointers, at present there is just a single implementation of far support - for the z88.
+
+A far pointer can be declared using the left-associative `__far` decorator, for example:
+
+    char *__far string;
+    void (*__far function_pointer)(int param);
+
+## Implementing Far memory
+
 Implementing of support for far memory is of course machine specific and depends on the target machines memory model. Z88dk makes certain assumptions that routines are available, in order to have a functioning far memory system for your target the functions detailed in this file will need to be implemented.
 
-# stdlib functionality
+### stdlib functionality
 
-	far void *malloc_far(long num_bytes)
+	 void *__far malloc_far(long num_bytes)
 
 
 This function should reserve ''num_bytes'' space in the system, and return a value in ehl which provides a handle to the allocated memory.
 
 Correspondingly the following functions are also required:
 
-	far void *calloc_far(int count, int size);
-	void free_far(far void *ptr);
-
+	 void *__far calloc_far(int count, int size);
+	void free_far(void *__far ptr);
 
 The following function might be useful to deallocate all allocated memory by an application, this would normally be called by the [[porting::startupcode|startup] code just before exiting.
 
@@ -20,13 +46,13 @@ The following function might be useful to deallocate all allocated memory by an 
 
 *The _far suffix is used to distinguish between near and far allocation methods.*
 
-# "crt" functions
+### "crt" functions
 
-The compiler will generate various calls to functions whenever data is required to be accessed from a far location, these are used to pick up the various primitive datatypes from far memory (it has no knowledge of the actual implementation of far memory).
+sccz80 will generate various calls to functions whenever data is required to be accessed from a far location, these are used to pick up the various primitive datatypes from far memory (it has no knowledge of the actual implementation of far memory).
 
-### Reading routines
+#### Reading routines
 
-These have entry ehl = memory pool address:
+These have entry ehl = far address address:
 
 	lp_gchar   - read char
 	Exit:   a=l = byte at that location
@@ -50,7 +76,7 @@ For ''lp_gchar'', the function should not worry about signedness, the compiler w
 
 FA -> FA+5 are 6 bytes presently located in the crt0 file.
 
-### Writing routines
+#### Writing routines
 
 These have entry e'h'l' = far address and the following additional entry parameters:
 
@@ -72,7 +98,11 @@ These have entry e'h'l' = far address and the following additional entry paramet
 
 ''lp_pdoub'' should write the bytes stored in FA -> FA+5 to the far memory address.
 
-# String Routines
+#### Far pointer calling
+
+In order to support calling routines located in banked memory, you will need to implement the `l_farcall`support function. This takes ehl as the far address to call. 
+
+### String Routines
 
 You should also implement the following string.h functions which will make the usage of far memory a lot more convenient:
 
@@ -87,4 +117,5 @@ You should also implement the following string.h functions which will make the u
 	extern far char *strchr_far(far unsigned char *, unsigned char);
 	extern far char *strrchr_far(far unsigned char *, unsigned char);
 	extern far char *strdup_far(far char *);
+
 

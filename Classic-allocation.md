@@ -12,7 +12,7 @@
 
 This page discusses automatic, static and dynamic memory allocation under z88dk.  Automatic memory allocation occurs when a function is called in order to allocate memory for local variables.  Static memory allocation is performed by the compiler to allocate permanent memory space for global and static variables.  Dynamic memory allocation is performed by the program to gain a pointer to a free memory block at runtime.  Some z88dk libraries perform dynamic memory allocation implicitly -- this is also described here.
 
-This page only deals with the usual 64k near memory model of the z80; it does not discuss the [far memory model](advanced/farmem), where a flat memory model is used to address more than 64k, nor does it discuss the [ramdisk model](library/ramdisk) where memory beyond the z80's 64k address space is treated as a disk drive.  The far memory model is supported by a far malloc library not described here.
+This page only deals with the usual 64k near memory model of the z80; it does not discuss the [far memory model](FarMemory), where a flat memory model is used to address more than 64k, nor does it discuss the [ramdisk model](library/ramdisk) where memory beyond the z80's 64k address space is treated as a disk drive.  The far memory model is supported by a far malloc library not described here.
 
 # Automatic Memory Allocation
 
@@ -452,7 +452,7 @@ Post common questions and answers here.  Report any bugs or ask a question not l
 
 Yes it can.  My suggestion would be to logically separate groups of queues so that, for example, queues 0-3 apply to memory configuration A, queues 4-7 to memory congifuration B, etc.  When memory blocks are required for memory configuration B, they should be requested from queues 4-7.  Note that the BALLOC library code, the queue table and the memory blocks from the queues accessed must be paged in when making calls to the BALLOC library functions.
 
-This does require the program to know which memory configuration is currently valid and which allocated blocks are valid in which memory configuration but this will generally be known.  To allocate memory that is valid across any memory configuration, look into the [far malloc library](advanced/farmem).  The far malloc library's memory can always be accessed, with the compiler supplying any necessary bankswitching code automatically.  The price paid is that accessing far memory is more sluggish than near memory.
+This does require the program to know which memory configuration is currently valid and which allocated blocks are valid in which memory configuration but this will generally be known.  To allocate memory that is valid across any memory configuration, look into the [far malloc library](FarMemory).  The far malloc library's memory can always be accessed, with the compiler supplying any necessary bankswitching code automatically.  The price paid is that accessing far memory is more sluggish than near memory.
 
 **2. Do you have to free memory to the same NAMED HEAP it was allocated from?  Shouldn't this be the compiler's responsibility?**
 
@@ -462,7 +462,7 @@ The named API was envisioned to be useful in two scenarios.  In the first scenar
 
 It would have been possible to store the heap from which blocks were allocated in the allocated blocks themselves and then a single free() function could serve all memory blocks, but this would entail an extra two bytes per allocated block overhead, and, on top of this, in scenario #2 above it would still not be clear whether it would be safe to perform the free() since it would be unknown whether the correct memory configuration was active.
 
-If you are looking to allocate and deallocate memory that is always valid in any memory configuration you should be looking at the [far malloc library](advanced/farmem).  This will take care of all details, including having the compiler automatically generate banking code when accessing far memory, but of course this all comes at the expense of speed.
+If you are looking to allocate and deallocate memory that is always valid in any memory configuration you should be looking at the [far malloc library](FarMemory).  This will take care of all details, including having the compiler automatically generate banking code when accessing far memory, but of course this all comes at the expense of speed.
 
 **3. Can you change the heap that the standard C malloc library uses by changing the contents of the heap variable?**
 

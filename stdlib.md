@@ -66,19 +66,19 @@ As itoa() above but the number *n* is an unsigned long.
 
 ## void *calloc(int nobj, int size)
 
-*calloc* returns a pointer to space for an array of *nobj* objects, each of size *size*, or 0 if the request cannot be satisfied.  The space is initialized to zero bytes.  z88dk requires the program to initialize the heap prior to its use.  See the [malloc](library/memory_allocation#standard_c_malloc_library_malloc.h) library description for more details.  In addition some targets (currently the z88) can support a larger than 64k memory model using the [far memory model](advanced/farmem).
+*calloc* returns a pointer to space for an array of *nobj* objects, each of size *size*, or 0 if the request cannot be satisfied.  The space is initialized to zero bytes.  z88dk requires the program to initialize the heap prior to its use.  See the [malloc](library/memory_allocation#standard_c_malloc_library_malloc.h) library description for more details.  In addition some targets (currently the z88) can support a larger than 64k memory model using the [far memory model](FarMemory).
 
 ## void *malloc(int size)
 
-*malloc* returns a pointer to space for an object of size *size*, or 0 if the request cannot be satisfied.  The space is uninitialized.  z88dk requires the program to initialize the heap prior to its use.  See the [malloc](library/memory_allocation#standard_c_malloc_library_malloc.h) library description for more details.  In addition some targets (currently the z88) can support a larger than 64k memory model using the [far memory model](advanced/farmem).
+*malloc* returns a pointer to space for an object of size *size*, or 0 if the request cannot be satisfied.  The space is uninitialized.  z88dk requires the program to initialize the heap prior to its use.  See the [malloc](library/memory_allocation#standard_c_malloc_library_malloc.h) library description for more details.  In addition some targets (currently the z88) can support a larger than 64k memory model using the [far memory model](FarMemory).
 
 ## void *realloc(void *p, int size)
 
-*realloc* changes the size of the object pointed to by *p*; it does nothing if *p* is 0.  *p* must be a pointer to space previously allocated by *calloc*, *malloc* or *realloc*.  z88dk requires the program to initialize the heap prior to its use. See the [malloc](library/memory_allocation#standard_c_malloc_library_malloc.h) library description for more details.  In addition some targets (currently the z88) can support a larger than 64k memory model using the [far memory model](advanced/farmem). 
+*realloc* changes the size of the object pointed to by *p*; it does nothing if *p* is 0.  *p* must be a pointer to space previously allocated by *calloc*, *malloc* or *realloc*.  z88dk requires the program to initialize the heap prior to its use. See the [malloc](library/memory_allocation#standard_c_malloc_library_malloc.h) library description for more details.  In addition some targets (currently the z88) can support a larger than 64k memory model using the [far memory model](FarMemory). 
 
 ## void free(void *p)
 
-*free* deallocates the space pointed to by *p*; it does nothing if *p* is 0.  *p* must be a pointer to space previously allocated by *calloc*, *malloc* or *realloc*.  See the [malloc](library/memory_allocation#standard_c_malloc_library_malloc.h) library description for more details.  In addition some targets (currently the z88) can support a larger than 64k memory model using the [far memory model](advanced/farmem).
+*free* deallocates the space pointed to by *p*; it does nothing if *p* is 0.  *p* must be a pointer to space previously allocated by *calloc*, *malloc* or *realloc*.  See the [malloc](library/memory_allocation#standard_c_malloc_library_malloc.h) library description for more details.  In addition some targets (currently the z88) can support a larger than 64k memory model using the [far memory model](FarMemory).
 
 ## void abort(void)
 
