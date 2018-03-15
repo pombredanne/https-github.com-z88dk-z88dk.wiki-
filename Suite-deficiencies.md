@@ -1,5 +1,3 @@
-# Suite Deficiencies
-
 ## Compiler (sccz80)
 
 ### File Names
