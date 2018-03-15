@@ -24,7 +24,7 @@ The [classic library](Classic-Overview) is z88dk's traditional library and is wr
 
 ### Supported Platforms
 
-The classic library supports [50 platforms](Platform) and provides many [extensions](Classic-Extensions) as well as broadly supporting the C library standard.
+The classic library supports [50 platforms](Platform) and provides many extensions (graphics, sound etc) as well as broadly supporting the C library standard.
 
 ## New
 
