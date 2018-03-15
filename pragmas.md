@@ -5,22 +5,23 @@ Pragma directives allow a source file to issue directives to the compiler (and t
 
 ### Available Pragma Commands
 
-
-*  #pragma asm Start an assembler block (equivalent of #asm)
-
-*  #pragma endasm End an assembler block (equivalent of #endasm)
-
 *  #pragma output name[=value] Defines [word] in zcc_opt.def
-
 *  #pragma data name byte_values
-
 *  #pragma byte name byte_value
+
+Changing the output sections:
+
+* #pragma bssseg name
+* #pragma codeseg name
+* #pragma constseg name
+* #pragma dataseg name
+* #pragma initseg name
+
 
 ### #pragma output
 
 The following pragma:
 
-	
 	#pragma output JustAName
 	#pragma output WithaValue=2
 
@@ -40,16 +41,25 @@ Generates the following output in zcc_opt.def
 
 
 
+### Configuring printf and scanf converters
 
+Both newlib and classic link in only the required converters for printf and scanf. If you compile using sccz80, then it will endeavour to configure the converters automatically, however if you use zsdcc then you will need to configure the list of converters that are required.
 
+    #pragma printf = "<list printf converters here including l or ll for long and longlong>"
+    #pragma scanf  = "<list scanf converters here including l or ll for long and longlong>"
 
+Example:
 
+    #pragma printf = "%s %c %u %f"     // enables %s, %c, %u, %f only 
+    #pragma scanf  = "%s %lx %lld %["  // enables %s, %lx, %lld, %[ only
+
+The converter string content is flexible. You can insert spaces, do away with quotes, include % signs and so on. ”%s%c”, “s c”, ”%0d %llx” are all valid. Digits and flag specifiers (+, -, *) have no effect on the new c library but the classic c library will distinguish between ”%0d” and ”%d” with the latter meaning use the simple %d without any formatting.
 
 ### Pre configured parameters
-
- | **#pragma output nostreams** | No stdio disc files | 
- | ---------------------------- | ------------------- | 
- | **#pragma output nofileio**  | No fileio at all    | 
+ 
+| `#pragma output nostreams` | No stdio disc files | 
+| ---------------------------- | ------------------- | 
+| `#pragma output nofileio` | No fileio at all    | 
 
 ####  Other Target dependent parameters 
 
@@ -65,4 +75,3 @@ Generates the following output in zcc_opt.def
 
 
 *  [The ZCC command](/zcc)
-
