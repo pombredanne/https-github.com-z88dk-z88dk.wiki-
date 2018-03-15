@@ -1,13 +1,10 @@
- ====== The Stack Frame ======
-
 All the compiled procedural languages need a way to pass parameters to the functions.
 
-The z88dk parameter passing mechanism normally relies on the stack: local variables declared in a C program are allocated on the stack as a function is entered and are popped off the stack as functions are exited.
+The z88dk parameter passing mechanism normally relies on the stack: local variables declared in a C program are allocated on the stack as a function is entered and are popped off the stack as functions are exited. z88dk supports [multiple calling conventions](CallingConventions) so care should be taken when writing assembler that interfaces with C.
 
 Such parameters are dynamic (in that memory is allocated and deallocated from the stack as required) and transient (in that referring to their addresses has no meaning after the function terminates).
 
-z88dk makes no assumptions about registers that need to be preserved, however the target platform may. For example on the ZX Spectrum, the iy
-register should not be disturbed unless you are using your own interrupt manager and you don't call any ROM routines.
+sccz80 makes no assumptions about registers that need to be preserved, however the target platform may. For example on the ZX Spectrum, the iy register should not be disturbed unless you are using your own interrupt manager and you don't call any ROM routines.
 
 **Example**:  accessing local variables from assembler embedded in a C function.
 
@@ -43,12 +40,12 @@ A "long" parameter takes 4 bytes on the stack; the following example could be us
 
 ### Exceptions
 
-#### __FASTCALL__ qualifier
+#### `__z88dk_fastcall` qualifier
 
-z88dk's special __FASTCALL__ qualifier can be used if the C function has just one parameter.
+z88dk's special `__z88dk_fastcall` qualifier can be used if the C function has just one parameter.
 In that case, the parameter is passed in the HL register pair instead of being allocated on the stack.
 
-   int __FASTCALL__ myfunc(unsigned char *p)
+   int myfunc(unsigned char *p) __z88dk_fastcall __naked
    {
       #asm
       
@@ -88,15 +85,15 @@ At a machine level, different languages can be mixed as long as they use the sam
 
 The BDS C compiler, in example, uses a static frame, pointing to maximum 7 different parameters: in this case we need to provide a parameter conversion routine to make it work, which will pick the data from the stack and will put them in reverse order in pre-set positions:
 
-	XLIB	arghak
+	GLOBAL	arghak
 
-	XDEF	arg1
-	XDEF	arg2
-	XDEF	arg3
-	XDEF	arg4
-	XDEF	arg5
-	XDEF	arg6
-	XDEF	arg7
+	GLOBAL	arg1
+	GLOBAL	arg2
+	GLOBAL	arg3
+	GLOBAL	arg4
+	GLOBAL	arg5
+	GLOBAL	arg6
+	GLOBAL	arg7
 
 
     ;
@@ -104,7 +101,7 @@ The BDS C compiler, in example, uses a static frame, pointing to maximum 7 diffe
     ; and places them contiguously at the "args" ram area.
     ; This allows a library routine to make one call to arghak
     ; and henceforth have all it's args available directly
-    ; through lhld's instead of having to hack the stack as it
+    ; through ld hl,() instead of having to hack the stack as it
     ; grows and shrinks. Note that arghak should be called as the
     ; VERY FIRST THING a function does, before even pushing BC.
     ;
@@ -138,7 +135,6 @@ The BDS C compiler, in example, uses a static frame, pointing to maximum 7 diffe
 		defw	0
     arg7:
 		defw	0
-
 
 
 
