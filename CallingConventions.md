@@ -10,7 +10,7 @@ z88dk supports the following calling conventions:
 
 |  Decorator|Stack cleanup  | Description|
 |--|--|--|
-|__smallc  | Caller  | The default calling convention used by sccz80. The parameters are pushed onto the stack from left to right. A char is pushed onto the stack as word. Return values are in hl, or dehl.|
+|__smallc  | Caller  | The default calling convention used by sccz80. The parameters are pushed onto the stack from left to right. For sccz80, a char is pushed onto the stack as word. A bug in zsdcc means that chars are pushed as a single byte when accessing `__smallc` functions. Return values are in hl, or dehl. |
 |__stdc | Caller | The parameters are pushed in reverse order (from right to left). A char is pushed onto the stack as word. Return values are in hl or dehl.|
 |__z88dk_sdccdecl | Caller | The default convention for zsdcc. The parameters are pushed onto the stack from right to left. A char is pushed onto the stack as a single byte. Return values are held in l, hl, or dehl.|
 
@@ -38,4 +38,16 @@ With __z88dk_shortcall() only direct calls will use the rst trampoline, calling 
 |  Decorator|  Usage|
 |--|--|
 | __preserves_regs(r1,r2...) |Indicates to sdcc that the specified registers are preserved by the function. This information is used by sdcc to improve the quality of the code generated.| 
+
+### sccz80 library annotation
+
+By convention, library functions that are used by sccz80 are marked with `__LIB__` following
+the type, for example:
+
+    void __LIB__ mylibrary_function(int param);
+
+This means that sccz80 will call `mylibrary_function` and sdcc will call `_mylibrary_function`,
+these different entry points can be useful for adjusting calling convention (essential for
+vaargs functions).
+
 
