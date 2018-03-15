@@ -10,7 +10,7 @@ z88dk supports the following calling conventions:
 
 |  Decorator|Stack cleanup  | Description|
 |--|--|--|
-|__smallc  | Caller  | The default calling convention used by sccz80. The parameters are pushed onto the stack from left to right. For sccz80, a char is pushed onto the stack as word. A bug in zsdcc means that chars are pushed as a single byte when accessing `__smallc` functions. Return values are in hl, or dehl. |
+|__smallc  | Caller  | The default calling convention used by sccz80. The parameters are pushed onto the stack from left to right. For sccz80, a char is pushed onto the stack as word. **Note** A bug in zsdcc means that chars are pushed as a single byte when accessing `__smallc` functions. Return values are in hl, or dehl. |
 |__stdc | Caller | The parameters are pushed in reverse order (from right to left). A char is pushed onto the stack as word. Return values are in hl or dehl.|
 |__z88dk_sdccdecl | Caller | The default convention for zsdcc. The parameters are pushed onto the stack from right to left. A char is pushed onto the stack as a single byte. Return values are held in l, hl, or dehl.|
 
@@ -20,7 +20,7 @@ z88dk supports the following calling conventions:
 |--|--|
 |__z88dk_callee| The function being called (callee) is responsible for cleaning up the stack. |
 |__z88dk_fastcall | At most a single parameter is passed in dehl. For __smallc it will be the rightmost parameter. For __stdc and __z88dk_sdccdecl it will be the only parameter.|
-|_z88dk_saveframe|Valid for sccz80 generated code only. The sdcc framepointer (ix) will be saved on entry to the function. This is required if it is expected that this function will be called from sdcc compiled code and it uses either longs or floating point.
+|__z88dk_saveframe|Valid for sccz80 generated code only. The sdcc framepointer (ix) will be saved on entry to the function. This is required if it is expected that this function will be called from sdcc compiled code and it uses either longs or floating point.
 |__critical| The interrupt state is saved on entry to the function and restore on exit. |
 |__naked|Used for assembler functions to ensure that the function prologue and epilogue is not generated. |
 
