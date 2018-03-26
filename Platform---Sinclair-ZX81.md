@@ -201,11 +201,11 @@ This can be useful for recursive and in general stack demanding applications.
 
 Just add the following line in your C program:
 
-    #pragma output STACKPTR=49151
+    #pragma output REGISTER_SP=49151
 
 -- or use the equivalent option at compile time:
 
-    -pragma-define:STACKPTR=49151
+    -pragma-define:REGISTER_SP=49151
 
 
 The original SP value will be restored on exit.
@@ -253,6 +253,10 @@ The appmake tool can be run in "dumb" mode to generate the corresponding audio t
     
 The optional "--fast" flag will produce a non-standard audio track which, even if faster, should be still loadable by the real computer.
 
+## Disabling autorun
+
+Appmake generates .P files that autorun by default, specify `-Cz--disable-autorun` to prevent this behaviour.
+
 # Supported clones
 
 All the ZX81 clones are compatible to the z88dk generated code, including the Ringo R-470.
@@ -263,4 +267,3 @@ The "Lambda 8300" family can achieve the ZX81 compatibility with a ROM retrofit.
 # Links
 
 [Tutorial from the 'zx81.de' team](http://www.sinclairzxworld.com/viewtopic.php?f=6&t=1043)
-
