@@ -34,6 +34,12 @@ The '--audio' parameter adds the creation of a 'wav' file in addition to the 'ta
 
 Setting '-subtype=rom" will provide a very primitive skeleton for a ROM replacement program, be aware that most of the I/O z88dk functions simply won't work, you need to provide your own.
 
+# Graphics libraries
+
+Two graphics libraries are provided:
+
+    -lgfxace      64x48
+    -lgfxaceudg   64x72, currently limited to 64x71 due to a bug
 
 # Appmake extras
 
