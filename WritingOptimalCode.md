@@ -16,11 +16,11 @@ The sccz80 compiler does not perform any optimisation beyond (limited) constant 
 | add32 | No | Inline 32 bit addition| +4 (+3) | -39T (-44T/-6T) |
 | sub32 | No | Inline 32 bit subtraction | +10 (+3) | -39T (-26T/-10T) |
 | sub16 | No | Inline 16 bit subtraction (costs 1 byte) | +1 | -27T |
-| lshift32 | yes | Inline 32 bit left shits | - | - |
-| rshift32 | yes | Inline 32 bit right shits | - | - |
-| intcompare | no | Inline some 16 bit comparisons | - | - |
-| longcompare | no | Inline 32 bit equality | - | - |
-| inlineints | no | Inline getters and setters for 16 bit variables | get: +1, set +2 | -27T |
+| lshift32 | Yes | Inline 32 bit left shits | - | - |
+| rshift32 | Yes | Inline 32 bit right shits | - | - |
+| intcompare | No | Inline some 16 bit comparisons | - | - |
+| longcompare | No | Inline 32 bit equality | - | - |
+| inlineints | No | Inline getters and setters for 16 bit variables | get: +1, set +2 | -27T |
 
 ## Making code smaller
 
