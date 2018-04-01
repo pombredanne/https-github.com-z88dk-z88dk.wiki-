@@ -40,18 +40,6 @@ zsdcc enables `unsigned char` by default and signed char has to be enabled with 
 
 Switching on a char will generate smaller and faster code than switching on another datatype.
 
-## Constant ordering (sccz80)
-
-    int a;
-
-    a = 3 + a + 2;
-
-Will generate worse code than:
-
-    int   a;
-
-    a = a + 3 + 2;
-
 ## Operate with a constant value (sccz80)
 
 For the contrived example:
