@@ -8,10 +8,7 @@ This document is split into several sections, each of which adds an added degree
 
 The first thing to do is to create a crt0 file in the z88dk/lib directory, this file is used for startup and should initialise the stack, set the origin of the program, parse any command line arguments (if supported), call the main function and then release resources on program completion.
 
-There are a number of recommended starting places for these files, dependent on whether the application is ROM based or RAM based. If,
-
-   * The system is ROM based, base the startup file on lib/rex_crt0.asm
-   * The system is RAM based, base the startup file on lib/cpc_crt0.asm
+The simplest file to base your crt on is `test_crt0.asm`, this is used for the ticks test machine and is extremely lightweight.
 
 The name of the file should be something along the lines of [3/4 letter id]_crt0.asm. This 3/4 letter id should be the unique indentifier that will be used throughout the source tree (Yes, the Spectrum is different, but this was a mistake a long time ago!).
 
@@ -121,4 +118,3 @@ Once the above functions are available, the entire z88dk stdio library
 (including printf etc) is available for use, in addition to all the ctype,
 string, assert, setjmp, near malloc, some stdlib and the generic math
 routines - just a little work yields over 100 usable functions!
-
