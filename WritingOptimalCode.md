@@ -14,7 +14,7 @@ The sccz80 compiler does not perform any optimisation beyond (limited) constant 
 |-|-|-|-|-|
 | all | No | Enable all replacements that make code quicker, but larger |-| - |
 | add32 | No | Inline 32 bit addition| +4 (+3) | -39T (-44T/-6T) |
-| sub32 | No | Inline 32 bit subtraction | +10 (+3) | -39T (-26T/-10T |
+| sub32 | No | Inline 32 bit subtraction | +10 (+3) | -39T (-26T/-10T) |
 | sub16 | No | Inline 16 bit subtraction (costs 1 byte) | +1 | -27T |
 | lshift32 | yes | Inline 32 bit left shits | - | - |
 | rshift32 | yes | Inline 32 bit right shits | - | - |
