@@ -27,6 +27,7 @@
 * [Using CP/M libraries in REL format with z88dk](relformat)
   * [Linking external libraries](libraries)
   * [Linking Basic, Fortran, Pascal Programs with z88dk](programs)
+* [Writing optimal code](optimisation)
 
 ## Mixing C and Z80 Assembler
 
