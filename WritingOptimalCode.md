@@ -8,7 +8,7 @@ However, this degree of optimisation takes a considerable amount of time - it's 
 
 ## Making code faster without rewriting it
 
-The sccz80 compiler does not perform any optimisation beyond (limited) constant folding and dead path elimination. When generating code it attempts to achieve a practical balance between code speed and code size. Optionally you can enable all longer replacements on the command line using `--opt-code-speed`. For example to enable longer replacements for add32, sub32 then provide the compile option `--opt-code-speed=sub32,add32`
+The sccz80 compiler does not perform any optimisation beyond (limited) constant folding and dead path elimination. When generating code it attempts to achieve a practical balance between code speed and code size. Optionally you can enable all longer replacements on the command line using `--opt-code-speed`. For example, to enable longer replacements for add32, sub32 then provide the compile option `--opt-code-speed=sub32,add32`
 
 | Parameter | Default | Effect | +bytes | -T |
 |-|-|-|-|-|
