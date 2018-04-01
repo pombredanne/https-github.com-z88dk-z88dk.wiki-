@@ -64,6 +64,19 @@ will be faster if written:
        value <<= 16;
     }
 
+## Constant ordering (sccz80)		
+		
+    int a;		
+		
+    a = 3 - a + 2;		
+		
+Will generate worse code than:		
+		
+    int   a;		
+		
+    a = 3 + 2 -a;		
+
+
 ## Prefer pre- to post-increment/decrement (sccz80)
 
 The post-increment operator requires the compiler to decrement the value, not all cases of this can be eliminated, so in general prefer the pre-increment version.
@@ -92,4 +105,3 @@ The z88dk function libraries are mostly written in assembly code; this helps sav
 ## Split your libraries in modules
 
 The linker is able to link in code portions incrementally, adding them only when they are really used, no matter if they were invoked already by the "header file" declarations or by the assembly code equivalents.
-
