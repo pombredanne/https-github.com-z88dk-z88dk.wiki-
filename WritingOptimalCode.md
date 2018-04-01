@@ -76,11 +76,17 @@ will be faster if written:
        value <<= 16;
     }
 
+## Prefer pre- to post-increment/decrement (sccz80)
+
+The post-increment operator requires the compiler to decrement the value, not all cases of this can be eliminated, so in general prefer the pre-increment version.
 
 ## When possible use global variables (sccz80, zsdcc)
 
 Access to local variables is slightly slower and the generated code becomes slightly bigger.
 
+## Avoid inserting debugging code (sccz80)
+
+The options `--c-code-in-asm` and `-Cc--gcline` insert extra content into the output assembler. Although this can aid understanding the output, it will affect intra-statement redundant code elimination that is performed by the peephole stage.
 
 
 
