@@ -76,7 +76,20 @@ Access to local variables is slightly slower and the generated code becomes slig
 
 The options `--c-code-in-asm` and `-Cc--gcline` insert extra content into the output assembler. Although this can aid understanding the output, it will affect intra-statement redundant code elimination that is performed by the peephole stage.
 
+## Use the `__z88dk_fastcall` calling convention (sccz80, zsdcc)
 
+Functions that take a single parameter can be declared as fastcall. This can save the overhead of pushing the parameter
+for each function call. See [calling conventions](CallingConventions) for more details.
 
+## Use `__z88dk_callee` calling convention (sccz80, sdcc)
 
+Most of the z88dk library is usese the 'FASTCALL' or 'CALLEE' modes to save memory and execution time. See [calling conventions](CallingConventions) for more details.
+
+## Do not reinvent the wheel
+
+The z88dk function libraries are mostly written in assembly code; this helps saving a lot of memory and execution time; avoid using an equivalent C implementation of the existing functions, if any.
+
+## Split your libraries in modules
+
+The linker is able to link in code portions incrementally, adding them only when they are really used, no matter if they were invoked already by the "header file" declarations or by the assembly code equivalents.
 
