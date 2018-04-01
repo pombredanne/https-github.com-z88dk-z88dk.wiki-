@@ -28,6 +28,7 @@
   * [Linking external libraries](libraries)
   * [Linking Basic, Fortran, Pascal Programs with z88dk](programs)
 * [Writing optimal code](WritingOptimalCode)
+* [Calling Conventions](CallingConventions)
 
 ## Mixing C and Z80 Assembler
 
