@@ -105,6 +105,10 @@ The post-increment operator requires the compiler to decrement the value, not al
 
 Access to local variables is slightly slower and the generated code becomes slightly bigger.
 
+## Declare most frequently used variables last (sccz80)
+
+sccz80 can optimise access to variables near the top of the stack
+
 ## Avoid inserting debugging code (sccz80)
 
 The options `--c-code-in-asm` and `-Cc--gcline` insert extra content into the output assembler. Although this can aid understanding the output, it will affect intra-statement redundant code elimination that is performed by the peephole stage.
