@@ -22,6 +22,26 @@ The sccz80 compiler does not perform any optimisation beyond (limited) constant 
 | longcompare | No | Inline 32 bit equality | - | - |
 | inlineints | No | Inline getters and setters for 16 bit variables | get: +1, set +2 | -27T |
 
+### Sample results
+
+Sample program calculates an md5sum of a file, it uses long operations heavily. The following show the effect of various options on the result (Initial is from sccz80 on 5/9/2017)
+
+| Compile Flags | T states | File size |
+|-|-|-|
+| Initial:                               | 66043689      |  13668 |
+| -O0                                    | 54900286      |  14636 |
+| -O1                                    | 47816808      |  13819 |
+| -O2 --opt-code-speed=none              | 48234201      |  13662 |
+| -O2                                    | 47665817      |  13770 |
+| -O2 --opt-code-speed=inlineints        | 46089818      |  13696 |
+| -O2 --opt-code-speed=all               | 43878072      |  14547 |
+| -O2 --opt-code-speed=all -Cc-unsigned  | 43877824      |  14505 |
+| -O3                                    | 48541569      |  13654 |
+| -compiler=sdcc                         | 38017961      |  19581 |
+| -compiler=sdcc -SO3                    | 37560042      |  19233 |
+
+It's clear that there is a balance between size and speed to be made, for this particular application, `-O2 --opt-code-speed=inlineints` is probably the best compromise option when using sccz80
+
 ## Making code smaller
 
 If memory is really tight, then compiling with  -O3 will replace common code sequences with calls to functions that achieve the same thing. This can reduce the code size, but at the cost of decreased execution speed (as a result of the inserted call/ret).
