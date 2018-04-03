@@ -4,9 +4,6 @@
 * [Docker Usage](Docker-Usage)
 * [Licence](license)
 
-## Platforms
-
-
 ## Classic Library
 
 * [Overview](Classic-Overview)
