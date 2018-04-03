@@ -2,7 +2,7 @@ A full z80 disassembler is provided with z88dk. In addition to supporting the z8
 
 ## Usage
 
-At it's simplest:
+At its simplest:
 
     z88dk-dis -o [address] [binary file]
 
