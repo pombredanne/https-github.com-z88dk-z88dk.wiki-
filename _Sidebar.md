@@ -1,6 +1,7 @@
 ## Getting Started
 
 * [Installation](installation)
+* [Docker Usage](Docker-Usage)
 * [Licence](license)
 
 ## Platforms
