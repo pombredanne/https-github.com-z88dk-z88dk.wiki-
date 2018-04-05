@@ -1,10 +1,8 @@
 # Various Tools Included with z88dk
 
-
 ## Build and binary conversion tools
 
 See also the target section for platform specific tools.
-
 
 ### appmake
 
@@ -25,10 +23,14 @@ Usage:
 
 ## Library tools
 
+### z80nm object and library inspector
 
-### z80nm library inspector
+Tool to inspect the content of a z80asm object or library file. Run without arguments to see the usage information.
 
-Tool to inspect the content of a z80asm library.
+### zobjcopy object and library file copy
+
+(work in progress)
+Tool to allow names of sections and symbols to be changed in an object or library file.
 
 ### rel2z80 library converter
 
