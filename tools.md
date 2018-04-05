@@ -25,7 +25,11 @@ Usage:
 
 ### z80nm object and library inspector
 
-Tool to inspect the content of a z80asm object or library file. Run without arguments to see the usage information.
+Tool to inspect the content of a z80asm object or library file.
+
+Usage:
+
+    z80nm [-h][-a][-l][-e][-c] library
 
 ### zobjcopy object and library file copy
 
