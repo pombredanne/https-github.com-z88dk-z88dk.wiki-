@@ -1,4 +1,4 @@
-# zobjcopy
+# Object and Library File Manipulator
 
 # Usage
 
