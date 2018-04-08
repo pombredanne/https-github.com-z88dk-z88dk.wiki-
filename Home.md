@@ -46,7 +46,7 @@ This is a quick overview of the tools included in Z88DK.
 
 * **[Z80ASM](Tool-z80asm)** (not to be confused with several external projects called z80asm) is a fully featured assembler / linker / librarian implementing sections.
 
-* **Z80NM** is z80asm's companion library lister. It can provide a listing of functions or data encoded in an object or library file.
+* **[Z80NM](Tool-z80nm)** is z80asm's companion library dumper. It can provide a listing of functions or data encoded in an object or library file.
 
 * **[ZOBJCOPY](Tool-zobjcopy)** allows object and library files built by **[Z80ASM](Tool-z80asm)** to be manipulated.
 
