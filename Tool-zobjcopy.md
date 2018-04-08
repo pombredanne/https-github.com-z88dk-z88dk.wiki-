@@ -16,4 +16,4 @@ update to the current format.
   Only reads an input file and displays the contents, does not write an output file.
 
 * -v | --verbose  
-  Tell what is happening.
+  Tells what is happening.
