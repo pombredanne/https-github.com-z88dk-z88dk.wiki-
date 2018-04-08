@@ -14,8 +14,8 @@ update to the current format.
 
 # Options
 
-* -l|--list
+* -l | --list  
   Only reads an input file and displays the contents, does not write an output file.
 
-* -v|--verbose
+* -v | --verbose  
   Tell what is happening.
