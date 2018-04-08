@@ -39,6 +39,7 @@
 
 * [The Compiler Frontend (zcc)](Tool-zcc)
 * [The Assembler / Linker (z80asm)](Tool-z80asm)
+* [Object and Library file mainpulation (zobjcopy)](Tool-zobjcopy)
 * [copt](Tool---copt)
 * [ticks emulator](Tool---ticks)
 * [Disassembler](Tool-z88dk-dis)
