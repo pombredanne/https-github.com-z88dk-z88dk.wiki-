@@ -1,6 +1,4 @@
-# Name
-
-zobjcopy
+# zobjcopy
 
 # Usage
 
