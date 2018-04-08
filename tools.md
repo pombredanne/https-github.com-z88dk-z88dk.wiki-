@@ -23,19 +23,6 @@ Usage:
 
 ## Library tools
 
-### z80nm object and library inspector
-
-Tool to inspect the content of a z80asm object or library file.
-
-Usage:
-
-    z80nm [-h][-a][-l][-e][-c] library
-
-### zobjcopy object and library file copy
-
-(work in progress)
-Tool to allow names of sections and symbols to be changed in an object or library file.
-
 ### rel2z80 library converter
 
 Experimental tool to extract z80asm compatible binary blocks from a CP/M ".REL" library.
