@@ -27,7 +27,7 @@ A label is defined by prefixing a symbol with a dot (```.```) or suffixing it wi
 
 # Output files
 
-The object and library files produced by *z80asm* are documented in [z80asm Object File Format](Tool z80asm object file format).
+The object and library files produced by *z80asm* are documented in [z80asm Object File Format](Tool-z80asm-object-file-format).
 
 ## Copyright
 
