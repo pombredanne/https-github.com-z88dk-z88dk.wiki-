@@ -1,8 +1,7 @@
 z80asm File formats (v11)
 =========================
 
-This document describes the object and libary formats used by *z80asm*
-versions *2.6.x*. 
+This document describes the object and libary formats used by *z80asm*. 
 
 The object and library files are stored in binary form as a set of 
 contiguous objects, i.e. each section follows the previous one without 
