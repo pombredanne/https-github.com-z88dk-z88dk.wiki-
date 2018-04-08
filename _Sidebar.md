@@ -39,7 +39,7 @@
 
 * [The Compiler Frontend (*zcc*)](Tool-zcc)
 * [The Assembler / Linker (*z80asm*)](Tool-z80asm)
-* [Object and Library file manipulation (*zobjcopy*)](Tool-zobjcopy)
+* [Object and Library file Manipulator (*zobjcopy*)](Object-and-Library-file-Manipulator.md)
 * [*copt*](Tool---copt)
 * [*ticks* emulator](Tool---ticks)
 * [Disassembler](Tool-z88dk-dis)
