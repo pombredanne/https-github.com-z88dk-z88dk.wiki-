@@ -36,10 +36,6 @@ It has been maintained since 2011 by Paulo Custodio.
 Copyright (C) Gunther Strube, InterLogic 1993-99  
 Copyright (C) Paulo Custodio, 2011-2017
 
-## Repository
-
-The z80asm assembler is maintained in [z88dk GitHub](https://github.com/z88dk/z88dk/tree/master/src/z80asm) repository.
-
 ## License
 
 Artistic License 2.0 [http://www.perlfoundation.org/artisticlicense2_0](http://www.perlfoundation.org/artisticlicense2_0 "Artistic License 2.0")
