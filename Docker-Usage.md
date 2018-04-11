@@ -8,7 +8,7 @@ https://www.docker.com/what-docker
 
 ### System requirements
 
-* Docker for Windows runs on 64bit Windows 10 Pro, Enterprise and Education (1607 Anniversary Update, Build 14393 or later).
+* Docker for Windows runs on 64bit Windows 10 Pro, Enterprise and Education (1607 Anniversary Update, Build 14393 or later). Check the **Troubleshooting** section below.
 * Docker for Mac requires OS X El Capitan 10.11 or newer macOS release running on a 2010 or newer Mac, with Intel’s hardware support for MMU virtualization. The app runs on 10.10.3 Yosemite, but with limited support.
 * Docker for Ubuntu, Debian, CentOS or Redhat need the 64-bit version of the OS.
 
@@ -21,12 +21,26 @@ A: Dockerfile is a textfile containing all the commands, in order, needed to bui
 
 See installation instructions of docker: https://docs.docker.com/installation/
 
-## Build the image
+## Build a vanilla image
 
 Just get the file **z88dk.Dockerfile** from the GIT repository and build the docker image "_z88dk_":
 
 ```bash
-docker build -t z88dk - < z88dk.Dockerfile
+docker build -t z88dk -f z88dk.Dockerfile .
+```
+
+Note: an Internet connection is required because several packages and source code repositories need to be downloaded.
+
+## Build a customized image
+
+First get the files you want to modify from the [z88dk GIT](https://github.com/z88dk/z88dk) repository and edit them to suit your needs. Note the relative path where each of the files is located in the repository.
+
+Next  get the file **z88dk.Dockerfile** from the GIT repository and place it where the above edited files are located. Edit the lines in the **z88dk.Dockerfile** beginning with a COPY command with the appropriate information. Add or delete COPY command lines as needed.
+
+And finally build the docker image "_z88dk_":
+
+```bash
+docker build -t z88dk -f z88dk.Dockerfile .
 ```
 
 Note: an Internet connection is required because several packages and source code repositories need to be downloaded.
@@ -41,7 +55,7 @@ docker run -v ${PWD}:/src/ -it z88dk <command>
 
 where \<command\> is the command line to be executed in the Docker container.
 
-As it can be deduced, current directory (and its subfolders) contents are binded with read-write access to the Docker container /src/ directory.
+As it can be deduced, current directory (and its subfolders) contents are binded with read-write access to the Docker container `/src/` directory.
 
 Note: \<command\> is not tied to run z88dk executables only: it can run scripts or execute makefiles as long as they are supported by the Docker container. See the examples below...
 
@@ -79,8 +93,8 @@ docker run -v ${PWD}:/src/ -it z88dk ./build.sh
 
 ### Troubleshooting
 
-* If using Docker for Windows, **Windows PowerShell** shall be used to run Docker commands.
-* Because the provided directory (and its subdirectories) are jailed, you cannot access upper directories from ${PWD} inside the Docker container.
+* If using Docker for Windows, **Windows PowerShell** shall be used to run Docker commands. To escape special characters like "*@*" (at) or "*"*" (double-quotes), precede each of them with a "*`*" (grave-accent).
+* Because the provided directory (and its subdirectories) are jailed, you cannot access upper directories from `${PWD}` inside the Docker container.
 i.e., this will fail:
 ```bash
 cd ${z88dk}/examples/spectrum/
