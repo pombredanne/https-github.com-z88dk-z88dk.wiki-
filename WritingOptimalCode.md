@@ -129,3 +129,28 @@ The z88dk function libraries are mostly written in assembly code; this helps sav
 ## Split your libraries in modules
 
 The linker is able to link in code portions incrementally, adding them only when they are really used, no matter if they were invoked already by the "header file" declarations or by the assembly code equivalents.
+
+# Classic Library
+
+## Disable std*
+
+Disabling stdio can be useful when memory is tight. To disable it add the option `-pragma-define:CRT_ENABLE_STDIO=0`. Even when stdio is disabled you can still interact with the console with a few code substitutions:
+
+```
+printf() -> printk()
+getchar() -> fgetc_cons()
+putchar() -> fputc_cons()
+```
+
+## Switch to an alternate console driver
+
+Depending on the target, the console driver may be consuming a large proportion of program space. In particular, the `ansiterminal` is quite large. In general the option `-pragma-redirect:fputc_cons=fputc_cons_native` will select the native console driver which is usually the most compact. However, the native driver is usually dependent on the targets ROM and may not offer sufficient formatting controls for your program, as a compromise, if the generic console is available for your machine `-pragma-redirect:fputc_cons=fputc_cons_generic` will offer portable formatting controls and typically consume around 300 bytes.
+
+## Don't initialise BSS memory
+
+By default, the classic library will initialise BSS memory to 0 on startup. You can save 13 bytes by using option `-pragma-define:CRT_INITIALIZE_BSS=0`
+
+## Disable/reduce the atexit stack
+
+If your program never exits or you don't register atexit() functions then you can adjust the size of the atexit() stack using: `-pragma-define:CLIB_EXIT_STACK_SIZE=0` or any size that you choose.
+
