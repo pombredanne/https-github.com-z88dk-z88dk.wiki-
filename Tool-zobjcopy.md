@@ -30,7 +30,7 @@ Dump the contents of a library file:
 zobjcopy --list file.lib
 ```
 
-Rename all sections starting with "text" to "rom" and all starting with "data" to "ram"
+Rename all sections starting with "text" to "rom" and all starting with "data" to "ram", writing the output in file2.lib:
 ```
-zobjcopy file.lib --section ^text=rom --section ^data=ram test2.lib
+zobjcopy file.lib --section ^text=rom --section ^data=ram file2.lib
 ```
