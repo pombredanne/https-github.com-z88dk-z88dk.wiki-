@@ -2,7 +2,7 @@
 
 ### Usage
 
-    zobjopy [options] input [output]
+    zobjopy input [options] [output]
 
 ### Description
 
