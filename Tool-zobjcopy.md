@@ -40,3 +40,6 @@ zobjcopy file.lib --section ^text=rom --section ^data=ram file2.lib
 * rename symbols
 * change scope of symbols
 * options to define alignment filler; currently fixed to 0xFF
+* factor code into z80nm
+* factor code into z80asm
+
