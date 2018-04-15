@@ -39,4 +39,4 @@ zobjcopy file.lib --section ^text=rom --section ^data=ram file2.lib
 
 * rename symbols
 * change scope of symbols
-* options to define alignemnt filler; currently fixed to 0xFF
+* options to define alignment filler; currently fixed to 0xFF
