@@ -17,3 +17,10 @@ update to the current format.
 
 * -v | --verbose  
   Tells what is happening.
+
+* -s old-name-regex=new-name | --section old-name-regex=new-name  
+  Renames all sections that match the old name regex (standard POSIX) to the new name. Code sections are merged,  
+  if appropriate, fixing the patch addresses of expressions and label values accordingly.  
+  This option can be supplied multiple times in the command line.
+
+
