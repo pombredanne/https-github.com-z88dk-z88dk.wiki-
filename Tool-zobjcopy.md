@@ -34,3 +34,8 @@ Rename all sections starting with "text" to "rom" and all starting with "data" t
 ```
 zobjcopy file.lib --section ^text=rom --section ^data=ram file2.lib
 ```
+
+### TO-DO
+
+* rename symbols
+* change scope of symbols
