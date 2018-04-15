@@ -23,4 +23,14 @@ update to the current format.
   if appropriate, fixing the patch addresses of expressions and label values accordingly.  
   This option can be supplied multiple times in the command line.
 
+### Examples
 
+Dump the contents of a library file:
+```
+zobjcopy --list file.lib
+```
+
+Rename all sections starting with "text" to "rom" and all starting with "data" to "ram"
+```
+zobjcopy file.lib --section ^text=rom --section ^data=ram test2.lib
+```
