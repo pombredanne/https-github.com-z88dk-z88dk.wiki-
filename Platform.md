@@ -42,7 +42,7 @@
 [Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001)| 40x24| 40x24| No | 80x48, 320x192| No | 1 bit| Model variants: KC85/1, KC87| 
 [(Robotron) VEB Mikroelektronik HC-900, KC85/2..KC85/5](Platform---KC) | 40x24| No | No | 320x256 | No | No | Model variants: HC-900 KC85/2..KC85/5 | 
 [Sam Coupe](Platform---Sam-Coupe)| 32x24| [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | No | No | No | 1 bit| Sprite Pack. Music might play at a higher pitch due to CPU frequency. | 
-[Sega Master System](Platform---SMS) ||| | ||| |
+[Sega Master System](Platform---SMS) |32x24|| | ||| |
 [Sega SC-3000](Platform---Sega-SC3000) | 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | No | 256x192 | No | No | Most of GFXLIB by Rafael de Oliveira Jannone | 
 [Sharp PC-G8xx, PC-E2xx](Platform---Sharp-PC)| No | 24x4 (24x6)|  No | No | No | No | | 
 [Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| No | 80x50 | No | No | Many appmake extras| 
