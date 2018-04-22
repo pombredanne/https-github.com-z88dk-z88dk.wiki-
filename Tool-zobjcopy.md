@@ -36,7 +36,7 @@ actions in the sequence given in the command line.
   Makes all global symbols that match the regex local.
 
 * -G regex | --global regex  
-  Makes all global symbols that match the regex global.
+  Makes all local symbols that match the regex global.
 
 ### Examples
 
