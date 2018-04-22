@@ -47,7 +47,7 @@ zobjcopy --list file.lib
 
 Rename all sections starting with "text" to "rom" and all starting with "data" to "ram", writing the output in file2.lib:
 ```
-zobjcopy file.lib --section ^text=rom --section ^data=ram file2.lib  --verbose
+zobjcopy file.lib --section ^text=rom --section ^data=ram file2.lib --verbose
 ```
 
 Add a "lib_" prefix to all global symbols that start with "ff":
