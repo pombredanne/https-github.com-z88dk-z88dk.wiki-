@@ -23,7 +23,7 @@ update to the current format.
   if appropriate, fixing the patch addresses of expressions and label values accordingly.  
   This option can be supplied multiple times in the command line.
 
-* --add-prefix name-regex,prefix
+* --add-prefix name-regex,prefix  
   Renames all global symbols that match the given regex, adding the specified prefix. All expressions where the 
   renamed symbols are used are corrected accordingly.
 
