@@ -38,6 +38,10 @@ actions in the sequence given in the command line.
 * -G regex | --global regex  
   Makes all local symbols that match the regex global.
 
+* -F nn|0xhh |--filler nn|0xhh  
+  Change the filler byte to be used when merging sections to respect the ALIGN requirement. The default is 0xFF.  
+  The value can be supplied as decimal or hexadecimal with a '0x' prefix.
+
 ### Examples
 
 Dump the contents of a library file:
@@ -70,9 +74,13 @@ Make the "main" symbol global:
 zobjcopy file.lib --global '^main$' --verbose
 ```
 
+Merge all sections, use 0x00 as the alignment byte:
+```
+zobjcopy file.lib --filler 0x00 --section .=text --verbose
+```
+
 ### TO-DO
 
-* options to define alignment filler; currently fixed to 0xFF
 * change org and align of a section
 * factor code into z80nm
 * factor code into z80asm
