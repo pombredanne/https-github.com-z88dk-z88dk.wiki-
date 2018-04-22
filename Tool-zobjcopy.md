@@ -49,6 +49,7 @@ zobjcopy file.lib --add-prefix ^ff,lib_ file2.lib
 
 * change scope of symbols
 * options to define alignment filler; currently fixed to 0xFF
+* change org and align of a section
 * factor code into z80nm
 * factor code into z80asm
 
