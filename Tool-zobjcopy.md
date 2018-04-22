@@ -42,6 +42,12 @@ actions in the sequence given in the command line.
   Change the filler byte to be used when merging sections to respect the ALIGN requirement. The default is 0xFF.  
   The value can be supplied as decimal or hexadecimal with a '0x' prefix.
 
+* -O section,nn|0xhh |--org section,nn|0xhh  
+  Change the ORG of the given section.
+
+* -A section,nn|0xhh |--align section,nn|0xhh  
+  Change the ALIGN of the given section.
+
 ### Examples
 
 Dump the contents of a library file:
@@ -79,9 +85,13 @@ Merge all sections, use 0x00 as the alignment byte:
 zobjcopy file.lib --filler 0x00 --section .=text --verbose
 ```
 
+Change section "text" to ORG 0x8000 and ALIGN 16:
+```
+zobjcopy file.lib --org text,0x8000 --align text,16 --verbose
+```
+
 ### TO-DO
 
-* change org and align of a section
 * factor code into z80nm
 * factor code into z80asm
 
