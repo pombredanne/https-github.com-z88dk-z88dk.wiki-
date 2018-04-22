@@ -18,6 +18,15 @@ actions in the sequence given in the command line.
 * -l | --list  
   Only reads an input file and displays the contents, does not write an output file.
 
+* --hide-local  
+  In option --list, do not show local symbols.
+
+* --hide-expr  
+  In option --list, do not show expressions.
+
+* --hide-code  
+  In option --list, do not show code dump of sections.
+
 * -v | --verbose  
   Tells what is happening.
 
