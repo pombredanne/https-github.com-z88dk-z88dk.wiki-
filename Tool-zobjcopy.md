@@ -23,6 +23,10 @@ update to the current format.
   if appropriate, fixing the patch addresses of expressions and label values accordingly.  
   This option can be supplied multiple times in the command line.
 
+* --add-prefix name-regex,prefix
+  Renames all global symbols that match the given regex, adding the specified prefix. All expressions where the 
+  renamed symbols are used are corrected accordingly.
+
 ### Examples
 
 Dump the contents of a library file:
@@ -35,9 +39,14 @@ Rename all sections starting with "text" to "rom" and all starting with "data" t
 zobjcopy file.lib --section ^text=rom --section ^data=ram file2.lib
 ```
 
+Add a "lib_" prefix to all global symbols that start with "ff":
+```
+zobjcopy file.lib --add-prefix ^ff,lib_ file2.lib
+```
+
+
 ### TO-DO
 
-* rename symbols
 * change scope of symbols
 * options to define alignment filler; currently fixed to 0xFF
 * factor code into z80nm
