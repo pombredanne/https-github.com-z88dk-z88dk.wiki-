@@ -10,6 +10,9 @@
 where the input file can be in any of the current or older object file formats of *z80asm* and the output file is
 updated to the current format.
 
+Each option denotes one action to be done on the input file, and multiple options can be specified to execute multiple
+actions in the sequence given in the command line.
+
 ### Options
 
 * -l | --list  
@@ -20,8 +23,7 @@ updated to the current format.
 
 * -s old-name-regex=new-name | --section old-name-regex=new-name  
   Renames all sections that match the old name regex (standard POSIX) to the new name. Code sections are merged,
-  if appropriate, fixing the patch addresses of expressions and label values accordingly.  
-  This option can be supplied multiple times in the command line.
+  if appropriate, fixing the patch addresses of expressions and label values accordingly.
 
 * --add-prefix name-regex,prefix  
   Renames all global symbols that match the given regex, adding the specified prefix. All expressions where the
