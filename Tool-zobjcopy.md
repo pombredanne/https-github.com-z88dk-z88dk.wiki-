@@ -27,6 +27,9 @@ update to the current format.
   Renames all global symbols that match the given regex, adding the specified prefix. All expressions where the 
   renamed symbols are used are corrected accordingly.
 
+* -y old-name=new-name | --symbol old-name=new-name  
+  Renames a global or external symbol. All expressions where the renamed symbols is used are corrected accordingly.
+
 ### Examples
 
 Dump the contents of a library file:
@@ -36,14 +39,18 @@ zobjcopy --list file.lib
 
 Rename all sections starting with "text" to "rom" and all starting with "data" to "ram", writing the output in file2.lib:
 ```
-zobjcopy file.lib --section ^text=rom --section ^data=ram file2.lib
+zobjcopy file.lib --section ^text=rom --section ^data=ram file2.lib  --verbose
 ```
 
 Add a "lib_" prefix to all global symbols that start with "ff":
 ```
-zobjcopy file.lib --add-prefix ^ff,lib_ file2.lib
+zobjcopy file.lib --add-prefix ^ff,lib_ file2.lib --verbose
 ```
 
+Rename the global symbol "main" to "_main"
+```
+zobjcopy file.lib --symbol main=_main --verbose
+```
 
 ### TO-DO
 
