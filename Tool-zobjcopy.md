@@ -25,12 +25,18 @@ actions in the sequence given in the command line.
   Renames all sections that match the old name regex (standard POSIX) to the new name. Code sections are merged,
   if appropriate, fixing the patch addresses of expressions and label values accordingly.
 
-* --add-prefix name-regex,prefix  
+* -p name-regex,prefix | --add-prefix name-regex,prefix  
   Renames all global symbols that match the given regex, adding the specified prefix. All expressions where the
   renamed symbols are used are corrected accordingly.
 
 * -y old-name=new-name | --symbol old-name=new-name  
   Renames a global or external symbol. All expressions where the renamed symbols is used are corrected accordingly.
+
+* -L regex | --local regex  
+  Makes all global symbols that match the regex local.
+
+* -G regex | --global regex  
+  Makes all global symbols that match the regex global.
 
 ### Examples
 
@@ -54,9 +60,18 @@ Rename the global symbol "main" to "_main"
 zobjcopy file.lib --symbol main=_main --verbose
 ```
 
+Make the "main" symbol local:
+```
+zobjcopy file.lib --local '^main$' --verbose
+```
+
+Make the "main" symbol global:
+```
+zobjcopy file.lib --global '^main$' --verbose
+```
+
 ### TO-DO
 
-* change scope of symbols
 * options to define alignment filler; currently fixed to 0xFF
 * change org and align of a section
 * factor code into z80nm
