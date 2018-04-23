@@ -11,7 +11,7 @@
     zcc +mc1000 -clib=ansi -create-app -Cz--audio program.c
 
 
-This will genetrate three files, **a.bin** (a pure binary block), **a.cas** (an intermediate file), and **a.wav**, ready to be loaded on the real hardware.
+This will generate three files, **a.bin** (a pure binary block), **a.cas** (an intermediate file), and **a.wav**, ready to be loaded on the real hardware.
 
 The example above is meant to be loaded with the "LOAD" command.  The GAMING mode is supported too:
 
