@@ -27,7 +27,7 @@
 [Sorcerer Exidy](Platform---Sorcerer)| 64x30| No | No | 128x90| No | No | '--300bps' extra mode in appmake| 
 [Camputers Lynx](Platform---Camputers-Lynx)| Yes | No | No | No | No | No | Support is at an initial stage| 
 [MSX](Platform---MSX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 40x24 |  256x192| No | 1 bit +PSG | GFXLIB by Rafael de Oliveira Jannone| 
-[Memotech MTX](Platform---Memotech-MTX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| No | 256x192 | No | No | Most of GFXLIB by Rafael de Oliveira Jannone| 
+[Memotech MTX](Platform---Memotech-MTX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 40x24 | 256x192 | No | No | Most of GFXLIB by Rafael de Oliveira Jannone| 
 [MicroBee](Platform---Microbee)| Yes | 40x25, 80x25 | No | 640x275, 512x256, 320x275, 160x75 | No | 1 bit| Native console: 64x16 when in RUNM mode, 80x24 when used as an extension library to the CP/M base | 
 [Nascom](Platform---Nascom)| 48x16| 48x16| 48x16 | 96x48 | No | No | | 
 [Grundy Newbrain](Platform---Grundy-Newbrain)| Yes | No | No |  No* | No* | No | * could work on expanded systems in non-standard mode, via [stream functions](library/newbrain#streams) | 
