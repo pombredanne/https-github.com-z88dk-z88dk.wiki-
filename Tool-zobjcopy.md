@@ -101,6 +101,5 @@ zobjcopy file.lib --org text,0x8000 --align text,16 --verbose
 
 ### TO-DO
 
-* factor code into z80nm
 * factor code into z80asm
-
+* disassemble code sections
