@@ -29,14 +29,14 @@ Sample program calculates an md5sum of a file, it uses long operations heavily. 
 | Compile Flags | T states | File size |
 |-|-|-|
 | Initial:                               | 66043689      |  13668 |
-| -O0                                    | 54900286      |  14636 |
-| -O1                                    | 47816808      |  13819 |
-| -O2 --opt-code-speed=none              | 48234201      |  13662 |
-| -O2                                    | 47665817      |  13770 |
-| -O2 --opt-code-speed=inlineints        | 46089818      |  13696 |
-| -O2 --opt-code-speed=all               | 43878072      |  14547 |
-| -O2 --opt-code-speed=all -Cc-unsigned  | 43877824      |  14505 |
-| -O3                                    | 48541569      |  13654 |
+| -O0                                    | 54900142      |  14601 |
+| -O1                                    | 47600352      |  13586 |
+| -O2 --opt-code-speed=none              | 48017745      |  13429 |
+| -O2                                    | 47449367      |  13537 |
+| -O2 --opt-code-speed=inlineints        | 45873898      |  13460 |
+| -O2 --opt-code-speed=all               | 43662158      |  14311 |
+| -O2 --opt-code-speed=all -Cc-unsigned  | 43661908      |  14270 |
+| -O3                                    | 48324873      |  13423 |
 | -compiler=sdcc                         | 38017961      |  19581 |
 | -compiler=sdcc -SO3                    | 37560042      |  19233 |
 
@@ -153,4 +153,3 @@ By default, the classic library will initialise BSS memory to 0 on startup. You 
 ## Disable/reduce the atexit stack
 
 If your program never exits or you don't register atexit() functions then you can adjust the size of the atexit() stack using: `-pragma-define:CLIB_EXIT_STACK_SIZE=0` or any size that you choose.
-
