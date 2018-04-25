@@ -6,7 +6,7 @@ In it's simplest case, launch ticks with:
 
     ticks [binary file]
 
-It will run for a around 10,000,000 ticks which may not be sufficient, to increase the time it will run use the `-w` option:
+It will run for around 10,000,000 ticks which may not be sufficient, to increase the time it will run use the `-w` option:
 
     ticks -w X [binary file]
 
@@ -18,7 +18,9 @@ To specify command line options (which are picked up main in the `argc` and `arg
 
 ## CPU Features
 
-Ticks supports emulating the z80 (default), z180 (-mz180), ZX Next z80 extensions (-mz80-zxn) and Rabbit processors (-mr2k), reporting accurate timing information for each target. _Note:_ Not all Rabbit instructions may be emulated.
+Ticks supports emulating the z80 (default), z180 (-mz180), ZX Next z80 extensions (-mz80-zxn) and Rabbit processors (-mr2k), reporting accurate timing information for each target. _Note:_ Not all Rabbit instructions are emulated.
+
+When emulating the ZX Next cpu, ZX Next style MMU paging is available.
 
 ## Debugging
 
@@ -38,4 +40,4 @@ Will show the commonest hit addresses first of all.
 
 ## Stdio and File I/O
 
-Ticks provides a full stdio that will output to the console, along side this file I/O is supported as well.
+Ticks provides a full stdio that will output to the console, alongside this, file I/O is supported as well.
