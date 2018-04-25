@@ -13,7 +13,7 @@
 [CCE MC-1000](Platform---CCE-MC1000) | Yes | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver)| No | 256×192| No | 1 bit| | 
 [CP/M](Platform---CPM) | OS calls | If hardware supported| No | Target specific | Yes | No | | 
 [S-OS (The Sentinel)](Platform---SOS)| OS calls | No | No | No |  Yes | No | Multi platform OS published in a Japanese PC magazine | 
-[EACA EG2000](Platform--EACA-Colour-Genie-EG2000)| 40x24| No | No |  160x100 | No | 1 bit +PSG | Sound output via cassette port| 
+[EACA EG2000](Platform--EACA-Colour-Genie-EG2000)| 40x24| No | No |  160x96..102 | No | 1 bit +PSG | Sound output via cassette port| 
 [Epson PX-4/HC-40](Platform---Epson-PX4)| 40x8 | [30..80x8](Platform---Epson-PX4#the-vtansi-console-driver)| No | 240x64| No | No | | 
 [Epson PX-8/HC-80](Platform---Epson-PX8) | 80x8 | No | No | 480x64* | No | No | *GFX via CONOUT driver, no screen reading (POINT, XOR missing)| 
 [Tatung Einstein](Platform---Tatung-Einstein)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | No | 256x192 | Yes | No | Extension library to CP/M.Most of GFXLIB by Rafael de Oliveira Jannone| 
