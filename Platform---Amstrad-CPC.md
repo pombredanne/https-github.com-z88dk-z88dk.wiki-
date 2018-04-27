@@ -213,6 +213,8 @@ When using the WinAPE Amstrad CPC emulator, if runned code is 0xED, 0xFF then it
 
 # Links
 
+[No cart](https://www.genesis8bit.fr/archives/index.php?news_id=744)
+
 [Z88DK as described in CPCWIKI](http://www.cpcwiki.eu/index.php/Z88DK)
 
 [Short tutorial about using the z88dk on Linux (RPI) to create Amstrad applications](http://scruss.com/blog/2012/09/29/sometimes-things-do-not-go-exactly-as-planned-c-development-for-amstrad-cpc-on-raspberry-pi/)
