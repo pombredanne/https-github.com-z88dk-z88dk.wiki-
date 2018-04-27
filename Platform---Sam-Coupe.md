@@ -26,3 +26,5 @@ This emulator can load a file in ram (at address 32768) by pressing F1:
 You can use the *dskman* utility to save your files to a dsk-image which can be written out to a DD floppy and read by a real SAM Coupé.  
 
 # Links
+
+[Creating autoboot disk images](https://github.com/simonowen/pyz80)
