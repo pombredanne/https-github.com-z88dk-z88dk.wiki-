@@ -27,7 +27,7 @@ You can use the *dskman* utility to save your files to a dsk-image which can be 
 
 # Creating autoboot disk images
 
-[py80, useful for creating autoboot disk images](https://github.com/simonowen/pyz80)
+[pyz80 - a Z80 cross assembler](https://github.com/simonowen/pyz80)
 
 org &8000
 
