@@ -200,45 +200,23 @@ Direct access to both Kempston and AMX mouse hardware is defined in the `<spectr
 
 ### The standard ZX Spectrum console driver
 
-The new screen driver is still fairly minimal but it does feature 64 column text and 32 column text (switchable) and can be easily extended.
-
-Here are the byte sequences for it:
+The ZX console driver extends the [Generic Console](Classic-GenericConsole) and adds the following codes:
 
 ```
 1,64	  - Switch to 64 column mode
 1,32	  - Switch to 32 column mode
 2,hh,ll   - Set the address of the 32 column font. ll is low byte, hh = high
 	    byte. By default this points to the ROM font at 15616
-3,hh,ll   - Set the address for the UDGs by default this points to
-	    65368
-4,x       - Disable (0) or enable (1) vertical scrolling
-
-8,9,11    - Move in x and y as you would expect
-12	  - Form feed - clears the screen and moves print posn to 0,0
-10	  - Carriage return - advances y and sets x to 0
-13        - Moves down a row
-
-16,x	  - Set the ink colour  (x = 48-55 ('0'-'7'))
-17,x	  - Set the paper colour (x = 48-55 ('0'-'7'))
 18,x	  - Turn flash on/off (x=49/48 ('1'/'0')
 19,x	  - Turn on/off bright 
-20,x      - Turn on/off inverse (x=49/48 ('1'/'0')
-
-22,y,x	  - Move to position y,x on the screen (0<=y<=23, 0<=x<=63)
-	    NB. y and x are displaced by 32 eg to move the print position
-	    to (0,0) use 22,32,32. 32 column mode also uses 64 column
-	    coordinates.
 ```
 
-All the commands, except for the udg address/font address  can be embedded 
+All the commands, except for the font address can be embedded 
 in strings using either octal or hexadecimal representation. Address changes
 can be sent either using fputc() or using printf with the address as
 parameters.
 
-Characters greater than 127 are interpreted as udgs. These are always
-printed using the 32 column mode. This gives a potential of 128 udgs
-though obviously, it's possible to swap between banks in the middle of
-printing a string.
+Characters greater than 127 are interpreted as udgs in 32 column mode.
 
 The screen scrolls when line 24 is "hit", the routine used is in the
 48k ROM.
