@@ -63,6 +63,6 @@
 [Xircom Rex 6000](Platform---Xircom-REX6000) | No | No | No | No | No | No | Graham Cobb's stdio library was due to be integrated into z88dk v1.6. The Rex supplies has its own library mostly divergent from the standard z88dk library | 
 [ZX80](Platform---Sinclair-ZX80) | 32x24| 32x24 (TXT)| 32x24 - default| 64x48[+graylib](library/graylib)| No | as for ZX81| Good compatibility with ZX81, tricks to try keeping the display stable| 
 [ZX81](Platform---Sinclair-ZX81) | 32x24| 32x24 (TXT), [24..85x24](Platform---Sinclair-ZX81#the-vtansi-console-driver) (HRG) | 32x24 -default | 64x48, 64x72, +HRG modes [+graylib](library/graylib)| No | 1 bit + PSG| Sprite Pack, 1bit sound blanks the screen | 
-[ZX Spectrum](Platform---Sinclair-ZX-Spectrum) | [32x24 and 64x24](Platform---Sinclair-ZX-Spectrum#the-standard-zx-spectrum-console-driver) | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | 32x24 and 64x24* | 256x192 | Yes | 1 bit + PSG| Sprite Pack. Native file IO available for +3 and Microdrive; BASIC driver supports many other disc types. | 
+[ZX Spectrum](Platform---Sinclair-ZX-Spectrum) | [32x24 and 64x24](Platform---Sinclair-ZX-Spectrum#the-standard-zx-spectrum-console-driver) | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | 32x24 and 64x24 | 256x192 | Yes | 1 bit + PSG| Sprite Pack. Native file IO available for +3 and Microdrive; BASIC driver supports many other disc types. | 
 ZXVGS| -| No | - | - | Yes | -| Not entirely integrated since we're not sure how to classify it!| 
 
