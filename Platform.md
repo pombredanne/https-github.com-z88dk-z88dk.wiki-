@@ -48,7 +48,7 @@
 [Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| No | 80x50 | No | No | Many appmake extras| 
 [Sharp OZ](Platform---Sharp-OZ700) | Yes | No | No | 239x80| No | No | Experimental| 
 [Sharp X1](Platform---Sharp-X1)| No | 40(80)x25| No | No | No | PSG only | | 
-[SORD M5](Platform---Sord-M5)| 32x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| No | No | No | No | | 
+[SORD M5](Platform---Sord-M5)| 32x24| No | No | No | No | No | | 
 [Spectravideo SVI](Platform---Spectravideo)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 40x24 | 256x192 | No | 1 bit +PSG | Most of GFXLIB by Rafael de Oliveira Jannone| 
 [Sprinter](Platform---Peters-Plus-Sprinter)| 80x35 | 80x35 (Colour)| 80x35 -default | No | Yes | No | Experimental port. Developed under the SPRINT emulator| 
 [TI82](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 96x64[+graylib](library/graylib)| No | 1 bit| Grey graphics run on the VTI emulator but problems have been reported with the real hardware| 
