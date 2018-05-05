@@ -36,7 +36,7 @@
 [PC-6001](Platform---NEC-PC6001) | 32x16| 32x16 (*)|  No | 128x192 (*) | No | PSG only | (*) Not in MKII mode| 
 [Philips P2000](Platform---Philips-P2000)| 40x24| Monochrome 40x24 | No | 78×72 | No | 1 bit| | 
 [Philips C7420](Platform---Philips-C7420)| 39x20| No | No | Not Yet | No | No | | 
-[Philips VG-5000](Platform----Philips-VG5000)| 40x24| 40x24| No | 80×72 | No | 1 bit| | 
+[Philips VG-5000](Platform----Philips-VG5000)| 40x24| 40x24| 40x24 | 80×72 | No | 1 bit| | 
 [Rabbit Control Module](Platform---Rabbit) ||| | || |  |
 [Robotron Z1013](Platform---Robotron-Z1013)| 32x32| 32x32| 32x32 - default|  64x64 | No | No | | 
 [Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001)| 40x24| 40x24| No | 80x48, 320x192| No | 1 bit| Model variants: KC85/1, KC87| 
@@ -48,7 +48,7 @@
 [Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| No | 80x50 | No | No | Many appmake extras| 
 [Sharp OZ](Platform---Sharp-OZ700) | Yes | No | No | 239x80| No | No | Experimental| 
 [Sharp X1](Platform---Sharp-X1)| No | 40(80)x25| No | No | No | PSG only | | 
-[SORD M5](Platform---Sord-M5)| 32x24| No | No | No | No | No | | 
+[SORD M5](Platform---Sord-M5)| 32x24| No | 32x24 | No | No | No | | 
 [Spectravideo SVI](Platform---Spectravideo)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 40x24 | 256x192 | No | 1 bit +PSG | Most of GFXLIB by Rafael de Oliveira Jannone| 
 [Sprinter](Platform---Peters-Plus-Sprinter)| 80x35 | 80x35 (Colour)| 80x35 -default | No | Yes | No | Experimental port. Developed under the SPRINT emulator| 
 [TI82](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 96x64[+graylib](library/graylib)| No | 1 bit| Grey graphics run on the VTI emulator but problems have been reported with the real hardware| 
