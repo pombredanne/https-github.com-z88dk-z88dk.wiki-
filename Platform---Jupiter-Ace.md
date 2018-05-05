@@ -115,4 +115,4 @@ http://www.jupiter-ace.co.uk/ace32.html
 
 z88dk provides multiple console implementations for the Jupiter Ace - the ANSI/vt100 driver, the VT52/ZX Code driver and a native handler if memory space is particularly tight.
 
-For all versions, redefining the font is possible using the -pragma-redirect:CRT_FONT= command line option. For available fonts see the appropriate section for the [ZX Spectrum](Platform---ZX-Spectrum)
+For all versions, redefining the font is possible using the -pragma-redirect:CRT_FONT= command line option. For available fonts see the appropriate section for the [ZX Spectrum](Platform---Sinclair-ZX-Spectrum).
