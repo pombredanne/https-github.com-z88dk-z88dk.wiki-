@@ -29,7 +29,7 @@
 [MSX](Platform---MSX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 40x24 |  256x192| No | 1 bit +PSG | GFXLIB by Rafael de Oliveira Jannone| 
 [Memotech MTX](Platform---Memotech-MTX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 40x24 | 256x192 | No | No | Most of GFXLIB by Rafael de Oliveira Jannone| 
 [MicroBee](Platform---Microbee)| Yes | 40x25, 80x25 | No | 640x275, 512x256, 320x275, 160x75 | No | 1 bit| Native console: 64x16 when in RUNM mode, 80x24 when used as an extension library to the CP/M base | 
-[Nascom](Platform---Nascom)| 48x16| 48x16| 48x16 | 96x48 | No | No | | 
+[Nascom](Platform---Nascom)| 48x16| 48x16| 48x16 - default| 96x48 | No | No | | 
 [Grundy Newbrain](Platform---Grundy-Newbrain)| Yes | No | No |  No* | No* | No | * could work on expanded systems in non-standard mode, via [stream functions](library/newbrain#streams) | 
 [v6z80p (OSCA)](Platform---OSCA) | 40x24| 40x24| No | 320x200 | Yes | No | 2 different file access libraries | 
 [Pac Man HW](Platform---Pacman)| 28x36| No | No |  56x72 | No | No lib | | 
@@ -63,6 +63,6 @@
 [Xircom Rex 6000](Platform---Xircom-REX6000) | No | No | No | No | No | No | Graham Cobb's stdio library was due to be integrated into z88dk v1.6. The Rex supplies has its own library mostly divergent from the standard z88dk library | 
 [ZX80](Platform---Sinclair-ZX80) | 32x24| 32x24 (TXT)| 32x24 - default| 64x48[+graylib](library/graylib)| No | as for ZX81| Good compatibility with ZX81, tricks to try keeping the display stable| 
 [ZX81](Platform---Sinclair-ZX81) | 32x24| 32x24 (TXT), [24..85x24](Platform---Sinclair-ZX81#the-vtansi-console-driver) (HRG) | 32x24 -default | 64x48, 64x72, +HRG modes [+graylib](library/graylib)| No | 1 bit + PSG| Sprite Pack, 1bit sound blanks the screen | 
-[ZX Spectrum](Platform---Sinclair-ZX-Spectrum) | [32x24 and 64x24](Platform---Sinclair-ZX-Spectrum#the-standard-zx-spectrum-console-driver) | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | 32x24 and 64x24 | 256x192 | Yes | 1 bit + PSG| Sprite Pack. Native file IO available for +3 and Microdrive; BASIC driver supports many other disc types. | 
+[ZX Spectrum](Platform---Sinclair-ZX-Spectrum) | [32x24 and 64x24](Platform---Sinclair-ZX-Spectrum#the-standard-zx-spectrum-console-driver) | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | 32x24 and 64x24 - default| 256x192 | Yes | 1 bit + PSG| Sprite Pack. Native file IO available for +3 and Microdrive; BASIC driver supports many other disc types. | 
 ZXVGS| -| No | - | - | Yes | -| Not entirely integrated since we're not sure how to classify it!| 
 
