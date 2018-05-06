@@ -2,7 +2,7 @@
  |---|---|---|---|---|---|---|---|
 [ABC80](Platform---Luxor-ABC80) | Yes | 40x24 | No | 78x72 | No | No | 
 [ABC800](Platform---Luxor-ABC800)| Yes | No |No | No | No | No | 
-[Amstrad CPC](Platform---Amstrad-CPC)| Yes | Yes | No | 640x200[+graylib](library/graylib)| Yes | No | 
+[Amstrad CPC](Platform---Amstrad-CPC)| Yes | Yes | Yes | 640x200[+graylib](library/graylib)| Yes | No | 
 [Amstrad NC100/NC150](Platform---Amstrad-NC) | Yes | No | No | 480x64| No | No | | 
 [Amstrad NC200](Platform---Amstrad-NC) | Yes | No | No | 480x128 | No | No | | 
 [Mattel Aquarius](Platform---Mattel-Aquarius)| Yes | 40x24| 40x24 | 80x72 | No | 1 bit +PSG | | 
