@@ -1,10 +1,10 @@
 The classic library supports multiple target machines and each target may have its own idiosyncratic method of controlling print position and other limitations such as reserving areas of the screen for status lines etc
 
-To simplify cross-platform porting, classic provides a VT100/ANSI emulation library that understands standard control sequences that will also work on Linux, Mac, or even Windows consoles. For the highest degree of portability using the ANSI driver is recommended.
+To simplify cross-platform porting, classic provides a ANSI/VT100 emulation library that understands standard control sequences that will also work on Linux, Mac, or even Windows consoles. For the highest degree of portability using the ANSI driver is recommended.
 
-In general, the ANSI driver will prefer using a graphics mode which may well be slow, additionally the ANSI driver is a large chunk of code, adding into the project may well increase the size of your project by around 2-3K.
+In general, the ANSI driver will prefer using a graphics mode which may well be slow, additionally the ANSI/VT100 driver is a large chunk of code, adding into the project may well increase the size of your project by around 2-3K.
 
-As a smaller (around 400 bytes) alternative, the classic library provides a generic console driver which allows classic applications to use the same control codes across targets without the overhead of the ANSI library.
+As a smaller (around 400 bytes) alternative, the classic library provides a generic console driver which allows classic applications to use the same control codes across targets without the overhead of the ANSI/VT100 library.
 
 For certain platforms where native print positioning is not trivially available (for example trs80, Sprinter, Nascom, Z1013), it is enabled by default providing richer functionality than was previously available.
 
@@ -54,3 +54,23 @@ The generic console additional supports VT52 control codes, the following are su
 ```
 
 Both sets of control codes are active, if memory is extremely tight then one or the other set can be disabled and the library rebuilt - this will save around 40-60 bytes
+
+## Defining a custom font
+
+On those targets that support either bitmapped graphics or redefining the character set, a custom font can be specified in one of two ways.
+
+At compile time the option `-pragma-redirect:CRT_FONT=...` can be used, the available fonts are shown below:
+
+![](images/platform/fonts/font1.png)
+![](images/platform/fonts/font2.png)
+![](images/platform/fonts/font3.png)
+
+Alternatively, this can be done at compile time using `console_ioctl(IOCTL_GENCON_SET_FONT32, &addr)` where addr is a font reference from `<font/font.h>
+
+## Defining UDGs
+
+Characters > 128 are treated as UDGs on platforms that support them. The number available depends on the platform, but at present is either 128 or 32 (Jupiter Ace, Exidy). The address for these can be set programmatically using: `console_ioctl(IOCTL_GENCON_SET_UDGS, &addr)`
+
+## Setting the screen mode
+
+Some of the platforms support alternate screen modes, these can be switched to using: `console_ioctl(IOCTL_GENCON_SET_MODE, &mode)`. At present this functionality is available to the CPC (Modes 0,1,2) and MC-1000 (Mode 0 = text, Mode 1 = graphics)
