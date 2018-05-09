@@ -12,11 +12,11 @@ A low resolution version of the game can also be obtained by using the standard 
 
 # Quick start (JSorcerer)
 
-   zcc +srr world.c -create-app
+    zcc +srr world.c -create-app
 
 Click the tape icon and select the .srr file. The program can then be loaded with the following command (UPPERCASE):
 
-   LOADG
+    LOADG
 
 # Quick start (MESS)
 
