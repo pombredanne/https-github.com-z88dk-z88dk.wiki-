@@ -24,7 +24,7 @@
 [Lambda 8300](Platform---Lambda) | 32x24 (B&W)| 32x24 (TXT)| No | 64x48 |  No | 1 bit* | (via tape output) | 
 [Osborne 1](Platform---Osborne)| 52x24 (*) | No | No | 104x48| No | No | Extension library to the CP/M base (* an official HW mod permitted higher resolutions)| 
 [Otrona Attachè](Platform---Otrona) | 80x25 (ADM3) | No | No |  320X240 | No | No | Extension library to the CP/M base| 
-[Sorcerer Exidy](Platform---Sorcerer)| 64x30| No | No | 128x90| No | No | '--300bps' extra mode in appmake| 
+[Sorcerer Exidy](Platform---Sorcerer)| 64x30| No | 60x30 | 128x90| No | No | '--300bps' extra mode in appmake| 
 [Camputers Lynx](Platform---Camputers-Lynx)| Yes | No | No | No | No | No | Support is at an initial stage| 
 [MSX](Platform---MSX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 40x24 |  256x192| No | 1 bit +PSG | GFXLIB by Rafael de Oliveira Jannone| 
 [Memotech MTX](Platform---Memotech-MTX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 40x24 | 256x192 | No | No | Most of GFXLIB by Rafael de Oliveira Jannone| 
