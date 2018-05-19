@@ -45,7 +45,7 @@
 [Sega Master System](Platform---SMS) |32x24|| | || PSG (+ 1 bit) | |
 [Sega SC-3000](Platform---Sega-SC3000) | 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | No | 256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone | 
 [Sharp PC-G8xx, PC-E2xx](Platform---Sharp-PC)| No | 24x4 (24x6)|  No | No | No | No | | 
-[Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| 40x25 | 80x50 | No | PSG (+ 1 bit)  | Many appmake extras, Most of GFXLIB by Rafael de Oliveira Jannone| 
+[Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| 40x25 | 80x50 | No | PSG (+ 1 bit)  | Many appmake extras | 
 [Sharp OZ](Platform---Sharp-OZ700) | Yes | No | No | 239x80| No | No | Experimental| 
 [Sharp X1](Platform---Sharp-X1)| No | 40(80)x25| No | No | No | PSG only | | 
 [SORD M5](Platform---Sord-M5)| 32x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 32x24 | 256x192 | No | PSG (+ 1 bit) | Most of GFXLIB by Rafael de Oliveira Jannone | 
