@@ -1,6 +1,6 @@
 ## Compilation
 
-   zcc +pv1000 world.c -create-app
+    zcc +pv1000 world.c -create-app
 
 The resulting .rom file can then be loaded into the emulator.
 
