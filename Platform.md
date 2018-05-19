@@ -27,7 +27,7 @@
 [Sorcerer Exidy](Platform---Sorcerer)| 64x30| No | 60x30 | 128x90| No | No | '--300bps' extra mode in appmake| 
 [Camputers Lynx](Platform---Camputers-Lynx)| Yes | No | No | No | No | No | Support is at an initial stage| 
 [MSX](Platform---MSX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 40x24 |  256x192| No | 1 bit +PSG | GFXLIB by Rafael de Oliveira Jannone| 
-[Memotech MTX](Platform---Memotech-MTX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 40x24 | 256x192 | No | No | Most of GFXLIB by Rafael de Oliveira Jannone| 
+[Memotech MTX](Platform---Memotech-MTX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 40x24 | 256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone| 
 [MicroBee](Platform---Microbee)| Yes | 40x25, 80x25 | No | 640x275, 512x256, 320x275, 160x75 | No | 1 bit| Native console: 64x16 when in RUNM mode, 80x24 when used as an extension library to the CP/M base | 
 [Nascom](Platform---Nascom)| 48x16| 48x16| 48x16 - default| 96x48 | No | No | | 
 [Grundy Newbrain](Platform---Grundy-Newbrain)| Yes | No | No |  No* | No* | No | * could work on expanded systems in non-standard mode, via [stream functions](library/newbrain#streams) | 
@@ -42,13 +42,13 @@
 [Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001)| 40x24| 40x24| No | 80x48, 320x192| No | 1 bit| Model variants: KC85/1, KC87| 
 [(Robotron) VEB Mikroelektronik HC-900, KC85/2..KC85/5](Platform---KC) | 40x24| No | No | 320x256 | No | No | Model variants: HC-900 KC85/2..KC85/5 | 
 [Sam Coupe](Platform---Sam-Coupe)| 32x24| [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | No | No | No | 1 bit| Sprite Pack. Music might play at a higher pitch due to CPU frequency. | 
-[Sega Master System](Platform---SMS) |32x24|| | ||| |
-[Sega SC-3000](Platform---Sega-SC3000) | 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | No | 256x192 | No | No | Most of GFXLIB by Rafael de Oliveira Jannone | 
+[Sega Master System](Platform---SMS) |32x24|| | || PSG (+ 1 bit) | |
+[Sega SC-3000](Platform---Sega-SC3000) | 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | No | 256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone | 
 [Sharp PC-G8xx, PC-E2xx](Platform---Sharp-PC)| No | 24x4 (24x6)|  No | No | No | No | | 
 [Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| 40x25 | 80x50 | No | No | Many appmake extras| 
 [Sharp OZ](Platform---Sharp-OZ700) | Yes | No | No | 239x80| No | No | Experimental| 
 [Sharp X1](Platform---Sharp-X1)| No | 40(80)x25| No | No | No | PSG only | | 
-[SORD M5](Platform---Sord-M5)| 32x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 32x24 | 256x192 | No | No | | 
+[SORD M5](Platform---Sord-M5)| 32x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 32x24 | 256x192 | No | PSG (+ 1 bit) | | 
 [Spectravideo SVI](Platform---Spectravideo)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 40x24 | 256x192 | No | 1 bit +PSG | Most of GFXLIB by Rafael de Oliveira Jannone| 
 [Sprinter](Platform---Peters-Plus-Sprinter)| 80x35 | 80x35 (Colour)| 80x35 -default | No | Yes | No | Experimental port. Developed under the SPRINT emulator| 
 [TI82](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 96x64[+graylib](library/graylib)| No | 1 bit| Grey graphics run on the VTI emulator but problems have been reported with the real hardware| 
