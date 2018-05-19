@@ -9,7 +9,7 @@ The resulting .rom file can then be loaded into the emulator.
 The PV1000 port has the following features:
 
 * VT52 console
-* joystick() from games.h
+* joystick() from `<games.h>`. Controller 0 is joystick 1, Controller 1 is joystick 2
 
 ## Tileset configuration
 
