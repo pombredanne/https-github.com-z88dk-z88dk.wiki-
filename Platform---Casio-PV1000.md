@@ -4,6 +4,13 @@
 
 The resulting .rom file can then be loaded into the emulator.
 
+## Features
+
+The PV1000 port has the following features:
+
+* VT52 console
+* joystick() from games.h
+
 ## Tileset configuration
 
 The PV-1000 has no ROM and hence all tiles need to be supplied in the user's ROM. The format used defines the RGB value for each of the pixels, as such each 8x8 tile will consume 32 bytes within the ROM. A maximum of 224 tiles can be configured in the ROM.
