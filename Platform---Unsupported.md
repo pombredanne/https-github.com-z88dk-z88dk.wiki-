@@ -84,9 +84,8 @@ Already supported as a CP/M system but deserving specific extras (high resolutio
 
 ##### PV-2000
 
-AKA RakuGaki in JP
+AKA RakuGaki in JP.  VDP + SN soundchip so similar to MSX hardware. Being currently brought up in issue #754
 
-Already supported as CP/M and S/OS but deserving specific extras
 
 
 
@@ -760,8 +759,6 @@ Being ROM based the gaming consoles need a slightly different software architect
 
 #### Bally family
 
-#### Casio PV-1000
-
 #### Coleco ColecoVision
 
 of the same family:
@@ -776,6 +773,8 @@ of the same family:
 #### Sega
 
 ##### SG-1000
+
+VDP, SN soundchip, should be similar to the in progress PV-2000 and MSX ports.
 
 ##### Game Gear
 
