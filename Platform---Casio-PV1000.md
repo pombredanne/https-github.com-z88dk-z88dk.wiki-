@@ -10,6 +10,7 @@ The PV1000 port has the following features:
 
 * VT52 console
 * joystick() from `<games.h>`. Controller 0 is joystick 1, Controller 1 is joystick 2
+* Lores graphics
 
 ## Tileset configuration
 
@@ -18,6 +19,8 @@ The PV-1000 has no ROM and hence all tiles need to be supplied in the user's ROM
 By default, a z88dk ROM builds with the following character set (starting at code 0xa and ending at 0x7f):
 
 ![PV1000 character set](images/platform/pv1000_charset.png)
+
+Byte codes 0x10 - 0x1f are used to implement lores graphics.
 
 The colour information is embedded within the tileset, so changing the colours requires rebuilding the tileset, for this purpose the font2pv1000 is provided:
 
