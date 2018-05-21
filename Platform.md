@@ -8,7 +8,7 @@
 [Mattel Aquarius](Platform---Mattel-Aquarius)| Yes | 40x24| 40x24 | 80x72 | No | 1 bit +PSG | | 
 [Knight 2000 (Aussie Byte)](Platform---Aussie) | Yes | 80x25| No | not yet | No | 1 bit| Untested and incomplete graphics lib| 
 [Canon X-07](Platform---Canon-X07) | Yes | No | No | No | No | No | Initial stage | 
-[Casio PV-1000](Platform---Casio-PV1000) | No | No | 28x24 | No | No | No |
+[Casio PV-1000](Platform---Casio-PV1000) | No | No | 28x24 | 56x48 | No | No |
 [Cambridge Z88](Platform---Cambridge-Z88)| Yes | Yes | No | 256x64| Yes | 1 bit| Far memory support, ZSock + many other features | 
 [Commodore 128 (z80)](Platform--Commodore-c128)| No | 40x25| No | 80x50, 640x200, 640x480 | CP/M only | SID + PSG + 1 bit| [Steve Goldsmith tools](library/c128/sgtools) are supported | 
 [CCE MC-1000](Platform---CCE-MC1000) | Yes | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver)| No | 256×192| No | 1 bit| | 
