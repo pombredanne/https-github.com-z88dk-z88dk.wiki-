@@ -45,7 +45,7 @@
 [(Robotron) VEB Mikroelektronik HC-900, KC85/2..KC85/5](Platform---KC) | 40x24| No | No | 320x256 | No | No | Model variants: HC-900 KC85/2..KC85/5 | 
 [Sam Coupe](Platform---Sam-Coupe)| 32x24| [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | No | No | No | 1 bit| Sprite Pack. Music might play at a higher pitch due to CPU frequency. | 
 [Sega Master System](Platform---SMS) |32x24|| | || PSG (+ 1 bit) | |
-[Sega SC-3000](Platform---Sega-SC3000) | 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | No | 256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone | 
+[Sega SC-3000/Sega SG-1000](Platform---Sega-SC3000) | 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 40x24 | 256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone | 
 [Sharp PC-G8xx, PC-E2xx](Platform---Sharp-PC)| No | 24x4 (24x6)|  No | No | No | No | | 
 [Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| 40x25 | 80x50 | No | PSG (+ 1 bit)  | Many appmake extras | 
 [Sharp OZ](Platform---Sharp-OZ700) | Yes | No | No | 239x80| No | No | Experimental| 
