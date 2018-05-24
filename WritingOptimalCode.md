@@ -101,7 +101,7 @@ Will generate worse code than:
 
 The post-increment operator requires the compiler to decrement the value, not all cases of this can be eliminated, so in general prefer the pre-increment version.
 
-## When possible use global variables (sccz80, zsdcc)
+## When possible use global variables (sccz80)
 
 Access to local variables is slightly slower and the generated code becomes slightly bigger.
 
@@ -144,7 +144,7 @@ putchar() -> fputc_cons()
 
 ## Switch to an alternate console driver
 
-Depending on the target, the console driver may be consuming a large proportion of program space. In particular, the `ansiterminal` is quite large. In general the option `-pragma-redirect:fputc_cons=fputc_cons_native` will select the native console driver which is usually the most compact. However, the native driver is usually dependent on the targets ROM and may not offer sufficient formatting controls for your program, as a compromise, if the generic console is available for your machine `-pragma-redirect:fputc_cons=fputc_cons_generic` will offer portable formatting controls and typically consume around 300 bytes.
+Depending on the target, the console driver may be consuming a large proportion of program space. In particular, the `ansiterminal` is quite large. In general the option `-pragma-redirect:fputc_cons=fputc_cons_native` will select the native console driver which is usually the most compact. However, the native driver is usually dependent on the targets ROM and may not offer sufficient formatting controls for your program, as a compromise, if the generic console is available for your machine `-pragma-redirect:fputc_cons=fputc_cons_generic` will offer portable formatting controls and typically consume around 3-400 bytes.
 
 ## Don't initialise BSS memory
 
