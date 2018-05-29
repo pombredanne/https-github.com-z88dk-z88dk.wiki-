@@ -55,7 +55,7 @@ The generic console additional supports VT52 control codes, the following are su
 
 Both sets of control codes are active, if memory is extremely tight then one or the other set can be disabled and the library rebuilt - this will save around 40-60 bytes
 
-## Colour mapping
+## Colour mapping
 
 By default, an attempt is made to map any colours to a standard range, this can be disabled (and the targets native colours will be used) with the compile time option `-pragma-define:CLIB_CONIO_NATIVE_COLOUR=1`
 
