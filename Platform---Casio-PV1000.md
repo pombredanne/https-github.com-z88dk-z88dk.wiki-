@@ -12,6 +12,9 @@ The PV1000 port has the following features:
 * joystick() from `<games.h>`. Controller 0 is joystick 1, Controller 1 is joystick 2
 * Lores graphics
 
+
+![PV1000 Lores Graphics](images/platform/pv1000_lores.png)
+
 ## Tileset configuration
 
 The PV-1000 has no ROM and hence all tiles need to be supplied in the user's ROM. The format used defines the RGB value for each of the pixels, as such each 8x8 tile will consume 32 bytes within the ROM. A maximum of 224 tiles can be configured in the ROM.
