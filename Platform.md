@@ -41,7 +41,7 @@
 [Philips VG-5000](Platform----Philips-VG5000)| 40x24| 40x24| 40x24 | 80×72 | No | 1 bit| | 
 [Rabbit Control Module](Platform---Rabbit) ||| | || |  |
 [Robotron Z1013](Platform---Robotron-Z1013)| 32x32| 32x32| 32x32 - default|  64x64 | No | No | | 
-[Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001)| 40x24| 40x24| No | 80x48, 320x192| No | 1 bit| Model variants: KC85/1, KC87| 
+[Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001)| 40x24| 40x24| 40x24 | 80x48, 320x192| No | 1 bit| Model variants: KC85/1, KC87| 
 [(Robotron) VEB Mikroelektronik HC-900, KC85/2..KC85/5](Platform---KC) | 40x24| No | No | 320x256 | No | No | Model variants: HC-900 KC85/2..KC85/5 | 
 [Sam Coupe](Platform---Sam-Coupe)| 32x24| [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | No | No | No | 1 bit| Sprite Pack. Music might play at a higher pitch due to CPU frequency. | 
 [Sega Master System](Platform---SMS) |32x24|| | || PSG (+ 1 bit) | |
