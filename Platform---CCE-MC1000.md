@@ -25,9 +25,10 @@ The example above is meant to be loaded with the "LOAD" command.  The GAMING mod
 The last versions of the MESS emulator are quite valid, but the tape loading timing seems to be slighty different.
 To save some time loading on MESS, add the "-Cz--fast" flag to the compiler command line.
 
+The converted emulator can load the .bin file. To run enter `call 992`
 
 # External Links
 
 [MC-1000 related Wiki site](http://mc-1000.wikispaces.com/)
-
+[Conversion of the BrMC1000 emulator](https://github.com/suborb/MC1000Emulator)
 
