@@ -19,7 +19,6 @@ The example above is meant to be loaded with the "LOAD" command.  The GAMING mod
     zcc +mc1000 -subtype=gaming -create-app -Cz--audio program.c
 
 
-
 # Emulator notes
 
 The last versions of the MESS emulator are quite valid, but the tape loading timing seems to be slighty different.
@@ -27,8 +26,27 @@ To save some time loading on MESS, add the "-Cz--fast" flag to the compiler comm
 
 The converted emulator can load the .bin file. To run enter `call 992`
 
+# Generic console
+
+The generic console supports both hires (256x192) and text (32x16) modes. In hires mode you should compile with a CRT_FONT option or garbage will be printed on screen. Upto 128 UDGs are supported. 
+
+To switch to hires mode:
+
+    int mode = 1;
+    console_ioctl(IOCTL_GENCON_SET_MODE, &mode);
+
+To return to text mode (green/yellow):
+
+    int mode = 0;
+    console_ioctl(IOCTL_GENCON_SET_MODE, &mode);
+
+or text mode in red/white:
+
+    int mode = 2;
+    console_ioctl(IOCTL_GENCON_SET_MODE, &mode);
+
+
 # External Links
 
-[MC-1000 related Wiki site](http://mc-1000.wikispaces.com/)
-[Conversion of the BrMC1000 emulator](https://github.com/suborb/MC1000Emulator)
-
+* [Conversion of the BrMC1000 emulator](https://github.com/suborb/MC1000Emulator)
+* [MC-1000 technical documentation](http://files.datassette.org/manuais/manual_referenciamc1000.pdf)
