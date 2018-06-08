@@ -12,7 +12,7 @@
 [Casio PV-2000](Platform---Casio-PV2000) | No | No | 32x24 | 256x192 | No | No |
 [Cambridge Z88](Platform---Cambridge-Z88)| Yes | Yes | No | 256x64| Yes | 1 bit| Far memory support, ZSock + many other features | 
 [Commodore 128 (z80)](Platform--Commodore-c128)| No | 40x25| No | 80x50, 640x200, 640x480 | CP/M only | SID + PSG + 1 bit| [Steve Goldsmith tools](library/c128/sgtools) are supported | 
-[CCE MC-1000](Platform---CCE-MC1000) | Yes | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver)| No | 256×192| No | 1 bit| | 
+[CCE MC-1000](Platform---CCE-MC1000) | Yes | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver)| 32x24 (hires)/32x16 | 256×192| No | 1 bit| | 
 [CP/M](Platform---CPM) | OS calls | If hardware supported| No | Target specific | Yes | No | | 
 [S-OS (The Sentinel)](Platform---SOS)| OS calls | No | No | No |  Yes | No | Multi platform OS published in a Japanese PC magazine | 
 [EACA EG2000](Platform--EACA-Colour-Genie-EG2000)| 40x24| No | 40x24 - default |  160x96..102 | No | 1 bit +PSG | Sound output via cassette port| 
