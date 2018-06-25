@@ -1,3 +1,11 @@
+# Hardware summary
+
+* Z80 @ 3.579Mhz
+* 3k RAM, 0k ROM
+* VDP: D65010G031 (not supported)
+* Audio: On ports 0xf8, 0xf9, 0xfa - D65010G031
+* Joysticks: 2x on 0xfd
+
 ## Compilation
 
     zcc +pv1000 world.c -create-app
@@ -37,7 +45,7 @@ The colour information is embedded within the tileset, so changing the colours r
 
 To replicate the default font the command line would be:
 
-   font2pv1000 -f 6 -b 0 -c 32 {z88dk}/libsrc/_DEVELOPMENT/font/font_8x8/font_8x8_cpc_system.bin > tileset.asm
+    font2pv1000 -f 6 -b 0 -c 32 {z88dk}/libsrc/_DEVELOPMENT/font/font_8x8/font_8x8_cpc_system.bin > tileset.asm
 
 If you then supply the option `-pragma-define:PV1000_CUSTOM_TILESET=1` to the compilation line your tileset will be included. Note that characters 0x0a - 0x1f cannot be changed using this method.
 
