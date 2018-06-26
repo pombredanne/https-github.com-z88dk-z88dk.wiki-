@@ -34,7 +34,6 @@ The default console for the Exidy is the [Generic Console](Classic-GenericConsol
 
 * Characters 32 - 127 = Standard Exidy font
 * Characters 128 - 255 = Custom UDGS or
-* Characters 128 - 159 = Custom UDGS and 160 - 255 = Custom Font or
 * Characters 128 - 143 = Custom UDGS, 144 - 159 = Block graphics, 160 - 255 = Custom Font
 
 The block graphics will be automatically defined should your program use the graphics plotting routines.
