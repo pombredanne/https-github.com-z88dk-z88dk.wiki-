@@ -43,6 +43,10 @@ The classic library additionally provides [named heap](Classic-allocation) and [
 
 # Input Library
 
+Some targets support the input library, this provides mechanisms to query input devices such as mice and the keyboard without utilising the firmware routines. The keyboard routines `in_LookupKey` and `in_Keypressed` handle multiple keys being pressed concurrently and as such are ideal for portable games programming.
+
+On ports where it is available, you can switch stdin to non-firmware reading routines using the option `-pragma-redirect:fgetc_cons=fgetc_cons_stdin`
+
 # Debug Library
 
 # Graphics Libraries
@@ -91,5 +95,4 @@ The library provides ready-to-use [abstract data types](Classic-adt) that implem
 # Emulation Libraries
 
 The classic library provides both [MS-DOS](Classic-conio) emulation and Turbo C BGI Emulation to assist the porting of software.
-
 
