@@ -28,7 +28,16 @@ The program can then be loaded by the 'monitor' with the following command (UPPE
 
     LOADG
 
+# Console and graphics
 
+The default console for the Exidy is the [Generic Console](Classic-GenericConsole), this is integrated in with the low resolution graphics library. As a result the character code space is split up as follows:
+
+* Characters 32 - 127 = Standard Exidy font
+* Characters 128 - 255 = Custom UDGS or
+* Characters 128 - 159 = Custom UDGS and 160 - 255 = Custom Font or
+* Characters 128 - 143 = Custom UDGS, 144 - 159 = Block graphics, 160 - 255 = Custom Font
+
+The block graphics will be automatically defined should your program use the graphics plotting routines.
 
 # Appmake extras
 
@@ -40,4 +49,3 @@ Note that in the sorcerer case the binary 'format' is probably not used by diffe
 The optional "--300bps" flag will make a 300 baud audio track compatible with the Kansas City Standard, (monitor command SE T=1).
 
 "-Cz--fast" slightly speeds up the wav stream varying the tones in a non-standard way.
-
