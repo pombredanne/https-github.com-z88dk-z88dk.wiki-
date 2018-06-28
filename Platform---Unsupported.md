@@ -82,13 +82,6 @@ Already supported as a CP/M system but deserving specific extras (high resolutio
 
 ##### FX-9000P
 
-##### PV-2000
-
-AKA RakuGaki in JP.  VDP + SN soundchip so similar to MSX hardware. Being currently brought up in issue #754
-
-
-
-
 ### Coleco Adam
 
 ### Compucorp 600 Series
@@ -197,7 +190,7 @@ High rez vector graphics engine (μPD7220).
 [The Visual 1050 at old-computers.com](http://www.old-computers.com/museum/computer.asp?st=1&c=842)
 
 
-##### Amstrad 6128
+##### Amstrad 6128+
 
 [Amstrad models and emulator drivers overview](http://www.seasip.demon.co.uk/Cpm/gsxint.html)
 
