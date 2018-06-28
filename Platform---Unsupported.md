@@ -761,6 +761,8 @@ Being ROM based the gaming consoles need a slightly different software architect
 
 #### Coleco ColecoVision
 
+The Colecovision is supported
+
 of the same family:
     Chuang Zao Zhe (50, Dina, Professional Arcade)
     Spectravideo SVI 603 - Coleco game adapter
@@ -771,10 +773,6 @@ of the same family:
 #### Nichibutsu My Vision
 
 #### Sega
-
-##### SG-1000
-
-VDP, SN soundchip, should be similar to the in progress PV-2000 and MSX ports.
 
 ##### Game Gear
 
