@@ -18,6 +18,10 @@ Change the location of the stack pointer. By default the classic library will us
 
 The default for the maximum heap address (for AMALLOC) on most platforms will be the sp register. For platforms with a fragmented RAM model this may not appropriate and will need changing. The classic library should be setup with sensible defaults however.
 
+`-pragma-define:CLIB_BALLOC_TABLE_SIZE=xx`
+
+Configures the size of the block allocator queue.
+
 `-pragma-define:CRT_MODEL=1`
 
 Applicable for ROM compiles only. The data section is copied from ROM into RAM on program start.
@@ -42,6 +46,10 @@ The classic library keeps a stack of function pointers registered with `atexit()
 stdio is enabled by default for all targets. Enabling stdio reserves some memory for the file descriptors (stdout, stdin etc) and also utilises some memory to close all open files when the program exits. If you don't use stdio then this is a waste of memory.
 
 NB. If the only part of stdio that you use is printf(), then you can utilise printk() which will avoid the stdio memory overhead. There are similar functions that bypass stdin for reading keypresses
+
+`-pragma-define:CLIB_FOPEN_MAX=xx`
+
+Changes the number of FILE structures that are allocated. The default value is 10, for systems without a storage driver this can be reduced to 3 with no ill effects.
 
 ## Generic console (VT52) behaviour
 
