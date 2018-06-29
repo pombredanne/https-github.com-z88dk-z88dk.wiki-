@@ -8,6 +8,7 @@
 
 * [Overview](Classic-Overview)
 * [Platform List](Platform)
+* [Unsupported Platforms](Platform---Unsupported)
 * [Memory Allocation](Classic-allocation)
 * [Retargetting](Classic--Retargetting)
 * [Building the libraries](libsrc)
