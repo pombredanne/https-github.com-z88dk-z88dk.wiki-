@@ -286,11 +286,6 @@ Made in 1978, 7K RAM
 
 
 
-### Mitsubishi Electric MULTI 8
-
-Already supported as a CP/M system but deserving specific extras 
-
-
 ### Micronique Victor / Hector
 
 Two series were made, tbe "Victor II" had more memory and better graphics.
