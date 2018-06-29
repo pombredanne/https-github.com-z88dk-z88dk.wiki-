@@ -35,6 +35,7 @@ And then load that file as usual.
 
 # Limitations
 
+* Graphics mode hasn't been implemented
 * Only coloured text mode is supported by the console
 
 # Links
