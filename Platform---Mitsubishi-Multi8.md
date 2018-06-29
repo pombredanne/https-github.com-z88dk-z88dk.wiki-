@@ -15,9 +15,26 @@ The resulting .cas file can be loaded into an emulator by entering the following
     R
     GC000
 
+The default compile target is limited to about 10k. To be able to write a larger program we need to switch the machine into all ram mode and then load our program. The following is a non-automated way to do it:
+
+    cd z88dk/support/multi8
+    zcc +multi8 bootstrap.c -create-app -o bootstrap
+
+This will create our bootstrap loader.
+
+You can then compile your program with the `-subtype=64k` option:
+
+    zcc +multi8 adv_a.c -subtype=64k -create-app -o adv_a
+
+You can then concatenate the two files together:
+
+    cat bootstrap.cas adv_a.cas > adventure.cas
+
+And then load that file as usual.
+
+
 # Limitations
 
-* Despite having 64k of RAM, z88dk compiles are limited to ~10k due to the memory map
 * Only coloured text mode is supported by the console
 
 # Links
