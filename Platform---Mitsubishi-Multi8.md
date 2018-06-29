@@ -32,11 +32,17 @@ You can then concatenate the two files together:
 
 And then load that file as usual.
 
+# Generic console modes
+
+* Mode 0 = 40 column text
+* Mode 1 = 80 column text
+* Mode 2 = 80 column graphics mode
+
+Scrolling in mode 2 is particularly slow - we have to move 48kb of data to scroll one line.
 
 # Limitations
 
 * Graphics mode hasn't been implemented
-* Only coloured text mode is supported by the console
 
 # Links
 
