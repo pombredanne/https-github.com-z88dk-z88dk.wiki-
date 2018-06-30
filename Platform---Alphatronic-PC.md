@@ -16,7 +16,7 @@ The resulting .rom file can be loaded into mame and run as follows:
 
 Running the VT52/generic console test program:
 
-![](images/platform/alphatro_ansivt.gif)
+![](images/platform/alphatro_ansivt.png)
 
 
 # Limitations
