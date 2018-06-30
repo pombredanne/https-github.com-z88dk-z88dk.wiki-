@@ -23,7 +23,6 @@ Running the VT52/generic console test program:
 
 * The cursor is always displayed in the top left hand corner
 * Although the machine has 64k RAM, only 16k cartridges can be generated until we can create disc images
-* Graphics mode hasn't been implemented
 
 # Links
 
