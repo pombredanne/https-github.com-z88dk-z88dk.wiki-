@@ -2,6 +2,7 @@
  |---|---|---|---|---|---|---|---|
 [ABC80](Platform---Luxor-ABC80) | Yes | 40x24 | 40x24 | 78x72 | No | No | 
 [ABC800](Platform---Luxor-ABC800)| Yes | No |No | No | No | No | Untested |
+[Alphatronic PC](Platform---Alphatronic-PC)| No | No | 40x25 | No | No | No |
 [Amstrad CPC](Platform---Amstrad-CPC)| Yes | Yes | Yes | 640x200[+graylib](library/graylib)| Yes | No | CPCRSlib partially imported (no tiles) |
 [Amstrad NC100/NC150](Platform---Amstrad-NC) | Yes | No | No | 480x64| No | No | | 
 [Amstrad NC200](Platform---Amstrad-NC) | Yes | No | No | 480x128 | No | No | | 
