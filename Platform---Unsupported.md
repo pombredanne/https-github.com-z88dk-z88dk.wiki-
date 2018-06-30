@@ -545,12 +545,6 @@ Already supported as CP/M and S-OS systems but deserving specific extras.
 
 
 
-### Triumph Adler
-
-
-##### Alphatronic PC
-
-Emulated by MESS
 
 ### Video Technology
 
