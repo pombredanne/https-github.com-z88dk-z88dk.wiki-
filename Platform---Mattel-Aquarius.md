@@ -13,6 +13,13 @@ The binary converter (appmake) will create two files: _adventure.caq and adventu
 The first one is the BASIC loader, and the second one is the binary block.
 They should be loaded in sequence; type **CLOAD**, play the first file, then type **RUN** and play the second one.
 
+# Building ROM images
+
+z88dk supports building 8k ROM images for the Aquarius:
+
+    zcc +aquarius world.c -subtype=rom -create-app
+
+The ROM file can then be inserted using the emulator. Depending on the emulator, you may need to reset the machine following insertion.
 
 # Emulator notes
 
