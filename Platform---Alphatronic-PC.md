@@ -26,5 +26,6 @@ Running the VT52/generic console test program:
 # Links
 
 * [Manual](http://www.retroarchive.org/hardware/Royal/royal_alphatronic_manual.pdf) - appendices have tech details
+* [More technical details](http://81.105.120.101/alphatronic/)
 * [Mame Driver](https://github.com/mamedev/mame/blob/master/src/mame/drivers/alphatro.cpp)
 * [Thread on bannister.org](https://forums.bannister.org/ubbthreads.php?ubb=showflat&Number=75540&page=1)
