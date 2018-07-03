@@ -1,7 +1,7 @@
 # Hardware summary
 
 * Z80 @ 4 Mhz
-* 64k RAM, 24k ROM 
+* 64k RAM, 32k ROM 
 * MC6847
 * AY-3-8192
 
