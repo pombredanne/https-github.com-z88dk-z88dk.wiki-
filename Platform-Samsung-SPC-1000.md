@@ -31,3 +31,4 @@ The generic console supports both text mode (32x16) eand hires graphics (32x24).
 
 # Links
 
+* [Technical Docs](https://github.com/meesokim/spc1000/tree/master/docs)
