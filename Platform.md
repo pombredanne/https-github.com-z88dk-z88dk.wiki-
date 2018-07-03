@@ -2,7 +2,7 @@
  |---|---|---|---|---|---|---|---|
 [ABC80](Platform---Luxor-ABC80) | Yes | 40x24 | 40x24 | 78x72 | No | No | 
 [ABC800](Platform---Luxor-ABC800)| Yes | No |No | No | No | No | Untested |
-[Alphatronic PC](Platform---Alphatronic-PC)| No | No | 40x24 | 80x72 | No | No |
+[Alphatronic PC](Platform---Alphatronic-PC)| No | No | 40x24 | 80x72 | No | PSG |
 [Amstrad CPC](Platform---Amstrad-CPC)| Yes | Yes | Yes | 640x200[+graylib](library/graylib)| Yes | No | CPCRSlib partially imported (no tiles) |
 [Amstrad NC100/NC150](Platform---Amstrad-NC) | Yes | No | No | 480x64| No | No | | 
 [Amstrad NC200](Platform---Amstrad-NC) | Yes | No | No | 480x128 | No | No | | 
@@ -10,9 +10,9 @@
 [Knight 2000 (Aussie Byte)](Platform---Aussie) | Yes | 80x25| No | not yet | No | 1 bit| Untested and incomplete graphics lib| 
 [Canon X-07](Platform---Canon-X07) | Yes | No | No | No | No | No | Initial stage | 
 [Casio PV-1000](Platform---Casio-PV1000) | No | No | 28x24 | 56x48 | No | No |
-[Casio PV-2000](Platform---Casio-PV2000) | No | No | 32x24 | 256x192 | No | No |
+[Casio PV-2000](Platform---Casio-PV2000) | No | No | 32x24 | 256x192 | No | PSG |
 [Cambridge Z88](Platform---Cambridge-Z88)| Yes | Yes | No | 256x64| Yes | 1 bit| Far memory support, ZSock + many other features | 
-[Colecovision](Platform--Colecovision)| No | No | 32x24 | 256x192 | No | No |
+[Colecovision](Platform--Colecovision)| No | No | 32x24 | 256x192 | No | PSG |
 [Commodore 128 (z80)](Platform--Commodore-c128)| No | 40x25| No | 80x50, 640x200, 640x480 | CP/M only | SID + PSG + 1 bit| [Steve Goldsmith tools](library/c128/sgtools) are supported | 
 [CCE MC-1000](Platform---CCE-MC1000) | Yes | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver)| 32x24 (hires)/32x16 | 256×192| No | 1 bit| | 
 [CP/M](Platform---CPM) | OS calls | If hardware supported| No | Target specific | Yes | No | | 
@@ -28,12 +28,11 @@
 [Lambda 8300](Platform---Lambda) | 32x24 (B&W)| 32x24 (TXT)| No | 64x48 |  No | 1 bit* | (via tape output) | 
 [Osborne 1](Platform---Osborne)| 52x24 (*) | No | No | 104x48| No | No | Extension library to the CP/M base (* an official HW mod permitted higher resolutions)| 
 [Otrona Attachè](Platform---Otrona) | 80x25 (ADM3) | No | No |  320X240 | No | No | Extension library to the CP/M base| 
-[Exidy Sorcerer](Platform---Sorcerer)| 64x30| No | 64x30 | 128x60| No | No | '--300bps' extra mode in appmake| 
 [Camputers Lynx](Platform---Camputers-Lynx)| Yes | No | No | No | No | No | Support is at an initial stage| 
 [MSX](Platform---MSX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 32x24 |  256x192| No | 1 bit +PSG | GFXLIB by Rafael de Oliveira Jannone| 
 [Memotech MTX](Platform---Memotech-MTX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 32x24 | 256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone| 
 [MicroBee](Platform---Microbee)| Yes | 40x25, 80x25 | No | 640x275, 512x256, 320x275, 160x75 | No | 1 bit| Native console: 64x16 when in RUNM mode, 80x24 when used as an extension library to the CP/M base | 
-[Mitsubishi Multi8](Platform---Mitsubishi-Multi8)| Yes | No | 40x25 | No | No | No |
+[Mitsubishi Multi8](Platform---Mitsubishi-Multi8)| Yes | No | 40x25 | No | PSG | No |
 [Nascom](Platform---Nascom)| 48x16| 48x16| 48x16 - default| 96x48 | No | No | | 
 [Grundy Newbrain](Platform---Grundy-Newbrain)| Yes | No | No |  No* | No* | No | * could work on expanded systems in non-standard mode, via [stream functions](library/newbrain#streams) | 
 [v6z80p (OSCA)](Platform---OSCA) | 40x24| 40x24| No | 320x200 | Yes | No | 2 different file access libraries | 
@@ -53,6 +52,7 @@
 [Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| 40x25 | 80x50 | No | PSG (+ 1 bit)  | Many appmake extras | 
 [Sharp OZ](Platform---Sharp-OZ700) | Yes | No | No | 239x80| No | No | Experimental| 
 [Sharp X1](Platform---Sharp-X1)| No | 40(80)x25| No | No | No | PSG only | | 
+[Exidy Sorcerer](Platform---Sorcerer)| 64x30| No | 64x30 | 128x60| No | No | '--300bps' extra mode in appmake| 
 [SORD M5](Platform---Sord-M5)| 32x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 32x24 | 256x192 | No | PSG (+ 1 bit) | Most of GFXLIB by Rafael de Oliveira Jannone | 
 [Spectravideo SVI](Platform---Spectravideo)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 32x24 | 256x192 | No | 1 bit +PSG | GFXLIB by Rafael de Oliveira Jannone| 
 [Sprinter](Platform---Peters-Plus-Sprinter)| 80x35 | 80x35 (Colour)| 80x35 -default | No | Yes | No | Experimental port. Developed under the SPRINT emulator| 
