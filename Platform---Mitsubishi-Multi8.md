@@ -38,11 +38,13 @@ And then load that file as usual.
 * Mode 1 = 80 column text
 * Mode 2 = 80 column graphics mode
 
-Scrolling in mode 2 is particularly slow - we have to move 48kb of data to scroll one line.
+# Graphics
+
+Use of the graphics library switches to mode 2 and provides a 640x200 monochrome resolution.
 
 # Limitations
 
-* Graphics mode hasn't been implemented
+Scrolling in mode 2 is particularly slow - we have to move 48kb of data to scroll the display one text line upwards.
 
 # Links
 
