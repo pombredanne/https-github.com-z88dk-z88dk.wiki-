@@ -409,14 +409,6 @@ CP/M compatible, low and high resolution graphics might be supported
 
 ### Samsung
 
-##### SPC-1000
-
-The SPC-1100 was the SPC-1000 version for education, schools, etc.. (some of them had few connections removed).    The SPC-1000A had audio output function and volume control function from data recorder.
-
-[https://no-ssl.namu.wiki/w/SPC-1000](https://no-ssl.namu.wiki/w/SPC-1500) (if in trouble, use Google Translator!)
-
-[Tech tips for SDCC](http://blog.naver.com/PostView.nhn?blogId=mayhouse&logNo=20038926005&beginTime=0&jumpingVid=&from=search&redirect=Log&widgetTypeCall=true) (as above..)
-
 
 ##### SPC-1500
 
