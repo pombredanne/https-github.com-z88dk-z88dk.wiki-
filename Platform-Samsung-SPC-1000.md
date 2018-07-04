@@ -23,7 +23,7 @@ The file will load and autorun.
 
 The generic console supports both text mode (32x16) and hires graphics (32x24). You can use the ioctl and switch between mode 0 and 1 respectively.
 
-The optional VDP is also supported - select mode 10 and switch monitors.
+The optional VDP is also supported - compile with `-pragma-define:CRT_ENABLE_VDP=1`, select mode 10 and switch monitors.
 
 # Screenshots
 
