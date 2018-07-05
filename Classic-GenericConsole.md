@@ -46,8 +46,8 @@ The generic console additional supports VT52 control codes, the following are su
 [ESC] J - Erase all lines after our current line
 [ESC] K - Clear the current line from the current cursor position.
 [ESC] Y - row col 'Goto' Coordinate mode - first will change line number, then cursor position (both ASCII - 32)
-[ESC] b - Byte after 'b' sets new foreground color (ASCII - 32)
-[ESC] c - Byte after 'c' sets new background color (ASCII -32)
+[ESC] b - Byte after 'b' sets new foreground colour (ASCII - 32)
+[ESC] c - Byte after 'c' sets new background colour (ASCII - 32)
 [ESC] p - start inverse video
 [ESC] q - stop inverse video
 [ESC] r - nn print the nn character without translation (useful on non-ASCII text terminals)
