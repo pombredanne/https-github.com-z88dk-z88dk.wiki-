@@ -50,6 +50,7 @@ The generic console additional supports VT52 control codes, the following are su
 [ESC] c - Byte after 'c' sets new background color (ASCII -32)
 [ESC] p - start inverse video
 [ESC] q - stop inverse video
+[ESC] r - nn print the nn character without translation (useful on non-ASCII text terminals)
 [ESC] s - Enable/disable vertical scrolling
 ```
 
