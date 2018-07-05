@@ -4,8 +4,7 @@
 * 64k RAM, 32k ROM 
 * MC6847
 * AY-3-8192
-
-_This target is currently being brought up, it's not yet in the master branch_
+* Optional TMS9928A
 
 # Compilation
 
