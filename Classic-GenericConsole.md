@@ -64,13 +64,15 @@ By default, an attempt is made to map any colours to a standard range, this can 
 
 On those targets that support either bitmapped graphics or redefining the character set, a custom font can be specified in one of two ways.
 
-At compile time the option `-pragma-redirect:CRT_FONT=...` can be used, the available fonts are shown below:
+At compile time the option `-pragma-redirect:CRT_FONT=_...` can be used, the available fonts are shown below. Note that on the command line the font name is prefixed with `_`:
 
 ![](images/platform/fonts/font1.png)
 ![](images/platform/fonts/font2.png)
 ![](images/platform/fonts/font3.png)
 
-Alternatively, this can be done at compile time using `console_ioctl(IOCTL_GENCON_SET_FONT32, &addr)` where addr is a font reference from `<font/font.h>
+The "default" font is only available on the ZX Spectrum/Timex - it simply references the font in ROM.
+
+Alternatively, this can be done at compile time using `console_ioctl(IOCTL_GENCON_SET_FONT32, &addr)` where addr is a font reference from `<font/font.h>`
 
 ## Defining UDGs
 
