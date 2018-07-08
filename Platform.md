@@ -7,6 +7,7 @@
 [Amstrad NC100/NC150](Platform---Amstrad-NC) | Yes | No | No | 480x64| No | No | | 
 [Amstrad NC200](Platform---Amstrad-NC) | Yes | No | No | 480x128 | No | No | | 
 [Mattel Aquarius](Platform---Mattel-Aquarius)| Yes | 40x24| 40x24 | 80x72 | No | 1 bit +PSG | | 
+[Bandai RX-78](Platform-Bandai-RX78) | Yes | No | 24x23 | | No | PSG | Currently being brought up
 [Knight 2000 (Aussie Byte)](Platform---Aussie) | Yes | 80x25| No | not yet | No | 1 bit| Untested and incomplete graphics lib| 
 [Canon X-07](Platform---Canon-X07) | Yes | No | No | No | No | No | Initial stage | 
 [Casio PV-1000](Platform---Casio-PV1000) | No | No | 28x24 | 56x48 | No | No |
