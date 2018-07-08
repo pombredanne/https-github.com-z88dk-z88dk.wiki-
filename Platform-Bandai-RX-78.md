@@ -7,6 +7,12 @@
 * Audio: SN76489 on ports 0xff @ 3.579545 MHz
 * 24k? ROM cartridges @0x2000
 
+# Compilation
+
+    zcc +rx78 adv_a.c -create-app
+
+Will create a 24k ROM file that can be inserted using the menu with the Takeda emulator.
+
 # Graphics
 
 The display on the RX-78 is mirrored to convention, that is bit 0 in a display byte is the left-most pixel displayed. To simplify cross machine compatibility the generic console mirrors bytes so fonts and UDGs don't need to be changed.
