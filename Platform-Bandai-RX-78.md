@@ -3,7 +3,7 @@
 * SHARP LH0080A @ 4.090909 MHz
 * 8k Monitor ROM
 * 15k? RAM @0xb000
-* 24k? VRAM (6 bit planes, 3 foreground, 3 background)
+* 30k? VRAM (6 bit planes, 3 foreground, 3 background) 192x184 pixels (W x H)
 * Audio: SN76489 on ports 0xff @ 3.579545 MHz
 * 24k? ROM cartridges @0x2000
 
