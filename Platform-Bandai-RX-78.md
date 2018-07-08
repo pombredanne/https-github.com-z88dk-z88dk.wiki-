@@ -7,13 +7,13 @@
 * Audio: SN76489 on ports 0xff @ 3.579545 MHz
 * 24k? ROM cartridges @0x2000
 
-_This target is being brought up, it is not master_
-
 # Graphics
 
 The display on the RX-78 is mirrored to convention, that is bit 0 in a display byte is the left-most pixel displayed. To simplify cross machine compatibility the generic console mirrors bytes so fonts and UDGs don't need to be changed.
 
 The default font used by the generic console is the font that's contained in the IPL rom file. Not all of the characters will print as expected!
+
+_Note_ if you use the ROM font then `cvpeek()` won't work for non-UDGs. 
 
 # Links
 
