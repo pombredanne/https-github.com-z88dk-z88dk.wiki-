@@ -23,8 +23,8 @@ _Note_ if you use the ROM font then `cvpeek()` won't work for non-UDGs.
 
 # Screenshots
 
-![](images/platform/rx78_coswave.gif)
-![](images/platform/rx78_ansi52.gif)
+![](images/platform/rx78_coswave.png)
+![](images/platform/rx78_ansi52.png)
 
 # Links
 
