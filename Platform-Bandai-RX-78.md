@@ -21,6 +21,11 @@ The default font used by the generic console is the font that's contained in the
 
 _Note_ if you use the ROM font then `cvpeek()` won't work for non-UDGs. 
 
+# Screenshots
+
+![](images/platform/rx78_coswave.gif)
+![](images/platform/rx78_ansi52.gif)
+
 # Links
 
 * [Takeda Emulator](http://takeda-toshiya.my.coocan.jp/rx78/index.html)
