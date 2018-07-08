@@ -55,9 +55,6 @@ A pen-pad computer.  [Old rusty page with little technical insights](http://home
 The MESS emulator emulates it, another Russian computer with the same name existed but it was a zx Spectrum clone.
 
 
-
-### Bandai Gundam RX-78
-
 ### M.A.I. Basic Four series
 
 [M.A.I. S10 Basic Four](http://www.obsoletecomputermuseum.org/mai/)
