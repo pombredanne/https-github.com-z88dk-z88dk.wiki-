@@ -15,6 +15,11 @@ This will create a .d88 image that's suitable for loading into FD1 of the Takeda
 * Mode 0 = 40 column text
 * Mode 1 = 80 column text
 
+# Screenshots
+
+![](images/platform/fp1100_gencon.png)
+![](images/platform/fp1100_adva.png)
+
 # Limitations
 
 * Although the machine has 64k RAM, the ROM is copied into RAM so the maximum program size is around 20k   
