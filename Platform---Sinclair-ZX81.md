@@ -161,9 +161,9 @@ The Wilf's WRX HRG mode uses a different trick.. the historical tweak is done wi
 
 ![](images/platform/zx81-wrx-txt.gif)
 
-Matthias Swatosh describes it: //"With this modification the refresh-signal to the ram-pack will be always high or disabled. The read-signal to the ram-pack is now
+Matthias Swatosh describes it: _"With this modification the refresh-signal to the ram-pack will be always high or disabled. The read-signal to the ram-pack is now
 activ low either if the CPU generated a read or a refresh. This makes the ram-pack send the memory data to the bus when a refresh cycle happens. For normal operation of the computer or
-the ram-pack this is regardles. The hrg-software on the other hand just needs these data to generate a graphic-video."//
+the ram-pack this is regardles. The hrg-software on the other hand just needs these data to generate a graphic-video."_
 
 He also suggests, since the Germanium diodes are now quite rare, to use "Schottky" diodes (a Wilf's late suggestion was the 1N5817) and to raise the resistor's value to 5.6K.
 
