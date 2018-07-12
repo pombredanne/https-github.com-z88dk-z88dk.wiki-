@@ -26,6 +26,12 @@ Extended mode:
 
 Extra functionalities are available for such platform, notably the [Sprite Pack 1 library](library/sprites/sp1) supporting the 512x192 graphics resolution.
 
+## Math Libraries
+
+The ROM calculator is supported by use of the `-lm2068` library. 
+
+It should be noted that the ZX Maths libraries are of a lower precision than both _genmath_ and _math48_ and are also less performant. As a trade off, the amount of memory used is much reduced.
+
 
 ### Links
 
