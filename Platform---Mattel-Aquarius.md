@@ -21,6 +21,8 @@ z88dk supports building 8k ROM images for the Aquarius:
 
 The ROM file can then be inserted using the emulator. Depending on the emulator, you may need to reset the machine following insertion.
 
+_Note_ mame loads ROMs by default without expanded RAM. The memory configuration z88dk chooses for the stack causes issues with the ROM screen printer. If you print to console then you must use `-pragma-redirect:fputc_cons=fputc_cons_generic` to switch to the generic console.
+
 # Emulator notes
 
 Tested under the "Virtual Aquarius" emulator, by James the Animal Tamer.
@@ -33,10 +35,8 @@ Tested under the "Virtual Aquarius" emulator, by James the Animal Tamer.
 	- wait... then have fun !
 
 # Links
-[(atariage.com) - Yet another Death Star port](http://atariage.com/forums/topic/173559-intellivision-homebrew-istar-wip/)
 
-[(atariage.com) - Sprite demo for the Mattel Aquarius](http://www.atariage.com/forums/topic/173909-aquarius-sprite-demo-complied-using-the-z88dk-devkit/)
-
-[(atariage.com) - HW development idea: 320x200-bitmap-graphics-hack !](http://atariage.com/forums/topic/233221-aquarius-320x200-bitmap-graphics-hack/)
-
-[(atariage.com) - z88dk Aquarius Development](http://atariage.com/forums/topic/220410-aquarius-z88dk-aquarius-development/)
+* [(atariage.com) - Yet another Death Star port](http://atariage.com/forums/topic/173559-intellivision-homebrew-istar-wip/)
+* [(atariage.com) - Sprite demo for the Mattel Aquarius](http://www.atariage.com/forums/topic/173909-aquarius-sprite-demo-complied-using-the-z88dk-devkit/)
+* [(atariage.com) - HW development idea: 320x200-bitmap-graphics-hack !](http://atariage.com/forums/topic/233221-aquarius-320x200-bitmap-graphics-hack/)
+* [(atariage.com) - z88dk Aquarius Development](http://atariage.com/forums/topic/220410-aquarius-z88dk-aquarius-development/)
