@@ -69,14 +69,6 @@ The MESS emulator emulates it, another Russian computer with the same name exist
 They are CP/M systems. Support for their Speech Synthetizer could be nice, though.
 
 
-### Casio
-
-##### FP-1000 / 1100
-
-Already supported as a CP/M system but deserving specific extras (high resolution graphics)
-[FP1000 introduction](http://casio.ledudu.com/pockets.asp?type=1805)
-[FP1100 introduction](http://casio.ledudu.com/pockets.asp?type=2731)
-
 ##### FX-9000P
 
 ### Coleco Adam
