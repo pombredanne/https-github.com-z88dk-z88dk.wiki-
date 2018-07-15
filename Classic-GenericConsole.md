@@ -36,15 +36,12 @@ The parameter for those marked with (*) is taken as a bitwise and of the lower 4
 The generic console additional supports VT52 control codes, the following are supported:
 
 ```
-[ESC] A - Move the cursor to beginning of line above.
-[ESC] B - Move the cursor to beginning of line below.
+[ESC] A - Move the cursor to line above.
+[ESC] B - Move the cursor to line below.
 [ESC] C - Move the cursor right by one.
 [ESC] D - Move the cursor left by one
 [ESC] E - Clear the screen and place the cursor in the upper left corner.
 [ESC] H - Move the cursor to the upper left corner.
-[ESC] I - Move the cursor to beginning of line above.
-[ESC] J - Erase all lines after our current line
-[ESC] K - Clear the current line from the current cursor position.
 [ESC] Y - row col 'Goto' Coordinate mode - first will change line number, then cursor position (both ASCII - 32)
 [ESC] b - Byte after 'b' sets new foreground colour (ASCII - 32)
 [ESC] c - Byte after 'c' sets new background colour (ASCII - 32)
