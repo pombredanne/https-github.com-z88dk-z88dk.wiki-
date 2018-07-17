@@ -20,7 +20,17 @@ Using The "-subtype=basic" option a BASIC loader block is embedded in the CRT0 s
 To get a WAV version of the program it is necessary to add the "-create-app" and the "-Cz--audio" options.
 To tweak the speed and gain little time "-Cz--fast" is available.
 
-# appmake extras
+# Firmware problems
+
+When printing characters using the firmware routines, the keyboard is also read, a character printed on screen and a beep emitted. To avoid this behaviour:
+
+* Compile with the generic console (`-pragma-redirect:fputc_cons=fputc_cons_generic`)
+* Consider using the "inkey" keyboard routines: (`-pragma-redirect:fgetc_cons=fgetc_cons_inkey -pragma-redirect:getk=getk_inkey`)
+
+Using the options above, the firmware is avoided and your application will hopefully behave as expected.
+
+
+# Appmake extras
 
 Appmake is able to convert the compiled program from VZ to the newer CAS format; optionally a wav can be created for loading onto the original hardware, even in a slightly 'faster' mode.
 
