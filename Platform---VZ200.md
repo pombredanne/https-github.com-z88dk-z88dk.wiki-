@@ -2,9 +2,7 @@
 z88dk is able to compile programs for the "VZ 200 family".
 Such group of computers includes the Dick Smith VZ200 and VZ300 the Video Technology Laser 210 and Laser 310, the Texet TX 8000 and the Salora Fellow.
 
-The graphics mode is automatically switched on by calling "clg" or printing CHR$ 12 or calling the [vz_mode()](library/vz200) function.
-
-
+The graphics mode is automatically switched on by calling "clg" or calling the [vz_mode()](library/vz200) function.
 
 # Quick start
 
