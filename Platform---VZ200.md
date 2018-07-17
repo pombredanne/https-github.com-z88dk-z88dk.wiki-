@@ -2,7 +2,7 @@
 z88dk is able to compile programs for the "VZ 200 family".
 Such group of computers includes the Dick Smith VZ200 and VZ300 the Video Technology Laser 210 and Laser 310, the Texet TX 8000 and the Salora Fellow.
 
-The graphics mode is automatically switched on by calling "clg" or calling the [vz_mode()](library/vz200) function.
+The hires graphics mode is automatically switched on by calling "clg" or calling the [vz_mode()](library/vz200) function.
 
 # Quick start
 
@@ -27,6 +27,11 @@ When printing characters using the firmware routines, the keyboard is also read,
 
 Using the options above, the firmware is avoided and your application will hopefully behave as expected.
 
+# Graphics modes
+
+The VZ supports multiple graphics libraries, the default display switches to mode 1 and 128x64 characters. In this mode text printing is only available via the putc46 driver which only supports a minimal number of positioning.
+
+If you link with `-lgfxvzblock` then a chunky graphics mode of 64x32 pixels is available, this can coexist with the generic console and allows the easy mixing of graphics and text.
 
 # Appmake extras
 
