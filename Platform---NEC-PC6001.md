@@ -4,13 +4,10 @@
 
 The Japanese series of PC-6001 computers includes the following systems:
 
-NEC Trek
-
-PC-6001
-
-PC-6001 MK II
-
-PC-6601
+* NEC Trek
+* PC-6001
+* PC-6001 MK II
+* PC-6601
 
 # Quick start
 
@@ -20,8 +17,6 @@ PC-6601
 
     zcc +pc6001 -clib=ansi -subtype=32k -oprogram -create-app -lm program.c
 
-
-
 The following "subtype" options are supported:
 
     (no parameter) or 16k  ->  N60 BASIC (16K)
@@ -29,8 +24,8 @@ The following "subtype" options are supported:
     n60m                   ->  N60m BASIC (32K)
     rom                    ->  Cartridge, max 16K, not all the libraries will work
 
-Except forom the ROM mode, a file named 'program.cas' will be created.
-To use the ezperimental audio options, try the following:
+Except from the ROM mode, a file named 'program.cas' will be created.
+To use the experimental audio options, try the following:
 
     zcc +pc6001 -create-app -lm -Cz--audio program.c
 
@@ -65,14 +60,34 @@ To fill the whole ROM file
 To split the ROM file in two smaller ones, etc..
 `-Cz"--romsize 16384 --chipsize 8192"`
 
+# Screen modes and graphics
+
+The console subsystem for the PC6001 is completely decoupled from the ROM, this allows z88dk to transparently support multiple screen modes.
+
+Screen modes can be changed using the following code:
+
+    #include <sys/ioctl.h>
+
+    int mode = 1;
+    console_ioctl(IOCTL_GENCON_SET_MODE, &mode);
+
+The following modes are supported:
+
+* Mode 0 - 32x16 text, supports coloured block graphics with a resolution of 64x48
+* Mode 1 - 256x192, monochrome
+* Mode 2 - 128x192, colour
+
+With Mode 1 and Mode 2 you will need to define a [font](https://github.com/z88dk/z88dk/wiki/Classic-GenericConsole#defining-a-custom-font) that can be used to print on console. Mode 1 and 2 support UDGs of course.
+
+To change the pixel colour you can call `textcolor()` with the desired colour.
+
+Of course, supported multiple screen modes does have an overhead, as a result if you don't use either mode 1 or mode2, then you can exclude their code from being included using the following pragmas: `-pragma-define:CLIB_DISABLE_MODE0=1` and `-pragma-define:CLIB_DISABLE_MODE1=1`
 	
 
 # Emulator Hints
 
-	* "Virtual NEC Trek" is good and easy to use.
-
-	* IP6WIN: If in trouble (japanese characters being typed), press F6.
-
-	* Some emulator (and the untested P6DatRec tool) need the '.cas' file to be renamed to '.p6'
+* "Virtual NEC Trek" is good and easy to use.
+* As is the Takeda emulator
+* IP6WIN: If in trouble (japanese characters being typed), press F6.
+* Some emulator (and the untested P6DatRec tool) need the '.cas' file to be renamed to '.p6'
 	
-
