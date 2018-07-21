@@ -39,7 +39,7 @@
 [Grundy Newbrain](Platform---Grundy-Newbrain)| Yes | No | No |  No* | No* | No | * could work on expanded systems in non-standard mode, via [stream functions](library/newbrain#streams) | 
 [v6z80p (OSCA)](Platform---OSCA) | 40x24| 40x24| No | 320x200 | Yes | No | 2 different file access libraries | 
 [Pac Man HW](Platform---Pacman)| 28x36| No | No |  56x72 | No | No lib | | 
-[PC-6001](Platform---NEC-PC6001) | 32x16| 32x16 (*)|  No | 128x192 (*) | No | PSG only | (*) Not in MKII mode| 
+[PC-6001](Platform---NEC-PC6001) | 32x16, 32x24| 32x16 (*)|  32x16, 32x24 | 64x48, 128x192, 256x192 | No | PSG only | | 
 [Philips P2000](Platform---Philips-P2000)| 40x24| Monochrome 40x24 | No | 78×72 | No | 1 bit| | 
 [Philips C7420](Platform---Philips-C7420)| 39x20| No | No | Not Yet | No | No | | 
 [Philips VG-5000](Platform----Philips-VG5000)| 40x24| 40x24| 40x24 | 80×72 | No | 1 bit| | 
