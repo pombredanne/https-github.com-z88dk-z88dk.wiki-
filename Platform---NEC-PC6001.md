@@ -1,6 +1,12 @@
-
-
 ![](images/platform/pc6001c.gif)
+
+# Hardware Summary
+
+* NEC µPD780 (Z80 Clone) @ 3.8 Mhz
+* MC6847 (PC-6001,Trek) or extended clones (Other models)
+* 16/32k RAM
+* AY-3-8910
+* Variable amounts of ROM + chargen ROM
 
 The Japanese series of PC-6001 computers includes the following systems:
 
@@ -24,8 +30,9 @@ The following "subtype" options are supported:
     n60m                   ->  N60m BASIC (32K)
     rom                    ->  Cartridge, max 16K, not all the libraries will work
 
-Except from the ROM mode, a file named 'program.cas' will be created.
-To use the experimental audio options, try the following:
+Except for ROM mode, a file named 'program.cas' will be created.
+
+Alternatively an audio file can be created:
 
     zcc +pc6001 -create-app -lm -Cz--audio program.c
 
@@ -33,8 +40,7 @@ To use the experimental audio options, try the following:
 
     zcc +pc6001 -create-app -lm -Cz--audio -Cz--fast program.c
 
-
-It will create a WAV file too.
+The resulting .wav file could be loaded into the real hardware.
 
 To load the program do the following:
 
@@ -44,10 +50,13 @@ To load the program do the following:
 	- Issue the 'run' command: the machine code block will be loaded and run.
 	
 If your program terminates and you wish to run it again, you can change the BASIC program line by modifying the two last digits of the location for EXEC from '0F' to '37.
+
 This wil bypass the loader and enter in the program directly.
 
 
-# ROM options
+# Creating a ROM
+
+The machines support a 16k ROM slot. Particularly when targeting the 16k models, creating a ROM cartridge can allow use of a high resolution screen.
 
 The -subtype=rom option can be enforced with extra options to pass to appmake:
 
