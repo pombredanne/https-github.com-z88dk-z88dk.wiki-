@@ -41,6 +41,16 @@ Two graphics libraries are provided:
     -lgfxace      64x48
     -lgfxaceudg   64x72, currently limited to 64x71 due to a bug
 
+
+
+
+Experimental support for the ZX Printer is provided, we supposed it could be attached to the Jupiter ACE via a 3rd party adapter:
+
+https://k1.spdns.de/Vintage/Sinclair/80/Jupiter%20Ace/Peripherals/Trumpcard%20(Innovonics)/
+https://k1.spdns.de/Vintage/Sinclair/80/Jupiter%20Ace/Peripherals/Motherboard%20(Boldfield)/
+
+To hardcopy the screen please call zx_hardcopy().   The UDG variant will save some memory by printing only the graphics elements, the standard variant will support all the standard text and graphics symbols, in direct and reversed mode.
+
 # Appmake extras
 
 The appmake tool can be run in "dumb" mode to generate the corresponding audio track of some external program.
