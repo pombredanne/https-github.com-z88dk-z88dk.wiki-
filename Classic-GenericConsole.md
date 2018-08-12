@@ -77,4 +77,7 @@ Characters > 128 are treated as UDGs on platforms that support them. The number 
 
 ## Setting the screen mode
 
-Some of the platforms support alternate screen modes, these can be switched to using: `console_ioctl(IOCTL_GENCON_SET_MODE, &mode)`. At present this functionality is available to the CPC (Modes 0,1,2) and MC-1000 (Mode 0 = text, Mode 1 = graphics)
+Some of the platforms support alternate screen modes, these can be switched to using: `console_ioctl(IOCTL_GENCON_SET_MODE, &mode)`. At present this functionality is available to the CPC (Modes 0,1,2) and MC-1000 (Mode 0 = text, Mode 1 = graphics). For more information see the individual port page.
+
+
+
