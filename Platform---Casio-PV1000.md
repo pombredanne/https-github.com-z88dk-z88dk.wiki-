@@ -12,6 +12,8 @@
 
 The resulting .rom file can then be loaded into the emulator.
 
+The default configuration is to create a 16k ROM. If your application is larger then you can supply `-subtype=32k` to create a 32k ROM.
+
 ## Features
 
 The PV1000 port has the following features:
