@@ -19,6 +19,8 @@ This can then be loaded into Genieous using the `File->Autostart File` menu opti
 
 The generic console allows supporting either a custom font (`-pragma-redirect:CRT_FONT=...`) and 32 UDGs, or 128 UDGs. These udgs can be set programmatically using the appropriate ioctl.
 
+You should switch to mode 1 to enable use of the custom font and more than 32 UDGs.
+
 
 ## Links
 
