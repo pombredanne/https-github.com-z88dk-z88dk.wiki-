@@ -33,6 +33,5 @@ Be sure to create upper case files to make them readable by the Einstein operati
 
 ### Web links
 
-http://www.einstein.talktalk.net/
-
-http://www.tatungeinstein.co.uk/
+* https://web.archive.org/web/20121212082438/http://www.einstein.talktalk.net
+* http://www.tatungeinstein.co.uk/
