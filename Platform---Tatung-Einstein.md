@@ -7,21 +7,32 @@ The Tatung Einstein is a CP/M compatible platform, so the [same base library](Pl
 
 ### Command Line
 
-    zcc  +cpm -lm -leinstein -oPROGRAM.COM program.c
+    zcc  +cpm -lm -subtype=einstein -oPROGRAM.COM program.c -o program -create-app
+
+A .dsk image file will be created that can be loaded as the second disc in emulators. For example:
+
+   mame einstein -flop1 dos80.dsk -flop2 program.dsk
+
+When the Einstein boots enter:
+
+```
+1:
+APP.COM
+```
+
+And you program will start. 
+
+Alternatively, you can omit -create-app and use the [EDIP program](http://www.einstein.talktalk.net/edip.html) to create a bootable disc image.
+
+Be sure to create upper case files to make them readable by the Einstein operating system.
 
 
+### Emulators
 
-### Emulator hints
-
-The emulators are able to run programs loaded from disk images.
-
-The [EDIP program](http://www.einstein.talktalk.net/edip.html) is able to create a new disk image inserting your own programs.
-Be sure to create upper case files to make them readeble by the Einstein operating system.
-
+* Mame
 
 ### Web links
 
 http://www.einstein.talktalk.net/
 
 http://www.tatungeinstein.co.uk/
-
