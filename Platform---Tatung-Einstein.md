@@ -7,11 +7,11 @@ The Tatung Einstein is a CP/M compatible platform, so the [same base library](Pl
 
 ### Command Line
 
-    zcc  +cpm -lm -subtype=einstein -oPROGRAM.COM program.c -o program -create-app
+    zcc  +cpm -lm -subtype=einstein -oPROGRAM.COM program.c -create-app
 
 A .dsk image file will be created that can be loaded as the second disc in emulators. For example:
 
-   mame einstein -flop1 dos80.dsk -flop2 program.dsk
+   mame einstein -flop1 dos80.dsk -flop2 PROGRAM.dsk
 
 When the Einstein boots enter:
 
