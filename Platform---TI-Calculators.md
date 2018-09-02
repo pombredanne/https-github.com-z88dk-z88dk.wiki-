@@ -77,6 +77,8 @@ The default supported shell is "**ION**", but you can change this behaviour by p
 Types can be specified also with the "-subtype=" command line option.
 
 Valid values are (referred to the table above):
+
+
 	1 - venus
 
 	2 - zes
