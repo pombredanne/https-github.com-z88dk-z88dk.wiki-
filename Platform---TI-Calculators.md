@@ -110,10 +110,15 @@ To compile programs for this platform you need to specify the "+ti8x" parameter.
 The default supported shell is "**ION**", but you can change this behaviour by passing "-startup=X" parameter, where 'X' can be:
 
    1  - Ion (default)
+
    2  - MirageOS without quit key
+
    3  - (reserved)
+
    4  - TSE Kernel
+
    10 - asm( executable
+
 
 Types can be specified also with the "-subtype=" command line option.
 
@@ -134,7 +139,9 @@ To compile programs for this platform you need to specify the "+ti85" parameter.
 The default supported shell is "**Rigel**", but you can change this behaviour by passing "-startup=X" parameter, where 'X' can be:
 
    1  - Rigel (default)
+
    3  - PhatOS (unstable)
+
 
 Note that some TI85 shell is able to run some program in TI83 format, but it won't take benefit of the wider screen.
 
@@ -146,10 +153,15 @@ To compile programs for this platform you need to specify the "+ti86" parameter.
 The default supported shell is "ION", but you can change this behaviour by passing "-startup=X" parameter, where 'X' can be:
 
    1 - LASM (default)
+
    2 - ASE, Rascal, emanon, etc.
+
    3 - zap2000
+
    4 - emanon
+
    5 - Embedded LargeLd - !!!EXPERIMENTAL!!!
+
     10 - asm() executable
 
 
