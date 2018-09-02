@@ -53,6 +53,7 @@ The only supported shell is "**CrASH**".
 To compile programs for this platform you need to specify the "+ti83" parameter.
 The default supported shell is "**ION**", but you can change this behaviour by passing "-startup=X" parameter, where 'X' can be:
 
+
    1 - Ion; Ti-Explorer (default)
 
    2 - Venus;
