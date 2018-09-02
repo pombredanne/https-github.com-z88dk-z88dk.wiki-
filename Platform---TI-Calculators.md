@@ -1,4 +1,3 @@
-======= Texas Instruments calculators =======
 
 The TI calculators port has been thought to get a common compatibility layer.
 The VT/ANSI library features the same text resolution for all the platforms, permitting the applications to be easily ported.
@@ -68,15 +67,15 @@ The default supported shell is "**ION**", but you can change this behaviour by p
 Types can be specified also with the "-subtype=" command line option.
 
 Valid values are (referred to the table above):
-	venus
-	zes
-	anova
-	tiexp
-	ashell
-	sos
-	venusexp
-	ion
-	asm
+	1 - venus
+	2 - zes
+	3 - anova
+	4 - tiexp
+	5 - ashell
+	6 - sos
+	7 - venusexp
+	8 - ion
+	9 - asm
 
 ### External resources
 
