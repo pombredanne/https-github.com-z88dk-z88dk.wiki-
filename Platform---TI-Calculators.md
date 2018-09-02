@@ -77,13 +77,21 @@ Types can be specified also with the "-subtype=" command line option.
 
 Valid values are (referred to the table above):
 	1 - venus
+
 	2 - zes
+
 	3 - anova
+
 	4 - tiexp
+
 	5 - ashell
+
 	6 - sos
+
 	7 - venusexp
+
 	8 - ion
+
 	9 - asm
 
 ### External resources
