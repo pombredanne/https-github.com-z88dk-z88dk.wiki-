@@ -54,25 +54,25 @@ To compile programs for this platform you need to specify the "+ti83" parameter.
 The default supported shell is "**ION**", but you can change this behaviour by passing "-startup=X" parameter, where 'X' can be:
 
 
-   1 - Ion; Ti-Explorer (default)
+    1 - Ion; Ti-Explorer (default)
 
-   2 - Venus;
+    2 - Venus;
 
-   3 - ZES;
+    3 - ZES;
 
-   4 - Anova; SOS
+    4 - Anova; SOS
 
-   5 - Ti-Explorer, AShell; SOS, Anova (same as 6)
+    5 - Ti-Explorer, AShell; SOS, Anova (same as 6)
 
-   6 - AShell, Ti-Explorer; SOS, Anova (same as 5)
+    6 - AShell, Ti-Explorer; SOS, Anova (same as 5)
 
-   7 - SOS; Anova
+    7 - SOS; Anova
 
-   8 - Venus Explorer; Venus
+    8 - Venus Explorer; Venus
 
-   9 - Ion, Ti-Explorer; ZASMLOAD, plain TIOS
+    9 - Ion, Ti-Explorer; ZASMLOAD, plain TIOS
 
-   10 - Plain TIOS, ZASMLOAD
+    10 - Plain TIOS, ZASMLOAD
 
 Types can be specified also with the "-subtype=" command line option.
 
@@ -109,15 +109,15 @@ Assembly programming notes on [WikiTI](http://wikiti.denglend.net/index.php?titl
 To compile programs for this platform you need to specify the "+ti8x" parameter.
 The default supported shell is "**ION**", but you can change this behaviour by passing "-startup=X" parameter, where 'X' can be:
 
-   1  - Ion (default)
+    1  - Ion (default)
 
-   2  - MirageOS without quit key
+    2  - MirageOS without quit key
 
-   3  - (reserved)
+    3  - (reserved)
 
-   4  - TSE Kernel
+    4  - TSE Kernel
 
-   10 - asm( executable
+    10 - asm( executable
 
 
 Types can be specified also with the "-subtype=" command line option.
