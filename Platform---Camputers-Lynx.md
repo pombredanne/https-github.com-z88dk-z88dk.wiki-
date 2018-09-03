@@ -1,6 +1,12 @@
-
-
 ![](images/platform/lynx.gif)
+
+# Hardware Specs
+
+* Z80 @ 4Mhz
+* MC6845 video chip
+* 32k VRAM
+* 16k/24k ROM
+* 16k/64k user RAM
 
 (About 30000 units were sold).
 
@@ -10,21 +16,14 @@
 
 This will create "a.tap", ready for the use on an emulator.
 
+# Limitations of the Lynx console
 
-# "PALE" emulator method
+The ROM printer does not support scrolling - it will wrap around to the top of the screen when you normally expect it to scroll. The generic console (compile with `-pragma-redirect:fputc_cons=fputc_cons_generic` does support scrolling though it is painfully slow.
 
-    zcc +lynx -lm -o adventure.z80 adv_a.c
+# Links
 
-This will create a binary block called "adventure.z80".
-
-Please use the "PALE" Pete's Lynx Emulator and get to the options window (right-click).
-
-[Archived copy of the no longer existing PALE website](http://web.archive.org/web/20120119133246/http://heraclion.users.btopenworld.com/palelynx.htm)
-
-
-Click on the "Z80-TAP" button to get in the BINARY converter tool, set both the "start" and "execute" fields to 7000 (good for a 96K Lynx computer) and click on "convert" to get the .TAP file.
-
-The resulting .TAP file will be a "binary mode" file (to be run with MLOAD "").
-
-
-
+* [Jynx Emulator](https://github.com/jonathan-markland/Jynx)
+* [Pale Emulator](http://www.russelldavis.org/CamputersLynx/PALE/)
+* [Documentation](http://www.russelldavis.org/CamputersLynx/files/)
+* [Lynx User Group Issue 1](http://www.russelldavis.org/CamputersLynx/files/Newsletters/Lynx%20User/Lynx%20User1.pdf) - good hardware information
+* [Lynx User Group Issue 2](http://www.russelldavis.org/CamputersLynx/files/Newsletters/Lynx%20User/Lynx%20User2.pdf) - and the errata for Issue 1
