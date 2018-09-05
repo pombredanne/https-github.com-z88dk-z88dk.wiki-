@@ -25,4 +25,9 @@ To load and run the file enter:
 
 # Features
 
+## Generic console modes
+
+* Mode 0 - 40x24, 16 colours
+* Mode 1 - 80x24, 2 colours
+
 # Reference
