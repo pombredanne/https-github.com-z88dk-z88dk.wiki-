@@ -529,8 +529,6 @@ Already supported as CP/M and S-OS systems but deserving specific extras.
 
 ### Video Technology
 
-##### Laser 350 / 500 / 700 / 750
-
 ##### Genius Leader toys
 ##### Laser CompuMate 1..4
 
