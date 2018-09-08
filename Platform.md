@@ -71,7 +71,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [TRS-80](Platform---TRS80) | 64x16 | No | 64x16 - default| 128x48| No | 1 bit| Sound output via cassette port| 
 [TS2068](Platform---Timex-TS2068)| [32x24, 64x24, 128x24](Platform---Sinclair-ZX-Spectrum#the-standard-zx-spectrum-console-driver) | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | 32x24,64x24, 128x24* | 256x192 | No | 1 bit| Sprite Pack | 
 [VZ/Laser 200](Platform---VZ200) | 32x16| 32x12 (B&W)| 32x16 | 128x64 + 64x32| No | 1 bit| | 
-[VZ 350/500/700](Platform--VZ700) | 40x24 | No | 40x24 and 80x24 | 80x48 | No | No | |
+[VZ 350/500/700](Platform--VZ700) | 40x24 | No | 40x24 and 80x24 | 80x48 and 160x48 | No | No | |
 [Xircom Rex 6000](Platform---Xircom-REX6000) | No | No | No | No | No | No | Graham Cobb's stdio library was due to be integrated into z88dk v1.6. The Rex supplies has its own library mostly divergent from the standard z88dk library | 
 [ZX80](Platform---Sinclair-ZX80) | 32x24| 32x24 (TXT)| 32x24 - default| 64x48[+graylib](library/graylib)| No | as for ZX81| Good compatibility with ZX81, tricks to try keeping the display stable| 
 [ZX81](Platform---Sinclair-ZX81) | 32x24| 32x24 (TXT), [24..85x24](Platform---Sinclair-ZX81#the-vtansi-console-driver) (HRG) | 32x24 -default | 64x48, 64x72, +HRG modes [+graylib](library/graylib)| No | 1 bit + PSG| Sprite Pack, 1bit sound blanks the screen | 
