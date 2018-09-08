@@ -38,7 +38,7 @@ The generic console is enabled by default on this port. The following screen mod
 
 Both modes support chunky graphics.
 
-To select the colours in mode 2, you should use `textbackground()/textcolor()` to select background/foreground colours. They will only take effect the next time the screen is cleared.
+To select the colours in mode 1, you can use `textbackground()/textcolor()` to select background/foreground colours. They will only take effect the next time the screen is cleared.
 
 # Limitations
 
