@@ -16,7 +16,7 @@ Will create a file that will load on real hardware.
 
     zcc +vz700 world.c -create-app -Cz--audio -Cz--fast
 
-Will create a file that will load on the Mame emulator.
+Will create a file that will load on the Mame emulator (Mame reads/writes files with a different speed to the real hardware)
 
 To load and run the file enter:
 
@@ -25,7 +25,7 @@ To load and run the file enter:
 
 # Emulator
 
-At present Mame is the only emulator that supports the VZ700.
+At present Mame is the only emulator that supports the VZ70 (tested with Mame 0.194)
 
 # Features
 
