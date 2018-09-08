@@ -1,3 +1,5 @@
+VTech Laser 350/500/700.
+
 # Hardware summary
 
 * Z80 @3.694700 MHz
@@ -12,7 +14,7 @@
 
 Will create a file that will load on real hardware.
 
-    zcc +vz700 world.c -create-app -Cz--audio -Ca--fast
+    zcc +vz700 world.c -create-app -Cz--audio -Cz--fast
 
 Will create a file that will load on the Mame emulator.
 
@@ -32,15 +34,18 @@ At present Mame is the only emulator that supports the VZ700.
 The generic console is enabled by default on this port. The following screen modes are supported:
 
 * Mode 0 - 40x24, 16 colours
-* Mode 1 - 80x24, 2 colours (select colours and then clear the screen to switch)
+* Mode 1 - 80x24, 2 colours
 
 Both modes support chunky graphics.
+
+To select the colours in mode 2, you should use `textbackground()/textcolor()` to select background/foreground colours. They will only take effect the next time the screen is cleared.
 
 # Limitations
 
 * The generated program will not work on the unexpanded (16k) VZ350
 * Sounds, joysticks and hires graphics are not yet supported
 * Scanning the keyboard temporarily disables interrupts
+* Scanning the keyboard reportedly causes problems on real hardware
 
 # Reference
 
@@ -48,4 +53,3 @@ Both modes support chunky graphics.
 * Rom detection: http://atariage.com/forums/topic/187667-any-info-on-video-technology-laser-500-computer/page-8 at 0x66c2 in ROM
 * Wikipedia: https://es.wikipedia.org/wiki/VTech_Laser_700
 * Paging information: http://www.razzmoket.esy.es/memoire.htm
-
