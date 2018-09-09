@@ -10,11 +10,11 @@ VTech Laser 350/500/700.
 
 # Compilation
 
-    zcc +vz700 world.c -create-app -Cz--audio
+    zcc +laser500 world.c -create-app -Cz--audio
 
 Will create a file that will load on real hardware.
 
-    zcc +vz700 world.c -create-app -Cz--audio -Cz--fast
+    zcc +laser500 world.c -create-app -Cz--audio -Cz--fast
 
 Will create a file that will load on the Mame emulator (Mame reads/writes files with a different speed to the real hardware)
 
