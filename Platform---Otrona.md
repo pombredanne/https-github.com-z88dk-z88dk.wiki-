@@ -6,10 +6,9 @@ Library extras include the graphics support (320x240).
 
 ### Command Line
 
-    zcc  +cpm -lgfxattache -create-app program.c
+    zcc  +cpm -subtype=attache -create-app program.c
 
-
-
+A raw disc image will be created as a result.
 
 ### Emulator hints
 
@@ -23,22 +22,12 @@ We suggest to use the [ImageDisk](http://www.classiccmp.org/dunfield/img/index.h
 To test the resulting program on the MAME emulator an [OS disk image](http://www.retroarchive.org/maslin/disks/otrona/oattache.td0) is also necessary.
 
 
-We use the appmake's 'cpm option to create a raw disk image holding our program (e.g. A.COM):
-
-    appmake +cpm -f ATTACHE -b a.com
-
-
 The Otrona Attache' MAME driver is not able to read RAW disk images, so we encode it to IMD:
 
     bin2imd  a.raw a.imd /2 DM=5 N=40 SS=512 SM=1-10
-
 
 The command line options to boot CP/M and use the created disk image will be something like:
 
     mame attache -flop1 oattache.td0 -flop2 A.IMD
 
-
 After the CP/M boot, just enter 'b:' and the program name to run it !
-
-
-
