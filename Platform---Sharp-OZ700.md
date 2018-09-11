@@ -69,8 +69,9 @@ There is, however, one exception to this rule.  If you write a program that proc
 # Links
 
 The OZ related sites we took many informations from are no longer available, so the links are no longer quoted in the documents.
-This one seem to have inherited some of the spirit of the historical ones:
+This one seem to have inherited some of the spirit of the historical websites
 
-http://members.lycos.co.uk/wizcentre/
+https://web.archive.org/web/20050208195520/http://members.lycos.co.uk:80/wizcentre/
+
 https://github.com/arpruss/ozdev
 
