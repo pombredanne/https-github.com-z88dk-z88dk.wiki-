@@ -18,7 +18,7 @@ CP/M mode, 40 columns VT-ANSI color terminal emulation:
     zcc  +cpm -clib=ansi40 -lm -create-app -lmicrobee -D__BEE__ -oPROGRAM program.c
 
 
-#### RUNM mode:
+#### LOADM mode:
 
 The following commands will create a file with the ".BEE" extension.
 Adding the '-subtype=wav' or '-subtype=wav300' options will, as an alternative, produce a WAV audio file compatible to the cassette player formats.  The earlier 16K models support 300 baud only.
