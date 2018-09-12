@@ -25,7 +25,8 @@ To load and run the file enter:
 
 # Emulator
 
-At present Mame is the only emulator that supports the VZ70 (tested with Mame 0.194)
+In addition to Mame, [laser500emu](https://nippur72.github.io/laser500emu/) is available. To load a file in this web based emulator, drag and drop the generated ".bin" file onto the display and then type run to start.
+
 
 # Features
 
@@ -35,17 +36,19 @@ The generic console is enabled by default on this port. The following screen mod
 
 * Mode 0 - 40x24, 16 colours
 * Mode 1 - 80x24, 2 colours
+* Mode 2 - 40x24, 16 colours hires
 
-Both modes support chunky graphics.
+Modes 1 and 2 support chunky graphics.
 
 To select the colours in mode 1, you can use `textbackground()/textcolor()` to select background/foreground colours. They will only take effect the next time the screen is cleared.
+
+Mode 2 is hires 320x192x16, in this mode the generic console supports custom fonts and 128 UDGs.
 
 # Limitations
 
 * The generated program will not work on the unexpanded (16k) VZ350
 * Sounds, joysticks and hires graphics are not yet supported
 * Scanning the keyboard temporarily disables interrupts
-* Scanning the keyboard reportedly causes problems on real hardware
 
 # Reference
 
