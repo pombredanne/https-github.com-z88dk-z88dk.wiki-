@@ -92,7 +92,7 @@ To update the install simply delete the old one, download a new nightly build an
 
 To test if the install was successful, create the following program in a text editor and save as "test.c"
 
-	#include `<stdio.h>`
+	#include <stdio.h>
 	
 	main()
 	{
