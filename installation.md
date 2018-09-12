@@ -8,7 +8,7 @@ The nightly build should be preferred unless you have a reason to install an old
 
 ## Windows
 
-Download the latest nightly windows build and unzip it into the destination directory.  This will create a tree rooted in a z88dk subdirectory.
+Download the latest nightly windows build and unzip it into the destination directory (we suggest to avoid spaces in the directory names).  This will create a tree rooted in a z88dk subdirectory.
 
 Some environment variables will have to be defined.  On Windows 8, this can be done from the Control Panel by selecting "User Accounts".  On the left side of the pop-up box you should find a link to "Change my environment variables".  Click that and add the following:
 
