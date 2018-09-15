@@ -3,16 +3,13 @@
 
 # Quick start
 
+To create a disk image:
+
+    zcc +cpc -lndos -lm -subtype=dsk -create-app -o program adv_a.c
+
+To create a tape file:
 
     zcc +cpc -lndos -lm -subtype=wav -create-app -o program adv_a.c
-
--or-
-
-    zcc +cpc -lcpcfs -lmz -subtype=wav -create-app -o program adv_a.c
-
--or-
-
-    zcc +cpc -clib=ansi -lcpcfs -lmz -subtype=wav -create-app -o program adv_a.c
 
 Historically interrupts were disabled to improve the stability, now it is normally not necessary; by the way the old option can still be activated via the "-subtype=noint" parameter.
 
@@ -22,17 +19,22 @@ Historically interrupts were disabled to improve the stability, now it is normal
 
 #### Loading Addresses
 
-The code is compiled by default to address $1200, to run the code on a CPC you should do the following:
+The code is compiled by default to address $1200, to load a tape file and run your application:
 
 ```
 
- | tape
- | ----
+| tape
 memory &11ff
 load "",&1200
 call &1200
 
 ```
+
+To load from disc:
+
+    memory &11ff
+    load "program.cpc",&1200
+    call &1200
 
 
 If you produce code under $1200 and needs to get loaded then run from BASIC, the "memory" command is required; in example, to compile and run a program located at $400:
@@ -95,8 +97,6 @@ double pow10(int x);
 Returns 10^x
 
 
-
-
 #### File IO Library (fcntl driver)
 
 Support for file IO on the CPC has been added. This uses the CAS_ interface
@@ -127,54 +127,9 @@ To link in the library supply the -lcpcfs flag to the compiler. If you do
 not require file IO in your program then supply the -lndos flag which 
 links in a dummy stub library that simply returns errors.
 
-
-#### Application Creation
-
-The appmake has been updated to support the CPC as a target. When compiling if you supply the -create-app flag then a file with the suffix .cpc is generated.  This file contains a CPC disc file header which can then be easily transferred onto a CPC disc using cpcfs or a similar tool.
-
-
-# Putting your code into a disk image
-
-This is an example on how you to integrate your favourite emulator tools with the z88dk features. z88dk supports creating CPC disc images, however at present you cannot compile and create the disc image in one step.
-
-Compile your program with the "-create-app" flag set:
-
-    zcc +cpc -lndos -create-app adv_a.c
-
-It will create both a raw block (a.bin) and a special binary file called "a.cpc"
-
-Run the appmake program separately:
-
-    appmake +cpmdisk -f cpcsystem -b program.cpc
-
-Load and run the new program from within your favourite emulator, after having properly configured the virtual disk drives
-
-    memory &11ff
-    load "program.com",&1200
-    call &1200
-
-
-# Putting your code into a RAM snapshot
-
-This note is still *partially* valid, but please note that the "-create-app" flag makes life easier.
-
-```
-	Compile the program (optionally you can set another address for ORG)
-		zcc +cpc -zorg=24576 program.c
-	Prepare an empty uncompressed snapshot with your preferred Amstrad emulator 
-	(the snapshot format may be a bit different, but normally the locations are the same)
-		memory &1fff  (BASIC command)
-	Save the snapshot and exit from the emulator
-	Insert the compiled code into the snapshot:
-		sna_mng i a.bin loader.sna 24576 30000
-	Re-run the emulator, load the modified snapshot and type:
-		call &6000
-```
-
-
 # Tricks using the WinAPE emulator
 
-When using the WinAPE Amstrad CPC emulator, if runned code is 0xED, 0xFF then it activates a Breakpoint and show the debugger.
+When using the WinAPE Amstrad CPC emulator, if the opcode 0xED, 0xFF is executed, then it activates a Breakpoint and show the debugger.
 
 'norecess' suggests the following:
 
