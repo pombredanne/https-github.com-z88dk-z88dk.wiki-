@@ -18,8 +18,6 @@ Historically interrupts were disabled to improve the stability, now it is normal
 
 '-subtype=fastwav' can shorten the loading time by producing a non standard audio format.
 
-
-
 # Misc notes on the CPC target
 
 #### Loading Addresses
@@ -137,43 +135,22 @@ The appmake has been updated to support the CPC as a target. When compiling if y
 
 # Putting your code into a disk image
 
-This is an example on how you to integrate your favourite emulator tools with the z88dk features.
-In this case we chose the XTI (Disk Image XTender) utility, which should be available at the following address:
-ftp://ftp.lip6.fr/pub/amstrad/emu-uti/pcxti14.zip
+This is an example on how you to integrate your favourite emulator tools with the z88dk features. z88dk supports creating CPC disc images, however at present you cannot compile and create the disc image in one step.
 
-
-*  Compile your program with the "-create-app" flag set
+Compile your program with the "-create-app" flag set:
 
     zcc +cpc -lndos -create-app adv_a.c
 
 It will create both a raw block (a.bin) and a special binary file called "a.cpc"
 
+Run the appmake program separately:
 
-*  Create a blank disk image with the **xti** tool
+    appmake +cpmdisk -f cpcsystem -b program.cpc
 
-    xti -newS tst.dsk
-
-
-*  Insert the "special file" in the newly created disk image
-
-    xti -incl tst.dsk
-
-```
-    C:\cpcemu>xti -incl tst.dsk
-    Disk Image Extender v1.4 (c) 1998 Pierre Guerrier,
-    DOS port by Ulrich Doewich
-    Image is System, with 169 K free, 0 files over 0 entries.
-    Include ? a.cpc
-    Including file as A       CPC
-    Include ? .
-    
-    C:\cpcemu>
-```
-
-*  Load and run the new program from within your favourite emulator, after having properly configured the virtual disk drives
+Load and run the new program from within your favourite emulator, after having properly configured the virtual disk drives
 
     memory &11ff
-    load "a.cpc",&1200
+    load "program.com",&1200
     call &1200
 
 
@@ -232,4 +209,3 @@ When using the WinAPE Amstrad CPC emulator, if runned code is 0xED, 0xFF then it
 [cpcrslib v.2 - Amstrad CPC Library for z88dk.](http://code.google.com/p/cpcrslib/)
 
 [Crocolib](http://crococode.free.fr/pages/_crocolib.php) (Amstrad CPC/CPC+) Crocolib is a complete framework targeting Amstrad CPC computers, written in C using the z88dk C cross compiler. It allows the creation of rich programs featuring very low-level hardware support. Tools are also included to convert data to the target machine.
-
