@@ -2,20 +2,31 @@
 ![](images/platform/cpm.jpg)
 
 
-The CP/M platform is a surprisingly useful port when used in combination with [ZXCC](http://www.seasip.demon.co.uk/Unix/Zxcc/), the two together can easily test whether an algorithm works, or whether there's an issue in the compiled output code.
+The CP/M platform is a surprisingly useful port when used in combination with [ZXCC](https://www.seasip.info/Unix/Zxcc/), the two together can easily test whether an algorithm works, or whether there's an issue in the compiled output code.
 
 ZXCC is trivial to extend, and you can easily permit access to serial ports, host system calls, advanced paging techniques etc testing out many areas of your code.
 
 ##  Quick Start 
-
 	
 	zcc +cpm -lm -o adventure.com adv_a.c
 
-
 Without specifying a ''-o'' option, a file called ''a.com'' is produced, this can be run with zxcc as follows:
 
-	
 	zxcc a.com
+
+## Creating a disc
+
+appmake supports creating a number of CP/M disc formats that can be used directly by emulators or easily converted using 3rd party tools. Many of these can be produced as part of the compilation step using the `-subtype=XXXX -create-app` options.
+
+To create a disc image with a binary, you can use the following command:
+
+     appmake +cpmdisk -f [format] -b [binary file]
+
+The file will be created on disc with a .COM extension.
+
+The supported formats are displayed by omitting the -f option:
+
+     appmake +cpmdisk -b [any file]
 
 
 
@@ -106,5 +117,4 @@ In a similar way we can extend the protection to the 8080 based systems (which w
 http://www.seasip.info/Cpm/index.html
 
 http://zxvgs.yarek.com/en-index.html   (ZXVGS is also natively supported)
-
 
