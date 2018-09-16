@@ -64,13 +64,13 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Sprinter](Platform---Peters-Plus-Sprinter)| 80x35 | 80x35 (Colour)| 80x35 -default | No | Yes | No | Experimental port. Developed under the SPRINT emulator| 
 [TI82](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 96x64[+graylib](library/graylib)| No | 1 bit| Grey graphics run on the VTI emulator but problems have been reported with the real hardware| 
 [TI83](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 96x64[+graylib](library/graylib)| No | 1 bit| Sound output via infrared port| 
-[ TI83+](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 128x64 [+graylib](library/graylib)| No | 1 bit| Sound output via infrared port|
+[TI83+](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 128x64 [+graylib](library/graylib)| No | 1 bit| Sound output via infrared port|
 [TI85](Platform---TI-Calculators)| 21x8 | 32x8 (B&W) | No | 128x64| No | 1 bit| Sound output via infrared port| 
 [TI86](Platform---TI-Calculators)| 21x8 | 32x8 (B&W) | No | 128x64| No | 1 bit| Sound output via infrared port| 
 [TIKI-100](Platform---Tiki100) | Yes | No | No | 1024x256| No | PSG only | Extension library to the CP/M base| 
 [TRS-80](Platform---TRS80) | 64x16 | No | 64x16 - default| 128x48| No | 1 bit| Sound output via cassette port| 
 [TS2068](Platform---Timex-TS2068)| [32x24, 64x24, 128x24](Platform---Sinclair-ZX-Spectrum#the-standard-zx-spectrum-console-driver) | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | 32x24,64x24, 128x24* | 256x192 | No | 1 bit| Sprite Pack | 
-[VTech Laser 350/500/700](Platform--Laser-350-500-700) | 40x24 | No | 40x24 and 80x24 | 80x48 and 160x48 | No | No | |
+[VTech Laser 350/500/700](Platform--Laser-350-500-700) | 40x24 | No | 40x24 and 80x24 | 80x48,160x48,320x192 | No | No | |
 [VZ/Laser 200](Platform---VZ200) | 32x16| 32x12 (B&W)| 32x16 | 128x64 + 64x32| No | 1 bit| | 
 [Xircom Rex 6000](Platform---Xircom-REX6000) | No | No | No | No | No | No | Graham Cobb's stdio library was due to be integrated into z88dk v1.6. The Rex supplies has its own library mostly divergent from the standard z88dk library | 
 [ZX80](Platform---Sinclair-ZX80) | 32x24| 32x24 (TXT)| 32x24 - default| 64x48[+graylib](library/graylib)| No | as for ZX81| Good compatibility with ZX81, tricks to try keeping the display stable| 
