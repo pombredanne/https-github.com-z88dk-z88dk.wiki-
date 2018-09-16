@@ -40,7 +40,7 @@ Z88dk can create [Packages](z88_packages) (shared libraries) that allow code to 
 
 As for applications, i.e.:
 
-    zcc +z88 -create-app -oapp.bas app.c
+    zcc +z88 -create-app -subtype=app app.c
 
 ## Z88 Shell Target
 
