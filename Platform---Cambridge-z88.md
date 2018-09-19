@@ -29,8 +29,9 @@ Z88dk can be used to create a z88 [Applications](z88_applications) that can be r
 
 ### Command Line
 
-	
 	zcc +z88 -create-app ...
+
+The output of this command will be a .epr file (suitable for insertion into Emulators) and .63 (.62, .61, .60) files representing the individual banks.
 
 ## Z88 Packages
 
