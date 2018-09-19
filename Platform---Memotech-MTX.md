@@ -58,6 +58,8 @@ This is an example command sequence to build and run the ANSI demo in 64 columns
 
 ### Recent MESS versions (now grouped into MAME)
 
+(at the moment a bug in the loader in the MTX emulation prevents MAME from loading the WAV files, but the file was tested on the real hardware)
+
     zcc +mtx  -lndos -create-app -oANSITEST.o -clib=ansi ansitest.c
     copy ANSITEST.wav /mame/ANSITEST.wav
     (move into the 'mame' folder)
