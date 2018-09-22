@@ -11,6 +11,10 @@
 
 An autoboot .dsk image is created automatically by appmake. At the moment, programs up to 24k are supported.
 
+In addition to "native" compiles, this machine can also run CP/M. The z88dk +cpm target supports generating discs in the required format:
+
+    zcc +cpm -subtype=mz2500 -create-app program.c
+
 # Limitations
 
 This port is at an early stage and support is minimal.
