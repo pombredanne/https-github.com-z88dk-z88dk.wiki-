@@ -15,6 +15,13 @@ In addition to "native" compiles, this machine can also run CP/M. The z88dk +cpm
 
     zcc +cpm -subtype=mz2500 -create-app program.c
 
+# Generic console
+
+The generic console is enabled by default on the mz2500. The following screen modes are supported:
+
+* Mode 0: Text, 40x24
+* Mode 1: Text, 80x24
+
 # Limitations
 
 This port is at an early stage and support is minimal.
@@ -24,4 +31,3 @@ This port is at an early stage and support is minimal.
 * [Takeda Emulator](http://takeda-toshiya.my.coocan.jp) - tested emulator
 * [MZ-2500 Manual (Japanese)](http://www.8bity.cz/2017/sharp-mz-2500-user-manual/)
 * CP/M discs and other software at theoldcomputer
-
