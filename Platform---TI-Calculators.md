@@ -134,7 +134,7 @@ Due to possible differences in the backup tools your TI calculator (or emulator)
 
 ### External resources
 
-Assembly programming notes on [WikiTI](http://wikiti.denglend.net/index.php?title=Calculator_Documentation)
+Assembly programming notes on [WikiTI](https://web.archive.org/web/20090121040532/http://wikiti.denglend.net/index.php?title=Calculator_Documentation)
 
 
 
