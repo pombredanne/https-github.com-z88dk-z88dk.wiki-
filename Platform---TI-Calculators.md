@@ -127,6 +127,11 @@ Valid values are (referred to the table above):
 	tse
 	asm
 
+
+Due to possible differences in the backup tools your TI calculator (or emulator) may require a slightly different file;  if in trouble we suggest to try adding "-Cz--altfmt"  to your zcc command line.
+
+
+
 ### External resources
 
 Assembly programming notes on [WikiTI](http://wikiti.denglend.net/index.php?title=Calculator_Documentation)
