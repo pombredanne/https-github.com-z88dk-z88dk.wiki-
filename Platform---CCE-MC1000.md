@@ -21,10 +21,10 @@ The example above is meant to be loaded with the "LOAD" command.  The GAMING mod
 
 # Emulator notes
 
-The last versions of the MESS emulator are quite valid, but the tape loading timing seems to be slighty different.
+The last versions of the MESS emulator are quite valid, but the tape loading timing seems to be slightly different.
 To save some time loading on MESS, add the "-Cz--fast" flag to the compiler command line.
 
-The converted emulator can load the .bin file. To run enter `call 992`
+The converted emulator can load the .bin file. To run enter `run`
 
 # Generic console
 
