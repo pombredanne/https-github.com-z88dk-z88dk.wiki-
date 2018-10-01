@@ -1,6 +1,6 @@
 
 The MicroBEE is a CP/M compatible platform, so the [same base library](Platform---CPM) can be used, but extra functionalities are available.
-Library extras include the 160x100 low resolution graphics, the sound support for the 1-bit sound, and joystick (real and emulated via keyboard scanning).
+Library extras include the low resolution graphics, the sound support for the 1-bit sound, and joystick (real and emulated via keyboard scanning).
 
 
 ### Command Line
@@ -16,6 +16,11 @@ CP/M mode, VT-ANSI color terminal emulation:
 CP/M mode, 40 columns VT-ANSI color terminal emulation:
 
     zcc  +cpm -clib=ansi40 -lm -create-app -lmicrobee -D__BEE__ -oPROGRAM program.c
+
+CP/M mode, generic console, switchable between 40,64,80 columns:
+
+    zcc  +cpm -clib=ansi40 -lm -create-app -subtype=microbee -oPROGRAM program.c
+
 
 
 #### LOADM mode:
@@ -38,15 +43,17 @@ As above in 40 columns mode:
 ### Graphics Library
 
 
-The MicroBee port supports three graphics variants.   For the low resolution at 160x75 include the following library:
+The MicroBee port supports three graphics variants. Low-resolution (up-to 160x50) is built in by default. This form cooperates with the generic console and allows the use of custom fonts and UDGs.
+
+A slightly higher resolution (160x75) is also available. This library will preclude the use of custom fonts and UDGs:
 
     *-lgfxbee
 
-On the Premimium models, full graphics expansion for 16 PCG pages, 640x275:
+On the Premium models, full graphics expansion for 16 PCG pages, 640x275:
 
     *-lgfxbee640
 
-On the Premimium models, standard 16K video memory for 8 PCG pages, 512x256 (faster and smaller) and 320x275:
+On the Premium models, standard 16K video memory for 8 PCG pages, 512x256 (faster and smaller) and 320x275:
 
     *-lgfxbee512
     *-lgfxbee320
