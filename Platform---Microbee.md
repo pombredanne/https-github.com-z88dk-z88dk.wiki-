@@ -44,7 +44,7 @@ The generic console supports switching between 3 text based modes:
 
 * Mode 0 = 80x24
 * Mode 1 = 64x16
-* Mode 2 = 40x24
+* Mode 2 = 40x25
 
 All modes support a custom font and UDG support. Note that in mode 1, the gap between rows of characters is quite large.
 
