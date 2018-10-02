@@ -51,7 +51,7 @@ All modes support a custom font and UDG support. Note that in mode 1, the gap be
 ### Graphics Library
 
 
-The MicroBee port supports three graphics variants. Low-resolution (up-to 160x50) is built in by default. This form cooperates with the generic console and allows the use of custom fonts and UDGs.
+The MicroBee port supports three graphics variants. Low-resolution (up-to 160x48) is built in by default. This form cooperates with the generic console and allows the use of custom fonts and UDGs.
 
 A slightly higher resolution (160x75) is also available. This library will preclude the use of custom fonts and UDGs:
 
