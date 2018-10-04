@@ -26,7 +26,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Epson PX-8/HC-80](Platform---Epson-PX8) | 80x8 | No | No | 480x64* | No | No | *GFX via CONOUT driver, no screen reading (POINT, XOR missing)| 
 [Tatung Einstein](Platform---Tatung-Einstein)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 40x24 and 80x25 (TK-02)  | 256x192 | Yes | No | Extension library to CP/M.Most of GFXLIB by Rafael de Oliveira Jannone| 
 [Enterprise 64/128](Platform---Enterprise64) | 40x25| No | No | 336x243*, 672x243*| No | Yes | *GFX via EXOS | 
-[Galaksija](Platform---Galaksija)| 32x16 (B&W)| 32x16 (B&W) | No | 64x48 | No | 1 bit* | (via tape output) | 
+[Galaksija](Platform---Galaksija)| 32x16 (B&W)| 32x16 (B&W) | 32x16 | 64x48 | No | 1 bit* | (via tape output) | 
 [Jupiter Ace](Platform---Jupiter-Ace)| 32x24| 32x24 (B&W)| 32x24 - default| 64x48, 64x72| No | 1 bit| | 
 [Kaypro](Platform---Kaypro) | 80x25 (ADM3) | No | No | 160x100('84) 80x50('83) | No | No | Extension library to the CP/M base| 
 [Lambda 8300](Platform---Lambda) | 32x24 (B&W)| 32x24 (TXT)| No | 64x48 |  No | 1 bit* | (via tape output) | 
