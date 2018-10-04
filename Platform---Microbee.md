@@ -19,7 +19,7 @@ CP/M mode, 40 columns VT-ANSI color terminal emulation:
 
 CP/M mode, generic console, switchable between 40,64,80 columns:
 
-    zcc  +cpm -clib=ansi40 -lm -create-app -subtype=microbee -oPROGRAM program.c
+    zcc  +cpm -lm -create-app -subtype=microbee -oPROGRAM program.c -pragma-redirect:fputc_cons=fputc_cons_generic
 
 
 
