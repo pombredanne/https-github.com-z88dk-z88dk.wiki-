@@ -24,7 +24,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [EACA EG2000](Platform--EACA-Colour-Genie-EG2000)| 40x24..25| No | 40x24 - default |  160x96..102 | No | 1 bit +PSG | Sound output via cassette port| 
 [Epson PX-4/HC-40](Platform---Epson-PX4)| 40x8 | [30..80x8](Platform---Epson-PX4#the-vtansi-console-driver)| No | 240x64| No | No | | 
 [Epson PX-8/HC-80](Platform---Epson-PX8) | 80x8 | No | No | 480x64* | No | No | *GFX via CONOUT driver, no screen reading (POINT, XOR missing)| 
-[Tatung Einstein](Platform---Tatung-Einstein)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) and 80x25 (TK-02) | No | 256x192 | Yes | No | Extension library to CP/M.Most of GFXLIB by Rafael de Oliveira Jannone| 
+[Tatung Einstein](Platform---Tatung-Einstein)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 40x24 and 80x25 (TK-02)  | 256x192 | Yes | No | Extension library to CP/M.Most of GFXLIB by Rafael de Oliveira Jannone| 
 [Enterprise 64/128](Platform---Enterprise64) | 40x25| No | No | 336x243*, 672x243*| No | Yes | *GFX via EXOS | 
 [Galaksija](Platform---Galaksija)| 32x16 (B&W)| 32x16 (B&W) | No | 64x48 | No | 1 bit* | (via tape output) | 
 [Jupiter Ace](Platform---Jupiter-Ace)| 32x24| 32x24 (B&W)| 32x24 - default| 64x48, 64x72| No | 1 bit| | 
