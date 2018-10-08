@@ -18,16 +18,22 @@ A .dsk image file will be created that can be loaded as the second disc in emula
 When the Einstein boots enter:
 
 ```
-1:
-APP.COM
+1:APP.COM
 ```
 
-And you program will start. 
+And your program will start. 
 
 Alternatively, you can omit -create-app and use the [EDIP program](http://www.einstein.talktalk.net/edip.html) to create a bootable disc image.
 
 Be sure to create upper case files to make them readable by the Einstein operating system.
 
+### TK02 80 column card
+
+The TK02 is supported via switching to mode 10 using `console_ioctl`, you'll need to start Mame as follows:
+
+```
+mame einstein -pipe tk02 -flop1 SYSTEM80.DSK
+```
 
 ### Emulators
 
