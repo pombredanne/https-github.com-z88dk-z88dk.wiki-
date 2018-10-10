@@ -38,7 +38,7 @@ Obviously advanced programmers can find their way to deal with this limit, i.e. 
 Currently the best TIKI-100 emulator we know is [MAME](http://www.mamedev.org/).
 Another good option is the [Djupdal's Tiki-100 emulator](http://www.djupdal.org/tiki/emulator/), even if it is currently less accurate (i.e. it lacks the sound support).
 
-Both the emulators support the floppy disk images, so it is possible to edit a disk image and put the z88dk generated programs on it with a tool.    Please bear in mind the sectors in the floppy images are sorted logically, no sector skew needs to be considered (programs like 22DISK did this job already when the images were transferred from the original disks).
+Using the options `-create-app -subtype=tiki100` a TIKI-100 compatible disk is generated as part of the compilation. However you may wish to add the generated file onto a disk that already contains files. 
 
 #### CPMTOOLS
 
@@ -80,7 +80,6 @@ A specific command line tool is also available ([tikidisk, by Asbjørn Djupdal](
 Supposing we are editing a disk image named "brage.dsk":
 
     tikidisk brage.dsk a a.com    <-- Add the 'a.com' file to the disk image (overwrite the existing copy if present)
-
 
 
 
