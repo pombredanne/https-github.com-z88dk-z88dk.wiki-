@@ -9,7 +9,7 @@ Target specific tricks permit to draw in 4 or 16 color mode as well.
 
 ### Command Line
 
-    zcc  +cpm -startup=2 -lm -ltiki100 -oPROGRAM.COM program.c
+    zcc  +cpm -startup=2 -lm -ltiki100 -oPROGRAM.COM program.c -create-app -subtype=tiki100
 
 
 The "startup=2" option should be omitted if the graphics library is not used and when the resulting program size is > than 16K (more detail on how to enable the graphics lib follows).
