@@ -242,9 +242,14 @@ or, condensed version, in an admin command prompt:
 	vcpkg install boost
 	vcpkg integrate install
 
-- Add C:\src\vcpkg\installed\x86-windows\bin to the PATH
+- Add C:\src\vcpkg\installed\x86-windows\bin and C:\src\vcpkg\installed\x86-windows\debug\bin to the PATH
 - Add C:\src\vcpkg\installed\x86-windows\include to the Visual Studio Project->Properties->C++->Additional Include Directories
-- Add C:\src\vcpkg\installed\x86-windows\lib to the Visual Studio Project->Properties->Linker->Additional Library Directories
+- Add C:\src\vcpkg\installed\x86-windows\lib to the Visual Studio Project->Properties->Linker->Additional Library Directories in Release mode
+- Add C:\src\vcpkg\installed\x86-windows\debug\lib to the Visual Studio Project->Properties->Linker->Additional Library Directories in Debug mode
+- Add the required Boost libraries to the Visual Studio Project->Properties->Linker->Input->Additional Dependencies in Release mode, e.g. boost_program_options-vc140-mt.lib
+- Add the required Boost libraries to the Visual Studio Project->Properties->Linker->Input->Additional Dependencies in Debug mode, e.g. boost_program_options-vc140-mt-gd.lib (Note -gd for debug)
+
+
 
 ### Windows MSYS
 ...
