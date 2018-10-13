@@ -224,3 +224,9 @@ This process is not as wasteful as it sounds -- there is some indication that a 
 
 	
 	zcc +embedded -vn -SO3 -clib=clang_iy --max-allocs-per-node200000 test.c -o test -create-app
+
+## Boost Libraries
+
+# On Windows:
+
+Follow [Install Boost](https://docs.microsoft.com/en-us/visualstudio/test/how-to-use-boost-test-for-cpp?view=vs-2017#install-boost)
