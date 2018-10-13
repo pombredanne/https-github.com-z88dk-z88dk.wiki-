@@ -240,3 +240,7 @@ or, condensed version:
 	vcpkg install boost-program-options
 	
 Set environment variable BOOST = ...path-to-git-clone/vcpkg/installed/x86-windows/include; use -I$(BOOST) in Makefiles.
+
+* On Ubuntu/Debian:
+
+	sudo apt-get install libboost-all-dev
