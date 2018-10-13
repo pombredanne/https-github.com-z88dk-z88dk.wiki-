@@ -238,4 +238,5 @@ or, condensed version:
 	./bootstrap-vcpkg.bat (Windows)
 	./bootstrap-vcpkg.sh (Linux, MacOS)
 	vcpkg install boost-program-options
-	vcpkg integrate install   (to integrate with Visual Studio)
+	
+Set environment variable BOOST = ...path-to-git-clone/vcpkg/installed/x86-windows/include
