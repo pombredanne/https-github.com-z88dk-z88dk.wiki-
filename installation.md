@@ -241,7 +241,7 @@ or, condensed version:
 
 - Set environment variable BOOST_ROOT = ...path-to-git-clone/vcpkg/installed/x86-windows  
 - use -I$(BOOST_ROOT)/include in CXXFLAGS in Makefiles  
-- use -L$(BOOST_ROOT)/lib in LDFLAGS in Makegiles  
+- use -L$(BOOST_ROOT)/lib in LDFLAGS in Makefiles  
 - use $(BOOST_ROOT)/include in Visual Studio project properties->C++->General->Additional Include Directories  
 - use $(BOOST_ROOT)/lib in Visual Studio project properties->Linker->General->Additional Library Directories  
 
