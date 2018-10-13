@@ -262,14 +262,12 @@ or, condensed version, in a MSYS command line:
 	./bootstrap.sh
 	./b2 install --prefix=/c/src/boost-build
 	export PATH=$PATH:/c/src/boost-build/bin
-	
-- Extract boost_1_68_0.zip to c:\src\boost_1_68_0
+	cd /c/src/boost_1_68_0
+	b2 --build-dir=/c/src/boost_1_68_0/build --prefix=/c/src/boost toolset=gcc install
 
-
-	
-- use -I$(BOOST_ROOT)/include in CXXFLAGS in Makefiles  
-- use -L$(BOOST_ROOT)/lib in LDFLAGS in Makefiles  
-
+- use -I/src/boost/include/boost-1_68 in CXXFLAGS in Makefiles  
+- use -L/src/boost/lib in LDFLAGS in Makefiles  
+- link the required libraries, i.e. -lboost_regex-mgw48-mt-1_68
 
 ### On Ubuntu/Debian
 
