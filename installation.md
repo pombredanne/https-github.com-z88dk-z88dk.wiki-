@@ -227,7 +227,7 @@ This process is not as wasteful as it sounds -- there is some indication that a 
 
 ## Boost Libraries
 
-* On Windows:
+** On Windows **
 
 Follow [Install Boost](https://docs.microsoft.com/en-us/visualstudio/test/how-to-use-boost-test-for-cpp?view=vs-2017#install-boost)
 
@@ -239,10 +239,10 @@ or, condensed version:
 	./bootstrap-vcpkg.sh  (Linux, MacOS)
 	vcpkg install boost
 
- - Set environment variable BOOST = ...path-to-git-clone/vcpkg/installed/x86-windows/include; 
- - use -I$(BOOST) in Makefiles
- - use $(BOOST) in Visual Studio project properties->General->Additional Include Directories
+- Set environment variable BOOST = ...path-to-git-clone/vcpkg/installed/x86-windows/include; 
+- use -I$(BOOST) in Makefiles
+- use $(BOOST) in Visual Studio project properties->General->Additional Include Directories
 
-* On Ubuntu/Debian:
+** On Ubuntu/Debian **
 
 	sudo apt-get install libboost-all-dev
