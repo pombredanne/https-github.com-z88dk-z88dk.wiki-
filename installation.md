@@ -233,12 +233,18 @@ Follow [Install Boost](https://docs.microsoft.com/en-us/visualstudio/test/how-to
 
 or, condensed version, in an admin command prompt:
 
+	mkdir c:\src
+	cd c:\src
 	git clone https://github.com/Microsoft/vcpkg
 	cd vcpkg
 	bootstrap-vcpkg.bat   (Windows)
 	./bootstrap-vcpkg.sh  (Linux, MacOS)
 	vcpkg install boost
 	vcpkg integrate install
+
+- Add C:\src\vcpkg\installed\x86-windows\bin to the PATH
+- Add C:\src\vcpkg\installed\x86-windows\include to the Visual Studio Project->Properties->C++->Additional Include Directories
+- Add C:\src\vcpkg\installed\x86-windows\lib to the Visual Studio Project->Properties->Linker->Additional Library Directories
 
 ### Windows MSYS
 ...
