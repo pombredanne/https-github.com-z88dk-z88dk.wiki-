@@ -225,7 +225,7 @@ This process is not as wasteful as it sounds -- there is some indication that a 
 	
 	zcc +embedded -vn -SO3 -clib=clang_iy --max-allocs-per-node200000 test.c -o test -create-app
 
-## Boost Libraries
+## Boost C++ Libraries
 
 ### On Windows
 
