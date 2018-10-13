@@ -230,3 +230,11 @@ This process is not as wasteful as it sounds -- there is some indication that a 
 * On Windows:
 
 Follow [Install Boost](https://docs.microsoft.com/en-us/visualstudio/test/how-to-use-boost-test-for-cpp?view=vs-2017#install-boost)
+
+or, condensed version:
+        git clone https://github.com/Microsoft/vcpkg
+        cd vcpkg
+        ./bootstrap-vcpkg.bat (Windows)
+        ./bootstrap-vcpkg.sh (Linux, MacOS)
+        vcpkg install boost-program-options
+        vcpkg integrate install   (to integrate with Visual Studio)
