@@ -235,8 +235,8 @@ or, condensed version:
 
 	git clone https://github.com/Microsoft/vcpkg
 	cd vcpkg
-	./bootstrap-vcpkg.bat (Windows)
-	./bootstrap-vcpkg.sh (Linux, MacOS)
+	bootstrap-vcpkg.bat   (Windows)
+	./bootstrap-vcpkg.sh  (Linux, MacOS)
 	vcpkg install boost-program-options
 	
-Set environment variable BOOST = ...path-to-git-clone/vcpkg/installed/x86-windows/include
+Set environment variable BOOST = ...path-to-git-clone/vcpkg/installed/x86-windows/include; use -I$(BOOST) in Makefiles.
