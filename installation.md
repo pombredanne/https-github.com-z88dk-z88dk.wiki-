@@ -252,7 +252,14 @@ or, condensed version, in an admin command prompt:
 
 
 ### Windows MSYS
-...
+
+Follow [Install Boost](https://gist.github.com/sim642/29caef3cc8afaa273ce6)
+
+or, condensed version:
+- Extract boost_1_68_0.zip to c:\src\boost_1_68_0
+
+
+	
 - use -I$(BOOST_ROOT)/include in CXXFLAGS in Makefiles  
 - use -L$(BOOST_ROOT)/lib in LDFLAGS in Makefiles  
 
