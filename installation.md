@@ -238,10 +238,10 @@ or, condensed version:
 	bootstrap-vcpkg.bat   (Windows)
 	./bootstrap-vcpkg.sh  (Linux, MacOS)
 	vcpkg install boost
-	
-    - Set environment variable BOOST = ...path-to-git-clone/vcpkg/installed/x86-windows/include; 
-    - use -I$(BOOST) in Makefiles
-    - use $(BOOST) in Visual Studio project properties->General->Additional Include Directories
+
+ - Set environment variable BOOST = ...path-to-git-clone/vcpkg/installed/x86-windows/include; 
+ - use -I$(BOOST) in Makefiles
+ - use $(BOOST) in Visual Studio project properties->General->Additional Include Directories
 
 * On Ubuntu/Debian:
 
