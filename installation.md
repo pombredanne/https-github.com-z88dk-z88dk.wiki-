@@ -249,13 +249,20 @@ or, condensed version, in an admin command prompt:
 - Add the required Boost libraries to the Visual Studio Project->Properties->Linker->Input->Additional Dependencies in Release mode, e.g. boost_program_options-vc140-mt.lib
 - Add the required Boost libraries to the Visual Studio Project->Properties->Linker->Input->Additional Dependencies in Debug mode, e.g. boost_program_options-vc140-mt-gd.lib (Note -gd for debug)
 
-
-
 ### Windows MSYS
 
 Follow [Install Boost](https://gist.github.com/sim642/29caef3cc8afaa273ce6)
 
-or, condensed version:
+or, condensed version, in a MSYS command line:
+
+	cd /c/src
+	unzip .../boost_1_68_0.zip
+	mkdir boost-build boost_1_68_0/build boost
+	cd /c/src/boost_1_68_0/tools/build
+	./bootstrap.sh
+	./b2 install --prefix=/c/src/boost-build
+	export PATH=$PATH:/c/src/boost-build/bin
+	
 - Extract boost_1_68_0.zip to c:\src\boost_1_68_0
 
 
