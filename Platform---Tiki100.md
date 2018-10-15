@@ -1,6 +1,7 @@
 #  TIKI-100
 
 The Tiki-100 is a CP/M compatible platform, so the [same base library](platform/cpm) can be used, but extra functionalities are available.
+
 Library extras include the sound support for the Yamaha PSG chip and the BW graphics, at the incredible resolution of 1024x256.
 
 Target specific tricks permit to draw in 4 or 16 color mode as well.
@@ -9,28 +10,7 @@ Target specific tricks permit to draw in 4 or 16 color mode as well.
 
 ### Command Line
 
-    zcc  +cpm -startup=2 -lm -ltiki100 -oPROGRAM.COM program.c -create-app -subtype=tiki100
-
-
-The "startup=2" option should be omitted if the graphics library is not used and when the resulting program size is > than 16K (more detail on how to enable the graphics lib follows).
-
-### Graphics library hints
-
-The actual BW graphics lib relies on the z88dk codebase and for technical reasons it is not possible to get it working correctly unless it is located over 32768.   The variables used by this library needed to be moved too.
-C programs smaller than 30∼32K (including all the examples provided) won't work unless the code is big enough or the "-startup=2" relocation option is chosen (this latter option will work on max 16K big programs).
-
-The graphics lib provides its own relocatable global variable declarations, so it is necessary to disable the default ones by:
-
-    #pragma output nogfxglobals
-
-- or -
-
-    #include `<tiki100.h>`
-
-
-The "-startup=2" option works sometimes as a quick workaround.
-
-Obviously advanced programmers can find their way to deal with this limit, i.e. since the graphics data can be kept in the lower memory block splash pictures and extra graphics elements could be put on top.
+    zcc  +cpm -lm -ltiki100 -oPROGRAM.COM program.c -create-app -subtype=tiki100
 
 
 ### Emulator hints
