@@ -4,8 +4,6 @@ The Tiki-100 is a CP/M compatible platform, so the [same base library](platform/
 
 Library extras include the sound support for the Yamaha PSG chip and the BW graphics, at the incredible resolution of 1024x256.
 
-Target specific tricks permit to draw in 4 or 16 color mode as well.
-
 ![](images/platform/tikimandel.png)
 
 ### Command Line
@@ -26,6 +24,11 @@ In mode 1, the palette is white on black, in mode 3 a 16 colour palette broadly 
 The palette can be changed using the `gr_setpalette()` defined in `tiki100.h`
 
 Peeking for the character at a screen location `cvpeek()` only works reliably if the background is palette index 0 (default is black). Unlike other machines supporting pixel perfect colour which separate foreground and background or have a shadow screen available, on the tiki100 no such facility is available.
+
+### Graphics
+
+Plotting automatically detects which screen mode and plots a pixel accordingly. You can change the colour of the plotted pixel using the `textcolor()` function from conio.h
+
 
 ### Emulator hints
 
@@ -74,5 +77,4 @@ A specific command line tool is also available ([tikidisk, by Asbjørn Djupdal](
 Supposing we are editing a disk image named "brage.dsk":
 
     tikidisk brage.dsk a a.com    <-- Add the 'a.com' file to the disk image (overwrite the existing copy if present)
-
 
