@@ -47,5 +47,6 @@ Graphics support (at a resolution of 64x48) is only available for the Super80e
 
 # Links
 
+* [The Super 80 at Wikipedia](http://en.wikipedia.org/wiki/Dick_Smith_Super-80_Computer)
 * [Hardware overview](http://interbutt.com/mess/super80/)
 * [Super-80 Software](http://interbutt.com/mess/super80/super80_software.zip)
