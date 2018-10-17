@@ -20,11 +20,10 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Commodore 128 (z80)](Platform--Commodore-c128)| No | 40x25| No | 80x50, 640x200, 640x480 | CP/M only | SID + PSG + 1 bit| [Steve Goldsmith tools](library/c128/sgtools) are supported | 
 [CCE MC-1000](Platform---CCE-MC1000) | Yes | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver)| 32x24 (hires)/32x16 | 256×192| No | 1 bit| | 
 [CP/M](Platform---CPM) | OS calls | If hardware supported| No | Target specific | Yes | No | | 
-[S-OS (The Sentinel)](Platform---SOS)| OS calls | No | No | No |  Yes | No | Multi platform OS published in a Japanese PC magazine | 
+[Dick Smith Super-80](Platform---Super80)| No | No | 32x16 | 64x48 | No | No | 
 [EACA EG2000](Platform--EACA-Colour-Genie-EG2000)| 40x24..25| No | 40x24 - default |  160x96..102 | No | 1 bit +PSG | Sound output via cassette port| 
 [Epson PX-4/HC-40](Platform---Epson-PX4)| 40x8 | [30..80x8](Platform---Epson-PX4#the-vtansi-console-driver)| No | 240x64| No | No | | 
-[Epson PX-8/HC-80](Platform---Epson-PX8) | 80x8 | No | No | 480x64* | No | No | *GFX via CONOUT driver, no screen reading (POINT, XOR missing)| 
-[Tatung Einstein](Platform---Tatung-Einstein)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 40x24 and 80x25 (TK-02)  | 256x192 | Yes | No | Extension library to CP/M.Most of GFXLIB by Rafael de Oliveira Jannone| 
+[Epson PX-8/HC-80](Platform---Epson-PX8) | 80x8 | No | No | 480x64* | No | No | *GFX via CONOUT driver, no screen reading (POINT, XOR missing)|  
 [Enterprise 64/128](Platform---Enterprise64) | 40x25| No | No | 336x243*, 672x243*| No | Yes | *GFX via EXOS | 
 [Galaksija](Platform---Galaksija)| 32x16 (B&W)| 32x16 (B&W) | 32x16 | 64x48 | No | 1 bit* | (via tape output) | 
 [Jupiter Ace](Platform---Jupiter-Ace)| 32x24| 32x24 (B&W)| 32x24 - default| 64x48, 64x72| No | 1 bit| | 
@@ -60,8 +59,10 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Sharp X1](Platform---Sharp-X1)| No | 40(80)x25| No | No | No | PSG only | | 
 [Exidy Sorcerer](Platform---Sorcerer)| 64x30| No | 64x30 | 128x60| No | No | '--300bps' extra mode in appmake| 
 [SORD M5](Platform---Sord-M5)| 32x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 32x24 | 256x192 | No | PSG (+ 1 bit) | Most of GFXLIB by Rafael de Oliveira Jannone | 
+[S-OS (The Sentinel)](Platform---SOS)| OS calls | No | No | No |  Yes | No | Multi platform OS published in a Japanese PC magazine | 
 [Spectravideo SVI](Platform---Spectravideo)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 32x24 | 256x192 | No | 1 bit +PSG | GFXLIB by Rafael de Oliveira Jannone| 
 [Sprinter](Platform---Peters-Plus-Sprinter)| 80x35 | 80x35 (Colour)| 80x35 -default | No | Yes | No | Experimental port. Developed under the SPRINT emulator| 
+[Tatung Einstein](Platform---Tatung-Einstein)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 40x24 and 80x25 (TK-02)  | 256x192 | Yes | No | Extension library to CP/M.Most of GFXLIB by Rafael de Oliveira Jannone|
 [TI82](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 96x64[+graylib](library/graylib)| No | 1 bit| Grey graphics run on the VTI emulator but problems have been reported with the real hardware| 
 [TI83](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 96x64[+graylib](library/graylib)| No | 1 bit| Sound output via infrared port| 
 [TI83+](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 128x64 [+graylib](library/graylib)| No | 1 bit| Sound output via infrared port|
