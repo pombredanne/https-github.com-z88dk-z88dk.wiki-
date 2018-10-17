@@ -499,12 +499,6 @@ Already supported as a CP/M system but deserving specific extras.
 
 Already supported as CP/M and S-OS systems but deserving specific extras.
 
-
-
-###  Dick Smith Super-80
-
-[The Super 80 at Wikipedia](http://en.wikipedia.org/wiki/Dick_Smith_Super-80_Computer)
-
 ### Texas Instruments
 
 ##### TI 73
