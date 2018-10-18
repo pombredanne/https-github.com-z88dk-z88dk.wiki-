@@ -47,6 +47,11 @@ This family of computers has different display characteristics and capabilities 
  Super-80r | 80x25 | N | Y | Y | Y | 160x50 |
  Super-80v | 80x25 | Y | Y | Y | Y | 160x50 |
 
+## Custom font and UDGs
+
+The font size on the Super-80r and Super-80v is 7x9. However, for compatibility with the other targets, z88dk will pad the specified 8x8 font out with a blank line at the top of each character. The machine will cut off the right-most bit of each character when displaying it.
+
+As a result of this geometry, the lores graphics on these machines is slightly mis-shaped.
 
 # Links
 
