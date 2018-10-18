@@ -33,7 +33,6 @@ Units sold (PCW series): > 8 Million
 
 Great Graphical OS: 'Roseanne'
 
-
 ##### PCW 16
 
 Great Graphical OS: 'Roseanne'
@@ -190,25 +189,11 @@ High rez vector graphics engine (μPD7220).
 [MALLARD BASIC (for the PCW-8000 series) page, on its bottom GSX stuff is attached](http://www.fvempel.nl/basic.html)
 
 
-### MC6845 PCG and Graphics
-
-The 6845 CRTC chip was used in many expansions for the CP/M.
-The MicroBEE is already supported.
-
-
-
-####  VDU Expansion Board (VDUEB) for the Dick Smith Super-80
-
-
-
 ### Husky Hunter
 
 [Wikipedia page about the Husky Hunter](http://en.wikipedia.org/wiki/Husky_(computer))
 
 [Some Husky 2 tech infos](http://www.seasip.info/VintagePC/husky2.html)
-
-
-As for the Victor Micronic the display is controlled by an HD61830.
 
 ### Misc HomeBrew Z80 projects
 
