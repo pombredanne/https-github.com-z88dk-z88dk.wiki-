@@ -20,7 +20,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Commodore 128 (z80)](Platform--Commodore-c128)| No | 40x25| No | 80x50, 640x200, 640x480 | CP/M only | SID + PSG + 1 bit| [Steve Goldsmith tools](library/c128/sgtools) are supported | 
 [CCE MC-1000](Platform---CCE-MC1000) | Yes | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver)| 32x24 (hires)/32x16 | 256×192| No | 1 bit| | 
 [CP/M](Platform---CPM) | OS calls | If hardware supported| No | Target specific | Yes | No | | 
-[Dick Smith Super-80](Platform---Super80)| No | No | 32x16 | 64x48 | No | No | 
+[Dick Smith Super-80](Platform---Super80)| No | No | 32x16 / 80x25 | 64x48 / 160x50 | No | Yes | Both TTL and 6845 video supported 
 [EACA EG2000](Platform--EACA-Colour-Genie-EG2000)| 40x24..25| No | 40x24 - default |  160x96..102 | No | 1 bit +PSG | Sound output via cassette port| 
 [Epson PX-4/HC-40](Platform---Epson-PX4)| 40x8 | [30..80x8](Platform---Epson-PX4#the-vtansi-console-driver)| No | 240x64| No | No | | 
 [Epson PX-8/HC-80](Platform---Epson-PX8) | 80x8 | No | No | 480x64* | No | No | *GFX via CONOUT driver, no screen reading (POINT, XOR missing)|  
