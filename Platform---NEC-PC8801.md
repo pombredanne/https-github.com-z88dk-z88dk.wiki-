@@ -19,3 +19,15 @@ To run an appmake created program, first start N88 BASIC (on the M88 emulator th
     G8A00
 
 (CTRL-b would return to BASIC from monitor)
+
+
+# Appmake extras
+
+The audio file can be slightly accelerated with the -Cz--fast build option.
+
+Appmake can be also run in 'dumb mode' to convert any T88 file to wav:
+
+    appmake -b program.t88 --audio --fast --dumb
+
+
+
