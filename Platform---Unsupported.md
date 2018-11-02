@@ -243,8 +243,6 @@ Made in 1978, 7K RAM
 
 ##### PC-8001
 
-##### PC-8801 family
-
 ##### PC-9801 family
 
 ##### PC-8005
