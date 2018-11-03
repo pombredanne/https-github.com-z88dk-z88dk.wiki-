@@ -70,8 +70,6 @@ They are CP/M systems. Support for their Speech Synthetizer could be nice, thoug
 
 ##### FX-9000P
 
-### Coleco Adam
-
 ### Compucorp 600 Series
 
 Proprietary operating system
