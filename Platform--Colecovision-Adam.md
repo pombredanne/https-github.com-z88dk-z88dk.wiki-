@@ -8,17 +8,20 @@
 
 The Colecovision Adam is supported when running CP/M:
 
-    zcc +cpm program.c -subtype=col1 -create-app
+    zcc +cpm program.c -subtype=adam -create-app
 
 Will create a 40 track SSDD disk image that can be inserted as drive b: and your application started
 
 ## Extensions
 
-Planned: TMS9928 libraries, Sound, gencon
+- Generic console
+- ANSI terminal
+- MSX graphics library
+- PSG support
 
 ## Emulator
 
-Tested with the Mame emulator
+Tested with the Mame emulator and CPM 2.2 boot disk
 
 ## Links
 
