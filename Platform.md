@@ -17,7 +17,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Casio PV-2000](Platform---Casio-PV2000) | No | No | 32x24 | 256x192 | No | PSG |
 [Cambridge Z88](Platform---Cambridge-Z88)| Yes | Yes | No | 256x64| Yes | 1 bit| Far memory support, ZSock + many other features | 
 [Colecovision](Platform--Colecovision)| No | No | 32x24 | 256x192 | No | PSG |
-[Colecovision Adam](Platform--Colecovision-Adam| No | No | No | No | No | No | CP/M extension
+[Colecovision Adam](Platform--Colecovision-Adam)| No | No | No | No | No | No | CP/M extension
 [Commodore 128 (z80)](Platform--Commodore-c128)| No | 40x25| No | 80x50, 640x200, 640x480 | CP/M only | SID + PSG + 1 bit| [Steve Goldsmith tools](library/c128/sgtools) are supported | 
 [CCE MC-1000](Platform---CCE-MC1000) | Yes | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver)| 32x24 (hires)/32x16 | 256×192| No | 1 bit| | 
 [CP/M](Platform---CPM) | OS calls | If hardware supported| No | Target specific | Yes | No | | 
