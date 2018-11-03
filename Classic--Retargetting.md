@@ -61,13 +61,6 @@ Should read a string from the keyboard. Done this way because
 some computers (i.e. z88) have an OS call to do this which
 offers editing facilities
 
-	void puts_cons(char *str)
-
-
-*Optional* Writes a NUL terminated string to the console, this call
-is provided to conserve memory usage should no other stdio
-routines be required
-
 	int getk(void)
 
 
