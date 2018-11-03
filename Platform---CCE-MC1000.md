@@ -28,11 +28,16 @@ The converted emulator can load the .bin file. To run enter `run`
 
 # Generic console
 
-The generic console supports both hires (256x192) and text (32x16) modes. In hires mode you should compile with a CRT_FONT option or garbage will be printed on screen. Upto 128 UDGs are supported. 
+The generic console supports hires (256x192), colour (128x192) and text (32x16) modes. In hires mode you should compile with a CRT_FONT option or garbage will be printed on screen. Upto 128 UDGs are supported. 
 
 To switch to hires mode:
 
     int mode = 1;
+    console_ioctl(IOCTL_GENCON_SET_MODE, &mode);
+
+To switch to colour mode:
+
+    int mode = 2;
     console_ioctl(IOCTL_GENCON_SET_MODE, &mode);
 
 To return to text mode (green/yellow):
@@ -42,7 +47,7 @@ To return to text mode (green/yellow):
 
 or text mode in red/white:
 
-    int mode = 2;
+    int mode = 32;
     console_ioctl(IOCTL_GENCON_SET_MODE, &mode);
 
 
