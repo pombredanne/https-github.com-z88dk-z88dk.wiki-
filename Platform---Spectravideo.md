@@ -5,7 +5,7 @@ Most of the generic functions (monochrome graphics, 1 bit sound, stdio, etc) are
 
 
 
-#### Quick start
+## Quick start
 
     zcc  +svi -lm -create-app program.c
 
@@ -23,11 +23,12 @@ A WAV audio file can be created too, with the following option:
     zcc  +svi -lm -create-app -subtype=wav program.c
 
 
-#### 16K model
+### 16K model
+
 To run on a 16K machine, you need to move the code origin to the upper half.
 '-zorg=49200' should be a good option for you zcc command line.  Any working address for the 16k model will still work on the 32k models.
 
-#### Autoboot floppy
+### Autoboot floppy
 
 An auto booting disk can be generated with:
 
@@ -36,3 +37,14 @@ An auto booting disk can be generated with:
 The .svi image created is a raw image file that is understood by mame. You can load it in Mame with the following options:
 
     ./mame64 svi328 -exp sv601 -exp:sv601:1 sv801 -flop1 a.svi
+
+
+## 80 Column mode with the SVI-806 expansion card
+
+The SV-806 card is supported by the generic console. In a similar manner to the Einstein, switch to mode 10 using `console_ioctl`
+
+You'll need to start mame with the following options (this includes the floppy interface):
+
+    ./mame64 svi328 -exp sv601 -exp:sv601:1 sv801 -exp:sv601:2 sv806
+
+Note, in this mode the standard `fgetc_cons()` driver appears to not work. So you'll need to switch to the inkey driver using: `-pragma-redirect:fgetc_cons=fgetc_cons_inkey`
