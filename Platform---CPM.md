@@ -46,28 +46,35 @@ There are a couple of #pragma commands which might be used to cut down the size 
 
 **#pragma output noredir**        - do not insert the file redirection option while parsing the command line arguments (useless if "nostreams" is set)
 
-**#pragma output nogfxglobals**   - No global variables for graphics (required to make the graphics library work on the TIKI-100)
-
 ## Hardware specific extensions
 
 Some hardware specific functions have been adapted to run on both native platorm and generic CP/M environment (the 'gfx' prefix is used for library modules including graphics extensions only).
 
-
 * **-laussie** ([Aussie Byte](Platform---Aussie))
 * **-lcpccpm** ([Amstrad CPC](Platform---Amstrad-CPC))
 * **-lc128cpm**, **-lgfx128**, **-lgfx128hr**, **-lgfx128hr480** ([Commodore 128](Platform---Commodore-c128))
-* **-leinstein** ([Tatung Einstein](Platform---Tatung-Einstein))
-* **-lpx4** ([Epson PX4 (HC-40)](Platform---Epson-px4))
-* **-lmicrobee** ([MicroBEE](Platform---Microbee))
+* `-subtype=einstein` ([Tatung Einstein](Platform---Tatung-Einstein))
+* `-subtype=px4` ([Epson PX4 (HC-40)](Platform---Epson-px4))
+* `-subtype=microbee` ([MicroBEE](Platform---Microbee))
 * **-lnbcpm** ([Grundy NewBrain](Platform---Grundy-Newbrain))
-* **-ltiki100**, -startup=2 ([Tiki-100 (formerly Kon-Tiki)](Platform---Tiki100))
+* `-subtype=tiki100` ([Tiki-100 (formerly Kon-Tiki)](Platform---Tiki100))
 * **-ltrs80cpm**, **-lgfxtrs80**, **-lgfxeg2000** ([Tandy Radio Shack 80 and clones](Platform---TRS80))
 * **-startup=3 -lzxcpm** ([Sinclair ZX Spectrum](Platform---Sinclair-ZX-Spectrum))
 * **-lgfxzcn** ([Amstrad NC-100/NC-200](Platform---Amstrad-NC) 480x64 graphics on ZCN)
 * **-lgfxkp**,**-lgfxkp83**  ([Kaypro](Platform---Kaypro) 160x100 graphics, 80x50 on earlier '83 models)
-* **-lgfxattache**  ([Otrona Attachè](Platform---Otrona) 320x240 graphics)
+* `-subtype=attache` ([Otrona Attachè](Platform---Otrona) 320x240 graphics)
+* `-subtype=adam` ([Colecovision Adam](Platform--Colecovision-Adam) 256x192 graphics)
+* `-subtype=nascom` ([Nascom](Platform---Nascom))
 * (untested) **-lgfxep**, **-lgfxephr** ([Enterprise 64 / 128](Platform---Enterprise64))
 * (untested) **-lgfx9001**, **-lgfx9001krt** ([Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001))
+
+Additionally, -create-app will create discs for the following machines:
+
+* `-subtype=svi` ([Spectravideo SVI](Platform---Spectravideo))
+* `-subtype=qc10` (Epson QX-10/QC-10`
+* `-subtype=osborne1` (Osborne 1)
+* `-subtype=kayproii` (Kaypro II)
+* `-subtype=mz2500` ([Sharp MZ2500](Platform---Sharp-MZ2500))
 
 
 NOTE: for [MSXDOS](Platform---MSX), use the specific target instructions.
@@ -117,4 +124,3 @@ In a similar way we can extend the protection to the 8080 based systems (which w
 http://www.seasip.info/Cpm/index.html
 
 http://zxvgs.yarek.com/en-index.html   (ZXVGS is also natively supported)
-
