@@ -103,7 +103,7 @@ The post-increment operator requires the compiler to decrement the value, not al
 
 ## When possible use global variables (sccz80)
 
-Access to local variables is slightly slower and the generated code becomes slightly bigger.
+Access to local variables is slightly slower and the generated code becomes slightly bigger. However...
 
 ## Declare most frequently used variables last (sccz80)
 
