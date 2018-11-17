@@ -39,7 +39,7 @@ The .svi image created is a raw image file that is understood by mame. You can l
     ./mame64 svi328 -exp sv601 -exp:sv601:1 sv801 -flop1 a.svi
 
 
-## 80 Column mode with the SVI-806 expansion card
+## 80 Column mode with the SV-806 expansion card
 
 The SV-806 card is supported by the generic console. In a similar manner to the Einstein, switch to mode 10 using `console_ioctl`
 
@@ -48,3 +48,13 @@ You'll need to start mame with the following options (this includes the floppy i
     ./mame64 svi328 -exp sv601 -exp:sv601:1 sv801 -exp:sv601:2 sv806
 
 Note, in this mode the standard `fgetc_cons()` driver appears to not work. So you'll need to switch to the inkey driver using: `-pragma-redirect:fgetc_cons=fgetc_cons_inkey`
+
+## Serial port with the SV-805 RS232 expansion card
+
+The SV-805 card contains an 8250 UART and is supported using the z88dk libraries using the API defined in `<rs232.h>`.
+
+For Mame usage, start with:
+
+    ./mame64 svi328 -exp sv601 -exp:sv601:1 sv801 -exp:sv601:2 sv805 -exp:sv601:2:sv805:rs232 null_modem -bitb socket.localhost:25233 -flop1 a.svi
+
+Which will boot an SVI floppy containing your application. You can connect to the serial port by telnetting to port 25233
