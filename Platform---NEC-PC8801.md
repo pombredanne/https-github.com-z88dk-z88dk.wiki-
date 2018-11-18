@@ -13,6 +13,8 @@ Two graphics libraries are available:
  - 160x100,  use the '-lgfxpc88' library inclusion
  - 640x200, use the '-lgfxpc88hr200' library inclusion
 
+Target specific extras are listed in the <pc88.h> header file
+
 # Emulator notes
 
 An emulator capable of loading the T88 cassette file format is necessary, the default ORG address is $8A00, it was chosen peeping into the original software written in the eighties.
