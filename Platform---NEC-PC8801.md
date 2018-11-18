@@ -21,6 +21,10 @@ To run an appmake created program, first start N88 BASIC (on the M88 emulator th
 (CTRL-b would return to BASIC from monitor)
 
 
+## M88 emulator
+
+Please note that the M88 emulator and possibly also others require the correct CPU speed setting (usually 4 or 8 Mhz) to load correctly the program from the tape file.
+
 # Appmake extras
 
 The audio file can be slightly accelerated with the -Cz--fast build option.
@@ -28,8 +32,4 @@ The audio file can be slightly accelerated with the -Cz--fast build option.
 Appmake can be also run in 'dumb mode' to convert any T88 file to wav:
 
     appmake -b program.t88 --audio --fast --dumb
-
-## M88 emulator
-
-Please note that the M88 emulator and possibly also others require the correct CPU speed setting (usually 4 or 8 Mhz) to load correctly the program from the tape file.
 
