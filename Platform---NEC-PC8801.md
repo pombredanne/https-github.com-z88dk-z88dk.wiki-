@@ -6,7 +6,12 @@
 
 This will generate three files, **a.bin** (a pure binary block), **a.t88** (a file valid on many emulators), and **a.wav**, never tested but meant to be loaded on the real hardware.
 
+# Graphics libraries
 
+Two graphics libraries are available:
+
+ - 160x100,  use the '-lgfxpc88' library inclusion
+ - 640x200, use the '-lgfxpc88hr200' library inclusion
 
 # Emulator notes
 
