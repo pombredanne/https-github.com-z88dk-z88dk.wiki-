@@ -51,7 +51,7 @@ The following CLIB options (use "-clib=xxxx") are available:
 
 *  mt, mt64: default clib, MemoTech HRG modes
 
-*  g007: default clib, G007 HRG mode (requires the HRG being set up from BASIC:  CLS 2 / SLOW 4)
+*  g007: default clib, G007 HRG mode (requires the HRG being set up from BASIC:  CLS 2 / SLOW 4, probably the "-Cz--disable-autorun" option will help)
 
 The default math library does not work due to the fact the IY register is used so specific libraries are provided:
 
