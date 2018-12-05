@@ -30,6 +30,7 @@ The z88dk port has been tested on two emulators, ep32 and ep128emu.
 
 To load a .app file with ep128, follow the instructions on http://ep128.hu/Ep_Emulator_eng.htm regarding enabling EPFileIO.rom Once configured enter `run "file:"` from BASIC and select your compiled application.
 
+Other emulators permit to load the file from the current folder, e.g. `load "a.app"`.
 
 The way the text mode is emulated seems to be different in colour mode, so a monochrome 40x25x2 mode is active by default.
 In case no screen is visible with ep128emu on old PCs, try passing the '-no-opengl' parameter at startup.
