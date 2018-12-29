@@ -27,6 +27,31 @@ sccz80 makes no assumptions about registers that need to be preserved, however t
       #endasm
    }
 
+passing two 8-bit values share a 16-bit stack location.
+
+   void myfunc(char x, char y)
+   {
+      #asm
+      
+      ld hl,2
+      add hl,sp              ; skip over return address on stack
+      ld e,(hl)              ; e = x
+      inc hl
+      ld c,(hl)              ; c = y
+      ...
+            
+      #endasm
+   }
+
+At the call location the sp is manipulated as follows:
+
+    ld l, 'x'
+    ld a, 'y'
+    push hl
+    inc  sp
+    push af
+    inc  sp
+
 
 A "long" parameter takes 4 bytes on the stack; the following example could be used in case of a single long parameter being passed to a function, loading it in the **DE-HL** word pair :
 
