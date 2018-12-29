@@ -35,9 +35,9 @@ passing two 8-bit values share a 16-bit stack location.
       
       ld hl,2
       add hl,sp              ; skip over return address on stack
-      ld e,(hl)              ; e = x
+      ld e,(hl)              ; e = y
       inc hl
-      ld c,(hl)              ; c = y
+      ld c,(hl)              ; c = x
       ...
             
       #endasm
