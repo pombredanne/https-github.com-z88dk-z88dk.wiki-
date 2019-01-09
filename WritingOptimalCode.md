@@ -21,10 +21,11 @@ The sccz80 compiler does not perform any optimisation beyond (limited) constant 
 | intcompare | No | Inline some 16 bit comparisons | - | - |
 | longcompare | No | Inline 32 bit equality | - | - |
 | inlineints | No | Inline getters and setters for 16 bit variables | get: +1, set +2 | -27T |
+| ucharmult | No | Inline uint8 * uint8 multiplication | +8 | 155T (average) |
 
 ### Sample results
 
-Sample program calculates an md5sum of a file, it uses long operations heavily. The following show the effect of various options on the result (Initial is from sccz80 on 5/9/2017)
+Sample program calculates an md5sum of a file, it uses long operations heavily. The following show the effect of various options on the result (Initial is from sccz80 on 5/9/2017). These numbers were obtained around about 04/2018 - there have been some changes since then.
 
 | Compile Flags | T states | File size |
 |-|-|-|
