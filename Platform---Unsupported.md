@@ -262,9 +262,9 @@ Two series were made, tbe "Victor II" had more memory and better graphics.
 
 ### MYCOM Z80-A
 
-Japan Electronics College MYCOMZ-80A
+Japan Electronics College MYCOMZ-80A. MC6845 based.
 
-
+Blocked on understanding tape format.
 
 
 ### Nuova Elettronica Z80NE
@@ -644,10 +644,6 @@ Already supported as CP/M but deserving specific extras
 ### Data Tecnology Industries / GNAT
 
 Important Options: 6502 coprocessor (Apple II emulation), enhanced video board
-
-### Dick Smith
-
-##### Super-80
 
 ### Digital
 
