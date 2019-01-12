@@ -199,6 +199,8 @@ High rez vector graphics engine (μPD7220).
 
 [digitarworld.uw.hu: a recent project, emulated by MESS](http://digitarworld.uw.hu)
 
+_No way to load software onto the machine using Mame_
+
 ### Hanimex (Soundic) Pencil II
 
 Made in Hong Kong and sold in Australia and France, it was able (in expanded mode) to run the ColecoVision cartridges.
