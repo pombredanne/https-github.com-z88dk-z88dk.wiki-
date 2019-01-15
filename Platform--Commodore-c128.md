@@ -77,3 +77,6 @@ Graphics support libraries are available for three different resolution modes:  
 
 ![](images/platform/c128chess.jpg) ![](images/platform/c128rabbit.png)
 
+To mix text and graphics at the moment the only ready made option is "-clib=gfxtext". 
+It is uppercase only and has no scroll support but it is reasonably compact and portable on all the targets.
+
