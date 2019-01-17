@@ -7,6 +7,7 @@
 * 16/32k RAM
 * AY-3-8910
 * Variable amounts of ROM + chargen ROM
+* 2 joystick ports
 
 The Japanese series of PC-6001 computers includes the following systems:
 
@@ -58,7 +59,7 @@ This wil bypass the loader and enter in the program directly.
 
 The machines support a 16k ROM slot. Particularly when targeting the 16k models, creating a ROM cartridge can allow use of a high resolution screen.
 
-The -subtype=rom option can be enforced with extra options to pass to appmake:
+The -subtype=rom option supports extra options to pass to appmake:
 
 To produce a file in Intel Hex format (cannot be mixed with chipsize):
 `-Cz--ihex` 
@@ -92,6 +93,11 @@ To change the pixel colour you can call `textcolor()` with the desired colour.
 
 Of course, supported multiple screen modes does have an overhead, as a result if you don't use either mode 1 or mode2, then you can exclude their code from being included using the following pragmas: `-pragma-define:CLIB_DISABLE_MODE0=1` and `-pragma-define:CLIB_DISABLE_MODE1=1`
 	
+# Input
+
+The keyboard doesn’t support simultaneous keypresses and can sometimes lag. As a result if you’re writing games then it’s best to use the joystick() function call. 
+
+
 
 # Emulator Hints
 
