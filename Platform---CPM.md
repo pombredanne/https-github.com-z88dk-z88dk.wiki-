@@ -85,38 +85,10 @@ The code generated for CP/M based computers is protecting by default the MS-DOS 
 
 In a similar way we can extend the protection to the 8080 based systems (which would crash otherwise).
 
-"{z88dk}/lib/cpm_crt0.asm" needs to be modified as follows:
+Just add to your source program:
 
 
-	start:
-	IF !DEFINED_noprotectmsdos
-		defb	$eb,$04		;DOS protection... JMPS LABE
-		ex	de,hl
-		jp	ckz80-start+$100
-		defb	$b4,$09		;DOS protection... MOV AH,9
-		defb	$ba
-		defw	dosmessage	;DOS protection... MOV DX,OFFSET dosmessage
-		defb	$cd,$21		;DOS protection... INT 21h.
-		defb	$cd,$20		;DOS protection... INT 20h.
-	
-	dosmessage:
-		defm	"This program is for a CP/M system."
-		defb	13,10,'$'
-	
-	ckz80:
-		ld	a,$7F			; 01111111 into accumulator
-		inc	a			; make it overflow ie. 10000000
-		jp	pe,begin-start+$100	; only 8080 resets for odd parity here
-		ld	de,z80message		; output "Needs Z80" message
-		ld	c,9
-		jp	5			; BDOS
-	
-	z80message:
-		defm	"Z80 CPU required."
-		defb	13,10,'$'	
-		
-	begin:
-	ENDIF
+    #pragma output protect8080
 
 
 ## CP/M related Links
