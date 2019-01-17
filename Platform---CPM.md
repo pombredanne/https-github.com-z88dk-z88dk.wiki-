@@ -75,6 +75,7 @@ Additionally, -create-app will create discs for the following machines:
 * `-subtype=osborne1` (Osborne 1)
 * `-subtype=kayproii` (Kaypro II)
 * `-subtype=mz2500` ([Sharp MZ2500](Platform---Sharp-MZ2500))
+* `-subtype=smc777` (Sony SMC-70/SMC-777)
 
 
 NOTE: for [MSXDOS](Platform---MSX), use the specific target instructions.
