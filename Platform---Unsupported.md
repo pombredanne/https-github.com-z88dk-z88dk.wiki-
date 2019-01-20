@@ -135,10 +135,6 @@ High rez vector graphics engine (μPD7220).
 
 [QX-10 CP/M Plus Supplied by MML Systems Ltd, supports GSX](http://fjkraan.home.xs4all.nl/comp/qx10/diskimages/README_qx10cpmplus.TXT)
 
-##### NCR DecisionMate V
-
-μPD7220 based video hardware.
-[Italian article about the DecisionMate V](http://www.thecorememory.com/dmv.pdf)
 
 
 ##### Kyber Minus
@@ -476,12 +472,6 @@ Dual z80 system.  uPD7220 graphics controller.
 Already supported as a CP/M system but deserving specific extras.
 
 
-
-
-### Sony SMC-70 / 777
-
-Already supported as CP/M and S-OS systems but deserving specific extras.
-
 ### Texas Instruments
 
 ##### TI 73
@@ -667,6 +657,9 @@ Already supported as CP/M and S-OS systems but deserving specific extras.
 ### NCR Decision Mate V
 
 This is, in its base version, a CP/M system.   By the way many extensions are available: more RAM, 8086 or Motorola CPUa and high rez vector graphics engine (μPD7220).
+
+[Italian article about the DecisionMate V](http://www.thecorememory.com/dmv.pdf)
+
 
 
 ### NorthStar Advantage
