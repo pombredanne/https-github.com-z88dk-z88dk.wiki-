@@ -67,11 +67,9 @@ or -l464_math or -l664_math which will save about 600 bytes of memory.
 
 The generic floating point functions are still available via the "-lm" flag.
 
-
-
 #### Additional functions
 
-The additional functions introduced with the developement of the native CPC library, are now available in all the implementations; these are:
+The additional functions introduced with the development of the native CPC library, are now available in all the implementations; these are:
 
 ```
 void deg();
@@ -126,6 +124,14 @@ Moreover, open() only supports the O_RDONLY and O_WRONLY flags.
 To link in the library supply the -lcpcfs flag to the compiler. If you do
 not require file IO in your program then supply the -lndos flag which 
 links in a dummy stub library that simply returns errors.
+
+#### Generic console and graphics
+
+The generic console supports all 3 official graphics modes. Switching using `console_ioctl()` will also change the pixel plotting mode. The modes are as follows:
+
+* Mode 0: 160×200 pixels with 16 colors (4 bpp)
+* Mode 1: 320×200 pixels with 4 colors (2 bpp)
+* Mode 2: 640×200 pixels with 2 colors (1 bpp)
 
 # Tricks using the WinAPE emulator
 
