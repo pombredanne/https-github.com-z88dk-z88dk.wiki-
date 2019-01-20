@@ -8,6 +8,23 @@ VTech Laser 350/500/700.
 * Banked graphics memory (custom ASIC)
 * 16/64/128k memory available
 
+## Classic library support
+
+* [x] Native console output
+* [ ] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font 
+    * [x] UDG support
+* [x] Lores graphics
+* [x] Hires graphics
+* [ ] PSG sound
+* [x] One bit sound
+* [x] Inkey driver
+* [x] Hardware joystick
+* [ ] File I/O
+* [ ] Interrupts
+
 # Compilation
 
     zcc +laser500 world.c -create-app -Cz--audio
