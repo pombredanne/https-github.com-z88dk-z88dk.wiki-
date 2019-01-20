@@ -35,7 +35,7 @@ The following modes are supported:
 * Mode 1 - 256x192, monochrome
 * Mode 2 - 128x192, colour
 
-With Mode 1 and Mode 2 you will need to define a [font](https://github.com/z88dk/z88dk/wiki/Classic-GenericConsole#defining-a-custom-font) that can be used to print on console. Mode 1 and 2 support UDGs of course.
+With Mode 1 and Mode 2 you will need to define a [font](Classic-GenericConsole#defining-a-custom-font) that can be used to print on console. Mode 1 and 2 support UDGs of course.
 
 To change the pixel colour you can call `textcolor()` with the desired colour.
 

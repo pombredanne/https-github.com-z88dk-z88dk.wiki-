@@ -5,11 +5,11 @@ In addition to providing the standard C library, the classic library provides a 
 
 ## Generic console (vt52)
 
-The [generic console](https://github.com/z88dk/z88dk/wiki/Classic-GenericConsole) console driver provides a uniform set of escape codes to control text positioning, attributes etc. It is integrated into `<stdio.h>` and if not enabled as the default can be selected with the command line `--generic-console`.
+The [generic console](Classic-GenericConsole) console driver provides a uniform set of escape codes to control text positioning, attributes etc. It is integrated into `<stdio.h>` and if not enabled as the default can be selected with the command line `--generic-console`.
 
 ## Inkey keyboard (hardware keyboard scanning)
 
-Hardware keyboard scanning bypasses the target's ROM and directly polls the keyboard. This allows the detection of multiple keypresses and hence allows the creation of more complex games. The various routines are defined in [`<input.h>`](https://github.com/z88dk/z88dk/wiki/Classic---Input-library)
+Hardware keyboard scanning bypasses the target's ROM and directly polls the keyboard. This allows the detection of multiple keypresses and hence allows the creation of more complex games. The various routines are defined in [`<input.h>`](Classic---Input-library)
 
 ## Joystick support
 
@@ -23,13 +23,13 @@ There are the following effective levels of support:
 
 ## Sound support
 
-The classic library supports both a 1 bit [`<sound.h>`](https://github.com/z88dk/z88dk/wiki/Classic-1-bit-sound) and a PSG [`<psg.h>`](https://github.com/z88dk/z88dk/wiki/Classic---PSG-Library) based sound interface. 
+The classic library supports both a 1 bit [`<sound.h>`](Classic-1-bit-sound) and a PSG [`<psg.h>`](Classic---PSG-Library) based sound interface. 
 
 The 1 bit library defines a collection of sound effects in addition to a tone generator.
 
 ## Monochrome graphics
 
-A variety of drawing primitives and higher level functions are supplied by [`<graphics.h>`](https://github.com/z88dk/z88dk/wiki/Classic-Monochrome-Graphics). 
+A variety of drawing primitives and higher level functions are supplied by [`<graphics.h>`](Classic-Monochrome-Graphics). 
 
 
 ## Interrupt hook
