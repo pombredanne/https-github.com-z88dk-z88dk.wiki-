@@ -9,7 +9,6 @@
 * [Overview](Classic-Overview)
 * [Platform List](Platform)
 * [Unsupported Platforms](Platform---Unsupported)
-* [Cross platform libraries](Platform---Classic-Cross-Platform)
 * [Memory Allocation](Classic-allocation)
 * [Retargetting](Classic--Retargetting)
 * [Building the libraries](libsrc)
