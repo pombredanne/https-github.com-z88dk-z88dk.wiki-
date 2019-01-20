@@ -29,6 +29,7 @@ The 1 bit library defines a collection of sound effects in addition to a tone ge
 
 ## Monochrome graphics
 
+A variety of drawing primitives and higher level functions are supplied by (`<graphics.h>`)[https://github.com/z88dk/z88dk/wiki/Classic-Monochrome-Graphics].  
 
 
 ## Interrupt hook
