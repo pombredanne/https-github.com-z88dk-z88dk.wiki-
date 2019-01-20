@@ -6,6 +6,13 @@
 
 This will generate three files, **a.bin** (a pure binary block), **a.t88** (a file valid on many emulators), and **a.wav**, never tested but meant to be loaded on the real hardware.
 
+# Generic console modes
+
+The screen mode can be switched using the `console_ioctl()` function. The following modes are supported:
+
+* Mode 0: 80x25
+* Mode 1: 40x25
+
 # Graphics libraries
 
 Two graphics libraries are available:
@@ -39,4 +46,3 @@ The audio file can be slightly accelerated with the -Cz--fast build option.
 Appmake can be also run in 'dumb mode' to convert any T88 file to wav:
 
     appmake -b program.t88 --audio --fast --dumb
-
