@@ -17,7 +17,7 @@
 
 ## New Library
 
-* [Introduction](front)
+* [Introduction](NewLib-Introduction)
 
 ## Misc
 
