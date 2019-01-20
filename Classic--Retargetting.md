@@ -1,84 +1,99 @@
 #  Introduction 
 
-As can be seen from the number of platforms that z88dk can generate code for, retargetting the kit for a new platform can be a trivial process.
+Adding a new platform target to z88dk can be a fairly simple process depending on the commonality with existing targets. For example, to add a new TMS9918 target can be just a few hours work, with most of that time spent testing keyboard handling.
 
-This document is split into several sections, each of which adds an added degree of functionality to the new target, if you wish to retarget to a new machine then it is recommended that the directory structure mentioned in this documentis followed - this permits easier integration and prevents the source tree from getting overly messy, with over 1500 files and over 7MB of code this is a very important thing to do!
+## Basic levels of support
 
-# Startup Code
+A minimal port should consist of the following items:
 
-The first thing to do is to create a crt0 file in the z88dk/lib directory, this file is used for startup and should initialise the stack, set the origin of the program, parse any command line arguments (if supported), call the main function and then release resources on program completion.
+* A zcc configuration file
+* A crt0 file
+* An implementation of fputc_cons() and library
+* Appmake code to generate a file that can run on an emulator or on a real device
 
-The simplest file to base your crt on is `test_crt0.asm`, this is used for the ticks test machine and is extremely lightweight.
+### ZCC configuration file
 
-The name of the file should be something along the lines of [3/4 letter id]_crt0.asm. This 3/4 letter id should be the unique indentifier that will be used throughout the source tree (Yes, the Spectrum is different, but this was a mistake a long time ago!).
+The configuration file tells zcc where to find the crt0, library file and defines any pre-processor macros that can be used to identify the target.
 
-In addition to the .asm file, a file with the suffix .opt is required, this should include the .asm, each for the z88, this file contains:
+They are relatively small files, so it's usually best to copy the file from a target with similar hardware and search and replace the references for your chosen identifier.
 
-	
-	        INCLUDE         "z80_crt0.asm"
+### The crt0 file
+
+The crt0 file contains the entry point and is responsible for defining the memory layout, setting up the assembler sections and defining constants such as CPU speed that are used by the library.
+
+Again, it's easiest just to copy the file from a similar target and adjust memory addresses, values to suit.
+
+### An implémentation of fputc_cons()
+
+fputc_cons() is the function that will output a character to the display device. The file should be located in `{z88dk}/libsrc/stdio/[machineid]/fputc_cons.asm`. Typically this routine will consist of a call to the machine's firmware.
+
+Once you've got the function it's time to create a library file. The contents of a library file are (by convention) defined in `{z88dk}/libsrc/machineid.lst`. The minimal contents of that file would be:
+
+    stdio/[machineid]/fputc_cons
+    @z80.lst
+
+The library file will be built by `{z88dk}/libsrc/Makefile`, so here you need to add `[machineid]_clib.lib` to the `all:` target and then define a rule:
+
+```
+[machineid]_clib.lib:
+        @echo ''
+        @echo '--- Building [Machine] Library ---'
+        @echo ''
+        $(call buildgeneric,[machineid])
+        TARGET=[machineid] TYPE=z80 $(LIBLINKER) -DSTANDARDESCAPECHARS -DFOR[machineid] -x$(OUTPUT_DIRECTORY)/[machineid]_clib @$(LISTFILE_DIRECTORY)/[machineid].lst
+```
+
+The classic library does not disturb the iy register, however it will use the ix register. As a result if your machine requires that ix is preserved then the last line of the rule should look like this:
+
+```
+        TARGET=[machineid] TYPE=ixiy $(LIBLINKER) --IXIY -DSTANDARDESCAPECHARS -DFOR[machineid] -x$(OUTPUT_DIRECTORY)/[machineid]_clib @$(LISTFILE_DIRECTORY)/[machineid].lst
+```
+
+This will force the library to be assembled in such way that where ix is used in a source file, it will be replaced with iy in the resulting binary.
+
+You can then build the library with `make [machineid]_clib.lib` and copy the resulting file to `{z88dk}/lib/clibs/`
+
+### Appmake support
+
+All targets should support creating a file that will run on either an emulator or the real hardware. appmake has built in support for creating and padding ROM files and provides many routines to solve common file generation problems, however it's probable that your chosen machine isn't already supported.
+
+Once you've done all of these steps, you should be able to compile and run a hello world example.
+
+## Adding keyboard support
+
+When keyboard input is required, the classic library will call the `fgetc_cons()` function. The implementation of this file should be in `{z88dk}/libsrc/stdio/[machineid]/fgetc_cons.asm`. Some parts of the library or examples require polling of the keyboarders using `getk()`, this file is located in `{z88dk}/libsrc/stdio/[machineid]/fgetc_cons.asm`
+
+## Adding the generic console
+
+...
+
+## Adding PSG support
+
+z88dk contains drivers for the AY-3-8910 and SN76489.
+
+...
+
+## Adding one bit sound support
 
 
-Whilst in the lib/ directory, a .cfg file should be created lib/config directory for the target. Base it on the configuration file for the startup that was used.
 
+...
 
+## Adding graphics support
 
-[z88dk forum - Information on how the crt0 files are being extended for the future z88dk releases.](http://www.z88dk.org/forum/viewtopic.php?id=8655)
+...
 
+## Adding inkey keyboard reading
 
+...
 
-
-
-# Floating Point Routines
-
-A set of floating point routines is supplied which will work on any Z80
-(it does use undocumented opcodes, but...), however should that target have a an FP calculator in the firmware, it could be advantageous to take advange of it. Use the mathz88.asm file in the lib directory as a template. To avoid the need to change the compiler, the -doublestr flag can be supplied to the compilation which will use the native functions to change floating point strings into values at run time. This obviously increases the overhead of using floating point arithmetic, and as such it might be desirable to add a constant to the compiler to represent the value 0.1.
-
-# Stdio Library Routines
-
-## Initial Steps
-
-Create a directory z88dk/libsrc/stdio/[machine id]. This is the directory that will contain the basic routines that are needed for supporting a machine. 
-
-##  Required Functions 
-
-	int fgetc_cons(void)
-
-
-Should read a key from the keyboard returning the ASCII
-key value in hl. This routine should return 0 if no key
-is pressed, however unless an error occurs it should wait
-for a keypress.
-
-	void fputc_cons(char code)
-
-
-Should print code to the screen
-
-	int fgets_cons(char *buf, int maxlen)
-
-
-Should read a string from the keyboard. Done this way because
-some computers (i.e. z88) have an OS call to do this which
-offers editing facilities
-
-	int getk(void)
-
-
-*Optional* Should read the current state of the keyboard, returning 0 if no key is pressed
-
-# File I/O
-
-## Initial Steps
-
-Create a directory libsrc/fcntl/machine_id
-
-## Required Functions
+## Adding file I/O
 
 Should file handling be required, then the following standard routines
 from fcntl.h (or unistd.h as it is sometimes known), alternatively, should file handling not be required, then linking with the -lndos library will satisfy any compile-time requirements.
 
-	int open(far char *name, int flags, mode_t mode);
-	int creat(far char *name, mode_t mode);
+	int open(char *name, int flags, mode_t mode);
+	int creat(char *name, mode_t mode);
 	int close(int fd);
 	size_t read(int fd, void *ptr, size_t len);
 	size_t write(int fd, void *ptr, size_t len);
@@ -86,7 +101,6 @@ from fcntl.h (or unistd.h as it is sometimes known), alternatively, should file 
 
 
 	int __FASTCALL__ readbyte(int fd);
-
 
 This function reads a byte from filehandle fd (which is 
 supplied in the register pair hl), if an error occurred it
@@ -107,7 +121,3 @@ on program exit should it not be able to close a file. This
 function is a dummy function on the z88 but for example on the
 Spectrum +3 this function would be of use.
 
-Once the above functions are available, the entire z88dk stdio library
-(including printf etc) is available for use, in addition to all the ctype,
-string, assert, setjmp, near malloc, some stdlib and the generic math
-routines - just a little work yields over 100 usable functions!
