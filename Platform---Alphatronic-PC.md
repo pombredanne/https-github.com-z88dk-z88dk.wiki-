@@ -12,6 +12,15 @@ The resulting .rom file can be loaded into mame and run as follows:
 
     mame64 alphatro -cartridge1 a.rom
 
+# Generic console and graphics modes
+
+The Alphatronic PC supports 40 and 80 column modes and the corresponding lores graphical. You can switch modes using `console_ioctl()` with the following mode values:
+
+* Mode 0: 40x24 text, 80x48 graphics
+* Mode 1: 80x24 text, 160x48 graphics
+
+Colour is supported in both modes.
+
 # Screenshots
 
 Running the VT52/generic console test program:
