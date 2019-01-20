@@ -1,12 +1,12 @@
 # INPUT LIBRARY (input.h)
 
- | Header     | [{z88dk}/include/input.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/input.h?view=markup)    |   
- | -----------------------------------------------------------------------------------------------------------------------------   
+| | |
+|-|-|
+ | Header     | [{z88dk}/include/input.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/input.h?view=markup)    |     
  | Source     | [{z88dk}/libsrc/input](https://github.com/z88dk/z88dk/tree/master/libsrc/input/)                               |   
  | Include    | #include `<input.h>`                                                                                              |  
  | Linking    | n/a                                                                                                             |  
  | Compile    | n/a                                                                                                             |  
- | Supported  | [zx spectrum](platform/zx), [zx81](platform/zx81), [sam](platform/samcoupe)                                       |
  | Comments   | **1.** These library functions are compiled as part of each target's implicit library.                          |  
  | | **2.** Platform-specific input functions are documented as comments in the header file.                         |             
  | | **3.** The functions in this library access input device hardware directly; this is usually                     |             
