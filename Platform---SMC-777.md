@@ -28,6 +28,7 @@ This machine can run both CP/M and S-OS and hence applications compiled for eith
 * [ ] Inkey driver
 * [ ] Hardware joystick
 * [x] File I/O
+* [ ] Interrupts
 
 ## Compilation
 
