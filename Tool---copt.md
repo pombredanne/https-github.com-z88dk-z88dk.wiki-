@@ -2,11 +2,11 @@
 
 The zcc command automatically involves the copt optimizer.   The level of optimization is defined by the "-O`<n>`" flag, in which `<n>` defines the number of passes and consequently the quantity of rules wich will be applied.
 
-The optimization level is '2', but raising to '3' shouldn't have negative effects at all:
+The optimization level is '2', level '3' is optimised for size
 
         zcc -O3 [flags]  [files to be compiled/linked]
 
-Excluding the optimizer (-O0) is normally a bad idea.
+Excluding the optimizer (-O0) is also possible and can be useful when tracing bugs.
 
 
 ## Optimizer rules
