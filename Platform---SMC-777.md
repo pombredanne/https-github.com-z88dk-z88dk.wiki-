@@ -43,6 +43,13 @@ The target is a CP/M derivative, so you will need to boot into CP/M and launch t
 
 The target has been tested using the Takeda emulator.
 
+## Graphics support
+
+The following screen modes are available:
+
+* Mode 0: 80x25, 160x50 lores graphics
+* Mode 1: 40x25,  80x50 lores graphics
+
 ## Links
 
 * [Takeda Emulator](http://takeda-toshiya.my.coocan.jp/smc777/index.html)
