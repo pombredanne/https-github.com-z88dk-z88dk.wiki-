@@ -30,6 +30,18 @@ Applicable for ROM compiles only. The data section is copied from ROM into RAM o
 
 Applicable for ROM compiles only. The data section is stored compressed in ROM and decompressed into RAM on program start.
 
+## Controlling the output section names
+
+The following pragmas are available in both sccz80 and zsdcc:
+
+* `#pragma codeseg name`
+* `#pragma constseg name`
+
+The following are only available in sccz80 (see [Issue #156](https://github.com/z88dk/z88dk/issues/156))
+
+* `#pragma bssseg name`
+* `#pragma dataseg name`
+* `#pragma initseg name`
 
 ## Startup behaviour
 
@@ -69,7 +81,7 @@ On platforms that support it, using this pragma will allow the 64 column font us
 
 On platforms that support it, using this pragma will disable the mapping that takes place between VT52 colour sequences and the native palette. As a result, all colour parameters will refer to the native palette colour index.
 
-# Console input
+## Console input
 
 On most targets the classic library will call the firmware routines for reading the keyboard. Sometimes however, this may cause undesirable side effects or simply be too unresponsive. An increasing number of targets support `<input.h>` and the `inkey` methods for reading the keyboard
 
@@ -100,3 +112,17 @@ On targets that support different numbers of columns, this option will allow com
 `-pragma-define:ansifont_is_packed=0`
 
 A font will be automatically configured, but if you wish to change it then you can use this pragma. Unless you have packed the font, then you should also supply the option `-pragma-define:ansifont_is_packed=0`
+
+## Configuring printf and scanf converters
+
+Both newlib and classic link in only the required converters for printf and scanf. If you compile using sccz80, then it will endeavour to configure the converters automatically, however if you use zsdcc then you will need to configure the list of converters that are required.
+
+    #pragma printf = "<list printf converters here including l or ll for long and longlong>"
+    #pragma scanf  = "<list scanf converters here including l or ll for long and longlong>"
+
+Example:
+
+    #pragma printf = "%s %c %u %f"     // enables %s, %c, %u, %f only
+    #pragma scanf  = "%s %lx %lld %["  // enables %s, %lx, %lld, %[ only
+
+The converter string content is flexible. You can insert spaces, do away with quotes, include % signs and so on. ”%s%c”, “s c”, ”%0d %llx” are all valid. Digits and flag specifiers (+, -, *) have no effect on the new c library but the classic c library will distinguish between ”%0d” and ”%d” with the latter meaning use the simple %d without any formatting. 
