@@ -5,6 +5,8 @@ In addition to providing the standard C library, the classic library provides a 
 
 ## Generic console (vt52)
 
+The [generic console](https://github.com/z88dk/z88dk/wiki/Classic-GenericConsole) console driver provides a uniform set of escape codes to control text positioning, attributes etc
+
 ## Inkey keyboard (hardware keyboard scanning)
 
 Hardware keyboard scanning bypasses the target's ROM and directly polls the keyboard. This allows the detection of multiple keypresses and hence allows the creation of more complex games.
