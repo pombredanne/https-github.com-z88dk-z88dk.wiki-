@@ -39,9 +39,9 @@ The classic library additionally provides [named heap](Classic-allocation) and [
 
 # Sound Libraries
 
-## Beeper
+The classic library supports both a 1 bit [`<sound.h>`](Classic-1-bit-sound) and a PSG [`<psg.h>`](Classic---PSG-Library) based sound interface. 
 
-## PSG
+The 1 bit library defines a collection of sound effects in addition to a tone generator.
 
 # Input Library
 
@@ -49,6 +49,15 @@ Hardware keyboard scanning bypasses the target's ROM and directly polls the keyb
 
 On ports where it is available, you can switch stdin to non-firmware reading routines using the option `-pragma-redirect:fgetc_cons=fgetc_cons_stdin`
 
+## Joystick support
+
+Targets generally support at least some form of joystick support. Polling of the joystick is exposed using the `joystick()` function in `<games.h>`
+
+There are the following effective levels of support:
+
+* Two keyboard joysticks using ROM functions: Only a single direction can be registered at once
+* Multiple keyboard joysticks using inkey driver: Multiple directions supported
+* Hardware joystick support: Multiple directions supported
 
 # Debug Library
 
@@ -56,8 +65,7 @@ On ports where it is available, you can switch stdin to non-firmware reading rou
 
 ## Mono Graphics
 
-If a platform supports graphics then a [mono graphics](monographics) library is available via `<graphics.h>` that provides several
-drawing primitives and some additional features to render vector graphics.
+A variety of drawing primitives and higher level functions are supplied by [`<graphics.h>`](Classic-Monochrome-Graphics). 
 
 ## Mono Sprites
 
@@ -66,7 +74,12 @@ more optimised sprite libraries available offering additional features.
 
 ## X11 emulation
 
+This is an experimental library to emulate some basic behaviour fo the Xlib functions.
+It isn't based on the network layer as the original library, and it implements only a tiny subset of the original functions but, being based on the "monochrome graphics" library, it is faily portable to many of the supported targets.
+
 ## lib3d
+
+The [3D Libraries](lib3d) include a standard set of functions for making your own 3D functions. This document is a reference for these functions.
 
 ## VDP Support
 
