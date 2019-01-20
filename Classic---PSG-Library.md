@@ -1,7 +1,8 @@
 # PSG (psg.h)
 
+| | |
+|-|-|
  | Header     | [{z88dk}/include/psg.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/psg.h)    |        
- | -------------------------------------------------------------------------------------------------------------        
  | Source     | [{z88dk}/z88dk/libsrc/psg](https://github.com/z88dk/z88dk/tree/master/libsrc/psg/)                     |
  | Include    | #include `<psg.h>`             |                                                                          
  | Linking    | n/a                          |                                                                          
@@ -9,7 +10,7 @@
  | Comments   |                              |                                                                          
 
 
-Very basic PSG interface library.    It provides the channel activation and frequency conversion maths.
+Very basic PSG interface library. It provides the channel activation and frequency conversion maths.
 
 A minimal interface for the Commodore 128's SID is included.
 
