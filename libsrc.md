@@ -12,7 +12,7 @@ Once the libs are compiled copy them (*.lib) in {z88dk}/lib/clibs.
 
 Happy coding !
 
-# (Re)building the z88dk libraries on windows
+# (Re)building the z88dk libraries on Windows
 
 The following is a recipe for building the libraries from a vanilla machine, you will probably need adjust if you've already got a source tree.
 
