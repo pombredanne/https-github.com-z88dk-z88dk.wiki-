@@ -1,6 +1,6 @@
 # Installation
 
-The [nightly build](http://nightly.z88dk.org/) is the most current version.  The package available for download from [sourceforge](https://sourceforge.net/projects/z88dk/) is dated 10 Jan 2017.
+The [nightly build](http://nightly.z88dk.org/) is the most current version.  The package available for download from [sourceforge](https://sourceforge.net/projects/z88dk/) and Github is dated 19 Jan 2019.
 
 The nightly build should be preferred unless you have a reason to install an older version of z88dk.  The documentation on this page will apply to the nightly build.
 
@@ -35,13 +35,29 @@ Download the latest nightly checked source package and unzip it:
 
 This will create a populated z88dk directory in the current working directory.
 
-To succeed in building the 'z80svg' graphics tool you need the 'libxml2' library to be previously installed, although its absence will not prevent the rest of the kit from building.
+You will need the following libraries/packages installed to successfully build z88dk:
+
+```
+dos2unix
+libboost-all-dev
+texinfo
+texi2html
+libxml2-dev
+```
+
+The following perl packages are required to run the z80asm unit tests:
+
+```
+App::Prove Modern::Perl Capture::Tiny Capture::Tiny::Extended Path::Tiny File::Path Template Template::Plugin::YAML Test::Differences CPU::Z80::Assembler Test::HexDifferences Data::HexDump Object::Tiny::RW Regexp::Common List::Uniq
+```
+
+More details can found in `.travis.yml` which defines the required packages for the Travis CI build.
+
 
 Then enter:
 
     cd z88dk
     chmod 777 build.sh
-    chmod 777 config.sh
     ./build.sh
 
 You can run z88dk keeping it in the current location, all you need to do is to set the following environment variable:
@@ -58,7 +74,7 @@ Modify the configuration as follows:
     export PATH=${PATH}:${HOME}/z88dk/bin
     export ZCCCFG=${HOME}/z88dk/lib/config
 
-A system install is not supported in this release.
+A system install is not fully supported in this release.
 
 To complete installation you may want to build sdcc, details below.
 
@@ -146,45 +162,7 @@ The [z88dk nightly build](http://nightly.z88dk.org/) for mac osx is now self-con
 
 ** 3. Linux / Unix **
 
-Other users will have to apply the svn patch found in [sdcc_z88dk_patch.zip](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/sdcc_z88dk_patch.zip) and build sdcc from source.
-
-A typical linux install process for sdcc would look like this:
-
-
-*  **`svn checkout svn://svn.code.sf.net/p/sdcc/code/trunk sdcc-code`**  This will check out the current development version of sdcc.  If you already have the sdcc-code tree from a previous checkout you can instead perform an update.
-
-*  **copy "sdcc-z88dk.patch" from inside [sdcc_z88dk_patch.zip](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/sdcc_z88dk_patch.zip) into the sdcc-code directory**
-
-*  **`cd sdcc-code`**
-
-*  **`patch -p0 < sdcc-z88dk.patch`**  Apply the z88dk patch.
-
-*  **`cd sdcc`**
-
-*  **`./configure`**  Some additional packages may have to be installed to complete configuration.  On Knoppix 7.6.0 these were flex, bison, gputils, libboost-dev.
-
-*  **`make`**  The build will fail when the non-z80 device libraries are compiled.  This is expected and is the reason the z88dk patch has not been accepted into sdcc; the resulting binary is error-free for z80 compilation only.
-
-*  **`cd bin`**
-
-*  **`mv sdcc {z88dk}/bin/zsdcc`**  Move the patched sdcc executable to {z88dk}/bin and rename it "zsdcc".
-
-*  **`cp sdcpp {z88dk}/bin/zsdcpp`** Copy the sdcc preprocessor to {z88dk}/bin and rename it "zsdcpp".
-
-*  **`cd ../..`**  Back to sdcc-code.
-
-*  **`patch -Rp0 < sdcc-z88dk.patch`**  Undo the patch.  We will re-build sdcc from original source so that sdcc is available in its original form.
-
-If you have an existing sdcc install or you don't want to continue with an install of sdcc you can stop here and verify the install was successful below.  Optionally keeping the sdcc source tree in an unpatched state can allow you to update the zsdcc binary by repeating the steps above as sdcc itself is updated.  Both z88dk and sdcc are active projects that see frequent updates.
-
-To complete sdcc installation continue with these steps:
-
-
-*  **`cd sdcc`**
-
-*  **`make`**  The build process should now complete.
-
-*  **`sudo make install`**
+Running make from the top level will build sdcc and copy it into z88dk/bin.
 
 ** VERIFY THE INSTALL **
 
