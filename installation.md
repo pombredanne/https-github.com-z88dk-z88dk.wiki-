@@ -152,19 +152,19 @@ m4 is also used by the new c library to generate its crts from macros.
 
 sdcc is an open source optimizing C compiler that can target the z80.  A patched version is compatible with z88dk and can be invoked by zcc when the appropriate flag is selected on the command line.  Besides making sdcc compatible with the z88dk toolchain, the patch also improves sdcc's generated code, addresses some of sdcc's code generation bugs and, being part of z88dk, grants sdcc access to z88dk's assembly language libraries and ready-made crts.
 
-** 1. Windows **
+### Windows
 
 The [z88dk nightly build](http://nightly.z88dk.org/) for windows is now self-contained and includes the zsdcc binary in z88dk/bin.  Separate installation of sdcc is no longer necessary.  [sdcc_z88dk_patch.zip](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/sdcc_z88dk_patch.zip) will often contain a more recent windows build of zsdcc that can be copied into z88dk/bin.
 
-** 2. Mac OSX **
+### Mac OSX
 
 The [z88dk nightly build](http://nightly.z88dk.org/) for mac osx is now self-contained and includes the zsdcc binary in z88dk/bin.  Separate installation of sdcc is no longer necessary.
 
-** 3. Linux / Unix **
+### Linux / Unix 
 
 Running make from the top level will build sdcc and copy it into z88dk/bin.
 
-** VERIFY THE INSTALL **
+### Verify the zsdcc install
 
 "zsdcc" is the name of the patched sdcc executable and "zsdcpp" is the name of the sdcc C preprocessor that z88dk will invoke.
 
