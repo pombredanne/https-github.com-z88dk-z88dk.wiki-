@@ -731,3 +731,12 @@ Probably > 120000 units sold.
 
 The Micronic 1000 is a handheld terminal with infrared port and a small LCD display, 8 lines by 20 characters (160x64 dots) managed by an Hitachi HD61830 controller.
 Micronic was the UK subsidiary of Swedish Datronic AB; eventually Tandy acquired it.
+
+
+#### Xerox
+
+### 1810
+ nsc800, LCD, supposedly graphics
+
+### 1850
+ z80 & 8088 dual cpu
