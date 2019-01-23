@@ -223,7 +223,7 @@ They were mostly CP/M systems, but the model 1080 had a resident program only.
 
 [A page related to the Idea computer at computerhistory.it](http://www.computerhistory.it/index.php?option=com_content&view=article&id=354&Itemid=172)
 
-### Micro Office 1pp / RoadRunner
+### Micro Office 100 / RoadRunner
 
 http://vintage-laptops.com/?page_id=48&lang=en
 
