@@ -40,6 +40,12 @@ This command will compile the program at location '0', inserting a simplified in
 
 Note that some of the libraries are not ready to work in ROM, thus a bit of tweaking will probably be required, this is not for beginners.
 
+### Creating a bootable +3 disc
+
+    zcc +zx -lndos -create-app adv_a.c -subtype=plus3
+
+This command will create a bootable +3 disc suitable for autoloading from the main menu.
+
 
 ### +3 Locomotive CP/M
 
