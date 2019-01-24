@@ -256,11 +256,17 @@ Made in 1978, 7K RAM
     The PC-8300 is a Kyocera project, rebranded also by Olivetti and Tandy Radio Shack, the CPU shoulud be 8085 compatible (not Z80).
 
 
-
-
 ### Micronique Victor / Hector
 
 Two series were made, tbe "Victor II" had more memory and better graphics.
+
+
+### Micronic 1000
+
+Micronic 1000 is a handheld terminal with infrared port and a small LCD display, 8 lines by 20 characters (160x64 dots) based on an Hitachi HD61830 controller.
+Micronic was the UK subsidiary of Swedish Datronic AB; eventually Tandy acquired it.
+
+
 
 ### MYCOM Z80-A
 
@@ -506,6 +512,9 @@ Already supported as CP/M and S-OS systems but deserving specific extras.
 ##### Laser PC4
 
 
+#### Xerox 1810
+
+NSC800 (Z80 clone), LCD, supposedly graphics, CP/M
 
 
 
@@ -540,6 +549,7 @@ In Italy the course came by "Scuola Radio Elettra", in France it was known as "E
 ### MultiTech - Micro-Professor MPF-I
 
 [MPF-I on Wikipedia](http://en.wikipedia.org/wiki/Micro-Professor_MPF-I)
+20 'characters' on 7 segments LED display, 8K ROM monitor, 4K RAM, 49 keys keyboard
 
 
 ### Martin Research
@@ -684,6 +694,12 @@ GDOS is mentioned: is it the same of the GSX ?  Doesn't seem so.
 
 Z80C (CP/M) + 8088 CPU, high rez graphics.
 
+
+### Xerox 1850
+
+Z80 & 8088 dual CPU, CP/M
+
+
 ## Gaming consoles
 
 Being ROM based the gaming consoles need a slightly different software architecture; part of the z88dk functions need a valid RAM work area space.
@@ -727,16 +743,6 @@ There's plenty of pieces of history which can be insanely twisted,  out there..
 Probably > 120000 units sold.
 
 
-#### Victor Micronic
-
-The Micronic 1000 is a handheld terminal with infrared port and a small LCD display, 8 lines by 20 characters (160x64 dots) managed by an Hitachi HD61830 controller.
-Micronic was the UK subsidiary of Swedish Datronic AB; eventually Tandy acquired it.
 
 
-#### Xerox
 
-### 1810
- nsc800, LCD, supposedly graphics
-
-### 1850
- z80 & 8088 dual cpu
