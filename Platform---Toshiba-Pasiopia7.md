@@ -50,7 +50,7 @@ The following screen modes are available:
 * Mode 0: 80x25, 80x25 lores graphics
 * Mode 1: 40x25, 40x25 lores graphics
 
-The target does support hires graphics, but it is not currently supported by z88dk.
+The machine does support hires graphics, but it is not currently supported by z88dk.
 
 ## Links
 
