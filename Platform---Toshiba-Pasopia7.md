@@ -33,7 +33,7 @@ As a result the machine has been tested under the `+pasiopia7` target.
 
 ## Compilation
 
-   zcc +pasiopia7 app.c -create-app
+   zcc +pasopia7 app.c -create-app
 
 A .dsk file will be created that can be inserted into an emulator and will auto boot.
 
