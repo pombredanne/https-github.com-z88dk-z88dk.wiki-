@@ -72,7 +72,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [TI85](Platform---TI-Calculators)| 21x8 | 32x8 (B&W) | No | 128x64| No | 1 bit| Sound output via infrared port| 
 [TI86](Platform---TI-Calculators)| 21x8 | 32x8 (B&W) | No | 128x64| No | 1 bit| Sound output via infrared port| 
 [TIKI-100](Platform---Tiki100) | Yes | No | 128x32,64x32,32x32 | 1024x256 | No | PSG only | Extension library to the CP/M base| 
-[Toshiba Pasiopia 7](Platform---Toshiba-Pasiopia7) | No | No | 40x25 | 80x25 | No | No | |
+[Toshiba Pasopia 7](Platform---Toshiba-Pasopia7) | No | No | 40x25 | 80x25 | No | No | |
 [TRS-80](Platform---TRS80) | 64x16 | No | 64x16 - default| 128x48| No | 1 bit| Sound output via cassette port| 
 [TS2068](Platform---Timex-TS2068)| [32x24, 64x24, 128x24](Platform---Sinclair-ZX-Spectrum#the-standard-zx-spectrum-console-driver) | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | 32x24,64x24, 128x24* | 256x192 | No | 1 bit| Sprite Pack | 
 [VTech Laser 350/500/700](Platform--Laser-350-500-700) | 40x24 | No | 40x24 and 80x24 | 80x48,160x48,320x192 | No | No | |
