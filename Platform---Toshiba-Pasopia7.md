@@ -33,7 +33,7 @@ As a result the machine has been tested under the `+pasiopia7` target.
 
 ## Compilation
 
-   zcc +pasopia7 app.c -create-app
+    zcc +pasopia7 app.c -create-app
 
 A .dsk file will be created that can be inserted into an emulator and will auto boot.
 
@@ -47,8 +47,8 @@ The target has been tested using the Takeda emulator. The Mame emulator implemen
 
 The following screen modes are available:
 
-* Mode 0: 80x25, 80x25 lores graphics
-* Mode 1: 40x25, 40x25 lores graphics
+* Mode 0: 40x25, 40x25 lores graphics
+* ~Mode 1: 80x25, 80x25 lores graphics~
 
 The machine does support hires graphics, but it is not currently supported by z88dk.
 
