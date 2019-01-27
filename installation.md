@@ -110,9 +110,10 @@ To test if the install was successful, create the following program in a text ed
 
 	#include <stdio.h>
 	
-	main()
+	int main()
 	{
 	   printf("Hello World !\n");
+           return 0;
 	}
 
 
