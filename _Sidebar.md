@@ -28,13 +28,13 @@
   * [Linking external libraries](libraries)
   * [Linking Basic, Fortran, Pascal Programs with z88dk](programs)
 * [Writing optimal code](WritingOptimalCode)
-* [Calling Conventions](CallingConventions)
 
 ## Mixing C and Z80 Assembler
 
-* [Inline Assembler](inlineasm)
+* [Calling Conventions](CallingConventions)
 * [The Stack frame (Parameter passing)](The-Stack-Frame)
 * [Sharing Code by Creating Libraries](creating_libraries)
+* [Inline Assembler](inlineasm)
 
 ## Tools
 
