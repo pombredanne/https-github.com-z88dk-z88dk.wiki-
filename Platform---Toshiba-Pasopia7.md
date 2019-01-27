@@ -25,7 +25,7 @@ As a result the machine has been tested under the `+pasiopia7` target.
 * [x] Lores graphics
 * [ ] Hires graphics
 * [x] PSG sound
-* [ ] One bit sound
+* [x] One bit sound
 * [x] Inkey driver
 * [x] Hardware joystick
 * [ ] File I/O
