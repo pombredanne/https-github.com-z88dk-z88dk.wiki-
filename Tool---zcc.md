@@ -50,12 +50,6 @@ Details on the configuration of a port can be revealed with:
      -l[name]      Link in a library - supply just the name (after placing them
                    in the correct directory)
      -lm           Link in the generic Z80 maths library
-     -lmz          Link in and generate code for OZ's maths routines
-     -lmalloc      Link in the near malloc routines
-     -lgfx         Link in the Z88 graphics routines (for BASIC progams)
-     -lz88         Link in some Z88 application routines (eg mailboxing)
-     -lnet	   Link the the socket routines for ZSock
-     -lndos        Link the stub disc driver library ("no dos")
 
      -m            Generate .map files when assembling/linking
      -s            Generate .sym files when assembling/linking
@@ -69,7 +63,7 @@ Other libraries are available
 ```
      -unsigned        Implicitly define everything as unsigned unless explicitly
                       told otherwise (sccz80)
-     -create-app      Create an application image (i.e. bank 63,62 etc)
+     -create-app      Create a file suitable for running on an emulator/machine
      -startup=        This parameter affects the resulting code in a target
                       dependent way: in example, when used with the Cambridge Z88
                       the -startup=3 parameter instructs the compiler to produce 
@@ -109,26 +103,12 @@ Any unrecognised options are passed through to the compiler (to allow for improv
 
 In order for z88dk to work on as many platforms as possible and so that it can be easily tweaked, retargetted and generally mutilated, the frontend (zcc) consults a plain text configuration file which is in the directory pointed to be the ZCCCFG variable.
 
-The default is to use the file ZCCCFG/zcc.cfg which by default is a softlink to the configuration file for the z88. Should you mainly be targetting a different machine then simply change the softlink to the appropriate file.
+The config file is indicated by the first option to zcc which is `+[machine identifier]`
 
-Should you want to occasionally compile for other machines then as the construct your zcc line thusly:
-
-    zcc +[name] [....]
-
-Where name is either z88, zx (Spectrum), or vz (for the VZ200/300 port). If you wish to use a config file located in the current directory or anywhere else on the system then specify the full path and filename - make sure the filename as the suffix .cfg.
-
-Finally, for the sake of backwards compatibility zcc will take the value of the environmental variable ZCCFILE and use that config file.
+If you wish to use a config file located in the current directory or anywhere else on the system then specify the full path and filename - make sure the filename as the suffix .cfg.
 
 The order of checking is as follows:
 
  1.  "Local" file (if exists) eg +temp.cfg 
  2.  ZCCCFG/[name].cfg eg +z88 
- 3.  ZCCFILE 
- 4.  ZCCCFG/zcc.cfg 
 
-
-
-## Related arguments
-
-
-*  [#pragma directives](usage/pragmas)
