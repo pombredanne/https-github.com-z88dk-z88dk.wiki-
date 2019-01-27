@@ -38,7 +38,7 @@
 
 ## Tools
 
-* [The Compiler Frontend (*zcc*)](Tool-zcc)
+* [The Compiler Frontend (*zcc*)](Tool---zcc)
 * [The Assembler / Linker (*z80asm*)](Tool-z80asm)
 * [Object and Library file Dumper (*z80nm*)](Tool-z80nm)
 * [Object and Library file Manipulator (*zobjcopy*)](Tool-zobjcopy)
