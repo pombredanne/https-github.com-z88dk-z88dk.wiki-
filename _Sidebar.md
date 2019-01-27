@@ -34,7 +34,6 @@
 
 * [Inline Assembler](inlineasm)
 * [The Stack frame (Parameter passing)](The-Stack-Frame)
-* [Pragma Directives](pragmas)
 * [Sharing Code by Creating Libraries](creating_libraries)
 
 ## Tools
