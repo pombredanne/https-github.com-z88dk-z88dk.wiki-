@@ -24,7 +24,7 @@ As a result the machine has been tested under the `+pasiopia7` target.
     * [ ] UDG support
 * [x] Lores graphics
 * [ ] Hires graphics
-* [ ] PSG sound
+* [x] PSG sound
 * [ ] One bit sound
 * [x] Inkey driver
 * [x] Hardware joystick
@@ -48,7 +48,7 @@ The target has been tested using the Takeda emulator. The Mame emulator implemen
 The following screen modes are available:
 
 * Mode 0: 40x25, 40x25 lores graphics
-* ~Mode 1: 80x25, 80x25 lores graphics~
+* Mode 1: 80x25, 80x25 lores graphics
 
 The machine does support hires graphics, but it is not currently supported by z88dk.
 
