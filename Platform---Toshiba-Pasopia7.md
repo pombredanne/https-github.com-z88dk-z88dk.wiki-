@@ -4,7 +4,7 @@
 * 48k ROM 
 * 64k RAM
 * MC6845 
-* 56k/64k VRAM
+* 56k/64k? VRAM
 * 2x SN76489 (SMC-777)
 * 2 joysticks
 
@@ -26,7 +26,7 @@ As a result the machine has been tested under the `+pasiopia7` target.
 * [ ] Hires graphics
 * [ ] PSG sound
 * [ ] One bit sound
-* [ ] Inkey driver
+* [x] Inkey driver
 * [x] Hardware joystick
 * [ ] File I/O
 * [ ] Interrupts
@@ -37,7 +37,7 @@ As a result the machine has been tested under the `+pasiopia7` target.
 
 A .dsk file will be created that can be inserted into an emulator and will auto boot.
 
-_At present only 4k files can be loaded, but there are plans to support 48k applications_
+The system runs in all RAM mode, meaning that a full 64k is available to your application. This operational mode causes problems with the Takeda emulator and the reset menu option doesn't work as expected.
 
 ## Emulators
 
@@ -55,3 +55,4 @@ The machine does support hires graphics, but it is not currently supported by z8
 ## Links
 
 * [Takeda Emulator](http://takeda-toshiya.my.coocan.jp/index.html)
+* [Some technical info and experiments](https://pasopia700.blogspot.com)
