@@ -1,6 +1,22 @@
 
 ![](images/platform/msx.jpg)
 
+## Classic library support
+
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font 
+    * [x] UDG support
+* [x] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [ ] Inkey driver
+* [ ] Hardware joystick
+* [x] File I/O (MSXDOS)
+* [x] Interrupts
 
 ### Quick start
 
@@ -26,6 +42,7 @@ To run on a 16K machine, you need to move the code origin to the upper half.
 #### ROM mode
 
 This is an experimental mode to create ROM cartridges, add "-subtype=rom".
+
 Please be aware that not all the functions will work in ROM mode.
 
 
@@ -94,5 +111,4 @@ On the MSX you can switch to the ROM font by specifying the following options to
 *  [MSX Info pages](http://msx.hansotten.com/), maintained by Hans Otten
 
 *  [MSX Assembly page](http://map.grauw.nl/), maintained by Laurens Holst (AKA "Grauw")
-
 
