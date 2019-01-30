@@ -26,7 +26,7 @@ This machine can run both CP/M and S-OS and hence applications compiled for eith
 * [x] PSG sound
 * [ ] One bit sound
 * [ ] Inkey driver
-* [ ] Hardware joystick
+* [x] Hardware joystick
 * [x] File I/O
 * [ ] Interrupts
 * [ ] RS232
