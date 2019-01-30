@@ -29,7 +29,8 @@ As a result the machine has been tested under the `+pasiopia7` target.
 * [x] Inkey driver
 * [x] Hardware joystick
 * [ ] File I/O
-* [ ] Interrupts
+* [x] Interrupts
+* [ ] RS232
 
 ## Compilation
 
