@@ -1,5 +1,22 @@
 # Spectravideo SVI
 
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font 
+    * [x] UDG support
+* [x] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [x] Inkey driver
+* [x] Hardware joystick
+* [ ] File I/O
+* [x] Interrupts
+* [x] RS232
+
+
 The Spectravideo SVI-318 and SVI-328 are now well supported.
 Most of the generic functions (monochrome graphics, 1 bit sound, stdio, etc) are supported as well as most of the [MSX](Platform---MSX) specific ones.
 
