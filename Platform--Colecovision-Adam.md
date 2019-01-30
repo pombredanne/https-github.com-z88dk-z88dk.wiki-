@@ -19,9 +19,12 @@ Will create a 40 track SSDD disk image that can be inserted as drive b: and your
 - MSX graphics library
 - PSG support
 
+### VDP interrupt
+
+On the Adam, the VDP interrupt is raised using NMI. As a result of address $66 falling within the CP/M FCB block, VDP interrupts are disabled on the Adam.
+
 ## Emulator
 
 Tested with the Mame emulator and CPM 2.2 boot disk
 
 ## Links
-
