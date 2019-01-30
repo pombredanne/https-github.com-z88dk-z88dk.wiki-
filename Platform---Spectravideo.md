@@ -1,5 +1,7 @@
 # Spectravideo SVI
 
+## Classic library support
+
 * [x] Native console output
 * [x] Native console input
 * [x] ANSI vt100 engine
