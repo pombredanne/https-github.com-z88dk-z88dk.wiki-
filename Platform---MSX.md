@@ -17,6 +17,7 @@
 * [ ] Hardware joystick
 * [x] File I/O (MSXDOS)
 * [x] Interrupts
+* [ ] RS232
 
 ### Quick start
 
