@@ -16,7 +16,7 @@ A 32k ROM file will be generated that can be inserted into the emulator.
 
 The VDP used by the ColecoVision is the same as the one in the MSX, as such many MSX examples will work. However, the machine is not particularly well equipped with memory so care must be taken.
 
-You can reduce RAM usage by making static data `const` where possible - this will keep it ROM rather than copying to ROM.
+You can reduce RAM usage by making static data `const` where possible - this will keep it ROM rather than copying to RAM.
 
 # Keypads and joypads
 
