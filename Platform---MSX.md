@@ -34,7 +34,7 @@ For the above examples the BASIC command is  BLOAD "CAS:",R
 
     zcc +msx -subtype=msxdos -oadva.com -lm adv_a.c
 
-This will genetrate a file, **adva.com** which is located at $100, as required by MSXDOS.
+This will generate a file, **adva.com** which is located at $100, as required by MSXDOS.
 
 #### 16K model
 To run on a 16K machine, you need to move the code origin to the upper half.
@@ -50,8 +50,6 @@ Please be aware that not all the functions will work in ROM mode.
 
 ### Disk subtype notes
 
-The bin2msx tool is no longer necessary
-
 Here's a step - by - step example on how to compile and run the **adv_a** game:
 
 
@@ -59,25 +57,11 @@ Here's a step - by - step example on how to compile and run the **adv_a** game:
 
 	zcc +msx -create-app -subtype=disk adv_a.c
 
-It generates two files, a.bin, (pure binary file) and a.msx (binary file with some header stuff).
+It generates two files, a.bin, (pure binary file) and a.msx (binary file with some header stuff) as well as an a.img which is a MSX-DOS format disc image.
 
-
-*  get 'dsktool' by Ricardo Bittencourt and a working disk image.  You can get it [here](http://www.salle.url.edu/~is05562/dsktool.zip) or [here](http://www.geocities.com/SiliconValley/8752/msx/dlprogs/dsktool.zip). 
-
-
-*  put "a.msx" in the disk image
-
-	dsktool A test.dsk a.msx
-
-
-*  run an MSX emulator and choose to boot as MSX1, then put the disk image in the 'virtual' drive 1.
-
-
-*  load and run the game
+The file can be loaded from MSX-BASIC with the command:
 
 	bload "a.msx",r
-
-
 
 ### The VT/ANSI console driver
 
@@ -112,4 +96,3 @@ On the MSX you can switch to the ROM font by specifying the following options to
 *  [MSX Info pages](http://msx.hansotten.com/), maintained by Hans Otten
 
 *  [MSX Assembly page](http://map.grauw.nl/), maintained by Laurens Holst (AKA "Grauw")
-
