@@ -55,7 +55,7 @@ Here's a step - by - step example on how to compile and run the **adv_a** game:
 
 *  compile the adv_a game
 
-	zcc +msx -create-app -subtype=disk adv_a.c
+        zcc +msx -create-app -subtype=disk adv_a.c
 
 It generates two files, a.bin, (pure binary file) and a.msx (binary file with some header stuff) as well as an a.img which is a MSX-DOS format disc image.
 
