@@ -83,6 +83,9 @@ The [3D Libraries](lib3d) include a standard set of functions for making your ow
 
 ## VDP Support
 
+The [TMS9918a/TMS9928a](Classic-TMS9918) VDP is used by a number of targets within z88dk. A common library is available across all of those targets allowing both high- and low- level access to the chip.
+
+
 ## SP1 Sprite Library
 
 The ZX Spectrum and clones support the [sp1](sp1) sprite library that provides advanced features ideal for writing performant games.
