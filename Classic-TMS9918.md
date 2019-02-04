@@ -32,22 +32,24 @@ The VDP screen modes use the following VDP addresses across all targets:
 
 ### Mode 0 (Text 32x24)
 
-Mode 0 is supported by the generic console and can be switched to using `int mode = 0; console_ioctl(GENCON_SET_MODE, &mode);`
+Mode 0 is supported by the generic console and can be switched to using `int mode = 0; console_ioctl(IOCTL_GENCON_SET_MODE, &mode);`
 
 In this mode, sprites are supported. When switching to this mode, the current conio ink/paper is applied to the entire character set. With the table addresses above it is possible for an application to change them.
 
 ### Mode 1 (Text 40x24)
 
-Mode 1 is supported by the generic console and can be switched to using `int mode = 1; console_ioctl(GENCON_SET_MODE, &mode);`
+Mode 1 is supported by the generic console and can be switched to using `int mode = 1; console_ioctl(IOCTL_GENCON_SET_MODE, &mode);`
 
 In this mode, sprites are not supported. When switching to this mode, the current conio ink/paper is taken as the colour for the whole screen. It is possible to change it by writing to the appropriate VDP register.
 
 ### Mode 2 (Text 32x24, Graphics 256x192)
 
-Mode 2 is supported by the generic console and can be switched to using `int mode = 2; console_ioctl(GENCON_SET_MODE, &mode);`
+Mode 2 is supported by the generic console and can be switched to using `int mode = 2; console_ioctl(IOCTL_GENCON_SET_MODE, &mode);`
 
 In this mode, sprites are supported. Screen scrolling in this mode is notably slower than in the other modes.
 
+## Raster interrupt
 
+Calling `add_raster_int()` will add an interrupt connected to the VDP interrupt on all platforms apart from the Adam.
 
 
