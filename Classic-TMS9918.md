@@ -1,0 +1,53 @@
+The TMS9918a/TMS9928a VDP chip is used by the following targets supported by z88dk:
+
+* [Casio PV-2000](Platform---Casio-PV2000)
+* [Colecovision Adam](Platform--Colecovision-Adam)
+* [Colecovision](Platform--Colecovision)
+* [Memotech MTX](Platform---Memotech-MTX)
+* [MSX](Platform---MSX)
+* [Spectravideo](Platform---Spectravideo)
+* [Sord M5](Platform---Sord-M5)
+* [Samsung SPC-1000](Platform-Samsung-SPC-1000)
+* [Tatung Einstein](Platform---Tatung-Einstein)
+
+The classic library supplies a library, based on the Hitech-C library by Rafael de Oliveira Jannone. The library provides both high- and low-level access to the VDP chip. The following features are supported:
+
+* ANSI vt100 console using VDP mode 2
+* vt52 console using VDP modes 0,1,2
+* High resolution graphics (256x192)
+* Raster interrupt handler
+* Sprite control
+
+## VDP Screen Modes
+
+The VDP screen modes use the following VDP addresses across all targets:
+
+
+| Mode | Pattern Name | Colour table | Pattern Generator | Sprite Generator | Sprite Attribute |
+|-|-|-|-|-|-|
+| 0 | $0000 | $1000 | $2000 | $3800 | $3b00 |
+| 1 | $0000 | - | $2000 | - | - |
+| 2 | $1800 | $2000 | $0000 | $3800 | $3b00 |
+
+
+### Mode 0 (Text 32x24)
+
+Mode 0 is supported by the generic console and can be switched to using `int mode = 0; console_ioctl(GENCON_SET_MODE, &mode);`
+
+In this mode, sprites are supported. When switching to this mode, the current conio ink/paper is applied to the entire character set. With the table addresses above it is possible for an application to change them.
+
+### Mode 1 (Text 40x24)
+
+Mode 1 is supported by the generic console and can be switched to using `int mode = 1; console_ioctl(GENCON_SET_MODE, &mode);`
+
+In this mode, sprites are not supported. When switching to this mode, the current conio ink/paper is taken as the colour for the whole screen. It is possible to change it by writing to the appropriate VDP register.
+
+### Mode 2 (Text 32x24, Graphics 256x192)
+
+Mode 2 is supported by the generic console and can be switched to using `int mode = 2; console_ioctl(GENCON_SET_MODE, &mode);`
+
+In this mode, sprites are supported. Screen scrolling in this mode is notably slower than in the other modes.
+
+
+
+
