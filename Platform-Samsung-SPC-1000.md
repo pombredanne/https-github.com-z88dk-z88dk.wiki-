@@ -20,7 +20,7 @@ The file will load and autorun.
 
 # Screen modes and graphics
 
-The console subsystem for the PC6001 is completely decoupled from the ROM, this allows z88dk to transparently support multiple screen modes.
+The console subsystem for the SPC-1000 is completely decoupled from the ROM, this allows z88dk to transparently support multiple screen modes.
 
 Screen modes can be changed using the following code:
 
