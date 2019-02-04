@@ -41,7 +41,7 @@ To change the pixel colour you can call `textcolor()` with the desired colour.
 
 Of course, supported multiple screen modes does have an overhead, as a result if you don't use either mode 1 or mode2, then you can exclude their code from being included using the following pragmas: `-pragma-define:CLIB_DISABLE_MODE0=1` and `-pragma-define:CLIB_DISABLE_MODE1=1`
 	
-The optional VDP is also supported - compile with `-pragma-define:CRT_ENABLE_VDP=1`, select mode 10 and switch monitors.
+The optional VDP is also supported - compile with `-pragma-define:CRT_ENABLE_VDP=1`, select mode 10, 11 or 12 and switch monitors.
 
 # Screenshots
 
