@@ -49,7 +49,7 @@ The following CLIB options (use "-clib=xxxx") are available:
 
 *  wrxansi, wrx64ansi: ansi VT emulation, 192/64 lines HRG in WRX mode, also good in chroma mode
 
-*  mt, mt64: default clib, MemoTech HRG modes
+*  mt, mt64: default subtype, MemoTech HRG modes
 
 *  g007: default subtype, G007 HRG mode (requires the HRG being set up from BASIC:  CLS 2 / SLOW 4, probably [disabling the autorun on appmake](#disabling-autorun) will help)
 
