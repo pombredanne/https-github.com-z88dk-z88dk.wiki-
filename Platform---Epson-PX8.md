@@ -1,7 +1,7 @@
-#  Epson PX8 (Geneva, HC-80)
+#  Epson PX8 (Geneva, HC-80, HC-88)
 
 Supported file formats include the normal CP/M ".COM" file (see the CP/M) section or the EPROM image.
-Only minimal graphic support is available at the moment, but some special output can be gained by the powerful console provided by the PX8.
+Graphics library is now mostly functional and special functions are available by interfacing to the powerful console provided by the PX8 and the 'slave CPU'.
 The CP/M implementation of the time() function includes the automatic detection and support of the special Epson BIOS.
 
 
