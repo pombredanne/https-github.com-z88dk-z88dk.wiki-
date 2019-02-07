@@ -7,7 +7,7 @@ The Kaypro computers are CP/M compatible, so the [same base library](Platform---
 
 Example compile line:
 
-    zcc  +cpm -subtype=kayproii -create-app program.c
+    zcc  +cpm -subtype=kaypro83 -create-app program.c
 
 A .dsk file in Kaypro format is produced. This can be loaded into an emulator or transferred onto a physical disc as required.
 
@@ -27,6 +27,11 @@ The generic console is available on the Kaypro-83 machines.
 
 These machines contain an MC6845 and are capable of producing low-resolution graphics at a resolution of 160x100.
 
+Example compile line:
+
+    zcc  +cpm -subtype=kaypro84 -create-app program.c
+
+A .dsk file in Kaypro format is produced. This can be loaded into an emulator or transferred onto a physical disc as required.
 
 
 
