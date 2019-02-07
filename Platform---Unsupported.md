@@ -255,6 +255,7 @@ Made in 1978, 7K RAM
 
     The PC-8300 is a Kyocera project, rebranded also by Olivetti and Tandy Radio Shack, the CPU shoulud be 8085 compatible (not Z80).
 
+http://www.old-computers.com/museum/computer.asp?c=350
 
 ### Micronique Victor / Hector
 
