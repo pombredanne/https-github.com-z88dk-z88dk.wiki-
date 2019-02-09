@@ -524,6 +524,9 @@ NSC800 (Z80 clone), LCD, supposedly graphics, CP/M
 
 The platforms listed here could be supported in expanded versions only.
 
+### Soviet computer replica
+https://github.com/thatoddmailbox/computer-emu
+https://thatoddmailbox.github.io/2019/02/04/computer
 
 
 ### Babbage-2nd
