@@ -76,8 +76,6 @@ Modify the configuration as follows:
 
 A system install is not fully supported in this release.
 
-To complete installation you may want to build sdcc, details below.
-
 Otherwise, if you wish to install z88dk and merge it with your default system environment, then edit 'z88dk/Makefile' and set your preferred destination position (default is /usr/local), then type:  **make install** (you still should add the two environment variables in the system settings).
 
 ## MacOS X
