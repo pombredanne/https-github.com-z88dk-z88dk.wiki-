@@ -42,26 +42,23 @@ To run on a 16K machine, you need to move the code origin to the upper half.
 
 #### ROM mode
 
-This is an experimental mode to create ROM cartridges, add "-subtype=rom".
+The generate a ROM binary add the option `-subtype=rom`. In this mode, not all functions will work.
 
-Please be aware that not all the functions will work in ROM mode.
-
-
-
-### Disk subtype notes
-
-Here's a step - by - step example on how to compile and run the **adv_a** game:
-
+### Disk subtype
 
 *  compile the adv_a game
 
         zcc +msx -create-app -subtype=disk adv_a.c
 
-It generates two files, a.bin, (pure binary file) and a.msx (binary file with some header stuff) as well as an a.img which is a MSX-DOS format disc image.
+It generates three files, a.bin, (pure binary file) and a.msx (binary file with some header stuff) as well as an a.img which is a MSX-DOS format disc image.
 
 The file can be loaded from MSX-BASIC with the command:
 
 	bload "a.msx",r
+
+### The TMS9918a library
+
+z88dk provides a [TMS9918a](Classic-TMS9918) library that allows hardware access to the VDP chip. All graphical functionality supplied by z88dk uses these functions and such is hardware independent.
 
 ### The VT/ANSI console driver
 
