@@ -26,7 +26,7 @@ Configures the size of the block allocator queue.
 
 Applicable for ROM compiles only. The data section is copied from ROM into RAM on program start.
 
-`-pragma-define:CRT_MODEL=1`
+`-pragma-define:CRT_MODEL=2`
 
 Applicable for ROM compiles only. The data section is stored compressed in ROM and decompressed into RAM on program start.
 
@@ -65,7 +65,7 @@ Changes the number of FILE structures that are allocated. The default value is 1
 
 ## Generic console (VT52) behaviour
 
-`-pragma-redirect:fputc_cons=fputc_cons_generic`
+`-pragma-redirect:fputc_cons=fputc_cons_generic` or `--generic-console`
 
 If not the default for a target, supply this pragma to enable support for the [Generic Console](Classic-GenericConsole). The following command line alias may prove easier to type: `--generic-console`
 
@@ -85,7 +85,7 @@ On platforms that support it, using this pragma will disable the mapping that ta
 
 On most targets the classic library will call the firmware routines for reading the keyboard. Sometimes however, this may cause undesirable side effects or simply be too unresponsive. An increasing number of targets support `<input.h>` and the `inkey` methods for reading the keyboard
 
-`-pragma-redirect:fgetc_cons=fgetc_cons_inkey`
+`-pragma-redirect:fgetc_cons=fgetc_cons_inkey` or `--hardware-keyboard`
 
 Configures the `fgetc_cons()` function to use inkey() method rather than the platform firmware.
 
