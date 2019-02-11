@@ -8,7 +8,7 @@ Library extras include the sound support for the Yamaha PSG chip and the BW grap
 
 ### Command Line
 
-    zcc  +cpm -lm -ltiki100 -oPROGRAM.COM program.c -create-app -subtype=tiki100
+    zcc  +cpm -lm -oPROGRAM.COM program.c -create-app -subtype=tiki100
 
 
 ### Generic console
