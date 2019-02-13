@@ -73,6 +73,16 @@ They are CP/M systems. Support for their Speech Synthetizer could be nice, thoug
 ### Compucorp 600 Series
 
 Proprietary operating system
+
+
+### Datec
+
+#### Electronic Notebook
+
+NSC-800.   Battery powered, raised membrane keyboard with audio feedback (numpad and 11PF keys), 2 LCD text lines (40 columns), barcode reader, rs232, BASIC interpreter.
+48K->504K RAM
+
+
 ### Epson
 
 
@@ -81,10 +91,6 @@ Proprietary operating system
 
 Already supported as a CP/M system but deserving specific extras
 High rez vector graphics engine (μPD7220).
-
-##### HX-20
-
-[HXTAPE tool](http://hxtape.sourceforge.net/)
 
 ### Erik
 
