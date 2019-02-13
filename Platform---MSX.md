@@ -12,7 +12,7 @@
 * [x] Lores graphics
 * [x] Hires graphics
 * [x] PSG sound
-* [X] One bit sound  (over keyboard speaker)
+* [X] One bit sound  (on the keyboard speaker)
 * [ ] Inkey driver
 * [ ] Hardware joystick
 * [x] File I/O (MSXDOS)
