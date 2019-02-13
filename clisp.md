@@ -311,6 +311,11 @@ Don't forget to check that the crt restarts the interpreter when the user exits.
 
 The source code allows a Scheme variant to be compiled if "-DSCHEME" is added to the compile line.
 
+### Compile the SpecLisp compatible Variant and/or add graphics
+
+[SpecLisp by Serious Software](http://blog.funcall.org/lisp/2015/10/30/zx-spectrum-lisp/) had its own dialect probably derived from Lisp 1.5.   It also featured turtle graphics.
+To enable such options: -DSPECLISP -DGRAPHICS
+
 ### Change the Font
 
 Any [FZX font](FZX font) can be used by the fzx output terminal instantiated by the crt.  The default font used by the fzx terminals is "ff_ao_Soxz" but this can be changed by editing the crt being used.  The font I used is called "ff_ao_Napier".  
