@@ -44,6 +44,8 @@ To run on a 16K machine, you need to move the code origin to the upper half.
 
 The generate a ROM binary add the option `-subtype=rom`. In this mode, not all functions will work.
 
+Under some condition, if lots of preset data is provided, an option permits to compress the default values before storing them in the ROM: -pragma-define:CRT_MODEL=2
+
 ### Disk subtype
 
 *  compile the adv_a game
