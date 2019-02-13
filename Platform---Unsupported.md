@@ -520,10 +520,12 @@ Already supported as CP/M and S-OS systems but deserving specific extras.
 ##### Laser PC4
 
 
-#### Xerox 1810
+### Xerox
 
-NSC800 (Z80 clone), LCD, supposedly graphics, CP/M
+#### 1810
 
+NSC800 (Z80 clone), CP/M.  The 1810 has an 80-character, three-line liquid crystal display with graphics ability as well as a built-in speaker phone, tape recorder, teletypewriter, text editor and a four-function calculator.
+When connected to the 1850 base station, it could run programs written for MS-DOS.
 
 
 ## Very small systems 
