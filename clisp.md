@@ -5,11 +5,12 @@
 Campus Lisp is a lisp interpreter with an optional scheme dialect selectable at compile time ("-DSCHEME").  It was written by Hirotsugu Kakugawa and expanded by Stefano Bodrato.
 
 
-*  [Source Code](libnew/examples/clisp/source)
+*  [Source Code](https://github.com/z88dk/z88dk/tree/master/examples/clisp)
 
 *  [Language Specification](Language Specification)
 
 *  [Examples](Examples)
+
 
 Unfortunately there is no mechanism to save and load defined words so it's best to run on a system that can save and load state.
 
