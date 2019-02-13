@@ -36,9 +36,12 @@ Same as above but in turbo tape mode:
 
     zcc  +zx -subtype=rom -lndos -lm -create-app program.c
 
-This command will compile the program at location '0', inserting a simplified interrupt handler (for keyboard, etc) and putting the system and the global variables just after the screen memory, appmake will be invoked to provide a 16K data block, fixed size.
+This command will compile the program at location '0', inserting a simplified interrupt handler (for the timer) and putting the system and the global variables just after the screen memory, appmake will be invoked to provide a 16K data block, fixed size.
 
-Note that some of the libraries are not ready to work in ROM, thus a bit of tweaking will probably be required, this is not for beginners.
+Note that some of the libraries are not ready to work in ROM, thus a bit of tweaking can be necessary, even if many of them are now covered.
+
+Under some condition, with lots of preset data is provided, an option permits to compress the default values before storing them in the ROM:   -pragma-define:CRT_MODEL=2
+
 
 ### Creating a bootable +3 disc
 
