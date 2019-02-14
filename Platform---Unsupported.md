@@ -150,6 +150,13 @@ High rez vector graphics engine (μPD7220).
 
 [QX-10 CP/M Plus Supplied by MML Systems Ltd, supports GSX](http://fjkraan.home.xs4all.nl/comp/qx10/diskimages/README_qx10cpmplus.TXT)
 
+### Jonos Anaheim
+CP/M portable systems
+
+#### Escort C1100
+
+#### Escort C2100
+
 
 
 ##### Kyber Minus
@@ -161,6 +168,13 @@ High rez vector graphics engine (μPD7220).
 μPD7220 based video hardware.
 [Japanese website describing the Lynx](http://www.chiaki.cc/Lynx/)
 
+
+### NANO
+
+#### SKS 2500
+German portable computer, 1982
+
+http://www.old-computers.com/museum/computer.asp?c=211&st=1
 
 ##### Ontel Amigo / Cortex C/WP
 
