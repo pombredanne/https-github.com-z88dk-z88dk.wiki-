@@ -514,6 +514,8 @@ The display text oriented, 80 columns.
 
 There were two models : the PA7010 with the T-BASIC built-in, and the PA7012 with the OA-BASIC built-in.
 
+The optional 40-character by 8-line LCD display and battery-backed 16K and 32K RAM cartridges made the T100 a semi-portable system (the power cord was still necessary).
+
 Already supported as CP/M and S-OS systems but deserving specific extras.
 
 
