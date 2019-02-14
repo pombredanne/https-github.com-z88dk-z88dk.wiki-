@@ -25,6 +25,15 @@ Self-built computer project invented by a HAM radio group in Berlin.
 
 [www.ac1-info.de](http://www.ac1-info.de/)
 
+
+### ACCESS / ACTRIX
+
+Transportable computer (like OSBORNE, KAYPRO and OTRONA)
+
+http://www.old-computers.com/museum/computer.asp?st=1&c=359
+https://en.wikipedia.org/wiki/Actrix_(computer)
+
+
 ### Amstrad
 
 Units sold (PCW series): > 8 Million
