@@ -489,6 +489,13 @@ See above.
 Dual z80 system.  uPD7220 graphics controller.
 Already supported as a CP/M system but deserving specific extras.
 
+### Sunrise
+
+#### C8/16
+NSC800A, 40x8 characters LCD display, microcassette.
+
+#### FP8/16
+Dual CPU, 8088 + Z80, 5.25 FDD, 
 
 ### Texas Instruments
 
