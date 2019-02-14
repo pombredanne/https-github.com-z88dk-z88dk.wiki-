@@ -177,13 +177,27 @@ Transportable CP/M system with a 9" display (80x24 characters) and an ancient bo
 
 #### SKS 2500
 German portable computer, 1982
-
 http://www.old-computers.com/museum/computer.asp?c=211&st=1
+
+#### SKS 2502 Nano
+
+#### SKS 252 Pico
+
+
 
 ##### Ontel Amigo / Cortex C/WP
 
 [An article..  yes it is greek !](http://www.retrovisions.gr/inv/topic/2481-%CF%80%CE%B1%CF%81%CE%BF%CF%85%CF%83%CE%AF%CE%B1%CF%83%CE%B7ontel-amigo-cwp-cortex/)
 [The C/WP at old-computers.com](http://www.old-computers.com/museum/computer.asp?c=899&st=1)
+
+
+##### SMC CompuCase
+
+Z80 or 8085 ??
+
+CP/M computer in a briefcase.
+40x12 plasma screen
+
 
 ##### Sperry Univac UTS series
 
