@@ -515,7 +515,10 @@ Dual CPU, 8088 + Z80, 5.25 FDD,
 [Wikipedia page about the Avigo 10](http://en.wikipedia.org/wiki/Avigo)
 
 
+### Telcon Zorba
 
+a.k.a.  Modular Computer Zorba
+http://www.classiccmp.org/dunfield/zorba/index.htm
 
 ### Teleram
 
