@@ -501,6 +501,13 @@ Already supported as a CP/M system but deserving specific extras.
 
 
 
+### Teleram
+
+https://www.1000bit.it/js/web/viewer.html?file=%2Fad%2Fbro%2Fteleram%2Fteleram%2D3000portablecomputer%2Epdf#zoom=page-fit
+
+Teleram produced 3 CP/M compatible models:  3000, 4000 and 5000 respecively with 4, 8 and 16 rows LCD display.
+The display text oriented, 80 columns.
+
 
 
 ### Toshiba Pasopia / T100
