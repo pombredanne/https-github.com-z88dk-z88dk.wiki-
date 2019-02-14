@@ -190,6 +190,8 @@ http://www.old-computers.com/museum/computer.asp?c=211&st=1
 [An article..  yes it is greek !](http://www.retrovisions.gr/inv/topic/2481-%CF%80%CE%B1%CF%81%CE%BF%CF%85%CF%83%CE%AF%CE%B1%CF%83%CE%B7ontel-amigo-cwp-cortex/)
 [The C/WP at old-computers.com](http://www.old-computers.com/museum/computer.asp?c=899&st=1)
 
+##### SEMI TECH - Pied Piper
+http://www.old-computers.com/museum/computer.asp?st=1&c=193
 
 ##### SMC CompuCase
 
