@@ -519,6 +519,10 @@ The optional 40-character by 8-line LCD display and battery-backed 16K and 32K R
 Already supported as CP/M and S-OS systems but deserving specific extras.
 
 
+### Universal Data - UDI 500
+
+Two 3.5 inches drives, 40x8 LCD display, little information available.
+
 
 
 ### Video Technology
