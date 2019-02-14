@@ -153,9 +153,9 @@ High rez vector graphics engine (μPD7220).
 ### Jonos Anaheim
 CP/M portable systems
 
-#### Escort C1100
+#### Janos Escort C1100
 
-#### Escort C2100
+#### Janos Escort C2100
 
 
 
@@ -168,6 +168,10 @@ CP/M portable systems
 μPD7220 based video hardware.
 [Japanese website describing the Lynx](http://www.chiaki.cc/Lynx/)
 
+### Micro Source
+
+#### M6000P
+Transportable CP/M system with a 9" display (80x24 characters) and an ancient boot procedure via MONITOR commands.
 
 ### NANO
 
