@@ -17,9 +17,9 @@ COM file format (see CP/M section):
 
 ROM file formats:
 
-    zcc +cpm -subtype=px -create-app -oname name.c
+    zcc +cpm -subtype=px8 -create-app -oname name.c
 
-    zcc +cpm -subtype=px32k -create-app -oname name.c
+    zcc +cpm -subtype=px8ansi -clib=ansi -create-app -oname name.c
 
 
 
