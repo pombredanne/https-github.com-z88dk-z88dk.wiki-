@@ -89,6 +89,7 @@ It isn't based on the network layer as the original library, and it implements o
 ## lib3d
 
 The [3D Libraries](lib3d) include a standard set of functions for making your own 3D functions. This document is a reference for these functions.
+It also includes those functions requiring a fast trigonometry approximation, e.g. to draw polygons or for "turtle graphics".
 
 ## VDP Support
 
