@@ -38,6 +38,11 @@ Ticks can also report hotspots for code execution, launch the debugger, type `ho
 
 Will show the commonest hit addresses first of all.
 
+
+     sort -nr -k2 hotspots
+
+Will show the number of clock cycles spent at each address.
+
 ## Stdio and File I/O
 
 Ticks provides a full stdio that will output to the console, alongside this, file I/O is supported as well.
