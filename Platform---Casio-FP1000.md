@@ -27,6 +27,26 @@ This will create a .d88 image that's suitable for loading into FD1 of the Takeda
 * Not all subcpu commands are known, so graphics are not available
 * The keyboard makes an annoying beep for every keypress 
 
+# CP/M
+
+No specific libraries are at the moment available for the Casio FP-1100.   To transfer files on a disk image with cpmtools a specific disk definition must be provided in the 'diskdefs' file:
+
+    # Casio FP-1100
+    diskdef fp1100
+      seclen 256
+      cylinders 40
+      sectrk 16
+      heads 2
+      blocksize 2048
+      maxdir 128
+      boottrk 4
+      os 2.2
+    end
+
+
+WARNING:  With the suggested definition the file transfer commands will work but the target disk image will possibly loose the ability to boot.
+
+
 # Links
 
 * [Takeda Emulator](http://takeda-toshiya.my.coocan.jp/fp1100/)
