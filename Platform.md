@@ -10,6 +10,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Amstrad NC200](Platform---Amstrad-NC) | Yes | No | No | 480x128 | No | No | | 
 [Mattel Aquarius](Platform---Mattel-Aquarius)| Yes | 40x24| 40x24 | 80x72 | No | 1 bit +PSG | | 
 [Bandai RX-78](Platform-Bandai-RX-78) | Yes | No | 24x23 | 192x184 | No | PSG |
+[Bandai Supervision 8000](Platform-Bandai-Supervision-8000) | No | No | 32x16, 32x12 | 32x16,256x96| No | PSG | |
 [Knight 2000 (Aussie Byte)](Platform---Aussie) | Yes | 80x25| No | not yet | No | 1 bit| Untested and incomplete graphics lib| 
 [Canon X-07](Platform---Canon-X07) | Yes | No | No | No | No | No | Initial stage | 
 [Casio FP-1100](Platform---Casio-FP1000) | No | No | 40x25,80x25 | No | No | No |
