@@ -765,7 +765,10 @@ GDOS is mentioned: is it the same of the GSX ?  Doesn't seem so.
 
 [NorthStar Addendum to Graphics CPM Preface](https://archive.org/details/bitsavers_northstaradumtoGraphicsCPMPreface_1780469)
 
+### SMT Goupil
 
+#### Goupil G3
+this computer came with 3 cpu options,  6809, z80, or 8088
 
 ### Sord M68
 
