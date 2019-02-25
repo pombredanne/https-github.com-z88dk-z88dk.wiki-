@@ -6,8 +6,6 @@
 * AY-3-8190
 * Cartridge size limited to 4k
 
-_This target is currently being brought up_
-
 # Compilation
 
     zcc +sv8000 program.c -create-app
@@ -34,7 +32,8 @@ Of course, supported multiple screen modes does have an overhead, especially on 
 
 # Limitations
 
-4k isn't enough space!
+* 4k isn't much space
+* The joystick supports the directions and # as the fire button
 
 # Links
 
