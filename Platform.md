@@ -1,6 +1,6 @@
 _Not all columns are visible. Horizontal scroll to see them._
 
- | Machine | Native Console I/O | VT100 Console I/O | [Generic Console](Classic-GenericConsole) | [Monochrome Graphics](library/monographics) | [File I/O](library/stdio) | [Sound](library/sound) | Other features / notes | 
+ | Machine | Native Console I/O | VT100 Console I/O | [Generic Console](Classic-GenericConsole) | [Monochrome Graphics](library/monographics) | [File I/O](library/stdio) | [Sound](library/sound) | Other feaFtures / notes | 
  |---|---|---|---|---|---|---|---|
 [ABC80](Platform---Luxor-ABC80) | Yes | 40x24 | 40x24 | 78x72 | No | No | 
 [ABC800](Platform---Luxor-ABC800)| Yes | No |No | No | No | No | Untested |
@@ -41,7 +41,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Nascom](Platform---Nascom)| 48x16| 48x16| 48x16 - default| 96x48 | No | No | | 
 [Grundy Newbrain](Platform---Grundy-Newbrain)| Yes | No | No |  No* | No* | No | * could work on expanded systems in non-standard mode, via [stream functions](library/newbrain#streams) | 
 [v6z80p (OSCA)](Platform---OSCA) | 40x24| 40x24| No | 320x200 | Yes | No | 2 different file access libraries | 
-[Pac Man HW](Platform---Pacman)| 28x36| No | No |  56x72 | No | No lib | | 
+[Pac Man HW](Platform---Pacman)| 28x36| No | No |  84x72* | No | No lib | * the special font provided in support/pacman must be used| 
 [PC-6001](Platform---NEC-PC6001) | 32x16, 32x24| 32x16 (*)|  32x16, 32x24 | 64x48, 128x192, 256x192 | No | PSG only | | 
 [PC-8801](Platform---NEC-PC8801) | 40x25, 80x25 |  |   |  | No | 1 bit | Sound supported only on MKII or later models, higher pitch is expected with higher CPU clocks |
 [Philips P2000](Platform---Philips-P2000)| 40x24| Monochrome 40x24 | No | 78×72 | No | 1 bit| | 
