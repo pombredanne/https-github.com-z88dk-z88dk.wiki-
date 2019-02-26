@@ -6,6 +6,24 @@
 * AY-3-8190
 * Cartridge size limited to 4k
 
+## Classic library support
+
+* [ ] Native console output
+* [ ] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font 
+    * [x] UDG support
+* [x] Lores graphics (32x16)
+* [x] Hires graphics (256x96)
+* [x] PSG sound
+* [ ] One bit sound
+* [ ] Inkey driver
+* [x] Hardware joystick
+* [ ] File I/O
+* [x] Interrupts
+* [ ] RS232
+
 # Compilation
 
     zcc +sv8000 program.c -create-app
