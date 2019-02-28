@@ -15,7 +15,7 @@
 * [X] One bit sound  (on the keyboard speaker)
 * [ ] Inkey driver
 * [ ] Hardware joystick
-* [x] File I/O (MSXDOS)
+* [x] File I/O (MSXDOS + MSXDOS2)
 * [x] Interrupts
 * [ ] RS232
 
@@ -57,6 +57,19 @@ It generates three files, a.bin, (pure binary file) and a.msx (binary file with 
 The file can be loaded from MSX-BASIC with the command:
 
 	bload "a.msx",r
+
+### MSXDOS subtype
+
+z88dk provides MSXDOS1 (using CP/M bdos calls) and MSXDOS2 (using MSXDOS2 API calls) libraries for accessing files on disc.
+
+        zcc +msx -create-app -subtype=msxdos adv_a.c
+
+Will create a .img file containing a binary that uses BDOS calls to access files.
+
+        zcc +msx -create-app -subtype=msxdos2 adv_a.c
+
+Creates a .img containing a binary that uses MSXDOS2 API calls. Additional functionality such as `mkdir()`, `chdir()` is available when compiling with the msxdos2 subtype.
+
 
 ### The TMS9918a library
 
