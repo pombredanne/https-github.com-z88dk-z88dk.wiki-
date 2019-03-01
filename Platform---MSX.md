@@ -23,7 +23,7 @@
 
     zcc +msx -create-app adv_a.c
 
-This will genetrate two files, **a.bin** (a pure binary block to be run at $9c40, sometimes requiring extra data blocks) and **a.cas**, a fully packaged binary tape image suitable for the MSX emulators.
+This will generate two files, **a.bin** (a pure binary block to be run at $9c40, sometimes requiring extra data blocks) and **a.cas**, a fully packaged binary tape image suitable for the MSX emulators.
 
     zcc +msx -create-app -subtype=wav adv_a.c
 
