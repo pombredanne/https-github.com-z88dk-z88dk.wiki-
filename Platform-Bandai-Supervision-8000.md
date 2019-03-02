@@ -48,6 +48,10 @@ Of course, supported multiple screen modes does have an overhead, especially on 
 
 # Screenshots
 
+The terminal version of DStar running:
+
+![](images/platform/sv8000_dstar.png)
+
 # Limitations
 
 * 4k isn't much space
