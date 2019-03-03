@@ -10,8 +10,8 @@ Sound over infrared port is supported
 ![](images/examples/projects/dstar_ti82.jpg)
 ![](images/examples/projects/dstar_ti83.jpg)
 ![](images/examples/projects/dstar_ti8x.jpg)
-![](images/examples/projects/dstar_ti85.jpg) (default sprite size)
-![](images/examples/projects/dstar_ti87.jpg) (sprite size = 8)
+![](images/examples/projects/dstar_ti85.gif) (default sprite size)
+![](images/examples/projects/dstar_ti86.jpg) (sprite size = 8)
 
 
 ## Luxor ABC 80
@@ -52,11 +52,9 @@ Sound is supported
 
 ## Sharp OZ 7XX
 
-default sprite size:  
-![](images/examples/projects/dstar_oz.jpg)
+![](images/examples/projects/dstar_oz.jpg) (default sprite size)
 
-spritesize=8:
-![](images/examples/projects/dstar_oz_2.jpg)
+![](images/examples/projects/dstar_oz_2.jpg) (spritesize=8)
 
 
 
@@ -82,5 +80,5 @@ Sound is supported on both the Galaksija and the "Galaksija Plus" if memory is e
 
 ## Video Technology VZ-200 (AKA Laser-200)
 
-![](images/examples/projects/dstar-vz200.jpg)
+![](images/examples/projects/dstar-vz200.png)
 
