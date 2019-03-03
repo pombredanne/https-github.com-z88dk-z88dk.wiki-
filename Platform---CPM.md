@@ -77,6 +77,7 @@ Additionally, -create-app will create discs for the following machines:
 * `-subtype=mz2500` ([Sharp MZ2500](Platform---Sharp-MZ2500))
 * `-subtype=smc777` (Sony SMC-70/SMC-777)
 * `-subtype=msx` (MSX for use with MSXDOS)
+* `-subtype=bic` (A5105/BIC)
 
 ## Program boot protection
 
