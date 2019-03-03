@@ -50,6 +50,8 @@ Of course, supported multiple screen modes does have an overhead, especially on 
 
 The terminal version of DStar running:
 
+    zcc +sv8000 dstar_gencon.c -DUSE_JOYSTICK -DUSE_UDGS -DSWITCH_MODE=1 -pragma-redirect:CRT_FONT=_font_8x8_bbc_system -create-app
+
 ![](images/platform/sv8000_dstar.png)
 
 # Limitations
