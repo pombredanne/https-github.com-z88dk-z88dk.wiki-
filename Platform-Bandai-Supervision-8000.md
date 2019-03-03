@@ -3,7 +3,7 @@
 * Z80 @ 3.57 Mhz
 * 1k RAM
 * MC6847 with 3k VRAM
-* AY-3-8190
+* AY-3-8910
 * Cartridge size limited to 4k
 
 ## Classic library support
