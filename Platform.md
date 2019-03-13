@@ -27,6 +27,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Epson PX-4/HC-40](Platform---Epson-PX4)| 40x8 | [30..80x8](Platform---Epson-PX4#the-vtansi-console-driver)| No | 240x64| No | No | | 
 [Epson PX-8/HC-80/HC-88](Platform---Epson-PX8) | 80x8 (80x9*) | 60x10 | No | 480x64 | No | No | *use the "LCD_7LINES;" macro |  
 [Enterprise 64/128](Platform---Enterprise64) | 40x25| No | No | 336x243*, 672x243*| No | Yes | *GFX via EXOS | 
+[Excalibur 64](Platform---Excalibur64) | No | No | 40x25, 80x25 | No | No | No |
 [Galaksija](Platform---Galaksija)| 32x16 (B&W) | 32x16 (B&W) | 32x16 + 32x26 (Gal+) | 64x48 + 256x208 (Gal+)| No | 1 bit* | (via tape output) | 
 [Jupiter Ace](Platform---Jupiter-Ace)| 32x24| 32x24 (B&W)| 32x24 - default| 64x48, 64x72| No | 1 bit| | 
 [Kaypro](Platform---Kaypro) | 80x25 (ADM3) | No | No | 160x100('84) 80x50('83) | No | No | Extension library to the CP/M base| 
