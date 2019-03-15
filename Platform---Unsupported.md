@@ -753,7 +753,21 @@ This is, in its base version, a CP/M system.   By the way many extensions are av
 
 [Italian article about the DecisionMate V](http://www.thecorememory.com/dmv.pdf)
 
+### P8000 compact build from EAW
+East Germany 1998. Multiple CPU, the first is a Zilog Z80 derivate (U880) and the second is a Zilog Z8001 derivate (U8001).
+You can connect up to 8 serial terminals and its runs a multiuser UNIX compatible system named WEGA.
 
+Here some details:
+CPU 1:  8-bit 4MHz U880 (Zilog Z80 clone)
+CPU 2:  16-bit 4MHz U8001 (Zilog Z8001 clone)
+RAM:   4 MB
+Floppy disk:   2 x 5,25″ 320k
+HDD: 2 x 50MB MFM harddisk
+Screen: up to 8 serial terminals 80×25 chars monochrome (green)
+OS:  OS/M, IS/M and UDOS on the 8Bit U880 CPU
+        WEGA (Unix) on the 16bit U8001 CPU
+build in: 1989
+price:  172.000 Mark
 
 ### NorthStar Advantage
 
