@@ -36,4 +36,8 @@ Will create a raw disc image suitable for use by CP/M
 * Mode 0: 80x25 (text)
 * Mode 1: 40x25 (text)
 
+## Custom fonts
+
+In the text screen modes, the native font resolution is 8x12, all z88dk fonts are 8x8 and as such when they are used with the Excalibur they will be padded by 2 pixels at the top and bottom.
+
 # Links
