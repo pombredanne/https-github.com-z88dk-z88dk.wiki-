@@ -9,19 +9,19 @@ _This machine is currently being brought up_
 
 ## Classic library support
 
-* [ ] Native console output
-* [ ] Native console input
+* [x] Native console output (CP/M)
+* [x] Native console input (CP/M)
 * [ ] ANSI vt100 engine
 * [x] Generic console
-    * [ ] Redefinable font 
-    * [ ] UDG support
-* [ ] Lores graphics (32x16)
-* [ ] Hires graphics (256x96)
+    * [x] Redefinable font 
+    * [x] UDG support
+* [ ] Lores graphics
+* [ ] Hires graphics
 * [ ] PSG sound
 * [ ] One bit sound
 * [ ] Inkey driver
 * [ ] Hardware joystick
-* [ ] File I/O
+* [x] File I/O (CP/M)
 * [ ] Interrupts
 * [ ] RS232
 
@@ -33,7 +33,7 @@ Will create a raw disc image suitable for use by CP/M
 
 # Screen modes
 
-* Mode 0: 80x25 
-* Mode 1: 40x25
+* Mode 0: 80x25 (text)
+* Mode 1: 40x25 (text)
 
 # Links
