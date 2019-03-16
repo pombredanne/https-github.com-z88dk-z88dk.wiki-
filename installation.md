@@ -76,7 +76,7 @@ Modify the configuration as follows:
 
 A system install is not fully supported in this release.
 
-Otherwise, if you wish to install z88dk and merge it with your default system environment, then edit 'z88dk/Makefile' and set your preferred destination position (default is /usr/local), then type:  **make install** (you still should add the two environment variables in the system settings).
+Otherwise, if you wish to install z88dk and merge it with your default system environment, then edit 'z88dk/Makefile' and set your preferred destination position (default is /usr/local), then type: `make install` or alternatively on systems where /bin/sh is actually dash (eg Ubuntu) `make SHELL=/bin/bash install` (you still should add the two environment variables in the system settings).
 
 ## MacOS X
 
