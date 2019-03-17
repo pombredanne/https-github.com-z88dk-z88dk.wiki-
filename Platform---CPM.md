@@ -60,11 +60,13 @@ Some hardware specific functions have been adapted to run on both native platorm
 * `-subtype=tiki100` ([Tiki-100 (formerly Kon-Tiki)](Platform---Tiki100))
 * **-ltrs80cpm**, **-lgfxtrs80**, **-lgfxeg2000** ([Tandy Radio Shack 80 and clones](Platform---TRS80))
 * **-startup=3 -lzxcpm** ([Sinclair ZX Spectrum](Platform---Sinclair-ZX-Spectrum))
-* **-lgfxzcn** ([Amstrad NC-100/NC-200](Platform---Amstrad-NC) 480x64 graphics on ZCN)
-* **-lgfxkp**,**-lgfxkp83**  ([Kaypro](Platform---Kaypro) 160x100 graphics, 80x50 on earlier '83 models)
+* **-lgfxzcn** ([Amstrad NC-100/NC-200](Platform---Amstrad-NC)) 480x64 graphics on ZCN
+* `-subtype=kaypro83` ([Kaypro 83](Platform---Kaypro)) 
+* `-subtype=kaypro84` ([Kaypro 84](Platform---Kaypro))
 * `-subtype=attache` ([Otrona Attachè](Platform---Otrona) 320x240 graphics)
 * `-subtype=adam` ([Colecovision Adam](Platform--Colecovision-Adam) 256x192 graphics)
 * `-subtype=nascom` ([Nascom](Platform---Nascom))
+* `-subtype=excali64` ([BGR Excalibur 64](Platform---Excalibur64))
 * (untested) **-lgfxep**, **-lgfxephr** ([Enterprise 64 / 128](Platform---Enterprise64))
 * (untested) **-lgfx9001**, **-lgfx9001krt** ([Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001))
 
@@ -73,11 +75,12 @@ Additionally, -create-app will create discs for the following machines:
 * `-subtype=svi` ([Spectravideo SVI](Platform---Spectravideo))
 * `-subtype=qc10` (Epson QX-10/QC-10`
 * `-subtype=osborne1` (Osborne 1)
-* `-subtype=kayproii` (Kaypro II)
+* `-subtype=kayproii` ([Kaypro II](Platform---Kaypro))
 * `-subtype=mz2500` ([Sharp MZ2500](Platform---Sharp-MZ2500))
-* `-subtype=smc777` (Sony SMC-70/SMC-777)
+* `-subtype=smc777` ([Sony SMC-70/SMC-777](Platform---SMC-777))
 * `-subtype=msx` (MSX for use with MSXDOS)
 * `-subtype=bic` (A5105/BIC)
+* `-subtype=lynx` ([Camputers Lynx](Platform---Camputers-Lynx))
 
 ## Program boot protection
 
