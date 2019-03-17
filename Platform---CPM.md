@@ -24,9 +24,9 @@ To create a disc image with a binary, you can use the following command:
 
 The file will be created on disc with a .COM extension.
 
-The supported formats are displayed by omitting the -f option:
+The supported formats are displayed by specifying the `-h` option:
 
-     appmake +cpmdisk -b [any file]
+     appmake +cpmdisk -h
 
 
 
