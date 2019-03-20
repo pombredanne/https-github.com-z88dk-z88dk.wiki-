@@ -5,7 +5,6 @@
 * MC6845 with 30k VRAM
 * Boots to BASIC or CP/M
 
-_This machine is currently being brought up_
 
 ## Classic library support
 
@@ -19,7 +18,7 @@ _This machine is currently being brought up_
 * [ ] Hires graphics
 * [ ] PSG sound
 * [ ] One bit sound
-* [ ] Inkey driver
+* [x] Inkey driver
 * [ ] Hardware joystick
 * [x] File I/O (CP/M)
 * [ ] Interrupts
