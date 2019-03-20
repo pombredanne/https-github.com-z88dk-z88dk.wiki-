@@ -14,6 +14,8 @@
 * [x] Generic console
     * [x] Redefinable font 
     * [x] UDG support
+    * [x] Inverse
+    * [x] Colours
 * [x] Lores graphics
 * [ ] Hires graphics
 * [ ] PSG sound
