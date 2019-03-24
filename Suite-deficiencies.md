@@ -2,7 +2,7 @@
 
 ### File Names
 
-The Windows version might get in trouble with uppercase source filen names.
+The Windows version might get in trouble with uppercase source file names.
 When in trouble try renaming your files.
 
 Additionally, avoid program/module names beginning with numbers or symbols.
