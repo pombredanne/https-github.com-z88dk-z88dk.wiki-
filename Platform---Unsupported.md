@@ -484,10 +484,11 @@ They featured two z80 CPUs, the latter meant for graphics operations.
 ### Sharp
 
 ##### PC-1600, PC-1600K
-SC7852 / 3,58 MHz / Z80A compatible
-LH5803 / 1,30 MHz / for compatibility with PC-1500
-LU57813P / 0,3 MHz / auxiliary CPU
-32x156 pixel graphics
+
+    SC7852 / 3,58 MHz / Z80A compatible
+    LH5803 / 1,30 MHz / for compatibility with PC-1500
+    LU57813P / 0,3 MHz / auxiliary CPU
+    32x156 pixel graphics
 
 ##### PC-E200, PC-E220
 
