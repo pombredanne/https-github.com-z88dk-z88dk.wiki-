@@ -630,6 +630,13 @@ In Italy the course came by "Scuola Radio Elettra", in France it was known as "E
 
 [A WEB page about the LLC-2](http://buebchen.jimdo.com/8-bit-selbstbau/llc2/)
 
+
+### Dataman Designs MENTA
+
+40 keys keyboard, rs232, tape and TV interfaces but only 1K RAM (hopefully expandable)
+[MENTA page in old-computers.com] (http://old-computers.com/MUSEUM/computer.asp?st=1&c=1277)
+
+
 ### MultiTech - Micro-Professor MPF-I
 
 [MPF-I on Wikipedia](http://en.wikipedia.org/wiki/Micro-Professor_MPF-I)
