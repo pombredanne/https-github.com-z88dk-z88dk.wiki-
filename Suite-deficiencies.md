@@ -15,27 +15,11 @@ Bitfields are not supported. They will compile, but will use the full datatype r
 
 Expressions are evaluated left to right, and no folding is applied, as a result ''(1 + j + 3)'' will generate bulkier code than ''( j + 1 + 3 )''.
 
-### Struct assignment
-
-Copying a complete structures is not supported:
-
-    struct s {
-        char    val[10];
-    };
-
-    struct s t;
-    struct s v;
-
-    int func() {
-        v = t;
-    }
-
-Will not compile, to solve use memcpy.
 
 ## Compiler (zsdcc)
 
 ### Struct assignment
 
-As sccz80, zsdcc does not support assigning of structs, the same solution is recommended.
+The current version of zsdcc used (3.8.5) does not support assigning of structs. This limitation will be removed when z88dk upgrades to 3.9.0
 
 ## Assembler (z80asm)
