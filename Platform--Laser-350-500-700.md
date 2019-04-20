@@ -74,9 +74,11 @@ In mode 2, the colour resolution is 1x8 (hires) pixels, for mode 0 the colour re
 
 The Laser500 port supports the single precision (32 bit) Microsoft float library. This utilises ROM routines and provides a fairly compact alternative to the standard 48 bit maths libraries normally used by z88dk.
 
+This mode is only available when using sccz80 as the compiler.
+
 To compile:
 
-   zcc +laser500 -fp-mode=mbf32 fp.c -lmbf32
+    zcc +laser500 -fp-mode=mbf32 fp.c -lmbf32
 
 
 # Reference
