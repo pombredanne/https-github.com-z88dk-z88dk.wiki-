@@ -23,7 +23,7 @@ VTech Laser 350/500/700.
 * [x] Inkey driver
 * [x] Hardware joystick
 * [ ] File I/O
-* [ ] Interrupts
+* [x] Interrupts
 
 # Compilation
 
@@ -68,8 +68,16 @@ In mode 2, the colour resolution is 1x8 (hires) pixels, for mode 0 the colour re
 # Limitations
 
 * The generated program will not work on the unexpanded (16k) VZ350
-* Sounds is not yet supported
 * Scanning the keyboard temporarily disables interrupts
+
+# Maths Library
+
+The Laser500 port supports the single precision (32 bit) Microsoft float library. This utilises ROM routines and provides a fairly compact alternative to the standard 48 bit maths libraries normally used by z88dk.
+
+To compile:
+
+   zcc +laser500 -fp-mode=mbf32 fp.c -lmbf32
+
 
 # Reference
 
