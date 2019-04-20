@@ -13,6 +13,7 @@
 * [Retargetting](Classic--Retargetting)
 * [Building the libraries](libsrc)
 * [Pragmas](Classic--Pragmas)
+* [Maths Libraries](Classic--Maths-Libraries)
 
 ## New Library
 
