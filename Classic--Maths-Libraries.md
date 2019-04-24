@@ -35,6 +35,16 @@ The library can be linked with the following options: `-fp-mode=mbf32 -lmbf32`
 
 Typically using the mbf32 will result in a roughly 20% decrease in floating point performance when compared to genmath/math48. However, the size of your application will be greatly reduced.
 
+## mbf64 - (Microsoft 64 bit library)
+
+Support has been added for the (8 byte, 8 bit exponent, 56 bit mantissa) Microsoft double precision library. This is available for machines that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported:
+
+* VTech Laser 500
+
+The library can be linked with the following options: `-fp-mode=mbf64 -lmbf64`
+
+mbf64 can be used with sccz80.
+
 ## IEEE 32 bit library
 
 _Being written_
