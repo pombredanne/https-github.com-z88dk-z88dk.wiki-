@@ -30,6 +30,9 @@ Support has been added for the (4 byte, 8 bit exponent, 24 bit mantissa) Microso
 
 * VTech Laser 500
 * Mitsubishi Multi 8 (10k mode only)
+* Mattel Aquarius
+* TRS80/Color Genie
+* CCE MC-1000
 
 The library can be linked with the following options: `-fp-mode=mbf32 -lmbf32`
 
@@ -40,6 +43,7 @@ Typically using the mbf32 will result in a roughly 20% decrease in floating poin
 Support has been added for the (8 byte, 8 bit exponent, 56 bit mantissa) Microsoft double precision library. This is available for machines that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported:
 
 * VTech Laser 500
+* TRS80/Color Genie
 
 The library can be linked with the following options: `-fp-mode=mbf64 -lmbf64`
 
