@@ -1,12 +1,27 @@
-# Far Memory
-
-## Breaking the 64k barrier
+# Breaking the 64k barrier
 
 The Z80 processor is an old processor, and it's based on an even older one - the Intel 8080. These two processors are 8 bit accumulator based and can access an address space of 65536 bytes (or 64k).
 
 Quite early on it was realised that this simply isn't enough address space to implement a comprehensive operating system and leave sufficient user RAM for their own programs.
 
 The solution to this is quite straightforward, have more ROM/RAM in the system and page it in when required. This trick isn't just used on the Z80 but also for the 6500 processors.
+
+# Named address spaces (sccz80 and zsdcc)
+
+Both sccz80 and sdcc support a subset of the Embedded C standard named address spaces. Both of them use them for implementing bank switching. Some examples follow:
+
+```
+void setb0(void);            // The function that sets the currently active memory bank to b0
+void setb1(void);            // The function that sets the currently active memory bank to b1
+__addressmod setb0 spaceb0;  // Declare a named address space called spaceb0 that uses setb0
+__addressmod setb1 spaceb1;  // Declare a named address space called spaceb1 that uses setb1
+
+spaceb0 int x;          // An int in address space spaceb0
+spaceb1 int ∗y;         // A pointer to an int in address space spaceb1
+spaceb0 int ∗spaceb1 z; // A pointer in address space spaceb1 that points to an int in address space spaceb0
+```
+
+# Far Memory (sccz80)
 
 ## Abstracted Handling
 
@@ -118,4 +133,7 @@ You should also implement the following string.h functions which will make the u
 	extern far char *strrchr_far(far unsigned char *, unsigned char);
 	extern far char *strdup_far(far char *);
 
+# Trampoline function calls (sccz80 and zsdcc)
+
+_To be written_ See #641
 
