@@ -22,7 +22,7 @@
 ## Misc
 
 * [Debugging](debugging)
-* [Far Memory](FarMemory)
+* [More than 64k](More-Than-64k)
 * [Deficiencies](Suite-deficiencies)
 * [Importing routines written in 8080 assembly mnemonics](8080toz80)
 * [Using CP/M libraries in REL format with z88dk](relformat)
