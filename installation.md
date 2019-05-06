@@ -43,6 +43,7 @@ libboost-all-dev
 texinfo
 texi2html
 libxml2-dev
+subversion
 ```
 
 The following perl packages are required to run the z80asm unit tests:
