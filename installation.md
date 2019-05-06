@@ -44,6 +44,8 @@ texinfo
 texi2html
 libxml2-dev
 subversion
+bison
+flex
 ```
 
 The following perl packages are required to run the z80asm unit tests:
