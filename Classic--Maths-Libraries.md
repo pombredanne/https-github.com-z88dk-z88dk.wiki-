@@ -51,4 +51,8 @@ mbf64 can be used with sccz80.
 
 ## IEEE 32 bit library
 
-_Being written_
+The IEEE 32 bit provides a 32 bit float format that is mostly compliant with IEEE754. The library can be used with both sccz80 and sdcc using the following options:
+
+`-fp-mode=ieee -lmath32 -pragma-define:CLIB_32BIT_FLOAT=1`
+
+More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32)
