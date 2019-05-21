@@ -55,4 +55,6 @@ The IEEE 32 bit provides a 32 bit float format that is mostly compliant with IEE
 
 `-fp-mode=ieee -lmath32 -pragma-define:CLIB_32BIT_FLOAT=1`
 
+At present the higher level functions (trigonometric, exp, pow) use inaccurate series coefficients and the results are not particularly accurate.
+
 More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32)
