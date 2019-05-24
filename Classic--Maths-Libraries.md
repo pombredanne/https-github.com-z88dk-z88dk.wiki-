@@ -58,3 +58,36 @@ The IEEE 32 bit provides a 32 bit float format that is mostly compliant with IEE
 At present the higher level functions (trigonometric, exp, pow) use inaccurate series coefficients and the results are not particularly accurate.
 
 More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32)
+
+# Benchmarks
+
+The maths libraries have been lightly benchmarked using a couple of test programs within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks). These were tested using the classic library and the following compilation line:
+
+`zcc +test -DPRINTF [file.c] [maths flags]`
+
+As a result, the numbers include the time spent printing, however this isn't particularly time consuming in the overall scheme:
+
+## n-body
+
+Library         | Compiler | Value 1       | Value 2       | Ticks
+-|-|-|-|-
+(correct values)|          | -0.169075164  | -0.169087605
+genmath         | sccz80   | -0.169075164  | -0.169087605  | 3653110339
+math32          | sccz80   | -0.169916825  | -0.169916825  | 1494634775
+math32 (zxn)    | sccz80   | -0.169916825  | -0.169916825  |  608524943
+math32 (z180)   | sccz80   | -0.169916825  | -0.169916825  |  593692469
+math48:         | sccz80   | -0.169075164  | -0.169087605  | 2402452612
+mbf32           | sccz80   | -0.169916810  | -0.169916810  | 1939334701
+
+## spectral-norm
+
+Library         | Compiler |  Value         | Ticks
+-|-|-|-
+(correct value) |          | 1.274219991
+genmath         | sccz80   | 1.274219989   | 14820162694
+math48          | sccz80   | 1.274219989   |  9037947502
+math32          | sccz80   | 1.274219155   | 14585977044
+math32          | sdcc     | 1.274219155   | 14736240457
+math32 (zxn)    | sccz80   | 1.274219155   |  6905990353
+math32 (z180)   | sccz80   | 1.274219155   |  6630697982
+mbf32           | sccz80   | 1.274220347   |  6754491551
