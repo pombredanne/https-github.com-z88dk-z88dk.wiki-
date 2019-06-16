@@ -81,6 +81,7 @@ Additionally, -create-app will create discs for the following machines:
 * `-subtype=msx` (MSX for use with MSXDOS)
 * `-subtype=bic` (A5105/BIC)
 * `-subtype=lynx` ([Camputers Lynx](Platform---Camputers-Lynx))
+* `-subtype=rc700` RC-700
 
 ## Program boot protection
 
