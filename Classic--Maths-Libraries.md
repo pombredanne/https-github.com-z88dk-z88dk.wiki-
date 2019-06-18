@@ -2,19 +2,19 @@ The classic library supports applications being compiled with different maths li
 
 ## Size of floating point number
 
-When compiling with sdcc a float is always allocated 4 bytes in the C code. However with sccz80, the size of a float depends on which maths library is being used. Traditionally, sccz80 has always allocated a 6 byte block for representing floats, but some maths libraries support a 4 byte float.
+When compiling with zsdcc a float is always allocated 4 bytes in the C code. However with sccz80, the size of a float depends on which maths library is being used. Traditionally, sccz80 has always allocated a 6 byte block for representing floats, but some maths libraries support a 4 byte float.
 
-## -lm (genmath)
+## `-lm` (genmath)
 
 Genmath is z88dk's traditional maths library. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises a single index register and runs on all of classic's targets (subject to memory).
 
 Genmath can only be used with the sccz80 compiler.
 
-## -lmath48
+## `-lmath48`
 
 math48 has been imported into classic from the newlib. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises the alternate register set and such can't run on all classic targets
 
-math48 can be used with both sccz80 and sdcc and is marginally faster than genmath.
+math48 can be used with both sccz80 and zsdcc and is marginally faster than genmath.
 
 ## Machine specific libraries
 
@@ -24,7 +24,7 @@ math48 can be used with both sccz80 and sdcc and is marginally faster than genma
 
 All of these libraries use the floating point package located in the machine's ROM. This can result in a compact binary
 
-## mbf32 - (Microsoft 32 bit library)
+## `-lmbf32` - (Microsoft 32 bit library)
 
 Support has been added for the (4 byte, 8 bit exponent, 24 bit mantissa) Microsoft single precision library. This is available for machines that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported:
 
@@ -38,7 +38,7 @@ The library can be linked with the following options: `-fp-mode=mbf32 -lmbf32`
 
 Typically using the mbf32 will result in a roughly 20% decrease in floating point performance when compared to genmath/math48. However, the size of your application will be greatly reduced.
 
-## mbf64 - (Microsoft 64 bit library)
+## `-lmbf64` - (Microsoft 64 bit library)
 
 Support has been added for the (8 byte, 8 bit exponent, 56 bit mantissa) Microsoft double precision library. This is available for machines that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported:
 
@@ -49,13 +49,19 @@ The library can be linked with the following options: `-fp-mode=mbf64 -lmbf64`
 
 mbf64 can be used with sccz80.
 
-## IEEE 32 bit library
+## `-lmath32` - (IEEE 32 bit library)
 
-The IEEE 32 bit provides a 32 bit float format that is mostly compliant with IEEE754. The library can be used with both sccz80 and sdcc using the following options:
+The IEEE 32 bit provides a 32 bit float format that is mostly compliant with IEEE-754. The library can be used with both sccz80 and zsdcc using the following options:
 
 `-fp-mode=ieee -lmath32 -pragma-define:CLIB_32BIT_FLOAT=1`
 
-At present the higher level functions (trigonometric, exp, pow) use inaccurate series coefficients and the results are not particularly accurate.
+or to link the fast multiply for z80: 
+
+`-fp-mode=ieee -lmath32_fast -pragma-define:CLIB_32BIT_FLOAT=1`
+
+math32 supports the z180 and ZX Spectrum Next hardware multiply instructions, providing accelerated performance for these platforms. The z80 CPU is also supported through emulation of the hardware multiply format `16_8x8`, and also provides good performance.
+
+The intrinsic functions are written in assembler. The higher level functions (trigonometric, exp, pow) are implemented by C functions extracted from the Hi-Tech C Floating point library, and the Cephes Math Library.
 
 More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32)
 
@@ -71,25 +77,25 @@ As a result, the numbers include the time spent printing, however this isn't par
 
 Library         | Compiler | Value 1       | Value 2       | Ticks
 -|-|-|-|-
-(correct values)|          | -0.169075164  | -0.169087605
+correct values  | -->      | -0.169075164  | -0.169087605
 genmath         | sccz80   | -0.169075164  | -0.169087605  | 3_652_736_949
-math48:         | sccz80   | -0.169075164  | -0.169087605  | 2_402_023_498
+math48          | sccz80   | -0.169075164  | -0.169087605  | 2_402_023_498
 math32          | sccz80   | -0.169916825  | -0.169916825  | 1_400_093_930
-math32 (fast)   | sccz80   | -0.169916825  | -0.169916825  | 1_199_880_599
-math32 (zxn)    | sccz80   | -0.169916825  | -0.169916825  |   578_044_414
-math32 (z180)   | sccz80   | -0.169916825  | -0.169916825  |   562_934_721
+math32_fast     | sccz80   | -0.169916825  | -0.169916825  | 1_199_880_599
+math32_zxn      | sccz80   | -0.169916825  | -0.169916825  |   578_044_414
+math32_z180     | sccz80   | -0.169916825  | -0.169916825  |   562_934_721
 mbf32           | sccz80   | -0.169916810  | -0.169916810  | 1_939_334_701
 
 ## spectral-norm
 
 Library         | Compiler |  Value         | Ticks
 -|-|-|-
-(correct value) |          | 1.274219991
+correct value   | -->      | 1.274219991
 genmath         | sccz80   | 1.274219989   | 14_817_735_124
 math48          | sccz80   | 1.274219989   |  9_035_519_932
 math32          | sccz80   | 1.274219155   | 13_508_407_034
-math32 (fast)   | sccz80   | 1.274219155   | 12_069_040_408
-math32          | sdcc     | 1.274219155   | 14_504_079_532
-math32 (zxn)    | sccz80   | 1.274219155   |  6_396_534_979
-math32 (z180)   | sccz80   | 1.274219155   |  6_120_752_011
+math32_fast     | sccz80   | 1.274219155   | 12_069_040_408
+math32          | zsdcc    | 1.274219155   | 14_504_079_532
+math32_zxn      | sccz80   | 1.274219155   |  6_396_534_979
+math32_z180     | sccz80   | 1.274219155   |  6_120_752_011
 mbf32           | sccz80   | 1.274220347   |  6_754_491_551
