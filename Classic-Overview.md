@@ -10,7 +10,7 @@ Originally, the classic library and new library were completely different code b
 
 * Classic supports many more targets and has different way of implementing the crt0 startup file
 * `<stdio.h>` is a different implementation that supports file io
-* Classic supports multiple floating point libraries for pure sccz80 compilations
+* Classic supports multiple floating point libraries for pure _sccz80_ compilations
 * Classic provides the cross platform libraries detailed below
 * Classic tends to be tuned at link time, newlib at library build time
 
@@ -26,14 +26,14 @@ Multiple maths libraries are available in the classic library. See [Classic Math
 Two generic maths libraries are available with the classic library [_genmath_](https://github.com/z88dk/z88dk/tree/master/libsrc/math/genmath) and [_math48_](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float).
 
 Both libraries perform roughly identically and have the same amount of precision (40 bit mantissa, 7 bit exponent), however the register usage of the libraries is different. _genmath_ uses the `ix` register and in particular the undocumented opcodes that use `ixl` and `ixh`. As a result, it cannot be used on either
-Rabbit or Z180 processors. _math48_ on the otherhand makes extensive use of the alternate register set.
+Rabbit or Z180 processors. _math48_ on the other hand makes extensive use of the alternate register set.
 
 The ZX Spectrum, ZX81, CPC and z88 platforms additionally provide a maths library that utilises the floating point calculator within their ROMs. These provide
 a lower degree of precision (a 32 bit mantissa), the trade-off being that they use less of your application memory.
 
 The Microsoft 32 bit and 64 bit maths libraries are supported for machines that run Microsoft BASIC and the appropriate entry points discovered.
 
-The math32 math library provides a 32 bit float format that is mostly compliant with IEEE-754 32 bit floating point. This is the native format for zsdcc floating point. The library supports both z180 and ZX Spectrum Next hardware multiply instructions, as well as z80 using software multiplies.
+The [_math32_](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32) math library provides a 32 bit float format that is mostly compliant with IEEE-754 32 bit floating point. This is the native format for _zsdcc_ floating point. The library supports both z180 and ZX Spectrum Next hardware multiply instructions, as well as supporting z80 platforms using software multiply.
 
 **SDCC compatibility:** Only `-lmath48` is supported for _zsdcc_ compilations.
 
