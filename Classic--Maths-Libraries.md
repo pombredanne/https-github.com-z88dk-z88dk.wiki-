@@ -69,6 +69,8 @@ More details on the library can be found within the [repository](https://github.
 
 The BBC maths library provides a 32 bit mantissa and 8 bit exponent. It's the same library as the native maths library on the z88. It can be linked with the options: `-fp-mode=z88 -lbbc_math`
 
+At the moment, the library uses the alternate register set and both index registers so can’t run on all targets. It should be possible to update so that only one index register is used which will broaden the portability. 
+
 
 # Benchmarks
 
