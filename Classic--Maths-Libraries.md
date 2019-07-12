@@ -4,7 +4,7 @@ The classic library supports applications being compiled with different maths li
 
 When compiling with zsdcc a float is always allocated 4 bytes in the C code. However with sccz80, the size of a float depends on which maths library is being used. Traditionally, sccz80 has always allocated a 6 byte block for representing floats, but some maths libraries support a 4 byte float.
 
-## `-lm` (genmath)
+## `-lm` - (genmath)
 
 Genmath is z88dk's traditional maths library. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises a single index register and runs on all of classic's targets (subject to memory).
 
@@ -12,17 +12,13 @@ Genmath can only be used with the sccz80 compiler.
 
 ## `-lmath48`
 
-math48 has been imported into classic from the newlib. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises the alternate register set and such can't run on all classic targets
+math48 has been imported into classic from the newlib. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises the alternate register set and such can't run on all classic targets.
 
 math48 can be used with both sccz80 and zsdcc and is marginally faster than genmath.
 
-## Machine specific libraries
+## `-lbbc_math` - (40 bit maths library from BBC BASIC for z80)
 
-* `-lmathz88 -fp-mode=z88` 6 bytes. 8 bit exponent, 32 bit mantissa. Cambridge z88
-* `-lmz` 6 bytes. 8 bit exponent, 32 bit mantissa. ZX Spectrum, ZX81 
-* `-lcpcmath` 6 bytes. 8 bit exponent, 32 bit mantissa. Amstrad CPC
-
-All of these libraries use the floating point package located in the machine's ROM. This can result in a compact binary
+The BBC maths library provides a 32 bit mantissa and 8 bit exponent. It's the same library as the native maths library on the z88. It can be linked with the options: `-fp-mode=z88 -lbbc_math`. It can be used on ix/iy switched platforms with `-fp-mode=z88 -lbbc_math_iy`.
 
 ## `-lmbf32` - (Microsoft 32 bit library)
 
@@ -63,11 +59,15 @@ math32 supports the z180 (`-lmath32_z180`) and ZX Spectrum Next (`-lmath32_zxn`)
 
 The intrinsic functions are written in assembler. The higher level functions (trigonometric, exp, pow) are implemented by C functions extracted from the Hi-Tech C Floating point library, and the Cephes Math Library.
 
-More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32)
+More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32).
 
-## `-lbbc_math` - (40 bit maths library from BBC BASIC for z80)
+## Machine specific libraries
 
-The BBC maths library provides a 32 bit mantissa and 8 bit exponent. It's the same library as the native maths library on the z88. It can be linked with the options: `-fp-mode=z88 -lbbc_math`. It can be used on ix/iy switched platforms with `-fp-mode=z88 -lbbc_math_iy`
+* `-lmathz88 -fp-mode=z88` 6 bytes. 8 bit exponent, 32 bit mantissa. Cambridge z88
+* `-lmz` 6 bytes. 8 bit exponent, 32 bit mantissa. ZX Spectrum, ZX81 
+* `-lcpcmath` 6 bytes. 8 bit exponent, 32 bit mantissa. Amstrad CPC
+
+All of these libraries use the floating point package located in the machine's ROM. This can result in a compact binary
 
 # Benchmarks
 
