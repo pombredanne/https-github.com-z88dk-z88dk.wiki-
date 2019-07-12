@@ -59,7 +59,7 @@ or to link the fast multiply for z80:
 
 `-fp-mode=ieee -lmath32_fast -pragma-define:CLIB_32BIT_FLOAT=1`
 
-math32 supports the z180 and ZX Spectrum Next hardware multiply instructions, providing accelerated performance for these platforms. The z80 CPU is also supported through emulation of the hardware multiply format `16_8x8`, and also provides good performance.
+math32 supports the z180 (`-lmath32_z180`) and ZX Spectrum Next (`-lmath32_zxn`) hardware multiply instructions, providing accelerated performance for these platforms. The z80 CPU is also supported through emulation of the hardware multiply format `16_8x8`, and also provides good performance.
 
 The intrinsic functions are written in assembler. The higher level functions (trigonometric, exp, pow) are implemented by C functions extracted from the Hi-Tech C Floating point library, and the Cephes Math Library.
 
@@ -67,10 +67,7 @@ More details on the library can be found within the [repository](https://github.
 
 ## `-lbbc_math` - (40 bit maths library from BBC BASIC for z80)
 
-The BBC maths library provides a 32 bit mantissa and 8 bit exponent. It's the same library as the native maths library on the z88. It can be linked with the options: `-fp-mode=z88 -lbbc_math`
-
-At the moment, the library uses the alternate register set and both index registers so can’t run on all targets. It should be possible to update so that only one index register is used which will broaden the portability. 
-
+The BBC maths library provides a 32 bit mantissa and 8 bit exponent. It's the same library as the native maths library on the z88. It can be linked with the options: `-fp-mode=z88 -lbbc_math`. It can be used on ix/iy switched platforms with `-fp-mode=z88 -lbbc_math_iy`
 
 # Benchmarks
 
