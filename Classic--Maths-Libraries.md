@@ -55,7 +55,7 @@ or to link the fast multiply for z80:
 
 `-fp-mode=ieee -lmath32_fast -pragma-define:CLIB_32BIT_FLOAT=1`
 
-math32 supports the z180 (`-lmath32_z180`) and ZX Spectrum Next (`-lmath32_zxn`) hardware multiply instructions, providing accelerated performance for these platforms. The z80 CPU is also supported through emulation of the hardware multiply format `16_8x8`, and also provides good performance.
+math32 supports the z180 (`-lmath32_z180`) and ZX Spectrum Next z80n (`-lmath32_z80n`) hardware multiply instructions, providing accelerated performance for these platforms. The z80 CPU is also supported through emulation of the hardware multiply format `16_8x8`, and also provides good performance.
 
 The intrinsic functions are written in assembler. The higher level functions (trigonometric, exp, pow) are implemented by C functions extracted from the Hi-Tech C Floating point library, and the Cephes Math Library.
 
@@ -86,7 +86,7 @@ genmath         | sccz80   | -0.169075164  | -0.169087605  | 3_652_736_949
 math48          | sccz80   | -0.169075164  | -0.169087605  | 2_402_023_498
 math32          | sccz80   | -0.169075264  | -0.169086709  | 1_400_110_112 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#execution-speed)
 math32_fast     | sccz80   | -0.169075264  | -0.169086709  | 1_199_895_142 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#execution-speed)
-math32_zxn      | sccz80   | -0.169075264  | -0.169086709  | 0_578_058_768 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#execution-speed)
+math32_z80n     | sccz80   | -0.169075264  | -0.169086709  | 0_578_058_768 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#execution-speed)
 math32_z180     | sccz80   | -0.169075264  | -0.169086709  | 0_562_947_777 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#execution-speed)
 mbf32           | sccz80   | -0.169916810  | -0.169916810  | 1_939_334_701
 bbcmath         | sccz80   | -0.169075164  | -0.169087604  | 1_655_789_776
@@ -101,7 +101,7 @@ math48          | sccz80   | 1.274219989   | 09_035_519_932
 math32          | sccz80   | 1.274219155   | 13_508_416_688
 math32_fast     | sccz80   | 1.274219155   | 12_069_049_285
 math32          | zsdcc    | 1.274219155   | 14_504_079_532
-math32_zxn      | sccz80   | 1.274219155   | 06_396_544_633
+math32_z80n     | sccz80   | 1.274219155   | 06_396_544_633
 math32_z180     | sccz80   | 1.274219155   | 06_120_760_761
 mbf32           | sccz80   | 1.274220347   | 06_754_491_551
 bbcmath         | sccz80   | 1.274219988   | 08_017_859_189
