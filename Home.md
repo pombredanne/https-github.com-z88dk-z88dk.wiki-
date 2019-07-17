@@ -6,7 +6,7 @@ The original content (in particular for the new library) is available at [http:/
 
 # An Introduction to Z88DK
 
-Z88DK is a complete development toolkit for the z80, z180 and rabbit processors.
+Z88DK is a complete development toolkit for the 8080, z80, z180, z80n and rabbit processors.
 
 It contains two C compilers, an assembler / linker / librarian, data compression tools and a utility for processing the raw binaries into forms needed by specific targets.
 
