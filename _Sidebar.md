@@ -9,6 +9,7 @@
 * [Overview](Classic-Overview)
 * [Platform List](Platform)
 * [Unsupported Platforms](Platform---Unsupported)
+* [8080 Support](Classic-8080)
 * [Memory Allocation](Classic-allocation)
 * [Retargetting](Classic--Retargetting)
 * [Building the libraries](libsrc)
