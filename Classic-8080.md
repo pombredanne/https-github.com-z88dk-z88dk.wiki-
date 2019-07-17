@@ -39,7 +39,7 @@ No maths library is shipped that supports the 8080. The core of the Microsoft MB
 
 The following extension libraries are not include in the 8080 library:
 
-* Allocation: balloc and obstack
+* Allocation: balloc
 * Algorithm/adt: All
 * Debug library
 
