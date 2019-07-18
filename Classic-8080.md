@@ -47,10 +47,6 @@ The following extension libraries are not include in the 8080 library:
 
 Only `sccz80` supports generation of 8080 code.
 
-### Long (32bit number support)
-
-The 32 bit multiplication and division routines have not yet been written. If you use them, or they are used by any linked library routines, then your build will fail.
-
 
 
 
