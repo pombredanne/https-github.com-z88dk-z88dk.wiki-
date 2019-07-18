@@ -53,6 +53,7 @@ The built program (with .ROM extension) needs to be renamed to "nc100.card", "nc
 ### ZCN
 
 The tools will edit directly "nc100.card" (you eventually need to rename it to nc150.card or nc200.card to run on different models):
+
     zcnformat a:
     zcnput A.COM a:
 
