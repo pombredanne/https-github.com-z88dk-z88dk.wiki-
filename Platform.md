@@ -56,7 +56,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Samsung SPC-1000](Platform-Samsung-SPC-1000)| 32x16 | No | 32x16 + 32x24 | 64x32 + 256x192 | No | Yes | VDP extension is supported
 [Sega Master System](Platform---SMS) |32x24|| | || PSG (+ 1 bit) | |
 [Sega SC-3000/Sega SG-1000](Platform---Sega-SC3000) | 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 32x24 | 256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone | 
-[Sharp PC-G8xx, PC-E2xx](Platform---Sharp-PC)| No | 24x4 *(24x6 / 36x8)|  No | No | No | No | *(-clib=g850b / -clib=g850) |
+[Sharp PC-G8xx, PC-E2xx](Platform---Sharp-PC)| No | 24x4 *(24x6 / 36x8)|  No | 143x47 (G850 only) | No | 1 bit** | *(-clib=g850b / -clib=g850) **(HW required) |
 [Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| 40x25 | 80x50 | No | PSG (+ 1 bit)  | Many appmake extras | 
 [Sharp OZ](Platform---Sharp-OZ700) | Yes | No | No | 239x80| No | No | Experimental| 
 [Sharp MZ2500](Platform---Sharp-MZ2500) | 40(80)x25 | No| 40x24, 80x24 | No | No | No  | Initial support, max 24kb | 
