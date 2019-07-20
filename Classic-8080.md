@@ -20,7 +20,6 @@ The following features from `<stdio.h>` are not included in the 8080 library:
 
 * `funopen()` and stdio pluggable device support
 * The `scanf` family. This can be restored if required.
-* The `printf` family doesn't support `%e`, `%f` and `%g` format specifiers. 
 
 ### `<stdlib.h>`
 
