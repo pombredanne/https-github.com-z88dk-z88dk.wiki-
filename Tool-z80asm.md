@@ -14,7 +14,7 @@ By default, i.e. without any options, assembles each of the listed files into re
 
 # Contents
 
-* [z80asm Object Input Format](Tool-z80asm-input-format)
+* [z80asm Input Format](Tool-z80asm-input-format)
 * [z80asm Object File Format](Tool-z80asm-object-file-format)
 
 ## Copyright
