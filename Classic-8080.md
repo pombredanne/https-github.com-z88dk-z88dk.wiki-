@@ -25,7 +25,6 @@ The following features from `<stdio.h>` are not included in the 8080 library:
 
 The following features from `<stdlib.h>`are not included in the 8080 library:
 
-* The `strto` group
 * `qsort` and `bsearch`
 * z88dk extensions: `inp`, `outp`, `extract_bits`
 
