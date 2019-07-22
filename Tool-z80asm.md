@@ -12,22 +12,10 @@ z80asm [options] file...
 
 By default, i.e. without any options, assembles each of the listed files into relocatable object file with a ```.o``` extension. It shows a summary of all the options when called with the ```-h``` option.
 
-# Input line format
+# Contents
 
-Assembly code is written in text lines with an optional label field, an optional opcode field and a list of arguments for the opcode. A comment starts with a semi-colon (```;```) and ends at the end of the line.
-
-Differently to most other assemblers, white space is not significant, i.e. a label can be defined after white space, and an opcode can be written at column 1.
-
-Symbols must start with a letter or underscore character (```_```), and can have letters, digits or underscores. Labels are case-sensitive.
-
-A label is defined by prefixing a symbol with a dot (```.```) or suffixing it with a colon (```:```). The following examples are label definitions:
-
-```.A_Label```  
-```AnotherLabel:```  
-
-# Output files
-
-The object and library files produced by *z80asm* are documented in [z80asm Object File Format](Tool-z80asm-object-file-format).
+* [z80asm Object Input Format](Tool-z80asm-input-format)
+* [z80asm Object File Format](Tool-z80asm-object-file-format)
 
 ## Copyright
 
