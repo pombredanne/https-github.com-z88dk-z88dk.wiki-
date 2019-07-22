@@ -10,7 +10,7 @@
 z80asm [options] file...
 ```
 
-By default, i.e. without any options, assembles each of the listed files into relocatable object file with a ```.o``` extension.
+By default, i.e. without any options, assembles each of the listed files into relocatable object file with a ```.o``` extension. It shows a summary of all the options when called with the ```-h``` option.
 
 # Input line format
 
