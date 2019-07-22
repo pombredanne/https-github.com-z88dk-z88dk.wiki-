@@ -14,4 +14,4 @@ Symbols must start with a letter or underscore character (```_```), and can have
 
 A label is defined by prefixing a symbol with a dot (```.```) or suffixing it with a colon (```:```), i.e. either ```.label``` or ```label:```.
 
-[work in progress] A line can contain multiple assembly statements, separated either by the backslash (```\```) or colon (```:```) characters.
+[not yet released] A line can contain multiple assembly statements, separated either by the backslash (```\```) or colon (```:```) characters.
