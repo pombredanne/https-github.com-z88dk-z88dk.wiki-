@@ -14,7 +14,7 @@ By default, i.e. without any options, assembles each of the listed files into re
 
 # Input line format
 
-Assembly code is written in text lines with an optional label field, an optional opcode field and a list of arguments for the opcode. A comment starts with a semi-column (```;```) and ends at the end of the line.
+Assembly code is written in text lines with an optional label field, an optional opcode field and a list of arguments for the opcode. A comment starts with a semi-colon (```;```) and ends at the end of the line.
 
 Differently to most other assemblers, white space is not significant, i.e. a label can be defined after white space, and an opcode can be written at column 1.
 
