@@ -1,4 +1,4 @@
-z80asm File formats (v11)
+z80asm File formats (v12)
 =========================
 
 This document describes the object and libary formats used by *z80asm*. 
@@ -42,7 +42,7 @@ The format of the object file is as follows:
 
     |Addr | Type   | Object                                                 |  
     +-----+--------+--------------------------------------------------------+  
-    |   0 | char[8]| 'Z80RMF11' (file signature and version)                |  
+    |   0 | char[8]| 'Z80RMF12' (file signature and version)                |  
     |   8 | long   | File pointer to *Module Name*, always the last section |  
     |  12 | long   | File pointer to *Expressions*, may be -1               |  
     |  16 | long   | File pointer to *Module Names*, may be -1              |  
@@ -68,6 +68,7 @@ format:
      * 'C' : 16-bit integer, little-endian (-32768 to 65535)  
      * 'B' : 16-bit integer, big-endian (-32768 to 65535)  
      * 'L' : 32-bit signed integer     
+     * 'J' : 8-bit jump relative offset
      * '=' : computed name at link time
 
   * *sourcefile* (lstring) : source file name where expression was defined,
@@ -153,12 +154,12 @@ following format:
 Library file format
 -------------------
 
-The library file format is a sequense of object files with additional
+The library file format is a sequence of object files with additional
 structures.
 
     |Addr | Type   | Object                                                 |
     +-----+--------+--------------------------------------------------------+
-    |   0 | char[8]| 'Z80LMF11' (file signature and version)                |
+    |   0 | char[8]| 'Z80LMF12' (file signature and version)                |
     |   8 | word   | *Object File Block*                                    |
     |     |        | ...                                                    |
 
@@ -190,3 +191,4 @@ at link time, after all addresses are allocated.
 * version *09* : include the file and line number where each symbol was defined.
 * version *10* : allow a section alignment to be defined.
 * version *11* : allow big-endian 16-bit expressions to be patched; these big-endian values are used in the ZXN coper unit.
+* version *12* : allow the target expression of relative jumps to be computed in the link phase
