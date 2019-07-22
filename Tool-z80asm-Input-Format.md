@@ -2,7 +2,7 @@
 
 z80asm reads text files in the syntax supported by the specific processor being assembled for (see -m option) and produces the corresponding object files.
 
-An input file with a ```.o``` extension is assumed to be already in object file format and is just read by the linker. Any other extension is considered an assembly source file, but conventionally these have the extension ```.asm```.
+An input file with a ```.o``` extension is assumed to be already in object file format and is just read by the linker. Any other extension is considered an assembly source file (conventionally ```.asm```).
 
 # Input Lines
 
