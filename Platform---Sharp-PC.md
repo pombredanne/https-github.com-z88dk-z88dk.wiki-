@@ -2,6 +2,14 @@
 
 The Sharp PC-Gxxx are programmable calculators featuring C and assembly low level programming features.
 
+Basic support (24x4 text mode) is provided via BIOS (IOCS) for the following models:
+PC-E200, PC-E220, PC-G801, PC-G802, PC-G803, PC-G805, PC-G811, PC-G813, PC-G815, PC-G820, PC-G830
+
+Advanced graphics functions are available for:
+PC-G850, PC-G850V
+
+Sound mod is supported.
+
 
 ### Command Line
 
