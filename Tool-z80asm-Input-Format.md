@@ -17,6 +17,12 @@ The assembler parses source files with any of the common end-of-line termination
 
 [TO-DO] A single backslash character (```\```) or a colon (```:```) may be used to separate multiple statements in a single line.
 
+```
+  org 0				; assembly directive	        
+  start: push bc\pop hl 	; define a label and add two assembly opcodes            
+  ret                   	; assembly opcode can be at the first column    
+```
+
 Differently to most other assemblers, white space is not significant, i.e. a label can be defined after white space, and an opcode can be written at column 1.
 
 ### Comments
@@ -46,7 +52,7 @@ All expressions are computed as signed integers with the host platform's integer
 
 [TO-DO] Floating point numbers can be supplied with the ```FLOAT``` directive, that encodes them in the current floating point format in the object code.
 
-Decimal numbers are a sequence of decimal digits (```0..9```), optionally followed by a ```d``` or ```D``` - all prefixes and suffixes are case-insensitive. Leading zeros are insignificant - note the difference from C, where a leading zero means octal.
+**Decimal** numbers are a sequence of decimal digits (```0..9```), optionally followed by a ```d``` or ```D``` - all prefixes and suffixes are case-insensitive. Leading zeros are insignificant - note the difference from C, where a leading zero means octal.
 
 ```
   ld a, 99
