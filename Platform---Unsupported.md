@@ -799,9 +799,15 @@ this computer came with 3 cpu options,  6809, z80, or 8088
 
 ### Sord M68
 
-### Vector Graphics Vector 4
+### Vector Graphics
 
+#### Vector 4
 Z80C (CP/M) + 8088 CPU, high rez graphics.
+
+#### Vector ZCB
+
+https://opencores.org/projects/vg_z80_sbc
+http://www.retroarchive.org/cpm/cdrom/SIMTEL/SIGM/VOLS000/VOL026/VEGAS.ASM
 
 
 ### Xerox 1850
