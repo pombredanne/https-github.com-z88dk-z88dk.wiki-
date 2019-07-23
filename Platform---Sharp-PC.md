@@ -43,8 +43,11 @@ At the emulated calculator's prompt, enter  'g100'  to run the program.
 ### Web links
 
 http://ver0.sakura.ne.jp/pc/
+
 http://ver0.sakura.ne.jp/g800/
+
 http://ver0.sakura.ne.jp/doc/
+
 http://wwwhomes.uni-bielefeld.de/achim/pc-e220.html
 
 
