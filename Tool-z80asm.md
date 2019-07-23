@@ -12,7 +12,7 @@
 z80asm [options] file...
 ```
 
-By default, i.e. without any options, *z80asm* assembles each of the listed files into relocatable object files with a ```.o``` extension. It shows a summary of all the options when called with the ```-h``` option.
+By default, i.e. without any options, **z80asm** assembles each of the listed files into relocatable object files with a ```.o``` extension. It shows a summary of all the options when called with the ```-h``` option.
 
 ### ... as linker
 
@@ -20,7 +20,7 @@ By default, i.e. without any options, *z80asm* assembles each of the listed file
 z80asm -b [options] file...
 ```
 
-When called with the ```-b``` option, *z80asm* links the object files together into a set of binary files.
+When called with the ```-b``` option, **z80asm** links the object files together into a set of binary files.
 
 ### ... as librarian
 
@@ -28,7 +28,7 @@ When called with the ```-b``` option, *z80asm* links the object files together i
 z80asm -xlibrary.lib [options] file...
 ```
 
-When called with the ```-x``` option, *z80asm* builds a library containing all the object files passed as argument. That library can then be used during linking by specifying it with the ```-i``` option.
+When called with the ```-x``` option, **z80asm** builds a library containing all the object files passed as argument. That library can then be used during linking by specifying it with the ```-i``` option.
 
 ## Contents
 
