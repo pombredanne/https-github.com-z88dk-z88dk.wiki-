@@ -102,3 +102,15 @@ Binary numbers can be specified as **bitmaps**, with ```#``` as ```1``` and ```-
   defb @'---##---'
 ```
 
+### Keywords
+
+Processor registers (```BC```, ```DE```, ...) and flags (```NZ```, ```Z```, ...), and assembly ```ASMPC```, representing the current assembly location, are reserved keywords. They cannot be used as identifiers, and are case-insensitive.
+
+### Directives and Opcodes
+
+Assembler directives (```ORG```, ```INCLUDE```, ...) and processor opcodes (```NOP```, ```LD```, ...) are interpreted as directives or opcodes when appearing at the start of the statement or after a label definition, or as regular identifiers otherwise. The directives and opcodes are case-insensitive.
+
+```
+  jr: jr jr  ; silly example, jr is both a label and an opcode
+             ; while correct code, it's confusing, don't do it
+```
