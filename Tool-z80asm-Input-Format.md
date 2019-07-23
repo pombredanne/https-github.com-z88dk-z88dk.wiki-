@@ -15,14 +15,16 @@ A single star in a file name (```*```) expands to the list of all files/director
 
 The assembly source code is processed line-by-line. Each line starts with an optional label and can contain assembly directives (i.e. instructions to the assembler), assembly instructions (i.e. code to be translated into object code for the specific processor) or blanks and comments. 
 
-### comments
+Differently to most other assemblers, white space is not significant, i.e. a label can be defined after white space, and an opcode can be written at column 1.
+
+### Comments
 
 Comments start with a semi-colon (```;```) and end at the end of the line.
 
-Differently to most other assemblers, white space is not significant, i.e. a label can be defined after white space, and an opcode can be written at column 1.
+### Symbols
 
 Symbols must start with a letter or underscore character (```_```), and can have letters, digits or underscores and are case-sensitive.
 
-A label is defined by prefixing a symbol with a dot (```.```) or suffixing it with a colon (```:```), i.e. either ```.label``` or ```label:```.
+### Labels
 
-[not yet released] A line can contain multiple assembly statements, separated either by the backslash (```\```) or colon (```:```) characters.
+A label is defined at the start of a line by prefixing a symbol with a dot (```.```) or suffixing it with a colon (```:```), i.e. either ```.label``` or ```label:```. The symbol may be used to refer to address in the object code.
