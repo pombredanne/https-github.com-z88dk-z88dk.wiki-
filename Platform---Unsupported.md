@@ -490,32 +490,6 @@ They featured two z80 CPUs, the latter meant for graphics operations.
     LU57813P / 0,3 MHz / auxiliary CPU
     32x156 pixel graphics
 
-##### PC-E200, PC-E220
-
-Programmable calculators, 32Kb RAM
-[An E220 related WEB page](http://wwwhomes.uni-bielefeld.de/achim/pc-e220.html)
-
-##### PC-G801, PC-G802, PC-G803, PC-G805
-
-Z80 ASM programmable calculators
-
-
-##### PC-G811, PC-G813, PC-G815, PC-G820
-
-Z80 ASM programmable calculators
-(low cost, no Z80A assembler language, perhaps it is hard to stick-in a machine code program)
-
-
-##### PC-G830
-
-Already supported as S/OS but deserving specific extras
-
-
-##### PC-G850, PC-G850V
-
-Z80 ASM programmable calculators
-['G800' programs at sakura.net](http://ver0.sakura.ne.jp/g800/)
-
 
 ##### Sharp MZ-80B (MZ-2000)
 
