@@ -4,6 +4,8 @@
 
 **z80asm** is a relocatable assembler, linker and librarian that can assemble Intel 8080/8085 and Z80-family assembly files into a relocatable object format, can manage sets of object files in libraries and can build binary images by linking these object files together. The binary images can be defined in different sections, to match the target architecture.
 
+This manual contains the description of features that are under development and not yet available. These are marked [TO-DO].
+
 ## Usage ...
 
 ### ... as assembler
