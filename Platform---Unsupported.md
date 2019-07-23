@@ -252,6 +252,8 @@ Made in Hong Kong and sold in Australia and France, it was able (in expanded mod
 
 https://forums.bannister.org/ubbthreads.php?ubb=showflat&Number=114969&page=5
 
+https://github.com/xmessner/pencil2
+
 
 ### Self Built ISA board for the IBM PC
 
