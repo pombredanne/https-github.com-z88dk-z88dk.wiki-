@@ -1,4 +1,5 @@
 ## Input Files
+[[Top](Tool-z80asm)]
 
 **z80asm** reads text files in the syntax supported by the specific processor being assembled for (see -m option) and produces the corresponding object files.
 
@@ -82,4 +83,22 @@ All expressions are computed as signed integers with the host platform's integer
   ld a, 77q    [TO-DO]
 ```
 
-[Top](Tool-z80asm)
+**Binary** numbers are a sequence of binary digits (```0..1```), either prefixed or suffixed with a binary marker. 
+```
+  ld a, %11
+  ld a, @11
+  ld a, &b11   [TO-DO]
+  ld a, 0b11
+  ld a, 11b
+```
+
+Binary numbers can be specified as **bitmaps**, with ```#``` as ```1``` and ```-``` as ```0```, using the binary prefix (```@``` or ```%```) immediately followed by a single- or double-quoted string of hashes and dashes.
+```
+  defb @'---##---'
+  defb @"-##--##-"
+  defb %'-##-----'
+  defb %'-##-----'
+  defb @"-##--##-"
+  defb @'---##---'
+```
+
