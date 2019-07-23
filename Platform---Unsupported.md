@@ -250,6 +250,9 @@ _No way to load software onto the machine using Mame_
 
 Made in Hong Kong and sold in Australia and France, it was able (in expanded mode) to run the ColecoVision cartridges.
 
+https://forums.bannister.org/ubbthreads.php?ubb=showflat&Number=114969&page=5
+
+
 ### Self Built ISA board for the IBM PC
 
 [Gyro adds a homebrew Z-80 to his 486 PC..](http://www.cryogenius.com/hardware/z80board/)
