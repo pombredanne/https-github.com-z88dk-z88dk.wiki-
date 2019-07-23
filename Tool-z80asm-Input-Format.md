@@ -9,7 +9,7 @@ A project list file may be supplied in the command line prefixed by the at-sign 
 Both the command line and the list files support wild-cards to expand all the files that match the given pattern.  
 *Note* that the Operating System may do its own wildcard expansion and the pattern may need to be quoted in the command line.
 
-A single star in a file name (```*```) expands to the list of all files/directories that match the complete pattern, where the star represents any sequences of characters. A double-star in a directory name (```**```) expands to the complete directory sub-tree, when searched recursively.
+A single star in a file name (```*```) expands to the list of all files/directories that match the complete pattern, where the star represents any sequence of characters. A double-star in a directory name (```**```) expands to the complete directory sub-tree, when searched recursively.
 
 ## Input Lines
 
