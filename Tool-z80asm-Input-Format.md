@@ -25,7 +25,7 @@ Comments start with a semi-colon (```;```) and end at the end of the line.
 
 ### Symbols
 
-Symbols must start with a letter or underscore character (```_```), and can have letters, digits or underscores and are case-sensitive.
+All symbols in the code (labels, variables, ...) are named with unique identifiers. Identifiers start with a letter or underscore (```_```), and can contain letters, underscores or digits. Identifiers are case-sensitive.
 
 ### Labels
 
