@@ -30,3 +30,31 @@ All symbols in the code (labels, variables, ...) are named with unique identifie
 ### Labels
 
 A label is defined at the start of a line by prefixing a symbol with a dot (```.```) or suffixing it with a colon (```:```), i.e. either ```.label``` or ```label:```. The symbol may be used to refer to address in the object code.
+
+### Numbers
+
+The assembler accepts numbers in decimal, hexadecimal, octal and binary. Different syntax is allowed to simplify porting of code written for other assemblers. Some of the prefix characters are also used as operators; in this case a space may be needed to signal the difference.
+
+```
+   ld a, %10     ; A = 2 (10 binary)
+   ld a, 12 % 10 ; A = 2 (modulus of 12 divided by 10)
+```
+
+All expressions are computed as signed integers with the host platform's integer size (32-bit or 64-bit in the most common platforms).
+
+[TO-DO] The underscore can be used to separate groups of digits to help readability, e.g. ```0xFFFF_FFFF``` is the same as ```0xFFFFFFFF```.
+
+[TO-DO] Floating point numbers can be supplied with the ```FLOAT``` directive, that encodes them in the current floating point format in the object code.
+
+Decimal numbers are a sequence of decimal digits (```0..9```), optionally followed by a ```d``` or ```D``` - all prefixes and suffixes are case-insensitive. Leading zeros are insignificant - note the difference from C, where a leading zero means octal.
+
+```
+  ld a, 99
+  ld a, 99d
+  ld a, 99D
+```
+
+
+
+
+
