@@ -76,10 +76,10 @@ All expressions are computed as signed integers with the host platform's integer
 ```
   ld a, &o77   [TO-DO]
   ld a, &q77   [TO-DO]
-  ld a, 0o77
-  ld a, 0q77
-  ld a, 77o
-  ld a, 77q
+  ld a, 0o77   [TO-DO]
+  ld a, 0q77   [TO-DO]
+  ld a, 77o    [TO-DO]
+  ld a, 77q    [TO-DO]
 ```
 
 
