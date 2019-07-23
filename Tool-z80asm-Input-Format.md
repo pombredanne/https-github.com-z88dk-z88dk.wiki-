@@ -60,6 +60,17 @@ All expressions are computed as signed integers with the host platform's integer
   ld a, 99D
 ```
 
+**Hexadecimal** numbers are a sequence of hexadecimal digits (```0..9``` and ```A..F```, case-insensitive), either prefixed or suffixed with an hexadecimal marker. If the marker is a suffix, and the number starts with a letter, then a leading zero has to be added.
+
+```
+  ld a, $FF
+  ld a, #FF   [TO-DO]
+  ld a, &hFF  [TO-DO]
+  ld a, &xFF  [TO-DO]
+  ld a, &FF   [TO-DO]
+  ld a, 0xFF
+  ld a, 0FFh
+```
 
 
 
