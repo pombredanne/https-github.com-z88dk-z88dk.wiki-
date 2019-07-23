@@ -20,8 +20,9 @@ By default, i.e. without any options, *z80asm* assembles each of the listed file
 z80asm -b [options] file...
 ```
 
-### ... as librarian
 When called with the ```-b``` option, *z80asm* links the object files together into a set of binary files.
+
+### ... as librarian
 
 ```
 z80asm -xlibrary.lib [options] file...
