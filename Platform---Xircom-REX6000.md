@@ -64,4 +64,4 @@ Mame has some support, but the hacked DS2 emulator may be better bet (if it can 
 * [REX 6000 related page](http://www.ipd.bth.se/ska/sim_home/rex.html)
 * [connected to the above link.. extra tools page](http://www.bth.se/people/ska/sim_home/rex_utils.html)
 * [REX 6000 historical page](http://www.oocities.org/wh_hsn/rex6k/rex_6000_intro.htm)
-* [A REXDK (derived from an earlier z88dk version) tutorial in Japanese](http://www.asahi-net.or.jp/~qn6omrtm/ds2new/dev/make_rex/index.htm)
+* [Mirror of the lost rex6000.org websitte](https://darkshade.homeip.net/mirror/rex6000.org/www.rex6000.org/)
