@@ -37,7 +37,11 @@ This is untested, add "-subtype=rom".
 
 # Supported libraries
 
-Most of the [monochrome gaphics](Library---monographics) lib and most of the [MSX](Platform---MSX) stuff are supported, but still experimental.
+Most of the [monochrome garphics](Library---monographics) lib and most of the [MSX](Platform---MSX) stuff are supported, but still experimental.
+
+## Serial Port
+
+Support for Serial Port A is enabled by default and can be accessed using the `<rs232.h>` API. To switch at compile time to Port B add the option: `-pragma-define:CLIB_RS232_PORT_B=1`
 
 # Emulator hints
 
@@ -113,4 +117,3 @@ http://primrosebank.net/computers/mtx/tools/PD/mtxtools_z88dk.htm
 http://www.mtxworld.dk/main.php
 
 http://www.nyangau.org/memu/memu.htm
-
