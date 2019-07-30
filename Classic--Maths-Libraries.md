@@ -10,7 +10,7 @@ Genmath is z88dk's traditional maths library. It provides a 48 bit number, with 
 
 Genmath can only be used with the sccz80 compiler.
 
-## `-lmath48`
+## `-lmath48` - (48 bit maths by Anders Hejlsberg, (C) 1980 Blue Label Software)
 
 math48 has been imported into classic from the newlib. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises the alternate register set and such can't run on all classic targets.
 
@@ -77,7 +77,7 @@ The maths libraries have been lightly benchmarked using a couple of test program
 
 As a result, the numbers include the time spent printing, however this isn't particularly time consuming in the overall scheme:
 
-## n-body
+## [n-body](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/n-body)
 
 Library         | Compiler | Value 1       | Value 2       | Ticks
 -|-|-|-|-
@@ -86,12 +86,12 @@ genmath         | sccz80   | -0.169075164  | -0.169087605  | 3_652_736_949
 math48          | sccz80   | -0.169075164  | -0.169087605  | 2_402_023_498
 mbf32           | sccz80   | -0.169916810  | -0.169916810  | 1_939_334_701
 bbcmath         | sccz80   | -0.169075164  | -0.169087604  | 1_655_789_776
-math32          | sccz80   | -0.169075264  | -0.169086709  | 1_400_110_112 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#execution-speed)
-math32_fast     | sccz80   | -0.169075264  | -0.169086709  | 1_199_895_142 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#execution-speed)
-math32_z80n     | sccz80   | -0.169075264  | -0.169086709  | 0_578_058_768 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#execution-speed)
-math32_z180     | sccz80   | -0.169075264  | -0.169086709  | 0_562_947_777 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#execution-speed)
+math32          | sccz80   | -0.169075264  | -0.169086709  | 1_400_110_112 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
+math32_fast     | sccz80   | -0.169075264  | -0.169086709  | 1_199_895_142 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
+math32_z80n     | sccz80   | -0.169075264  | -0.169086709  | 0_578_058_768 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
+math32_z180     | sccz80   | -0.169075264  | -0.169086709  | 0_562_947_777 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
 
-## spectral-norm
+## [spectral-norm](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/spectral-norm)
 
 Library         | Compiler |  Value         | Ticks
 -|-|-|-
@@ -105,3 +105,16 @@ bbcmath         | sccz80   | 1.274219988   | 08_017_859_189
 mbf32           | sccz80   | 1.274220347   | 06_754_491_551
 math32_z80n     | sccz80   | 1.274219155   | 06_396_544_633
 math32_z180     | sccz80   | 1.274219155   | 06_120_760_761
+
+## [mandelbrot](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/mandelbrot)
+
+Library         | Compiler | Ticks
+-|-|-
+genmath         | sccz80   | 3_631_967_381
+math48          | sccz80   | 3_365_259_708
+math48          | zsdcc    | 3_205_062_412
+math32          | zsdcc    | 1_662_144_349
+math32          | sccz80   | 1_644_065_225 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
+math32_fast     | sccz80   | 1_486_085_986 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
+math32_z80n     | sccz80   | 0_913_110_917 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
+math32_z180     | sccz80   | 0_883_966_576 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
