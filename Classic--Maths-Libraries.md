@@ -10,7 +10,7 @@ Genmath is z88dk's traditional maths library. It provides a 48 bit number, with 
 
 Genmath can only be used with the sccz80 compiler.
 
-## `-lmath48` - (48 bit maths by Anders Hejlsberg, (C) 1980 Blue Label Software)
+## `-lmath48` - (48 bit maths by Anders Hejlsberg)
 
 math48 has been imported into classic from the newlib. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises the alternate register set and such can't run on all classic targets.
 
