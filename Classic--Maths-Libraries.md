@@ -12,7 +12,7 @@ Genmath can only be used with the sccz80 compiler.
 
 ## `-lmath48` - (48 bit maths by Anders Hejlsberg)
 
-math48 has been imported into classic from the newlib. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises the alternate register set and such can't run on all classic targets.
+math48 has been imported into classic from the newlib. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises the alternate register set and therefore can't run on all classic targets.
 
 math48 can be used with both sccz80 and zsdcc and is marginally faster than genmath.
 
