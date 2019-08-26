@@ -1,6 +1,12 @@
 # Optimization hints
 
 
+(see also https://github.com/z88dk/z88dk/wiki/WritingOptimalCode)
+
+
+
+
+
 *  Use the extra optimization flag
 
     zcc -O3 ....  program.c
@@ -130,7 +136,8 @@
 
 * Remove unused functionalities
 
-      https://github.com/z88dk/z88dk/wiki/Platform---Embedded#selected-command-line-options
-      https://github.com/z88dk/z88dk/wiki/Platform---Embedded#printf-and-scanf-configuration
+https://github.com/z88dk/z88dk/wiki/Platform---Embedded#selected-command-line-options
+
+https://github.com/z88dk/z88dk/wiki/Platform---Embedded#printf-and-scanf-configuration
       
 
