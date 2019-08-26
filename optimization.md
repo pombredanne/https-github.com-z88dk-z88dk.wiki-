@@ -128,3 +128,7 @@
       assignments like "f = strcpy" get the C linkage stub whereas stuff like "strcpy(d,s)" gets the CALLEE linkage.
 
 
+* Remove unused functionalities
+
+      See https://github.com/z88dk/z88dk/wiki/Platform---Embedded#compile-time-customization
+
