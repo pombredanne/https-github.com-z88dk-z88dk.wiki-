@@ -151,6 +151,7 @@ Depending on the target, the console driver may be consuming a large proportion 
 
 By default, the classic library will initialise BSS memory to 0 on startup. You can save 13 bytes by using option `-pragma-define:CRT_INITIALIZE_BSS=0`
 
-## Disable/reduce the atexit stack
+
+## Disable/reduce the atexit stack
 
 If your program never exits or you don't register atexit() functions then you can adjust the size of the atexit() stack using: `-pragma-define:CLIB_EXIT_STACK_SIZE=0` or any size that you choose.
