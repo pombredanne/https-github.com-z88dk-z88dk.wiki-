@@ -130,5 +130,7 @@
 
 * Remove unused functionalities
 
-      See https://github.com/z88dk/z88dk/wiki/Platform---Embedded#compile-time-customization
+      https://github.com/z88dk/z88dk/wiki/Platform---Embedded#selected-command-line-options
+      https://github.com/z88dk/z88dk/wiki/Platform---Embedded#printf-and-scanf-configuration
+      
 
