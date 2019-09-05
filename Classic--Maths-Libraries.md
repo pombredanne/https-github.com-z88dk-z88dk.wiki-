@@ -84,12 +84,12 @@ Library         | Compiler | Value 1       | Value 2       | Ticks
 correct values  | -->      | -0.169075164  | -0.169087605
 genmath         | sccz80   | -0.169075164  | -0.169087605  | 3_652_736_949
 math48          | sccz80   | -0.169075164  | -0.169087605  | 2_402_023_498
-mbf32           | sccz80   | -0.169916810  | -0.169916810  | 1_939_334_701
-bbcmath         | sccz80   | -0.169075164  | -0.169087604  | 1_655_789_776
-math32          | sccz80   | -0.169075264  | -0.169086709  | 1_398_993_950 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
-math32_fast     | sccz80   | -0.169075264  | -0.169086709  | 1_198_780_765 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
-math32_z80n     | sccz80   | -0.169075264  | -0.169086709  | 0_576_942_516 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
-math32_z180     | sccz80   | -0.169075264  | -0.169086709  | 0_563_700_933 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
+mbf32           | sccz80   | -0.1699168    | -0.1699168    | 1_939_334_701
+bbcmath         | sccz80   | -0.16907516   | -0.16908760   | 1_655_789_776
+math32          | sccz80   | -0.1690752    | -0.1690867    | 1_398_993_950 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
+math32_fast     | sccz80   | -0.1690752    | -0.1690867    | 1_198_780_765 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
+math32_z80n     | sccz80   | -0.1690752    | -0.1690867    | 0_576_942_516 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
+math32_z180     | sccz80   | -0.1690752    | -0.1690867    | 0_563_700_933 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
 
 ## [spectral-norm](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/spectral-norm)
 
@@ -97,14 +97,14 @@ Library         | Compiler |  Value         | Ticks
 -|-|-|-
 correct value   | -->      | 1.274219991
 genmath         | sccz80   | 1.274219989   | 14_817_735_124
-math32          | zsdcc    | 1.274219155   | 14_504_079_532
-math32          | sccz80   | 1.274219155   | 13_508_416_688
-math32_fast     | sccz80   | 1.274219155   | 12_069_049_285
+math32          | zsdcc    | 1.274219      | 14_504_079_532
+math32          | sccz80   | 1.274219      | 13_508_416_688
+math32_fast     | sccz80   | 1.274219      | 12_069_049_285
 math48          | sccz80   | 1.274219989   | 09_035_519_932
-bbcmath         | sccz80   | 1.274219988   | 08_017_859_189
-mbf32           | sccz80   | 1.274220347   | 06_754_491_551
-math32_z80n     | sccz80   | 1.274219155   | 06_396_544_633
-math32_z180     | sccz80   | 1.274219155   | 06_120_760_761
+bbcmath         | sccz80   | 1.27421999    | 08_017_859_189
+mbf32           | sccz80   | 1.274220      | 06_754_491_551
+math32_z80n     | sccz80   | 1.274219      | 06_396_544_633
+math32_z180     | sccz80   | 1.274219      | 06_120_760_761
 
 ## [mandelbrot](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/mandelbrot)
 
