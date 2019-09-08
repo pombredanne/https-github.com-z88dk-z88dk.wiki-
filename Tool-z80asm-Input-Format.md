@@ -16,7 +16,7 @@ A single star in a file name (```*```) expands to the list of all files/director
 
 The assembler parses source files with any of the common end-of-line termination sequences (CR, LF or CR-LF). Each line starts with an optional label and can contain assembly directives (i.e. instructions to the assembler), assembly instructions (i.e. code to be translated into object code for the specific processor) or blanks and comments.
 
-[TO-DO] A single backslash character (```\```) or a colon (```:```) may be used to separate multiple statements in a single line.
+[TO-DO] A single backslash character (```\```) may be used to separate multiple statements in a single line.
 
 ```
   org 0				; assembly directive	        
