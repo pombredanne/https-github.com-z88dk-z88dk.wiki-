@@ -85,8 +85,8 @@ Otherwise, if you wish to install z88dk and merge it with your default system en
 
 The MacOS X build contains prebuilt binaries to simplify installation. Download the latest package and unzip to a directory:T
 
-    wget http://nightly.z88dk.org/z88dk-osx-latest.tgz
-    tar -xzf z88dk-osx-latest.tgz
+    wget http://nightly.z88dk.org/z88dk-osx-latest.zip
+    tar -xzf z88dk-osx-latest.zip
 
 You can run z88dk keeping it in the current position, all you need to do is to set the following environment variable:
 
