@@ -1,3 +1,5 @@
+The following table shows the machines supported by the _classic_ library.
+
 _Not all columns are visible. Horizontal scroll to see them._
 
  | Machine | Native Console I/O | VT100 Console I/O | [Generic Console](Classic-GenericConsole) | [Monochrome Graphics](library/monographics) | [File I/O](library/stdio) | [Sound](library/sound) | Other feaFtures / notes | 
@@ -41,6 +43,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Mitsubishi Multi8](Platform---Mitsubishi-Multi8)| Yes | No | 40x25, 80x25 | 640x200 | PSG | No |
 [Nascom](Platform---Nascom)| 48x16| 48x16| 48x16 - default| 96x48 | No | No | | 
 [Grundy Newbrain](Platform---Grundy-Newbrain)| Yes | No | No |  No* | No* | No | * could work on expanded systems in non-standard mode, via [stream functions](library/newbrain#streams) | 
+[Nintendo Gameboy](Platform---Gameboy)| No | No | No | No | No | No | Used GBDK library | 
 [v6z80p (OSCA)](Platform---OSCA) | 40x24| 40x24| No | 320x200 | Yes | No | 2 different file access libraries | 
 [Pac Man HW](Platform---Pacman)| 28x36| No | No |  84x72* | No | No lib | * the special font provided in support/pacman must be used| 
 [PC-6001](Platform---NEC-PC6001) | 32x16, 32x24| 32x16 (*)|  32x16, 32x24 | 64x48, 128x192, 256x192 | No | PSG only | | 
