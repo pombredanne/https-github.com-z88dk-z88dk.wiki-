@@ -5,6 +5,8 @@
 * 8k General purpose RAM
 * 32k cartridge
 
+_This machine is being brought up_
+
 # Compilation
 
     zcc +gb -create-app [file.c]
@@ -14,6 +16,7 @@ A .gb file will be created suitable for insertion into an emulator
 # Library support
 
 The "standard" GBDK library is provided with z88dk. The standard library is supplied by the usual z88dk libraries.
+
 
 ## Compiler support
 
