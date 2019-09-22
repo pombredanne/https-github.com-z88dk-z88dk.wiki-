@@ -15,8 +15,12 @@ A .gb file will be created suitable for insertion into an emulator
 
 # Library support
 
-The "standard" GBDK library is provided with z88dk. The standard library is supplied by the usual z88dk libraries.
+The "standard" GBDK library is provided with z88dk. The standard library (printf, strings etc) is supplied by the usual z88dk libraries.
 
+## Limitations
+
+* Graphics functions do not utilise the regular classic library
+* Character input doesn't work
 
 ## Compiler support
 
