@@ -20,7 +20,6 @@ The "standard" GBDK library is provided with z88dk. The standard library (printf
 ## Limitations
 
 * Graphics functions do not utilise the regular classic library
-* Character input doesn't work
 
 ## Compiler support
 
