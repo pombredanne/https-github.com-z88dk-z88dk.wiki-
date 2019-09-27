@@ -4,9 +4,11 @@
 
 # Quick start (MZ-80K/700 series)
 
-    zcc +mz -lm -o adventure -create-app adv_a.c
+    zcc +mz -lm -o adventure -create-app -pragma-define:REGISTER_SP=0xd000 adv_a.c
+
 -or-
-    zcc +mz -subtype=ansi -lm -o adventure -create-app adv_a.c
+
+    zcc +mz -subtype=ansi -lm -o adventure -create-app -pragma-define:REGISTER_SP=0xd000 adv_a.c
 
 
 This command will build a .MZT tape image (also known as MZF or M12).
