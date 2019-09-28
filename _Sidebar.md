@@ -22,7 +22,7 @@
 
 ## Misc
 
-* [Datatypes(Datatypes)
+* [Datatypes](Datatypes)
 * [Debugging](debugging)
 * [More than 64k](More-Than-64k)
 * [Deficiencies](Suite-deficiencies)
