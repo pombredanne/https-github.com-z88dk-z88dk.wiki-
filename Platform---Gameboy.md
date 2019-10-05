@@ -3,9 +3,7 @@
 * Sharp LR35902 at 4.19 MHz
 * 8k VRAM
 * 8k General purpose RAM
-* 32k cartridge
-
-_This machine is being brought up_
+* 32k cartridge + banked memory
 
 # Compilation
 
@@ -17,9 +15,16 @@ A .gb file will be created suitable for insertion into an emulator
 
 The "standard" GBDK library is provided with z88dk. The standard library (printf, strings etc) is supplied by the usual z88dk libraries.
 
+## Generic console
+
+The following screen modes are supported by the generic console:
+
+* "Text", mode 0, tile based, supports lores graphics and scrollowing
+* "Drawing", mode 1, APA mode
+
 ## Limitations
 
-* Graphics functions do not utilise the regular classic library
+* Graphics support is not complete
 
 ## Compiler support
 
