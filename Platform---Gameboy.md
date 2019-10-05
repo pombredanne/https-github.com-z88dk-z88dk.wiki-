@@ -28,7 +28,7 @@ The following screen modes are supported by the generic console:
 
 # Compiler support
 
-At present, only sccz80 is supported for creating gameboy ROMs.
+At present, due to issues with sdcc, only sccz80 is supported for creating gameboy ROMs.
 
 ## Banked memory
 
