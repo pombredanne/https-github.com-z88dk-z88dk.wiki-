@@ -26,9 +26,15 @@ The following screen modes are supported by the generic console:
 
 * Graphics support is not complete
 
-## Compiler support
+# Compiler support
 
-At present only sccz80 is supported for creating gameboy ROMs.
+At present, only sccz80 is supported for creating gameboy ROMs.
+
+## Banked memory
+
+z88dk supports explicit bank placement for user code. Your functions should be placed into the `BANK_XX` section where `XX` is a hex number from 02 to 1F.
+
+When the function is annotated as `__banked`, intra-bank calling will be enabled. C functions should additionally be annotated with `__z88dk_params_offset(6)` to ensure that parameters are located correctly. Unlike gbdk, `__banked` functions can return `long` values.
 
 # Links
 
