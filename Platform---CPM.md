@@ -8,13 +8,17 @@ ZXCC is trivial to extend, and you can easily permit access to serial ports, hos
 
 ##  Quick Start 
 	
-	zcc +cpm -lm -o adventure.com adv_a.c
+	zcc +cpm -lm -lndos -o adventure.com adv_a.c
+
+	zcc +cpm -lm -o adventure.com ddir.c
+
 
 Without specifying a ''-o'' option, a file called ''a.com'' is produced, this can be run with zxcc as follows:
 
 	zxcc a.com
 
-## Creating a disc
+
+## Creating a disc
 
 appmake supports creating a number of CP/M disc formats that can be used directly by emulators or easily converted using 3rd party tools. Many of these can be produced as part of the compilation step using the `-subtype=XXXX -create-app` options.
 
