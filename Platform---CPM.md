@@ -10,8 +10,10 @@ ZXCC is trivial to extend, and you can easily permit access to serial ports, hos
 	
 	zcc +cpm -lm -lndos -o adventure.com adv_a.c
 
-	zcc +cpm -lm -o adventure.com ddir.c
+	zcc +cpm -lm -o ddir.com ddir.c
 
+
+The ndos.lib library is useful to save memory when file support is not necessary. 
 
 Without specifying a ''-o'' option, a file called ''a.com'' is produced, this can be run with zxcc as follows:
 
