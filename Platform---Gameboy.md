@@ -19,8 +19,8 @@ The "standard" GBDK library is provided with z88dk. The standard library (printf
 
 The following screen modes are supported by the generic console:
 
-* "Text", mode 0, tile based, supports lores graphics and scrollowing
-* "Drawing", mode 1, APA mode
+* "Text", mode 0, tile based, supports lores graphics and scrolling
+* "Drawing", mode 1, APA mode, supports lores graphics (via z88dk) and pixel graphics (via gbdk)
 
 ## Limitations
 
@@ -28,11 +28,11 @@ The following screen modes are supported by the generic console:
 
 # Compiler support
 
-At present, due to issues with sdcc, only sccz80 is supported for creating gameboy ROMs.
+Both `sccz80` and `zsdcc` are supported. 
 
 ## Banked memory
 
-z88dk supports explicit bank placement for user code. Your functions should be placed into the `BANK_XX` section where `XX` is a hex number from 02 to 1F.
+z88dk supports explicit bank placement for user code. Your functions should be placed into the `BANK_XX` section where `XX` is a hex number from 02 to 1F - note, sdcc support is not quite correct.
 
 When the function is annotated as `__banked`, intra-bank calling will be enabled. C functions should additionally be annotated with `__z88dk_params_offset(6)` to ensure that parameters are located correctly. Unlike gbdk, `__banked` functions can return `long` values.
 
