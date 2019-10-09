@@ -58,3 +58,18 @@ In this mode, sprites are supported. Screen scrolling in this mode is notably sl
 
 Calling `add_raster_int()` will add an interrupt connected to the VDP interrupt on all platforms apart from the Adam.
 
+# `-lmsxbios` mode
+
+On the MSX and SVI machines, it is possible to use the firmware to drive the VDP, in this configuration the screen modes respect the MSX BASIC convention:
+
+* Mode 0 (Text 40x24)
+* Mode 1 (Text 32x24)
+* Mode 2 (Text 32x24, Graphics 256x192)
+
+The VDP addresses are as follows:
+
+| Mode | Pattern Name | Colour table | Pattern Generator | Sprite Generator | Sprite Attribute |
+|-|-|-|-|-|-|
+| 0 | $0000 | - | $800 | - | - |
+| 1 | $1800 | $0000 | $2000 | $3800 | $1b00 |
+| 2 | $1800 | $2000 | $0000 | $3800 | $1b00 |
