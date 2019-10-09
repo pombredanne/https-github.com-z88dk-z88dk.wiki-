@@ -71,5 +71,5 @@ The VDP addresses are as follows:
 | Mode | Pattern Name | Colour table | Pattern Generator | Sprite Generator | Sprite Attribute |
 |-|-|-|-|-|-|
 | 0 | $0000 | - | $800 | - | - |
-| 1 | $1800 | $0000 | $2000 | $3800 | $1b00 |
+| 1 | $1800 | $2000 | $0000 | $3800 | $1b00 |
 | 2 | $1800 | $2000 | $0000 | $3800 | $1b00 |
