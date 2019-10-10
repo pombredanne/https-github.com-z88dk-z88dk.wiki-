@@ -73,7 +73,7 @@ Note: The "-subtype=bin" parameter is required to avoid extra headers.
 
 # Links
 
-http://bushy.vzalive.bangrocks.com/
+http://vzalive.bluebilby.com/
 
 http://www.vz200.org/bushy/
 
