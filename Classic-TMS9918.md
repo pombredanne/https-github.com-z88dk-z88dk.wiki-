@@ -1,3 +1,5 @@
+**Note. The screen modes and VDP address mappings changed in October 2019 to match the default MSX settings.**
+
 The TMS9918a/TMS9928a VDP chip is used by the following targets supported by z88dk:
 
 * [Casio PV-2000](Platform---Casio-PV2000)
@@ -22,13 +24,19 @@ The classic library supplies a library, based on the Hitech-C library by Rafael 
 
 The VDP screen modes use the following VDP addresses across all targets:
 
-
 | Mode | Pattern Name | Colour table | Pattern Generator | Sprite Generator | Sprite Attribute |
 |-|-|-|-|-|-|
-| 0 | $0000 | $1000 | $2000 | $3800 | $3b00 |
-| 1 | $0000 | - | $2000 | - | - |
-| 2 | $1800 | $2000 | $0000 | $3800 | $3b00 |
+| 0 | $0000 | - | $800 | - | - |
+| 1 | $1800 | $2000 | $0000 | $3800 | $1b00 |
+| 2 | $1800 | $2000 | $0000 | $3800 | $1b00 |
 
+### Mode 0 (Text 40x24)
+
+Mode 0 is supported by the generic console and can be switched to using `int mode = 1; console_ioctl(IOCTL_GENCON_SET_MODE, &mode);`
+
+The font used is that defined by `-pragma-redirect:CRT_FONT=...`, when the font is changed programmatically using `console_ioctl(IOCTL_GENCON_SET_FONT32,...)` all characters on screen will change. Character codes 32-127 (inclusive) are taken from the specified font, leaving the ranges 0-31 and 128-255 available for your own usage.
+
+In this mode, sprites are not supported. When switching to this mode, the current conio ink/paper is taken as the colour for the whole screen. It is possible to change it by writing to the appropriate VDP register.
 
 ### Mode 0 (Text 32x24)
 
@@ -38,13 +46,7 @@ The font used is that defined by `-pragma-redirect:CRT_FONT=...`, it is possible
 
 In this mode, sprites are supported. When switching to this mode, the current conio ink/paper is applied to the entire character set. With the table addresses above it is possible for an application to change them.
 
-### Mode 1 (Text 40x24)
 
-Mode 1 is supported by the generic console and can be switched to using `int mode = 1; console_ioctl(IOCTL_GENCON_SET_MODE, &mode);`
-
-The font used is that defined by `-pragma-redirect:CRT_FONT=...`, when the font is changed programmatically using `console_ioctl(IOCTL_GENCON_SET_FONT32,...)` all characters on screen will change. Character codes 32-127 (inclusive) are taken from the specified font, leaving the ranges 0-31 and 128-255 available for your own usage.
-
-In this mode, sprites are not supported. When switching to this mode, the current conio ink/paper is taken as the colour for the whole screen. It is possible to change it by writing to the appropriate VDP register.
 
 ### Mode 2 (Text 32x24, Graphics 256x192)
 
@@ -60,16 +62,7 @@ Calling `add_raster_int()` will add an interrupt connected to the VDP interrupt 
 
 # `-lmsxbios` mode
 
-On the MSX and SVI machines, it is possible to use the firmware to drive the VDP, in this configuration the screen modes respect the MSX BASIC convention:
+On the MSX and SVI machines, it is possible to use the firmware to drive the VDP.
 
-* Mode 0 (Text 40x24)
-* Mode 1 (Text 32x24)
-* Mode 2 (Text 32x24, Graphics 256x192)
 
-The VDP addresses are as follows:
 
-| Mode | Pattern Name | Colour table | Pattern Generator | Sprite Generator | Sprite Attribute |
-|-|-|-|-|-|-|
-| 0 | $0000 | - | $800 | - | - |
-| 1 | $1800 | $2000 | $0000 | $3800 | $1b00 |
-| 2 | $1800 | $2000 | $0000 | $3800 | $1b00 |
