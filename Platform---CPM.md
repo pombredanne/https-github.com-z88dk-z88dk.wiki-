@@ -73,6 +73,7 @@ Some hardware specific functions have been adapted to run on both native platorm
 * `-subtype=adam` ([Colecovision Adam](Platform--Colecovision-Adam) 256x192 graphics)
 * `-subtype=nascom` ([Nascom](Platform---Nascom))
 * `-subtype=excali64` ([BGR Excalibur 64](Platform---Excalibur64))
+* `-subtype=rc700` ([RC-700](Platform-Regnecentralen-RC700))
 * (untested) **-lgfxep**, **-lgfxephr** ([Enterprise 64 / 128](Platform---Enterprise64))
 * (untested) **-lgfx9001**, **-lgfx9001krt** ([Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001))
 
@@ -87,7 +88,6 @@ Additionally, -create-app will create discs for the following machines:
 * `-subtype=msx` (MSX for use with MSXDOS)
 * `-subtype=bic` (A5105/BIC)
 * `-subtype=lynx` ([Camputers Lynx](Platform---Camputers-Lynx))
-* `-subtype=rc700` RC-700
 
 ## Program boot protection
 
