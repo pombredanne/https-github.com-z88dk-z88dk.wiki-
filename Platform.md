@@ -52,6 +52,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Philips C7420](Platform---Philips-C7420)| 39x20| No | No | Not Yet | No | No | | 
 [Philips VG-5000](Platform----Philips-VG5000)| 40x24| 40x24| 40x24 | 80×72 | No | 1 bit| | 
 [Rabbit Control Module](Platform---Rabbit) ||| | || |  |
+[Regnecentralen RC700](Platform-Regnecentralen-RC700)| 80x25| No | 80x25 | 80x25| No | No | CP/M base libraries| 
 [Robotron Z1013](Platform---Robotron-Z1013)| 32x32| 32x32| 32x32 - default|  64x64 | No | No | | 
 [Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001)| 40x24| 40x24| 40x24 | 80x48, 320x192| No | 1 bit| Model variants: KC85/1, KC87| 
 [(Robotron) VEB Mikroelektronik HC-900, KC85/2..KC85/5](Platform---KC) | 40x32| No | 40x32 | 320x256 | No | No | Model variants: HC-900 KC85/2..KC85/5 | 
