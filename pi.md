@@ -109,9 +109,9 @@ For sdcc, the compile lines used are:
 Warnings will be issued that z80instructionSize() failed.  This is because the peephole optimizer does not understand "#asm" and "#endasm" and these can be ignored.
 
 ### Performance
+
+ | BINARY SIZE *3 | C CODE SIZE | TIME        |
  |---|---|---|
- |                     | BINARY SIZE *3 | C CODE SIZE | TIME          | 
- |                     | ----------------------- | ----------- | ----          | 
  | sccz80              | 7976 (19200)            | 478         | 6,671,539,001 | 
  | sdcc_ix *1 | 8102 (19326)            | 682         | 5,683,348,313 | 
  | sdcc_iy *2 | 8094 (19318)            | 652         | -             | 
@@ -223,12 +223,14 @@ Something we didn't do is further prune the crt by introducing pragmas to elimin
 
 ### Performance
 
- |         | BINARY SIZE`<sup>`1`</sup>` | C CODE SIZE | TIME          | 
- |         | ----------------------- | ----------- | ----          | 
+ | BINARY SIZE *1 | C CODE SIZE | TIME          | 
+ |---|---|---|
  | sccz80  | 13310                   | 316         | 5,249,804,828 | 
  | sdcc_ix | 13315                   | 339         | 5,304,989,156 | 
  | sdcc_iy | 13310                   | 339         | 5,295,410,356 | 
-`<sup>`1`</sup>` The sudden increase in binary size may be surprising at first but the explanation is simple.  The array r[] occupies 5602 bytes.  In the previous version of this program, r[] was allocated on the stack at runtime and was not part of the binary.  In this version, it is allocated permanent memory in the bss section and this is included in the binary.  Note that there is no free ride here -- whether r[] exists on the stack or in the bss section, it occupies space.  Local variables have the additional advantage that they are deleted when they leave scope.
+
+
+*1 The sudden increase in binary size may be surprising at first but the explanation is simple.  The array r[] occupies 5602 bytes.  In the previous version of this program, r[] was allocated on the stack at runtime and was not part of the binary.  In this version, it is allocated permanent memory in the bss section and this is included in the binary.  Note that there is no free ride here -- whether r[] exists on the stack or in the bss section, it occupies space.  Local variables have the additional advantage that they are deleted when they leave scope.
 
 ## Library Configuration
 
@@ -246,12 +248,12 @@ The library is rebuilt by running "Winmake zx" from {z88dk}/libsrc/_DEVELOPMENT 
 
 ### Performance
 
- |         | BINARY SIZE`<sup>`1`</sup>` | C CODE SIZE | TIME          | 
- |         | ----------------------- | ----------- | ----          | 
+ | BINARY SIZE *1 | C CODE SIZE | TIME          | 
+ |---|---|---|
  | sccz80  | 13585                   | 316         | 1,956,676,715 | 
  | sdcc_ix | 13614                   | 347         | 2,057,235,401 | 
  | sdcc_iy | 13584                   | 347         | 2,000,657,001 | 
-`<sup>`1`</sup>` Perhaps hidden in these numbers is that the integer math library has expanded by about 900 bytes but printf has shrunk by about 700.
+*1 Perhaps hidden in these numbers is that the integer math library has expanded by about 900 bytes but printf has shrunk by about 700.
 
 ## Source Code Transformation
 
@@ -337,8 +339,8 @@ The C library supplies special div() functions to get the quotient and remainder
 
 ### Performance
 
- |         | BINARY SIZE | C CODE SIZE | TIME          | 
- |         | ----------- | ----------- | ----          | 
+ | BINARY SIZE | C CODE SIZE | TIME          | 
+ |---|---|---|
  | sccz80  | 13625       | 308         | 1,458,354,526 | 
  | sdcc_ix | 13620       | 325         | 1,513,023,612 | 
  | sdcc_iy | 13602       | 325         | 1,474,179,212 | 
