@@ -110,16 +110,21 @@ Warnings will be issued that z80instructionSize() failed.  This is because the p
 
 ### Performance
 
- |                     | BINARY SIZE`<sup>`3`</sup>` | C CODE SIZE | TIME          | 
+ |                     | BINARY SIZE *3 | C CODE SIZE | TIME          | 
  |                     | ----------------------- | ----------- | ----          | 
  | sccz80              | 7976 (19200)            | 478         | 6,671,539,001 | 
- | sdcc_ix`<sup>`1`</sup>` | 8102 (19326)            | 682         | 5,683,348,313 | 
- | sdcc_iy`<sup>`2`</sup>` | 8094 (19318)            | 652         | -             | 
-`<sup>`1`</sup>` Space allocated for local variables exceeds 128 bytes which causes sdcc's compile to generate code using iy despite the --reserve-regs-iy flag.  This is a [known issue](temp/front#sdcc1) and we ignore it here as the next versions reduce the size of the stack frame.
+ | sdcc_ix *1 | 8102 (19326)            | 682         | 5,683,348,313 | 
+ | sdcc_iy *2 | 8094 (19318)            | 652         | -             | 
 
-`<sup>`2`</sup>` The --reserve-regs-iy issue means the sdcc_iy compile is bugged.
 
-`<sup>`3`</sup>` The total program size is going to include space for the terminal driver which includes font, line editing and terminal emulation code.  It's not indicative of the C code itself but it is included so that the impact of some library options can be seen.  The number in brackets includes the space allocated on the stack for the local variables.
+
+
+*1 Space allocated for local variables exceeds 128 bytes which causes sdcc's compile to generate code using iy despite the --reserve-regs-iy flag.  This is a [known issue](temp/front#sdcc1) and we ignore it here as the next versions reduce the size of the stack frame.
+
+*2 The --reserve-regs-iy issue means the sdcc_iy compile is bugged.
+
+*3 The total program size is going to include space for the terminal driver which includes font, line editing and terminal emulation code.  It's not indicative of the C code itself but it is included so that the impact of some library options can be seen.  The number in brackets includes the space allocated on the stack for the local variables.
+
 
 ## Source Code Optimization
 
