@@ -109,7 +109,7 @@ For sdcc, the compile lines used are:
 Warnings will be issued that z80instructionSize() failed.  This is because the peephole optimizer does not understand "#asm" and "#endasm" and these can be ignored.
 
 ### Performance
-
+ |---|---|---|
  |                     | BINARY SIZE *3 | C CODE SIZE | TIME          | 
  |                     | ----------------------- | ----------- | ----          | 
  | sccz80              | 7976 (19200)            | 478         | 6,671,539,001 | 
