@@ -349,8 +349,8 @@ The C library supplies special div() functions to get the quotient and remainder
 
 Being conscious of the differences between a 32-bit machine and a small micro and taking advantage of library configuration has led to about a 4x improvement in speed and a third reduction in binary size.
 
- |         | ORIGINAL    |               | IMPROVED    |               | 
- |         | --------    |               | --------    |               | 
+ |    -    | ORIGINAL    |    -          | IMPROVED    |      -      | 
+ | --- | --- | --- | --- | --- | 
  |         | Binary Size | Time          | Binary Size | Time          | 
  | sccz80  | 19200       | 6,671,539,001 | 13625       | 1,458,354,526 | 
  | sdcc_ix | 19326       | 5,683,348,313 | 13620       | 1,513,023,612 | 
