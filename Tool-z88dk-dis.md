@@ -21,7 +21,7 @@ The following options control which CPU z88dk-dis will interpret the binary as.
 | -mz80 | Z80 | |
 | -mz180 | Z180 | |
 | -mez80 | ez80 | Short mode only |
-| -mz80-zxn | ZX-Next | Supports the extended opcodes in the ZX Next CPU |
+| -mz80-z80n | ZX-Next | Supports the extended opcodes in the ZX Next CPU |
 | -mr2k | Rabbit 2000 | |
 | -mr3k | Rabbit 3000 | |
 | -mr800 | Ascii R800 | As used in the MSX Turbo |
