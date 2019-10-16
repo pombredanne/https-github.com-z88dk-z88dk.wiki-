@@ -1,4 +1,4 @@
-A full z80 disassembler is provided with z88dk. In addition to supporting the z80, it can also disassemble code for the other supported CPUs (z180, z80-zxn and Rabbit processors) as well as other related (but unsupported by z88dk) processors: ez80, R800, gbz80, 8080.
+A full z80 disassembler is provided with z88dk. In addition to supporting the z80, it can also disassemble code for the other supported CPUs (8080, gbz80, z180, z80-z80n and Rabbit processors) as well as other related (but unsupported by z88dk) processors: 8085, R800, ez80.
 
 ## Usage
 
