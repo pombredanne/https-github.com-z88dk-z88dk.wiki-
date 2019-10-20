@@ -32,7 +32,7 @@ This command will create a .bin image suitable for use with s1mulator.
 
 ## Running compiled code
 
-   ./s1mulator -b a.bin,0 -e 0
+   ./s1mulator -b a.bin,0 -e 0x600
 
 ## Notes about the port
 
