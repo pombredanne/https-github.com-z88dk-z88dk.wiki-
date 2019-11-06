@@ -43,6 +43,8 @@ The generic console implementation for the VZ supports 2 different screen modes:
 
 In Mode 1 the standard 8x8 font is somewhat large so the putc46 driver might be more suitable. The z88dk graphics library detects which screen mode is active and plots accordingly.
 
+The screenmode can be changed using either `console_ioctl()` as with other targets or the VZ specific `vz_mode()`.
+
 # Appmake extras
 
 Appmake is able to convert the compiled program from VZ to the newer CAS format; optionally a wav can be created for loading onto the original hardware, even in a slightly 'faster' mode.
