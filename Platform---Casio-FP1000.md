@@ -44,7 +44,7 @@ No specific libraries are at the moment available for the Casio FP-1100.   To tr
     end
 
 
-WARNING:  With the suggested definition the file transfer commands will work but the target disk image will possibly loose the ability to boot.
+WARNING:  With the suggested definition the file transfer commands will work but the target disk image will possibly lose the ability to boot.
 
 
 # Links
