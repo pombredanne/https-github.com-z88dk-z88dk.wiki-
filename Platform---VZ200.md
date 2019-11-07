@@ -4,8 +4,23 @@
 * MC6847 with 2k VRAM
 * 6k RAM (VZ200), 16k RAM (VZ300) + RAM expansions
 
-z88dk is able to compile programs for the "VZ 200 family".
-Such group of computers includes the Dick Smith VZ200 and VZ300 the Video Technology Laser 210 and Laser 310, the Texet TX 8000 and the Salora Fellow.
+## Classic library support
+
+* [x] Native console output
+* [x] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font 
+    * [x] UDG support
+* [x] Lores graphics (32x16)
+* [x] Hires graphics (256x96)
+* [ ] PSG sound
+* [x] One bit sound
+* [x] Inkey driver
+* [ ] Hardware joystick
+* [ ] File I/O
+* [ ] Interrupts
+* [ ] RS232
 
 # Quick start
 
@@ -64,12 +79,8 @@ The port has been testing using both the VZ emulator and Mame. In Mame, the "sna
 
 # Links
 
-https://bluebilby.com/
-
-http://www.vz200.org/bushy/
-
-[Scrolly demo (YouTube Video)](https://www.youtube.com/watch?v=80nJ4RiR8xs)
-
-[Flappy bird game code](https://github.com/gameblabla/flappybird_vz200/releases/tag/1.0) ..see also the [video](https://m.youtube.com/watch?v=mXtx4F2rmVg)
-
-[Experimenting with the z88dk examples](https://m.youtube.com/watch?v=u8amUYLfi18)
+* https://bluebilby.com/
+* http://www.vz200.org/bushy/
+* [Scrolly demo (YouTube Video)](https://www.youtube.com/watch?v=80nJ4RiR8xs)
+* [Flappy bird game code](https://github.com/gameblabla/flappybird_vz200/releases/tag/1.0) ..see also the [video](https://m.youtube.com/watch?v=mXtx4F2rmVg)
+* [Experimenting with the z88dk examples](https://m.youtube.com/watch?v=u8amUYLfi18)
