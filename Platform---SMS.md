@@ -1,6 +1,8 @@
 
 ![](images/platform/sms.jpg)
 
+## Quick compiler hint
+
     zcc +sms -create-app program.c
 
     zcc +sms -create-app -lgamegear program.c
