@@ -1,6 +1,14 @@
 
 ![](images/platform/sms.jpg)
 
+    zcc +sms -create-app program.c
+
+    zcc +sms -create-app -lgamegear program.c
+
+## Emulators
+
+https://mednafen.github.io/
+
 ## Links
 
 ["stevepro studios" - z88dk Programming related articles](http://steveproxna.blogspot.it/search/label/z88dk)
