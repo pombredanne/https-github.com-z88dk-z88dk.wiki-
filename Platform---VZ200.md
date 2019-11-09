@@ -12,8 +12,8 @@
 * [x] Generic console
     * [x] Redefinable font 
     * [x] UDG support
-* [x] Lores graphics (32x16)
-* [x] Hires graphics (256x96)
+* [x] Lores graphics (64x32)
+* [x] Hires graphics (128x64)
 * [ ] PSG sound
 * [x] One bit sound
 * [x] Inkey driver
