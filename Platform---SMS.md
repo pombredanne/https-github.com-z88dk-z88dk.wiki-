@@ -1,7 +1,7 @@
 
 ![](images/platform/sms.jpg)
 
-## Quick compiler hint
+## Quick Stars
 
     zcc +sms -create-app program.c
 
