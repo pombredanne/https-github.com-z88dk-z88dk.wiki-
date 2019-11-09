@@ -3,7 +3,7 @@
 * z80a @ 4MHz
 * ROM: IPL (4KB) + chargen (2KB)
 * RAM: 64kb RAM
-* VRAM: 4KB + PCG (6KB) + GRAM (48KB)
+* MC6845: VRAM: 4KB (text) + PCG (6KB) + GRAM (48KB)
 * AY8910
 
 ## Classic library support
