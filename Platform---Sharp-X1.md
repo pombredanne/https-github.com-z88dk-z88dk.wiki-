@@ -1,3 +1,28 @@
+# Hardware Summary
+
+* z80a @ 4MHz
+* ROM: IPL (4KB) + chargen (2KB)
+* RAM: 64kb RAM
+* VRAM: 4KB + PCG (6KB) + GRAM (48KB)
+* AY8910
+
+## Classic library support
+
+* [ ] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [ ] Redefinable font 
+    * [ ] UDG support
+* [ ] Lores graphics (64x32)
+* [ ] Hires graphics (128x64)
+* [x] PSG sound
+* [ ] One bit sound
+* [x] Inkey driver
+* [ ] Hardware joystick
+* [ ] File I/O
+* [ ] Interrupts
+* [ ] RS232
 
 
 # Quick start
@@ -31,4 +56,3 @@ and mark it as bootable by right-clicking the filename, clicking
 Properties, and checking the Boot box. You only need to do that the 
 first time it is added to the disk image - if you update the file, that 
 Boot flag will be preserved.
-
