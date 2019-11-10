@@ -6,6 +6,8 @@
 * MC6845: VRAM: 4KB (text) + PCG (6KB) + GRAM (48KB)
 * AY8910
 
+_This target is receiving some attention at the moment and options/features may change_
+
 ## Classic library support
 
 * [ ] Native console output
@@ -40,6 +42,13 @@
 An autoboot RAW disk image (.2D extension) is created automatically by appmake.
 A .D88 disk image format is obtainable with the SamDisk or XBrowser88 tools.
 
+
+## Generic console
+
+The generic console supports the following screen modes:
+
+* Mode 0: 40x25
+* Mode 1: 80x25
 
 # Do-it-yourself a boot disk (old method)
 
