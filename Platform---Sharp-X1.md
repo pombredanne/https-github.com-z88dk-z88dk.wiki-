@@ -6,7 +6,7 @@
 * MC6845: VRAM: 4KB (text) + PCG (6KB) + GRAM (48KB)
 * AY8910
 
-_This target is receiving some attention at the moment and options/features may change_
+_This target is receiving some attention at the moment and options/features may not be in nightly builds__
 
 ## Classic library support
 
@@ -16,8 +16,8 @@ _This target is receiving some attention at the moment and options/features may 
 * [x] Generic console
     * [ ] Redefinable font 
     * [ ] UDG support
-* [ ] Lores graphics (64x32)
-* [ ] Hires graphics (128x64)
+* [ ] Lores graphics 
+* [x] Hires graphics (320x200 + 640x200)
 * [x] PSG sound
 * [ ] One bit sound
 * [x] Inkey driver
@@ -32,9 +32,6 @@ _This target is receiving some attention at the moment and options/features may 
     IM1 mode (org at address 0)
         zcc +x1 -create-app -lm adv_a.c
 
-    80 columns mode (still IM1)
-        zcc +x1 -create-app -pragma-define:ansicolumns=80 vtstone.c
-
     IM2 mode (org address = 32768 or more)
         zcc +x1 -create-app -subtype=im2 -zorg=`<address>` -lm adv_a.c
 
@@ -47,8 +44,8 @@ A .D88 disk image format is obtainable with the SamDisk or XBrowser88 tools.
 
 The generic console supports the following screen modes:
 
-* Mode 0: 40x25
-* Mode 1: 80x25
+* Mode 0: 40x25, graphics 320x200
+* Mode 1: 80x25, graphics 640x200
 
 # Do-it-yourself a boot disk (old method)
 
