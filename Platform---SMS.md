@@ -9,7 +9,16 @@
 
 ## Emulators
 
-https://mednafen.github.io/
+MEDNAFEN (https://mednafen.github.io/)
+
+    mednafen -force_module gg  program.sms
+    mednafen -force_module sms program.sms
+
+MAME/MESS
+
+    mame sms -cart program.sms
+    mame gamegear -cart program.sms
+
 
 ## Links
 
