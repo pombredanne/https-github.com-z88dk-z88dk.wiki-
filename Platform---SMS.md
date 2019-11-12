@@ -15,8 +15,8 @@
 
 MEDNAFEN (https://mednafen.github.io/)
 
-    mednafen -force_module gg  program.sms
     mednafen -force_module sms program.sms
+    mednafen -force_module gg  program.sms
 
 MAME/MESS
 
