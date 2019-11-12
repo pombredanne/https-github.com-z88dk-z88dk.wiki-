@@ -3,9 +3,13 @@
 
 ## Quick Stars
 
-    zcc +sms -create-app program.c
+    zcc +sms -create-app -o program.bin program.c
 
-    zcc +sms -create-app -lgamegear program.c
+    zcc +sms -create-app -lgamegear -o program.bin program.c
+
+
+'program.sms' will be built
+
 
 ## Emulators
 
