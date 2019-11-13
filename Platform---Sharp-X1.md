@@ -6,6 +6,8 @@
 * MC6845: VRAM: 4KB (text) + PCG (6KB) + GRAM (48KB)
 * AY8910
 
+This machine can run software natively (+x1), via CP/M (+cpm -subtype=x1) and SOS (+sos)
+
 _This target is receiving some attention at the moment and options/features may not be in nightly builds__
 
 ## Classic library support
@@ -52,6 +54,7 @@ The generic console supports the following screen modes:
 The PCG ram is used for custom fonts and UDGs, the PCG ram can only be loaded when in mode 0.
 
 Loading data into the PCG is horrendously slow, so it's recommended that your application present a "Please wait" style screen whilst this is happening. The library will automatically load any compile configured `CRT_FONT` without such a screen so it's recommended that fonts are configured using the `GENCON_SET_FONT32` ioctl.
+
 
 # Do-it-yourself a boot disk (old method)
 
