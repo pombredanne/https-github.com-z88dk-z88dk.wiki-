@@ -6,11 +6,11 @@
 * MC6845: VRAM: 4KB (text) + PCG (6KB) + GRAM (48KB)
 * AY8910
 
-This machine can run software natively (+x1), via CP/M (+cpm -subtype=x1) and SOS (+sos)
+This machine can run software natively (`+x1`), via CP/M (`+cpm -subtype=x1`) and SOS (`+sos`)
 
 _This target is receiving some attention at the moment and options/features may not be in nightly builds__
 
-## Classic library support
+## Classic library support (`+x1`)
 
 * [ ] Native console output
 * [x] Native console input
