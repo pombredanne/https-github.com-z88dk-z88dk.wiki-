@@ -14,8 +14,8 @@ _This target is receiving some attention at the moment and options/features may 
 * [x] Native console input
 * [x] ANSI vt100 engine
 * [x] Generic console
-    * [ ] Redefinable font 
-    * [ ] UDG support
+    * [x] Redefinable font 
+    * [x] UDG support
 * [ ] Lores graphics 
 * [x] Hires graphics (320x200 + 640x200)
 * [x] PSG sound
@@ -46,6 +46,12 @@ The generic console supports the following screen modes:
 
 * Mode 0: 40x25, graphics 320x200
 * Mode 1: 80x25, graphics 640x200
+
+### Custom fonts/udgs
+
+The PCG ram is used for custom fonts and UDGs, the PCG ram can only be loaded when in mode 0.
+
+Loading data into the PCG is horrendously slow, so it's recommended that your application present a "Please wait" style screen whilst this is happening. The library will automatically load any compile configured `CRT_FONT` without such a screen so it's recommended that fonts are configured using the `GENCON_SET_FONT32` ioctl.
 
 # Do-it-yourself a boot disk (old method)
 
