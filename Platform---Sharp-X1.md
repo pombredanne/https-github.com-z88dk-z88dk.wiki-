@@ -8,7 +8,6 @@
 
 This machine can run software natively (`+x1`), via CP/M (`+cpm -subtype=x1`) and SOS (`+sos`)
 
-_This target is receiving some attention at the moment and options/features may not be in nightly builds_
 
 ## Classic library support (`+x1`)
 
@@ -25,17 +24,21 @@ _This target is receiving some attention at the moment and options/features may 
 * [x] Inkey driver
 * [ ] Hardware joystick
 * [ ] File I/O
-* [ ] Interrupts
+* [x] Interrupts
 * [ ] RS232
 
 
 # Quick start
 
-    IM1 mode (org at address 0)
-        zcc +x1 -create-app -lm adv_a.c
+Two sets of memory configuration are supported for the X1: an "allram" configuration and a configuration where the IPL is paged in. The latter configuration should be useful for creating disc menu launchers.
 
-    IM2 mode (org address = 32768 or more)
-        zcc +x1 -create-app -subtype=im2 -zorg=`<address>` -lm adv_a.c
+IM1 mode (org at address 0)
+
+    zcc +x1 -create-app -lm adv_a.c
+
+IM2 mode (org address = 32768 or more):
+
+    zcc +x1 -create-app -subtype=im2 -zorg=`<address>` -lm adv_a.c
 
 
 An autoboot d88 disk image (.d88 extension) is created automatically by appmake.
@@ -53,6 +56,10 @@ The generic console supports the following screen modes:
 The PCG ram is used for custom fonts and UDGs, the PCG ram can only be loaded when in mode 0.
 
 Loading data into the PCG is horrendously slow, so it's recommended that your application present a "Please wait" style screen whilst this is happening. The library will automatically load any compile configured `CRT_FONT` without such a screen so it's recommended that fonts are configured using the `GENCON_SET_FONT32` ioctl.
+
+## Custom library
+
+The `<x1.h>` header supplies a set of functions that perform non-portable x1 specific behaviour.
 
 # Emulators
 
