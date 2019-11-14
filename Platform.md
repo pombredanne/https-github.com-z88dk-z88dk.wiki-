@@ -64,7 +64,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| 40x25 | 80x50 | No | PSG (+ 1 bit)  | Many appmake extras | 
 [Sharp OZ](Platform---Sharp-OZ700) | Yes | No | No | 239x80| No | No | Experimental| 
 [Sharp MZ2500](Platform---Sharp-MZ2500) | 40(80)x25 | No| 40x24, 80x24 | No | No | No  | Initial support, max 24kb | 
-[Sharp X1](Platform---Sharp-X1)| No | 40(80)x25| No | No | No | PSG only | | 
+[Sharp X1](Platform---Sharp-X1)| No | 40(80)x25| 40(80)x25 | 320(640)x200  | No | PSG only | | 
 [S1MP3](Platform---S1MP3)| No | No| Yes | No | No | No | | 
 [Exidy Sorcerer](Platform---Sorcerer)| 64x30| No | 64x30 | 128x60| No | No | '--300bps' extra mode in appmake| 
 [Sony SMC-70/SMC-777](Platform---SMC-777)| 80x24| No | 40x25 + 80x25 | 80x50 + 160x50 | Yes | PSG | Extension library to CP/M.|
