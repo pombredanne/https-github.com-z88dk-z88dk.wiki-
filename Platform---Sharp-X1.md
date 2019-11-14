@@ -8,7 +8,7 @@
 
 This machine can run software natively (`+x1`), via CP/M (`+cpm -subtype=x1`) and SOS (`+sos`)
 
-_This target is receiving some attention at the moment and options/features may not be in nightly builds__
+_This target is receiving some attention at the moment and options/features may not be in nightly builds_
 
 ## Classic library support (`+x1`)
 
@@ -38,8 +38,7 @@ _This target is receiving some attention at the moment and options/features may 
         zcc +x1 -create-app -subtype=im2 -zorg=`<address>` -lm adv_a.c
 
 
-An autoboot RAW disk image (.2D extension) is created automatically by appmake.
-A .D88 disk image format is obtainable with the SamDisk or XBrowser88 tools.
+An autoboot d88 disk image (.d88 extension) is created automatically by appmake.
 
 
 ## Generic console
@@ -55,19 +54,13 @@ The PCG ram is used for custom fonts and UDGs, the PCG ram can only be loaded wh
 
 Loading data into the PCG is horrendously slow, so it's recommended that your application present a "Please wait" style screen whilst this is happening. The library will automatically load any compile configured `CRT_FONT` without such a screen so it's recommended that fonts are configured using the `GENCON_SET_FONT32` ioctl.
 
+# Emulators
 
-# Do-it-yourself a boot disk (old method)
+* Mame
+* Takeda
 
-This is an uncomfortable alternative to "appmake".
+Software (including CP/M) is available in the Neo Kobe archives. 
 
-The compiler will produce a binary file.
-All you need to do is put that .bin on a disk image. 
-Set the 'boot' flag on the file and the "load" and "start" address if necessary.
+# Links
 
-
-In example, with [XBrowser88](http://www.z88dk.org/tools/x1), you'd create a 
-new blank disk image (Tools -> New), add in your bin file (Home -> Add), 
-and mark it as bootable by right-clicking the filename, clicking 
-Properties, and checking the Boot box. You only need to do that the 
-first time it is added to the disk image - if you update the file, that 
-Boot flag will be preserved.
+* [x1center.org](http://www.x1center.org/) - technical information
