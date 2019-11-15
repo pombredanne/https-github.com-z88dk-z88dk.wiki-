@@ -29,7 +29,14 @@ This will create a .d88 image that's suitable for loading into FD1 of the Takeda
 
 # CP/M
 
-No specific libraries are at the moment available for the Casio FP-1100.   To transfer files on a disk image with cpmtools a specific disk definition must be provided in the 'diskdefs' file:
+No specific libraries are at the moment available for the Casio FP-1100. A disc image suitable for use with an emulator can be produced using the `-subtype=fp1100` option:
+
+    zcc +cpm -subtype=fp1100 program.c -create-app
+
+
+## CPM Tools
+
+A disc definition for CPMtools is provided below:
 
     # Casio FP-1100
     diskdef fp1100
@@ -42,9 +49,6 @@ No specific libraries are at the moment available for the Casio FP-1100.   To tr
       boottrk 4
       os 2.2
     end
-
-
-WARNING:  With the suggested definition the file transfer commands will work but the target disk image will possibly lose the ability to boot.
 
 
 # Links
