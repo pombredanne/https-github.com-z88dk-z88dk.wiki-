@@ -6,7 +6,7 @@
 
 ## Classic library support (`+x1`)
 
-* [ ] Native console output
+* [x] Native console output
 * [x] Native console input
 * [ ] ANSI vt100 engine
 * [x] Generic console
