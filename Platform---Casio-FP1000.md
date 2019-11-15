@@ -4,6 +4,24 @@
 * 64k RAM, 36k ROM + ~12k sub cpu ROM
 * VDP: HD46505 (m6845 clone), 48K VRAM total via the uPD7801G 
 
+## Classic library support (`+x1`)
+
+* [ ] Native console output
+* [x] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [ ] Redefinable font 
+    * [ ] UDG support
+* [x] Lores graphics (40x24, 80x24)
+* [ ] Hires graphics
+* [ ] PSG sound
+* [ ] One bit sound
+* [ ] Inkey driver
+* [ ] Hardware joystick
+* [ ] File I/O
+* [ ] Interrupts
+* [ ] RS232
+
 # Compilation
 
     zcc +fp1100 world.c -create-app
