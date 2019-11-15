@@ -3,7 +3,7 @@
 | | |
 |-|-|
 | Header     | [{z88dk}/include/im2.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/im2.h)               |
-| Source     | [{z88dk}/libsrc/im2](https://github.com/z88dk/z88dk/tree/master/z88dk/libsrc/_DEVELOPMENT/im2/)                              |
+| Source     | [{z88dk}/libsrc/im2](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/im2)         |
 | Include    | #include `<im2.h>`                                                                                        |
 | Linking    |                                                                                     |
 | Compile    |                                                        |
