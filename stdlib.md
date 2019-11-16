@@ -102,7 +102,7 @@ Wait for a period of time measured in seconds.
 Wait for a period of time measured in centiseconds.
 
 
-## void delay(int)
+## void msleep(int)
 
 Wait for a period of time measured in milliseconds.
 
@@ -162,7 +162,7 @@ Wait for a period of time measured in seconds.
 
 Wait for a period of time measured in hundredths of seconds.
 
-## int delay(int milliseconds)
+## int msleep(int milliseconds)
 
 Wait in a similar way to the well known fuction implemented on other compilers.
 
