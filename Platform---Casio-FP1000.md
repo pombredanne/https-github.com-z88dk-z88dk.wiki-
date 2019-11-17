@@ -10,8 +10,8 @@
 * [x] Native console input
 * [ ] ANSI vt100 engine
 * [x] Generic console
-    * [ ] Redefinable font 
-    * [ ] UDG support
+    * [x] Redefinable font 
+    * [x] UDG support
 * [x] Lores graphics (40x24, 80x24)
 * [ ] Hires graphics
 * [ ] PSG sound
@@ -43,7 +43,6 @@ This will create a .d88 image that's suitable for loading into FD1 of the Takeda
 * Although the machine has 64k RAM, the ROM is copied into RAM so the maximum program size is around 20k   
 * Anything graphical has to go via the sub cpu. Communication with it is a little slow so displaying anything on screen is sluggish
 * Not all subcpu commands are known, so graphics are not available
-* The keyboard makes an annoying beep for every keypress 
 
 # CP/M
 
