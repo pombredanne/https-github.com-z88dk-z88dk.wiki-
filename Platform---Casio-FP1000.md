@@ -38,7 +38,7 @@ This will create a .d88 image that's suitable for loading into FD1 of the Takeda
 # Screenshots
 
 ![](images/platform/fp1100_gencon.png)
-![](images/platform/fp1100_adva.png)
+![](images/platform/fp1100_hires.png)
 
 # Limitations
 
