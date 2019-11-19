@@ -4,7 +4,7 @@
 * 64k RAM, 36k ROM + ~12k sub cpu ROM
 * VDP: HD46505 (m6845 clone), 48K VRAM total via the uPD7801G 
 
-## Classic library support (`+x1`)
+## Classic library support (`+fp1100`)
 
 * [x] Native console output
 * [x] Native console input
