@@ -15,7 +15,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Bandai Supervision 8000](Platform-Bandai-Supervision-8000) | No | No | 32x16, 32x12 | 32x16,256x96| No | PSG | |
 [Knight 2000 (Aussie Byte)](Platform---Aussie) | Yes | 80x25| No | not yet | No | 1 bit| Untested and incomplete graphics lib| 
 [Canon X-07](Platform---Canon-X07) | Yes | No | No | No | No | No | Initial stage | 
-[Casio FP-1100](Platform---Casio-FP1000) | No | No | 40x25,80x25 | No | No | No |
+[Casio FP-1100](Platform---Casio-FP1000) | No | No | 40x25,80x25 | 640x200,320x200 | No | No |
 [Casio PV-1000](Platform---Casio-PV1000) | No | No | 28x24 | 56x48 | No | No |
 [Casio PV-2000](Platform---Casio-PV2000) | No | No | 32x24 | 256x192 | No | PSG |
 [Cambridge Z88](Platform---Cambridge-Z88)| Yes | Yes | No | 256x64| Yes | 1 bit| Far memory support, ZSock + many other features | 
