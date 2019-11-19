@@ -30,8 +30,8 @@ This will create a .d88 image that's suitable for loading into FD1 of the Takeda
 
 # Generic console modes
 
-* Mode 0 = 40 column text
-* Mode 1 = 80 column text
+* Mode 0 = 40 column text, 320x200 graphics
+* Mode 1 = 80 column text, 640x100 graphics
 
 # Screenshots
 
