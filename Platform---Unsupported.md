@@ -805,19 +805,14 @@ Being ROM based the gaming consoles need a slightly different software architect
 The Colecovision is supported
 
 of the same family:
-    Chuang Zao Zhe (50, Dina, Professional Arcade)
-    Spectravideo SVI 603 - Coleco game adapter
+* Chuang Zao Zhe (50, Dina, Professional Arcade)
+* Spectravideo SVI 603 - Coleco game adapter
 
 
 #### Epoch Super Cassette Vision
 
 #### Nichibutsu My Vision
 
-#### Sega
-
-##### Game Gear
-
-#### Super Vision 8000
 
 ## VideoGame cabinets
 
