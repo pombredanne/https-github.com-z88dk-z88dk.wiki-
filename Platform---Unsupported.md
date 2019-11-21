@@ -809,8 +809,6 @@ of the same family:
 * Spectravideo SVI 603 - Coleco game adapter
 
 
-#### Epoch Super Cassette Vision
-
 #### Nichibutsu My Vision
 
 
