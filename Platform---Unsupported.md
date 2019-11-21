@@ -808,10 +808,6 @@ of the same family:
 * Chuang Zao Zhe (50, Dina, Professional Arcade)
 * Spectravideo SVI 603 - Coleco game adapter
 
-
-#### Nichibutsu My Vision
-
-
 ## VideoGame cabinets
 
 The Tetris game written with the z88dk for the 'Pacman' cabinet shows it can be done.
