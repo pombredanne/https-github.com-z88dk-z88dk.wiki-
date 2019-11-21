@@ -2,6 +2,7 @@
 
 * Z80 @ 3.57Mhz
 * 2k RAM
+* AY8910
 * VDP: TMS9928, 16k VRAM
 
 ## Classic library support (`+myvision`)
@@ -51,6 +52,12 @@ These are mapped into the following keycodes (hex) returned by `fgetc_cons()`:
 ```
 
 Joystick 1 uses keys A,B,C,D,E,10, joystick 2 uses keys 1,2,3,4,5,6
+
+# Additional library
+
+The VDP used by the MyVision is the same as the one in the MSX, as such many MSX examples will work. However, the machine is not particularly well equipped with memory so care must be taken.
+
+You can reduce RAM usage by making static data `const` where possible - this will keep it ROM rather than copying to RAM.
 
 # Links
 
