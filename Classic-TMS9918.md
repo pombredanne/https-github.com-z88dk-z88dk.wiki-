@@ -7,7 +7,7 @@ The TMS9918a/TMS9928a VDP chip is used by the following targets supported by z88
 * [Colecovision](Platform--Colecovision)
 * [Memotech MTX](Platform---Memotech-MTX)
 * [MSX](Platform---MSX)
-* [Nichibutsu My Vision][Platform---Nichibutsu-My-Vision]
+* [Nichibutsu My Vision](Platform---Nichibutsu-My-Vision)
 * [Spectravideo](Platform---Spectravideo)
 * [Sord M5](Platform---Sord-M5)
 * [Samsung SPC-1000](Platform-Samsung-SPC-1000)
