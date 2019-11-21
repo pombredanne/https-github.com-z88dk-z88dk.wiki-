@@ -17,7 +17,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Canon X-07](Platform---Canon-X07) | Yes | No | No | No | No | No | Initial stage | 
 [Casio FP-1100](Platform---Casio-FP1000) | No | No | 40x25,80x25 | 640x200,320x200 | No | No |
 [Casio PV-1000](Platform---Casio-PV1000) | No | No | 28x24 | 56x48 | No | No |
-[Casio PV-2000](Platform---Casio-PV2000) | No | No | 32x24 | 256x192 | No | PSG |
+[Casio PV-2000](Platform---Casio-PV2000) | No | Yes | 32x24 | 256x192 | No | PSG |
 [Cambridge Z88](Platform---Cambridge-Z88)| Yes | Yes | No | 256x64| Yes | 1 bit| Far memory support, ZSock + many other features | 
 [Colecovision](Platform--Colecovision)| No | Yes | 32x24 | 256x192 | No | PSG |
 [Colecovision Adam](Platform--Colecovision-Adam)| No | Yes | 32x24 | 256x192 | CP/M only | PSG | CP/M extension
@@ -43,7 +43,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Mitsubishi Multi8](Platform---Mitsubishi-Multi8)| Yes | No | 40x25, 80x25 | 640x200 | PSG | No |
 [Nascom](Platform---Nascom)| 48x16| 48x16| 48x16 - default| 96x48 | No | No | | 
 [Grundy Newbrain](Platform---Grundy-Newbrain)| Yes | No | No |  No* | No* | No | * could work on expanded systems in non-standard mode, via [stream functions](library/newbrain#streams) | 
-[Nichibutsu My Vision](Platform---Nichibutsu-My-Vision) | No | No | 32x24 | 256x192 | No | PSG |
+[Nichibutsu My Vision](Platform---Nichibutsu-My-Vision) | No | Yes | 32x24 | 256x192 | No | PSG |
 [Nintendo Gameboy](Platform---Gameboy)| 20x18 | No | 20x18 | 40x36 | No | No | Uses GBDK library | 
 [v6z80p (OSCA)](Platform---OSCA) | 40x24| 40x24| No | 320x200 | Yes | No | 2 different file access libraries | 
 [Pac Man HW](Platform---Pacman)| 28x36| No | No |  84x72* | No | No lib | * the special font provided in support/pacman must be used| 
