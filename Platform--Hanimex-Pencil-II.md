@@ -1,7 +1,7 @@
 # Machine Specifications
 
 * CPU: Z80 @ 3.579 Mhz
-* VDP: TMS9918, 16k VRAM
+* VDP: TMS9929, 16k VRAM
 * PSG: SN76489
 * RAM: 2k 
 * ROM: 8k
