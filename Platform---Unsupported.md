@@ -246,14 +246,6 @@ CP/M computer in a briefcase.
 
 _No way to load software onto the machine using Mame_
 
-### Hanimex (Soundic) Pencil II
-
-Made in Hong Kong and sold in Australia and France, it was able (in expanded mode) to run the ColecoVision cartridges.
-
-https://forums.bannister.org/ubbthreads.php?ubb=showflat&Number=114969&page=5
-
-https://github.com/xmessner/pencil2
-
 
 ### Self Built ISA board for the IBM PC
 
