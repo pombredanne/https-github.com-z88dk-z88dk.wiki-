@@ -18,6 +18,7 @@ The hardware and port settings for this machine are virtually identical to the C
 
 - The Pencil II has a keyboard rather than joypads
 - The BIOS ROM is completely different
+- 2k of RAM rather than 1k
 
 The VDP used by the Pencil 2 is the same as the one in the MSX, as such many MSX examples will work. However, the machine is not particularly well equipped with memory so care must be taken.
 
