@@ -6,6 +6,24 @@
 * RAM: 2k 
 * ROM: 8k
 
+## Classic library support (`+pencil2`)
+
+* [ ] Native console output
+* [ ] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font 
+    * [x] UDG support
+* [ ] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [x] Inkey driver
+* [ ] Hardware joystick
+* [ ] File I/O
+* [x] Interrupts
+* [ ] RS232
+
 # Compilation
 
     zcc +pencil2 world.c -create-app
