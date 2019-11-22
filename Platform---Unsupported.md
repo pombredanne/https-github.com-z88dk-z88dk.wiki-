@@ -370,19 +370,6 @@ Peaturing the PIPS spreadsheed as operating system, optional ROM could be added.
 
 ##### Orion PRO
 
-
-
-### Videoton TVC
-
-An Hungarian computer close to the Enterprise
-
-
-[The TVC computer on Wikipedia](http://en.wikipedia.org/wiki/TVC_(computer))
-
-[WinTVC emulator](http://gaia.atilia.eu/download/WinTVC1.0.6_x64.zip)
-
-
-
 ### Conitec Datensysteme - PROF 80 / 180
 
 This one was compatibleto the TRS80, but it'd be nice to add support for its GRIP (Graphical IO-Processor)
