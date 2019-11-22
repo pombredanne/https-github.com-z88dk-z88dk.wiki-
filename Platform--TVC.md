@@ -1,12 +1,12 @@
 # Hardware summary
 
 * Z80 @ 3.125 Mhz
-  * 22k ROM
+  * 20k ROM, and depending on computer type
     * 32k RAM, 16k vRAM (TVC 32k)
     * 64k RAM, 16k vRAM (TVC 64k)
-    * 64k RAM, 64k vRAM (TVC 64k+)
+    * 64k RAM, 64k vRAM (TVC 64k+). The 16kB vRAM pages can be switched and mapped, but the same videomodes are available.
 * VDP: 6845, 4bit RGB color (1-1 bit RGB and 1 bit luminance)
-  * 3 graphics modes are available: 2 color, 4 color and 16 color modes (with 640, 320 and 160 pixel columns, respectively)
+  * 3 graphics modes are available: 2 colour, 4 colour and 16 colour modes (with 640, 320 and 160 pixel columns, respectively)
 * Sound: 1 channel, 4 bit volume level, independent of CPU
 * 4 expansion ports on top with almost all possible lines exposed
 * 1 side-port for 'program module' (cartridge games, programs)
