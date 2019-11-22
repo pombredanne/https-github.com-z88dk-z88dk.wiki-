@@ -32,3 +32,5 @@ The keyboard is supported by an inkey driver and 4 keyboard joysticks are availa
 # Links
 
 * Mame emulator
+* https://forums.bannister.org/ubbthreads.php?ubb=showflat&Number=114969&page=5
+* https://github.com/xmessner/pencil2
