@@ -9,7 +9,7 @@
   * 3 graphics modes are available: 2 color, 4 color and 16 color modes (with 640, 320 and 160 pixel columns, respectively)
 * Sound: 1 channel, 4 bit volume level, independent of CPU
 * 4 expansion ports on top with almost all possible lines exposed
-* 1 side-port for 'program module' (cartrigde games, programs)
+* 1 side-port for 'program module' (cartridge games, programs)
 * 1 centronics printer port
 * 1 monitor + 1 RGB port
 * 1 RF port
