@@ -2,7 +2,7 @@ The following table shows the machines supported by the _classic_ library.
 
 _Not all columns are visible. Horizontal scroll to see them._
 
- | Machine | Native Console I/O | VT100 Console I/O | [Generic Console](Classic-GenericConsole) | [Monochrome Graphics](library/monographics) | [File I/O](library/stdio) | [Sound](library/sound) | Other feaFtures / notes | 
+ | Machine | Native Console I/O | VT100 Console I/O | [Generic Console](Classic-GenericConsole) | [Monochrome Graphics](library/monographics) | [File I/O](library/stdio) | [Sound](library/sound) | Other features / notes | 
  |---|---|---|---|---|---|---|---|
 [ABC80](Platform---Luxor-ABC80) | Yes | 40x24 | 40x24 | 78x72 | No | No | 
 [ABC800](Platform---Luxor-ABC800)| Yes | No |No | No | No | No | Untested |
