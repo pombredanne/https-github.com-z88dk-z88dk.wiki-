@@ -59,6 +59,8 @@ This will create a .cas image that's suitable for loading into the WinTVC emulat
 * No VT-DOS, no UPM support
 * No support for extra hardware (floppy card (original), serial card (original), multichip soundcard (new), multicart (new) )
 
+Under wine, you may need to change the video driver in the WinTVC emulator to "Direct3D9":  "Opciók -> Video Driver"
+
 # Links
 
 * [WinTVC emulator](http://tvc.homeserver.hu/html/wintvcletoltes.html)
