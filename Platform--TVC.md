@@ -14,6 +14,8 @@
 * 1 monitor + 1 RGB port
 * 1 RF port
 
+_This target is currently being created_
+
 ## Classic library support (`+tvc`)
 
 * [x] Native console output
