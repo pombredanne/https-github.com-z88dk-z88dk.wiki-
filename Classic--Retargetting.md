@@ -23,13 +23,13 @@ The crt0 file contains the entry point and is responsible for defining the memor
 
 Again, it's easiest just to copy the file from a similar target and adjust memory addresses, values to suit.
 
-### An implémentation of fputc_cons()
+### An implementation of fputc_cons()
 
-fputc_cons() is the function that will output a character to the display device. The file should be located in `{z88dk}/libsrc/stdio/[machineid]/fputc_cons.asm`. Typically this routine will consist of a call to the machine's firmware.
+`int fputc_cons(char c)` is the function that will output a character to the display device. The file should be located in `{z88dk}/libsrc/target/[machineid]/stdio/fputc_cons_native.asm`. Typically this routine will consist of a call to the machine's firmware.
 
 Once you've got the function it's time to create a library file. The contents of a library file are (by convention) defined in `{z88dk}/libsrc/machineid.lst`. The minimal contents of that file would be:
 
-    stdio/[machineid]/fputc_cons
+    target/[machineid]/stdio/fputc_cons_native
     @z80.lst
 
 The library file will be built by `{z88dk}/libsrc/Makefile`, so here you need to add `[machineid]_clib.lib` to the `all:` target and then define a rule:
@@ -61,7 +61,7 @@ Once you've done all of these steps, you should be able to compile and run a hel
 
 ## Adding keyboard support
 
-When keyboard input is required, the classic library will call the `fgetc_cons()` function. The implementation of this file should be in `{z88dk}/libsrc/stdio/[machineid]/fgetc_cons.asm`. Some parts of the library or examples require polling of the keyboarders using `getk()`, this file is located in `{z88dk}/libsrc/stdio/[machineid]/fgetc_cons.asm`
+When keyboard input is required, the classic library will call the `fgetc_cons()` function. The implementation of this file should be in `{z88dk}/libsrc/target/[machineid]/stdio/fgetc_cons.asm`. Some parts of the library or examples require polling of the keyboarders using `getk()`, this file is located in `{z88dk}/libsrc/target/[machineid]/stdio/getk.asm`
 
 ## Adding the generic console
 
@@ -120,4 +120,3 @@ Abandon file with the handle fd - this is called by the system
 on program exit should it not be able to close a file. This
 function is a dummy function on the z88 but for example on the
 Spectrum +3 this function would be of use.
-
