@@ -22,7 +22,7 @@ This machine can run both CP/M and S-OS and hence applications compiled for eith
     * [x] Redefinable font 
     * [x] UDG support
 * [x] Lores graphics
-* [ ] Hires graphics
+* [x] Hires graphics
 * [x] PSG sound
 * [ ] One bit sound
 * [ ] Inkey driver
@@ -51,10 +51,15 @@ The following screen modes are available:
 
 * Mode 0: 80x25, 160x50 lores graphics
 * Mode 1: 40x25,  80x50 lores graphics
+* Mode 4: 80x25, 320x200 hires graphics
+* Mode 5: 40x25, 320x200 hires graphics
+* Mode 8: 80x25, 640x200 hires graphics
+* Mode 9: 40x25, 640x200 hires graphics
+
+The hires graphics plane is separate to the text plane. As a result graphics are overlaid by any text printed. The background colour of the hires graphics plane can be configured using the `textbackground()` function. 
 
 ## Links
 
 * [Takeda Emulator](http://takeda-toshiya.my.coocan.jp/smc777/index.html)
 * [Technical details on z88dk issue](https://github.com/z88dk/z88dk/issues/1067)
-
 
