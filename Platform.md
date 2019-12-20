@@ -32,7 +32,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Excalibur 64](Platform---Excalibur64) | No | No | 40x25, 80x25 | No | No | No |
 [Galaksija](Platform---Galaksija)| 32x16 (B&W) | 32x16 (B&W) | 32x16 + 32x26 (Gal+) | 64x48 + 256x208 (Gal+)| No | 1 bit* | (via tape output) | 
 [Hanimex Pencil II](Platform--Hanimex-Pencil-II)| No | Yes | 32x24 | 256x192 | No | PSG |
-[Hübler/Evert-MC](Platform--HublerEvertMC) | 64x24 | No | 64x32 | No | No | No |
+[Hübler/Evert-MC](Platform--HublerEvertMC) | 64x24 | No | 64x24 | 64x24 | No | No |
 [Jupiter Ace](Platform---Jupiter-Ace)| 32x24| 32x24 (B&W)| 32x24 - default| 64x48, 64x72| No | 1 bit| | 
 [Kaypro](Platform---Kaypro) | 80x25 (ADM3) | No | No | 160x100('84) 80x50('83) | No | No | Extension library to the CP/M base| 
 [Lambda 8300](Platform---Lambda) | 32x24 (B&W)| 32x24 (TXT)| No | 64x48 |  No | 1 bit* | (via tape output) | 
