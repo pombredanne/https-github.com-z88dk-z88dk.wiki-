@@ -12,7 +12,7 @@
 * [x] Generic console
     * [ ] Redefinable font 
     * [ ] UDG support
-* [ ] Lores graphics
+* [x] Lores graphics
 * [ ] Hires graphics
 * [ ] PSG sound
 * [ ] One bit sound
@@ -33,6 +33,10 @@ This will create a KCC file that can be loaded with the jkcemu emulator.
 Once loaded, enter the following command to run:
 
     GO 0000
+
+# Graphics
+
+A very lores 64x24 graphics mode is supported. The character used for plotting pixels is not complete so vertical lines are "perforated".
 
 # Links
 
