@@ -4,7 +4,7 @@
 * 48k contiguous RAM
 * B&W 256x256 pixel display
 
-## Classic library support (`+hemc`)
+## Classic library support (`+hgmc`)
 
 * [x] Native console output
 * [x] Native console input
@@ -41,5 +41,5 @@ High-resolution graphics are available at 256x256 pixels.
 
 # Links
 
-* [Technical information](https://hc-ddr.hucki.net/wiki/doku.php/homecomputer/huebler#hueblerevert-mc)
+* [Technical information](https://hc-ddr.hucki.net/wiki/doku.php/homecomputer/hueblergrafik)
 * [JKCEmu - Emulator](http://www.jens-mueller.org/jkcemu/index.html)
