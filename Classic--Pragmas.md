@@ -97,6 +97,10 @@ Polling the keyboard via inkey() can be a lot quicker and keys can repeat a lot 
 
 Configures the `getk()` to use the inkey() method rather than the platform firmware.
 
+`-pragma-define:CLIB_DISABLE_FGETS_CURSOR=1`
+
+Configures the `fgets_cons()` function to not print it's soft cursor (`_`) - you may need to set this if you're using firmware routines that implement their own cursor (for example on CP/M, MSX).
+
 ## ANSI (vt100) terminal
 
 `-pragma-need=ansiterminal`
