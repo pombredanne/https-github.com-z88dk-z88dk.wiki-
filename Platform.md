@@ -33,6 +33,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Galaksija](Platform---Galaksija)| 32x16 (B&W) | 32x16 (B&W) | 32x16 + 32x26 (Gal+) | 64x48 + 256x208 (Gal+)| No | 1 bit* | (via tape output) | 
 [Hanimex Pencil II](Platform--Hanimex-Pencil-II)| No | Yes | 32x24 | 256x192 | No | PSG |
 [Hübler/Evert-MC](Platform--HueblerEvertMC) | 64x24 | No | 64x24 | 64x24 | No | No |
+[Hübler Grafik-MC](Platform--HueblerGrafikMC) | 32x24 | No | 32x32 | 256x256 | No | No |
 [Jupiter Ace](Platform---Jupiter-Ace)| 32x24| 32x24 (B&W)| 32x24 - default| 64x48, 64x72| No | 1 bit| | 
 [Kaypro](Platform---Kaypro) | 80x25 (ADM3) | No | No | 160x100('84) 80x50('83) | No | No | Extension library to the CP/M base| 
 [Kramer-MC](Platform--KramerMC) | 64x16 | No | 64x16 | 64x16 | No | No |
