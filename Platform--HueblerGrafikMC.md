@@ -22,7 +22,7 @@
 * [x] Interrupts
 * [ ] RS232
 
-This is a relatively bare-bones machine. Two serial ports are available but as of yet they aren't supported by z88dk.
+This is a relatively bare-bones machine.
 
 # Compilation
 
