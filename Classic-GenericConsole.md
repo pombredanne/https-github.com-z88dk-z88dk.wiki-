@@ -83,10 +83,9 @@ Characters > 128 are treated as UDGs on platforms that support them. The number 
 
 ## Text attributes
 
-The generic console supported inverse, bold and underline attributes. It should be noted that both bold and underline attributes prevent the `cvpeek()` from functioning in bitmap mode.
+The generic console attempts to support inverse, bold and underline attributes. Information on whether they are supported by a particular target is on the target page. It should be noted that both bold and underline attributes prevent the `cvpeek()` from functioning in bitmap mode.
 
 ## Setting the screen mode
 
 Some of the platforms support alternate screen modes, these can be switched to using: `console_ioctl(IOCTL_GENCON_SET_MODE, &mode)`.  For more information on the supported modes, see the individual target page.
-
 
