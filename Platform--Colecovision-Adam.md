@@ -6,6 +6,29 @@
 * RAM: 64k 
 * ROM: 32k
 
+## Classic library support (`+cpm -subtype=adam`)
+
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font
+    * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute
+    * [x] Underline attribute
+* [ ] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [x] Inkey driver
+* [x] Hardware joystick
+* [x] File I/O
+* [ ] Interrupts
+* [ ] RS232
+
 The Colecovision Adam is supported when running CP/M:
 
     zcc +cpm program.c -subtype=adam -create-app

@@ -22,6 +22,11 @@ As a result the machine has been tested under the `+pasiopia7` target.
 * [x] Generic console
     * [ ] Redefinable font 
     * [ ] UDG support
+    * [ ] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
 * [x] Lores graphics
 * [ ] Hires graphics
 * [x] PSG sound

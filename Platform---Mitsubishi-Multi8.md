@@ -5,6 +5,29 @@
 * VDP: HD46505 (m6845 clone), 48K VRAM total
 * Audio: AY-3-8192 on ports 0x18 and 0x19
 
+## Classic library support (+multi8)
+
+* [x] Native console output
+* [x] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [ ] Redefinable font
+    * [ ] UDG support
+    * [ ] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
+* [ ] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [ ] Inkey driver
+* [ ] Hardware joystick
+* [ ] File I/O
+* [x] Interrupts
+* [ ] RS232
+
 # Compilation
 
     zcc +multi8 world.c -create-app

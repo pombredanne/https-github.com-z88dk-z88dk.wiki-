@@ -18,6 +18,31 @@
 * 2k PCG RAM (F800-FFFF) banked with Character Generator ROM
 * MC6845 on $10 and $11
 
+## Classic library support
+
+* [ ] Native console output
+* [x] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font
+    * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
+* [x] Lores graphics
+* [ ] Hires graphics
+* [ ] PSG sound
+* [x] One bit sound
+* [x] Inkey driver
+* [ ] Hardware joystick
+* [ ] File I/O
+* [ ] Interrupts
+* [ ] RS232
+
+
+
 # Compilation
 
 Super80, Super80d, Super80e, Super80m:

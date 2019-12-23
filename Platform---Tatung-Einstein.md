@@ -1,4 +1,33 @@
-#  Tatung Einstein
+# Machine Specifications
+
+* CPU: Z80 @ 3.579545 Mhz
+* VDP: TMS9928, 16k VRAM
+* PSG: AY-3-8910
+* RAM: 64k
+
+
+## Classic library support (`+cpm -subtype=einstein`)
+
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font
+    * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute
+    * [x] Underline attribute
+* [ ] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [ ] Inkey driver
+* [ ] Hardware joystick
+* [x] File I/O
+* [ ] Interrupts
+* [ ] RS232
 
 The Tatung Einstein is a CP/M compatible platform, so the [same base library](Platform---CPM) can be used, but extra functionalities are available.
 

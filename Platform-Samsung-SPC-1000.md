@@ -6,6 +6,29 @@
 * AY-3-8192
 * Optional TMS9928A
 
+## Classic library support (`+spc1000`)
+
+* [ ] Native console output
+* [ ] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font
+    * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute
+    * [x] Underline attribute
+* [x] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [x] Inkey driver
+* [x] Hardware joystick
+* [ ] File I/O
+* [ ] Interrupts
+* [ ] RS232
+
 # Compilation
 
     zcc +spc1000 world.c -create-app

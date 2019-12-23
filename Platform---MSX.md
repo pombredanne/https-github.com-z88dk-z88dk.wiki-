@@ -1,14 +1,19 @@
 
 ![](images/platform/msx.jpg)
 
-## Classic library support
+## Classic library support (`+msx`)
 
 * [x] Native console output
 * [x] Native console input
 * [x] ANSI vt100 engine
 * [x] Generic console
-    * [x] Redefinable font 
+    * [x] Redefinable font
     * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute
+    * [x] Underline attribute
 * [x] Lores graphics
 * [x] Hires graphics
 * [x] PSG sound

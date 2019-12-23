@@ -11,6 +11,29 @@ AKA Gold Star Electronics FC-150 (Famicom-150).
 * RAM: 4k (*)
 * ROM: 8k
 
+## Classic library support (`+m5`)
+
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font
+    * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute
+    * [x] Underline attribute
+* [ ] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [x] Inkey driver
+* [x] Hardware joystick
+* [ ] File I/O
+* [x] Interrupts
+* [ ] RS232
+
 # Compilation
 
     zcc  +m5 -create-app  program.c

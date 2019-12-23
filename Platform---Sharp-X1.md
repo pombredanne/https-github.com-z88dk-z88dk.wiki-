@@ -17,6 +17,11 @@ This machine can run software natively (`+x1`), via CP/M (`+cpm -subtype=x1`) an
 * [x] Generic console
     * [x] Redefinable font 
     * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
 * [ ] Lores graphics 
 * [x] Hires graphics (320x200 + 640x200)
 * [x] PSG sound

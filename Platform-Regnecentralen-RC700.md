@@ -14,8 +14,11 @@
 * [x] Generic console
     * [ ] Redefinable font 
     * [ ] UDG support
-    * [ ] Inverse
-    * [ ] Colours
+    * [ ] Paper colour
+    * [ ] Ink colour
+    * [ ] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
 * [x] Lores graphics (80x25)
 * [ ] Hires graphics
 * [ ] PSG sound
