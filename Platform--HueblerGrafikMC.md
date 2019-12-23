@@ -12,6 +12,11 @@
 * [x] Generic console
     * [x] Redefinable font 
     * [x] UDG support
+    * [ ] Paper colour
+    * [ ] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute
+    * [x] Underline attribute
 * [ ] Lores graphics
 * [x] Hires graphics
 * [ ] PSG sound

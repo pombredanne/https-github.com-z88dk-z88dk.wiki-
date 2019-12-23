@@ -7,6 +7,30 @@
 * Audio: SN76489 on ports 0xff @ 3.579545 MHz
 * 24k? ROM cartridges @0x2000
 
+## Classic library support (`+rx78`)
+
+* [ ] Native console output
+* [ ] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font
+    * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute
+    * [ ] Underline attribute
+* [ ] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [x] Inkey driver
+* [x] Hardware joystick
+* [ ] File I/O
+* [ ] Interrupts
+* [ ] RS232
+
+
 # Compilation
 
     zcc +rx78 adv_a.c -create-app

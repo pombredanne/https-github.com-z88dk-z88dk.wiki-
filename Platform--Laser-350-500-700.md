@@ -14,8 +14,13 @@ VTech Laser 350/500/700.
 * [ ] Native console input
 * [ ] ANSI vt100 engine
 * [x] Generic console
-    * [x] Redefinable font 
-    * [x] UDG support
+    * [x] Redefinable font (mode 2)
+    * [x] UDG support (mode 2)
+    * [ ] Paper colour (mode 0, 2)
+    * [ ] Ink colour (mode 0, 2)
+    * [x] Inverse attribute (all modes)
+    * [x] Bold attribute (mode 2)
+    * [x] Underline attribute (mode 2)
 * [x] Lores graphics
 * [x] Hires graphics
 * [ ] PSG sound
