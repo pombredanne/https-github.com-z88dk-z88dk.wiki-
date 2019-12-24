@@ -1,7 +1,7 @@
 # Machine Specifications
 
-* CPU: Z80 @ 3.579545 Mhz
-* VDP: TMS9928, 16k VRAM
+* CPU: Z80 @ 4Mhz
+* VDP: TMS9928, 16k VRAM + TK-02 (MC6845 with 2k VRAM)
 * PSG: AY-3-8910
 * RAM: 64k
 

@@ -16,8 +16,8 @@ VTech Laser 350/500/700.
 * [x] Generic console
     * [x] Redefinable font (mode 2)
     * [x] UDG support (mode 2)
-    * [ ] Paper colour (mode 0, 2)
-    * [ ] Ink colour (mode 0, 2)
+    * [x] Paper colour (mode 0, 2)
+    * [x] Ink colour (mode 0, 2)
     * [x] Inverse attribute (all modes)
     * [x] Bold attribute (mode 2)
     * [x] Underline attribute (mode 2)

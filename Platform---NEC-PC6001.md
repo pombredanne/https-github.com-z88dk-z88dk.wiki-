@@ -16,6 +16,29 @@ The Japanese series of PC-6001 computers includes the following systems:
 * PC-6001 MK II
 * PC-6601
 
+## Classic library support (`+cpm -subtype=adam`)
+
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font
+    * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute
+    * [x] Underline attribute
+* [x] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [x] Inkey driver
+* [x] Hardware joystick
+* [x] File I/O
+* [ ] Interrupts
+* [ ] RS232
+
 # Quick start
 
     zcc +pc6001 -create-app -lm program.c

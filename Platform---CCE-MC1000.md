@@ -1,5 +1,37 @@
+# Machine Specifications
+
+* CPU: Z80 @ 3.579545 Mhz
+* VDP: MC6847, 6k VRAM
+* PSG: AY-3-8910
+* RAM: 16k...64k?
+* ROM: 16k
 
 ![](images/platform/mc1000-adva.jpg) ![](images/platform/mc1000_rabbits.jpg)
+
+
+## Classic library support (`+mc1000`)
+
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font
+    * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute
+    * [x] Underline attribute
+* [x] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [ ] Inkey driver
+* [x] Hardware joystick
+* [ ] File I/O
+* [ ] Interrupts
+* [ ] RS232
+
 
 
 # Quick start
