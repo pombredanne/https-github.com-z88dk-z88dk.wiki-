@@ -42,11 +42,17 @@ The generic console additional supports VT52 control codes, the following are su
 [ESC] D - Move the cursor left by one
 [ESC] E - Clear the screen and place the cursor in the upper left corner.
 [ESC] H - Move the cursor to the upper left corner.
+[ESC] J - Erase all lines after our current line
+[ESC] K - Clear the current line from the current cursor position.
 [ESC] Y - row col 'Goto' Coordinate mode - first will change line number, then cursor position (both ASCII - 32)
 [ESC] b - Byte after 'b' sets new foreground colour (ASCII - 32)
 [ESC] c - Byte after 'c' sets new background colour (ASCII - 32)
 [ESC] p - start inverse video
 [ESC] q - stop inverse video
+[ESC] 0 - start underlined
+[ESC] 1 - stop underlined
+[ESC] 2 - start bold
+[ESC] 3 - stop bold
 [ESC] r - nn print the nn character without translation (useful on non-ASCII text terminals)
 [ESC] s - Enable/disable vertical scrolling
 ```
@@ -75,9 +81,11 @@ Alternatively, this can be done at compile time using `console_ioctl(IOCTL_GENCO
 
 Characters > 128 are treated as UDGs on platforms that support them. The number available depends on the platform, but at present is either 128 or 32 (Jupiter Ace, Exidy). The address for these can be set programmatically using: `console_ioctl(IOCTL_GENCON_SET_UDGS, &addr)`
 
+## Text attributes
+
+The generic console attempts to support inverse, bold and underline attributes. Information on whether they are supported by a particular target is on the target page. It should be noted that both bold and underline attributes prevent the `cvpeek()` from functioning in bitmap mode.
+
 ## Setting the screen mode
 
-Some of the platforms support alternate screen modes, these can be switched to using: `console_ioctl(IOCTL_GENCON_SET_MODE, &mode)`. At present this functionality is available to the CPC (Modes 0,1,2) and MC-1000 (Mode 0 = text, Mode 1 = graphics). For more information see the individual port page.
-
-
+Some of the platforms support alternate screen modes, these can be switched to using: `console_ioctl(IOCTL_GENCON_SET_MODE, &mode)`.  For more information on the supported modes, see the individual target page.
 
