@@ -89,3 +89,23 @@ The generic console attempts to support inverse, bold and underline attributes. 
 
 Some of the platforms support alternate screen modes, these can be switched to using: `console_ioctl(IOCTL_GENCON_SET_MODE, &mode)`.  For more information on the supported modes, see the individual target page.
 
+## Capabilities
+
+The generic console has been ported to run on a large number of machines of varying capability. The capabilities of a machine will also vary depending on the screen mode that is currently active: for example the MC6847 routines support defining a font in a bitmapped graphics screen mode, but not in text, to provide some information, a `console_ioctl()` call is available to query the current capabilities:
+
+
+    int  caps;
+
+    console_ioctl(IOCTL_GENCON_GET_CAPS, &caps)
+
+On return, `caps` will be a bitset of the following capabilities (an updated list can be found in `{z88dk}/include/sys/ioctl.h`:
+
+    #define CAP_GENCON_CUSTOM_FONT  1
+    #define CAP_GENCON_UDGS         2
+    #define CAP_GENCON_FG_COLOUR    4
+    #define CAP_GENCON_BG_COLOUR    8
+    #define CAP_GENCON_INVERSE      16
+    #define CAP_GENCON_BOLD         32
+    #define CAP_GENCON_UNDERLINE    64
+
+
