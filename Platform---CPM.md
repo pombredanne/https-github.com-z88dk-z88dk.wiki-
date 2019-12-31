@@ -40,6 +40,14 @@ The supported formats are displayed by specifying the `-h` option:
 
 Besides the standard library routines, the **''bdos(int func,int arg)''** and the the **''bios(int func,int arg,int arg2)''** function calls allows direct access to the bios of the system.
 
+## Generic console
+
+A hardware agnostic generic console that maps into ADM-3A control codes is available. This permits portability of `<conio.h>` code across CP/M targets that do not have a specific implementation. To use it add the following command line parameters:
+
+    --generic-console -pragma-define:CONSOLE_COLUMNS=X -pragma-define:CONSOLE_ROWS=Y
+
+Where X and Y are replaced with the size of the screen. The maximum supported screen size is 80x25.
+
 ## Optimization
 
 There are a couple of #pragma commands which might be used to cut down the size of the resultant executable:
