@@ -29,9 +29,7 @@ The default position is at address $2000, please note that the stack is position
 
 *  **-subtype=kcc**  -  appmake variant to create a '.KCC' file rather than using the '.TAP' format
 
-*  **-lgfx9001**  -  link the standard graphics library
-
-*  **-lgfx9001krt**  -  link the High Resolution library for the KRT video adapter
+*  **-lgfx9001krt**  -  link the High Resolution library for the KRT video adapter. The low-resolution library is built in.
 
 
 # JKCEMU emulator
