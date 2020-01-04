@@ -72,7 +72,7 @@ Some hardware specific functions have been adapted to run on both native platorm
 * `-subtype=microbee` ([MicroBEE](Platform---Microbee))
 * **-lnewbrain_cpm** ([Grundy NewBrain](Platform---Grundy-Newbrain))
 * `-subtype=tiki100` ([Tiki-100 (formerly Kon-Tiki)](Platform---Tiki100))
-* **-ltrs80cpm**, **-lgfxtrs80**, **-lgfxeg2000** ([Tandy Radio Shack 80 and clones](Platform---TRS80))
+* **-ltrs80_cpm**, **-lgfxtrs80**, **-lgfxeg2000** ([Tandy Radio Shack 80 and clones](Platform---TRS80))
 * **-startup=3 -lzxcpm** ([Sinclair ZX Spectrum](Platform---Sinclair-ZX-Spectrum))
 * **-lgfxzcn** ([Amstrad NC-100/NC-200](Platform---Amstrad-NC)) 480x64 graphics on ZCN
 * `-subtype=kaypro83` ([Kaypro 83](Platform---Kaypro)) 
