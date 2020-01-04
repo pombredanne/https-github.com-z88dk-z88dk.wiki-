@@ -70,7 +70,7 @@ Some hardware specific functions have been adapted to run on both native platorm
 * `-subtype=einstein` ([Tatung Einstein](Platform---Tatung-Einstein))
 * `-subtype=px4` ([Epson PX4 (HC-40)](Platform---Epson-px4))
 * `-subtype=microbee` ([MicroBEE](Platform---Microbee))
-* **-lnbcpm** ([Grundy NewBrain](Platform---Grundy-Newbrain))
+* **-lnewbrain_cpm** ([Grundy NewBrain](Platform---Grundy-Newbrain))
 * `-subtype=tiki100` ([Tiki-100 (formerly Kon-Tiki)](Platform---Tiki100))
 * **-ltrs80cpm**, **-lgfxtrs80**, **-lgfxeg2000** ([Tandy Radio Shack 80 and clones](Platform---TRS80))
 * **-startup=3 -lzxcpm** ([Sinclair ZX Spectrum](Platform---Sinclair-ZX-Spectrum))
