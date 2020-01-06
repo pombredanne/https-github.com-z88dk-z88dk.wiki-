@@ -23,7 +23,7 @@
 * [x] Hires graphics
 * [x] PSG sound
 * [ ] One bit sound
-* [x] Inkey driver
+* [x] Inkey driver (bit90)
 * [x] Hardware joystick
 * [ ] File I/O
 * [x] Interrupts
@@ -46,6 +46,10 @@ You can reduce RAM usage by making static data `const` where possible - this wil
 The Colecovision controller has a joystick as well as keypad with 12 keys. The joypad and two of the fire buttons are supported by the `joystick()` function with indices 1 and 2.
 
 The keypad is additionally supported by `joystick()` with indices 3 and 4. In this mode, the joypad is returned in the lower byte and the upper byte contains an ascii value relating to the key that has been pressed: '0' - '9', '#', '*', 'C', 'D'
+
+# Bit90 computer (`-subtype=bit90`)
+
+The Bit90 computer is effectively a Colecovision with a keyboard and a BASIC ROM. z88dk supports keyboard using the `-subtype=bit90` option to the Colecovision port. For the bit90 subtype, keyboard joysticks are available.
 
 # Links
 
