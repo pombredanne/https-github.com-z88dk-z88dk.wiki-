@@ -2,6 +2,28 @@
 
 ![](images/platform/galaksija.jpg)
 
+## Classic library support (`+gal`)
+
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font (`-subtype=galaxyp`)
+    * [x] UDG support (`-subtype=galaxyp`)
+    * [ ] Paper colour
+    * [ ] Ink colour
+    * [x] Inverse attribute (`-subtype=galaxyp`)
+    * [x] Bold attribute (`-subtype=galaxyp`)
+    * [x] Underline attribute (`-subtype=galaxyp`)
+* [x] Lores graphics
+* [x] Hires graphics (`-subtype=galaxyp`)
+* [x] PSG sound
+* [x] One bit sound
+* [x] Inkey driver
+* [x] Hardware joystick
+* [ ] File I/O
+* [ ] Interrupts
+* [ ] RS232
 
 # Quick start
 
