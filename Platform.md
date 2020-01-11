@@ -56,6 +56,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Philips P2000](Platform---Philips-P2000)| 40x24| Monochrome 40x24 | No | 78×72 | No | 1 bit| | 
 [Philips C7420](Platform---Philips-C7420)| 39x20| No | No | Not Yet | No | No | | 
 [Philips VG-5000](Platform----Philips-VG5000)| 40x24| 40x24| 40x24 | 80×72 | No | 1 bit| | 
+[PMD85](Platform---PMD85)| - | - | 48x32 | 288x256 | No | No | |
 [Rabbit Control Module](Platform---Rabbit) ||| | || |  |
 [Regnecentralen RC700](Platform-Regnecentralen-RC700)| 80x25| No | 80x25 | 80x25| No | No | CP/M base libraries| 
 [Robotron Z1013](Platform---Robotron-Z1013)| 32x32| 32x32| 32x32 - default|  64x64 | No | No | | 
