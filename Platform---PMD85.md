@@ -33,6 +33,10 @@
 
 A .ptp file will be generated suitable for loading into Mame or PMD85 emulator.
 
+# Keyboard and input
+
+An inkey keyboard handler is supplied supporting concurrent keypresses. At present the keyboard mappings may not be correct: in particular cursor keys.
+
 # PMD85 display
 
 ## Font support
@@ -56,4 +60,3 @@ The `textcolor()` operation maps the colour correctly for PMD85 models with the 
 # Links
 
 * PMD85 Emulator and docs: https://pmd85.borik.net/wiki/Emulator
-
