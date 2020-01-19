@@ -23,19 +23,18 @@ The [generic console](Classic-GenericConsole) console driver provides a uniform 
 
 Multiple maths libraries are available in the classic library. See [Classic Maths Libraries](https://github.com/z88dk/z88dk/wiki/Classic--Maths-Libraries).
 
-Three generic maths libraries are available with the classic library [_genmath_](https://github.com/z88dk/z88dk/tree/master/libsrc/math/genmath), [_math48_](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float) and [_bbcmath_][https://github.com/z88dk/z88dk/tree/master/libsrc/math/bbcmath]
+Three generic maths libraries are available with the classic library [_genmath_](https://github.com/z88dk/z88dk/tree/master/libsrc/math/genmath), [_math48_](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float) and [_bbcmath_](https://github.com/z88dk/z88dk/tree/master/libsrc/math/bbcmath).
 
 _genmath_ and _math48_ perform roughly identically and have the same amount of precision (40 bit mantissa, 8 bit exponent), however the register usage of the libraries is different. _genmath_ uses the `ix` register and in particular the undocumented opcodes that use `ixl` and `ixh`. As a result, it cannot be used on either
 Rabbit or Z180 processors. _math48_ on the other hand makes extensive use of the alternate register set.
 
-_bbcmath__ provides a 32 bit mantissa, 8 bit exponent and is generally faster than the 40bit libraries. It does however make extensive use of the alternate register set and may not be suitable for all targets.
+_bbcmath_ provides a 32 bit mantissa, 8 bit exponent and is generally faster than the 40bit mantissa libraries. It does however make extensive use of the alternate register set and may not be suitable for all targets.
 
-The ZX Spectrum, ZX81, CPC and z88 platforms additionally provide a maths library that utilises the floating point calculator within their ROMs. These provide
-a lower degree of precision (a 32 bit mantissa), the trade-off being that they use less of your application memory.
+The ZX Spectrum, ZX81, CPC and z88 platforms additionally provide a maths library that utilises the floating point code within their ROMs. These provide a lower degree of precision (a 32 bit mantissa), the trade-off being that they use less of your application memory.
 
-The Microsoft 32 bit and 64 bit maths libraries are supported for machines that run Microsoft BASIC and the appropriate entry points discovered.
+The Microsoft 32 bit and 64 bit floating point maths libraries are supported for machines that run Microsoft BASIC and the appropriate entry points have been discovered.
 
-The [_math32_](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32) math library provides a 32 bit float format that is mostly compliant with IEEE-754 32 bit floating point. This is the native format for _zsdcc_ floating point. The library supports both z180 and ZX Spectrum Next hardware multiply instructions, as well as supporting z80 platforms using software multiply.
+The [_math32_](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32) floating point math library provides a 32 bit format that is mostly compliant with IEEE-754 32 bit floating point. This is the native format for _zsdcc_ floating point. The library supports both z180 and ZX Spectrum Next hardware multiply instructions, as well as supporting z80 platforms using software multiply.
 
 **SDCC compatibility:** Only `-lmath48` and `-lmath32` are supported for _zsdcc_ compilations.
 
@@ -46,10 +45,7 @@ Simplified [regex](https://github.com/z88dk/z88dk/tree/master/include/regex.h) s
 
 ## Memory Allocation
 
-The classic library provides several memory allocators, the easiest way to get started is to use the _auto malloc_ feature of the library. 
-In this mode the crt automatically sets aside a set amount memory between the end of the program and (usually) the stack pointer 
-for the heap. There are a number of presets available: `-DAMALLOC` will reserve 75% of the free memory, `-DAMALLOC2` will reserve
-50% of the free memory and `-DAMALLOC1` will reserve 25%. 
+The classic library provides several memory allocators, the easiest way to get started is to use the _auto malloc_ feature of the library. In this mode the crt automatically sets aside a set amount memory between the end of the program and (usually) the stack pointer for the heap. There are a number of presets available: `-DAMALLOC` will reserve 75% of the free memory, `-DAMALLOC2` will reserve 50% of the free memory and `-DAMALLOC1` will reserve 25%.
 
 The classic library additionally provides [named heap](Classic-allocation) and [block](Classic-allocation) allocators.
 
