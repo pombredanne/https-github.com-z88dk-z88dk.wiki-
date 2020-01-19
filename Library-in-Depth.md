@@ -1,4 +1,4 @@
-==== Creating a Target ====
+## Creating a Target
 
 There are two C libraries in z88dk that exist independently of each other.  This topic is concerned with creating a new target for the new C library only.
 
@@ -6,13 +6,13 @@ To make changes to an existing target, you can simply add a new CRT.  Adding a n
 
 If your target is completely new you can follow the steps below for creating a new target.  In addition to new CRTs, a new target defines what is included in the C library, can define architecture dependent functions and header files, and can define its own set of device drivers.
 
-=== Adding CRTs to an Existing Target ===
+### Adding CRTs to an Existing Target
 
 This [[http://www.z88dk.org/forum/viewtopic.php?pid=13383#p13383|forum posting]] contains details for adding a CRT to the simple embedded target and can serve as instructions until the topic is properly filled out.
 
-=== Creating a New Target ===
+### Creating a New Target
 
-== 1. ZCC Configuration File ==
+#### 1. ZCC Configuration File
 
 As with all grand projects, the first step in creating a target is settling on a name.  The name will appear in the compile line "**zcc +yourname .... test.c -o test**" so keeping it short will save a little typing but it must be long enough that it is descriptive of your target and that it won't collide with names for already existing targets in z88dk.  
 
@@ -21,7 +21,7 @@ The list of current targets can be found in [[http://z88dk.cvs.sourceforge.net/v
 To make zcc aware of the target a new file "temp.cfg" must be added to this directory:
 
 **z88dk/lib/config/temp.cfg**
-<code>
+```
 #
 # Target configuration file for z88dk
 #
@@ -37,7 +37,7 @@ CLIB     default -ltemp_clib -lndos
 CLIB     new -D__SCCZ80 -Ca-D__SCCZ80 -Cl-D__SCCZ80 -nostdlib -IDESTDIR/include/_DEVELOPMENT/sccz80 -Ca-IDESTDIR/libsrc/_DEVELOPMENT/target/temp -ltemp -LDESTDIR/libsrc/_DEVELOPMENT/lib/sccz80 -Cl-IDESTDIR/libsrc/_DEVELOPMENT/target/temp -crt0=DESTDIR/libsrc/_DEVELOPMENT/target/temp/temp_crt
 CLIB     sdcc_ix -compiler=sdcc -D__SDCC -D__SDCC_IX -Ca-D__SDCC -Ca-D__SDCC_IX -Cl-D__SDCC -Cl-D__SDCC_IX -nostdlib -IDESTDIR/include/_DEVELOPMENT/sdcc -Ca-IDESTDIR/libsrc/_DEVELOPMENT/target/temp -ltemp -LDESTDIR/libsrc/_DEVELOPMENT/lib/sdcc_ix -Cl-IDESTDIR/libsrc/_DEVELOPMENT/target/temp -crt0=DESTDIR/libsrc/_DEVELOPMENT/target/temp/temp_crt
 CLIB     sdcc_iy -compiler=sdcc --reserve-regs-iy -D__SDCC -D__SDCC_IY -Ca-D__SDCC -Ca-D__SDCC_IY -Cl-D__SDCC -Cl-D__SDCC_IY -nostdlib -IDESTDIR/include/_DEVELOPMENT/sdcc -Ca-IDESTDIR/libsrc/_DEVELOPMENT/target/temp -ltemp -LDESTDIR/libsrc/_DEVELOPMENT/lib/sdcc_iy -Cl-IDESTDIR/libsrc/_DEVELOPMENT/target/temp -crt0=DESTDIR/libsrc/_DEVELOPMENT/target/temp/temp_crt
-</code>
+```
 
   * **CRT0** holds the name of the crt file used by the classic C library.  This is ignored when the new C library is used.
   * **OPTIONS** lists the default compile line options.  These can be overridden and augmented by the following CLIBs.
@@ -47,7 +47,7 @@ Together, **OPTIONS** and **CLIB** define a few constants which can be tested in
 
 In the file above, the target name used is "temp" so for your own target, you'll want to replace all instances of "temp" and "TEMP" with your target's name.
 
-== 2. Create the Target Directory Structure and Add Initial Contents ==
+#### 2. Create the Target Directory Structure and Add Initial Contents
 
 All information concerning a target for the new C library is located in [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/|z88dk/libsrc/_DEVELOPMENT/target]].  Unfortunately the CVS view of the repository on the internet tends to show dead directories mixed with current ones and this is something that will have to be coped with.  The list of currently supported targets are **cpm**, **embedded** and **zx** and you can see that each of these have their own directory here.  **m** is a pseudo-target used to compile the floating point library.
 
@@ -75,7 +75,7 @@ Here is a brief description of each file and subdirectory:
 | f | temp_crt.asm  | defines which crt to use at program compile time  |
 | f | temp_crt.opt  | must include temp_crt.asm  |
 
-== 3. Determine the Contents of the Target's C Library ==
+#### 3. Determine the Contents of the Target's C Library
 
 When the target's C library is built, the list of files assembled into the library are read from the target's library subdirectory.  In the present example that is **z88dk/libsrc/_DEVELOPMENT/target/temp/library**.  Three libraries are built corresponding to the three list files found here:  sccz80, sdcc_ix and sdcc_iy.  The sccz80 library is used when sccz80 is chosen as compiler.  The sdcc_ix and sdcc_iy libraries are chosen when sdcc is the compiler and are selected between by either "-clib=sdcc_ix" or "-clib=sdcc_iy" on the compile line.  The difference between the two is which index register the C library uses.  "sdcc_ix" corresponds to the library using ix and "sdcc_iy" corresponds to the library using iy.  It's always preferable to use the "sdcc_iy" version of the library because this gives sdcc sole use of ix for its frame pointer while the library uses iy.  If "sdcc_ix" is selected, sdcc and the library must share ix which means the library must insert extra code to preserve the ix register when it is used.  This means the "sdcc_iy" compile will be smaller.  The choice is present because some targets reserve one of the index registers for themselves.
 
@@ -112,7 +112,7 @@ While a large portion of the library will use an 8080 subset of the instruction 
 Next it's time to list what is in your target's C library.  Three files have already been provided in **z88dk/libsrc/_DEVELOPMENT/target/temp/library** that include all of the C library minus target-specific code.  For example, the file "temp_sccz80.lst" contains this:
 
 **library/temp_sccz80.lst**
-<code>
+```
 @adt/adt_sccz80.lst
 @alloc/alloc_sccz80.lst
 @compress/compress_sccz80.lst
@@ -136,19 +136,19 @@ Next it's time to list what is in your target's C library.  Three files have alr
 @string/string_sccz80.lst
 @threads/threads_sccz80.lst
 @z80/z80_sccz80.lst
-</code>
+```
 
 The paths are relative to the source code base directory **z88dk/libsrc/_DEVELOPMENT**.  The "@" symbol means the indicated file is a list file rather than an asm file.  You can modify these files to exclude portions of the library as you like or to be more choosy about which functions make it into the library by replacing list files with a more specific list of functions.  But unless your target is restricted by being unable to use certain registers or you want to purposely exclude some functionality, there is no reason to restrict what goes into the target's C library.  Targets without bitmapped displays may want to exclude the font related things and I suppose this will reduce library size and library build time.
 
 There are some functions that will not work without further defines or code supplied for the target.  These include functions in **font/fzx** (a single character putchar must be written to complete support for proportional fonts), **input** (the C library defines standard functions for direct access to keyboards / joysticks / mice hardware but this must be written for each target), **sound** (targets must define how the state of a 1-bit speaker is toggled) and **temp/sp1** (bitmap software sprite engine requires much customization to suit display resolution).  If you would like to add these features you can ask how in the [[http://www.z88dk.org/forum/forums.php|z88dk forums]].
 
-== 4. Set the Default Library Configuration ==
+#### 4. Set the Default Library Configuration
 
 The C library allows the user to customize it for speed and size.  These customizations are specified in the target's **clib_cfg.asm** file located in **z88dk/libsrc/_DEVELOPMENT/target/temp**.  The selections already supplied are typical but if you would like to change them you can.  In particular, printf has the float converters %aefg disabled so that compiles don't involve the float library.  When they are enabled, any use of printf drags in the float library and the compile line must include "-lm".  scanf does not yet support %aefg but stdlib does include atof() and strtod() which can be used for ascii -> float conversion.  I'd suggest using %[ to scan a float string and then convert that using one of these functions.
 
 Keep the **clib_cfg.bak** file consistent as it serves as backup if the user makes his own customizations later.
 
-== 5. Set the Target Library Configuration ==
+#### 5. Set the Target Library Configuration
 
 The target library configuration serves the same function as the regular library configuration but it applies to target-specific code only.  The target-specific customizations are found in **clib_target_cfg.asm**.  The file provided defines two things that all targets should define:  the z80 clock rate in Hz and some bit flags that define whether the z80 is nmos or cmos.  The latter is important because the nmos z80 has a bug that makes the determination of interrupt state (enabled or disabled) more difficult.  The library can be compiled to use the simpler cmos code or the more complicated nmos code as needed.  If your code must run on all manner of z80s, choose nmos.
 
@@ -156,31 +156,32 @@ If you will be writing target-specific library code, this is the place to put an
 
 Keep the **clib_target_cfg.bak** file consistent as it serves as backup if the user makes his own customizations later.
 
-== 6. Build the Z80 Library ==
+#### 6. Build the Z80 Library
 
 The z80 libraries are built from **z88dk/libsrc/_DEVELOPMENT** using either **Winmake** (windows) or the **Makefile** (non-windows).
 
 First add the new "temp" target to Winmake by changing this line:
 
 **z88dk/libsrc/_DEVELOPMENT/Winmake.bat**
-<code>
+
+```
 set alltargets= embedded cpm m temp zx 
-</code>
+```
 
 This list of targets must have a space before the first target name and a space after the last target name.  Because this is a .bat file, Windows makes it difficult to edit it.  To edit, right click on "Winmake.bat" and choose "Send To" from the context menu.  Then select a text editor from the options.
 
 Next add the new "temp" target to the Makefile by changing this line:
 
 **z88dk/libsrc/_DEVELOPMENT/Makefile**
-<code>
+```
 TARGET ?= embedded zx m cpm temp
-</code>
+```
 
 Let's build the target library.  From **z88dk/libsrc/_DEVELOPMENT**, run "Winmake temp" (windows) or "make TARGET=temp" (non-windows).
 
 Three libraries should be built without error and they should appear as **temp.lib** in **z88dk/libsrc/_DEVELOPMENT/lib/sccz80**, **lib/sdcc_ix** and **lib/sdcc_iy**.  It may take 5-10 minutes to finish.
 
-== 7. Create the CRT(s) ==
+#### 7. Create the CRT(s)
 
 **CRT** stands for C Runtime.  It is a short bit of code that sets up the execution environment before main() is called.  It will take care of things like initializing the heap, parsing the command line, setting the stack pointer's initial value and, on program exit, running the exit stack and preparing to return to the host.
 
@@ -192,9 +193,9 @@ In z88dk, two other entities help define the environment.
 
 Combinations of CRT, CRT Options and memory map are summarized by a single numerical **startup** value.  The user will specify a startup in the compile line:
 
-<code>
-zcc +embedded -vn -startup=0 -SO3 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test
-</code>
+```
+zcc +z80 -vn -startup=0 -SO3 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test
+```
 
 If a startup is not specified, you will be providing a default value.  This startup value will be used in a switch to enable the relevant CRT, CRT Options and memory map.
 
@@ -202,16 +203,12 @@ Implied here is that targets can have any number of CRTs defined for them.  In t
 
 CRTs are actually defined as m4 macros.  As will be seen in the device driver section, this makes it easy to create stdin, stdout, and stderr.  So the m4 macro is what is edited by people but the expanded macro -- an associated .asm file -- is what is used in the compile as the active crt.  This means all CRTs come in pairs:  an .m4 created by a person and an .asm which is the m4 expansion of that file.  These pairs are named and numbered as in "temp_crt_0.m4" and "temp_crt_0.asm", here corresponding to CRT #0 (recall "temp" is the name of the target).  Some of the targets supplied by z88dk actually have one m4 file associated with several .asm files but we've since figured out this is a maintenance problem so having a 1:1 relationship between the two is highly recommended.
 
-To build CRTs [[#m4|m4 must be installed]].  m4 is the common macro processor found in Unix and Linux so only Windows users are likely to have to install it separately.
+To build CRTs m4 must be installed.  m4 is the common macro processor found in Unix and Linux so only Windows users are likely to have to install it separately.
 
 CRTs are defined in the target's startup directory, in this case **z88dk/libsrc/_DEVELOPMENT/target/temp/startup**.  A simple CRT was included in the bundle of files used to initially populate the target.  You can edit this file as it is discussed below to create your target's first CRT.
 
-\\ 
-----
-\\ 
-
 **z88dk/libsrc/_DEVELOPMENT/target/temp/startup/temp_crt_0.m4**
-<code>
+```
 dnl############################################################
 dnl##           TEMP_CRT_0.M4 - EXAMPLE TARGET               ##
 dnl############################################################
@@ -229,19 +226,19 @@ dnl############################################################
 include "../crt_defaults.inc"
 include "crt_target_defaults.inc"
 include "../crt_rules.inc"
-</code>
+```
 
 This is where the final state of the **CRT options** is determined.  The CRT options are a list of defined constants that indicate options to the C library and the CRT.  It is the responsibility of the CRT to implement some of these options, as appropriate, for the target.  All options were briefly described earlier under [[#crt_configuration|crt configuration]] and it will be mentioned here where CRT options will apply.
 
 First the default settings of all CRT options are included.  Then the settings overridden by the target are included.  Finally, rules are executed to determine the final state of those options.  The rules are simple:  they give highest priority to pragmas in the C source, next priority to the target overrides and lowest priority to the default settings.
 
-<code>
+```
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; SET UP MEMORY MODEL ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 include "memory_model.inc"
-</code>
+```
 
 The memory map is defined here by communicating to the linker where the various sections are assigned in memory.
 
@@ -254,21 +251,21 @@ Applicable CRT options consumed by the memory model:
 
 If you make your own memory maps it will be up to you to apply these options there.
 
-<code>
+```
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; GLOBAL SYMBOLS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 include "../clib_constants.inc"
 include "clib_target_constants.inc"
-</code>
+```
 
 Defines various global constants required by the C library.
 
   * "clib_constants" correspond to general library defines like error numbers and ioctls.
   * "clib_target_constants" correspond to target-specific defines like device error numbers.
 
-<code>
+```
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; INSTANTIATE DRIVERS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -278,13 +275,13 @@ Defines various global constants required by the C library.
 
 include(../../clib_instantiate_begin.m4)
 include(../../clib_instantiate_end.m4)
-</code>
+```
 
 Device drivers are assigned to FILEs and file descriptors between the "begin" and "end" macros.  This target does not have any device drivers yet so nothing is instantiated here.
 
 **The first actual code begins here:**
 
-<code>
+```
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; STARTUP ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -298,16 +295,16 @@ EXTERN _main
 __Start:
 
    nop
-</code>
+```
 
 The "nop" is in place to control the name of the output file.  The final output is one or more binaries corresponding to non-empty sections with independent ORG addresses.  The binary filenames are created from the output filename with the section name concatenated.  For example, if the output filename is "test" and the first non-empty section is "CODE" then one of the binaries will be named "test_CODE.bin".
 
 In the CRT written here, it is possible that no code will be generated until after the "code_crt_main" section below.  This means the output filename may be "test_code_crt_main.bin" when it's expected the filename will be "test_CODE.bin".  The "nop" is guaranteeing that the CODE section will not be empty.  If you add code to this section you can eliminate the "nop".
 
-<code>
+```
    ; set stack address
    ; (optional)
-</code>
+```
 
 Applicable CRT options:
 
@@ -317,10 +314,10 @@ Some hosts will set the stack pointer before starting a machine code program so 
 
 See lines [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/zx/startup/zx_crt_ram.m4?revision=1.7&view=markup|110-116 of this CRT]] for an example.
 
-<code>
+```
    ; parse command line
    ; (optional)
-</code>
+```
 
 Applicable CRT options:
 
@@ -336,7 +333,7 @@ The library supplies two functions to help parse command lines:
 
 Both these functions stop parsing when a file re-director ("<" or ">") is encountered.  In the future this part of the command line will be interpretted to redirect i/o to files.  Neither function currently groups quoted strings into a single argument.  This will also change in a future update.
 
-<code>
+```
    ; initialize data section
 
    include "../clib_init_data.inc"
@@ -344,17 +341,17 @@ Both these functions stop parsing when a file re-director ("<" or ">") is encoun
    ; initialize bss section
 
    include "../clib_init_bss.inc"
-</code>
+```
 
 The C library will zero the BSS section and initialize the DATA section here.  If the ram model is active, neither initialization will take place.
 
-<code>
+```
 SECTION code_crt_init          ; user and library initialization
-</code>
+```
 
 This is a point where the library or user can insert initialization code.  For example, if a heap is created the library will insert heap initialization code here.
 
-<code>
+```
 SECTION code_crt_main
 
    ; call user program
@@ -369,11 +366,11 @@ SECTION code_crt_main
       jp asm_exit              ; exit function jumps to __Exit
    
    ENDIF
-</code>
+```
 
 main() is called and if exit() functions can be registered, they are executed.
 
-<code>
+```
 __Exit:
 
    ; abort(), exit(), quick_exit() arrive here and can be called from anywhere in the program
@@ -382,17 +379,16 @@ __Exit:
    ; hl = return status
 
    push hl
-</code>
-
+```
 'hl' holds the return value.  You can choose to save it or throw it away.  This code saves it.
 
-<code>
+```
 SECTION code_crt_exit          ; user and library cleanup
-</code>
+```
 
 This is a point where the library or use can insert clean-up code.
 
-<code>
+```
 SECTION code_crt_return
 
    ; close files
@@ -400,15 +396,15 @@ SECTION code_crt_return
    include "../clib_close.inc"
 
    pop hl                      ; hl = return status
-</code>
+```
 
 The C library closes open files and then the return value is recovered.
 
-<code>
+```
    ; exit program
 
    jr ASMPC                    ; infinite loop (ASMPC means current address)
-</code>
+```
 
 At this point you must decided what to do about a program exit.  In this example, an infinite loop is entered.
 
@@ -422,7 +418,7 @@ If the program is to be restarted, keep in mind that the ram model does not init
 
 On program exit, consider what should happen to interrupts.
 
-<code>
+```
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; RUNTIME VARS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -431,31 +427,31 @@ SECTION BSS_UNINITIALIZED
 
 ; place any uninitialized data here (eg saved stack pointer)
 ; bss and data section initialization will not touch it
-</code>
+```
 
 Data defined in section "BSS_UNINITIALIZED" will not be zeroed by the CRT's BSS initialization code and it will persist across program restarts.
 
-<code>
+```
 include "../clib_variables.inc"
 include "clib_target_variables.inc"
-</code>
+```
 
 Definitions of global library data that occupies memory space.
 
   * "clib_variables.inc" adds general global variables including the heap, exit stacks and thread id.
   * "clib_target_variables.inc" adds global variables for target-specific library code.
 
-<code>
+```
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; CLIB STUBS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 include "../clib_stubs.inc"
-</code>
+```
 
 Labels defined for incomplete portions of the library that need to be present for successful compiles.
 
-=== NOTE FOR CRTS INTENDED FOR ADDRESS 0x0000 ===
+### NOTE FOR CRTS INTENDED FOR ADDRESS 0x0000
 
 The example CRT was written assuming an ORG address that is not zero.  If the ORG address will be zero, the CRT must fill in the z80 restarts and the nmi entry point at 0x66.
 
@@ -468,17 +464,13 @@ Further discussion of these CRT options can be found [[#crt_configuration|here]]
 
 The embedded target has a [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/startup/embedded_crt_rom.m4?revision=1.11&view=markup|CRT which will generate the z80 restarts]] if the ORG address is 0.  The CRT is written to apply to both 0 ORG and non-zero ORG so there is conditional code present for the 0 ORG case.  You can see how the restarts were implemented by examining that code.
 
-\\ 
-----
-\\ 
-
 Congratulations on completing your first CRT.  Now it's time to **generate the .asm file that will be used in compiles**:
 
 From **z88dk/libsrc/_DEVELOPMENT/target/temp/startup**:
 
 m4 temp_crt_0.m4 > temp_crt_0.asm
 
-== 8. Define the Default CRT Options ==
+#### 8. Define the Default CRT Options
 
 The CRT options overridden by the target during compilation are defined in **z88dk/libsrc/_DEVELOPMENT/target/temp/crt_target_defaults.inc**.  Although only CRT options that the target actually overrides need to be listed here, in reality all the CRT options are listed here in order to document them for each compile.
 
@@ -486,7 +478,7 @@ As for CRTs, there can be any number of different CRT options settings in this f
 
 The example creates a single CRT option selection for "%%__CRTDEF = 0%%" that will be used with the CRT created in the last section.  You can make changes to these options as required for your target.  The options are more completely described in the [[#crt_configuration|crt configuration]] topic.
 
-<code>
+```
 IF __CRTDEF = 0
 
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -525,7 +517,7 @@ IF __CRTDEF = 0
    defc TAR__clib_open_max             = 0
 
 ENDIF
-</code>
+```
 
 For a minimum binary size you will also want to set **%%TAR__clib_exit_stack_size = 0%%** (no functions can be registered with atexit()), **%%TAR__clib_malloc_heap_size = 0%%** (the heap will not be created) and **%%TAR__clib_stdio_heap_size = 0%%** (no files can be opened; for a target without drivers this affects whether [[http://www.gnu.org/software/libc/manual/html_node/String-Streams.html|memstreams]] can be created).
 
@@ -537,7 +529,7 @@ These options can, of course, be overridden by pragmas inserted by the user into
 
 Keep the **crt_target_defaults.bak** file consistent as it serves as backup if the user makes his own customizations later.
 
-== 9. Define the Default Memory Map ==
+#### 9. Define the Default Memory Map
 
 The memory map instructs the linker where to place code and data in memory.  z80asm defines containers called "sections" to which code and data can be added from any source file in the project.  In the linking stage these sections are sequenced according to the memory map and then one or more binaries are produced as output, depending on whether the memory map creates disjoint regions in memory.  There is more discussion of this in the [[#mixing_c_and_assembly_language|mixing C and assembly language]] topic.
 
@@ -546,7 +538,7 @@ The C library defines sections for each module in the library.  For example stri
 Small talk aside, as with CRTs and CRT options, many memory maps can be defined and these are identified by the label "%%__MMAP%%".  A default memory map is defined by the C library and this memory map is what is used by this example target:
 
 **z88dk/libsrc/_DEVELOPMENT/target/temp/memory_model.inc**
-<code>
+```
 IF __MMAP = 0
 
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -558,7 +550,7 @@ IF __MMAP = 0
    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
    
 ENDIF
-</code>
+```
 
 The include actually defining the memory map is found one directory above:
 [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/crt_memory_model.inc?content-type=text%2Fplain|z88dk/libsrc/_DEVELOPMENT/target/crt_memory_model.inc]]
@@ -571,18 +563,18 @@ It's unlikely you will have to create your own memory map but you can by adding 
 
 Keep the **crt_memory_model.bak** file consistent as it serves as backup if the user makes his own customizations later.
 
-== 10. Startup ==
+#### 10. Startup
 
 At compile time, the runtime environment is initialized and defined by the **CRT**, the **CRT options** and the **memory map**.  These three parameters are summarized by a single **startup** value on the compile line.
 
-<code>
+```
 zcc +embedded -vn -startup=0 -SO3 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test
-</code>
+```
 
 In this example the user has selected **startup #0**, the meaning of which is defined in the master crt file.
 
 **z88dk/libsrc/_DEVELOPMENT/target/temp/temp_crt.asm**
-<code>
+```
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; SELECT CRT0 FROM -STARTUP=N COMMANDLINE OPTION ;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -631,17 +623,17 @@ IF startup = 0
    INCLUDE "startup/temp_crt_0.asm"
 
 ENDIF
-</code>
+```
 
 The include of "zcc_opt.def" pulls in any pragmas defined in the C source.  A default startup value is defined if the user didn't specify one and then, for **startup=0**, which **CRT**, **CRT options** and **memory map** to use are defined.  Modify this as you like or add more startup cases as needed.
 
 The file **temp_crt.opt** in the same directory must include **temp_crt.asm**.
 
-=== THE TARGET IS NOW FUNCTIONAL ===
+### THE TARGET IS NOW FUNCTIONAL
 
 Try a simple compile:
 
-<code>
+```
 #include <stdio.h>
 
 unsigned char buffer[100];
@@ -650,23 +642,23 @@ main()
 {
    sprintf(buffer, "Hello World!\n")
 }
-</code>
-
+```
+```
 zcc +temp -vn -clib=new test.c -o test
-
+```
 The output will be one or more binaries depending on the options you defined but for a ram model compile, there will be one binary file generated "test_CODE.bin".
 
 To use printf and scanf, device drivers will have to be written and instantiated on stdin and stdout.  See the **Device Drivers** section below.
 
-== 11. Optionally Add Target-Specific Library Code to Your Target ==
+#### 11. Optionally Add Target-Specific Library Code to Your Target
 
-== 12. Cooperating with Third Party Libraries ==
+#### 12. Cooperating with Third Party Libraries
 
-== 13. Creating a ROM Resident Monitor, Operating System or Shell ==
+#### 13. Creating a ROM Resident Monitor, Operating System or Shell
 
-== 14. Bankswitched Memory ==
+#### 14. Bankswitched Memory
 
-==== Device Drivers ====
+## Device Drivers
 
 Device drivers are functions assigned to file descriptors that implement a small set of device-independent stdio messages for communicating with some sort of i/o device.  By implementing that set of messages, the stdio library will be able to perform i/o using the device.  For targets, these drivers can be instantiated on stdin, stdout and/or stderr in the CRT to allow printf and scanf to function normally.  You can also invent other streams at driver instantiation time in the CRT.  For example, the cp/m target defines additional streams (stdpun, stdrdr, stdlst) that are connected to devices defined by cp/m.  You could also define multiple terminal windows and assign different streams to each so that you could print output into two or more independent windows on screen.  But we are getting a little bit ahead of ourselves.
 
@@ -693,7 +685,7 @@ We've solved these problems by making the drivers object oriented.
 
 Deliberately, stdio is not the only means to read/write to the screen or devices inside the library.  More direct and low level functions are always present so that the user has the choice to use something simpler if speed or program size is a concern.  If you are the originator of a target, it is up to you to supply this functionality and normally the drivers would be implemented in terms of these low level functions themselves. The stdio implementation in z88dk is written in assembly language so it is smaller than those available from other z80 C compilers but 64k is a restrictive environment for C programs nevertheless.  For the cp/m target the option is always there to do i/o directly through bdos.  Similarly for the zx target, low level functions are available for output to the screen or for reading keys directly from the hardware.  You can bypass device drivers entirely and you can still use stdio by confining your program to the sprintf/sscanf families or [[http://www.gnu.org/software/libc/manual/html_node/String-Streams.html|memstreams]] and doing i/o directly from buffers in memory.  However things are more convenient and fun to program with a proper stdio implementation present, especially if it's easily affordable in the user program and target.
 
-=== Directory Structure ===
+### Directory Structure
 
 The target's device drivers are located in **z88dk/libsrc/_DEVELOPMENT/target/TARGETNAME/driver**.
 
@@ -726,7 +718,7 @@ Once the device driver is ready, the target's libraries will need to be rebuilt 
 
 The [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/cpm/|cp/m target's driver directory]] can be used as a model.
 
-=== The Raw Device Driver ===
+### The Raw Device Driver
 
 On entry to a device driver, IX points at a file descriptor data structure (aka FDSTRUCT).  This data structure contains fields used by the library at the top but it can be extended by any number of bytes by your driver.  What is stored there is up to you.
 
@@ -805,7 +797,7 @@ While writing device drivers or any other code with z88dk, it can be very helpfu
 
 Given the above, a driver might be structured like this:
 
-<code>
+```
 SECTION code_driver
 SECTION code_driver_character_input
 
@@ -843,7 +835,7 @@ character_00_input:
    jp z, error_znc                           ;; do nothing and report no error
    
    jp error_enotsup_zc                       ;; hl = 0 puts FILE stream in error state
-</code>
+```
 
 Drivers are allowed to change any registers except ix and iy unless otherwise documented.
 
@@ -851,41 +843,35 @@ The above is an abstract base class driver implemented in the library.  The enti
 
 If your driver properly ignores messages that do not apply and implements messages from the list above that do apply, your driver is finished.  This is the .asm file mentioned in the last section.  The message functions are placed in the driver's subdirectory and the list file will list all of the driver's source files.  The last piece is the .m4 macro that will allow the driver to be instantiated as a file in the CRT.  This is discussed in the **Driver Instantiation** topic below.
 
-=== The Character Device Driver ===
+### The Character Device Driver
 
 The library supplies code to implement character device drivers.  Character device drivers are intended for performing i/o on devices like serial or parallel ports that generate or consume a stream of individual characters.  Since the library's character driver base classes change stdio's multiple character messages to single character messages, it is likely a raw device driver will have higher throughput if it is able to read or write multiple bytes at a time.  On the other hand, with the aid of the library base classes, your driver will automatically (and optionally) do CRLF conversions and can be written in as little as a dozen lines of code.
 
 There are three character device drivers your driver can inherit from:  **character_00_input**, **character_00_input_bin**, and **character_00_output**.  If your driver will do both input and output on the same file descriptor, you can inherit from both an input driver and an output driver.  The difference between **character_00_input** and **character_00_input_bin** is that the former can have an option set that will do CRLF conversion whereas the latter cannot.  The latter driver corresponds to opening files in binary "b" mode.  On the output side, **character_00_output** can also be configured to do CRLF conversion but since the code for binary mode is not impacted by additional code for CRLF, a separate binary driver is unnecessary.
 
-== Driver Inheritance -- How it Works ==
+#### Driver Inheritance -- How it Works
 
 
 
 
 
 
+### The Terminal Device Driver
 
+### The Disk Device Driver
 
+### IOCTLs for Drivers
 
+### Driver Instantiation in the CRT
 
+## Interrupts
 
+## I/O
 
-=== The Terminal Device Driver ===
+## C++ STL Containers
 
-=== The Disk Device Driver ===
+## Integer Math
 
-=== IOCTLs for Drivers ===
+## Floating Point Math
 
-=== Driver Instantiation in the CRT ===
-
-==== Interrupts ====
-
-==== I/O ====
-
-==== C++ STL Containers ====
-
-==== Integer Math ====
-
-==== Floating Point Math ====
-
-==== Memory Allocation ====
+## Memory Allocation
