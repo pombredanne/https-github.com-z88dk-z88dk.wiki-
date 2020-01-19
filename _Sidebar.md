@@ -20,9 +20,9 @@
 
 * [Introduction](https://github.com/z88dk/z88dk/wiki/Introduction)
 * [Library Configuration](Configuration)
-  * [clib_cfg.asm](Configuration)
-  * [clib_target_cfg.asm](Configuration)
-  * [Rebuilding the Library](Configuration)
+  * [clib_cfg.asm](Configuration#clib_cfgasm)
+  * [clib_target_cfg.asm](Configuration#clib_target_cfgasm)
+  * [Rebuilding the Library](Configuration#rebuilding-the-library)
 * [CRT](CRT)
   * [embedded_crt.asm](CRT)
   * [crt configuration](CRT)
