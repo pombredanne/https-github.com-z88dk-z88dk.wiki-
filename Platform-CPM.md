@@ -15,10 +15,11 @@ ZXCC is trivial to extend, and you can easily permit access to serial ports, hos
 
 The ndos.lib library is useful to save memory when file support is not necessary. 
 
-Without specifying a ''-o'' option, a file called ''a.com'' is produced, this can be run with zxcc as follows:
+Without specifying a `-o` option, a file called `a.com` is produced, this can be run with `zxcc` as follows:
 
 	zxcc a.com
 
+The new library also has a CP/M target, which can be reached by supplying `-subtype=new` for sccz80, or `-subtype=sdcc_ix`, or `-subtype=sdcc_iy` for sdcc compiler, respectively.
 
 ## Creating a disc
 
