@@ -19,7 +19,6 @@ Without specifying a `-o` option, a file called `a.com` is produced, this can be
 
 	zxcc a.com
 
-The new library also has a CP/M target, which can be reached by supplying `-subtype=new` for sccz80, or `-subtype=sdcc_ix`, or `-subtype=sdcc_iy` for sdcc compiler, respectively.
 
 ## Creating a disc
 
@@ -98,6 +97,8 @@ Additionally, -create-app will create discs for the following machines:
 * `-subtype=bic` (A5105/BIC)
 * `-subtype=lynx` ([Camputers Lynx](Platform---Camputers-Lynx))
 * `-subtype=x1` ([Sharp X1](Platform---Sharp-X1))
+
+The new library also has a CP/M target, which can be reached by supplying `-subtype=new` for sccz80, or `-subtype=sdcc_ix`, or `-subtype=sdcc_iy` for sdcc compiler, respectively.
 
 ## Program boot protection
 
