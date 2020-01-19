@@ -1,18 +1,16 @@
 Each target has a library configuration file that selects among various options when the target's library is built.  The defaults are suitable for most projects but if you would like to experiment with generating smaller or faster code the options can be edited and the library re-built.  Because the config file belongs to the target, only that target's library is affected.
 
-All information concerning a particular port is found in [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/|z88dk/libsrc/_DEVELOPMENT/target]].  There are currently three targets implemented:  cpm, embedded and zx (zx spectrum).  We will use the "embedded" target for discussion purposes since it's a generic target suitable for any z80 machine.
+All information concerning a particular port is found in [~/libsrc/_DEVELOPMENT/target](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/target).   It directly supports eleven targets currently ([cpm](https://github.com/z88dk/z88dk/wiki/Platform---CPM), [embedded](https://www.z88dk.org/wiki/doku.php?id=libnew:target_embedded), [hbios](https://github.com/wwarthen/RomWBW/blob/master/Doc/RomWBW%20Architecture.pdf), [rc2014](https://rc2014.co.uk/), [scz180](https://smallcomputercentral.wordpress.com/sc130-z180-motherboard/), [sega master system](https://en.wikipedia.org/wiki/Master_System), [vgl](https://hackaday.io/project/166921-v-tech-genius-leader-precomputer-hacking), [yaz180](https://github.com/feilipu/yaz180), z180, [zx spectrum](https://en.wikipedia.org/wiki/ZX_Spectrum), and [zx spectrum next](https://www.specnext.com/)).  We will use the "z80" target for discussion purposes since it's a generic target suitable for any z80 machine.
 
 Two library configuration files along with backups with default settings can be found in the embedded subdirectory:
 
-  * [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/clib_cfg.asm?content-type=text%2Fplain|clib_cfg.asm]]
-  * clib_cfg.bak
+  * [config_clib.m4](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/z80/config/config_clib.m4)
 
-  * [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/clib_target_cfg.asm?content-type=text%2Fplain|clib_target_cfg.asm]]
-  * clib_target_cfg.bak
+  * [config_target.m4](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/z80/config/config_target.m4)
 
 The asm files contain the active configuration.
 
-==== clib_cfg.asm ====
+## clib_cfg.asm
 
 Contains general library settings.
 
@@ -39,7 +37,7 @@ Contains general library settings.
 
 <sup>3</sup> Shellsort is currently non-reentrant.
 
-==== clib_target_cfg.asm ====
+## clib_target_cfg.asm
 
 Contains settings for target-specific portions of the library.  Options will vary according to architecture but these two will always be present:
 
@@ -50,25 +48,25 @@ Contains settings for target-specific portions of the library.  Options will var
 
 <sup>2</sup> NMOS z80s have a bug that doesn't allow the current maskable interrupt state to be reliably determined with the "ld a,i" instruction.  If an NMOS z80 is indicated the library will build with more robust code to determine that information.  If the generated code should be correct for all z80s, NMOS should be chosen.
 
-==== Rebuilding the Library ====
+## Rebuilding the Library
 
 Once the library's configuration has been edited, the target's library must be rebuilt in order for changes to take effect.
 
-=== Windows ===
+### Windows ###
 
   * Navigate to {z88dk}/libsrc/_DEVELOPMENT.
   * Run Winmake
-    * "**Winmake**" lists all targets
-    * "**Winmake all**" builds all target libraries
-    * "**Winmake {target}**" builds a specific target's libraries
+    * "`Winmake`" lists all targets
+    * "`Winmake all`" builds all target libraries
+    * "`Winmake {target}`" builds a specific target's libraries
 
 To rebuild the embedded library, "Winmake embedded" should be run.
 
-=== Non-Windows ===
+### Non-Windows ###
 
   * Navigate to {z88dk}/libsrc/_DEVELOPMENT.
   * Invoke the Makefile with suitable target specified.
-    * "**make all**" builds all target libraries
-    * "**make TARGET={target}**" builds a specific target's libraries
+    * "`make all`" builds all target libraries
+    * "`make job-{target}`" builds a specific target's libraries
 
 To rebuild the embedded library, "make TARGET=embedded" should be run.
