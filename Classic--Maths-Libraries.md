@@ -47,7 +47,7 @@ mbf64 can be used with sccz80.
 
 ## `-lmath32` - (32 bit math using IEEE-754 format)
 
-The IEEE 32 bit provides a 32 bit float format that is mostly compliant with IEEE-754. The library can be used with both sccz80 and zsdcc using the following options:
+math32 provides a 32 bit floating point format that is mostly compliant with IEEE-754, which is also the native floating point format of sdcc. The library can be used with both sccz80 and zsdcc using the following options:
 
 `-fp-mode=ieee -lmath32 -pragma-define:CLIB_32BIT_FLOAT=1`
 
@@ -57,7 +57,7 @@ or to link the fast (table) multiply for z80:
 
 math32 supports the z180 (`-lmath32_z180`) and ZX Spectrum Next z80n (`-lmath32_z80n`) hardware multiply instructions, providing accelerated performance for these platforms. The z80 CPU is also supported through emulation of the hardware multiply format `16_8x8`, and also provides good performance.
 
-The intrinsic functions are written in assembler. The higher level functions (trigonometric, exp, pow) are implemented by C functions extracted from the Hi-Tech C Floating point library, and the Cephes Math Library.
+The intrinsic functions are written in assembler. The higher level functions (trigonometric, exp, pow) are implemented by C functions extracted from the Cephes Math Library and the Hi-Tech C Floating point library.
 
 More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32).
 
