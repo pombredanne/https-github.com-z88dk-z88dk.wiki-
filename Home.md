@@ -34,7 +34,7 @@ The new library is C11 compliant and has...
 
 ### Supported Platforms
 
-The [new library](Newlib-Overview) supports a restricted number of targets, and notably doesn't (yet) support file I/O. The supported targets are: +cpm, +hbios, +rc2014, +sms, +vgl, +yaz180, +z80, +z180, +zx, +zxn
+The [new library](Newlib-Overview) supports a restricted number of targets, and notably doesn't (yet) support file I/O. The supported targets are: +cpm, +hbios, +rc2014, +scz180, +sms, +vgl, +yaz180, +z80, +z180, +zx, +zxn
 
 #  Tools
 
