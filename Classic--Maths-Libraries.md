@@ -61,9 +61,9 @@ The intrinsic functions are written in assembler. The higher level functions (tr
 
 More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32).
 
-## Math Library Aliases
+## Math library aliases
 
-Aliases are provided to make usage of math libraries straight forward. Including the alias in the zcc invocation will provide all necessary configuration instructions for each math library.
+Aliases are provided to make usage of math libraries straight forward. Including the alias in the zcc invocation will provide all necessary configuration options relevant for each math library.
 
 ### classic
 
