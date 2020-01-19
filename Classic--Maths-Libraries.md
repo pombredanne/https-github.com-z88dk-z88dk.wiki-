@@ -61,24 +61,6 @@ The intrinsic functions are written in assembler. The higher level functions (tr
 
 More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32).
 
-## Math library aliases
-
-Aliases are provided to make usage of math libraries straight forward. Including the alias in the zcc invocation will provide all necessary configuration options relevant for each math library.
-
-### classic
-
-* __`--math-mbf32`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32`
-* __`--math-mbf32_8080`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32_8080`
-* __`--math-mbf64`__ is alias for `-Cc-fp-mode=mbf64 -lmbf64`
-* __`--math-bbc`__ is alias for `-Cc-fp-mode=z88 -lbbc_math`
-
-### classic + newlib
-
-* __`--math32`__ is alias for `-Cc-fp-mode=ieee -Cc-D__MATH_MATH32 -D__MATH_MATH32 -lmath32 -pragma-define:CLIB_32BIT_FLOAT=1`
-* __`--math32_fast`__ is alias for `-Cc-fp-mode=ieee -Cc-D__MATH_MATH32 -D__MATH_MATH32 -lmath32_fast -pragma-define:CLIB_32BIT_FLOAT=1`
-* __`--math32_z180`__ is alias for `-mz180  -Cc-fp-mode=ieee -Cc-D__MATH_MATH32 -D__MATH_MATH32 -lmath32_z180 -pragma-define:CLIB_32BIT_FLOAT=1`
-* __`--math32_z80n`__ is alias for `-mz80n  -Cc-fp-mode=ieee -Cc-D__MATH_MATH32 -D__MATH_MATH32 -lmath32_z80n -pragma-define:CLIB_32BIT_FLOAT=1`
-
 ## Machine specific libraries
 
 * `-lmathz88 -fp-mode=z88` 6 bytes. 8 bit exponent, 32 bit mantissa. Cambridge z88
@@ -86,6 +68,24 @@ Aliases are provided to make usage of math libraries straight forward. Including
 * `-lcpcmath` 6 bytes. 8 bit exponent, 32 bit mantissa. Amstrad CPC
 
 All of these libraries use the floating point package located in the machine's ROM. This can result in a compact binary
+
+# Math library aliases
+
+Aliases are provided to make usage of math libraries straight forward. Including the alias in the zcc invocation will provide all necessary configuration options relevant for each math library.
+
+## classic
+
+* __`--math-mbf32`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32`
+* __`--math-mbf32_8080`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32_8080`
+* __`--math-mbf64`__ is alias for `-Cc-fp-mode=mbf64 -lmbf64`
+* __`--math-bbc`__ is alias for `-Cc-fp-mode=z88 -lbbc_math`
+
+## classic + newlib
+
+* __`--math32`__ is alias for `-Cc-fp-mode=ieee -Cc-D__MATH_MATH32 -D__MATH_MATH32 -lmath32 -pragma-define:CLIB_32BIT_FLOAT=1`
+* __`--math32_fast`__ is alias for `-Cc-fp-mode=ieee -Cc-D__MATH_MATH32 -D__MATH_MATH32 -lmath32_fast -pragma-define:CLIB_32BIT_FLOAT=1`
+* __`--math32_z180`__ is alias for `-mz180  -Cc-fp-mode=ieee -Cc-D__MATH_MATH32 -D__MATH_MATH32 -lmath32_z180 -pragma-define:CLIB_32BIT_FLOAT=1`
+* __`--math32_z80n`__ is alias for `-mz80n  -Cc-fp-mode=ieee -Cc-D__MATH_MATH32 -D__MATH_MATH32 -lmath32_z80n -pragma-define:CLIB_32BIT_FLOAT=1`
 
 # Benchmarks
 
