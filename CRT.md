@@ -1,12 +1,12 @@
-The crt is the startup code that runs before calling main().  It is responsible for setting the memory map, instantiating device drivers on stdin/stdout/stderr, initializing the bss and data sections and calling any initialization code prior to calling main().  On return from main() it is responsible for closing open files, resetting the stack and preparing to return to the host.
+The crt is the startup code that runs before calling `main()`.  It is responsible for setting the memory map, instantiating device drivers on stdin/stdout/stderr, initializing the bss and data sections and calling any initialization code prior to calling main().  On return from `main()` it is responsible for closing open files, resetting the stack and preparing to return to the host.
 
 In combination with the crt, the memory map and crt configuration completely determine the program's execution environment at compile time.  The memory map defines what goes where and the crt configuration sets defaults such as code origin and heap size.
 
-The library supplies crts, memory maps and crt configurations for supported targets.  Usually a non-trivial target will have multiple crt choices that differ in what devices are instantiated on stdin, stdout, stderr and possibly more than one memory map if the target supports ram-resident programs, rom-resident programs or bankswitched memory.  Suggested combinations are condensed into a startup option selected on the compile line ("-startup=n").  A default startup is chosen if no startup is specified.  In previous compile examples on this page, no startup was specified so a default was chosen by z88dk that would be considered most common for the target.
+The library supplies crts, memory maps and crt configurations for supported targets.  Usually a non-trivial target will have multiple crt choices that differ in what devices are instantiated on stdin, stdout, stderr and possibly more than one memory map if the target supports ram-resident programs, rom-resident programs or bankswitched memory.  Suggested combinations are condensed into a startup option selected on the compile line (`-startup=n`).  A default startup is chosen if no startup is specified.  In previous compile examples on this page, no startup was specified so a default was chosen by z88dk that would be considered most common for the target.
 
-The startups and crts are target-specific of course so details should be gathered from the target's [[wiki entry]].  We will look at the embedded target in some detail so that the options available are tangibly explained.
+The startups and crts are target-specific of course so details should be gathered from the target's wiki entry.  We will look at the z80 target in some detail so that the options available are tangibly explained.
 
-==== embedded_crt.asm ====
+## embedded_crt.asm
 
 The specific crt used in the compile is found from the target's _crt.asm file.  For the embedded target this is [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/embedded_crt.asm?content-type=text%2Fplain|target/embedded/embedded_crt.asm]].  The file is just a switch on the startup value specified on the compile line, eg "zcc +embedded -vn -startup=0 ....".  At the top of the file, if startup was not defined on the compile line, a default is selected for you (2 in this case).  An important value is -1 which allows the user to supply his own crt file.
 
@@ -26,7 +26,7 @@ Of particular interest are lines 32-43 which list statically instantiated device
 
 Lines 45 and up contains the first start-up assembly code.  The embedded start-up code accommodates two cases.  The first occurs when the code ORG is zero, in which case the crt sets up the z80 restarts in the bottom 100 bytes of memory.  The second occurs when the code ORG is not zero, in which case the restart page is not set up.  If you follow the startup code you will see how the crt performs initialization before it calls main() and what it does on return from main().
 
-==== crt configuration ====
+## crt configuration
 
 The crt configuration defines properties of the execution environment.  The value of the **%%__CRTDEF%%** variable selects a configuration from a number of options in the target's "crt_target_defaults.inc".  For the embedded target this is [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/crt_target_defaults.inc?content-type=text%2Fplain|target/embedded/crt_target_defaults.inc]].
 
@@ -84,7 +84,7 @@ The final executable will consist of one binary for each section with its own OR
 
 As seen in the table above, the library chooses sensible defaults suitable for the target but your program can override these defaults using pragma embedded in your C source.
 
-==== pragma overrides ====
+## pragma overrides
 
 Pragmas embedded in the C source can override the crt configuration.  Pragmas can be located in any C source file in your project but it's best to keep them confined either to your main.c or to a dedicated file in projects that use makefiles and consist of many source files.
 
@@ -107,11 +107,11 @@ The code origin is moved to address 30000 and the heap size is made 4096 bytes. 
 
 If you find that you are overriding many defaults you may want to edit the target defaults to something more suitable for your projects so you can do away with these pragmas.
 
-==== memory map ====
+## memory map
 
 The memory map is defined in the target's "memory_model.inc".  For the embedded target this is [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/memory_model.inc?content-type=text%2Fplain|target/embedded/memory_model.inc]] which includes [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/crt_memory_model.inc?content-type=text%2Fplain|crt_memory_model.inc]].  If you recall, the selection of "startup=0" on the compile line as discussed above set the variable **%%__MMAP = 0%%**.  This selects the one and only memory map defined in the memory model file.  This memory map is almost universally used and would only need to be different for bankswitched targets.  The model sets up the standard CODE/DATA/BSS sections.
 
-==== user initialization and exit code ====
+## user initialization and exit code
 
 The crts create two sections that allow programs to place initialization and cleanup code into the crt.  The intialization code is run just before main() is called and the exit code is run just after registered atexit() functions are called but before files are closed.
 
@@ -138,6 +138,6 @@ call asm_heap_init
 
 First the memory region reserved for the heap is placed into section bss_alloc_malloc (this will be part of the program's BSS section).  Then the initialization code is placed into section code_crt_init.
 
-==== User-Supplied Crt ====
+## User-Supplied Crt
 
 You don't have to use the library-supplied crts nor do the crts have to be as sophisticated as the above.  You may prefer to have something very simple or something with a different memory map.  If the compile line contains "-startup=-1" a local file "crt.asm" will be taken as the crt.  The crt must set up the environment and call _main at minimum.  If no memory map is set up, the output will be a single binary blob with CODE, DATA, BSS items mixed in the order the linker encounters them.  Ideas can be taken from the library's crts, specifically have a look at the m4 macros in the target's startup subdirectory which are the crts before devices are instantiated (these files end in *.m4).
