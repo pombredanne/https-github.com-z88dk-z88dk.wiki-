@@ -90,7 +90,7 @@ Pragmas embedded in the C source can override the crt configuration.  Pragmas ca
 
 Overriding is done by name.  An example will illustrate:
 
-<code c>
+```
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -101,7 +101,7 @@ main()
 {
    ...
 }
-</code>
+```
 
 The code origin is moved to address 30000 and the heap size is made 4096 bytes.  As described in the last section, the heap will be created in the BSS section.
 
@@ -119,7 +119,7 @@ The section names are "**code_crt_init**" and "**code_crt_exit**".
 
 This example shows how the clib initializes the user heap.
 
-<code>
+```
 ; some leading underscores removed from labels
 ; so as not to disturb wiki formatting
 
@@ -134,7 +134,7 @@ ld bc,clib_malloc_heap_size
    
 EXTERN asm_heap_init
 call asm_heap_init
-</code>
+```
 
 First the memory region reserved for the heap is placed into section bss_alloc_malloc (this will be part of the program's BSS section).  Then the initialization code is placed into section code_crt_init.
 
