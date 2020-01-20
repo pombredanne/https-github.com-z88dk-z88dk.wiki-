@@ -40,7 +40,7 @@ The font used is that defined by `-pragma-redirect:CRT_FONT=...`, when the font 
 
 In this mode, sprites are not supported. When switching to this mode, the current conio ink/paper is taken as the colour for the whole screen. It is possible to change it by writing to the appropriate VDP register.
 
-### Mode 0 (Text 32x24)
+### Mode 1 (Text 32x24)
 
 Mode 0 is supported by the generic console and can be switched to using `int mode = 0; console_ioctl(IOCTL_GENCON_SET_MODE, &mode);`
 
