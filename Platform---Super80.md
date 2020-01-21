@@ -63,14 +63,14 @@ The port has been tested using Mame.
 
 This family of computers has different display characteristics and capabilities on each model. The following table shows the features of the z88dk libraries when run on each machine.
 
- | Model | Console size | Colour | Lower case | Inverse | Custom font | UDGs | Lores Graphics |
+ | Model | Console size | Colour | Lower case | Inverse | Custom font | UDGs | Lores Graphics | Notes |
  | --- | --- | --- | --- | --- | --- | --- | --- |
- Super-80 | 32x16 | N | N | N | N | N | N |
- Super-80d | 32x16 | N | Y | N | N | N | N |
- Super-80e | 32x16 | N | Y | N | N | N | 64x48 |
- Super-80m | 32x16 | Y | Y | Y | N | N | 64x48 (alternate charset) |
- Super-80r | 80x25 | N | Y | N | Y | Y | 160x50 |
- Super-80v | 80x25 | Y | Y | Y | Y | Y | 160x50 |
+ Super-80 | 32x16 | N | N | N | N | N | N | |
+ Super-80d | 32x16 | N | Y | N | N | N | N | |
+ Super-80e | 32x16 | N | Y | N | N | N | 64x48 | |
+ Super-80m | 32x16 | Y | Y | Y | N | N | 64x48 (alternate charset) | Switch to composite in machine options |
+ Super-80r | 80x25 | N | Y | N | Y | Y | 160x50 | |
+ Super-80v | 80x25 | Y | Y | Y | Y | Y | 160x50 | |
 
 ## Custom font and UDGs
 
