@@ -1,3 +1,30 @@
+# Hardware Summary
+
+It's complicated, see https://en.wikipedia.org/wiki/PC-8800_series for details
+
+## Classic library support
+
+* [x] Native console output
+* [x] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font
+    * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute
+    * [x] Underline attribute
+* [x] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [x] One bit sound
+* [ ] Inkey driver
+* [ ] Hardware joystick
+* [ ] File I/O
+* [ ] Interrupts
+* [ ] RS232
+
 
 # Quick start
 
@@ -10,8 +37,11 @@ This will generate three files, **a.bin** (a pure binary block), **a.t88** (a fi
 
 The screen mode can be switched using the `console_ioctl()` function. The following modes are supported:
 
-* Mode 0: 80x25
+* Mode 0: 80x25 
 * Mode 1: 40x25
+* Mode 2: 80x25 (bitmap characters)
+
+Mode 0 and 1 do not (at present) support setting a text attributes using gencon.
 
 # Graphics libraries
 
