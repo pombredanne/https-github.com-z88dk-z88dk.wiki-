@@ -52,7 +52,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [v6z80p (OSCA)](Platform---OSCA) | 40x24| 40x24| No | 320x200 | Yes | No | 2 different file access libraries | 
 [Pac Man HW](Platform---Pacman)| 28x36| No | No |  84x72* | No | No lib | * the special font provided in support/pacman must be used| 
 [PC-6001](Platform---NEC-PC6001) | 32x16, 32x24| 32x16 (*)|  32x16, 32x24 | 64x48, 128x192, 256x192 | No | PSG only | | 
-[PC-8801](Platform---NEC-PC8801) | 40x25, 80x25 |  |   |  | No | 1 bit | Sound supported only on MKII or later models, higher pitch is expected with higher CPU clocks |
+[PC-8801](Platform---NEC-PC8801) | 40x25, 80x25 |  | 40x25, 80x25 | 160x100, 600x200 | No | 1 bit | Sound supported only on MKII or later models, higher pitch is expected with higher CPU clocks |
 [Philips P2000](Platform---Philips-P2000)| 40x24| Monochrome 40x24 | No | 78×72 | No | 1 bit| | 
 [Philips C7420](Platform---Philips-C7420)| 39x20| No | No | Not Yet | No | No | | 
 [Philips VG-5000](Platform----Philips-VG5000)| 40x24| 40x24| 40x24 | 80×72 | No | 1 bit| | 
