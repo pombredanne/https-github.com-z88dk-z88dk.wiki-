@@ -87,8 +87,8 @@ more optimised sprite libraries available offering additional features.
 
 ## X11 emulation
 
-This is an experimental library to emulate some basic behaviour fo the Xlib functions.
-It isn't based on the network layer as the original library, and it implements only a tiny subset of the original functions but, being based on the "monochrome graphics" library, it is faily portable to many of the supported targets.
+This is an experimental library to emulate some basic behaviour fo the [Xlib](xlib) functions.
+It isn't based on the network layer as the original library, and it implements only a tiny subset of the original functions but, being based on the "monochrome graphics" library, it is portable to many of the supported targets.
 
 ## lib3d
 
