@@ -1,12 +1,8 @@
 # x11 (Xlib emulation)
 
- | Header     | [{z88dk}/include/X11](https://github.com/z88dk/z88dk/tree/master/include/X11)/*.h    |                       
- | ---------------------------------------------------------------------------------------------------                       
- | Source     | [{z88dk}/libsrc/graphics/x11](https://github.com/z88dk/z88dk/tree/master/libsrc/graphics/x11)               |
- | Include    | #include `<X11/Xlib.h>`        |                                                                               
- | Linking    | -lx11                        |                                                                               
- | Compile    | n/a                          |                                                                               
- | Comments   |                              |                                                                               
+* Header: [{z88dk}/include/X11](https://github.com/z88dk/z88dk/tree/master/include/X11)                      
+* Include: `#include <X11/Xlib.h>`                                                                            
+                                                                             
 
 
 Starting from version 1.8 of z88dk we are providing an experimental library to emulate some basic behaviour fo the Xlib functions.
@@ -16,8 +12,6 @@ This [example source program](https://raw.githubusercontent.com/z88dk/z88dk/mast
 
 The window background is saved and the window title, and the XPM icon are managed as expected.
 The font loading is cleverly simulated, and the size is adapted by choosing between two base fonts.
-
-
 
 
 ### Support tools
