@@ -76,10 +76,9 @@ Aliases are provided to make usage of math libraries straight forward. Including
 * __`--math-mbf64`__ is alias for `-Cc-fp-mode=mbf64 -lmbf64`
 * __`--math-bbc`__ is alias for `-Cc-fp-mode=z88 -lbbc_math`
 
-* __`--math32_z180`__ is alias for `-mz180  -Cc-fp-mode=ieee -Cc-D__MATH_MATH32 -D__MATH_MATH32 -lmath32_z180 -pragma-define:CLIB_32BIT_FLOAT=1`
-* __`--math32_z80n`__ is alias for `-mz80n  -Cc-fp-mode=ieee -Cc-D__MATH_MATH32 -D__MATH_MATH32 -lmath32_z80n -pragma-define:CLIB_32BIT_FLOAT=1`
-
 ## classic + newlib
+
+The `--math32` alias is supported across z80, z180, and z80n (SpectrumNext) architectures, and automatically provides each target with the correct hardware multiply opcodes (or for z80 emulation code) to enable best performance.
 
 * __`--math32`__ is alias for `-Cc-fp-mode=ieee -Cc-D__MATH_MATH32 -D__MATH_MATH32 -lmath32 -pragma-define:CLIB_32BIT_FLOAT=1`
 
@@ -102,8 +101,8 @@ mbf32                    | sccz80   | -0.1699168    | -0.1699168    | 1_939_334_
 bbcmath                  | sccz80   | -0.16907516   | -0.16908760   | 1_655_789_776
 math32                   | sccz80   | -0.1690752    | -0.1690867    | 1_398_993_950 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
 ~~math32_fast~~ (deleted)| sccz80   | -0.1690752    | -0.1690867    | 1_198_780_765 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
-math32_z80n              | sccz80   | -0.1690752    | -0.1690867    | 0_576_942_516 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
-math32_z180              | sccz80   | -0.1690752    | -0.1690867    | 0_563_700_933 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
+math32_z80n  (integrated)| sccz80   | -0.1690752    | -0.1690867    | 0_576_942_516 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
+math32_z180  (integrated)| sccz80   | -0.1690752    | -0.1690867    | 0_563_700_933 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
 
 ## [spectral-norm](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/spectral-norm)
 
@@ -117,8 +116,8 @@ math32                   | sccz80   | 1.274219      | 13_508_416_688
 math48                   | sccz80   | 1.274219989   | 09_035_519_932
 bbcmath                  | sccz80   | 1.27421999    | 08_017_859_189
 mbf32                    | sccz80   | 1.274220      | 06_754_491_551
-math32_z80n              | sccz80   | 1.274219      | 06_396_544_633
-math32_z180              | sccz80   | 1.274219      | 06_120_760_761
+math32_z80n  (integrated)| sccz80   | 1.274219      | 06_396_544_633
+math32_z180  (integrated)| sccz80   | 1.274219      | 06_120_760_761
 
 ## [mandelbrot](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/mandelbrot)
 
@@ -130,5 +129,5 @@ math48                   | zsdcc    | 3_205_062_412
 math32                   | zsdcc    | 1_670_409_507
 math32                   | sccz80   | 1_653_612_845 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
 ~~math32_fast~~ (deleted)| sccz80   | 1_495_633_606 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
-math32_z80n              | sccz80   | 0_922_658_537 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
-math32_z180              | sccz80   | 0_892_842_610 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
+math32_z80n  (integrated)| sccz80   | 0_922_658_537 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
+math32_z180  (integrated)| sccz80   | 0_892_842_610 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
