@@ -24,7 +24,6 @@
   * [clib_target_cfg.asm](Configuration#clib_target_cfgasm)
   * [Rebuilding the Library](Configuration#rebuilding-the-library)
 * [CRT](CRT)
-  * [embedded_crt.asm](CRT)
   * [crt configuration](CRT)
   * [pragma overrides](CRT)
   * [memory map](CRT)
