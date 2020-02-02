@@ -20,7 +20,7 @@ The target will be an if2 cartridge for the zx spectrum.
 
 The zx port has crts available that target if2 cartridges.  If you consult [zx_crt.asm](zx_crt.asm), there is a section marked "if 2 cartridge" with startup numbers beginning at 32.  An interesting one for this project is startup=41 which instantiates an fzx output terminal (proportional fonts) that understands common control codes (tty_z88dk).  We need a terminal that understands code 12 (clear screen) as the clisp source prints that character code to clear the screen in main().
 
-if2 cartridges are 16k and are mapped to address 0.  The if2 crts supplied by the library are ORGd to address 0 by default and behave very much like the generic embedded target.  In particular, if the ORG address remains at zero the crt will fill in the z80 rst locations as specified by crt option [CRT_ENABLE_RST](temp/front#pragmas1).  If the ORG is moved away from 0, the crt assumes that you will be supplying the code at address 0 with the restart locations separately.
+if2 cartridges are 16k and are mapped to address 0.  The if2 crts supplied by the library are ORGd to address 0 by default and behave very much like the generic z80 target.  In particular, if the ORG address remains at zero the crt will fill in the z80 rst locations as specified by crt option [CRT_ENABLE_RST](temp/front#pragmas1).  If the ORG is moved away from 0, the crt assumes that you will be supplying the code at address 0 with the restart locations separately.
 
 All of this doesn't matter too much at this point as the first step is to find out if this program will fit on a 16k cartridge in the first place.  In anticipation that this is going to be a problem, we'll do some easy configurations that will minimize code footprint.
 
