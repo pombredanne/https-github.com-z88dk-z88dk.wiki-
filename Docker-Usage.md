@@ -1,7 +1,3 @@
-# z88dk Dockerfile
-
-With the provided Dockerfile you are able to build and run z88dk in a [Docker](https://www.docker.com/) container. Try it out!
-
 ## About Docker
 
 https://www.docker.com/what-docker
@@ -12,14 +8,15 @@ https://www.docker.com/what-docker
 * Docker for Mac requires OS X El Capitan 10.11 or newer macOS release running on a 2010 or newer Mac, with Intel’s hardware support for MMU virtualization. The app runs on 10.10.3 Yosemite, but with limited support.
 * Docker for Ubuntu, Debian, CentOS or Redhat need the 64-bit version of the OS.
 
-### FAQ
+# Dockerhub image
 
-Q: What is a Dockerfile, Image, Container?
-A: Dockerfile is a textfile containing all the commands, in order, needed to build a given image. Docker image is created by building a Dockerfile using ‘docker build’ command. Docker container is provisioned when you run a docker image using  ‘docker run’ command.
+A new image is produced by the nightly build as available on dockerhub. It can be downloaded with the following command:
 
-## Install Docker
+    docker pull z88dk/z88dk:nightly
 
-See installation instructions of docker: https://docs.docker.com/installation/
+# z88dk Dockerfile
+
+With the provided Dockerfile you are able to build and run z88dk in a [Docker](https://www.docker.com/) container yourselff.
 
 ## Build a vanilla image
 
@@ -109,3 +106,14 @@ To solve this, a workaround is to go up a directory and let `make` compile insid
 cd ${z88dk}/examples/
 docker run -v ${PWD}:/src/ -it z88dk make -C spectrum
 ```
+
+### FAQ
+
+Q: What is a Dockerfile, Image, Container?
+A: Dockerfile is a textfile containing all the commands, in order, needed to build a given image. Docker image is created by building a Dockerfile using ‘docker build’ command. Docker container is provisioned when you run a docker image using  ‘docker run’ command.
+
+## Install Docker
+
+See installation instructions of docker: https://docs.docker.com/installation/
+
+
