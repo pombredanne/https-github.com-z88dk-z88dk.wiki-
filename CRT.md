@@ -8,7 +8,7 @@ The startups and crts are target-specific of course so details should be gathere
 
 ## target_crt.asm
 
-The specific crt used in the compile is found from the target's `target_crt.asm` file.  For the z80 target this is [`z80_crt.asm.m4`](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/z80/z80_crt.asm.m4.  The file is just a switch on the startup value specified on the compile line, eg "zcc +z80 -vn -startup=0 ....".  At the top of the file, if startup was not defined on the compile line, a default is selected for you (2 in this case).  An important value is -1 which allows the user to supply his own crt file.
+The specific crt used in the compile is found from the target's `target_crt.asm` file.  For the z80 target this is [`z80_crt.asm.m4`](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/z80/z80_crt.asm.m4).  The file is just a switch on the startup value specified on the compile line, eg "zcc +z80 -vn -startup=0 ....".  At the top of the file, if startup was not defined on the compile line, a default is selected for you (2 in this case).  An important value is -1 which allows the user to supply his own crt file.
 
 For each startup value, a memory model is selected by number %%(__MMAP=n)%%, a crt configuation is chosen %%(__CRTDEF=n)%% and a real crt.asm file is included from the target's startup directory.
 
