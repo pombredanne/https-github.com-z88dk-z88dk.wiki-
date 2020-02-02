@@ -203,7 +203,7 @@ This process is not as wasteful as it sounds -- there is some indication that a 
 (installation instructions coming; linux/unix users can perhaps follow the instructions in the toolchain link above but rename the binaries to zclang and zllvm-cbe; compiles use the new c library with sdcc command line switches and "-clib=clang_iy" or "-clib=clang_ix")
 
 	
-	zcc +embedded -vn -SO3 -clib=clang_iy --max-allocs-per-node200000 test.c -o test -create-app
+	zcc +z80 -vn -SO3 -clib=clang_iy --max-allocs-per-node200000 test.c -o test -create-app
 
 ## Boost C++ Libraries
 
