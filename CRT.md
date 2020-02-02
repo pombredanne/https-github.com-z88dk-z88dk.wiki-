@@ -6,29 +6,29 @@ The library supplies crts, memory maps and crt configurations for supported targ
 
 The startups and crts are target-specific of course so details should be gathered from the target's wiki entry.  We will look at the z80 target in some detail so that the options available are tangibly explained.
 
-## embedded_crt.asm
+## target_crt.asm
 
-The specific crt used in the compile is found from the target's _crt.asm file.  For the embedded target this is [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/embedded_crt.asm?content-type=text%2Fplain|target/embedded/embedded_crt.asm]].  The file is just a switch on the startup value specified on the compile line, eg "zcc +embedded -vn -startup=0 ....".  At the top of the file, if startup was not defined on the compile line, a default is selected for you (2 in this case).  An important value is -1 which allows the user to supply his own crt file.
+The specific crt used in the compile is found from the target's `target_crt.asm` file.  For the z80 target this is [`z80_crt.asm.m4`](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/z80/z80_crt.asm.m4.  The file is just a switch on the startup value specified on the compile line, eg "zcc +z80 -vn -startup=0 ....".  At the top of the file, if startup was not defined on the compile line, a default is selected for you (2 in this case).  An important value is -1 which allows the user to supply his own crt file.
 
 For each startup value, a memory model is selected by number %%(__MMAP=n)%%, a crt configuation is chosen %%(__CRTDEF=n)%% and a real crt.asm file is included from the target's startup directory.
 
-Let's choose startup=0.  This selects the "ram model" for the embedded target; the reason for the name will become evident shortly.
+Let's choose startup=0.  This selects the "ram model" for the z80 target; the reason for the name will become evident shortly.
 
 This sets up the following:
 
   * **%%__CRTDEF = 0%%** selects crt configuration number zero.
   * **%%__MMAP = 0%%** selects memory map number zero.
-  * [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/startup/embedded_crt_0.asm?content-type=text%2Fplain|startup/embedded_crt_0.asm]] is the start-up code.
+  * [startup/z80_crt_0.asm](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/z80/startup/z80_crt_0.asm.m4) is the start-up code.
 
-The actual start-up code contains static data structure definitions to satisfy stdio which is both difficult to read and difficult to understand so the original macro file it was generated from is preferable to refer to: [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/startup/embedded_crt_rom.m4?view=markup|startup/embedded_crt_rom.m4]].
+The actual start-up code contains static data structure definitions to satisfy stdio which is both difficult to read and difficult to understand so the original macro file it was generated from is preferable to refer to: [startup/z80_crt_0.asm.m4](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/z80/startup/z80_crt_0.asm.m4).
 
-Of particular interest are lines 32-43 which list statically instantiated devices.  The order of instantiation determines the file descriptor each instantiated driver will be associated with.  The embedded target is a general one so there are no drivers instantiated.
+Of particular interest are lines 32-43 which list statically instantiated devices.  The order of instantiation determines the file descriptor each instantiated driver will be associated with.  The z80 target is a general one so there are no drivers instantiated.
 
-Lines 45 and up contains the first start-up assembly code.  The embedded start-up code accommodates two cases.  The first occurs when the code ORG is zero, in which case the crt sets up the z80 restarts in the bottom 100 bytes of memory.  The second occurs when the code ORG is not zero, in which case the restart page is not set up.  If you follow the startup code you will see how the crt performs initialization before it calls main() and what it does on return from main().
+Lines 45 and up contains the first start-up assembly code.  The z80 start-up code accommodates two cases.  The first occurs when the code ORG is zero, in which case the crt sets up the z80 restarts in the bottom 100 bytes of memory.  The second occurs when the code ORG is not zero, in which case the restart page is not set up.  If you follow the startup code you will see how the crt performs initialization before it calls main() and what it does on return from main().
 
 ## crt configuration
 
-The crt configuration defines properties of the execution environment.  The value of the **%%__CRTDEF%%** variable selects a configuration from a number of options in the target's "crt_target_defaults.inc".  For the embedded target this is [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/crt_target_defaults.inc?content-type=text%2Fplain|target/embedded/crt_target_defaults.inc]].
+The crt configuration defines properties of the execution environment.  The value of the **%%__CRTDEF%%** variable selects a configuration from a number of options in the target's "crt_target_defaults.inc".  For the z80 target this is [`target/z80/crt_target_defaults.inc`](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/z80/config_z80_public.inc).
 
 For **%%__CRTDEF = 0%%** the following defaults are set:
 
@@ -82,7 +82,7 @@ The final executable will consist of one binary for each section with its own OR
   * **CLIB_FOPEN_MAX** Max number of FILE* that can be simultaneously open.  This includes stdin, stdout, stderr if they are present.  If < =0, only FILE* for stdin, stdout, stderr will be created if demanded by crt options.  If -1, FILE* lists won't be created unless stdin, stdout or stderr exist.
   * **CLIB_OPEN_MAX** Size of the fd table and indicates how many files can be simultaneously open.  If 0, only space for stdin, stdout, stderr will be made if demanded by crt options. 
 
-As seen in the table above, the library chooses sensible defaults suitable for the target but your program can override these defaults using pragma embedded in your C source.
+As seen in the table above, the library chooses sensible defaults suitable for the target but your program can override these defaults using `#pragma` in your C source or from the command line.
 
 ## pragma overrides
 
@@ -109,11 +109,11 @@ If you find that you are overriding many defaults you may want to edit the targe
 
 ## memory map
 
-The memory map is defined in the target's "memory_model.inc".  For the embedded target this is [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/memory_model.inc?content-type=text%2Fplain|target/embedded/memory_model.inc]] which includes [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/crt_memory_model.inc?content-type=text%2Fplain|crt_memory_model.inc]].  If you recall, the selection of "startup=0" on the compile line as discussed above set the variable **%%__MMAP = 0%%**.  This selects the one and only memory map defined in the memory model file.  This memory map is almost universally used and would only need to be different for bankswitched targets.  The model sets up the standard CODE/DATA/BSS sections.
+The memory map is defined in the target's "memory_model.inc".  For the z80 target this is [`target/z80/crt_memory_map.inc`](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/z80/crt_memory_map.inc) which includes [`target/crt_memory_model.inc`](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/crt_memory_model_z80.inc).  If you recall, the selection of "startup=0" on the compile line as discussed above set the variable **%%__MMAP = 0%%**.  This selects the one and only memory map defined in the memory model file.  This memory map is almost universally used and would only need to be different for bankswitched targets.  The model sets up the standard CODE/DATA/BSS sections.
 
 ## user initialization and exit code
 
-The crts create two sections that allow programs to place initialization and cleanup code into the crt.  The intialization code is run just before main() is called and the exit code is run just after registered atexit() functions are called but before files are closed.
+The crts create two sections that allow programs to place initialization and cleanup code into the crt. The intialization code is run just before main() is called and the exit code is run just after registered atexit() functions are called but before files are closed.
 
 The section names are "**code_crt_init**" and "**code_crt_exit**".
 
