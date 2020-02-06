@@ -9,7 +9,7 @@ WYZPlayer is a cross-platform music and sound effects player for AY-8910 based c
 
 ## API
 
-The API to the tracker library is defined in `<psg/wyz.h>` and consists of 4 function:
+The API to the tracker library is defined in `<psg/wyz.h>` and consists of 4 functions:
 
 ```
 extern void __LIB__ ay_wyz_init(wyz_song *song) __z88dk_fastcall;
