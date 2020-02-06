@@ -76,7 +76,9 @@ void main() {
 
 WYZTracker outputs two files: `tune.mus` and `tune.mus.asm`. Both of these files should be copied into your project.
 
-`tune.mus.asm` needs to be modified to turn it into a format that can be used by z88dk. So open the file using an editor. At the top of the file paste the following:
+`tune.mus.asm` needs to be modified to turn it into a format that can be used by z88dk. So open the file using an editor.
+
+At the moment, the first thing you need to do is to change all `DW` to `defw` and all `DB` to `defb`. Then at the top of the file paste the following:
 
 ```
         SECTION rodata_user
@@ -107,4 +109,3 @@ Assuming that the C file is `main.c`, then you can compile with:
 or
 
     zcc +msx -subtype=rom main.c tune.mus.asm -create-app
-
