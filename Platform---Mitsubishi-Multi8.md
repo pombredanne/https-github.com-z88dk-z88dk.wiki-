@@ -25,7 +25,7 @@
 * [ ] Inkey driver
 * [ ] Hardware joystick
 * [ ] File I/O
-* [x] Interrupts
+* [ ] Interrupts
 * [ ] RS232
 
 # Compilation
