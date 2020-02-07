@@ -73,3 +73,61 @@ Scrolling in mode 2 is particularly slow - we have to move 48kb of data to scrol
 
 * [Takeda Emulator](http://takeda-toshiya.my.coocan.jp/multi8/)
 * [Technical documentation](http://takeda-toshiya.my.coocan.jp/multi8/tech.html)
+
+
+## Technical notes (not yet implemented)
+
+The im2 vector table is setup at $f000, 8 vectors are available.
+
+A 1Hz interrupt is delivered to the vector at f030 (interrupt 6). 
+
+Setup code:
+
+```
+        ld      h,$f7 
+        ld      l,$63     
+        in      a,($2d)
+        and     h
+        out     ($2d),a
+        ld      a,l
+        out     ($2c),a
+        ld      de,$f000
+        ld      b,8
+copy_int_rout:
+        push    bc
+        ld      hl,int_routine
+        ld      bc,8
+        ldir
+        pop     bc
+        djnz    copy_int_rout
+
+        ; f030 is called regularly, set it up as our vector
+        ld      a,195
+        ld      ($f030),a
+        ld      hl,interrupt_dispatch
+        ld      ($f031),hl
+
+        EXTERN  im1_vectors
+        EXTERN  asm_interrupt_handler
+
+interrupt_dispatch:
+        push    af
+        push    hl
+        ld      hl,im1_vectors
+        call    asm_interrupt_handler
+        pop     hl
+        ld      a,6
+ack:
+        or      $60
+        out     ($2c),a
+        pop     af
+        ei
+        ret
+
+; Interrupt routine that's copied into the vectors
+int_routine:
+        ei
+        reti
+        defs      5
+
+```
