@@ -1,11 +1,20 @@
 # Introduction
 
-WYZPlayer is a cross-platform music and sound effects player for AY-8910 based computers.
+WYZPlayer is a cross-platform music and sound effects player for targets containing an AY-891x.
 
 ## Machine support
 
+The following targets support interrupt based playing:
+
 - MSX
 - ZX Spectrum
+- Nichibutsu My Vision
+- Bandaivision SV8000 (untested)
+
+The following are busy loop only:
+
+- Multi 8 
+- PC6001
 
 ## API
 
@@ -21,55 +30,66 @@ extern void __LIB__ ay_wyz_stop(void);  // Stop playing
 The main function is `ay_wyz_play()` which should be called on the interrupt. The following example demonstrates how to setup the library and an interrupt routine to play music:
 
 ```
-#include <string.h>
-#include <im2.h>
+#include <stdio.h>
 #include <intrinsic.h>
 #include <interrupt.h>
-#include <stdlib.h>
-#include <psg/wyz.h>
-
-
-extern wyz_song meson;
-
-M_BEGIN_ISR(playmusic) {
-   ay_wyz_play();
-M_END_ISR
-}
-
-
 #ifdef __SPECTRUM__
-void setup_interrupt() {
-   intrinsic_di();
-   memset(0xd300, 0xd4, 257);       // initialize 257-byte im2 vector table with all 0xd4 bytes
-   im2_Init(0xd300);                // place z80 in im2 mode with interrupt vector table located at 0xd300
-   bpoke(0xd4d4, 195);              // POKE jump instruction at address 0xd4d4 (interrupt service routine entry)
-   wpoke(0xd4d5, playmusic);        // POKE isr address following the jump instruction
-   intrinsic_ei();
-}
+#include <spectrum.h>
 #endif
-
 #ifdef __MSX__
-void setup_interrupt() {
-   im1_init();
-   im1_install_isr(playmusic);
-}
+#include <msx.h>
+#endif
+#include <psg/wyz.h>
+#include <stdlib.h>
+
+
+#if __PC6001__ | __MULTI8__
+#define NO_INTERRUPT 1
 #endif
 
+extern wyz_song mysong;
 
-void main() {
+void playmusic(void) {
+   M_PRESERVE_MAIN;
+   M_PRESERVE_INDEX;
+   ay_wyz_play();
+   M_RESTORE_INDEX;
+   M_RESTORE_MAIN;
+}
+
+
+void setup_int() {
+#ifndef NO_INTERRUPT
+#if __SPECTRUM__
+   zx_im2_init(0xd300, 0xd4);
+#else
+   im1_init();
+#endif
+  add_raster_int(playmusic);
+#endif
+}
+
+
+void main()
+{
+   //printf("%cWYZ Tracker example\n",12);
+
    // Load the tracker file
    ay_wyz_init(&mysong);
    // Play song 1 within the  file
    ay_wyz_start(0);
 
    // Setup interrupt
-   setup_interrupt();
+   setup_int();
 
    // Just loop
    while  ( 1 ) {
+#ifdef NO_INTERRUPT
+       ay_wyz_play();
+       msleep(40);
+#endif
    }
 }
-
 ```
 
 ## Converting WYZTracker output to usable files
