@@ -1,6 +1,6 @@
 # Installation
 
-The [nightly build](http://nightly.z88dk.org/) is the most current version.  The package available for download from [sourceforge](https://sourceforge.net/projects/z88dk/) and Github is dated 19 Jan 2019.
+The [nightly build](http://nightly.z88dk.org/) is the most current version.  The package available for download from [sourceforge](https://sourceforge.net/projects/z88dk/) and Github is dated 3 Feb 2020.
 
 The nightly build should be preferred unless you have a reason to install an older version of z88dk.  The documentation on this page will apply to the nightly build.
 
