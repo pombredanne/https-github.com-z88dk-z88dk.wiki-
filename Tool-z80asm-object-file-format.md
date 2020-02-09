@@ -1,4 +1,4 @@
-## z80asm File formats (v13)
+## z80asm File formats (v14)
 [[Top](Tool-z80asm)]
 
 This document describes the object and libary formats used by *z80asm*. 
@@ -69,6 +69,7 @@ format:
      * 's' : 8-bit signed integer (-128 to 127) sign-extended to 16 bits (appending a 0xff if negative or 0 otherwise)  
      * 'C' : 16-bit integer, little-endian (-32768 to 65535)  
      * 'B' : 16-bit integer, big-endian (-32768 to 65535)  
+     * 'P' : 24-bit signed integer     
      * 'L' : 32-bit signed integer     
      * 'J' : 8-bit jump relative offset
      * '=' : computed name at link time
@@ -195,3 +196,4 @@ at link time, after all addresses are allocated.
 * version *11* : allow big-endian 16-bit expressions to be patched; these big-endian values are used in the ZXN coper unit.
 * version *12* : allow the target expression of relative jumps to be computed in the link phase
 * version *13* : add 8-bit signed and unsigned values extended to 16-bits
+* version *14* : add 24-bit pointers
