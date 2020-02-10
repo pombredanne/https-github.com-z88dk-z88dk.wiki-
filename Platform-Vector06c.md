@@ -1,10 +1,10 @@
 # Вектор-06Ц - Vector06c Hardware summary
 
-* MHB 8080A  @ 2.048Mhz
-* 32k contiguous RAM
-* 16k VRAM giving 288x256 resolution screen.
+* MHB 8080A  @ ~3Mhz
+* 64kk contiguous RAM
+* 32k VRAM giving 256x256 resolution screen with 16 colours.
 
-## Classic library support (`+pmd85`)
+## Classic library support (`+vector06c`)
 
 * [ ] Native console output
 * [ ] Native console input
