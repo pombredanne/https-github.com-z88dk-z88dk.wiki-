@@ -1,4 +1,4 @@
-# Vector06c Hardware summary
+# Вектор-06Ц - Vector06c Hardware summary
 
 * MHB 8080A  @ 2.048Mhz
 * 32k contiguous RAM
@@ -36,4 +36,3 @@ _This target is currently being brought up_
 A rom file is created suitable for loading into the Virtual Vector emulator.
 
 # Links
-
