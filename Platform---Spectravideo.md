@@ -24,9 +24,6 @@
 * [x] RS232
 
 
-The Spectravideo SVI-318 and SVI-328 are now well supported.
-Most of the generic functions (monochrome graphics, 1 bit sound, stdio, etc) are supported as well as most of the [MSX](Platform---MSX) specific ones.
-
 
 
 ## Quick start
@@ -82,3 +79,7 @@ For Mame usage, start with:
     ./mame64 svi328 -exp sv601 -exp:sv601:1 sv801 -exp:sv601:2 sv805 -exp:sv601:2:sv805:rs232 null_modem -bitb socket.localhost:25233 -flop1 a.svi
 
 Which will boot an SVI floppy containing your application. You can connect to the serial port by telnetting to port 25233
+
+## The TMS9918a library
+
+z88dk provides a [TMS9918a](Classic-TMS9918) library that allows hardware access to the VDP chip. All graphical functionality supplied by z88dk uses these functions and such is hardware independent.
