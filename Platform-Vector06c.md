@@ -17,7 +17,7 @@
     * [x] Inverse attribute
     * [x] Bold attribute
     * [x] Underline attribute
-* [ ] Lores graphics
+* [x] Lores graphics
 * [ ] Hires graphics
 * [ ] PSG sound
 * [ ] One bit sound
@@ -36,3 +36,6 @@ _This target is currently being brought up_
 A rom file is created suitable for loading into the Virtual Vector emulator.
 
 # Links
+
+* [Virtual Vector](http://sensi.org/~svo/virtualvector/)
+* [Software](http://sensi.org/scalar/categories/) - downloads including CP/M
