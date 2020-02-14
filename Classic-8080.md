@@ -16,14 +16,14 @@ The 8080 CPU implements a subset of the z80 instruction set that the compilers a
 
 ### `<stdio.h>`
 
-The following features from `<stdio.h>` are not included in the 8080 library:
+The following features from `<stdio.h>` are not available in the 8080 library:
 
 * `funopen()` and stdio pluggable device support
 * The `scanf` family. This can be restored if required.
 
 ### `<stdlib.h>`
 
-The following features from `<stdlib.h>`are not included in the 8080 library:
+The following features from `<stdlib.h>`are not available in the 8080 library:
 
 * `qsort` and `bsearch`
 * z88dk extensions: `inp`, `outp`, `extract_bits`
@@ -34,7 +34,7 @@ No maths library is shipped that supports the 8080. The core of the Microsoft MB
 
 ### z88dk extension libraries
 
-The following extension libraries are not include in the 8080 library:
+The following extension libraries are not available in the 8080 library:
 
 * Allocation: balloc
 * Algorithm/adt: All
