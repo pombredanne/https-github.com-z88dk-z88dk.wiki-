@@ -26,7 +26,7 @@ The [classic library](Classic-Overview) is z88dk's traditional library and is wr
 
 ### Supported Platforms
 
-The classic library supports over [80 platforms](Platform) and provides many extensions (graphics, sound etc) as well as broadly supporting the C library standard.
+The classic library supports over [90 platforms](Platform) and provides many extensions (graphics, sound etc) as well as broadly supporting the C library standard.
 
 ## New Lib
 
@@ -42,7 +42,7 @@ This is a quick overview of the tools included in Z88DK.
 
 * **ZCC** is the toolchain's front end. zcc can generate an output binary out of any set of input source files.
 
-* **SCCZ80** is z88dk's native c compiler. sccz80 is derived from small c but has seen much development to the point that it is nearly c89 compliant.
+* **SCCZ80** is z88dk's native c compiler. sccz80 is derived from small c but has seen much development to the point that it is nearly c89 compliant as well features from later standards.
 
 * **ZSDCC** is z88dk's customization of the sdcc optimizing c compiler. Our patch makes sdcc compatible with the z88dk toolchain, gives it access to z88dk's extensive assembly language libraries and ready-made crts, addresses some of sdcc's code generation bugs and improves on sdcc's generated code.  It has very good standards compliance with c89, some c99 and a little c11.
 
