@@ -2,7 +2,12 @@ After a few decades of not supporting 8080 code generation, z88dk can once again
 
 ## Supported targets
 
-At present creation of 8080 binaries is only supported on CP/M target. To generate an 8080 binary add the option `-clib=8080` to the command line. For example:
+The following targets are 8080 only:
+
+* [PMD85](Platform---PMD85)
+* [Vector06c](Platform-Vector06c)
+
+Additionally, the CP/M target can generate 8080 binaries. To do so, add the option `-clib=8080` to the command line. For example:
 
 ```
 zcc +cpm -clib=8080 adv_a.c
