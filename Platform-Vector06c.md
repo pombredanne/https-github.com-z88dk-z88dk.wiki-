@@ -17,8 +17,8 @@
     * [x] Inverse attribute
     * [x] Bold attribute
     * [x] Underline attribute
-* [x] Lores graphics
-* [ ] Hires graphics
+* [ ] Lores graphics
+* [x] Hires graphics
 * [ ] PSG sound
 * [ ] One bit sound
 * [x] Inkey driver
@@ -27,7 +27,6 @@
 * [x] Interrupts
 * [ ] RS232
 
-_This target is currently being brought up_
 
 # Compilation
 
