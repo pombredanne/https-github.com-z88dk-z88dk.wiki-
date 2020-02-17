@@ -34,6 +34,14 @@
 
 A rom file is created suitable for loading into the Virtual Vector emulator.
 
+## Bootable disc
+
+A bootable disc can be created for programs up-to around 20k can be created with:
+
+    zcc +vector06c program.c -subtype=disk -create-app
+
+Insert the disc, wait for the blocks to appear on screen and then press F12 to start the program.
+
 # Links
 
 * [Virtual Vector](http://sensi.org/~svo/virtualvector/)
