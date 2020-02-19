@@ -37,6 +37,10 @@ Once loaded (via quick load in mame or autoload in Homelab.exe) enter the follow
 
     CALL $4300
 
+# Library notes
+
+The font is fixed in the machine ROM and switches out symbols such as square and curly brackets for accented characters.
+
 # Links
 
 * [Information](http://homelab.8bit.hu/)
