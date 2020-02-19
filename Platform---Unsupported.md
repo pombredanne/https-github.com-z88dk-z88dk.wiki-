@@ -108,8 +108,6 @@ This is a z80 based clone of the "Specialist" russian computer (in turn built ar
 [The Erik computer on the Micko's WIP blog](http://micko-wip.blogspot.it/2008_03_01_archive.html)
 
 
-### HomeLab family (Hungary)
-
 ### Fujitsu
 
 ##### FM-16 Beta
