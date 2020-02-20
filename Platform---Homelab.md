@@ -1,7 +1,9 @@
 # Hardware summary
 
+## Homelab 3/4
+
 * Z80 clone
-* 16 - 64k memory
+* 16/64k RAM
 * 64x32 character display
 
 ## Classic library support (`+homelab`)
