@@ -18,7 +18,7 @@
     * [ ] Bold attribute
     * [ ] Underline attribute
 * [x] Lores graphics
-* [ ] Hires graphics (only plot)
+* [ ] Hires graphics
 * [ ] PSG sound
 * [ ] One bit sound
 * [x] Inkey driver
