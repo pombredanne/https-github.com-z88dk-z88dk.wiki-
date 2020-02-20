@@ -41,6 +41,8 @@ Once loaded (via quick load in mame or autoload in Homelab.exe) enter the follow
 
 The font is fixed in the machine ROM and switches out symbols such as square and curly brackets for accented characters.
 
+At present only the Homelab 3/4 is supported.
+
 # Links
 
 * [Information](http://homelab.8bit.hu/)
