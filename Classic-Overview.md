@@ -54,6 +54,8 @@ The classic library additionally provides [named heap](Classic-allocation) and [
 
 The classic library supports both a 1 bit [`<sound.h>`](Classic-1-bit-sound) and a PSG [`<psg.h>`](Classic---PSG-Library) based sound interface. 
 
+Certain targets with an AY chip additionally support [WYZ Player](Classic-WYZ-Player) and VortexTracker II for playing music and sound effects.
+
 The 1 bit library defines a collection of sound effects in addition to a tone generator.
 
 # Input Library
