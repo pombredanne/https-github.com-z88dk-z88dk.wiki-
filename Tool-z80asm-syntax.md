@@ -989,7 +989,7 @@ The following error messages will be written toe the error files corresponding t
 *   "Not a relocatable file" / "Not an object file"  
     The assembler opened a supposed object file (with the proper ".obj" extension) but realised it wasn't conforming to the Z80 assembler standard object file format.  
     
-*   "Couldn't open library file"
+*   "Couldn't open library file"  
     The library file was found but couldn't be opened (probably already opened by another application resource)  
     
 *   "Not a library file"  
