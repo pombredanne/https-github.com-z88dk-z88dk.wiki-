@@ -36,6 +36,7 @@ When called with the ```-x``` option, **z80asm** builds a library containing all
 
 * [z80asm Input Format](Tool-z80asm-input-format)
 * [z80asm Object File Format](Tool-z80asm-object-file-format)
+* [z80asm Syntax](Tool-z80asm-syntax)
 
 ## Copyright
 
