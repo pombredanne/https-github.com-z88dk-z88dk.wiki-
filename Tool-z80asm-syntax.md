@@ -170,7 +170,7 @@ This option is useful if you want to produce conditional compilations. The symbo
 
     z80asm -b -DZ88 file.asm
 
-#### @<project-file> :1.3.16. Using a project file
+#### @\<project-file\> :1.3.16. Using a project file
 
 Project files defines all file names of a project. The file name standard stored in a project file obeys the operating system notation.
 
@@ -585,9 +585,7 @@ We have included the parsing and code generation of the undocumented Z80 instruc
   
     SLL  r   ; r = A,B,C,D,E,H,L  
     SLL  (HL)
-
     SLL  (IX+d)
-
     SLL  (IY+d)
 
 SLL (Shift Logical Left)
