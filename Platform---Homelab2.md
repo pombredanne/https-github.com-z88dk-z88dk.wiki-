@@ -3,7 +3,7 @@
 ## Homelab 2
 
 * Z80 @ 4Mhz
-* 16 RAM
+* 16k RAM
 * 40x25 character display
 
 ## Classic library support (`+homelab2`)
