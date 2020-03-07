@@ -35,7 +35,7 @@
 
 A .htp file will be generated suitable for loading into Mame.
 
-Once loaded (via quick load in mame or autoload in Homelab.exe) enter the following command:
+Once loaded (via quick load in mame) enter the following command:
 
     CALL 17152
 
