@@ -1,12 +1,12 @@
 # Hardware summary
 
-## Homelab 3/4
+## Homelab 2
 
-* Z80 clone @ 4Mhz
-* 16/64k RAM
-* 64x32 character display
+* Z80 @ 4Mhz
+* 16 RAM
+* 40x25 character display
 
-## Classic library support (`+homelab`)
+## Classic library support (`+homelab2`)
 
 * [ ] Native console output
 * [ ] Native console input
@@ -16,7 +16,7 @@
     * [ ] UDG support
     * [ ] Paper colour
     * [ ] Ink colour (Colour Ace only)
-    * [ ] Inverse attribute
+    * [x] Inverse attribute
     * [ ] Bold attribute
     * [ ] Underline attribute
 * [x] Lores graphics
@@ -31,17 +31,19 @@
 
 # Compilation
 
-    zcc +homelab program.c -create-app
+    zcc +homelab2 program.c -create-app
 
-A .htp file will be generated suitable for loading into Mame or Homelab emulator running in Homelab 4 mode.
+A .htp file will be generated suitable for loading into Mame.
 
 Once loaded (via quick load in mame or autoload in Homelab.exe) enter the following command:
 
-    CALL $4300
+    CALL 17152
 
 # Library notes
 
-The font is fixed in the machine ROM and switches out symbols such as square and curly brackets for accented characters.
+The font is fixed in the machine ROM and only supports upper-case characters. Many graphical
+characters are available within the character set.
+
 
 # Links
 

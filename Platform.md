@@ -32,6 +32,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Excalibur 64](Platform---Excalibur64) | No | No | 40x25, 80x25 | No | No | No |
 [Galaksija](Platform---Galaksija)| 32x16 (B&W) | 32x16 (B&W) | 32x16 + 32x26 (Gal+) | 64x48 + 256x208 (Gal+)| No | 1 bit* | (via tape output) | 
 [Hanimex Pencil II](Platform--Hanimex-Pencil-II)| No | Yes | 32x24 | 256x192 | No | PSG |
+[Homelab 2](Platform---Homelab2) | No | No | 40x25 | 80x50 | No | No |
 [Homelab 4](Platform---Homelab) | No | No | 64x32 | 128x64 | No | No |
 [Hübler/Evert-MC](Platform--HueblerEvertMC) | 64x24 | No | 64x24 | 64x24 | No | No |
 [Hübler Grafik-MC](Platform--HueblerGrafikMC) | 32x24 | No | 32x32 | 256x256 | No | No |
