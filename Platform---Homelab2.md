@@ -46,7 +46,7 @@ The right shift key is mapped as control and the left shift key as shift. The de
 The font is fixed in the machine ROM and only supports upper-case characters. Many graphical
 characters are available within the character set.
 
-
+![](images/platform/homelab2_charset.png)
 
 
 # Links
