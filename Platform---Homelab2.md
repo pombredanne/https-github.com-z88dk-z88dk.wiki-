@@ -41,8 +41,12 @@ Once loaded (via quick load in mame) enter the following command:
 
 # Library notes
 
+The right shift key is mapped as control and the left shift key as shift. The delete key is mapped as shift+0
+
 The font is fixed in the machine ROM and only supports upper-case characters. Many graphical
 characters are available within the character set.
+
+
 
 
 # Links
