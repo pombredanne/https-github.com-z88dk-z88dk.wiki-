@@ -12,7 +12,7 @@
 * [8080 Support](Classic-8080)
 * [Memory Allocation](Classic-allocation)
 * [Retargetting](Classic--Retargetting)
-* [Building the libraries](Classic:-Building-the-libraries)
+* [Building the libraries](Classic-Building-the-libraries)
 * [Pragmas](Classic--Pragmas)
 * [Maths Libraries](Classic--Maths-Libraries)
 
