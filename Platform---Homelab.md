@@ -39,6 +39,10 @@ Once loaded (via quick load in mame or autoload in Homelab.exe) enter the follow
 
     CALL $4300
 
+To run a program with the 64k memory configuration it may be necessary to add the following option:
+
+    -pragma-define:REGISTER_SP=0x8000
+
 # Library notes
 
 The font is fixed in the machine ROM and switches out symbols such as square and curly brackets for accented characters.
