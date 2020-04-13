@@ -33,7 +33,7 @@ _This port is currently being brought up and hasn't hit master/nightly builds ye
 
 # Compilation
 
-    zcc +zxn program.c -lndos --hardware-keyboard -create-app
+    zcc +zxn program.c -clib=classic -lndos -create-app
 
 A .nex file will be created suitable for loading on the real hardware 
 
@@ -64,7 +64,12 @@ The colours for the hires mode can modified by OR (|) the following values with 
 
 ## Tilemap mode
 
-When running in tilemap mode, z88dk uses the following address by default: Tile definitions = $4c00, tilemap = $6c00. However, the code reads the registers to determine the appropriate addresses so your application can repoint as necessary.
+z88dk supports the Next tilemap screen mode. When using this screen mode the entire display is taken over and the following tilemap addresses are used: Tile definitions = $4c00, tilemap = $6c00. On startup, the palette is redefined to support the screen colour defined in `<conio.h>`.
 
+When the tilemap is configured with attributes (i.e mode 64, 66) then changing the ink colour, for example using  `textcolor()` will result in the character being printed in that colour.
+
+When using the `IOCTL_GENCON_SET_FONT32` and `IOCTL_GENCON_SET_UDGS` ioctl values, the 8x8 characters are copied to the tile definitions in monochrome using colour indices of 0 for background and `CLIB_TILES_PALETTE_SET_INDEX` (default value 1) as set pixels.
+
+The console driver supports your application changing the addresses for the tile definitions and tilemaps.
 
 
