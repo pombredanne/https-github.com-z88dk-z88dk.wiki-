@@ -62,7 +62,7 @@ The 1 bit library defines a collection of sound effects in addition to a tone ge
 
 Hardware keyboard scanning bypasses the target's ROM and directly polls the keyboard. The keyboard routines `in_LookupKey` and `in_Keypressed` handle multiple keys being pressed concurrently and as such are ideal for portable games programming. The various routines are defined in [`<input.h>`](Classic---Input-library)
 
-On ports where it is available, you can switch stdin to non-firmware reading routines using the option `-pragma-redirect:fgetc_cons=fgetc_cons_stdin` or the command line alias `--hardware-keyboard`
+On ports where it is available, you can switch stdin to non-firmware reading routines using the option `-pragma-redirect:fgetc_cons=fgetc_cons_inkey` or the command line alias `--hardware-keyboard`
 
 ## Joystick support
 
