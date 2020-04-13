@@ -18,6 +18,8 @@ Extended mode:
 
     zcc  +ts2068 -create-app program.c
 
+Omitting the -subtype option causes CRT_ORG_CODE to assigned the value 40000
+
 -or-
 
     zcc  +ts2068 -clib=ansi -create-app program.c
@@ -53,6 +55,10 @@ The colours for the hires mode can modified by OR (|) the following values with 
 | 0x20 | Green on magenta |
 | 0x30 | Yellow on blue |
 | 0x38 | White on black |
+
+## Graphics
+
+The graphics library is now integrated and supports all graphics modes, only change the screen mode using `console_ioctl()` - the `ts_vmod()` function cannot update the appropriate variable.
 
 
 ### Links
