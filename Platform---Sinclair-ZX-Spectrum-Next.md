@@ -34,7 +34,7 @@ The classic `+zxn` port is based on a merge of the `+zx` and `+ts2068` ports wit
 
 # Compilation
 
-    zcc +zxn program.c -clib=classic -lndos -create-app
+    zcc +zxn program.c -clib=classic -lndos -create-app -pragma-define:REGISTER_SP=65535
 
 A .nex file will be created suitable for loading on the real hardware or in an emulator.
 
@@ -72,4 +72,3 @@ When the tilemap is configured with attributes (i.e mode 64, 66) then changing t
 When using the `IOCTL_GENCON_SET_FONT32` and `IOCTL_GENCON_SET_UDGS` ioctl values, the 8x8 characters are copied to the tile definitions in monochrome using colour indices of 0 for background and `CLIB_TILES_PALETTE_SET_INDEX` (default value 1) as set pixels.
 
 The console driver supports your application changing the addresses for the tile definitions and tilemaps.
-
