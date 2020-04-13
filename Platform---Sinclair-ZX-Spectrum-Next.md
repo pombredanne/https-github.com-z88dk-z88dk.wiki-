@@ -69,6 +69,8 @@ z88dk supports the Next tilemap screen mode. When using this screen mode the ent
 
 When the tilemap is configured with attributes (i.e mode 64, 66) then changing the ink colour, for example using  `textcolor()` will result in the character being printed in that colour.
 
+_Note:_ The font isn't automatically copied when switching to tilemap modes - you will need to do this programatically using `console_ioctl()` with the argument `IOCTL_GENCON_SET_FONT32`.
+
 When using the `IOCTL_GENCON_SET_FONT32` and `IOCTL_GENCON_SET_UDGS` ioctl values, the 8x8 characters are copied to the tile definitions in monochrome using colour indices of 0 for background and `CLIB_TILES_PALETTE_SET_INDEX` (default value 1) as set pixels.
 
 The console driver supports your application changing the addresses for the tile definitions and tilemaps.
