@@ -20,7 +20,7 @@
     * [x] Inverse attribute
     * [x] Bold attribute
     * [x] Underline attribute
-* [ ] Lores graphics
+* [x] Lores graphics
 * [x] Hires graphics
 * [x] PSG sound
 * [x] One bit sound
@@ -37,6 +37,10 @@ The classic `+zxn` port is based on a merge of the `+zx` and `+ts2068` ports wit
     zcc +zxn program.c -clib=classic -lndos -create-app
 
 A .nex file will be created suitable for loading on the real hardware or in an emulator.
+
+# File IO
+
+File operations are available via `<stdio.h>` (so `fopen()` and friends) and `<fcntl.h>` (so `open()`) by linking with the `-lesxdos` library.
 
 # Generic console screen modes
 
@@ -74,3 +78,7 @@ _Note:_ The font isn't automatically copied when switching to tilemap modes - yo
 When using the `IOCTL_GENCON_SET_FONT32` and `IOCTL_GENCON_SET_UDGS` ioctl values, the 8x8 characters are copied to the tile definitions in monochrome using colour indices of 0 for background and `CLIB_TILES_PALETTE_SET_INDEX` (default value 1) as set pixels.
 
 The console driver supports your application changing the addresses for the tile definitions and tilemaps.
+
+## Graphics
+
+The classic graphics operations are supported in all available screen modes. In tilemap mode you must call `zxn_create_tilemap_graphics()` from `<arch/zxn.h>` to setup the lores graphics set prior to plotting anything.
