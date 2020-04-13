@@ -34,7 +34,7 @@ The classic `+zxn` port is based on a merge of the `+zx` and `+ts2068` ports wit
 
 # Compilation
 
-    zcc +zxn program.c -clib=classic -lndos -create-app -pragma-define:REGISTER_SP=65535
+    zcc +zxn program.c -clib=classic -lndos -create-app
 
 A .nex file will be created suitable for loading on the real hardware or in an emulator.
 
