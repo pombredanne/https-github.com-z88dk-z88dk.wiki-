@@ -6,7 +6,6 @@
 * 1,2 Mb RAM
 * Audio: AY-3-8192 x3
 
-_This port is currently being brought up and hasn't hit master/nightly builds yet_
 
 ## Classic library support (+zxn)
 
@@ -30,6 +29,8 @@ _This port is currently being brought up and hasn't hit master/nightly builds ye
 * [x] File I/O
 * [x] Interrupts
 * [ ] RS232
+
+The classic `+zxn` port is based on a merge of the `+zx` and `+ts2068` ports with some extensions to support the new hardware. It's still under development and more features will be added.
 
 # Compilation
 
@@ -71,5 +72,4 @@ When the tilemap is configured with attributes (i.e mode 64, 66) then changing t
 When using the `IOCTL_GENCON_SET_FONT32` and `IOCTL_GENCON_SET_UDGS` ioctl values, the 8x8 characters are copied to the tile definitions in monochrome using colour indices of 0 for background and `CLIB_TILES_PALETTE_SET_INDEX` (default value 1) as set pixels.
 
 The console driver supports your application changing the addresses for the tile definitions and tilemaps.
-
 
