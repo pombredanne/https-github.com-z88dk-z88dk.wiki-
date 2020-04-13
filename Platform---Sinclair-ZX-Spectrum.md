@@ -227,8 +227,9 @@ parameters.
 
 Characters greater than 127 are interpreted as udgs in 32 column mode.
 
-The screen scrolls when line 24 is "hit", the routine used is in the
-48k ROM.
+It is recommended that the utility functions in `<conio.h>` are used to change text colours etc. Colours are indexed as per the colours in `<conio.h>`, to switch to native colour indices you can add the following option to the compile: `-pragma-define:CLIB_CONIO_NATIVE_COLOUR=1`
+
+The screen scrolls when line 24 is "hit", the routine used is in the 48k ROM.
 
 #### Fonts
 
