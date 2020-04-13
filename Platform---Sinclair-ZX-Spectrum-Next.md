@@ -35,7 +35,7 @@ _This port is currently being brought up and hasn't hit master/nightly builds ye
 
     zcc +zxn program.c -clib=classic -lndos -create-app
 
-A .nex file will be created suitable for loading on the real hardware 
+A .nex file will be created suitable for loading on the real hardware or in an emulator.
 
 # Generic console screen modes
 
