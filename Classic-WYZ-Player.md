@@ -8,6 +8,8 @@ The following targets support interrupt based playing:
 
 - MSX
 - ZX Spectrum
+- TS2068
+- ZX Spectrum Next
 - Nichibutsu My Vision
 - Bandaivision SV8000 (untested)
 
