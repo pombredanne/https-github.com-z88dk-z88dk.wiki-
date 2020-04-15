@@ -32,11 +32,17 @@
 
 The classic `+zxn` port is based on a merge of the `+zx` and `+ts2068` ports with some extensions to support the new hardware. It's still under development and more features will be added.
 
-# Compilation
+# Compilation (RAM programs)
 
     zcc +zxn program.c -clib=classic -lndos -create-app -subtype=nex
 
 A .nex file will be created suitable for loading on the real hardware or in an emulator.
+
+# Compilation (DOT commands)
+
+    zcc +zxn program.c -clib=classic -lndos -create-app -subtype=dot -o program
+
+The file PROGRAM will be created which is a dot command suitable for launching from the Command Line in NextOS. DOT commands are limited to 8k in size.
 
 # File IO
 
