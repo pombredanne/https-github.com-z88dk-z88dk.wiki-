@@ -42,7 +42,7 @@ A .nex file will be created suitable for loading on the real hardware or in an e
 
     zcc +zxn program.c -clib=classic -lndos -create-app -subtype=dot -o program
 
-The file PROGRAM will be created which is a dot command suitable for launching from the Command Line in NextOS. DOT commands are limited to 8k in size.
+The file PROGRAM will be created which is a dot command suitable for launching from the Command Line in NextOS. DOT commands are limited to 8k in size. For DOT commands it's recommended to use the ROM printer which can be enabled with the option `-pragma-redirect:fputc_cons=fputc_cons_rom_rst`
 
 # File IO
 
