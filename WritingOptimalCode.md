@@ -141,11 +141,24 @@ Disabling stdio can be useful when memory is tight. To disable it add the option
 printf() -> printk()
 getchar() -> fgetc_cons()
 putchar() -> fputc_cons()
+puts() -> puts_cons()
 ```
 
 ## Switch to an alternate console driver
 
 Depending on the target, the console driver may be consuming a large proportion of program space. In particular, the `ansiterminal` is quite large. In general the option `-pragma-redirect:fputc_cons=fputc_cons_native` will select the native console driver which is usually the most compact. However, the native driver is usually dependent on the targets ROM and may not offer sufficient formatting controls for your program, as a compromise, if the generic console is available for your machine `-pragma-redirect:fputc_cons=fputc_cons_generic` will offer portable formatting controls and typically consume around 3-400 bytes.
+
+## Disable unused graphics modes
+
+Several ports support multiple graphics mode, disabling the modes you don't use can help save memory. More details can be found on the port page if supported, or raise an issue and we'll add some options to disable them.
+
+## Link to the dummy fcntl library
+
+Some ports implicitly link to functioning fcntl functions. If you don't use them then they can be replaced with non-functional stubs by adding `-lndos` to the compile line.
+
+## Switch maths library implementations
+
+The different maths libraries have differing memory and performance profiles depending on what you're doing. Switching to libraries that utilise firmware floating point can save up to 2-3k of memory.
 
 ## Don't initialise BSS memory
 
