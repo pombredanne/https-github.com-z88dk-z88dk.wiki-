@@ -21,6 +21,7 @@ The list of current targets can be found in [[http://z88dk.cvs.sourceforge.net/v
 To make zcc aware of the target a new file "temp.cfg" must be added to this directory:
 
 **z88dk/lib/config/temp.cfg**
+
 ```
 #
 # Target configuration file for z88dk
@@ -49,7 +50,7 @@ In the file above, the target name used is "temp" so for your own target, you'll
 
 #### 2. Create the Target Directory Structure and Add Initial Contents
 
-All information concerning a target for the new C library is located in [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/|z88dk/libsrc/_DEVELOPMENT/target]].  Unfortunately the CVS view of the repository on the internet tends to show dead directories mixed with current ones and this is something that will have to be coped with.  The list of currently supported targets are **cpm**, **embedded** and **zx** and you can see that each of these have their own directory here.  **m** is a pseudo-target used to compile the floating point library.
+All information concerning a target for the new C library is located in https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/target.  **m** is a pseudo-target used to compile the floating point library.
 
 Create a new directory for your target using its config name.  In this example, that's "**z88dk/libsrc/_DEVELOPMENT/target/temp**".
 
@@ -57,6 +58,8 @@ Inside the new temp directory, {{libnew:z88dk-target-temp.zip|unzip this package
 
 Here is a brief description of each file and subdirectory:
 
+|Type   | Name         | Description   |
+|---|----------|----|
 | d | driver   | contains the target's device drivers  |
 | d | library  | contains list files specifying the contents of the target's C library  |
 | f | library/temp_sccz80.lst  | lists contents of the target's C library when sccz80 is used as compiler  |
@@ -81,6 +84,8 @@ When the target's C library is built, the list of files assembled into the libra
 
 The new C library's source code is located just above the target directories in [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/|z88dk/libsrc/_DEVELOPMENT]].  Just to rule out the few dead directories, the currently valid source code directories are listed below.
 
+| Directory | Description |
+|---|---|
 | adt  | Abstract data types:  arrays, vectors, stacks, queues, lists  |
 | alloc  | Memory allocators:  balloc (block allocator), heap (malloc), obstack  |
 | arch  | Architecture-specific code  |
@@ -308,6 +313,8 @@ In the CRT written here, it is possible that no code will be generated until aft
 
 Applicable CRT options:
 
+| | |
+|---|---|
 | %%__register_sp%%  | if -1 the user is asking not to change SP else the user is supplying an initial stack pointer value.  |
 
 Some hosts will set the stack pointer before starting a machine code program so it can make sense not to alter the stack pointer value.
@@ -321,15 +328,17 @@ See lines [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPM
 
 Applicable CRT options:
 
+| | |
+|---|---|
 | %%__crt_enable_commandline%%  | if non-zero the user is requesting the command line to be parsed and argc + argv to be generated.  |
 
-If the target does not have a means to communicate a command line, a course of action you can take is to generate an empty command line.  See [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/zx/startup/zx_crt_ram.m4?revision=1.7&view=markup|lines 118-142 of this CRT]] for an example.
+If the target does not have a means to communicate a command line, a course of action you can take is to generate an empty command line.  See [[https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/zx/zx_crt.asm.m4|lines 118-142 of this CRT]] for an example.
 
 The library supplies two functions to help parse command lines:
 
-  * [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/l/z80/l_command_line_parse.asm?content-type=text%2Fplain|l_command_line_parse]]  This function is intended for parsing command lines from a region in memory that is likely to be overwritten during program execution.  An example is the cp/m target which leaves the command line at address 0x80 which also happens to be the location of the primary FCB.  The first time a file is read or written from disk, the command line will be overwritten.  What this function does is copy the words to the stack as they are parsed so that the command line will be available throughout program execution.  See [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/cpm/startup/cpm_crt.m4?revision=1.7&view=markup|lines 110-164 of this CRT]] for an example.
+  * [[https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/l/z80/l_command_line_parse.asm|l_command_line_parse]]  This function is intended for parsing command lines from a region in memory that is likely to be overwritten during program execution.  An example is the cp/m target which leaves the command line at address 0x80 which also happens to be the location of the primary FCB.  The first time a file is read or written from disk, the command line will be overwritten.  What this function does is copy the words to the stack as they are parsed so that the command line will be available throughout program execution.  See [[https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/cpm/cpm_crt.asm.m4|lines 110-164 of this CRT]] for an example.
 
-  * [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/l/z80/l_command_line_parse_in_place.asm?content-type=text%2Fplain|l_command_line_parse_in_place]]  This function is intended for parsing command lines from a region in memory that will not be overwritten during program execution.  The command line will be parsed into words in place, with terminating NUL bytes written into the command line as needed.  See [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/symbos/startup/symbos_crt.m4?revision=1.2&view=markup|lines 162-194 of this CRT]] for an example.  At the time of writing this CRT is only partially implemented.
+  * [[https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/l/z80/l_command_line_parse_in_place.asm|l_command_line_parse_in_place]]  This function is intended for parsing command lines from a region in memory that will not be overwritten during program execution.  The command line will be parsed into words in place, with terminating NUL bytes written into the command line as needed. 
 
 Both these functions stop parsing when a file re-director ("<" or ">") is encountered.  In the future this part of the command line will be interpretted to redirect i/o to files.  Neither function currently groups quoted strings into a single argument.  This will also change in a future update.
 
@@ -457,12 +466,14 @@ The example CRT was written assuming an ORG address that is not zero.  If the OR
 
 Applicable CRT options:
 
+| | |
+|---|---|
 | %%__crt_enable_rst%%  | the lower eight bits indicate which rst locations are to be implemented by user code.  |
 | %%__crt_enable_nmi%%  | non-zero indicates the nmi will be implemented by user code.  |
 
 Further discussion of these CRT options can be found [[#crt_configuration|here]].
 
-The embedded target has a [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/embedded/startup/embedded_crt_rom.m4?revision=1.11&view=markup|CRT which will generate the z80 restarts]] if the ORG address is 0.  The CRT is written to apply to both 0 ORG and non-zero ORG so there is conditional code present for the 0 ORG case.  You can see how the restarts were implemented by examining that code.
+The embedded target has a [[https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/z80/z80_crt.asm.m4|CRT which will generate the z80 restarts]] if the ORG address is 0.  The CRT is written to apply to both 0 ORG and non-zero ORG so there is conditional code present for the 0 ORG case.  You can see how the restarts were implemented by examining that code.
 
 Congratulations on completing your first CRT.  Now it's time to **generate the .asm file that will be used in compiles**:
 
@@ -689,16 +700,18 @@ Deliberately, stdio is not the only means to read/write to the screen or devices
 
 The target's device drivers are located in **z88dk/libsrc/_DEVELOPMENT/target/TARGETNAME/driver**.
 
-^  d  ^ driver  ^ contains the target's device drivers  ^
-^  f  ^ driver/driver.lst  ^ lists source files of all drivers  ^
-^  d  ^ driver/character  ^ contains character device drivers  ^
+| Type | Name | Description |
+|---|---|---|
+|  d  | driver  | contains the target's device drivers  |
+|  f  | driver/driver.lst  | lists source files of all drivers  |
+|  d  | driver/character  | contains character device drivers  |
 |  d  | driver/character/cpm_00_input_reader  | directory holding "cpm_00_input_reader" driver's message implementation  |
 |  f  | driver/character/cpm_00_input_reader.asm  | device driver "cpm_00_input_reader"  |
 |  f  | driver/character/cpm_00_input_reader.lst  | lists all source files related to "cpm_00_input_reader"  |
 |  f  | driver/character/cpm_00_input_reader.m4  | macro for statically instantiating the "cpm_00_input_reader" driver in the CRT  |
-^  d  ^ driver/disk  ^ contains disk device drivers  ^
-^  d  ^ driver/terminal  ^ contains terminal device drivers  ^
-^  d  ^ driver/raw  ^ contains raw device drivers  ^
+|  d  | driver/disk  | contains disk device drivers  |
+|  d  | driver/terminal  | contains terminal device drivers  |
+|  d  | driver/raw  | contains raw device drivers  |
 
 The files corresponding to an example "cpm_00_input_reader" driver are in the un-highlighted portion above.  The driver has a directory where its message functions reside.  The driver itself is the .asm file, the .lst file lists all source files connected to the driver and the .m4 is the instantiation macro for the CRT.
 
@@ -716,14 +729,14 @@ The driver code itself should be placed in the most appropriate code section:
 
 Once the device driver is ready, the target's libraries will need to be rebuilt by running "Winmake TARGETNAME" or "make TARGET=TARGETNAME" from z88dk/libsrc/_DEVELOPMENT.
 
-The [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/cpm/|cp/m target's driver directory]] can be used as a model.
+The [[https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/target/cpm/|cp/m target's driver directory]] can be used as a model.
 
 ### The Raw Device Driver
 
 On entry to a device driver, IX points at a file descriptor data structure (aka FDSTRUCT).  This data structure contains fields used by the library at the top but it can be extended by any number of bytes by your driver.  What is stored there is up to you.
 
-^  FDSTRUCT                     ^^^
-^  Offset  ^ Name      ^ Purpose  ^
+|  FDSTRUCT Offset  | Name      | Purpose  |
+|---|---|---|
 |  0       | JP        | jump instruction (195)  |
 |  1..2    | driver    | address of driver  |
 |  3       | flags     | F0D0 0TTT (F=1 if filter, D=0 if stdio handles unget, TTT=ioctl message category)  |
@@ -755,8 +768,10 @@ In **ioctl_f0** and **ioctl_f1** (offsets 6 and 7).  In an effort to reduce bina
 
 **Stdio communicates with the driver by sending messages to it**.  The message type is held in the "A" register while other registers will hold parameters.  Drivers are therefore structured like switch statements, testing the value of "A" and jumping to implementation code if a match is found.  Not all stdio messages have to be implemented.  If your driver only does output it can ignore input related messages.  If you don't care to support ioctls you can ignore those messages too.  Ignoring a message will normally mean exiting from the end of your switch statement via the library's **enotsup_zc** function.  "enotsup_zc" will set errno=ENOTSUP, hl=0 and carry flag set.  The carry flag being set indicates an error to the caller.  At FILE* level this will place the FILE structure in an error state that will prevent any further i/o until the error is cleared.  At POSIX level, the caller will only be informed that an error occurred; further i/o is not actually prevented so if you want that behaviour you will have to implement that in your driver.
 
-^  STDIO MESSAGES                         ^^^
-^ A=  ^  Type  ^ Request                    ^
+STDIO Messages:
+
+| A=  |  Type  | Request                    |
+|---|---|---|
 | **STDIO_MSG_PUTC**  |  **Out**  | **Write a single char to the stream multiple times.**  |
 |  IN:| E'=char code, BC'=HL=number of chars to output > 0  ||
 |  OUT:| HL=num chars successfully written, carry set if error  ||
@@ -791,7 +806,7 @@ In **ioctl_f0** and **ioctl_f1** (offsets 6 and 7).  In an effort to reduce bina
 |  OUT:| carry set on error (likely ignored)  ||
 |  NOTE:| A flush message is always sent ahead of close.  Deallocate any resources this driver has allocated.  ||
 
-These messages, error numbers and library ioctls are defined in [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/clib_constants.inc?content-type=text%2Fplain|z88dk/libsrc/_DEVELOPMENT/target/clib_constants.inc]] which is included into every CRT.
+These messages, error numbers and library ioctls are defined in https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/clib_const.m4 which is included into every CRT.
 
 While writing device drivers or any other code with z88dk, it can be very helpful to be familiar with the library code supplied by z88dk.  Using it can keep binary sizes down and speed up development time substantially.  The root source directory is **z88dk/libsrc/_DEVELOPMENT**.  Many of the subdirectories will have familiar names as they implement portions of the C standard.  Two other important subdirectories might be "**l**" which contains many small subroutines and "**error**" which provides exit points for functions.  These exit points can be used to balance the stack and return after optionally setting errno and a return value appropriately.
 
@@ -839,7 +854,7 @@ character_00_input:
 
 Drivers are allowed to change any registers except ix and iy unless otherwise documented.
 
-The above is an abstract base class driver implemented in the library.  The entire driver can be found in [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/drivers/character/character_00/input/|z88dk/libsrc/_DEVELOPMENT/drivers/character/character00/input]].
+The above is an abstract base class driver implemented in the library.  The entire driver can be found in https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/drivers/character/character_00/input.
 
 If your driver properly ignores messages that do not apply and implements messages from the list above that do apply, your driver is finished.  This is the .asm file mentioned in the last section.  The message functions are placed in the driver's subdirectory and the list file will list all of the driver's source files.  The last piece is the .m4 macro that will allow the driver to be instantiated as a file in the CRT.  This is discussed in the **Driver Instantiation** topic below.
 
