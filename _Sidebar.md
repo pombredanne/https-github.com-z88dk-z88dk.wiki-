@@ -51,7 +51,7 @@
 * [Calling Conventions](CallingConventions)
 * [The Stack frame (Parameter passing)](The-Stack-Frame)
 * [Sharing Code by Creating Libraries](creating_libraries)
-* [Inline Assembler](inlineasm)
+* [Inline Assembler](InlineAssembler)
 
 ## Tools
 
