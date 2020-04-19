@@ -11,6 +11,20 @@ When in trouble try renaming your files.
 
 Additionally, avoid program/module names beginning with numbers or symbols.
 
+### sccz80 will sometimes demote longs to ints in mixed expressions
+
+To avoid this problem use explicit casting rather than rely on expected implicit conversions.
+
+```
+long a, c;
+int b;
+
+c = a + b;          // may result in improper demotion of long to int before the addition
+c = a + (long)(b);  // will always work
+```
+
+It's a good coding practice to explicitly cast types where type conversion is required.
+
 ### Expression Folding
 
 Expressions are evaluated left to right, and no folding is applied, as a result ''(1 + j + 3)'' will generate bulkier code than ''( j + 1 + 3 )''.
