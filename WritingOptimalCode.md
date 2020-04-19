@@ -102,9 +102,21 @@ Will generate worse code than:
 
 The post-increment operator requires the compiler to decrement the value, not all cases of this can be eliminated, so in general prefer the pre-increment version.
 
-## When possible use global variables (sccz80)
+## When possible use static variables (sccz80/zsdcc)
 
-Access to local variables is slightly slower and the generated code becomes slightly bigger. However...
+Use static variables when reasonable. The z80 is not very good at stack-relative addressing. Neither of the two main methods (using an index register set to sp and offsetting from that, computing offsets from sp using hl) leads to particularly compact or efficient z80 code. A large improvement in code size and speed can be had from changing local variables to statics. Keep in mind that doing this means functions will no longer be reentrant. For sdcc, unsigned char variables and frequently accessed small variables can be an exception to this advice
+
+## Avoid long lists of function parameters (sccz80/zsdcc)
+
+Function parameters are located on the stack and, like the local variables mentioned in the last point, cannot be efficiently addressed by the z80. If long lists are unavoidable, chances are the function is also long. In these circumstances it can make sense to copy function parameters into local static variables before being used by the function.
+
+## Use types of appropriate size (sccz80/zsdcc)
+
+The z80 can do 8-bit and 16-bit arithmetic efficiently. 32-bit arithmetic involves many more cycles.
+
+## Demote larger types to smaller types as soon as possible (sccz80/zsdcc)
+
+If the program performs operations on large types and then stores results into smaller types, try to demote the larger types to the smaller type and carry out the operations on that.
 
 ## Declare most frequently used variables last (sccz80)
 
@@ -121,11 +133,19 @@ for each function call. See [calling conventions](CallingConventions) for more d
 
 ## Use `__z88dk_callee` calling convention (sccz80, sdcc)
 
-Most of the z88dk library is usese the 'FASTCALL' or 'CALLEE' modes to save memory and execution time. See [calling conventions](CallingConventions) for more details.
+Most of the z88dk library is usese the `__z88dk_fastcall` or `__`z88dk_callee` modes to save memory and execution time. See [calling conventions](CallingConventions) for more details.
+
+## Compute things once and store the result (sccz80/zsdcc)
+
+It's not uncommon for modern code to repeatedly recompute expressions that evaluate to the same value. A common place where this is done is in the conditional of loops. Removing redundant calculations will not only speed up code, but it will give the compilers a better chance at generating better code.
+
+## Assign data to appropriate sections (sccz80/zsdcc)
+
+This applies to rom targets. Non-zero initial data must have a copy stored in rom so that the crt can initialize ram at startup. Consider two different declarations of a large array holding the text of a book. One is done with 'char book[] = ”…”;' and the other with 'char *book = ”…”;'. The array implies that the book data is modifiable so it is assigned to the DATA section and two copies will be present at runtime – the stored copy in rom and the active copy in ram. The second declaration stores the book text in a string constant. String constants are read-only so it will be assigned to CODE/RODATA and at runtime only one copy of the string will exist in rom, freeing up ram in comparison to the other declaration. Judicious use of the const qualifier can also affect whether data is stored in the DATA section or the CODE/RODATA section. Keep in mind that the stored DATA section can be compressed so if there is more ram than rom available, it may be preferable to store in the DATA section even though two copies would be present at runtime (the rom would contain a much smaller compressed copy)
 
 ## Do not reinvent the wheel
 
-The z88dk function libraries are mostly written in assembly code; this helps saving a lot of memory and execution time; avoid using an equivalent C implementation of the existing functions, if any.
+The z88dk function libraries are mostly written in assembly code; this helps saving a lot of memory and execution time; avoid using an equivalent C implementation of the existing functions, if any. If you think your similar c or asm code is better suited to the task and will perform faster or will be smaller, test it.
 
 ## Split your libraries in modules
 
@@ -168,3 +188,18 @@ By default, the classic library will initialise BSS memory to 0 on startup. You 
 ## Disable/reduce the atexit stack
 
 If your program never exits or you don't register atexit() functions then you can adjust the size of the atexit() stack using: `-pragma-define:CLIB_EXIT_STACK_SIZE=0` or any size that you choose.
+
+# Newlib
+
+## Ensure that the minimal crt required is selected
+
+Targets normally supply more than one crt option that can be selected by number on the compile line with ”-startup=n”. These crts vary in options that can consume different amounts of memory. In particular, if your program does not use stdin, stdout or stderr, choose a crt that does not instantiate any devices at startup.
+Opt out of stdio if it's not needed. Use of printf and scanf implies that terminal i/o drivers are required that implement line editing, windows, terminal emulation and so on. This is a lot of extra code that is not always required for all projects. Most embedded applications provide their own i/o subroutines and communicate directly with devices. In these cases, a full-blown stdio implementation is wasted. By selecting a crt that does not instantiate terminal devices, programs will not have that extra code included. Keep in mind that they can still use functions from the sprintf and sscanf families to operate on buffers read from or written to devices. They can also use memstreams to do file i/o to memory buffers.
+
+## Modify the crt to change font
+
+If the program doesn't use the default font supplied by the crt, change it so that the default font is not stored as part of the binary.
+
+## Configure the library and crt
+
+Configure the library to choose a speed and space compromise suitable to your project. In particular, opt out of individual printf and scanf converters that your program does not use. Disable unused options in the crt that occupy memory space in the resulting binary. In particular, eliminate/resize the malloc heap and stdio heap if they are not needed.
