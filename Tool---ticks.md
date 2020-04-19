@@ -4,17 +4,17 @@ Ticks is a command line CPU emulator that can be used for testing and debugging 
 
 In it's simplest case, launch ticks with:
 
-    ticks [binary file]
+    z88dk-ticks [binary file]
 
 It will run for around 10,000,000 ticks which may not be sufficient, to increase the time it will run use the `-w` option:
 
-    ticks -w X [binary file]
+    z88dk-ticks -w X [binary file]
 
 Where X counts the number of 400,000,000 cycles to wait before exiting.
 
 To specify command line options (which are picked up main in the `argc` and `argv` parameters invoke ticks as follows:
 
-    ticks [binary file] -- [argv0] [argv1]
+    z88dk-ticks [binary file] -- [argv0] [argv1]
 
 ## CPU Features
 
@@ -26,7 +26,7 @@ When emulating the ZX Next cpu, ZX Next style MMU paging is available.
 
 Ticks provides a command line debugger, this can be launched as follows:
 
-    ticks -d -x [map file] [binary file]
+    z88dk-ticks -d -x [map file] [binary file]
 
 Specify `-x [map file]` is optional, however specifying it allows symbolic debugging. Ticks will then sit at address 0 waiting for an input from you. Type `help` to view the available commands.
 
