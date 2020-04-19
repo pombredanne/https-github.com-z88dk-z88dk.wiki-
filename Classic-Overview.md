@@ -14,6 +14,10 @@ Originally, the classic library and new library were completely different code b
 * Classic provides the cross platform libraries detailed below
 * Classic tends to be tuned at link time, newlib at library build time
 
+## Selecting the compiler
+
+By default, classic builds use sccz80 as the compiler, if you wish to compile with zsdcc then you must add the option `-compiler=sdcc`.
+
 ## Generic console (vt52)
 
 The [generic console](Classic-GenericConsole) console driver provides a uniform set of escape codes to control text positioning, attributes etc. It is integrated into `<stdio.h>` and if not enabled as the default can be selected with the command line `--generic-console`.
