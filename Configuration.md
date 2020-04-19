@@ -14,6 +14,8 @@ The asm files contain the active configuration.
 
 Contains general library settings.
 
+| Name | Description |
+|---|---|
 | CLIB_OPT_MULTITHREAD    | Leave disabled.  The library does not support multi-threading yet. |
 | CLIB_OPT_IMATH          | Choose between small and fast integer library. |
 | CLIB_OPT_IMATH_FAST     | If the fast integer library is selected you can enable leading zero elimination and loop unrolling.  Loops are unrolled a maximum of eight times.  The LIA-1 option is not fully supported by the compilers at this time. |
@@ -41,6 +43,8 @@ Contains general library settings.
 
 Contains settings for target-specific portions of the library.  Options will vary according to architecture but these two will always be present:
 
+| Name | Description |
+|---|---|
 | clock_freq   | The target's cpu clock rate in Hz<sup>1</sup>. |
 | z80_cpu_info | Indicate whether a CMOS or NMOS cpu is used<sup>2</sup>. |
 
