@@ -30,6 +30,7 @@
   * [memory map](CRT)
   * [user initialization and exit code](CRT)
   * [User-Supplied Crt](CRT)
+* [Header Files](Header-Files)
 * [Assembly Language](Assembly-Language)
 * [Library in Depth](Library-in-Depth)
 
