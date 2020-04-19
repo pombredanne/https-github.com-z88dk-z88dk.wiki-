@@ -34,6 +34,7 @@
 
 ## Misc
 
+* [Benchmarks](Benchmarks)
 * [Datatypes](Datatypes)
 * [Debugging](debugging)
 * [More than 64k](More-Than-64k)
