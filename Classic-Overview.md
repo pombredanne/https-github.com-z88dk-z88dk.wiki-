@@ -16,7 +16,7 @@ Originally, the classic library and new library were completely different code b
 
 ## Selecting the compiler
 
-By default, classic builds use sccz80 as the compiler, if you wish to compile with zsdcc then you must add the option `-compiler=sdcc`.
+By default, classic builds use sccz80 as the compiler, if you wish to compile with zsdcc then you must add the option `-compiler=sdcc`. Classic supports the creation of final executables which are comprised of some files compiled with sccz80 and some with zsdcc.
 
 ## Generic console (vt52)
 
