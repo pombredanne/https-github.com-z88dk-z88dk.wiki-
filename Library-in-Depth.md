@@ -8,7 +8,7 @@ If your target is completely new you can follow the steps below for creating a n
 
 ### Adding CRTs to an Existing Target
 
-This [[http://www.z88dk.org/forum/viewtopic.php?pid=13383#p13383|forum posting]] contains details for adding a CRT to the simple embedded target and can serve as instructions until the topic is properly filled out.
+This [forum post](http://www.z88dk.org/forum/viewtopic.php?pid=13383#p13383) contains details for adding a CRT to the simple embedded target and can serve as instructions until the topic is properly filled out.
 
 ### Creating a New Target
 
@@ -16,7 +16,7 @@ This [[http://www.z88dk.org/forum/viewtopic.php?pid=13383#p13383|forum posting]]
 
 As with all grand projects, the first step in creating a target is settling on a name.  The name will appear in the compile line "**zcc +yourname .... test.c -o test**" so keeping it short will save a little typing but it must be long enough that it is descriptive of your target and that it won't collide with names for already existing targets in z88dk.  
 
-The list of current targets can be found in [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/lib/config/|z88dk/lib/config]] where the name of each cfg file corresponds to a target name.  For purposes of this discussion we will create a target called "**temp**".
+The list of current targets can be found in [z88dk/lib/config](http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/lib/config/) where the name of each cfg file corresponds to a target name.  For purposes of this discussion we will create a target called "**temp**".
 
 To make zcc aware of the target a new file "temp.cfg" must be added to this directory:
 
@@ -50,7 +50,7 @@ In the file above, the target name used is "temp" so for your own target, you'll
 
 #### 2. Create the Target Directory Structure and Add Initial Contents
 
-All information concerning a target for the new C library is located in https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/target.  **m** is a pseudo-target used to compile the floating point library.
+All information concerning a target for the new C library is located in [target directory](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/target).  **m** is a pseudo-target used to compile the floating point library.
 
 Create a new directory for your target using its config name.  In this example, that's "**z88dk/libsrc/_DEVELOPMENT/target/temp**".
 
@@ -82,7 +82,7 @@ Here is a brief description of each file and subdirectory:
 
 When the target's C library is built, the list of files assembled into the library are read from the target's library subdirectory.  In the present example that is **z88dk/libsrc/_DEVELOPMENT/target/temp/library**.  Three libraries are built corresponding to the three list files found here:  sccz80, sdcc_ix and sdcc_iy.  The sccz80 library is used when sccz80 is chosen as compiler.  The sdcc_ix and sdcc_iy libraries are chosen when sdcc is the compiler and are selected between by either "-clib=sdcc_ix" or "-clib=sdcc_iy" on the compile line.  The difference between the two is which index register the C library uses.  "sdcc_ix" corresponds to the library using ix and "sdcc_iy" corresponds to the library using iy.  It's always preferable to use the "sdcc_iy" version of the library because this gives sdcc sole use of ix for its frame pointer while the library uses iy.  If "sdcc_ix" is selected, sdcc and the library must share ix which means the library must insert extra code to preserve the ix register when it is used.  This means the "sdcc_iy" compile will be smaller.  The choice is present because some targets reserve one of the index registers for themselves.
 
-The new C library's source code is located just above the target directories in [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/|z88dk/libsrc/_DEVELOPMENT]].  Just to rule out the few dead directories, the currently valid source code directories are listed below.
+The new C library's source code is located just above the target directories in [z88dk/libsrc/_DEVELOPMENT](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT).  Just to rule out the few dead directories, the currently valid source code directories are listed below.
 
 | Directory | Description |
 |---|---|
@@ -112,7 +112,7 @@ The new C library's source code is located just above the target directories in 
 
 Each source directory is structured to contain **list files** listing all source files, a **z80 directory** containing the asm source code, and a **c directory** containing preamble code for the C interface that gathers parameters from the stack and jumps into the asm implementation.
 
-While a large portion of the library will use an 8080 subset of the instruction set, the library is written to be as compact and fast as reasonable and does use all z80 features, including the EXX set when appropriate.  This does cause problems for some targets and the solution that will be supplied in z88dk is to offer alternate implementations for some functions in a subdirectory other than z80.  But those alternate implementations are not present at this time so if your target cannot allow use of the EXX set, you will have to either supply alternate implementations for affected functions or you will have to exclude some of the functions from your target's library.  If you have such a difficult target it's probably best to inquire about porting in the [[http://www.z88dk.org/forum/forums.php|z88dk forums]].
+While a large portion of the library will use an 8080 subset of the instruction set, the library is written to be as compact and fast as reasonable and does use all z80 features, including the EXX set when appropriate.  This does cause problems for some targets and the solution that will be supplied in z88dk is to offer alternate implementations for some functions in a subdirectory other than z80.  But those alternate implementations are not present at this time so if your target cannot allow use of the EXX set, you will have to either supply alternate implementations for affected functions or you will have to exclude some of the functions from your target's library.  If you have such a difficult target it's probably best to inquire about porting in the [forum](http://www.z88dk.org/forum/forums.php).
 
 Next it's time to list what is in your target's C library.  Three files have already been provided in **z88dk/libsrc/_DEVELOPMENT/target/temp/library** that include all of the C library minus target-specific code.  For example, the file "temp_sccz80.lst" contains this:
 
@@ -145,7 +145,7 @@ Next it's time to list what is in your target's C library.  Three files have alr
 
 The paths are relative to the source code base directory **z88dk/libsrc/_DEVELOPMENT**.  The "@" symbol means the indicated file is a list file rather than an asm file.  You can modify these files to exclude portions of the library as you like or to be more choosy about which functions make it into the library by replacing list files with a more specific list of functions.  But unless your target is restricted by being unable to use certain registers or you want to purposely exclude some functionality, there is no reason to restrict what goes into the target's C library.  Targets without bitmapped displays may want to exclude the font related things and I suppose this will reduce library size and library build time.
 
-There are some functions that will not work without further defines or code supplied for the target.  These include functions in **font/fzx** (a single character putchar must be written to complete support for proportional fonts), **input** (the C library defines standard functions for direct access to keyboards / joysticks / mice hardware but this must be written for each target), **sound** (targets must define how the state of a 1-bit speaker is toggled) and **temp/sp1** (bitmap software sprite engine requires much customization to suit display resolution).  If you would like to add these features you can ask how in the [[http://www.z88dk.org/forum/forums.php|z88dk forums]].
+There are some functions that will not work without further defines or code supplied for the target.  These include functions in **font/fzx** (a single character putchar must be written to complete support for proportional fonts), **input** (the C library defines standard functions for direct access to keyboards / joysticks / mice hardware but this must be written for each target), **sound** (targets must define how the state of a 1-bit speaker is toggled) and **temp/sp1** (bitmap software sprite engine requires much customization to suit display resolution).  If you would like to add these features you can ask how in the [forum](http://www.z88dk.org/forum/forums.php).
 
 #### 4. Set the Default Library Configuration
 
@@ -157,7 +157,7 @@ Keep the **clib_cfg.bak** file consistent as it serves as backup if the user mak
 
 The target library configuration serves the same function as the regular library configuration but it applies to target-specific code only.  The target-specific customizations are found in **clib_target_cfg.asm**.  The file provided defines two things that all targets should define:  the z80 clock rate in Hz and some bit flags that define whether the z80 is nmos or cmos.  The latter is important because the nmos z80 has a bug that makes the determination of interrupt state (enabled or disabled) more difficult.  The library can be compiled to use the simpler cmos code or the more complicated nmos code as needed.  If your code must run on all manner of z80s, choose nmos.
 
-If you will be writing target-specific library code, this is the place to put any required configuration information that will be available when the library code is built.  As an example, you can have a look at the **zx** target's [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/zx/clib_target_cfg.asm?content-type=text%2Fplain|clib_target_cfg.asm]] file.  It has the same architecture information at the top but it also has more defines that customize the sp1 sprite library and define how 1-bit sound is generated.
+If you will be writing target-specific library code, this is the place to put any required configuration information that will be available when the library code is built.  As an example, you can have a look at the **zx** target's `clib_target_cfg.asm` file.  It has the same architecture information at the top but it also has more defines that customize the sp1 sprite library and define how 1-bit sound is generated.
 
 Keep the **clib_target_cfg.bak** file consistent as it serves as backup if the user makes his own customizations later.
 
@@ -319,7 +319,6 @@ Applicable CRT options:
 
 Some hosts will set the stack pointer before starting a machine code program so it can make sense not to alter the stack pointer value.
 
-See lines [[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/zx/startup/zx_crt_ram.m4?revision=1.7&view=markup|110-116 of this CRT]] for an example.
 
 ```
    ; parse command line
@@ -332,13 +331,13 @@ Applicable CRT options:
 |---|---|
 | %%__crt_enable_commandline%%  | if non-zero the user is requesting the command line to be parsed and argc + argv to be generated.  |
 
-If the target does not have a means to communicate a command line, a course of action you can take is to generate an empty command line.  See [[https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/zx/zx_crt.asm.m4|lines 118-142 of this CRT]] for an example.
+If the target does not have a means to communicate a command line, a course of action you can take is to generate an empty command line.  See [lines 118-142 of this CRT](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/zx/zx_crt.asm.m4) for an example.
 
 The library supplies two functions to help parse command lines:
 
-  * [[https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/l/z80/l_command_line_parse.asm|l_command_line_parse]]  This function is intended for parsing command lines from a region in memory that is likely to be overwritten during program execution.  An example is the cp/m target which leaves the command line at address 0x80 which also happens to be the location of the primary FCB.  The first time a file is read or written from disk, the command line will be overwritten.  What this function does is copy the words to the stack as they are parsed so that the command line will be available throughout program execution.  See [[https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/cpm/cpm_crt.asm.m4|lines 110-164 of this CRT]] for an example.
+  * [l_command_line_parse]]](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/l/z80/l_command_line_parse.asm) This function is intended for parsing command lines from a region in memory that is likely to be overwritten during program execution.  An example is the cp/m target which leaves the command line at address 0x80 which also happens to be the location of the primary FCB.  The first time a file is read or written from disk, the command line will be overwritten.  What this function does is copy the words to the stack as they are parsed so that the command line will be available throughout program execution.  See [lines 110-164 of this CRT](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/cpm/cpm_crt.asm.m4) for an example.
 
-  * [[https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/l/z80/l_command_line_parse_in_place.asm|l_command_line_parse_in_place]]  This function is intended for parsing command lines from a region in memory that will not be overwritten during program execution.  The command line will be parsed into words in place, with terminating NUL bytes written into the command line as needed. 
+  * [l_command_line_parse_in_place](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/l/z80/l_command_line_parse_in_place.asm)  This function is intended for parsing command lines from a region in memory that will not be overwritten during program execution.  The command line will be parsed into words in place, with terminating NUL bytes written into the command line as needed. 
 
 Both these functions stop parsing when a file re-director ("<" or ">") is encountered.  In the future this part of the command line will be interpretted to redirect i/o to files.  Neither function currently groups quoted strings into a single argument.  This will also change in a future update.
 
@@ -473,7 +472,7 @@ Applicable CRT options:
 
 Further discussion of these CRT options can be found [[#crt_configuration|here]].
 
-The embedded target has a [[https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/z80/z80_crt.asm.m4|CRT which will generate the z80 restarts]] if the ORG address is 0.  The CRT is written to apply to both 0 ORG and non-zero ORG so there is conditional code present for the 0 ORG case.  You can see how the restarts were implemented by examining that code.
+The embedded target has a [CRT which will generate the z80 restarts](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/z80/z80_crt.asm.m4) if the ORG address is 0.  The CRT is written to apply to both 0 ORG and non-zero ORG so there is conditional code present for the 0 ORG case.  You can see how the restarts were implemented by examining that code.
 
 Congratulations on completing your first CRT.  Now it's time to **generate the .asm file that will be used in compiles**:
 
@@ -530,11 +529,11 @@ IF __CRTDEF = 0
 ENDIF
 ```
 
-For a minimum binary size you will also want to set **%%TAR__clib_exit_stack_size = 0%%** (no functions can be registered with atexit()), **%%TAR__clib_malloc_heap_size = 0%%** (the heap will not be created) and **%%TAR__clib_stdio_heap_size = 0%%** (no files can be opened; for a target without drivers this affects whether [[http://www.gnu.org/software/libc/manual/html_node/String-Streams.html|memstreams]] can be created).
+For a minimum binary size you will also want to set **%%TAR__clib_exit_stack_size = 0%%** (no functions can be registered with atexit()), **%%TAR__clib_malloc_heap_size = 0%%** (the heap will not be created) and **%%TAR__clib_stdio_heap_size = 0%%** (no files can be opened; for a target without drivers this affects whether [memstreams](http://www.gnu.org/software/libc/manual/html_node/String-Streams.html) can be created).
 
 The 0 values for DATA and BSS origin mean they will append to the CODE section.  The ram model is in effect (**%%TAR__crt_model = 0%%**) so these settings mean the output will be a single binary "name_CODE.bin" containing the CODE,DATA,BSS sections concatenated together and the DATA,BSS sections will not be initialized by the CRT (they will hold their initial values in the binary image).  If your output is destined for ROM, you will have to change to the compressed ROM model and set the DATA section's ORG to the first RAM address.  The CRT will have to ensure that the stack pointer points into RAM as well.
 
-If **%%TAR__clib_malloc_heap_size = -1%%** then the heap will be automatically located and sized such that it occupies the space between the end of the BSS section and the bottom of the stack.  The value of **%%TAR__crt_stack_size%%** is used to indicate the maximum size of the stack when the heap size is calculated at runtime.  Should a negative size be computed for the heap (size = SP - stack_size - BSS_END - 14), the program will simply exit just after starting up without any indication.  The other way to automatically create a heap is to specify a size > 14 bytes.  Such a heap will be allocated in the BSS section and it will be automatically initialized by the CRT.  The heap can also be dynamically created at runtime or statically created at a fixed address as was done in this [[http://www.z88dk.org/wiki/doku.php?id=libnew:examples:sp1_ex1#changing_the_memory_map|example C program]].
+If **%%TAR__clib_malloc_heap_size = -1%%** then the heap will be automatically located and sized such that it occupies the space between the end of the BSS section and the bottom of the stack.  The value of **%%TAR__crt_stack_size%%** is used to indicate the maximum size of the stack when the heap size is calculated at runtime.  Should a negative size be computed for the heap (size = SP - stack_size - BSS_END - 14), the program will simply exit just after starting up without any indication.  The other way to automatically create a heap is to specify a size > 14 bytes.  Such a heap will be allocated in the BSS section and it will be automatically initialized by the CRT. 
 
 These options can, of course, be overridden by pragmas inserted by the user into C source.
 
@@ -564,7 +563,8 @@ ENDIF
 ```
 
 The include actually defining the memory map is found one directory above:
-[[http://z88dk.cvs.sourceforge.net/viewvc/z88dk/z88dk/libsrc/_DEVELOPMENT/target/crt_memory_model.inc?content-type=text%2Fplain|z88dk/libsrc/_DEVELOPMENT/target/crt_memory_model.inc]]
+[crt_memory_model](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/crt_memory_model_z80.inc)
+
 
 Three major sections are defined (CODE, DATA, BSS) with optional ORG addresses and many smaller sections are sequenced such that they merge into these bigger ones.
 
@@ -694,7 +694,7 @@ We've solved these problems by making the drivers object oriented.
   * **Space efficiency** is achieved through code reuse aided by the message-passing method used to implement the object model.  The message-passing method allows all open terminals to share the same library code and all disk devices to share the same disk code.
   * **Achieving reasonable speed** without consuming a lot of memory is more difficult since the strategy used in standard C implementations is to create large buffers in user-space for each open FILE in order to service character-at-a-time i/o.  Extra buffers are hard to accommodate in a small 64k (or less) address space.  Instead, on the input side, z88dk's stdio pushes a state machine to the driver that indicates what input it will accept from the driver.  Then only the driver's buffers are used for i/o, if it needs buffering.  On the output side, z88dk tries to send strings of characters instead of individual chars.
 
-Deliberately, stdio is not the only means to read/write to the screen or devices inside the library.  More direct and low level functions are always present so that the user has the choice to use something simpler if speed or program size is a concern.  If you are the originator of a target, it is up to you to supply this functionality and normally the drivers would be implemented in terms of these low level functions themselves. The stdio implementation in z88dk is written in assembly language so it is smaller than those available from other z80 C compilers but 64k is a restrictive environment for C programs nevertheless.  For the cp/m target the option is always there to do i/o directly through bdos.  Similarly for the zx target, low level functions are available for output to the screen or for reading keys directly from the hardware.  You can bypass device drivers entirely and you can still use stdio by confining your program to the sprintf/sscanf families or [[http://www.gnu.org/software/libc/manual/html_node/String-Streams.html|memstreams]] and doing i/o directly from buffers in memory.  However things are more convenient and fun to program with a proper stdio implementation present, especially if it's easily affordable in the user program and target.
+Deliberately, stdio is not the only means to read/write to the screen or devices inside the library.  More direct and low level functions are always present so that the user has the choice to use something simpler if speed or program size is a concern.  If you are the originator of a target, it is up to you to supply this functionality and normally the drivers would be implemented in terms of these low level functions themselves. The stdio implementation in z88dk is written in assembly language so it is smaller than those available from other z80 C compilers but 64k is a restrictive environment for C programs nevertheless.  For the cp/m target the option is always there to do i/o directly through bdos.  Similarly for the zx target, low level functions are available for output to the screen or for reading keys directly from the hardware.  You can bypass device drivers entirely and you can still use stdio by confining your program to the sprintf/sscanf families or [memstreams](http://www.gnu.org/software/libc/manual/html_node/String-Streams.html) and doing i/o directly from buffers in memory.  However things are more convenient and fun to program with a proper stdio implementation present, especially if it's easily affordable in the user program and target.
 
 ### Directory Structure
 
@@ -729,7 +729,7 @@ The driver code itself should be placed in the most appropriate code section:
 
 Once the device driver is ready, the target's libraries will need to be rebuilt by running "Winmake TARGETNAME" or "make TARGET=TARGETNAME" from z88dk/libsrc/_DEVELOPMENT.
 
-The [[https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/target/cpm/|cp/m target's driver directory]] can be used as a model.
+The [cp/m target's driver directory](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/target/cpm/) can be used as a model.
 
 ### The Raw Device Driver
 
@@ -806,7 +806,7 @@ STDIO Messages:
 |  OUT:| carry set on error (likely ignored)  ||
 |  NOTE:| A flush message is always sent ahead of close.  Deallocate any resources this driver has allocated.  ||
 
-These messages, error numbers and library ioctls are defined in https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/clib_const.m4 which is included into every CRT.
+These messages, error numbers and library ioctls are defined in [clib_const.m4](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/target/clib_const.m4) which is included into every CRT.
 
 While writing device drivers or any other code with z88dk, it can be very helpful to be familiar with the library code supplied by z88dk.  Using it can keep binary sizes down and speed up development time substantially.  The root source directory is **z88dk/libsrc/_DEVELOPMENT**.  Many of the subdirectories will have familiar names as they implement portions of the C standard.  Two other important subdirectories might be "**l**" which contains many small subroutines and "**error**" which provides exit points for functions.  These exit points can be used to balance the stack and return after optionally setting errno and a return value appropriately.
 
@@ -854,7 +854,7 @@ character_00_input:
 
 Drivers are allowed to change any registers except ix and iy unless otherwise documented.
 
-The above is an abstract base class driver implemented in the library.  The entire driver can be found in https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/drivers/character/character_00/input.
+The above is an abstract base class driver implemented in the library.  The entire driver can be found in [input driver](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/drivers/character/character_00/input).
 
 If your driver properly ignores messages that do not apply and implements messages from the list above that do apply, your driver is finished.  This is the .asm file mentioned in the last section.  The message functions are placed in the driver's subdirectory and the list file will list all of the driver's source files.  The last piece is the .m4 macro that will allow the driver to be instantiated as a file in the CRT.  This is discussed in the **Driver Instantiation** topic below.
 
