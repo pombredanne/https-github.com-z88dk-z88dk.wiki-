@@ -19,7 +19,7 @@ z88dk supports the following calling conventions:
 |  Decorator|  Description|
 |--|--|
 |__z88dk_callee| The function being called (callee) is responsible for cleaning up the stack. |
-|__z88dk_fastcall | At most a single parameter is passed in dehl. For __smallc it will be the rightmost parameter. For __stdc and __z88dk_sdccdecl it will be the only parameter.|
+|__z88dk_fastcall | At most a single parameter is passed in registers. For __smallc it will be the rightmost parameter. For __stdc and __z88dk_sdccdecl it will be the only parameter. The register used is always a subset of DEHL depending on the parameter bit width.  So, for example, an integer would be passed in the HL register and a long in DEHL.  sccz80's floats / doubles are 48-bit and are treated a little differently.  They are passed via the "primary floating point accumulator".  In the classic C library this is six bytes of static memory labelled "fa".  In the new C library this is the registers BCDEHL' in the exx set.  This means the classic C library's floating point implementation is not re-entrant whereas the new C library's is.  sdcc's 64-bit long long type cannot be passed using fastcall linkage.|
 |__z88dk_saveframe|Valid for sccz80 generated code only. The sdcc framepointer (ix) will be saved on entry to the function. This is required if it is expected that this function will be called from sdcc compiled code and it uses either longs or floating point.
 |__critical| The interrupt state is saved on entry to the function and restore on exit. |
 |__naked|Used for assembler functions to ensure that the function prologue and epilogue is not generated. |
@@ -49,5 +49,11 @@ the type, for example:
 This means that sccz80 will call `mylibrary_function` and sdcc will call `_mylibrary_function`,
 these different entry points can be useful for adjusting calling convention (essential for
 vaargs functions).
+
+## Return values
+
+Return values are held in a subset of DEHL depending on the return value's bit width.  HL would hold an integer return value whereas DEHL would hold a long return value.  sccz80's 48-bit float / double is treated differently with the classic library returning its value in the "primary floating point accumulator" which is six bytes of static memory at address "fa" and the new c library returning by registers BCDEHL' in the exx set.  Note the same rules apply as for fastcall linkage where a single parameter is passed to a function via DEHL.
+
+Return of sdcc's 64-bit long long type is handled specially.  The compiler will pass a pointer to memory for the return value as the first parameter in the function call.  This parameter is not listed in the function prototype.  The called function must use that pointer to store the 64-bit value returned.
 
 
