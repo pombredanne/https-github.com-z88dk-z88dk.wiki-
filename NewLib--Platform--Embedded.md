@@ -635,9 +635,9 @@ __**METHOD 1: The C Compilers Map the I/O Space to SFRs (Special Function Regist
 
 Globally declare an sfr as either an 8-bit or 16-bit port and then use it like a variable.  The compilers will inline i/o instructions to carry out the i/o operations.
 
- | C SOURCE CODE | TRANSLATED ASM | 
- | ------------- | -------------- | 
- | `<code>`       
+C Source code:
+
+```      
 __sfr __at 0x1f IO8;               // 8-bit i/o port at 0x1f
 __sfr __banked __at 0xfbfe IO16;   // 16-bit i/o port at 0xfefe
 
@@ -651,29 +651,23 @@ void main(void)
    a = IO16;                       // read port IO16
    IO16 = 200;                     // write port IO16
 }
-`</code>`  | `<code>`
-
-
-
-
-
-
-
+```
+Translated assembler:
+```
 in a,(_IO8)
 ld a,100 ; out (_IO8),a
 
 ld a,_IO16/256 ; in a,(_IO16 & 0xFF)
 ld a,200 ; ld bc,_IO16 ; out (c),a
 
-`</code>`  |
+```
 
 __**METHOD 2: The Clib Supplies Library Functions to Perform I/O**__
 
 I/O can be done through calls to library functions defined in [z80.h](libnew/z80).  Port i/o is always 16-bit through these functions.
 
- | C SOURCE CODE | TRANSLATED ASM | 
- | ------------- | -------------- | 
- | `<code>`       
+C Source code:
+```   
 #include `<z80.h>`
 
    
@@ -687,20 +681,16 @@ void main(void)
    a = z80_inp(0xfbfe);
    z80_outp(0xfbfe, 200);
 }
-`</code>`  | `<code>`
-
-
-
-
-
-
+```
+Translated assembler:
+```
 ld hl,0x001f ; call _z80_inp_fastcall
 ld hl,100 ; push hl ;ld l,0x1f ; push hl ; call _z80_outp_callee
 
 ld hl,0xfbfe ; call _z80_inp_fastcall
 ld hl,200 ; push hl ; ld hl,0xfbfe ; push hl ; call _z80_outp_callee
-
-`</code>`  |
+```
+|
 
 The library functions also grant access to the z80's block i/o instructions.
 
@@ -739,7 +729,7 @@ These **restarts and isrs can be implemented in either C or asm using the functi
 
 An example nevertheless using the deprecated method where the C compiler places the code into the code_compiler section.
 
-	
+```	
 	// __naked attribute suggested for sdcc only
 	
 	void z80_rst_38h(void) __naked
@@ -754,11 +744,11 @@ An example nevertheless using the deprecated method where the C compiler places 
 	
 	   __endasm;
 	}
-
+```
 
 And the preferred method as a wholly asm implementation that places the code into the code_crt_common section that is sequenced just after the crt in the output binary.  Asm code can be placed in a separate file with .asm extension and added to the compile line.
 
-	
+```	
 	SECTION code_crt_common
 	PUBLIC _z80_rst_38h
 	
@@ -769,7 +759,7 @@ And the preferred method as a wholly asm implementation that places the code int
 	   pop used-registers
 	   ei
 	   reti
-
+```
 
 ## Interrupt Service Routines
 
@@ -791,7 +781,7 @@ Z88DK creates a section called "code_vector" to hold the im2 vector table.  You 
 
 A simple example will illustrate.  Suppose in a project a separate file "interrupt.asm" is created to hold all the interrupt vectors.  It might look like this:
 
-	
+```	
 	SECTION code_vector
 	
 	; device identifier 0
@@ -808,7 +798,7 @@ A simple example will illustrate.  Suppose in a project a separate file "interru
 	; device identifier 128
 	EXTERN _isr_ctc_0
 	defw   _isr_ctc_0
-
+```
 
 The individual isr addresses are listed in vector identifier order.  A compile adding "interrupt.asm" to the list of source files will automatically generate the interrupt vector table.
 
@@ -820,7 +810,7 @@ If **CRT_ORG_VECTOR_TABLE** is >= 0, a compile will output a separate binary "fo
 
 It is possible to create a binary in two steps that will write this vector table into ram at the right address at startup.  One way to do it is to change the file "interrupt.asm" to this:
 
-	
+```	
 	SECTION rodata_user
 	
 	__vector_table_begin:
@@ -858,7 +848,7 @@ It is possible to create a binary in two steps that will write this vector table
 	; device identifier 128
 	EXTERN _isr_ctc_0
 	defw   _isr_ctc_0
-
+```
 
 Before compiling make sure an initially zeroed dummy file "foo_code_vector.bin" of correct size is present.  Compile twice; after the second compile the output binary will be complete and will properly initialize the im2 mode for you.
 
@@ -878,7 +868,7 @@ The [zx7 documentation](https///github.com/z88dk/z88dk/blob/master/libsrc/_DEVEL
 
 Compressed data is easy to bring into a project using the assembler's **BINARY** directive which will include binary data into an asm file.  A short example composed of one .c file and one .asm file will illustrate its use.
 
-`<file>`
+```
 // main.c
 
 #include `<compress/zx7.h>`
@@ -892,9 +882,9 @@ void main(void)
    dzx7_standard(cdata, data);
    ...
 }
-`</file>`
+```
 
-`<file>`
+```
 ;; data.asm
 
 SECTION rodata_user
@@ -904,7 +894,7 @@ _cdata:
 
    ; name of compressed file
    BINARY "mydata.txt.zx7"
-`</file>`
+```
 
 The compressed data file "mydata.txt.zx7" can be generated from "mydata.txt" with:
 
