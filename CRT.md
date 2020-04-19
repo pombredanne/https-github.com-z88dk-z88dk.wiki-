@@ -32,7 +32,8 @@ The crt configuration defines properties of the execution environment.  The valu
 
 For **%%__CRTDEF = 0%%** the following defaults are set:
 
-^ CRT OPTION                 ^ crt_target_defaults.inc ^ meaning ^
+| CRT OPTION                 | crt_target_defaults.inc | meaning |
+|---|---|---|
 | CRT_ORG_CODE               |  0                      | ORG 0 |
 | CRT_ORG_DATA               |  0                      | data section appends to code section |
 | CRT_ORG_BSS                |  0                      | bss section appends to data section |
