@@ -25,21 +25,22 @@ The new C library supports both compilers equally.  The [documented list of head
 
 Below you will notice **there are two compile lines listed for sdcc.  The sdcc_iy version is preferred.**  In sdcc_iy compiles, the library uses one index register iy, leaves ix alone for sdcc to use as its frame pointer, and forbids sdcc from using iy.  Forbidding the use of iy leads to smaller code as it opens up many more opportunities for optimization in the peephole optimization step.  In sdcc_ix compiles, the library uses one index register ix which it must share with sdcc.  The sharing means the library must add code to push and pop ix around library functions which adds to program size.  The choice makes most sense for other targets where one index register is reserved by hardware or system software so is unavailable to the compiler.  Occasionally sdcc can produce better code for sdcc_ix in isolated fragments so if you'd like to try it you can, but we have not seen a single instance where a complete program was smaller using sdcc_ix (sdcc_iy tends to be smaller by a notable margin in fact).
 
- | MODEL              | COMPILER | EXAMPLE COMPILE LINE                                                                                  | 
- | -----              | -------- | --------------------                                                                                  | 
- | **ram**            | sccz80   | zcc +z80 -vn -O3 -startup=0 -clib=new test.c -o test -lm -create-app                                  | 
- | startup=0          | sdcc iy  | zcc +z80 -vn -SO3 -startup=0 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -lm -create-app | 
- |                    | sdcc ix  | zcc +z80 -vn -SO3 -startup=0 -clib=sdcc_ix --max-allocs-per-node200000 test.c -o test -lm -create-app | 
- |                    |          |                                                                                                       | 
- | **rom**            | sccz80   | zcc +z80 -vn -O3 -startup=1 -clib=new test.c -o test -lm -create-app                                  | 
- | startup=1          | sdcc iy  | zcc +z80 -vn -SO3 -startup=1 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -lm -create-app | 
- |                    | sdcc ix  | zcc +z80 -vn -SO3 -startup=1 -clib=sdcc_ix --max-allocs-per-node200000 test.c -o test -lm -create-app | 
- |                    |          |                                                                                                       | 
- | **compressed rom** | sccz80   | zcc +z80 -vn -O3 -clib=new test.c -o test -lm -create-app                                             | 
- | startup=2, default | sdcc iy  | zcc +z80 -vn -SO3 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -lm -create-app            | 
- |                    | sdcc ix  | zcc +z80 -vn -SO3 -clib=sdcc_ix --max-allocs-per-node200000 test.c -o test -lm -create-app            | 
+| MODEL              | COMPILER | EXAMPLE COMPILE LINE                                         |
+| ------------------ | -------- | ------------------------------------------------------------ |
+| **ram**            | sccz80   | `zcc +z80 -vn -O3 -startup=0 -clib=new test.c -o test -lm -create-app` |
+| startup=0          | sdcc iy  | `zcc +z80 -vn -SO3 -startup=0 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -lm -create-app` |
+|                    | sdcc ix  | `zcc +z80 -vn -SO3 -startup=0 -clib=sdcc_ix --max-allocs-per-node200000 test.c -o test -lm -create-app` |
+|                    |          |                                                              |
+| **rom**            | sccz80   | `zcc +z80 -vn -O3 -startup=1 -clib=new test.c -o test -lm -create-app` |
+| startup=1          | sdcc iy  | `zcc +z80 -vn -SO3 -startup=1 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -lm -create-app` |
+|                    | sdcc ix  | `zcc +z80 -vn -SO3 -startup=1 -clib=sdcc_ix --max-allocs-per-node200000 test.c -o test -lm -create-app` |
+|                    |          |                                                              |
+| **compressed rom** | sccz80   | `zcc +z80 -vn -O3 -clib=new test.c -o test -lm -create-app`  |
+| startup=2, default | sdcc iy  | `zcc +z80 -vn -SO3 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -lm -create-app` |
+|                    | sdcc ix  | `zcc +z80 -vn -SO3 -clib=sdcc_ix --max-allocs-per-node200000 test.c -o test -lm -create-app` |
 
-The output binary is "test.bin".  By default the ORG is 0 and the binary should be loaded and executed from address 0. \\ 
+The output binary is "test.bin".  By default the ORG is 0 and the binary should be loaded and executed from address 0. 
+
 Other default settings have ram starting at address 0x8000 (rom models only) and the stack located at the top of memory (initial SP=0).
 
 **NOTES:**
@@ -86,15 +87,17 @@ There is a growing list of m4 macros that can be used in your .asm.m4 source fil
 
 An example compile line involving multiple source files:
 
-`<file>`
-zcc +z80 -vn -O3 -clib=new test.c asmroutine.asm objfile.o @manyfiles.lst -o test -create-app
-`</file>`
-"manyfiles.lst"
-`<file>`
+`zcc +z80 -vn -O3 -clib=new test.c asmroutine.asm objfile.o @manyfiles.lst -o test -create-app`
+
+manyfiles.lst:
+
+```
 test2.c
 myasm.asm
-res/graphics.asm.m4
-`</file>`
+res/graphics/asm.m4
+```
+
+
 *(A .lst file can contain a complete list of source files in the project so naming individual source files in addition to the .lst file only clutters up the compile line and is only done here to serve as illustration.  A leading semicolon character can be used to comment out an individual source file listed in a list file.)*
 
 ASM code and data must be assigned to appropriate sections defined by the memory map to be made part of the main executable.  The [mixing c and assembly language](libnew/target_embedded#mixing_c_and_assembly_language) section has more information.
@@ -113,40 +116,61 @@ The three compile models (ram, rom, compressed rom) treat these sections differe
 
 *  In a **rom model** compile, the CODE/DATA/BSS sections are output in three separate binaries "name_CODE.bin" (ORGed to code section's org address), "name_DATA.bin" (ORGed to data section's org address) and "name_BSS.bin" (ORGed such that it appends to the data section).  The crt startup code embedded in the code section expects a stored copy of the data section to immediately follow "name_CODE.bin" in memory.  This stored copy allows the crt to initialize the data section's non-zero ram variables in ram before main() is called.  Therefore the final binary image must consist of "name_DATA.bin" appended to "name_CODE.bin".
 
-*  In a **compressed rom model** compile, the CODE/DATA/BSS sections are again output in three separate binaries "name_CODE.bin" (ORGed to code section's org address), "name_DATA.bin" (ORGed to data section's org address) and "name_BSS.bin" (ORGed such that it appends to the data section).  This time the crt startup code expects a compressed copy of the data section to immediately follow "name_CODE.bin" in memory.  This stored copy allows the crt to initialize the data section's non-zero ram variables in ram before main() is called.  Therefore the final binary image must consist of a compressed version of "name_DATA.bin" appended to "name_CODE.bin".  Because the stored data section is compressed, the final binary image will be smaller than a rom model compile except for programs with small data sections`<sup>`1`</sup>`.
+*  In a **compressed rom model** compile, the CODE/DATA/BSS sections are again output in three separate binaries "name_CODE.bin" (ORGed to code section's org address), "name_DATA.bin" (ORGed to data section's org address) and "name_BSS.bin" (ORGed such that it appends to the data section).  This time the crt startup code expects a compressed copy of the data section to immediately follow "name_CODE.bin" in memory.  This stored copy allows the crt to initialize the data section's non-zero ram variables in ram before main() is called.  Therefore the final binary image must consist of a compressed version of "name_DATA.bin" appended to "name_CODE.bin".  Because the stored data section is compressed, the final binary image will be smaller than a rom model compile except for programs with small data sections (1).
 
-`<sup>`1** The compressed rom model binary will be smaller than the rom model binary if the compression of the data section can save at least ~80 bytes.  The amount of memory saved is noted during a compressed rom model compile.`</sup>`
+(1) The compressed rom model binary will be smaller than the rom model binary if the compression of the data section can save at least ~80 bytes.  The amount of memory saved is noted during a compressed rom model compile.
 
 In addition to the binaries mentioned above, each compile will also generate a binary "name" without extension.  This binary corresponds to the unnamed section and collects all code and data not assigned to a section.  If this file is non-zero in size, this indicates an error where some code or data has not made it into the main executable due to not being assigned to a section.  
 
 A memory map showing where the generated binaries are ORGed in memory when using the default compile for each model is shown below.  Also shown are the default values of the compile time variables controlling this placement of the sections in memory.
 
-| | ![](images/libnew/platform_embedded_ram_model.png) | ![](images/libnew/platform_embedded_rom_model.png) |  ![](images/libnew/platform_embedded_compressed_rom_model.png) |     
+| | ![](images/libnew/platform_embedded_ram_model.png) | ![](images/libnew/platform_embedded_rom_model.png) |  ![](images/libnew/platform_embedded_compressed_rom_model.png) |
 |---|---|---|---|
 | sample compile line  | **zcc +z80 -vn -SO3 -startup=0 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -create-app**  | **zcc +z80 -vn -SO3 -startup=1 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -create-app**  | **zcc +z80 -vn -SO3 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -create-app**  |
-| output binaries  | "test" \\  "test_CODE.bin"  | "test" \\  "test_CODE.bin" \\  "test_DATA.bin" \\  "test_BSS.bin"  | "test" \\  "test_CODE.bin" \\  "test_DATA.bin" \\  "test_BSS.bin"  |    
-
+| output binaries  | "test",  "test_CODE.bin" | "test", "test_CODE.bin", "test_DATA.bin",  "test_BSS.bin" | "test", "test_CODE.bin", "test_DATA.bin",  "test_BSS.bin" |
 
 **NOTE:**  Size of "test" must be zero.  A non-zero size indicates some code or data did not make it into the main executable because it wasn't assigned to a section.
-                                                                                                                                                        * form final binary`<sup>`2`</sup>` (windows)  | copy /b test_CODE.bin test.bin  | copy /b test_CODE.bin + test_DATA.bin test.bin  | zx7 -f test_DATA.bin \\  copy /b test_CODE.bin + test_DATA.bin.zx7 test.bin  |                                                                                                                         
-* form final binary`<sup>`2`</sup>` (unix-like)  | cp test_CODE.bin test.bin  | cat test_CODE.bin test_DATA.bin > test.bin  | zx7 -f test_DATA.bin \\  cat test_CODE.bin test_DATA.bin.zx7 > test.bin  |                                                                                                                                    
 
-**NOTE 1:**  The final output binary is "test.bin" which should be stored and executed from address 0x0000 when default settings are used. \\  **NOTE 2:**  "-create-app" causes the toolchain to generate "test.bin" automatically.  The manual steps are shown for pedagogical reasons.  |||                                      
+   * form final binary (windows) 
+
+     ```
+     copy /b test_CODE.bin test.bin
+     copy /b test_CODE.bin + test_DATA.bin test.bin
+     zx7 -f test_DATA.bin
+     copy /b test_CODE.bin + test_DATA.bin.zx7 test.bin
+     ```
+
+     ​                                                                                                                        
+
+* form final binary (unix-like)
+
+  ```
+  cp test_CODE.bin test.bin
+  cat test_CODE.bin test_DATA.bin > test.bin
+  zx7 -f test_DATA.bin
+  cat test_CODE.bin test_DATA.bin.zx7 > test.bin
+  ```
+
+  ​                                                                                                                               
+
+**NOTE 1:**  The final output binary is "test.bin" which should be stored and executed from address 0x0000 when default settings are used. \
+
+**NOTE 2:**  "-create-app" causes the toolchain to generate "test.bin" automatically.  The manual steps are shown for pedagogical reasons.                                
 
 
 
-| Name   | Purpose | Special Values | 
+| Name   | Purpose | Special Values |
 |---|---|---|
-| **CRT_ORG_CODE** | Determines the ORG address of the code section. \\  This is also the start address of the program. | 0x0000: The crt will provide restarts and the im1 / nmi interrupt service routines in the first 100 bytes of memory. | 
-| **CRT_ORG_DATA** | Determines the ORG address of the data section. | 0 The data section will append to the code section and it will become part of the code binary.   | 
-|            | |  -1  The data section will append to the code section but it will still be output as a separate binary. | 
-| **CRT_ORG_BSS** | Determines the ORG address of the bss section. | 0  The bss section will append to the data section and it will become part of the data binary.                  | 
-| |  | -1    The bss section will append to the data section but it will still be output as a separate binary.            |                                                                                                  |                                                                                                                            
+| **CRT_ORG_CODE** | Determines the ORG address of the code section. \\  This is also the start address of the program. | 0x0000: The crt will provide restarts and the im1 / nmi interrupt service routines in the first 100 bytes of memory. |
+| **CRT_ORG_DATA** | Determines the ORG address of the data section. | 0 The data section will append to the code section and it will become part of the code binary.   |
+|            | |  -1  The data section will append to the code section but it will still be output as a separate binary. |
+| **CRT_ORG_BSS** | Determines the ORG address of the bss section. | 0  The bss section will append to the data section and it will become part of the data binary.                  |
+| |  | -1    The bss section will append to the data section but it will still be output as a separate binary.            |                                                                                                  |
 | **REGISTER_SP** | Location of the stack set by the crt. | -1   The crt will not change the stack location.                                                                |
-| **CRT_STACK_SIZE** | Indicates required stack size to the crt. | Only used by the crt when the heap is automatically sized.                                                                                           | 
+| **CRT_STACK_SIZE** | Indicates required stack size to the crt. | Only used by the crt when the heap is automatically sized.                                                                                           |
 | **CLIB_MALLOC_HEAP_SIZE** | Size of the heap created by the crt. | 0    The heap is not created. |
-| | | The heap is automatically sized and placed between the end of the bss section and the bottom of the stack.   | 
- 
+| | | The heap is automatically sized and placed between the end of the bss section and the bottom of the stack.   |
+
 **NOTE:**  These compile time parameters can be modified by pragmas listed on the compile line or embedded in C source.  This topic is discussed in [compile time customization](#compile_time_customization) below. 
 
 # Automatic ROM Generation
@@ -174,7 +198,7 @@ You can also create complete roms.  appmake accepts three more parameters that c
 
 This compile line using the compressed rom model
 
-	
+
 	zcc +z80 -vn -SO3 -clib=sdcc_iy –-max-allocs-per-node200000 test.c -o test -create-app -Cz"--rombase=0x8000 --romsize=0x2000 --ihex"
 
 
@@ -194,33 +218,33 @@ z88dk sets up sensible defaults for these constants which can be overridden eith
 
 Here is a complete listing along with the default settings used for each compile model:
 
- | CRT CONFIGURATION OPTION         | ram model | rom model | compressed rom model | DESCRIPTION                                                                                                                                                                                                                                                                      | 
- | ------------------------         | --------- | --------- | -------------------- | -----------                                                                                                                                                                                                                                                                      | 
- | CRT_ORG_CODE                     | 0x0000    | 0x0000    | 0x0000               | ORG of final binary and execution address.  An ORG of 0 causes the crt to fill in the z80 restarts, im1 and nmi in the bottom 100 bytes of memory.                                                                                                                               | 
- | CRT_ORG_DATA                     | 0         | 0x8000    | 0x8000               | ORG of the data section, normally the first byte of ram.  An ORG of 0 or -1 causes the data section to append to the code section in memory.  0 causes the data binary to append to the code binary.                                                                             | 
- | CRT_ORG_BSS                      | 0         | -1        | -1                   | ORG of the bss section, normally set to 0 or -1 to append to the data section in memory.  0 causes the bss binary to append to the data binary.                                                                                                                                  | 
- | CRT_MODEL                        | 0         | 1         | 2                    | Selects compile model.                                                                                                                                                                                                                                                           | 
- | REGISTER_SP                      | 0x0000    | 0x0000    | 0x0000               | Stack pointer value set at startup.  If -1, the stack pointer is unchanged.  If < -1 the absolute value is taken as the address holding the stack pointer value at startup.                                                                                                      | 
- | CRT_STACK_SIZE                   | 512       | 512       | 512                  | Maximum expected stack size.  Only used to calculate heap size if the heap is automatically created.                                                                                                                                                                             | 
- | CRT_INITIALIZE_BSS               | 0         | 1         | 1                    | Non-zero indicates that the crt should zero the bss section at startup.                                                                                                                                                                                                          | 
- | CRT_INCLUDE_PREAMBLE             | 0         | 0         | 0                    | %%Non-zero indicates that the crt should include user-supplied code "crt_preamble.asm" before anything else.  That code can fall through to the C compiled code or jump to "__Start" to start the C compiled code.%%                                                             | 
- | CRT_INCLUDE_DRIVER_INSTANTIATION | 0         | 0         | 0                    | %%Non-zero indicates that the crt should include user-supplied file "crt_driver_instantiation.asm.m4" in the driver instantiation section.  This allows the user to define what drivers are present on file descriptors at startup.  The +z80 target has no drivers available.%% | 
- | CRT_ORG_VECTOR_TABLE             | 0         | 0         | 0                    | Non-zero chooses options for generating an im2 vector table.  See [Interrupt Service Routines](https///www.z88dk.org/wiki/doku.php?id=libnew/target_embedded#interrupt_service_routines).                                                                                        | 
- | CRT_INTERRUPT_MODE               | -1        | -1        | -1                   | For 0, 1, 2 the crt will set the corresponding interrupt mode.                                                                                                                                                                                                                   | 
- | CRT_ENABLE_COMMANDLINE           | 0         | 0         | 0                    | %%0 = command line not present, 1 = generate empty command line, 2 = command line supplied by caller (hl = char **argv, bc = int argc)%%, 3 = parse target-specific command line (same as 1 for embedded)                                                                        | 
- | CRT_ENABLE_RESTART               | 0         | 0         | 0                    | Non-zero has the crt restart the program on exit; otherwise CRT_ON_EXIT determines exit behaviour.  (on restart any command line will be empty)                                                                                                                                  | 
- | CRT_ENABLE_CLOSE                 | 1         | 1         | 1                    | Non-zero has the crt close files on program exit.                                                                                                                                                                                                                                | 
- | CRT_ENABLE_EIDI                  | 0x13      | 0x13      | 0x13                 | Bit flags 0x01 = insert di on start, 0x02 = insert ei on start, 0x10 = insert di on exit, 0x20 = insert ei on exit                                                                                                                                                               | 
- | CRT_ON_EXIT                      | 0x10001   | 0x10001   | 0x10001              | Determines behaviour on program exit:  < 0x10000 (jump to this address), 0x10001 = Halt, 0x10002 = Return to caller, 0x10004 = Jump to caller, 0x10008 = Restart program (on restart any command line will be empty). CRT_ENABLE_RESTART overrides                               | 
- | CRT_ENABLE_RST                   | 0x00      | 0x00      | 0x00                 | If code org == 0 and CRT_INCLUDE_PREAMBLE == 0, non-zero bits indicate which z80 restarts the program will implement, with bit 1 corresponding to rst08h through bit 7 corresponding to rst38h.                                                                                  | 
- | CRT_ENABLE_NMI                   | 0         | 0         | 0                    | If code org == 0 and CRT_INCLUDE_PREAMBLE == 0, non-zero indicates the program will supply an nmi interrupt service routine.                                                                                                                                                     | 
- | CLIB_EXIT_STACK_SIZE             | 0         | 0         | 0                    | Number of functions that can be registered with atexit().  The C standard demands at least 32.                                                                                                                                                                                   | 
- | CLIB_QUICKEXIT_STACK_SIZE        | 0         | 0         | 0                    | Number of functions that can be registered with at_quick_exit().  The C standard demands at least 32.                                                                                                                                                                            | 
- | CLIB_MALLOC_HEAP_SIZE            | -1        | -1        | -1                   | The size of malloc's heap.  -1 has the crt automatically place the heap between the end of the bss section and the bottom of the stack.  0 means no heap will be created.  More than 14 creates a heap of the indicated size in the bss section.                                 | 
- | CLIB_STDIO_HEAP_SIZE             | 128       | 128       | 128                  | The size of stdio's heap used to allocate FILE* and driver structures.  For the embedded target, space is required to open memory streams.                                                                                                                                       | 
- | CLIB_BALLOC_TABLE_SIZE           | 0         | 0         | 0                    | Number of entries in the block allocator's allocation table.                                                                                                                                                                                                                     | 
- | CLIB_FOPEN_MAX                   | 0         | 0         | 0                    | Max number of open FILE*.  The C standard demands minimum 8.                                                                                                                                                                                                                     | 
- | CLIB_OPEN_MAX                    | 0         | 0         | 0                    | Max number of file descriptors.  The C standard demands minimum 8.                                                                                                                                                                                                               | 
+| CRT CONFIGURATION OPTION         | ram model | rom model | compressed rom model | DESCRIPTION                                                                                                                                                                                                                                                                      |
+| ------------------------         | --------- | --------- | -------------------- | -----------                                                                                                                                                                                                                                                                      |
+| CRT_ORG_CODE                     | 0x0000    | 0x0000    | 0x0000               | ORG of final binary and execution address.  An ORG of 0 causes the crt to fill in the z80 restarts, im1 and nmi in the bottom 100 bytes of memory.                                                                                                                               |
+| CRT_ORG_DATA                     | 0         | 0x8000    | 0x8000               | ORG of the data section, normally the first byte of ram.  An ORG of 0 or -1 causes the data section to append to the code section in memory.  0 causes the data binary to append to the code binary.                                                                             |
+| CRT_ORG_BSS                      | 0         | -1        | -1                   | ORG of the bss section, normally set to 0 or -1 to append to the data section in memory.  0 causes the bss binary to append to the data binary.                                                                                                                                  |
+| CRT_MODEL                        | 0         | 1         | 2                    | Selects compile model.                                                                                                                                                                                                                                                           |
+| REGISTER_SP                      | 0x0000    | 0x0000    | 0x0000               | Stack pointer value set at startup.  If -1, the stack pointer is unchanged.  If < -1 the absolute value is taken as the address holding the stack pointer value at startup.                                                                                                      |
+| CRT_STACK_SIZE                   | 512       | 512       | 512                  | Maximum expected stack size.  Only used to calculate heap size if the heap is automatically created.                                                                                                                                                                             |
+| CRT_INITIALIZE_BSS               | 0         | 1         | 1                    | Non-zero indicates that the crt should zero the bss section at startup.                                                                                                                                                                                                          |
+| CRT_INCLUDE_PREAMBLE             | 0         | 0         | 0                    | %%Non-zero indicates that the crt should include user-supplied code "crt_preamble.asm" before anything else.  That code can fall through to the C compiled code or jump to "__Start" to start the C compiled code.%%                                                             |
+| CRT_INCLUDE_DRIVER_INSTANTIATION | 0         | 0         | 0                    | %%Non-zero indicates that the crt should include user-supplied file "crt_driver_instantiation.asm.m4" in the driver instantiation section.  This allows the user to define what drivers are present on file descriptors at startup.  The +z80 target has no drivers available.%% |
+| CRT_ORG_VECTOR_TABLE             | 0         | 0         | 0                    | Non-zero chooses options for generating an im2 vector table.  See [Interrupt Service Routines](https///www.z88dk.org/wiki/doku.php?id=libnew/target_embedded#interrupt_service_routines).                                                                                        |
+| CRT_INTERRUPT_MODE               | -1        | -1        | -1                   | For 0, 1, 2 the crt will set the corresponding interrupt mode.                                                                                                                                                                                                                   |
+| CRT_ENABLE_COMMANDLINE           | 0         | 0         | 0                    | %%0 = command line not present, 1 = generate empty command line, 2 = command line supplied by caller (hl = char **argv, bc = int argc)%%, 3 = parse target-specific command line (same as 1 for embedded)                                                                        |
+| CRT_ENABLE_RESTART               | 0         | 0         | 0                    | Non-zero has the crt restart the program on exit; otherwise CRT_ON_EXIT determines exit behaviour.  (on restart any command line will be empty)                                                                                                                                  |
+| CRT_ENABLE_CLOSE                 | 1         | 1         | 1                    | Non-zero has the crt close files on program exit.                                                                                                                                                                                                                                |
+| CRT_ENABLE_EIDI                  | 0x13      | 0x13      | 0x13                 | Bit flags 0x01 = insert di on start, 0x02 = insert ei on start, 0x10 = insert di on exit, 0x20 = insert ei on exit                                                                                                                                                               |
+| CRT_ON_EXIT                      | 0x10001   | 0x10001   | 0x10001              | Determines behaviour on program exit:  < 0x10000 (jump to this address), 0x10001 = Halt, 0x10002 = Return to caller, 0x10004 = Jump to caller, 0x10008 = Restart program (on restart any command line will be empty). CRT_ENABLE_RESTART overrides                               |
+| CRT_ENABLE_RST                   | 0x00      | 0x00      | 0x00                 | If code org == 0 and CRT_INCLUDE_PREAMBLE == 0, non-zero bits indicate which z80 restarts the program will implement, with bit 1 corresponding to rst08h through bit 7 corresponding to rst38h.                                                                                  |
+| CRT_ENABLE_NMI                   | 0         | 0         | 0                    | If code org == 0 and CRT_INCLUDE_PREAMBLE == 0, non-zero indicates the program will supply an nmi interrupt service routine.                                                                                                                                                     |
+| CLIB_EXIT_STACK_SIZE             | 0         | 0         | 0                    | Number of functions that can be registered with atexit().  The C standard demands at least 32.                                                                                                                                                                                   |
+| CLIB_QUICKEXIT_STACK_SIZE        | 0         | 0         | 0                    | Number of functions that can be registered with at_quick_exit().  The C standard demands at least 32.                                                                                                                                                                            |
+| CLIB_MALLOC_HEAP_SIZE            | -1        | -1        | -1                   | The size of malloc's heap.  -1 has the crt automatically place the heap between the end of the bss section and the bottom of the stack.  0 means no heap will be created.  More than 14 creates a heap of the indicated size in the bss section.                                 |
+| CLIB_STDIO_HEAP_SIZE             | 128       | 128       | 128                  | The size of stdio's heap used to allocate FILE* and driver structures.  For the embedded target, space is required to open memory streams.                                                                                                                                       |
+| CLIB_BALLOC_TABLE_SIZE           | 0         | 0         | 0                    | Number of entries in the block allocator's allocation table.                                                                                                                                                                                                                     |
+| CLIB_FOPEN_MAX                   | 0         | 0         | 0                    | Max number of open FILE*.  The C standard demands minimum 8.                                                                                                                                                                                                                     |
+| CLIB_OPEN_MAX                    | 0         | 0         | 0                    | Max number of file descriptors.  The C standard demands minimum 8.                                                                                                                                                                                                               |
 
 **NOTE:** For a **minimum size compile**, modify the defaults by setting "CLIB_MALLOC_HEAP_SIZE = 0" (malloc will not work as no heap will be created) and "CLIB_STDIO_HEAP_SIZE = 0" (memory streams can not be opened).
 
@@ -232,7 +256,7 @@ __**1.  FROM THE COMPILE LINE (PRAGMA-DEFINE)**__
 
 The relevant option is "-pragma-define:CRT_ORG_CODE=0x100".
 
-	
+
 	zcc +z80 -vn -SO3 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -create-app -pragma-define:CRT_ORG_CODE=0x100
 
 
@@ -244,13 +268,13 @@ Pragmas are activated in the same way as in C source and, in fact, the file will
 
 **File: "pragma.inc"**
 
-	
+
 	#pragma output CRT_ORG_CODE = 0x100   // move origin to address 0x100
 
 
 There can be only one pragma include file indicated per compile line.
 
-	
+
 	zcc +z80 -vn -SO3 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -create-app -pragma-include:pragma.inc
 
 
@@ -258,7 +282,7 @@ Best method for large projects.  The separate pragma file is self-documenting, c
 
 __**3.  FROM INSIDE C SOURCE**__
 
-	
+
 	#pragma output CRT_ORG_CODE = 0x100   // move origin to address 0x100
 	
 	#include `<stdio.h>`
@@ -278,41 +302,42 @@ Good for specifying numerous pragmas in single source file programs.
 
 Printf and scanf can also be customized at compile time using the same method.  **The customization selects which printf and scanf converters are enabled.  By disabling those converters not needed by the program, program size can be reduced.**  Although the embedded target does not define stdin, stdout or stderr, this affects the printf and scanf core so it will also affect the sprintf and sscanf families.
 
- | STDIO CONFIGURATION OPTION | CONVERTER | BITMASK      | COMMENTS                            | CONVERTER | BITMASK      | COMMENTS                         | 
- | -------------------------- | --------- | -------      | --------                            | --------- | -------      | --------                         | 
- | CLIB_OPT_PRINTF            | %d        | 0x 0000 0001 |                                     | %lo       | 0x 0001 0000 |                                  | 
- | CLIB_OPT_SCANF             | %u        | 0x 0000 0002 |                                     | %ln       | 0x 0002 0000 |                                  | 
- |                            | %x        | 0x 0000 0004 | either enables for scanf            | %li       | 0x 0004 0000 |                                  | 
- |                            | %X        | 0x 0000 0008 | ""                                  | %lp       | 0x 0008 0000 |                                  | 
- |                            | %o        | 0x 0000 0010 |                                     | %lB       | 0x 0010 0000 | binary number                    | 
- |                            | %n        | 0x 0000 0020 |                                     | %[        | 0x 0020 0000 | ignored by printf                | 
- |                            | %i        | 0x 0000 0040 |                                     | %a        | 0x 0040 0000 | ignored by scanf (not supported) | 
- |                            | %p        | 0x 0000 0080 |                                     | %A        | 0x 0080 0000 | ""                               | 
- |                            | %B        | 0x 0000 0100 | binary number                       | %e        | 0x 0100 0000 | ignored by scanf (not supported) | 
- |                            | %s        | 0x 0000 0200 |                                     | %E        | 0x 0200 0000 | ""                               | 
- |                            | %c        | 0x 0000 0400 |                                     | %f        | 0x 0400 0000 | ignored by scanf (not supported) | 
- |                            | %I        | 0x 0000 0800 | IPv4 address in dotted form         | %F        | 0x 0800 0000 | ""                               | 
- |                            | %ld       | 0x 0000 1000 |                                     | %g        | 0x 1000 0000 | ignored by scanf (not supported) | 
- |                            | %lu       | 0x 0000 2000 |                                     | %G        | 0x 2000 0000 | ""                               | 
- |                            | %lx       | 0x 0000 4000 | either enables for scanf            |           |              |                                  | 
- |                            | %lX       | 0x 0000 8000 | ""                                  |           |              |                                  | 
- |                            |           |              |                                     |           |              |                                  | 
- | CLIB_OPT_PRINTF_2          | %lld      | 0x 0000 0001 | sdcc only                           |           |              |                                  | 
- | CLIB_OPT_SCANF_2           | %llu      | 0x 0000 0002 | sdcc only                           |           |              |                                  | 
- |                            | %llx      | 0x 0000 0004 | sdcc only, either enables for scanf |           |              |                                  | 
- |                            | %llX      | 0x 0000 0008 | sdcc only, ""                       |           |              |                                  | 
- |                            | %llo      | 0x 0000 0010 | sdcc only                           |           |              |                                  | 
- |                            |           | 0x 0000 0020 | ignored                             |           |              |                                  | 
- |                            | %lli      | 0x 0000 0040 | sdcc only                           |           |              |                                  | 
-`<sup>`If you are unfamiliar with C's standard converters they are documented [here.](libnew/stdio)`</sup>` \\ 
-`<sup>`Because the library does not currently support scanf of floats, it is recommended a float string be read using %[ or %s followed by conversion to float using atof() or strtod().`</sup>`
+| STDIO CONFIGURATION OPTION | CONVERTER | BITMASK      | COMMENTS                            | CONVERTER | BITMASK      | COMMENTS                         |
+| -------------------------- | --------- | ------------ | ----------------------------------- | --------- | ------------ | -------------------------------- |
+| CLIB_OPT_PRINTF            | %d        | 0x 0000 0001 |                                     | %lo       | 0x 0001 0000 |                                  |
+| CLIB_OPT_SCANF             | %u        | 0x 0000 0002 |                                     | %ln       | 0x 0002 0000 |                                  |
+|                            | %x        | 0x 0000 0004 | either enables for scanf            | %li       | 0x 0004 0000 |                                  |
+|                            | %X        | 0x 0000 0008 | ""                                  | %lp       | 0x 0008 0000 |                                  |
+|                            | %o        | 0x 0000 0010 |                                     | %lB       | 0x 0010 0000 | binary number                    |
+|                            | %n        | 0x 0000 0020 |                                     | %[        | 0x 0020 0000 | ignored by printf                |
+|                            | %i        | 0x 0000 0040 |                                     | %a        | 0x 0040 0000 | ignored by scanf (not supported) |
+|                            | %p        | 0x 0000 0080 |                                     | %A        | 0x 0080 0000 | ""                               |
+|                            | %B        | 0x 0000 0100 | binary number                       | %e        | 0x 0100 0000 | ignored by scanf (not supported) |
+|                            | %s        | 0x 0000 0200 |                                     | %E        | 0x 0200 0000 | ""                               |
+|                            | %c        | 0x 0000 0400 |                                     | %f        | 0x 0400 0000 | ignored by scanf (not supported) |
+|                            | %I        | 0x 0000 0800 | IPv4 address in dotted form         | %F        | 0x 0800 0000 | ""                               |
+|                            | %ld       | 0x 0000 1000 |                                     | %g        | 0x 1000 0000 | ignored by scanf (not supported) |
+|                            | %lu       | 0x 0000 2000 |                                     | %G        | 0x 2000 0000 | ""                               |
+|                            | %lx       | 0x 0000 4000 | either enables for scanf            |           |              |                                  |
+|                            | %lX       | 0x 0000 8000 | ""                                  |           |              |                                  |
+|                            |           |              |                                     |           |              |                                  |
+| CLIB_OPT_PRINTF_2          | %lld      | 0x 0000 0001 | sdcc only                           |           |              |                                  |
+| CLIB_OPT_SCANF_2           | %llu      | 0x 0000 0002 | sdcc only                           |           |              |                                  |
+|                            | %llx      | 0x 0000 0004 | sdcc only, either enables for scanf |           |              |                                  |
+|                            | %llX      | 0x 0000 0008 | sdcc only, ""                       |           |              |                                  |
+|                            | %llo      | 0x 0000 0010 | sdcc only                           |           |              |                                  |
+|                            |           | 0x 0000 0020 | ignored                             |           |              |                                  |
+|                            | %lli      | 0x 0000 0040 | sdcc only                           |           |              |                                  |
+> If you are unfamiliar with C's standard converters they are documented [here.](libnew/stdio)
+
+> Because the library does not currently support scanf of floats, it is recommended a float string be read using %[ or %s followed by conversion to float using atof() or strtod().`</sup>`
 
 
 These options can be defined using the same three methods mentioned for the [crt configuration options](libnew/target_embedded#crt_configuration) in the last section.
 
 **This example compile activates %csd only for printf:**
 
-	
+
 	zcc +embedded -vn -SO3 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -create-app -pragma-define:CLIB_OPT_PRINTF=0x601
 
 
@@ -328,14 +353,14 @@ There is a simpler method to specify active converters by name.  The previous se
 
 These simpler pragmas can only appear in C source or in pragma-include files (they cannot be activated on the compile line).
 
-	
+
 	#pragma printf = "`<list printf converters here including l or ll for long and longlong>`"
 	#pragma scanf  = "`<list scanf converters here including l or ll for long and longlong>`"
 
 
 Example:
 
-	
+
 	#pragma printf = "scuf"     // enables %s, %c, %u, %f only 
 	#pragma scanf  = "slxlld["  // enables %s, %lx, %lld, %[ only
 
@@ -356,17 +381,17 @@ After editing any of the config files, the library must be re-built for the chan
 
 Suitable settings of those three variables grant exact control over how the program is exited.  There are five exit scenarios supported. In all cases except restart, HL will hold the program's return value.
 
- | 1. RESTART                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | *CRT_ENABLE_RESTART = 1* or *CRT_ON_EXIT = 0x10008*  | 
- | ----------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | -------------------------------------------------------  | 
- | For ROM model compiles, C variables will be properly re-initialized.  RAM model compiles do not re-initialize C variables so their values will not be reset to their initial state (but see *CRT_INITIALIZE_BSS*) meaning programs may not function properly on runs after the first.  On runs following the first, if a command line is requested the command line will be initialized to empty.  This behaviour is necessary because the original command line can be overwritten by the C program. |                                                          | 
- | 2. INFINITE LOOP (default)                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | *CRT_ENABLE_RESTART = 0* and *CRT_ON_EXIT = 0x10001* | 
- | The program will execute "halt" followed by "jr ASMPC".                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                          | 
- | 3. JUMP TO ABSOLUTE ADDRESS OR LABEL                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | *CRT_ENABLE_RESTART = 0* and *CRT_ON_EXIT = nnnnn*   | 
- | The program will jump to address "nnnnn" which must lie in the range [0,0xffff].  Use of a pragma-redirect rather than a pragma-define can set the destination address to a label defined in the project ("#pragma redirect CRT_ON_EXIT = labelname" or on the compile line "-pragma-redirect:CRT_ON_EXIT=labelname"                                                                                                                                                                                    |                                                          | 
- | 4. RETURN TO CALLER                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | *CRT_ENABLE_RESTART = 0* and *CRT_ON_EXIT = 0x10002* | 
- | At program start the crt will save the caller's stack pointer.  On exit, the caller's stack pointer will be restored and a "ret" will be executed.  In order for a return to be successful, the caller's stack must not be contaminated over the lifetime of the C program's execution.  The C program must have been started with a call.                                                                                                                                                              |                                                          | 
- | 5. JUMP TO CALLER                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | *CRT_ENABLE_RESTART = 0* and *CRT_ON_EXIT = 0x10004* | 
- | At program start the crt will pop the return address and save it.  On exit, the return address will be jumped to.  The C program must have been started with a call.                                                                                                                                                                                                                                                                                                                                    |                                                          | 
+| 1. RESTART                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | *CRT_ENABLE_RESTART = 1* or *CRT_ON_EXIT = 0x10008*  |
+| ----------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | -------------------------------------------------------  |
+| For ROM model compiles, C variables will be properly re-initialized.  RAM model compiles do not re-initialize C variables so their values will not be reset to their initial state (but see *CRT_INITIALIZE_BSS*) meaning programs may not function properly on runs after the first.  On runs following the first, if a command line is requested the command line will be initialized to empty.  This behaviour is necessary because the original command line can be overwritten by the C program. |                                                          |
+| 2. INFINITE LOOP (default)                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | *CRT_ENABLE_RESTART = 0* and *CRT_ON_EXIT = 0x10001* |
+| The program will execute "halt" followed by "jr ASMPC".                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                          |
+| 3. JUMP TO ABSOLUTE ADDRESS OR LABEL                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | *CRT_ENABLE_RESTART = 0* and *CRT_ON_EXIT = nnnnn*   |
+| The program will jump to address "nnnnn" which must lie in the range [0,0xffff].  Use of a pragma-redirect rather than a pragma-define can set the destination address to a label defined in the project ("#pragma redirect CRT_ON_EXIT = labelname" or on the compile line "-pragma-redirect:CRT_ON_EXIT=labelname"                                                                                                                                                                                    |                                                          |
+| 4. RETURN TO CALLER                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | *CRT_ENABLE_RESTART = 0* and *CRT_ON_EXIT = 0x10002* |
+| At program start the crt will save the caller's stack pointer.  On exit, the caller's stack pointer will be restored and a "ret" will be executed.  In order for a return to be successful, the caller's stack must not be contaminated over the lifetime of the C program's execution.  The C program must have been started with a call.                                                                                                                                                              |                                                          |
+| 5. JUMP TO CALLER                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | *CRT_ENABLE_RESTART = 0* and *CRT_ON_EXIT = 0x10004* |
+| At program start the crt will pop the return address and save it.  On exit, the return address will be jumped to.  The C program must have been started with a call.                                                                                                                                                                                                                                                                                                                                    |                                                          |
 
 In addition to the above, **CRT_ENABLE_EIDI** determines if maskable interrupts should be enabled or disabled on exit.
 
@@ -433,17 +458,17 @@ This section will highlight the most commonly used ones.
 
 *1. Compile to a binary using the default compressed rom model, producing asm listing and map file in the process*
 
-	
+
 	zcc +z80 -vn -SO3 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -create-app -m --list --c-code-in-asm
 
 *2. Compile all the source files to object files a.o, b.o, c.o (d.o is untouched)*
 
-	
+
 	zcc +z80 -vn -c -SO3 -clib=sdcc_iy --max-allocs-per-node200000 a.c b.s c.asm d.o
 
 *3. Make a library named "mylib.lib" out of the source files listed in "lib.lst".  The linker operates on a source file granularity so to minimize the amount of code extracted from a library during linking, separate individual functions and co-referenced variables into their own source files.*
 
-	
+
 	zcc +z80 -vn -x -SO3 -clib=sdcc_iy --max-allocs-per-node200000 @lib.lst -o mylib
 
 *"z80nm mylib.lib" can be used afterward to examine the contents of the library.*
@@ -454,7 +479,7 @@ C source can be translated to assembly without going through the entire compile 
 
 Because there is no linking step, only compiler choice, target (to set include path) and optimization settings are relevant.
 
-	
+
 	zcc +z80 -vn -a -O3 -clib=new test.c --c-code-in-asm
 	zcc +z80 -vn -a -SO3 -clib=sdcc_iy --max-allocs-per-node200000 test.c --c-code-in-asm
 	zcc +z80 -vn -a -SO3 -clib=sdcc_ix --max-allocs-per-node200000 test.c --c-code-in-asm
@@ -473,44 +498,45 @@ However if "-Cl--split-bin" is added to a compile line, the linker will output e
 
 Here's an example compile line and associated output from a simple "Hello World" program using sprintf into a ram-based buffer.  Before the compile was run, all .bin files were removed to avoid any confusion.
 
-	
+
 	zcc +z80 -vn -clib=sdcc_iy -SO3 --max-allocs-per-node200000 hw2.c -o hw2 -Cl--split-bin
 
+The following files are produced:
 
-`<file>`
-    1 hw2_BSS.bin
-    100 hw2_bss_compiler.bin
-    2 hw2_bss_error.bin
-    128 hw2_bss_fcntl.bin
-    2 hw2_bss_stdio.bin
-    6 hw2_bss_stdlib.bin
-    2 hw2_BSS_UNINITIALIZED.bin
-    127 hw2_CODE.bin
-    6 hw2_code_adt_p_forward_list.bin
-   34 hw2_code_alloc_malloc.bin
-   63 hw2_code_compiler.bin
-   71 hw2_code_compress_zx7.bin
-   40 hw2_code_crt_init.bin
-    7 hw2_code_crt_main.bin
-    5 hw2_code_crt_return.bin
-    9 hw2_code_ctype.bin
-   90 hw2_code_error.bin
-    126 hw2_code_l.bin
-    154 hw2_code_math.bin
-1,319 hw2_code_stdio.bin
-    117 hw2_code_stdlib.bin
-   59 hw2_code_string.bin
-   31 hw2_code_threads_mutex.bin
-    1 hw2_DATA.bin
-    2 hw2_data_alloc_malloc.bin
-    2 hw2_data_fcntl.bin
-    4 hw2_data_stdio.bin
-    1 hw2_data_threads.bin
-   38 hw2_rodata_error_strings.bin
-    1 hw2_rodata_error_string_end.bin
-    
-30 File(s)          2,548 bytes
-`</file>`
+```
+        1 hw2_BSS.bin
+      100 hw2_bss_compiler.bin
+        2 hw2_bss_error.bin
+      128 hw2_bss_fcntl.bin
+        2 hw2_bss_stdio.bin
+        6 hw2_bss_stdlib.bin
+        2 hw2_BSS_UNINITIALIZED.bin
+      127 hw2_CODE.bin
+        6 hw2_code_adt_p_forward_list.bin
+       34 hw2_code_alloc_malloc.bin
+       63 hw2_code_compiler.bin
+       71 hw2_code_compress_zx7.bin
+       40 hw2_code_crt_init.bin
+        7 hw2_code_crt_main.bin
+        5 hw2_code_crt_return.bin
+        9 hw2_code_ctype.bin
+       90 hw2_code_error.bin
+      126 hw2_code_l.bin
+      154 hw2_code_math.bin
+    1,319 hw2_code_stdio.bin
+      117 hw2_code_stdlib.bin
+       59 hw2_code_string.bin
+       31 hw2_code_threads_mutex.bin
+        1 hw2_DATA.bin
+        2 hw2_data_alloc_malloc.bin
+        2 hw2_data_fcntl.bin
+        4 hw2_data_stdio.bin
+        1 hw2_data_threads.bin
+       38 hw2_rodata_error_strings.bin
+        1 hw2_rodata_error_string_end.bin
+     
+ 30 File(s)          2,548 bytes
+```
 
 From this directory listing it can be seen that the total program size is 2548 bytes (that is the CODE + DATA + BSS sizes and does not include the stack, heap or a stored data section).
 
@@ -563,7 +589,7 @@ It's also possible to inline asm code into C source.  This is quite common among
 
 Inlining asm in C source is done by surrounding the asm code with %%"__asm" and "__endasm;"%% tags.  People familiar with past versions of z88dk will be thinking "#asm" and "#endasm" but these tags will not work with sdcc whereas the former will work with both sdcc and sccz80 compilers.  The example below inlines a "di" instruction to disable interrupts.
 
-	
+
 	void main(void)
 	{
 	   __asm
@@ -584,9 +610,7 @@ In short, inlined asm is not really good for much.
 
 These problems can be circumvented if the entire function is written in assembly language.  This way there is no interaction between compiler generated code and asm code:
 
-	
-	// naked qualifier recommended for sdcc only
-	
+
 	int func(int a) __naked
 	{
 	   __asm
@@ -607,7 +631,7 @@ Applied to data, the const keyword determines whether data will be stored in a r
 
 Consider the two following variable declarations:
 
-	
+
 	unsigned char book0[] = "It was the best of times, it was the worst of times...";
 	const unsigned char book1[] = "It was the best of times, it was the worst of times...";
 
@@ -697,27 +721,27 @@ If **CRT_ORG_CODE=0x0000 and CRT_INCLUDE_PREAMBLE=0** then the [crt will provide
 
 The default behaviour is to make all of these routines effectively nops.  So the restarts will simply "ret", the im1 isr will "ei;reti" and the nmi isr will "retn".  However, **suitably setting bits in CRT_ENABLE_RST and CRT_ENABLE_NMI will indicate to the crt that the program will implement one or more of these restarts or isrs.**  Where relevant bits are set, the crt will generate jumps to a user-supplied function implementing the restart or interrupt routine.
                                                                                                                                     
- | CRT CONFIG OPTION | BITMASK                   | C                      | ASM          | COMMENT                                                                                                                                | 
- | --- | --- |--- |--- |--- |
- | CRT_ENABLE_RST    | 0x02                      | void z80_rst_08h(void) | _z80_rst_08h | User implements rst08h                                                                                                                 | 
- |                   | 0x04                      | void z80_rst_10h(void) | _z80_rst_10h | User implements rst10h                                                                                                                 | 
- |                   | 0x08                      | void z80_rst_18h(void) | _z80_rst_18h | User implements rst18h                                                                                                                 | 
- |                   | 0x10                      | void z80_rst_20h(void) | _z80_rst_20h | User implements rst20h                                                                                                                 | 
- |                   | 0x20                      | void z80_rst_28h(void) | _z80_rst_28h | User implements rst28h                                                                                                                 | 
- |                   | 0x40                      | void z80_rst_30h(void) | _z80_rst_30h | User implements rst30h                                                                                                                 | 
- |                   | 0x80                      | void z80_rst_38h(void) | _z80_rst_38h | User implements rst38h aka the im1 isr.  If used as an im1 isr the user routine must preserve register values and exit with "ei; reti" | 
- |                   |                           |                        |              |                                                                                                                                        | 
- | CRT_ENABLE_NMI    | 1                         | void z80_nmi(void)     | _z80_nmi     | User implements the nmi isr.  The user routine must preserve register values and exit with "retn"                                      | 
+| CRT CONFIG OPTION | BITMASK                   | C                      | ASM          | COMMENT                                                                                                                                |
+| --- | --- |--- |--- |--- |
+| CRT_ENABLE_RST    | 0x02                      | void z80_rst_08h(void) | _z80_rst_08h | User implements rst08h                                                                                                                 |
+|                   | 0x04                      | void z80_rst_10h(void) | _z80_rst_10h | User implements rst10h                                                                                                                 |
+|                   | 0x08                      | void z80_rst_18h(void) | _z80_rst_18h | User implements rst18h                                                                                                                 |
+|                   | 0x10                      | void z80_rst_20h(void) | _z80_rst_20h | User implements rst20h                                                                                                                 |
+|                   | 0x20                      | void z80_rst_28h(void) | _z80_rst_28h | User implements rst28h                                                                                                                 |
+|                   | 0x40                      | void z80_rst_30h(void) | _z80_rst_30h | User implements rst30h                                                                                                                 |
+|                   | 0x80                      | void z80_rst_38h(void) | _z80_rst_38h | User implements rst38h aka the im1 isr.  If used as an im1 isr the user routine must preserve register values and exit with "ei; reti" |
+|                   |                           |                        |              |                                                                                                                                        |
+| CRT_ENABLE_NMI    | 1                         | void z80_nmi(void)     | _z80_nmi     | User implements the nmi isr.  The user routine must preserve register values and exit with "retn"                                      |
 
 These **restarts and isrs can be implemented in either C or asm using the function names shown** in the table.  See the [mixing c and assembly](libnew/target_embedded#mixing_c_and_assembly_language) topic for direction on how to incorporate assembly language into a project.
 
 **Sdcc implements a C extension that allows C subroutines to be declared as interrupt service routines.**  The three examples below show how to implement the im1 and nmi isrs along with the generated code using this extension.
                                  
- | c code                                                                   | output asm                                                                           | comments                         | 
+| c code                                                                   | output asm                                                                           | comments                         |
 |---|---|---|
- | `void z80_rst_38h(void) __critical __interrupt(0)  {   ...   }` | _z80_rst_38h:  \\ push used-registers  \\ ...  \\ pop used-registers  \\ ei  \\ reti | im0, im1 or im2                  | 
- | `void z80_rst_38h(void) __interrupt   {   ...   }`               | _z80_rst_38h:  \\ ei  \\ push used-registers  \\ ...  \\ pop used-registers  \\ reti | im2 with prioritized daisy chain | 
- | `void z80_nmi(void) __critical __interrupt   {   ...   } `       | _z80_nmi:  \\ push used-registers  \\ ...  \\ pop used-registers  \\ retn            | nmi                              | 
+| `void z80_rst_38h(void) __critical __interrupt(0)  {   ...   }` | _z80_rst_38h:  \\ push used-registers  \\ ...  \\ pop used-registers  \\ ei  \\ reti | im0, im1 or im2                  |
+| `void z80_rst_38h(void) __interrupt   {   ...   }`               | _z80_rst_38h:  \\ ei  \\ push used-registers  \\ ...  \\ pop used-registers  \\ reti | im2 with prioritized daisy chain |
+| `void z80_nmi(void) __critical __interrupt   {   ...   } `       | _z80_nmi:  \\ push used-registers  \\ ...  \\ pop used-registers  \\ retn            | nmi                              |
 
 **IMPORTANT NOTE:  sdcc** is mainly an enhanced 8080 compiler so it **is unaware of the z80's exx set.**  However the library takes full advantage of the z80 architecture, including the exx set, so if the isr calls a library function that modifies the exx set, sdcc will not preserve those registers.  The library only uses the exx set when something complicated is being done so most uses of the library will not be altering the exx set but if you need to know, verify that by examining the [library source code](https///github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT).  It may be tempting to inline some asm that will push and pop the exx set registers inside the function but this will not work if there are local variables present because this will alter their offsets on the stack without sdcc's knowledge.
 
@@ -726,8 +750,6 @@ These **restarts and isrs can be implemented in either C or asm using the functi
 An example nevertheless using the deprecated method where the C compiler places the code into the code_compiler section.
 
 ```	
-	// __naked attribute suggested for sdcc only
-	
 	void z80_rst_38h(void) __naked
 	{
 	   __asm
@@ -894,13 +916,13 @@ _cdata:
 
 The compressed data file "mydata.txt.zx7" can be generated from "mydata.txt" with:
 
-	
+
 	zx7 -f mydata.txt
 
 
 And the program compiled with:
 
-	
+
 	zcc +z80 -vn -SO3 -clib=sdcc_iy --max-allocs-per-node200000 main.c data.asm -o main -create-app
 
 
@@ -912,7 +934,7 @@ Code and data can be placed at fixed locations in memory in two ways.
 
 The following example shows how an integer and an external function can be referred to at specific memory addresses.  Once again, the integer and function will not be part of the project; the C compiler is only being informed that these things exist in memory and it is being told how to access them.  The method here defines the memory locations in assembler and then the C compiler is informed of their existence by a prototype.
 
-	
+
 	PUBLIC _os_clock, _os_reset_clock
 	
 	defc _os_clock = 56698         ; memory address holding an integer
@@ -923,7 +945,7 @@ In the above the constants can be expressions that will be evaluated by z80asm (
 
 Then in C:
 
-	
+
 	extern unsigned int os_clock;
 	extern void os_reset_clock(void);
 
@@ -932,7 +954,7 @@ No special syntax is needed but the memory locations are defined in a separate .
 
 The above method works for everything and for both compilers identically.  The next method shown below uses special C syntax supplied by the compilers to locate external items in memory.  The special syntax does not always work for all data types. We will attempt to duplicate the above using the special syntax.  This time the locations are set from C.
 
-	
+
 	#ifdef __SDCC
 	__at (56698) static unsigned int os_clock;
 	__at (62109) static void os_reset_clock(void);
@@ -976,7 +998,7 @@ To create the stack in the BSS section, space will first have to be reserved for
 
 stack.asm
 
-	
+
 	SECTION BSS_UNINITIALIZED
 	PUBLIC stack_loc
 	
@@ -993,7 +1015,7 @@ Nervous people may prefer to put guard buffers around the stack in case of overf
 
 stack.asm
 
-	
+
 	SECTION BSS_UNINITIALIZED
 	PUBLIC stack_loc
 	
@@ -1013,13 +1035,13 @@ The crt can be told to set the stack pointer to point at "stack_loc" using the *
 
 From the compile line this would look like:
 
-	
+
 	zcc +z80 -vn ...... main.c stack.asm -o main -create-app -pragma-redirect:REGISTER_SP=stack_loc
 
 
 Inside C source or a pragma include file:
 
-	
+
 	#pragma redirect REGISTER_SP = stack_loc
 
 
@@ -1035,7 +1057,7 @@ In order to place the heap at a specific location in memory, we will first reser
 
 heap.asm
 
-	
+
 	defc heap_loc = 0x4000  ;; the heap's location in memory
 	defc heap_sz  = 2048    ;; the heap's size in bytes
 	
@@ -1077,7 +1099,7 @@ The last ingredient is **CLIB_MALLOC_HEAP_SIZE** must be set to zero so that the
 
 A compile line might look like this:
 
-	
+
 	zcc +z80 -vn -SO3 -clib=sdcc_iy --max-allocs-per-node200000 main.c heap.asm -o main -create-app -pragma-define:CLIB_MALLOC_HEAP_SIZE=0
 
 
@@ -1124,7 +1146,7 @@ Steps for creating a self-extracting rom resident compressed executable:
 
 **3. WRITE A SHORT BOOT PROGRAM WITH ORG AT THE START ADDRESS IN ROM THAT DECOMPRESSES THE STORED COMPRESSED BINARY INTO RAM AND STARTS IT.**  There can be many variations of this depending on the specific hardware set-up.  The simplest case is shown here for a system that will boot from ROM at address 0 with the program running from another address in RAM.
 
-	
+
 	;; SELF-EXTRACTING ROM RESIDENT COMPRESSED EXECUTABLE
 	;; zcc +embedded -vn --no-crt -clib=sdcc_iy romexe.asm -o romexe.bin
 	
@@ -1153,7 +1175,7 @@ Steps for creating a self-extracting rom resident compressed executable:
 
 The compile line given:
 
-	
+
 	zcc +z80 -vn --no-crt -clib=sdcc_iy romexe.asm -o romexe.bin
 
 
@@ -1175,7 +1197,7 @@ There are several ways to do this and the method shown here is the simplest.
 
 **3. ASSEMBLE THE COMPRESSED EXECUTABLE.**  Fill in the missing information in the asm file below.  In particular START, DELTA, UBINSZ and the name of the compressed binary file must be updated.
 
-	
+
 	;; SELF-EXTRACTING RAM RESIDENT COMPRESSED EXECUTABLE
 	;; zcc +z80 -vn --no-crt -clib=sdcc_iy ramexe.asm -o ramexe
 	;; (windows  ) copy /b ramexe_INIT.bin + ramexe_DCODE.bin ramexe.bin
@@ -1239,13 +1261,13 @@ There are several ways to do this and the method shown here is the simplest.
 
 The file above was named "ramexe.asm" in this example.  Assemble this file with the following compile line:
 
-	
+
 	zcc +z80 -vn --no-crt -clib=sdcc_iy ramexe.asm -o ramexe
 
 
 Form the complete compressed executable by putting the separately output sections together:
 
-	
+
 	(windows  ) copy /b ramexe_INIT.bin + ramexe_DCODE.bin ramexe.bin
 	(unix-like) cat ramexe_INIT.bin ramexe_DCODE.bin > ramexe.bin
 
@@ -1265,7 +1287,7 @@ The diagram and description below show how the compressed executable works.
 
 Simply **add --reloc-info to the compile line** to have z80asm generate the relocation information.
 
-	
+
 	zcc +embedded -vn -SO3 -startup=0 -clib=sdcc_iy --max-allocs-per-node200000 test.c -o test -create-app --reloc-info
 
 
