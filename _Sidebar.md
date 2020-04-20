@@ -33,6 +33,7 @@
 * [Header Files](Header-Files)
 * [Assembly Language](Assembly-Language)
 * [Library in Depth](Library-in-Depth)
+* [Embedded Platform](NewLib--Platform--Embedded)
 
 ## Misc
 
