@@ -273,9 +273,6 @@ __**3.  FROM INSIDE C SOURCE**__
 
 Good for specifying numerous pragmas in single source file programs.
 
-\\ 
-
-**Examples of compile time customizations showing how and why they might be used can be found in the [Examples Section](libnew/target_embedded#example_compiles_and_configurations) below.**
 
 ##  Printf and Scanf Configuration 
 
@@ -715,13 +712,12 @@ The default behaviour is to make all of these routines effectively nops.  So the
 These **restarts and isrs can be implemented in either C or asm using the function names shown** in the table.  See the [mixing c and assembly](libnew/target_embedded#mixing_c_and_assembly_language) topic for direction on how to incorporate assembly language into a project.
 
 **Sdcc implements a C extension that allows C subroutines to be declared as interrupt service routines.**  The three examples below show how to implement the im1 and nmi isrs along with the generated code using this extension.
-
- | SDCC ONLY                                                                |                                                                                      |                                  | 
- | ---------                                                                |                                                                                      |                                  | 
+                                 
  | c code                                                                   | output asm                                                                           | comments                         | 
- | %%void z80_rst_38h(void) __critical __interrupt(0)%%  \\ {  \\ ...  \\ } | _z80_rst_38h:  \\ push used-registers  \\ ...  \\ pop used-registers  \\ ei  \\ reti | im0, im1 or im2                  | 
- | %%void z80_rst_38h(void) __interrupt%%  \\ {  \\ ...  \\ }               | _z80_rst_38h:  \\ ei  \\ push used-registers  \\ ...  \\ pop used-registers  \\ reti | im2 with prioritized daisy chain | 
- | %%void z80_nmi(void) __critical __interrupt%%  \\ {  \\ ...  \\ }        | _z80_nmi:  \\ push used-registers  \\ ...  \\ pop used-registers  \\ retn            | nmi                              | 
+|---|---|---|
+ | `void z80_rst_38h(void) __critical __interrupt(0)  {   ...   }` | _z80_rst_38h:  \\ push used-registers  \\ ...  \\ pop used-registers  \\ ei  \\ reti | im0, im1 or im2                  | 
+ | `void z80_rst_38h(void) __interrupt   {   ...   }`               | _z80_rst_38h:  \\ ei  \\ push used-registers  \\ ...  \\ pop used-registers  \\ reti | im2 with prioritized daisy chain | 
+ | `void z80_nmi(void) __critical __interrupt   {   ...   } `       | _z80_nmi:  \\ push used-registers  \\ ...  \\ pop used-registers  \\ retn            | nmi                              | 
 
 **IMPORTANT NOTE:  sdcc** is mainly an enhanced 8080 compiler so it **is unaware of the z80's exx set.**  However the library takes full advantage of the z80 architecture, including the exx set, so if the isr calls a library function that modifies the exx set, sdcc will not preserve those registers.  The library only uses the exx set when something complicated is being done so most uses of the library will not be altering the exx set but if you need to know, verify that by examining the [library source code](https///github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT).  It may be tempting to inline some asm that will push and pop the exx set registers inside the function but this will not work if there are local variables present because this will alter their offsets on the stack without sdcc's knowledge.
 
