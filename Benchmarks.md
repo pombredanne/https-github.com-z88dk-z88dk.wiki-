@@ -1,43 +1,48 @@
-_New benchmarks are being prepared_
+# Benchmark Strategy
+
+In all cases a simple compile is done to verify the programs generate correct results. Then the programs are compiled for a minimal target `+test` that eliminates as much unnecessary code as possible; this includes elimination of stdio and as many device drivers as possible. Total program size is recorded (this includes the `CODE`, `DATA` and `BSS` sections but does not include the stack) and the execution time is measured by ticks. `z88dk-ticks` is a command line z80 emulator that comes with z88dk and can measure execution time of program fragments exactly.
 
 # Compilers
 
-In all cases a simple compile is done to verify the programs generate correct results. Then the programs are compiled for a minimal target that eliminates as much unnecessary code as possible; this includes elimination of stdio and as many device drivers as possible. Total program size is recorded (this includes the CODE, DATA and BSS sections but does not include the stack) and the execution time is measured by ticks. Ticks is a command line z80 emulator that comes with z88dk and can measure execution time of program fragments exactly.
+To put the current compilers and libraries for z88dk into context, the benchmarks are conducted against common alternatives.
 
 ## HITECH-C CPM v3.09
 
 Hitech-C (CP/M-80) v 3.09 
-One of the most capable native C compilers for CP/M. Runs under CP/M 2.2 and implements a large subset of C89.
+Hitech's last CPM C compiler. One of the most capable native C compilers for CP/M. Runs under CP/M 2.2 and implements a large subset of C89. This compiler represents the best z80 native code generator. Hitech made this available for free many years ago.
 
 ## HITECH-C Z80 v7.50
 
-The last z80 compiler from Hitech, cross compiles z80 code from MSDOS. Seems to be near complete compliance with C89.
+The second last z80 compiler from Hitech (v7.80 was their last), cross compiles z80 code from MSDOS. Seems to be near complete compliance with C89.
+
+## IAR Z80 V4.06A
+
+IAR's last z80 compiler running under windows. Although it's not currently listed on their webpage, they are willing to sell it to anyone who has the cash.
 
 ## SDCC
 
-sdcc 3.5.5 #9392 (MINGW64) 
+sdcc 3.5.5 #9392 __UPDATE WITH 4.0.0 #11566__ (MINGW64) 
 sdcc is a current open source C cross compiler targetting several small CPUs including the z80. Its primary feature is that it supports a large subset of modern C standards (C89, C99, C11).
 
 ## Z88DK/SCCZ80_CLASSIC
 
-(nightly build 10/NOV/2015) 
-z88dk's native C compiler sccz80 using the classic C library in z88dk. sccz80 is a derivative of small C with most small C limitations eliminated. Its primary feature is a comprehensive C library written in assembly language.
+(nightly build 20 April 2020) 
+z88dk's native C compiler sccz80 using the classic C library in z88dk. sccz80 is a derivative of small C with most small C limitations eliminated. Its primary feature is a comprehensive (classic) C library written in assembly language.
 
 ## Z88DK/SDCC_CLASSIC
 
-(nightly build 10/NOV/2015) 
-sdcc 3.5.5 #9392 is used to translate C code with z88dk supplying its (classic) C library and startup code for targets.
-
+(nightly build 20 April 2020) 
+sdcc 4.0.0 #11566 is used to translate C code with z88dk supplying its (classic) C library and startup code for targets.
 
 ## Z88DK/SCCZ80_NEW
 
-(nightly build 10/NOV/2015) 
-z88dk's native C compiler sccz80 using the new C library in z88dk. sccz80 is a derivative of small C with most small C limitations eliminated. Its primary feature is a comprehensive C library written in assembly language.
+(nightly build 20 April 2020) 
+z88dk's native C compiler sccz80 using the new C library in z88dk. sccz80 is a derivative of small C with most small C limitations eliminated. Its primary feature is a comprehensive (new) C library written in assembly language.
 
 ## Z88DK/SDCC_NEW
 
-(nightly build 10/NOV/2015) 
-sdcc 3.5.5 #9392 is used to translate C code with z88dk supplying its (new) C library and startup code for targets.
+(nightly build 20 April 2020) 
+sdcc 4.0.0 #11566 is used to translate C code with z88dk supplying its (new) C library and startup code for targets.
 
 
 # Dhrystone 2.1
@@ -48,18 +53,20 @@ The benchmark package is available for download.
 
 |                   | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| DHRYSTONES/S| DMIPS  |
 |-------------------|-----------|---------------|-----------------|-------------|--------|
-|Hitech-C CPM v3.09 | 7809	| 376,240,194	| 94 sec	| 212.63	| 0.1210 |
-|Hitech-C Z80 v7.50 | 7040	| 301,760,038	| 75 sec	| 265.11	| 0.1509 |
-|SDCC	           | 7223	| 319,842,936	| 80 sec	| 250.12	| 0.1424 |
+|Hitech-C CPM v3.09 | 7471	| 354,120,220	| 88.53 sec	| 225.91	| 0.1286 |
+|Hitech-C Z80 v7.50 | 7002	| 288,200,126	| 72.05 sec	| 277.58	| 0.1580 |
+|IAR Z80 V4.06A     | 7371	| 306,860,580	| 76.72 sec	| 260.70	| 0.1484 |
+|SDCC	            | 7013	| 292,880,320	| 73.22 sec	| 273.15	| 0.1554 |
 |Z88DK/SCCZ80_CLASSIC |          |               |               |               |        |							
-|Z88DK/SCCZ80_NEW     |          |               |               |               |        |							
-|Z88DK/SDCC	    | 7136	| 257,822,927	| 64 sec	| 310.29	| 0.1766 |
+|Z88DK/SCCZ80_NEW    |          |               |               |               |        |							
+|Z88DK/SDCC_CLASSIC | 7344	| 248,080,263	| 62.02 sec	| 322.48	| 0.1835 |
+|Z88DK/SDCC_NEW     | 7163	| 257,100,263	| 62.28 sec	| 311.16	| 0.1771 |
 
 Notes:
 
 * Hitech-C CPM v3.09 binary size is over-estimated as it will contain some stdio structures for cp/m.
 * Hitech-C Z80 v7.50 must be compiled with global optimizer set to two; higher causes the program to hang.
-* Dhrystone 1.1 is deprecated because optimizing compilers can eliminate redundant statements that were intended to add to execution time. However many z80-era compilers ran this benchmark so it is also available in the z88dk repository. Beginning at line 106 Dhry1.1 results can be found, at line 142 Dhry1.0 results and at line 394 a few results for the 6502.
+* Dhrystone 2.1 is deprecated because optimizing compilers can eliminate redundant statements that were intended to add to execution time. However many z80-era compilers ran this benchmark so it is also available in the z88dk repository.
 
 # Pi
 
@@ -69,30 +76,33 @@ Pi.c measures 32-bit integer math performance. The computation can make good use
 
 Z88DK's new C library has a fast integer math option so the table below shows results for it as well as the normal build using the small integer math option.
 
-        
+The first set of numbers are without the use of __ldiv()__ and the second with using __ldiv()__.
+
 |                      |Size  | Z80 Cycles    |Wall Clock @4Mhz| Size | Z80 Cycles    | Wall Clock @4MHz
 |----------------------|------|---------------|----------------|------|---------------|---------------|
-| Hitech-C CPM v3.09   | 6740 |	5,465,797,961 |	22 min 46 sec  |      |               |               |				
-| Hitech-C Z80 v7.50   | 6332 |	5,520,762,227 |	23 min 00 sec  | 6473 |	5,884,343,627 |	24 min 31 sec |
-| SDCC		       | 6805 |	8,892,037,196 |	37 min 03 sec  |      |		      |	              |
-| Z88DK/SCCZ80_CLASSIC | 6076 |	5,391,413,260 |	22 min 28 sec  |      |		      |	              |
-| Z88DK/SCCZ80_NEW     | 6149 |	5,246,696,144 |	21 min 52 sec  | 6182 |	3,773,744,792 |	15 min 43 sec |
-| Z88DK/SDCC	       | 6154 |	5,285,278,076 |	22 min 01 sec  | 6165 |	3,786,981,324 |	15 min 47 sec |
-| Z88DK/SCCZ80_NEW_FAST| 7166 |	1,953,856,481 |	8 min 08 sec   | 7199 |	1,455,531,292 |	6 min 04 sec  |
-| Z88DK/SDCC_FAST      | 7171 |	1,990,813,171 |	8 min 18 sec   | 7182 |	1,467,142,582 |	6 min 07 sec  |
+| Hitech-C CPM v3.09   | 6793 |	5,531,933,581 |	23 min 03 sec  |      |               |               |				
+| Hitech-C Z80 v7.50   | 6337 |	5,520,768,427 |	23 min 00 sec  | 6473 |	5,884,343,627 |	24 min 31 sec |
+| IAR Z80 V4.06A       | 6789 |	8,762,223,085 |	36 min 31 sec  | 7006 |	8,799,503,282 |	36 min 40 sec |
+| SDCC		       | 6844 |	8,700,157,418 |	36 min 15 sec  |      |		      |	              |
+| Z88DK/SCCZ80_CLASSIC | 6508 |	4,012,440,830 |	16 min 43 sec  |      |	              |	              |
+| Z88DK/SCCZ80_NEW     | 6269 |	4,012,440,735 |	16 min 43 sec  | 6182 |	2,576,381,983 |	10 min 44 sec |
+| Z88DK/SDCC_CLASSIC   | 6600 |	4,169,137,078 |	17 min 22 sec  |      |	              |	              |
+| Z88DK/SDCC_NEW       | 6246 |	4,067,517,071 |	16 min 57 sec  | 6388 |	2,609,489,119 |	10 min 52 sec |
+| Z88DK/SCCZ80_NEW_FAST| 8999 |	1,696,878,309 |	7 min 04 sec   | 9131 |	1,301,832,933 |	5 min 25 sec  |
+| Z88DK/SDCC_NEW_FAST  | 8997 |	1,756,864,232 |	7 min 19 sec   | 9097 |	1,339,849,656 |	5 min 35 sec  |
 
-The first set of numbers are without the use of ldiv() and the second with using ldiv()
 
 Notes:
 
 * The HITECH-C CPM v3.09 binary size is over-estimated as it will contain some stdio structures for cp/m.
 * Although HITECH-C Z80 v7.50 supplies ldiv(), it still performs two divisions to get quotient and remainder.
 * SDCC's performance is hurt by having its 32-bit math routines implemented in C.
+* Z88DK's small integer math library demotes long multiplies to integer where possible.
 * Z88DK's fast integer math library is able to reduce most 32-bit divides to 16-bit divides. The loop unrolling option is not enabled.
 
 # Sieve of Eratosthenes (Prime Numbers)
 
-Sieve.c finds all the prime numbers in [2,7999]. The algorithm is known as the Sieve of Eratosthenes.
+Sieve.c finds all the prime numbers in [2,7999]. The algorithm is known as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes).
 
 This is a popular benchmark for small machine compilers because just about every compiler is able to compile it. As a benchmarking tool it's mainly measuring loop overhead.
 
