@@ -88,19 +88,46 @@ The program should:
 
 |                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
 |--------------------|----------|---------------|-----------------|
-| Hitech-C CPM v3.09 |	4056	| 188751954  	| 47.19 sec       |
+| Hitech-C CPM v3.09 |	4056	| 188,751,954  	| 47.19 sec       |
 | Hitech-C Z80 v7.50 |	4121	| DISQ   	|                 |
-| IAR Z80 V4.06A     |	6041	| 223805149	| 55.95 sec       |
-| SDCC	             |  6947	| 488970702	| 122.24 sec      |
-| Z88DK/SCCZ80_CLASSIC|	3291	| 243021012	| 60.76 sec       |
-| Z88DK/SCCZ80_CLASSIC MATH32|	3978	| 136057474	| 34.01 sec       |
-| Z88DK/SCCZ80_NEW  |	2998	| 204281085	| 51.07 sec       |
-| Z88DK/SCCZ80_NEW MATH32|	3729	| 136057141	| 34.01 sec       |
-| Z88DK/SDCC_CLASSIC|   3583	| 248331410	| 62.08 sec       |
-| Z88DK/SDCC_NEW    |   3171	| 245055005	| 61.26 sec       |
+| IAR Z80 V4.06A     |	6041	| 223,805,149	| 55.95 sec       |
+| SDCC	             |  6947	| 488,970,702	| 122.24 sec      |
+| Z88DK/SCCZ80_CLASSIC|	3291	| 243,021,012	| 60.76 sec       |
+| Z88DK/SCCZ80_CLASSIC/MATH32|	3978	| 136,057,474	| 34.01 sec       |
+| Z88DK/SCCZ80_NEW  |	2998	| 204,281,085	| 51.07 sec       |
+| Z88DK/SCCZ80_NEW/MATH32|	3729	| 136,057,141	| 34.01 sec       |
+| Z88DK/SDCC_CLASSIC|   3583	| 248,331,410	| 62.08 sec       |
+| Z88DK/SDCC_NEW    |   3171	| 245,055,005	| 61.26 sec       |
 
 Notes:
 
+* Hitech-C Z80 v7.50 produces incorrect results on all optimization levels.
+* SDCC's performance is hurt by a floating point package implemented in C.
+* Z88DK/SCCZ80_CLASSIC uses the genmath float library while the other Z88DK compiles use math48.
+* Z88DK/SDCC uses a 48-bit float internally but this is converted to 32-bit at the compiler-library interface since sdcc only understands a 32-bit float type.
+* Z88DK/SCCZ80/MATH32 uses the 32-bit IEEE-754 floating point package.
+
+# n-Body
+
+Model the orbits of Jovian planets, using the same simple symplectic-integrator. Thanks to Mark C. Lewis for suggesting this task.
+
+Useful symplectic integrators are freely available, for example the HNBody Symplectic Integration Package.
+
+|                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
+|--------------------|----------|---------------|-----------------|
+| Hitech-C CPM v3.09 |	4056	| DISQ  	|                 |
+| Hitech-C Z80 v7.50 |	4121	| DISQ   	|                 |
+| IAR Z80 V4.06A     |	4084	| 2,331,516,019	| 9 min 43 sec    |
+| SDCC	             |  9233	| 5,306,393,684	| 22 min 07 sec   |
+| Z88DK/SCCZ80_CLASSIC|	3814	| 3,624,577,433	| 15 min 06 sec   |
+| Z88DK/SCCZ80_CLASSIC/MATH32|	5333	| 1,358,606,369	| 5 min 40 sec  |
+| Z88DK/SCCZ80_NEW  |	3244	| 2,374,676,379	| 9 min 54 sec    |
+| Z88DK/SDCC_CLASSIC|   4770	| 2,253,531,346	| 9 min 23 sec    |
+| Z88DK/SDCC_NEW    |   4356	| 2,247,600,377	| 9 min 22 sec    |
+
+Notes:
+
+* Hitech-C CPM v3.09 can't compile the source code.
 * Hitech-C Z80 v7.50 produces incorrect results on all optimization levels.
 * SDCC's performance is hurt by a floating point package implemented in C.
 * Z88DK/SCCZ80_CLASSIC uses the genmath float library while the other Z88DK compiles use math48.
