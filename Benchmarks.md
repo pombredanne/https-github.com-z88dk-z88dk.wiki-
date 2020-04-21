@@ -53,18 +53,33 @@ The work is to create binary trees - composed only of tree nodes all the way dow
 |                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
 |--------------------|----------|---------------|-----------------|
 | Hitech-C CPM v3.09 |	4165	| DISQ  	|                 |
-| Hitech-C Z80 v7.50 |	4121	| 243708728	| 60.93 sec       |
-| IAR Z80 V4.06A     |	4525	| 7358336547	| 30 min 40 sec   |
-| SDCC	             |  8626	| 203788182	| 50.95 sec       |
-| Z88DK/SCCZ80_CLASSIC|	2924	| 153408086	| 38.52 sec       |
-| Z88DK/SCCZ80_NEW  |	2711	| 6582763903	| 27 min 25 sec   |
-| Z88DK/SDCC_CLASSIC|   2978	| 150508687	| 37.63 sec       |
-| Z88DK/SDCC_NEW    |   2689	| 6576349618	| 27 min 24 sec   |
+| Hitech-C Z80 v7.50 |	4121	| 243,708,728	| 60.93 sec       |
+| IAR Z80 V4.06A     |	4525	| 7,358,336,547	| 30 min 40 sec   |
+| SDCC	             |  8626	| 203,788,182	| 50.95 sec       |
+| Z88DK/SCCZ80_CLASSIC|	2924	| 153,408,086	| 38.52 sec       |
+| Z88DK/SCCZ80_NEW  |	2711	| 6,582,763,903	| 27 min 25 sec   |
+| Z88DK/SDCC_CLASSIC|   2978	| 150,508,687	| 37.63 sec       |
+| Z88DK/SDCC_NEW    |   2689	| 6,576,349,618	| 27 min 24 sec   |
 
 Notes:
 
 * NEW library [Issue #113](https://github.com/z88dk/z88dk/issues/113) Library optimization for fast realloc causes slow free block search when a thousand blocks are allocated in this benchmark.
 * IAR is likely implementing a heap similar to z88dk's new c library where an emphasis is placed on the speed of realloc().
+
+# Fannkuch
+
+The fannkuch benchmark is defined by programs in Performing Lisp Analysis of the FANNKUCH Benchmark, Kenneth R. Anderson and Duane Rettig. FANNKUCH is an abbreviation for the German word Pfannkuchen, or pancakes, in analogy to flipping pancakes. The conjecture is that the maximum count is approximated by n*log(n) when n goes to infinity.
+
+|                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
+|--------------------|----------|---------------|-----------------|
+| Hitech-C CPM v3.09 |	1218	| 56,667,034  	| 14.17 sec       |
+| Hitech-C Z80 v7.50 |	716	| 49,858,382	| 12.46 sec       |
+| IAR Z80 V4.06A     |	1347	| 56,708,022	| 14.18 sec       |
+| SDCC	             |  1196	| 67,174,167	| 16.79 sec       |
+| Z88DK/SCCZ80_CLASSIC|	1178	| 77,386,481	| 19.34 sec       |
+| Z88DK/SCCZ80_NEW  |	957	| 77,386,481	| 19.35 sec       |
+| Z88DK/SDCC_CLASSIC|   1304	| 59,756,269	| 14.94 sec       |
+| Z88DK/SDCC_NEW    |   1070	| 56,090,095	| 14.02 sec       |
 
 # Dhrystone 2.1
 
