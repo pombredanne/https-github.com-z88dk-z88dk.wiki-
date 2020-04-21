@@ -126,14 +126,17 @@ Whetstone is a synthetic floating point benchmark. The benchmark package is avai
 Floating point performance depends strongly on the number of mantissa bits in the float type.
 
 
-|                     |Floatsize|Mantissa| Bytes| Z80 Cycles  | Wall Clock @4MHz | KWIPS | MWIPS    |
-|---------------------|---------|--------|------|-------------|------------------|-------|----------|
-| Hitech-C CPM v3.09  |	32	| 24	 | 7369	| 637,332,104 |	2 min 39 sec	 | 6.276 | 0.006276 |
-| Hitech-C Z80 v7.50  |	32	| 24	 | 6872	| fail	      |                  |       |          |			
-| SDCC	              | 32	| 24	 |14463	|2,821,354,806|	11 min 45 sec	 | 1.418 |0.001418  |
-| Z88DK/SCCZ80_CLASSIC| 48	| 40	 | 5364	|1,295,331,166|	5 min 24 sec	 |3.088  |0.003088  |
-| Z88DK/SCCZ80_NEW    |	48	| 40	 | 5300	|974,224,224  |	4 min 04 sec	 |4.106	 |0.004106  |
-| Z88DK/SDCC	      | 32(48)	| 24(40) | 5914	|919,431,274  | 3 min 50 sec	 |4.351	 |0.004351 |
+|                     |Float Size|Mantissa| Bytes| Z80 Cycles | Wall Clock @4MHz | KWIPS |
+|---------------------|----------|--------|------|------------|------------------|-------|
+| Hitech-C CPM v3.09  |	32	 | 24	  | 7605  | 639,413,871   | 159.8535 sec | 6.2557 |
+| Hitech-C Z80 v7.50  |	32	 | 24	  | 6872  | fail          |              |        |
+| IAR Z80 V4.06A      |	32	 | 24	  | 6524  | 732,360,277   | 183.0901 sec | 5.4618 |
+| SDCC	              | 32	 | 24	  | 14379 | 2,184,812,093 | 546.2030 sec | 1.8308 |
+| Z88DK/SCCZ80_CLASSIC| 48	 | 40	  | 5744  | 1,280,818,856 | 320.2047 sec | 3.1230 |
+| Z88DK/SCCZ80_NEW    |	48	 | 40	  | 5388  | 973,210,939   | 243.3027 sec | 4.1101 |
+| Z88DK/SDCC_CLASSIC  | 32(48)	 | 24(40) | 7045  | 921,228,352   | 230.3071 sec | 4.3420 |
+| Z88DK/SDCC_NEW      | 32(48)	 | 24(40) | 6234  | 916,707,945   | 229.1770 sec | 4.3634 |
+| Z88DK/SDCC/MATH32   | 32 	 | 24     | 9578  | 844,247,586   | 546.2030 sec | 4.7379 |
 
 Notes:
 
@@ -143,5 +146,6 @@ Notes:
 * SDCC's peformance is hurt by a floating point package implemented in C.
 * Z88DK/SCCZ80_CLASSIC uses the genmath float library while the other Z88DK compiles use math48.
 * Z88DK/SDCC uses a 48-bit float internally but this is converted to 32-bit at the compiler-library interface since sdcc only understands a 32-bit float type.
+* Z88DK/SDCC/MATH32 uses the 32-bit IEEE-754 floating point package.
 
 
