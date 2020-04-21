@@ -52,10 +52,10 @@ The work is to create binary trees - composed only of tree nodes all the way dow
 | Hitech-C Z80 v7.50 |	4121	| 243,708,728	| 60.93 sec       |
 | IAR Z80 V4.06A     |	4525	| 7,358,336,547	| 30 min 40 sec   |
 | SDCC	             |  8626	| 203,788,182	| 50.95 sec       |
-| Z88DK/SCCZ80_CLASSIC|	__2924__ | 153,408,086	| 38.52 sec       |
+| Z88DK/SCCZ80_CLASSIC|	2924    | 153,408,086	| 38.52 sec       |
 | Z88DK/SCCZ80_NEW  |	2711	| 6,582,763,903	| 27 min 25 sec   |
 | Z88DK/SDCC_CLASSIC|   2978	| 150,508,687	| __37.63 sec__   |
-| Z88DK/SDCC_NEW    |   2689	| 6,576,349,618	| 27 min 24 sec   |
+| Z88DK/SDCC_NEW    | __2689__	| 6,576,349,618	| 27 min 24 sec   |
 
 Notes:
 
