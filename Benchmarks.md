@@ -52,9 +52,9 @@ The work is to create binary trees - composed only of tree nodes all the way dow
 | Hitech-C Z80 v7.50 |	4121	| 243,708,728	| 60.93 sec       |
 | IAR Z80 V4.06A     |	4525	| 7,358,336,547	| 30 min 40 sec   |
 | SDCC	             |  8626	| 203,788,182	| 50.95 sec       |
-| Z88DK/SCCZ80_CLASSIC|	2924	| 153,408,086	| 38.52 sec       |
+| Z88DK/SCCZ80_CLASSIC|	__2924__ | 153,408,086	| 38.52 sec       |
 | Z88DK/SCCZ80_NEW  |	2711	| 6,582,763,903	| 27 min 25 sec   |
-| Z88DK/SDCC_CLASSIC|   2978	| 150,508,687	| 37.63 sec       |
+| Z88DK/SDCC_CLASSIC|   2978	| 150,508,687	| __37.63 sec__   |
 | Z88DK/SDCC_NEW    |   2689	| 6,576,349,618	| 27 min 24 sec   |
 
 Notes:
@@ -71,10 +71,10 @@ The benchmark package is available for download.
 |                   | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| DHRYSTONES/S| DMIPS  |
 |-------------------|-----------|---------------|-----------------|-------------|--------|
 |Hitech-C CPM v3.09 | 7471	| 354,120,220	| 88.53 sec	| 225.91	| 0.1286 |
-|Hitech-C Z80 v7.50 | 7002	| 288,200,126	| 72.05 sec	| 277.58	| 0.1580 |
+|Hitech-C Z80 v7.50 | __7002__	| 288,200,126	| 72.05 sec	| 277.58	| 0.1580 |
 |IAR Z80 V4.06A     | 7371	| 306,860,580	| 76.72 sec	| 260.70	| 0.1484 |
 |SDCC	            | 7013	| 292,880,320	| 73.22 sec	| 273.15	| 0.1554 |							
-|Z88DK/SDCC_CLASSIC | 7344	| 248,080,263	| 62.02 sec	| 322.48	| 0.1835 |
+|Z88DK/SDCC_CLASSIC | 7344	| 248,080,263	| 62.02 sec	| __322.48__	| 0.1835 |
 |Z88DK/SDCC_NEW     | 7163	| 257,100,263	| 62.28 sec	| 311.16	| 0.1771 |
 
 Notes:
@@ -89,7 +89,7 @@ The fannkuch benchmark is defined by programs in Performing Lisp Analysis of the
 |                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
 |--------------------|----------|---------------|-----------------|
 | Hitech-C CPM v3.09 |	1218	| 56,667,034  	| 14.17 sec       |
-| Hitech-C Z80 v7.50 |	716	| 49,858,382	| 12.46 sec       |
+| Hitech-C Z80 v7.50 |	__716__	| 49,858,382	| __12.46 sec__   |
 | IAR Z80 V4.06A     |	1347	| 56,708,022	| 14.18 sec       |
 | SDCC	             |  1196	| 67,174,167	| 16.79 sec       |
 | Z88DK/SCCZ80_CLASSIC|	1178	| 77,386,481	| 19.34 sec       |
@@ -114,8 +114,8 @@ The program should:
 | SDCC	             |  6947	| 488,970,702	| 122.24 sec      |
 | Z88DK/SCCZ80_CLASSIC|	3291	| 243,021,012	| 60.76 sec       |
 | Z88DK/SCCZ80_CLASSIC/MATH32|	3978	| 136,057,474	| 34.01 sec       |
-| Z88DK/SCCZ80_NEW  |	2998	| 204,281,085	| 51.07 sec       |
-| Z88DK/SCCZ80_NEW/MATH32|	3729	| 136,057,141	| 34.01 sec       |
+| Z88DK/SCCZ80_NEW  |	__2998__	| 204,281,085	| 51.07 sec       |
+| Z88DK/SCCZ80_NEW/MATH32|	3729	| 136,057,141	| __34.01 sec__   |
 | Z88DK/SDCC_CLASSIC|   3583	| 248,331,410	| 62.08 sec       |
 | Z88DK/SDCC_NEW    |   3171	| 245,055,005	| 61.26 sec       |
 
@@ -140,8 +140,8 @@ Useful symplectic integrators are freely available, for example the HNBody Sympl
 | IAR Z80 V4.06A     |	4084	| 2,331,516,019	| 9 min 43 sec    |
 | SDCC	             |  9233	| 5,306,393,684	| 22 min 07 sec   |
 | Z88DK/SCCZ80_CLASSIC|	3814	| 3,624,577,433	| 15 min 06 sec   |
-| Z88DK/SCCZ80_CLASSIC/MATH32|	5333	| 1,358,606,369	| 5 min 40 sec  |
-| Z88DK/SCCZ80_NEW  |	3244	| 2,374,676,379	| 9 min 54 sec    |
+| Z88DK/SCCZ80_CLASSIC/MATH32|	5333	| 1,358,606,369	| __5 min 40 sec__  |
+| Z88DK/SCCZ80_NEW  |	__3244__	| 2,374,676,379	| 9 min 54 sec    |
 | Z88DK/SDCC_CLASSIC|   4770	| 2,253,531,346	| 9 min 23 sec    |
 | Z88DK/SDCC_NEW    |   4356	| 2,247,600,377	| 9 min 22 sec    |
 
@@ -172,9 +172,9 @@ The first set of numbers are without the use of __ldiv()__ and the second with u
 | SDCC		       | 6844 |	8,700,157,418 |	36 min 15 sec  |      |		      |	              |
 | Z88DK/SCCZ80_CLASSIC | 6508 |	4,012,440,830 |	16 min 43 sec  |      |	              |	              |
 | Z88DK/SCCZ80_NEW     | 6269 |	4,012,440,735 |	16 min 43 sec  | 6182 |	2,576,381,983 |	10 min 44 sec |
-| Z88DK/SCCZ80_NEW_FAST| 8999 |	1,696,878,309 |	7 min 04 sec   | 9131 |	1,301,832,933 |	5 min 25 sec  |
+| Z88DK/SCCZ80_NEW_FAST| 8999 |	1,696,878,309 |	__7 min 04 sec__   | 9131 |	1,301,832,933 |	__5 min 25 sec__  |
 | Z88DK/SDCC_CLASSIC   | 6600 |	4,169,137,078 |	17 min 22 sec  |      |	              |	              |
-| Z88DK/SDCC_NEW       | 6246 |	4,067,517,071 |	16 min 57 sec  | 6388 |	2,609,489,119 |	10 min 52 sec |
+| Z88DK/SDCC_NEW       | __6246__ |	4,067,517,071 |	16 min 57 sec  | 6388 |	2,609,489,119 |	10 min 52 sec |
 | Z88DK/SDCC_NEW_FAST  | 8997 |	1,756,864,232 |	7 min 19 sec   | 9097 |	1,339,849,656 |	5 min 35 sec  |
 
 Notes:
@@ -194,13 +194,13 @@ This is a popular benchmark for small machine compilers because just about every
 |                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
 |--------------------|----------|---------------|-----------------|
 | Hitech-C CPM v3.09 |	8725	| 4,547,538	| 1.1369 sec      |
-| Hitech-C Z80 v7.50 |	8243	| 3,672,107	| 0.9180 sec      |
+| Hitech-C Z80 v7.50 | __8243__	| 3,672,107	| 0.9180 sec      |
 | IAR Z80 V4.06A     |	8772	| 3,714,152	| 0.9285 sec      |
 | SDCC	             |  8263	| 4,701,570	| 1.1754 sec      |
 | Z88DK/SCCZ80_CLASSIC|	8589	| 4,957,733	| 1.2394 sec      |
 | Z88DK/SCCZ80_NEW  |	8362	| 4,957,733	| 1.2394 sec      |
 | Z88DK/SDCC_CLASSIC|   8558	| 4,510,806	| 1.1277 sec      |
-| Z88DK/SDCC_NEW    |   8315	| 3,665,494	| 0.9163 sec      |
+| Z88DK/SDCC_NEW    |   8315	| 3,665,494	| __0.9163 sec__      |
 
 Notes:
 
@@ -221,10 +221,10 @@ Floating point performance depends strongly on the number of mantissa bits in th
 | IAR Z80 V4.06A      |	32	 | 24	  | 6524  | 732,360,277   | 183.0901 sec | 5.4618 |
 | SDCC	              | 32	 | 24	  | 14379 | 2,184,812,093 | 546.2030 sec | 1.8308 |
 | Z88DK/SCCZ80_CLASSIC| 48	 | 40	  | 5744  | 1,280,818,856 | 320.2047 sec | 3.1230 |
-| Z88DK/SCCZ80_NEW    |	48	 | 40	  | 5388  | 973,210,939   | 243.3027 sec | 4.1101 |
+| Z88DK/SCCZ80_NEW    |	48	 | 40	  | __5388__  | 973,210,939   | 243.3027 sec | 4.1101 |
 | Z88DK/SDCC_CLASSIC  | 32(48)	 | 24(40) | 7045  | 921,228,352   | 230.3071 sec | 4.3420 |
 | Z88DK/SDCC_NEW      | 32(48)	 | 24(40) | 6234  | 916,707,945   | 229.1770 sec | 4.3634 |
-| Z88DK/SDCC/MATH32   | 32 	 | 24     | 9578  | 844,247,586   | 546.2030 sec | 4.7379 |
+| Z88DK/SDCC/MATH32   | 32 	 | 24     | 9578  | 844,247,586   | 211.0619 sec | __4.7379__ |
 
 Notes:
 
