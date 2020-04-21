@@ -26,23 +26,19 @@ sdcc is a current open source C cross compiler targetting several small CPUs inc
 
 ## Z88DK/SCCZ80_CLASSIC
 
-(nightly build 20 April 2020) 
-z88dk's native C compiler sccz80 using the classic C library in z88dk. sccz80 is a derivative of small C with most small C limitations eliminated. Its primary feature is a comprehensive (classic) C library written in assembly language.
+(Nightly build 20 April 2020) z88dk's native C compiler sccz80 using the classic C library in z88dk. sccz80 is a derivative of small C with most small C limitations eliminated. Its primary feature is a comprehensive (classic) C library written in assembly language.
 
 ## Z88DK/SDCC_CLASSIC
 
-(nightly build 20 April 2020) 
-sdcc 4.0.0 #11566 is used to translate C code with z88dk supplying its (classic) C library and startup code for targets.
+(Nightly build 20 April 2020) sdcc 4.0.0 #11566 is used to translate C code with z88dk supplying its (classic) C library and startup code for targets.
 
 ## Z88DK/SCCZ80_NEW
 
-(nightly build 20 April 2020) 
-z88dk's native C compiler sccz80 using the new C library in z88dk. sccz80 is a derivative of small C with most small C limitations eliminated. Its primary feature is a comprehensive (new) C library written in assembly language.
+(Nightly build 20 April 2020) z88dk's native C compiler sccz80 using the new C library in z88dk. sccz80 is a derivative of small C with most small C limitations eliminated. Its primary feature is a comprehensive (new) C library written in assembly language.
 
 ## Z88DK/SDCC_NEW
 
-(nightly build 20 April 2020) 
-sdcc 4.0.0 #11566 is used to translate C code with z88dk supplying its (new) C library and startup code for targets.
+(Nightly build 20 April 2020) sdcc 4.0.0 #11566 is used to translate C code with z88dk supplying its (new) C library and startup code for targets.
 
 # Binary-Trees
 
@@ -80,6 +76,36 @@ The fannkuch benchmark is defined by programs in Performing Lisp Analysis of the
 | Z88DK/SCCZ80_NEW  |	957	| 77,386,481	| 19.35 sec       |
 | Z88DK/SDCC_CLASSIC|   1304	| 59,756,269	| 14.94 sec       |
 | Z88DK/SDCC_NEW    |   1070	| 56,090,095	| 14.02 sec       |
+
+# Fasta
+
+The program should:
+ - generate DNA sequences, by copying from a given sequence.
+ - generate DNA sequences, by weighted random selection from 2 alphabets.
+ - convert the expected probability of selecting each nucleotide into cumulative probabilities.
+ - match a random number against those cumulative probabilities to select each nucleotide (use linear search or binary search).
+ - use this naïve linear congruential generator to calculate a random number each time a nucleotide needs to be selected (don't cache the random number sequence).
+
+|                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
+|--------------------|----------|---------------|-----------------|
+| Hitech-C CPM v3.09 |	4056	| 188751954  	| 47.19 sec       |
+| Hitech-C Z80 v7.50 |	4121	| DISQ   	|                 |
+| IAR Z80 V4.06A     |	6041	| 223805149	| 55.95 sec       |
+| SDCC	             |  6947	| 488970702	| 122.24 sec      |
+| Z88DK/SCCZ80_CLASSIC|	3291	| 243021012	| 60.76 sec       |
+| Z88DK/SCCZ80_CLASSIC MATH32|	3978	| 136057474	| 34.01 sec       |
+| Z88DK/SCCZ80_NEW  |	2998	| 204281085	| 51.07 sec       |
+| Z88DK/SCCZ80_NEW MATH32|	3729	| 136057141	| 34.01 sec       |
+| Z88DK/SDCC_CLASSIC|   3583	| 248331410	| 62.08 sec       |
+| Z88DK/SDCC_NEW    |   3171	| 245055005	| 61.26 sec       |
+
+Notes:
+
+* Hitech-C Z80 v7.50 produces incorrect results on all optimization levels.
+* SDCC's performance is hurt by a floating point package implemented in C.
+* Z88DK/SCCZ80_CLASSIC uses the genmath float library while the other Z88DK compiles use math48.
+* Z88DK/SDCC uses a 48-bit float internally but this is converted to 32-bit at the compiler-library interface since sdcc only understands a 32-bit float type.
+* Z88DK/SCCZ80/MATH32 uses the 32-bit IEEE-754 floating point package.
 
 # Dhrystone 2.1
 
