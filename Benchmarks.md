@@ -62,6 +62,26 @@ Notes:
 * NEW library [Issue #113](https://github.com/z88dk/z88dk/issues/113) Library optimization for fast realloc causes slow free block search when a thousand blocks are allocated in this benchmark.
 * IAR is likely implementing a heap similar to z88dk's new c library where an emphasis is placed on the speed of realloc().
 
+# Dhrystone 2.1
+
+Dhrystone was a common synthetic benchmark for measuring the integer performance of compilers in the 1980s until more modern benchmarks replaced it. It attempts to simulate typical programs by executing a set of statements statistically determined from common programs in the wild.
+
+The benchmark package is available for download.
+
+|                   | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| DHRYSTONES/S| DMIPS  |
+|-------------------|-----------|---------------|-----------------|-------------|--------|
+|Hitech-C CPM v3.09 | 7471	| 354,120,220	| 88.53 sec	| 225.91	| 0.1286 |
+|Hitech-C Z80 v7.50 | 7002	| 288,200,126	| 72.05 sec	| 277.58	| 0.1580 |
+|IAR Z80 V4.06A     | 7371	| 306,860,580	| 76.72 sec	| 260.70	| 0.1484 |
+|SDCC	            | 7013	| 292,880,320	| 73.22 sec	| 273.15	| 0.1554 |							
+|Z88DK/SDCC_CLASSIC | 7344	| 248,080,263	| 62.02 sec	| 322.48	| 0.1835 |
+|Z88DK/SDCC_NEW     | 7163	| 257,100,263	| 62.28 sec	| 311.16	| 0.1771 |
+
+Notes:
+
+* Hitech-C CPM v3.09 binary size is over-estimated as it will contain some stdio structures for cp/m.
+* Hitech-C Z80 v7.50 must be compiled with global optimizer set to two; higher causes the program to hang.
+* Dhrystone 2.1 is deprecated because optimizing compilers can eliminate redundant statements that were intended to add to execution time. However many z80-era compilers ran this benchmark so it is also available in the z88dk repository.
 # Fannkuch
 
 The fannkuch benchmark is defined by programs in Performing Lisp Analysis of the FANNKUCH Benchmark, Kenneth R. Anderson and Duane Rettig. FANNKUCH is an abbreviation for the German word Pfannkuchen, or pancakes, in analogy to flipping pancakes. The conjecture is that the maximum count is approximated by n*log(n) when n goes to infinity.
@@ -133,27 +153,6 @@ Notes:
 * Z88DK/SCCZ80_CLASSIC uses the genmath float library while the other Z88DK compiles use math48.
 * Z88DK/SDCC uses a 48-bit float internally but this is converted to 32-bit at the compiler-library interface since sdcc only understands a 32-bit float type.
 * Z88DK/SCCZ80/MATH32 uses the 32-bit IEEE-754 floating point package.
-
-# Dhrystone 2.1
-
-Dhrystone was a common synthetic benchmark for measuring the integer performance of compilers in the 1980s until more modern benchmarks replaced it. It attempts to simulate typical programs by executing a set of statements statistically determined from common programs in the wild.
-
-The benchmark package is available for download.
-
-|                   | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| DHRYSTONES/S| DMIPS  |
-|-------------------|-----------|---------------|-----------------|-------------|--------|
-|Hitech-C CPM v3.09 | 7471	| 354,120,220	| 88.53 sec	| 225.91	| 0.1286 |
-|Hitech-C Z80 v7.50 | 7002	| 288,200,126	| 72.05 sec	| 277.58	| 0.1580 |
-|IAR Z80 V4.06A     | 7371	| 306,860,580	| 76.72 sec	| 260.70	| 0.1484 |
-|SDCC	            | 7013	| 292,880,320	| 73.22 sec	| 273.15	| 0.1554 |							
-|Z88DK/SDCC_CLASSIC | 7344	| 248,080,263	| 62.02 sec	| 322.48	| 0.1835 |
-|Z88DK/SDCC_NEW     | 7163	| 257,100,263	| 62.28 sec	| 311.16	| 0.1771 |
-
-Notes:
-
-* Hitech-C CPM v3.09 binary size is over-estimated as it will contain some stdio structures for cp/m.
-* Hitech-C Z80 v7.50 must be compiled with global optimizer set to two; higher causes the program to hang.
-* Dhrystone 2.1 is deprecated because optimizing compilers can eliminate redundant statements that were intended to add to execution time. However many z80-era compilers ran this benchmark so it is also available in the z88dk repository.
 
 # Pi
 
