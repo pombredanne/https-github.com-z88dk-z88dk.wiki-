@@ -56,9 +56,7 @@ The benchmark package is available for download.
 |Hitech-C CPM v3.09 | 7471	| 354,120,220	| 88.53 sec	| 225.91	| 0.1286 |
 |Hitech-C Z80 v7.50 | 7002	| 288,200,126	| 72.05 sec	| 277.58	| 0.1580 |
 |IAR Z80 V4.06A     | 7371	| 306,860,580	| 76.72 sec	| 260.70	| 0.1484 |
-|SDCC	            | 7013	| 292,880,320	| 73.22 sec	| 273.15	| 0.1554 |
-|Z88DK/SCCZ80_CLASSIC |          |               |               |               |        |							
-|Z88DK/SCCZ80_NEW    |          |               |               |               |        |							
+|SDCC	            | 7013	| 292,880,320	| 73.22 sec	| 273.15	| 0.1554 |							
 |Z88DK/SDCC_CLASSIC | 7344	| 248,080,263	| 62.02 sec	| 322.48	| 0.1835 |
 |Z88DK/SDCC_NEW     | 7163	| 257,100,263	| 62.28 sec	| 311.16	| 0.1771 |
 
@@ -86,11 +84,10 @@ The first set of numbers are without the use of __ldiv()__ and the second with u
 | SDCC		       | 6844 |	8,700,157,418 |	36 min 15 sec  |      |		      |	              |
 | Z88DK/SCCZ80_CLASSIC | 6508 |	4,012,440,830 |	16 min 43 sec  |      |	              |	              |
 | Z88DK/SCCZ80_NEW     | 6269 |	4,012,440,735 |	16 min 43 sec  | 6182 |	2,576,381,983 |	10 min 44 sec |
+| Z88DK/SCCZ80_NEW_FAST| 8999 |	1,696,878,309 |	7 min 04 sec   | 9131 |	1,301,832,933 |	5 min 25 sec  |
 | Z88DK/SDCC_CLASSIC   | 6600 |	4,169,137,078 |	17 min 22 sec  |      |	              |	              |
 | Z88DK/SDCC_NEW       | 6246 |	4,067,517,071 |	16 min 57 sec  | 6388 |	2,609,489,119 |	10 min 52 sec |
-| Z88DK/SCCZ80_NEW_FAST| 8999 |	1,696,878,309 |	7 min 04 sec   | 9131 |	1,301,832,933 |	5 min 25 sec  |
 | Z88DK/SDCC_NEW_FAST  | 8997 |	1,756,864,232 |	7 min 19 sec   | 9097 |	1,339,849,656 |	5 min 35 sec  |
-
 
 Notes:
 
@@ -106,17 +103,16 @@ Sieve.c finds all the prime numbers in [2,7999]. The algorithm is known as the [
 
 This is a popular benchmark for small machine compilers because just about every compiler is able to compile it. As a benchmarking tool it's mainly measuring loop overhead.
 
-SIZE	TIME
-Relative	Bytes	Relative	Z80 Cycles	Wall Clock @ 4MHZ
-
-|                   | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
-|-------------------|-----------|---------------|-----------------|
-| Hitech-C CPM v3.09|	8629	| 4,547,538	| 1.137 sec       |
-| Hitech-C Z80 v7.50|	8203	| 3,672,107	| 0.918 sec       |
-| SDCC	            |   8200	| 4,150,710	| 1.038 sec       |
-| Z88DK/SCCZ80_CLASSIC|	8209	| 5,325,739	| 1.331 sec       |
-| Z88DK/SCCZ80_NEW  |	8236	| 5,325,739	| 1.331 sec       |
-| Z88DK/SDCC	    |   8175	| 3,691,568	| 0.923 sec       |
+|                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
+|--------------------|----------|---------------|-----------------|
+| Hitech-C CPM v3.09 |	8725	| 4,547,538	| 1.1369 sec      |
+| Hitech-C Z80 v7.50 |	8243	| 3,672,107	| 0.9180 sec      |
+| IAR Z80 V4.06A     |	8772	| 3,714,152	| 0.9285 sec      |
+| SDCC	             |  8263	| 4,701,570	| 1.1754 sec      |
+| Z88DK/SCCZ80_CLASSIC|	8589	| 4,957,733	| 1.2394 sec      |
+| Z88DK/SCCZ80_NEW  |	8362	| 4,957,733	| 1.2394 sec      |
+| Z88DK/SDCC_CLASSIC|   8558	| 4,510,806	| 1.1277 sec      |
+| Z88DK/SDCC_NEW    |   8315	| 3,665,494	| 0.9163 sec      |
 
 Notes:
 
