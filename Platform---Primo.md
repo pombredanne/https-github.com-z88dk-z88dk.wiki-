@@ -1,7 +1,8 @@
 # Hardware summary
 
-* U880  @ 2.048Mhz
+* U880  @ 2.5Mhz
 * 16k RAM (A/B-32), 32k RAM (A/B-48), 48k RAM (A/B/64)
+* Microsoft BASIC in ROM
 
 ## Classic library support (`+primo`)
 
@@ -23,7 +24,7 @@
 * [x] Inkey driver
 * [ ] Hardware joystick
 * [ ] File I/O
-* [x] Interrupts
+* [ ] Interrupts
 * [ ] RS232
 
 # Compilation
