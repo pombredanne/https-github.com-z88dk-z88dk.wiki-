@@ -6,10 +6,10 @@
 
 ## Classic library support (`+primo`)
 
-* [ ] Native console output
+* [x] Native console output
 * [ ] Native console input
 * [ ] ANSI vt100 engine
-* [x] Generic console
+* [x] Generic console (default)
     * [x] Redefinable font 
     * [x] UDG support
     * [ ] Paper colour
