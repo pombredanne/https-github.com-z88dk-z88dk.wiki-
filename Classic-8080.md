@@ -6,6 +6,7 @@ The following targets are 8080 only:
 
 * [PMD85](Platform---PMD85)
 * [Vector06c](Platform-Vector06c)
+* [Mikro 80](Platform--Mikro80)
 
 Additionally, the CP/M target can generate 8080 binaries. To do so, add the option `-clib=8080` to the command line. For example:
 
