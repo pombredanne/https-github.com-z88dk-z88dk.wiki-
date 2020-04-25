@@ -26,3 +26,4 @@ The largest component of compilation time is the compiler chosen and the flags a
 
 It appears that compilation on windows performs significantly worse than Linux *on the same hardware*. (Anecdotally) this tends to also be observed using other toolchains so this may be as expected.
 
+Also see: https://github.com/z88dk/z88dk/issues/1451
