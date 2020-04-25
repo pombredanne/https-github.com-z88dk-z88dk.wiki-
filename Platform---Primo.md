@@ -28,6 +28,8 @@
 * [ ] Interrupts
 * [ ] RS232
 
+For co-existence with the firmware, this an IXIY swapped machine so take care when linking extra libraries.
+
 # Compilation
 
     zcc +primo program.c -create-app
