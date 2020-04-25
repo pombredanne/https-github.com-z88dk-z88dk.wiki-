@@ -370,13 +370,8 @@ Peaturing the PIPS spreadsheed as operating system, optional ROM could be added.
 
 ### Conitec Datensysteme - PROF 80 / 180
 
-This one was compatibleto the TRS80, but it'd be nice to add support for its GRIP (Graphical IO-Processor)
+This one was compatible with the TRS80, but it'd be nice to add support for its GRIP (Graphical IO-Processor)
 
-### Microkey - Primo family
-
-Hungary
-
-[Ultimo - a Primo emulator](http://gaia.atilia.eu/download/Ultimo1.5_x64.zip)
 
 ### Robotron / VEB Mikroelektronik
 
