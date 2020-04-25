@@ -2,6 +2,7 @@
 
 * U880  @ 2.5Mhz
 * 16k RAM (A/B-32), 32k RAM (A/B-48), 48k RAM (A/B/64)
+* 256x192 B&W graphics
 * Microsoft BASIC in ROM
 
 ## Classic library support (`+primo`)
