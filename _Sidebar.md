@@ -47,6 +47,7 @@
   * [Linking external libraries](libraries)
   * [Linking Basic, Fortran, Pascal Programs with z88dk](programs)
 * [Writing optimal code](WritingOptimalCode)
+* [Speeding up Compilation](CompilationSpeed)
 
 ## Mixing C and Z80 Assembler
 
