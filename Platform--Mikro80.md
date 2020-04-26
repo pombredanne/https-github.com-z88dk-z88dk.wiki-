@@ -37,10 +37,10 @@ A .rk8 file is produced suitable for loading as a tape file into, for example Ma
 
 To load type:
 
-   I
+    I
 
 When loaded, the start + end addresses will be displayed on screen. To start the program type:
 
-   G 0000
+    G 0000
 
 
