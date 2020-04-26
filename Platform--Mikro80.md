@@ -43,4 +43,17 @@ When loaded, the start + end addresses will be displayed on screen. To start the
 
     G 0000
 
+## Keyboard handling
+
+By default, the port uses the firmware keyboard routines. This can be quite slow at recognising keypresses so you may end up with a better experience if you enabled the inkey terminal handling by supplying the option `--hardware-keyboard`
+
+The delete/backspace key is mapped to the home key.
+
+## Character Set
+
+The font is fixed in ROM and contains the following characters:
+
+![charset](images/platform/mikro80_charset.png)
+
+# Links
 
