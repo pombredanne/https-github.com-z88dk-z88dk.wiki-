@@ -33,5 +33,14 @@ _This machine is being brought up_
 
     zcc +mikro80 program.c -create-app
 
-A .rk8 file is produced suitable for loading as a tape file into, for example Mame,
+A .rk8 file is produced suitable for loading as a tape file into, for example Mame.
+
+To load type:
+
+   I
+
+When loaded, the start + end addresses will be displayed on screen. To start the program type:
+
+   G 0000
+
 
