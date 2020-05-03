@@ -44,7 +44,7 @@ The assembler accepts numbers in decimal, hexadecimal, octal and binary. Differe
 
 ```
    ld a, %10     ; A = 2 (10 binary)
-   ld a, 12 % 10 ; A = 2 (modulus of 12 divided by 10)
+   ld a, 12 % 10 ; A = 2 (remainder of 12 divided by 10)
 ```
 
 All expressions are computed as signed integers with the host platform's integer size (32-bit or 64-bit in the most common platforms).
