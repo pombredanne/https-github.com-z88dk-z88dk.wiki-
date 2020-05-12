@@ -1,7 +1,7 @@
 Hardware summary
 
 * MHB 8080A  @ ~2Mhz
-* ~54k contiguous RAM
+* ~54k contiguous RAM?
 * Character mapped display
 
 ## Classic library support (`+mikro80`)
@@ -21,13 +21,11 @@ Hardware summary
 * [ ] Hires graphics
 * [ ] PSG sound
 * [ ] One bit sound
-* [ ] Inkey driver
+* [x] Inkey driver
 * [ ] Hardware joystick
 * [ ] File I/O
 * [ ] Interrupts
 * [ ] RS232
-
-_This machine is being brought up_
 
 # Compilation
 
