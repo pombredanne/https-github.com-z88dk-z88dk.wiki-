@@ -80,6 +80,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Sony SMC-70/SMC-777](Platform---SMC-777)| 80x24| No | 40x25 + 80x25 | 80x50 + 160x50 | Yes | PSG | Extension library to CP/M.|
 [SORD M5](Platform---Sord-M5)| 32x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 32x24 | 256x192 | No | PSG (+ 1 bit) | Most of GFXLIB by Rafael de Oliveira Jannone | 
 [S-OS (The Sentinel)](Platform---SOS)| OS calls | No | No | No |  Yes | No | Multi platform OS published in a Japanese PC magazine | 
+[Специалист/Specialist](Platform--Special)| 48x32 | No | 48x32 | 384x256 | No | No |  |
 [Spectravideo SVI](Platform---Spectravideo)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 32x24 and 80x24 (SV-806)| 256x192 | No | 1 bit +PSG | GFXLIB by Rafael de Oliveira Jannone| 
 [Sprinter](Platform---Peters-Plus-Sprinter)| 80x35 | 80x35 (Colour)| 80x35 -default | No | Yes | No | Experimental port. Developed under the SPRINT emulator| 
 [Tatung Einstein](Platform---Tatung-Einstein)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 40x24 and 80x25 (TK-02)  | 256x192 | Yes | No | Extension library to CP/M.Most of GFXLIB by Rafael de Oliveira Jannone|
