@@ -16,7 +16,7 @@ The Japanese series of PC-6001 computers includes the following systems:
 * PC-6001 MK II
 * PC-6601
 
-## Classic library support (`+cpm -subtype=adam`)
+## Classic library support (`+pc6001`)
 
 * [x] Native console output
 * [x] Native console input
