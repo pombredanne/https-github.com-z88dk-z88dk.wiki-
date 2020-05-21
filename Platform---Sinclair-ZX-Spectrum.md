@@ -2,11 +2,38 @@
 
 ![](images/platform/spectrum.jpg)
 
+## Hardware
 
-## Introduction
+* Z80 @ 3.54Mhz
+* 48/128k RAM
+* AY-3-891x (128k models only)
 
-The ZX Spectrum platform is very well supported in the Z88 Development Kit.
-All the generic functions are covered (excepting the FAR memory model) and many platform specific libraries are available for both the standard 48K (or 16K) model and the various clones and peripherals.
+
+## Classic library support (`+zx`)
+
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font
+    * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour (8 bit colour mod)
+    * [x] Inverse attribute
+    * [x] Bold attribute
+    * [x] Underline attribute
+* [ ] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [x] One bit sound
+* [x] Inkey driver
+* [x] Hardware joystick
+* [x] File I/O
+* [x] Interrupts
+* [x] RS232
+
+# Compilation
+
 
 
 ## Building applications
