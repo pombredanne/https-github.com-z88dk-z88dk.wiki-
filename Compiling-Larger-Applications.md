@@ -1,5 +1,3 @@
-## Compiling Larger Applications
-
 Most example compilations in the z88dk documentation and examples are single line examples which can be copy/pasted to generate the same result.
 
 For smaller applications where all code is located in a single file, this is the easiest way of compiling, however for larger applications, especially those compiled with zsdcc, this can result in a long code-compile-run development cycle which isn't very productive.
