@@ -44,19 +44,19 @@ To build for all of your selected targets just type `make`. To print out the com
 The following files are created in `build/`when make is invoked:
 
 ```
-build//zx/main.o
-build//zx/zx/extra.o
-build//zx/program.map
-build//zx/program_BANK_7.bin
-build//zx/program.bin
-build//zx/func.o
-build//zx/program.tap
-build//multi8/main.o
-build//multi8/program.map
-build//multi8/program.bin
-build//multi8/program.cas
-build//multi8/func.o
-build//multi8/multi8/extra.o
+build/zx/main.o
+build/zx/zx/extra.o
+build/zx/program.map
+build/zx/program_BANK_7.bin
+build/zx/program.bin
+build/zx/func.o
+build/zx/program.tap
+build/multi8/main.o
+build/multi8/program.map
+build/multi8/program.bin
+build/multi8/program.cas
+build/multi8/func.o
+build/multi8/multi8/extra.o
 ```
 
 ### Advanced Tuning
