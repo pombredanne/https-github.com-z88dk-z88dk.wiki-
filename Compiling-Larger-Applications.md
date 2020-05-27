@@ -2,11 +2,52 @@ Most example compilations in the z88dk documentation and examples are single lin
 
 For smaller applications where all code is located in a single file, this is the easiest way of compiling, however for larger applications, especially those compiled with zsdcc, this can result in a long code-compile-run development cycle which isn't very productive.
 
+Both the easiest and hardest way to achieve incremental compilation is using a `Makefile`, a simple example is below:
+
+```
+# Do not use this makefile, it has subtle problems
+CFILES = $(wildcard *.c)
+OFILES = $(CFILES:.c=.o)
+
+PROGRAM = program.bin
+
+all: $(PROGRAM)
+
+
+program.bin: $(OFILES)
+        zcc +zx -o $@ $(OFILES) -create-app
+
+%.o: %.c
+        zcc +zx -o $@ -c $^
+
+clean:
+        $(RM) *.o program.bin
+```
+
 ### Pragma support
 
 When a source file is processed, the pragmas are parsed and written out to the `zcc_opt.def` file. Unfortunately this file is cleaned on each invocation of zcc so using our makefile above will cause the pragmas to be in used at the linking stage.
 
-zcc supports the `-pragma-include=` option which should be used to specify a file which contains all pragma directives needed by your application. 
+zcc supports the `-pragma-include=` option which should be used to specify a file which contains all pragma directives needed by your application. We can now extend our makefile to use this file:
+
+```
+CFILES = $(wildcard *.c)
+OFILES = $(CFILES:.c=.o)
+
+PROGRAM = program.bin
+
+all: $(PROGRAM)
+
+
+program.bin: $(OFILES)
+        zcc +zx -o $@ $(OFILES) -create-app -pragma-include:zpragma.inc
+
+%.o: %.c
+        zcc +zx -o $@ -c $^
+
+clean:
+        $(RM) *.o program.bin
+```
 
 ### Output binary name
 
@@ -14,7 +55,7 @@ The output name specified with the `-o` option at the linking stage is the name 
 
 ## Compiling for many targets (classic)
 
-Many z88dk projects (especially those that use classic) aim to write portable code that can be run on many targets. If we assume a project with the following structure:
+The makefile example detailed above is a minimal example to compile a project for a single z88dk. However, many z88dk projects, in particular those that use classic, aim to write portable code that can be run on many targets. If we assume a project with the following structure:
 
 ```
 main.c
@@ -24,7 +65,7 @@ zx/zpragma.inc
 multi8/extra.c
 ```
 
-For speed of compilation, it's best to use a tool that can track modified files and only build what has changed. Both the easiest and hardest way to achieve this is using a `Makefile` so to make life simpler, a usable makefile is located within `{z88dk}/support/multitarget_build`. This makefile has only 3 values that need to be modified:
+That is common code in a root directory, with subdirectories and specific code for each target then we can see that we could create some generalised rules that could compile our application for any target. A usable makefile is located within `{z88dk}/support/multitarget_build`. This makefile has only 3 values that need to be modified:
 
 ```makefile
 # Targets that you want to compile for
@@ -77,5 +118,4 @@ Alternatively, and at the risk of complicating the makefile, any compilation fla
 CFLAGS_{target} = 
 LDFLAGS_{target} =
 ```
-
 
