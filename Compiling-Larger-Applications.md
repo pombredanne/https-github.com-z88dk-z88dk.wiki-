@@ -112,10 +112,13 @@ zcc +zx  -Izx -o build/zx/func.o -c func.c
 
 Then we can see that the local target/ directory (in this case) `zx` is added to the include search path. Thus we can easily create a file named, say, `defines.h`, include a copy in each target directory and `#include` it.
 
-Alternatively, and at the risk of complicating the makefile, any compilation flags can be supplied using makefile variables (where `{target}` is replaced by the appropriate target).
+Alternatively, and at the risk of complicating the makefile, any compilation flags can be supplied using makefile variables (where `{target}` is replaced by the appropriate target and `{basename}` is the `APPNAME` without an extension).
 
 ```makefile
 CFLAGS_{target} = 
 LDFLAGS_{target} =
+CFLAGS_{basename} = 
+LDFLAGS_{basename} =
+CFLAGS_{target}_{basename} = 
+LDFLAGS_{target}_{basename} =
 ```
-
