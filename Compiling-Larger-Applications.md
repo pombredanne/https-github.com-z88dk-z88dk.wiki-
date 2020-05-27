@@ -104,7 +104,7 @@ build/multi8/multi8/extra.o
 
 Despite the best intentions, it's almost inevitable that extra options will need to be supplied at the compiler or linking stages. 
 
-For `#define` values, if we example the compilation line given for a .c files:
+For `#define` values, if we look at the compilation line given for a .c file:
 
 ```shell
 zcc +zx  -Izx -o build/zx/func.o -c func.c
