@@ -40,7 +40,7 @@ The Microsoft 32 bit and 64 bit floating point maths libraries are supported for
 
 The [_math32_](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32) floating point math library provides a 32 bit format that is mostly compliant with IEEE-754 32 bit floating point. This is the native format for _zsdcc_ floating point. The library supports both z180 and ZX Spectrum Next hardware multiply instructions, as well as supporting z80 platforms using software multiply.
 
-**SDCC compatibility:** Only `-lmath48` and `-lmath32` are supported for _zsdcc_ compilations.
+**SDCC compatibility:** Only `-lmath48` and `--math32` are supported for _zsdcc_ compilations.
 
 
 ## Regular Expressions
