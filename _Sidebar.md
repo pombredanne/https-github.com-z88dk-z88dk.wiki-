@@ -8,17 +8,16 @@
 ## Classic Library
 
 * [Overview](Classic-Overview)
+** [Screen output](Classic-GenericConsole)
+** [Graphics support](Classic-Monochrome-Graphics)
+** [Memory Allocation](Classic-allocation)
+** [Maths Libraries](Classic--Maths-Libraries)
 * [Platform List](Platform)
 * [Unsupported Platforms](Platform---Unsupported)
 * [8080 Support](Classic-8080)
-* [Screen output](Classic-GenericConsole)
-* [Graphics support](Classic-Monochrome-Graphics)
-* [Memory Allocation](Classic-allocation)
-* [Maths Libraries](Classic--Maths-Libraries)
 * [Retargetting](Classic--Retargetting)
 * [Building the libraries](Classic-Building-the-libraries)
 * [Pragmas](Classic--Pragmas)
-* 
 
 ## New Library
 
