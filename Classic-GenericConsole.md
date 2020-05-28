@@ -1,18 +1,23 @@
 The classic library supports multiple target machines and each target may have its own idiosyncratic method of controlling print position and other limitations such as reserving areas of the screen for status lines etc
 
-To simplify cross-platform porting, classic provides a ANSI/VT100 emulation library that understands standard control sequences that will also work on Linux, Mac, or even Windows consoles. For the highest degree of portability using the ANSI driver is recommended.
+To simplify cross-platform porting, classic provides the following terminal emulation libraries:
+
+* ANSI/VT100
+* VT52/ZX (The generic console)
+
+Both terminal libraries are hooked up to the functions and macros in `<conio.h>` allowing easy setting of colours, print locations without having to worry about writing escape codes by hand.
+
+Both terminal emulators have different advantages, the ANSI/VT100 terminal understands control sequences that will also work on Linux, Mac, or even Windows consoles.
 
 In general, the ANSI driver will prefer using a graphics mode which may well be slow, additionally the ANSI/VT100 driver is a large chunk of code, adding into the project may well increase the size of your project by around 2-3K.
 
-As a smaller (around 400 bytes) alternative, the classic library provides a generic console driver which allows classic applications to use the same control codes across targets without the overhead of the ANSI/VT100 library.
-
-For certain platforms where native print positioning is not trivially available (for example trs80, Sprinter, Nascom, Z1013), it is enabled by default providing richer functionality than was previously available.
-
-The driver is based on the implementation for the ZX Spectrum, and hence has the control codes detailed in the next section.
+On the other hand, the VT52/gencon terminal is a smaller alternative, and allows both text and hires graphics screen modes to be used to display text and, where possible UDGs.
 
 ##  Control codes
 
-The generic console supports the following control codes:
+The generic console supports both ZX style and an extended VT52 control set.
+
+### ZX Control codes
 
 ```
 4,x       - Disable (0) or enable (1) vertical scrolling
@@ -31,7 +36,7 @@ The generic console supports the following control codes:
 The parameter for those marked with (*) is taken as a bitwise and of the lower 4 bits. Typically these are offset to [0-9] for the lower values.
 ```
 
-## VT52 control codes
+### VT52 control codes
 
 The generic console additional supports VT52 control codes, the following are supported:
 
@@ -61,7 +66,7 @@ Both sets of control codes are active, if memory is extremely tight then one or 
 
 ## Colour mapping
 
-By default, an attempt is made to map any colours to a standard range, this can be disabled (and the targets native colours will be used) with the compile time option `-pragma-define:CLIB_CONIO_NATIVE_COLOUR=1`
+By default, an attempt is made to map any colours to a standard range, this can be disabled (and the targets native colours will be used) with the compile time option `-pragma-define:CLIB_CONIO_NATIVE_COLOUR=1`. Colour can be set using `textbackground()` and `textcolor()` functions defined in `<conio.h>`.
 
 ## Defining a custom font
 
@@ -107,5 +112,4 @@ On return, `caps` will be a bitset of the following capabilities (an updated lis
     #define CAP_GENCON_INVERSE      16
     #define CAP_GENCON_BOLD         32
     #define CAP_GENCON_UNDERLINE    64
-
 
