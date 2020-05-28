@@ -1,40 +1,13 @@
-# Sound (sound.h)
+# Sound `<sound.h>`
 
-| | |
-|-|-|
- | Header     | [{z88dk}/include/sound.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/sound.h)    |               
- | Source     | [{z88dk}/z88dk/libsrc/games](https://github.com/z88dk/z88dk/tree/master/libsrc/games/)                     |
- | Include    | #include `<sound.h>`             |                                                                            
- | Linking    | n/a                          |                                                                              
- | Compile    | n/a                          |                                                                              
- | Comments   |                              |                                                                              
-
-Very basic 1 bit sound library.
-
-
-# sound API
-
-
-## bit_open
-
-Initialize the sound hardware.
-
-
-## bit_close
-
-Do whatever is needed to restore the sound hardware into a quiet position.
-
-
-## bit_click
-
-Just move the sound bit.. a tiny tick will be heard.
-Can be useful to create sound effects in software loops (i.e. engine noise for a game).
+Many targets supported by z88dk support a 1 bit speaker, toggling this bit can result in sound effects. The classic library provides portable routines to create sound FX and play music.
 
 
 
-## bit_fx
+## Precanned sound effects
 
-Preset sound effects; every library contains 8 different sounds:
+The `bit_fx(int)` function family provides ready made sound effects. The sounds have been split into groups of 8.
+
 ```
 bit_fx(0)	Short hi-pitch decreasing "gulp/fall" sound
 bit_fx(1)	Fast increasing scale
@@ -73,39 +46,42 @@ bit_fx4(6)	Short jump sound
 bit_fx4(7)	Very quick duck squeak
 ```
 
-## bit_synth
-
-1 BIT SYNTH - Polyphony and multitimbric effects
-
-bit_synth(int duration, int frequency1, int frequency2, int frequency3, int frequency4);
-
-
-## bit_beep
-
-Standard beeper: the pitch is defined with the "period" parameter, but is influenced by the CPU speed;
-the higher the value, the lower the tone.
-
-bit_beep(int duration, int period);
+## Playing notes
 
 
 
-## bit_frequency
+`void bit_synth(int duration, int frequency1, int frequency2, int frequency3, int frequency4)`
 
-Real frequency.
-The CPU speed doesn't affect the frequency, but some floating point is involved (you need lo link in the proper math library at compile time).
+Polyphony and multitimbric effects
 
-bit_frequency(float duration, float frequency);
+`void bit_beep(int duration, int period)`
 
-
-## bit_play
-
-Just play a song.
-
-bit_play(unsigned char melody[]);
+Standard beeper: the pitch is defined with the "period" parameter, but is influenced by the CPU speed; the higher the value, the lower the tone.
 
 
-EXAMPLE:
+
+`void bit_frequency(double_t duration, double_t frequency)`
+
+Play a note at the specified frequency. The CPU speed doesn't affect the frequency, but some floating point is involved (you need lo link in the proper math library at compile time).
+
+`void bit_play(unsigned char melody[])`
+
+Just play a song. For example:
+
 ```
 bit_play("2A--A-B-CDEFGAB5C+");
 ```
 
+## Creating your own sound effects
+
+`void bit_open()`
+
+Initialize the sound hardware.
+
+`void bit_close()`
+
+Do whatever is needed to restore the sound hardware into a quiet position.
+
+`void bit_clock()`
+
+Just move the sound bit.. a tiny tick will be heard. Can be useful to create sound effects in software loops (i.e. engine noise for a game).

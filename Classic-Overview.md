@@ -86,11 +86,6 @@ There are the following effective levels of support:
 
 A variety of drawing primitives and higher level functions are supplied by [`<graphics.h>`](Classic-Monochrome-Graphics). 
 
-## Mono Sprites
-
-Software driven [mono sprites](monosprites.md) are available on all platforms with graphics. Some platforms, for example the ZX Spectrum, have
-more optimised sprite libraries available offering additional features.
-
 ## X11 emulation
 
 This is an experimental library to emulate some basic behaviour fo the [Xlib](xlib) functions.
