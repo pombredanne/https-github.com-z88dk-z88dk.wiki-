@@ -1,4 +1,4 @@
-Assembly language can be inlined in C code if it is surrounded by ”#asm” and ”#endasm” tags. Note that sdcc's back end is not used by z88dk so all assembly language instructions, inlined assembly included, is processed by z80asm and therefore use standard Zilog mnemonics.
+Assembly language can be inlined in C code if it is surrounded by `#asm` and `#endasm` tags. Note that sdcc's back end is not used by z88dk so all assembly language instructions, inlined assembly included, is processed by z80asm and therefore use standard Zilog mnemonics.
 
 The C compilers ignore inlined assembly code and simply generate code around it. Inlined assembly can access any variables and functions defined in the local file and can make use of PUBLIC and EXTERN to export and import names as discussed before. They can also access local variables declared on the stack as described in the last section.
 
