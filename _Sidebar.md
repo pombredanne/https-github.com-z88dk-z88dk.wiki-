@@ -15,6 +15,7 @@
 * [Retargetting](Classic--Retargetting)
 * [Building the libraries](Classic-Building-the-libraries)
 * [Pragmas](Classic--Pragmas)
+* [Screen output](Classic-GenericConsole)
 * [Maths Libraries](Classic--Maths-Libraries)
 
 ## New Library
