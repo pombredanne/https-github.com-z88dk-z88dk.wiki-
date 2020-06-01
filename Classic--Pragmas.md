@@ -128,7 +128,7 @@ A font will be automatically configured, but if you wish to change it then you c
 
 ## Configuring printf and scanf converters
 
-Both newlib and classic link in only the required converters for printf and scanf. If you compile using sccz80, then it will endeavour to configure the converters automatically, however if you use zsdcc then you will need to configure the list of converters that are required.
+Both newlib and classic link in only the required converters for printf and scanf. If you compile using sccz80, then it will endeavour to configure the converters automatically for single line compilations, however if you use incremental builds or zsdcc then you will need to configure the list of converters that are required.
 
     #pragma printf = "<list printf converters here including l or ll for long and longlong>"
     #pragma scanf  = "<list scanf converters here including l or ll for long and longlong>"
