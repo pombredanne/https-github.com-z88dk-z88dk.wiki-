@@ -140,7 +140,7 @@ Useful symplectic integrators are freely available, for example the HNBody Sympl
 | IAR Z80 V4.06A     |	4084	| 2,331,516,019	| 9 min 43 sec    |
 | SDCC	             |  9233	| 5,306,393,684	| 22 min 07 sec   |
 | Z88DK/SCCZ80_CLASSIC|	3814	| 3,624,577,433	| 15 min 06 sec   |
-| Z88DK/SCCZ80_CLASSIC/MATH32|	5333	| 1,358,606,369	| __5 min 40 sec__  |
+| Z88DK/SCCZ80_CLASSIC/MATH32|	5346	| 1,320,690,188	| __5 min 30 sec__  |
 | Z88DK/SCCZ80_NEW  |	__3244__	| 2,374,676,379	| 9 min 54 sec    |
 | Z88DK/SDCC_CLASSIC|   4770	| 2,253,531,346	| 9 min 23 sec    |
 | Z88DK/SDCC_NEW    |   4356	| 2,247,600,377	| 9 min 22 sec    |
@@ -224,7 +224,7 @@ Floating point performance depends strongly on the number of mantissa bits in th
 | Z88DK/SCCZ80_NEW    |	48	 | 40	  | __5388__  | 973,210,939   | 243.3027 sec | 4.1101 |
 | Z88DK/SDCC_CLASSIC  | 32(48)	 | 24(40) | 7045  | 921,228,352   | 230.3071 sec | 4.3420 |
 | Z88DK/SDCC_NEW      | 32(48)	 | 24(40) | 6234  | 916,707,945   | 229.1770 sec | 4.3634 |
-| Z88DK/SDCC/MATH32   | 32 	 | 24     | 9578  | 844,247,586   | 211.0619 sec | __4.7379__ |
+| Z88DK/SDCC/MATH32   | 32 	 | 24     | 9554  | 794,722,631   | 198.6806 sec | __5.0332__ |
 
 Notes:
 
