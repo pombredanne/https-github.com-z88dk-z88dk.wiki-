@@ -27,7 +27,7 @@
 * [ ] Interrupts
 * [ ] RS232
 
-_This port is incomplete_
+_This target is incomplete_
 
 # Compilation
 
