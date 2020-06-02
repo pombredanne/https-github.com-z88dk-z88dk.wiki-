@@ -4,7 +4,7 @@
 * 36k contiguous RAM
 * 12k VRAM giving 384 x 256 resolution
 
-## Classic library support (`+vector06c`)
+## Classic library support (`+special`)
 
 * [x] Native console output
 * [x] Native console input
