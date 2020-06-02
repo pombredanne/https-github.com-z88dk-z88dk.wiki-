@@ -27,6 +27,7 @@
 * [ ] Interrupts
 * [ ] RS232
 
+_This port is incomplete_
 
 # Compilation
 
