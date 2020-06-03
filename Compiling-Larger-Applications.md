@@ -58,7 +58,7 @@ The output name specified with the `-o` option at the linking stage is the name 
 
 ## Compiling for many targets (classic)
 
-The makefile example detailed above is a minimal example to compile a project for a single z88dk. However, many z88dk projects, in particular those that use classic, aim to write portable code that can be run on many targets. If we assume a project with the following structure:
+The makefile example detailed above is a minimal example to compile a project for a single z88dk target. However, many z88dk projects, in particular those that use classic, aim to write portable code that can be run on many targets. If we assume a project with the following structure:
 
 ```
 main.c
