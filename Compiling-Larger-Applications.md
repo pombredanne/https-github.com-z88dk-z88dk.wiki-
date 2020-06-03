@@ -125,3 +125,7 @@ LDFLAGS_{basename} =
 CFLAGS_{target}_{basename} = 
 LDFLAGS_{target}_{basename} =
 ```
+
+### Multiple projects in the same makefile
+
+Using this formula, it's possible to compile multiple projects for multiple targets using a single makefile. For an example see https://github.com/z88dk/z88dk/blob/master/examples/console/Makefile
