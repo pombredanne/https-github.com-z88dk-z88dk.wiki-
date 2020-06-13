@@ -3,7 +3,7 @@
 The most common surprise to C programmers used to programming 32- and 64-bit machines is the reduced bit width of many types.  The z80 processor is only 8-bit with some 16-bit characteristics so the bit widths of the built in data types are correspondingly reduced for best performance.  Always keep this in mind while writing programs targetting small processors.
 
 |          |  char  |  int  |  long  |  long long  |  _Float16 | float<sup>**(2,4)**</sup>  |  double<sup>**(2,4)**</sup>  | void *  |
-|--|--|--|--|--|--|--|--|
+|--|--|--|--|--|--|--|--|--|
 | SCCZ80   |  8     |  16   |  32    |  n/a        |  16       | 32/48/64                   |  48                          |  16<sup>**(5)**</sup>  |
 | SDCC     |  8     |  16   |  32    |  64         |  n/a      | 32<sup>**(3)**</sup>       |  32<sup>**(3)**</sup>        |  16  |
 
