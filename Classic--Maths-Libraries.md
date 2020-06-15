@@ -49,13 +49,31 @@ mbf64 can be used with sccz80.
 
 math32 provides a 32 bit floating point format that is mostly compliant with IEEE-754, which is also the native floating point format of sdcc. The library can be used with both sccz80 and zsdcc using the following options:
 
-`-fp-mode=ieee -lmath32 -pragma-define:CLIB_32BIT_FLOAT=1`
+`-fp-mode=ieee -lmath32 -Cc-D__MATH_MATH32 -D__MATH_MATH32 -pragma-define:CLIB_32BIT_FLOAT=1`
 
 `math32` supports the z180 and ZX Spectrum Next z80n hardware multiply instructions, providing accelerated performance for both these platforms. The z80 CPU is supported through emulation of the hardware multiply format `16_8x8`, and also provides good performance.
 
 The intrinsic functions are written in assembler. The higher level functions (trigonometric, exp, pow) are implemented by C functions extracted from the Cephes Math Library and the Hi-Tech C Floating point library.
 
 More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32).
+
+## `-lmath16` - (16 bit math using IEEE-754 format)
+
+math16 provides a 16 bit floating point format that is mostly compliant with IEEE-754. The library can be used with both sccz80 and zsdcc using the following options:
+
+`-lmath16 -Cc-D__MATH_MATH16 -D__MATH_MATH16`
+
+`math16` supports the z180 and ZX Spectrum Next z80n hardware multiply instructions, providing accelerated performance for both these platforms. The z80 CPU is supported through emulation of the hardware multiply format `16_8x8`, and also provides good performance.
+
+The IEEE 16 bit floating point standard supports a maximum of 3.5 significant digits of accuracy, but it is very fast.
+
+The intrinsic functions are written in assembler. The intrinsic type is `_Float16` for sccz80, or `half_t` for both sccz80 or sdcc.
+
+The sccz80 compiler supports `_Float16` as a native type, and therefore arithmetic or comparison operations on variables defined as `_Float16` or `half_t` will be done without conversion. The sdcc compiler doesn't support intrinsic 16 bit floating point operations, but functions can still be called as needed.
+
+The `math16` library is considered an adjunct library. It is linked together with a main math library, which supplies printing format conversion and other facilities. The invocation command will typically include `--math32 --math16`, or `-lm --math16` to provide both main and adjunct math libraries.
+
+More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math16).
 
 ## Machine specific libraries
 
@@ -126,8 +144,8 @@ Library                  | Compiler | Ticks
 genmath                  | sccz80   | 3_589_992_847
 math48                   | sccz80   | 3_323_285_174
 math48                   | zsdcc    | 3_205_062_412
-math32                   | zsdcc    | 1_670_409_507
-math32                   | sccz80   | 1_653_612_845 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
-~~math32_fast~~          | sccz80   | 1_495_633_606 [*](https://github.com/z88dk/z88dk/commit/efdd07c2e2229cac7cfef97ec01f478004846e39)
+math32                   | zsdcc    | 1_519_179_081
+math32                   | sccz80   | 1_517_530_881 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
+math16                   | sccz80   | 1_103_113_465
 math32_z80n  (integrated)| sccz80   | 0_922_658_537 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
 math32_z180  (integrated)| sccz80   | 0_892_842_610 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
