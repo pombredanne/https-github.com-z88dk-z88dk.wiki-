@@ -123,9 +123,9 @@ Notes:
 
 * Hitech-C Z80 v7.50 produces incorrect results on all optimization levels.
 * SDCC's performance is hurt by a floating point package implemented in C.
-* Z88DK/SCCZ80_CLASSIC uses the genmath float library while the other Z88DK compiles use math48.
+* Z88DK/SCCZ80_CLASSIC uses the `genmath` float library while the other Z88DK compiles use `math48`.
 * Z88DK/SDCC uses a 48-bit float internally but this is converted to 32-bit at the compiler-library interface since sdcc only understands a 32-bit float type.
-* Z88DK/SCCZ80/MATH32 uses the 32-bit IEEE-754 floating point package.
+* Z88DK/SCCZ80/MATH32 uses the `math32` 32-bit IEEE-754 floating point package.
 
 # n-Body
 
@@ -140,8 +140,9 @@ Useful symplectic integrators are freely available, for example the HNBody Sympl
 | IAR Z80 V4.06A     |	4084	| 2,331,516,019	| 9 min 43 sec    |
 | SDCC	             |  9233	| 5,306,393,684	| 22 min 07 sec   |
 | Z88DK/SCCZ80_CLASSIC|	3814	| 3,624,577,433	| 15 min 06 sec   |
-| Z88DK/SCCZ80_CLASSIC/MATH32|	5346	| 1,320,690,188	| __5 min 30 sec__  |
-| Z88DK/SCCZ80_NEW  |	__3244__	| 2,374,676,379	| 9 min 54 sec    |
+| Z88DK/SCCZ80_NEW  |	__3608__	| 2,372,283,755	| 9 min 53 sec    |
+| Z88DK/SCCZ80_NEW/MATH32|	5264	| 1,025,105,884	| __4 min 16 sec__  |
+| Z88DK/SCCZ80_NEW/MATH16|	3227	| 0,384,230,543	| __1 min 36 sec__  |
 | Z88DK/SDCC_CLASSIC|   4770	| 2,253,531,346	| 9 min 23 sec    |
 | Z88DK/SDCC_NEW    |   4356	| 2,247,600,377	| 9 min 22 sec    |
 
@@ -150,9 +151,10 @@ Notes:
 * Hitech-C CPM v3.09 can't compile the source code.
 * Hitech-C Z80 v7.50 produces incorrect results on all optimization levels.
 * SDCC's performance is hurt by a floating point package implemented in C.
-* Z88DK/SCCZ80_CLASSIC uses the genmath float library while the other Z88DK compiles use math48.
+* Z88DK/SCCZ80_CLASSIC uses the `genmath` float library while the other Z88DK compiles use `math48`.
 * Z88DK/SDCC uses a 48-bit float internally but this is converted to 32-bit at the compiler-library interface since sdcc only understands a 32-bit float type.
-* Z88DK/SCCZ80/MATH32 uses the 32-bit IEEE-754 floating point package.
+* Z88DK/SCCZ80_NEW/MATH32 uses the `math32` 32-bit IEEE-754 floating point package.
+* Z88DK/SCCZ80_NEW/MATH16 uses the `math16` 16-bit IEEE-754 floating point package.
 
 # Pi
 
@@ -232,6 +234,6 @@ Notes:
 * Hitech-C CPM v3.09 binary size is over-estimated as it will contain some stdio structures for cp/m.
 * Hitech-C Z80 v7.50 produces incorrect results on all optimization levels.
 * SDCC's performance is hurt by a floating point package implemented in C.
-* Z88DK/SCCZ80_CLASSIC uses the genmath float library while the other Z88DK compiles use math48.
+* Z88DK/SCCZ80_CLASSIC uses the `genmath` float library while the other Z88DK compiles use `math48`.
 * Z88DK/SDCC uses a 48-bit float internally but this is converted to 32-bit at the compiler-library interface since sdcc only understands a 32-bit float type.
-* Z88DK/SDCC/MATH32 uses the 32-bit IEEE-754 floating point package.
+* Z88DK/SDCC/MATH32 uses the `math32` 32-bit IEEE-754 floating point package.
