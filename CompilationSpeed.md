@@ -1,7 +1,7 @@
 For a given program, compilation speed depends on several factors:
 
 * Compiler used and flags
-* Operating system
+* Operating system and hardware
 * Target library size
 
 Taking the classic `adv_a.c` example (over 3000 lines) and compiling using the classic `+zxn` and `+primo` libraries. The `+zxn` library file is about 1.5MB, the `+primo` is about 1MB.
