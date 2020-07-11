@@ -10,17 +10,17 @@ Genmath is z88dk's traditional maths library. It provides a 48 bit number, with 
 
 Genmath can only be used with the sccz80 compiler.
 
-## `-lmath48` - (48 bit math by Anders Hejlsberg)
+## `-lmath48` - (48 bit maths by Anders Hejlsberg)
 
 math48 has been imported into classic from the newlib. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises the alternate register set and therefore can't run on all classic targets.
 
 math48 can be used with both sccz80 and zsdcc and is marginally faster than genmath.
 
-## `-lbbc_math` - (40 bit math from BBC BASIC for z80)
+## `-lbbc_math` - (40 bit maths from BBC BASIC for z80)
 
 The BBC maths library provides a 32 bit mantissa and 8 bit exponent. It's the same library as the native maths library on the z88. It can be linked with the options: `-fp-mode=z88 -lbbc_math`. It can be used on ix/iy switched platforms with `-fp-mode=z88 -lbbc_math_iy`.
 
-## `-lmbf32` - (32 bit math from Microsoft)
+## `-lmbf32` - (32 bit maths from Microsoft)
 
 Support has been added for the (4 byte, 8 bit exponent, 24 bit mantissa) Microsoft single precision library. This is available for machines that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported:
 
@@ -34,7 +34,7 @@ The library can be linked with the following options: `-fp-mode=mbf32 -lmbf32`
 
 Typically using the mbf32 will result in a roughly 20% decrease in floating point performance when compared to genmath/math48. However, the size of your application will be greatly reduced.
 
-## `-lmbf64` - (64 bit math from Microsoft)
+## `-lmbf64` - (64 bit maths from Microsoft)
 
 Support has been added for the (8 byte, 8 bit exponent, 56 bit mantissa) Microsoft double precision library. This is available for machines that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported:
 
@@ -45,7 +45,7 @@ The library can be linked with the following options: `-fp-mode=mbf64 -lmbf64`
 
 mbf64 can be used with sccz80.
 
-## `-lmath32` - (32 bit math using IEEE-754 format)
+## `-lmath32` - (32 bit maths using IEEE-754 format)
 
 math32 provides a 32 bit floating point format that is mostly compliant with IEEE-754, which is also the native floating point format of sdcc. The library can be used with both sccz80 and zsdcc using the following options:
 
@@ -53,11 +53,11 @@ math32 provides a 32 bit floating point format that is mostly compliant with IEE
 
 `math32` supports the z180 and ZX Spectrum Next z80n hardware multiply instructions, providing accelerated performance for both these platforms. The z80 CPU is supported through emulation of the hardware multiply format `16_8x8`, and also provides good performance.
 
-The intrinsic functions are written in assembler. The higher level functions (trigonometric, exp, pow) are implemented by C functions extracted from the Cephes Math Library and the Hi-Tech C Floating point library.
+The intrinsic functions are written in assembler. The higher level functions (trigonometric, exp, pow) are implemented by C functions extracted from the Cephes Maths Library and the Hi-Tech C Floating point library.
 
 More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32).
 
-## `-lmath16` - (16 bit math using IEEE-754 format)
+## `-lmath16` - (16 bit maths using IEEE-754 format)
 
 math16 provides a 16 bit floating point format that is mostly compliant with IEEE-754. The library can be used with both sccz80 and zsdcc using the following options:
 
@@ -66,12 +66,15 @@ math16 provides a 16 bit floating point format that is mostly compliant with IEE
 `math16` supports the z180 and ZX Spectrum Next z80n hardware multiply instructions, providing accelerated performance for both these platforms. The z80 CPU is supported through emulation of the hardware multiply format `16_8x8`, and also provides good performance.
 
 The IEEE 16 bit floating point standard supports a maximum of 3.5 significant digits of accuracy, but it is very fast.
+It is useful for graphics, as per this Cambridge Z88 example comparing the IEEE16 library with the standard maths library.
+
+![Cube example on Cambridge Z88](https://user-images.githubusercontent.com/394721/87208645-26b7f980-c307-11ea-93c5-dc111e9320c5.gif)
 
 The intrinsic functions are written in assembler. The intrinsic type is `_Float16` for sccz80, or `half_t` for both sccz80 or sdcc.
 
 The sccz80 compiler supports `_Float16` as a native type, and therefore arithmetic or comparison operations on variables defined as `_Float16` or `half_t` will be done without conversion. The sdcc compiler doesn't support intrinsic 16 bit floating point operations, but functions can still be called as needed.
 
-The `math16` library is considered an adjunct library. It is linked together with a main math library, which supplies printing format conversion and other facilities. The invocation command will typically include `--math32 --math16`, or `-lm --math16` to provide both main and adjunct math libraries.
+The `math16` library is considered an adjunct library. When printing format conversion and other facilities are required, it is linked together with a main maths library (which provides the conversion routines). The invocation command will typically include `--math32 --math16`, or `-lm --math16` to provide both main and adjunct maths libraries.
 
 More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math16).
 
@@ -83,9 +86,9 @@ More details on the library can be found within the [repository](https://github.
 
 All of these libraries use the floating point package located in the machine's ROM. This can result in a compact binary
 
-# Math library aliases
+# Maths library aliases
 
-Aliases are provided to make usage of math libraries straight forward. Including the alias in the zcc invocation will provide all necessary configuration options relevant for each math library.
+Aliases are provided to make usage of maths libraries straight forward. Including the alias in the zcc invocation will provide all necessary configuration options relevant for each maths library.
 
 ## classic
 
@@ -96,9 +99,12 @@ Aliases are provided to make usage of math libraries straight forward. Including
 
 ## classic + newlib
 
-The `--math32` alias is supported across z80, z180, and z80n (SpectrumNext) architectures, and automatically provides each target with the correct hardware multiply opcodes (or for z80 emulation code) to enable best performance.
+The `--math16` and `--math32` aliases are supported across z80, z180, and z80n (SpectrumNext) architectures, and automatically provides each target with the correct hardware multiply opcodes (or for z80 emulation code) to enable best performance.
 
-* __`--math32`__ is alias for `-Cc-fp-mode=ieee -Cc-D__MATH_MATH32 -D__MATH_MATH32 -lmath32 -pragma-define:CLIB_32BIT_FLOAT=1`
+The `math16` library uses 16-bit (integer) memory moves extensively, and therefore optimising code by in-lining memory get and put subroutines has a positive impact on performance, without increasing program size substantially.
+
+* __`--math32`__ is alias for `-Cc-D__MATH_MATH32 -D__MATH_MATH32 -Cc-fp-mode=ieee -pragma-define:CLIB_32BIT_FLOAT=1 -lmath32`
+* __`--math16`__ is alias for `-Cc-D__MATH_MATH16 -D__MATH_MATH16 --opt-code-speed=inlineints -lmath16`
 
 # Benchmarks
 
