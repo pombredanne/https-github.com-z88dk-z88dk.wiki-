@@ -224,9 +224,10 @@ Floating point performance depends strongly on the number of mantissa bits in th
 | SDCC	              | 32	 | 24	  | 14379 | 2,184,812,093 | 546.2030 sec | 1.8308 |
 | Z88DK/SCCZ80_CLASSIC| 48	 | 40	  | 5744  | 1,280,818,856 | 320.2047 sec | 3.1230 |
 | Z88DK/SCCZ80_NEW    |	48	 | 40	  | __5388__  | 973,210,939   | 243.3027 sec | 4.1101 |
+| Z88DK/SCCZ80/MATH32 | 32 	 | 24     | 8823  | 653,436,776   | 163.3592 sec | __6.1215__ |
 | Z88DK/SDCC_CLASSIC  | 32(48)	 | 24(40) | 7045  | 921,228,352   | 230.3071 sec | 4.3420 |
 | Z88DK/SDCC_NEW      | 32(48)	 | 24(40) | 6234  | 916,707,945   | 229.1770 sec | 4.3634 |
-| Z88DK/SDCC/MATH32   | 32 	 | 24     | 9681  | 663,018,211   | 165.7546 sec | __6.0330__ |
+| Z88DK/SDCC/MATH32   | 32 	 | 24     | 9681  | 663,018,211   | 165.7546 sec | 6.0330 |
 
 Notes:
 
@@ -235,5 +236,6 @@ Notes:
 * Hitech-C Z80 v7.50 produces incorrect results on all optimization levels.
 * SDCC's performance is hurt by a floating point package implemented in C.
 * Z88DK/SCCZ80_CLASSIC uses the `genmath` float library while the other Z88DK compiles use `math48`.
+* Z88DK/SCCZ80/MATH32 uses the `math32` 32-bit IEEE-754 floating point package.
 * Z88DK/SDCC uses a 48-bit float internally but this is converted to 32-bit at the compiler-library interface since sdcc only understands a 32-bit float type.
 * Z88DK/SDCC/MATH32 uses the `math32` 32-bit IEEE-754 floating point package.
