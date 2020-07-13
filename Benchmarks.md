@@ -226,7 +226,7 @@ Floating point performance depends strongly on the number of mantissa bits in th
 | Z88DK/SCCZ80_NEW    |	48	 | 40	  | __5388__  | 973,210,939   | 243.3027 sec | 4.1101 |
 | Z88DK/SDCC_CLASSIC  | 32(48)	 | 24(40) | 7045  | 921,228,352   | 230.3071 sec | 4.3420 |
 | Z88DK/SDCC_NEW      | 32(48)	 | 24(40) | 6234  | 916,707,945   | 229.1770 sec | 4.3634 |
-| Z88DK/SDCC/MATH32   | 32 	 | 24     | 9554  | 794,722,631   | 198.6806 sec | __5.0332__ |
+| Z88DK/SDCC/MATH32   | 32 	 | 24     | 9681  | 663,018,211   | 165.7546 sec | __6.0330__ |
 
 Notes:
 
