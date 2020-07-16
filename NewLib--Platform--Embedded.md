@@ -444,7 +444,7 @@ This section will highlight the most commonly used ones.
 
 *  **--opt-code-size** (sdcc) In the latest version of z88dk this will especially reduce the code size of programs using many longs, longlongs or floats.
 
-*  **--reloc-info** Generate a companion .reloc file for each output .bin that contains details on how to [relocate the binary to a new address](#generating_runtime_relocatable_binaries) (experimental and untested).
+*  **--reloc-info** Generate a companion .reloc file for each output .bin that contains details on how to [relocate the binary to a new address](#user-content-generating-runtime-relocatable-binaries) (experimental and untested).
 
 *  **--reserve-regs-iy** (sdcc) Sdcc is not allowed to use the iy register.  This flag is automatically invoked in clib=sdcc_iy compiles.  See [known issues](temp/front#sdcc2) concerning this flag.
 
