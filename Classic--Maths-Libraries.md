@@ -92,7 +92,7 @@ Aliases are provided to make usage of maths libraries straight forward. Includin
 
 ## classic
 
-* __`--math-mbf32`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32 -pragma-define:CLIB_32BIT_FLOATS=1`
+* __`--math-mbf32`__ is alias for `-Cc-fp-mode=mbf32 -pragma-define:CLIB_32BIT_FLOATS=1 -lmbf32`
 * __`--math-mbf32_8080`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32_8080`
 * __`--math-mbf64`__ is alias for `-Cc-fp-mode=mbf64 -lmbf64`
 * __`--math-bbc`__ is alias for `-Cc-fp-mode=z88 -lbbc_math`
