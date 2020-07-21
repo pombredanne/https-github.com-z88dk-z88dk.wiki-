@@ -92,7 +92,7 @@ Aliases are provided to make usage of maths libraries straight forward. Includin
 
 ## classic
 
-* __`--math-mbf32`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32`
+* __`--math-mbf32`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32 -pragma-define:CLIB_32BIT_FLOATS=1`
 * __`--math-mbf32_8080`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32_8080`
 * __`--math-mbf64`__ is alias for `-Cc-fp-mode=mbf64 -lmbf64`
 * __`--math-bbc`__ is alias for `-Cc-fp-mode=z88 -lbbc_math`
@@ -103,7 +103,7 @@ The `--math16` and `--math32` aliases are supported across z80, z180, and z80n (
 
 The `math16` library uses 16-bit (integer) memory moves extensively, and therefore optimising code by in-lining memory get and put subroutines has a positive impact on performance, without increasing program size substantially.
 
-* __`--math32`__ is alias for `-Cc-D__MATH_MATH32 -D__MATH_MATH32 -Cc-fp-mode=ieee -pragma-define:CLIB_32BIT_FLOAT=1 -lmath32`
+* __`--math32`__ is alias for `-Cc-D__MATH_MATH32 -D__MATH_MATH32 -Cc-fp-mode=ieee -pragma-define:CLIB_32BIT_FLOATS=1 -lmath32`
 * __`--math16`__ is alias for `-Cc-D__MATH_MATH16 -D__MATH_MATH16 --opt-code-speed=inlineints -lmath16`
 
 # Benchmarks
