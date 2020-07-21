@@ -6,7 +6,7 @@ When compiling with zsdcc a float is always allocated 4 bytes in the C code. How
 
 ## `-lm` - (48 bit genmath)
 
-Genmath is z88dk's traditional maths library. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises a single index register and runs on all of classic's targets (subject to memory).
+Genmath is z88dk's traditional maths library. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises a single index register and runs on all of classic's targets (subject to memory). It should be noted that the library makes extensive use of the ixh and ixy registers and as such cannot be used on the Z180 or clones that do not support them,
 
 Genmath can only be used with the sccz80 compiler.
 
@@ -33,6 +33,8 @@ Support has been added for the (4 byte, 8 bit exponent, 24 bit mantissa) Microso
 The library can be linked with the following options: `-fp-mode=mbf32 -lmbf32`
 
 Typically using the mbf32 will result in a roughly 20% decrease in floating point performance when compared to genmath/math48. However, the size of your application will be greatly reduced.
+
+The library isn't distributed with z88dk, but can be downloaded, compiled and used on 8080 targets (See https://github.com/z88dk/z88dk/blob/master/libsrc/math/mbf32/z80/math_mbf32.asm for details).
 
 ## `-lmbf64` - (64 bit maths from Microsoft)
 
