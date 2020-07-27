@@ -4,23 +4,23 @@ The classic library supports applications being compiled with different maths li
 
 When compiling with zsdcc a float is always allocated 4 bytes in the C code. However with sccz80, the size of a float depends on which maths library is being used. Traditionally, sccz80 has always allocated a 6 byte block for representing floats, but some maths libraries support a 4 byte (32 bit) float.
 
-## `-lm` - (48 bit genmath)
+## `-lm` - (48 bit genmath) - z80/z80n
 
 Genmath is z88dk's traditional maths library. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises a single index register and runs on all of classic's targets (subject to memory). It should be noted that the library makes extensive use of the ixh and ixy registers and as such cannot be used on the Z180 or clones that do not support them,
 
 Genmath can only be used with the sccz80 compiler.
 
-## `-lmath48` - (48 bit maths by Anders Hejlsberg)
+## `-lmath48` - (48 bit maths by Anders Hejlsberg) - z80/z180/z80n
 
 math48 has been imported into classic from the newlib. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises the alternate register set and therefore can't run on all classic targets.
 
 math48 can be used with both sccz80 and zsdcc and is marginally faster than genmath.
 
-## `-lbbc_math` - (40 bit maths from BBC BASIC for z80)
+## `-lbbc_math` - (40 bit maths from BBC BASIC for z80) - z80/z180/z80n
 
 The BBC maths library provides a 32 bit mantissa and 8 bit exponent. It's the same library as the native maths library on the z88. It can be linked with the options: `-fp-mode=z88 -lbbc_math`. It can be used on ix/iy switched platforms with `-fp-mode=z88 -lbbc_math_iy`.
 
-## `-lmbf32` - (32 bit maths from Microsoft)
+## `-lmbf32` - (32 bit maths from Microsoft) - 8080/z80/z180/z80n
 
 Support has been added for the (4 byte, 8 bit exponent, 24 bit mantissa) Microsoft single precision library. This is available for machines that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported:
 
@@ -36,7 +36,11 @@ Typically using the mbf32 will result in a roughly 20% decrease in floating poin
 
 The library isn't distributed with z88dk, but can be downloaded, compiled and used on 8080 targets (See https://github.com/z88dk/z88dk/blob/master/libsrc/math/mbf32/z80/math_mbf32.asm for details).
 
-## `-lmbf64` - (64 bit maths from Microsoft)
+## `-ldaimath32` - (32 bit maths extracted from the DAI target) - 8080/z80/z180/z80n
+
+This maths library was extracted from the DAI computer, it offers, a 4 byte, 8 bit exponent, 23 bit mantissa floating point number. It's of particular interest since the whole library is shipped with z88dk and provides an 8080 library.
+
+## `-lmbf64` - (64 bit maths from Microsoft) - z80n
 
 Support has been added for the (8 byte, 8 bit exponent, 56 bit mantissa) Microsoft double precision library. This is available for machines that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported:
 
@@ -47,7 +51,7 @@ The library can be linked with the following options: `-fp-mode=mbf64 -lmbf64`
 
 mbf64 can be used with sccz80.
 
-## `-lmath32` - (32 bit maths using IEEE-754 format)
+## `-lmath32` - (32 bit maths using IEEE-754 format) - z80/z180/z80n
 
 math32 provides a 32 bit floating point format that is mostly compliant with IEEE-754, which is also the native floating point format of sdcc. The library can be used with both sccz80 and zsdcc using the following options:
 
@@ -59,7 +63,7 @@ The intrinsic functions are written in assembler. The higher level functions (tr
 
 More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32).
 
-## `-lmath16` - (16 bit maths using IEEE-754 format)
+## `-lmath16` - (16 bit maths using IEEE-754 format) - z80/z180/z80n
 
 math16 provides a 16 bit floating point format that is mostly compliant with IEEE-754. The library can be used with both sccz80 and zsdcc using the following options:
 
@@ -98,6 +102,7 @@ Aliases are provided to make usage of maths libraries straight forward. Includin
 * __`--math-mbf32_8080`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32_8080`
 * __`--math-mbf64`__ is alias for `-Cc-fp-mode=mbf64 -lmbf64`
 * __`--math-bbc`__ is alias for `-Cc-fp-mode=z88 -lbbc_math`
+* __`--math-dai32`__ is alias for `-Cc-fp-mode=am9511 -ldaimath32`
 
 ## classic + newlib
 
