@@ -40,7 +40,7 @@ The library isn't distributed with z88dk, but can be downloaded, compiled and us
 
 This maths library was extracted from the DAI computer, it offers, a 4 byte, 7 bit exponent, 24 bit mantissa floating point number. It's of particular interest since the whole library is shipped with z88dk and provides an 8080 library.
 
-## `-lmbf64` - (64 bit maths from Microsoft) - z80n
+## `-lmbf64` - (64 bit maths from Microsoft) - z80
 
 Support has been added for the (8 byte, 8 bit exponent, 56 bit mantissa) Microsoft double precision library. This is available for machines that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported:
 
