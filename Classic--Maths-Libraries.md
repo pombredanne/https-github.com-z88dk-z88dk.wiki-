@@ -38,7 +38,7 @@ The library isn't distributed with z88dk, but can be downloaded, compiled and us
 
 ## `-ldaimath32` - (32 bit maths extracted from the DAI target) - 8080/z80/z180/z80n
 
-This maths library was extracted from the DAI computer, it offers, a 4 byte, 8 bit exponent, 23 bit mantissa floating point number. It's of particular interest since the whole library is shipped with z88dk and provides an 8080 library.
+This maths library was extracted from the DAI computer, it offers, a 4 byte, 7 bit exponent, 24 bit mantissa floating point number. It's of particular interest since the whole library is shipped with z88dk and provides an 8080 library.
 
 ## `-lmbf64` - (64 bit maths from Microsoft) - z80n
 
