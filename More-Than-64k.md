@@ -133,6 +133,9 @@ You should also implement the following string.h functions which will make the u
 	extern far char *strrchr_far(far unsigned char *, unsigned char);
 	extern far char *strdup_far(far char *);
 
+# __banked function calls (sccz80 and zsdcc)
+
+
 # Trampoline function calls (sccz80 and zsdcc)
 
 _To be written_ See #641
