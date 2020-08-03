@@ -20,7 +20,7 @@ math48 can be used with both sccz80 and zsdcc and is marginally faster than genm
 
 The BBC maths library provides a 32 bit mantissa and 8 bit exponent. It's the same library as the native maths library on the z88. It can be linked with the options: `-fp-mode=z88 -lbbc_math`. It can be used on ix/iy switched platforms with `-fp-mode=z88 -lbbc_math_iy`.
 
-## `-lmbf32` - (32 bit maths from Microsoft) - 8080/z80/z180/z80n
+## `-lmbf32` - (32 bit maths from Microsoft) - 8080/gbz80/z80/z180/z80n
 
 Support has been added for the (4 byte, 8 bit exponent, 24 bit mantissa) Microsoft single precision library. This is available for machines that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported:
 
@@ -127,8 +127,10 @@ Library                  | Compiler | Value 1       | Value 2       | Ticks
 -|-|-|-|-
 correct values           | -->      | -0.169075164  | -0.169087605
 genmath                  | sccz80   | -0.169075164  | -0.169087605  | 3_652_736_949
+mbf32 (gbz80)            | sccz80   | -0.169075083  | -0.169086337  | 2_555_855_304
 math48                   | sccz80   | -0.169075164  | -0.169087605  | 2_402_023_498
-mbf32                    | sccz80   | -0.1699168    | -0.1699168    | 1_939_334_701
+mbf32 (z80)              | sccz80   | -0.169075083  | -0.169086337  | 1_936_249_932
+
 daimath32                | sccz80   | -0.1690751    | -0.1690863    | 1_899_271_269
 bbcmath                  | sccz80   | -0.16907516   | -0.16908760   | 1_655_789_776
 math32                   | sccz80   | -0.1690752    | -0.1690867    | 1_398_993_950 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
