@@ -45,11 +45,26 @@ This will generate a file, **adva.com** which is located at $100, as required by
 To run on a 16K machine, you need to move the code origin to the upper half.
 '-zorg=49200' should be a good option for you zcc command line.  Any working address for the 16k model will still work on the 32k models.
 
-#### ROM mode
+### ROM mode
 
 The generate a ROM binary add the option `-subtype=rom`. In this mode, not all functions will work.
 
 Under some condition, if lots of preset data is provided, an option permits to compress the default values before storing them in the ROM: -pragma-define:CRT_MODEL=2
+
+
+#### MegaROM mode
+
+MegaROMs can be created - use the `__banked` directive to place data in banks and compiled with `-subtype=rom` - an example is provided in `z88dk/examples/banked`.
+
+The memory model generated in MegaROM mode is as follows:
+
+0x4000 - 0x7fff = crt0, startup, z88dk library routines, never paged out
+0x8000 - 0xbfff = paged memory
+0xc000 - 0xffff = RAM
+
+z88dk treats a bank as 16kb regardless of which mapper is being used.
+
+
 
 ### Disk subtype
 
