@@ -31,9 +31,6 @@ Support has been added for the (4 byte, 8 bit exponent, 24 bit mantissa) Microso
 * CCE MC-1000
 
 The library can be linked with the following options: `-fp-mode=mbf32 -lmbf32`
-
-Typically using the mbf32 will result in a roughly 20% decrease in floating point performance when compared to genmath/math48. However, the size of your application will be greatly reduced.
-
 The library isn't distributed with z88dk, but can be downloaded, compiled and used on 8080 targets (See https://github.com/z88dk/z88dk/blob/master/libsrc/math/mbf32/z80/math_mbf32.asm for details).
 
 ## `-ldaimath32` - (32 bit maths extracted from the DAI target) - 8080/z80/z180/z80n
