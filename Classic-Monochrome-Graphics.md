@@ -252,7 +252,11 @@ Render a picture defined in a 'profile' byte stream.
 
 
 
-# Links
+# Links for external tools
+
+z88dk provides a monochrome sprite editor in source code format, in the {z88dk}/support/sprites folder.   It requires the 'Allegro 5' library, its graphics interface is not elegant but it is very powerful and portable.
+
+External alternatives are:
 
 [SpEdito - Marcello Zaniboni's Sprite Editor](http://www.marcellozaniboni.net/spedito/index.html)
 
