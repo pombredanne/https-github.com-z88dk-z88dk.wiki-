@@ -54,17 +54,22 @@ Under some condition, if lots of preset data is provided, an option permits to c
 
 #### MegaROM mode
 
-MegaROMs can be created - use the `__banked` directive to place data in banks and compiled with `-subtype=rom` - an example is provided in `z88dk/examples/banked`.
+MegaROMs can be created using z88dk - simply compiler with `zcc +msx -subtype=rom...`. The memory organisation is assumed to be as follows:
 
-The memory model generated in MegaROM mode is as follows:
+```
+- 0x4000 - 0x7fff = Fixed area, should container crt0, z88dk library routines
+- 0x8000 - 0xbfff = Paged area, treated as 16k chunks
+- 0xc000 - 0xffff = RAM
+```
 
-0x4000 - 0x7fff = crt0, startup, z88dk library routines, never paged out
-0x8000 - 0xbfff = paged memory
-0xc000 - 0xffff = RAM
+Logically z88dk treats the memory map as being 16kb pages, transparently handling the fact that the ROM mapper may actually be an 8k mapper.
 
-z88dk treats a bank as 16kb regardless of which mapper is being used.
+To place functions into banks, you should use the `#pragma bank NN` directive, where NN is a decimal number between 1 and 31. Functions should be prototyped as `__banked __z88dk_params_offset(4)` to ensure that both the call to the function is passed through the trampoline and that parameters are found at the correct stack offset.
 
+By default z88dk will use the "Konami without SCC" memory mapper, alternate mappers can be used instead using the following options:
+`-pragma-define:MAPPER_ASCII16` and `-pragma-define:MAPPER_ASCII8`. From a usage perspective there's no difference.
 
+A simple example project is contained within `z88dk/examples/banked` - this example also works on the Gameboy.
 
 ### Disk subtype
 
