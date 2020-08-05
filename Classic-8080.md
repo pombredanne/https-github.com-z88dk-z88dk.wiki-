@@ -8,6 +8,7 @@ The following targets are 8080 only:
 * [Vector06c](Platform-Vector06c)
 * [Mikro 80](Platform--Mikro80)
 * [Specialist](Platform-Special)
+* [DAI](Platform---Dai)
 
 Additionally, the CP/M target can generate 8080 binaries. To do so, add the option `-clib=8080` to the command line. For example:
 
@@ -37,7 +38,7 @@ The following features from `<stdlib.h>`are not available in the 8080 library:
 
 ### `<math.h>`
 
-No maths library is shipped that supports the 8080. The core of the Microsoft MBF32 should run on the 8080, however we only ship the bindings with z88dk not the implementation.
+There are two maths libraries that run on the 808- daimath32 and mbf32. Daimath32 is contained within the repository, however for mbf32, we only ship the bindings with z88dk not the implementation.
 
 ### z88dk extension libraries
 
