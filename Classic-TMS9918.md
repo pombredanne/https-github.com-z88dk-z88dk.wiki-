@@ -34,7 +34,7 @@ The VDP screen modes use the following VDP addresses across all targets:
 
 ### Mode 0 (Text 40x24)
 
-Mode 0 is supported by the generic console and can be switched to using `int mode = 00; console_ioctl(IOCTL_GENCON_SET_MODE, &mode);`
+Mode 0 is supported by the generic console and can be switched to using `int mode = 0; console_ioctl(IOCTL_GENCON_SET_MODE, &mode);`
 
 The font used is that defined by `-pragma-redirect:CRT_FONT=...`, when the font is changed programmatically using `console_ioctl(IOCTL_GENCON_SET_FONT32,...)` all characters on screen will change. Character codes 32-127 (inclusive) are taken from the specified font, leaving the ranges 0-31 and 128-255 available for your own usage.
 
