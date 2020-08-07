@@ -66,8 +66,13 @@ Logically z88dk treats the memory map as being 16kb pages, transparently handlin
 
 To place functions into banks, you should use the `#pragma bank NN` directive, where NN is a decimal number between 1 and 31. Functions should be prototyped as `__banked __z88dk_params_offset(4)` to ensure that both the call to the function is passed through the trampoline and that parameters are found at the correct stack offset.
 
-By default z88dk will use the "Konami without SCC" memory mapper, alternate mappers can be used instead using the following options:
-`-pragma-define:MAPPER_ASCII16` and `-pragma-define:MAPPER_ASCII8`. From a usage perspective there's no difference.
+There is no default MegaROM mapper configured, to enable one, one of the following options need to be supplied to the zcc command line:
+
+- `pragma-define:MAPPER_ASCII16` - Emables the ASCII16 mapper
+- `pragma-define:MAPPER_ASCII8` - Emables the ASCII8 mapper
+- `pragma-define:MAPPER_KONAMI` - Emables the Konami without SCC mapper
+
+From a C usage perspective there's no difference between the various mappers. Different mappers may be cheaper to build in hardware, or support more memory.
 
 A simple example project is contained within `z88dk/examples/banked` - this example also works on the Gameboy.
 
