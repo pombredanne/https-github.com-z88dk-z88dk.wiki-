@@ -66,6 +66,21 @@ Under some condition, with lots of preset data is provided, an option permits to
 
 This command will compile the program in [CP/M](Platform---CPM) mode permitting the use of some of the ZX Spectrum sound and graphics extensions.
 
+# 128k program generation
+
+The classic +zx supports using the 128k banks for either code or data. When placing code, there is an assumed split of the memory space. If we take the default configuration where z88dk compiles to address `$8000`:
+
+```
+8000 - bfff = common page - contains library support routines
+c000 - ffff = banks are paged in here
+```
+
+To place functions into banks, you should use the #pragma bank NN directive, where NN is a decimal number between 0 and 7. Functions should be prototyped as `__banked __z88dk_params_offset(4)` to ensure that both the call to the function is passed through the trampoline and that parameters are found at the correct stack offset.
+
+Take care when placing data/code into banks - some of the banks are already used in the regular 48k address space.
+
+z88dk supports generating .TAP files container banked data in addition to +3 disc images.
+
 # Library support
 
 ## Console driver modes
