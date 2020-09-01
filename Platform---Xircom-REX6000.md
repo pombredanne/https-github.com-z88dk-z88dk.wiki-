@@ -56,7 +56,7 @@ The command optionally uses a file called game.res which contains resources for 
 	
 ## Emulators
 
-Mame has some support, but the hacked DS2 emulator may be better bet (if it can be found)
+Mame has some support, but the hacked DS2 emulator may be better bet: https://web.archive.org/web/20040612061842/http://www.rexdk.tk/
 
 ## Links
 
