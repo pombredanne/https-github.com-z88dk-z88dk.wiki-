@@ -57,7 +57,7 @@ Under some condition, if lots of preset data is provided, an option permits to c
 MegaROMs can be created using z88dk - simply compile with `zcc +msx -subtype=rom...`. The memory organisation is assumed to be as follows:
 
 ```
-- 0x4000 - 0x7fff = Fixed area, should container crt0, z88dk library routines
+- 0x4000 - 0x7fff = Fixed area, will contain crt0, z88dk library routines
 - 0x8000 - 0xbfff = Paged area, treated as 16k chunks
 - 0xc000 - 0xffff = RAM
 ```
