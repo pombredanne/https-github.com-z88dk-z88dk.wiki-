@@ -54,7 +54,7 @@ Under some condition, if lots of preset data is provided, an option permits to c
 
 #### MegaROM mode
 
-MegaROMs can be created using z88dk - simply compiler with `zcc +msx -subtype=rom...`. The memory organisation is assumed to be as follows:
+MegaROMs can be created using z88dk - simply compile with `zcc +msx -subtype=rom...`. The memory organisation is assumed to be as follows:
 
 ```
 - 0x4000 - 0x7fff = Fixed area, should container crt0, z88dk library routines
@@ -68,9 +68,9 @@ To place functions into banks, you should use the `#pragma bank NN` directive, w
 
 There is no default MegaROM mapper configured, to enable one, one of the following options need to be supplied to the zcc command line:
 
-- `pragma-define:MAPPER_ASCII16` - Emables the ASCII16 mapper
-- `pragma-define:MAPPER_ASCII8` - Emables the ASCII8 mapper
-- `pragma-define:MAPPER_KONAMI` - Emables the Konami without SCC mapper
+- `-pragma-define:MAPPER_ASCII16` - Emables the ASCII16 mapper
+- `-pragma-define:MAPPER_ASCII8` - Emables the ASCII8 mapper
+- `-pragma-define:MAPPER_KONAMI` - Emables the Konami without SCC mapper
 
 From a C usage perspective there's no difference between the various mappers. Different mappers may be cheaper to build in hardware, or support more memory.
 
