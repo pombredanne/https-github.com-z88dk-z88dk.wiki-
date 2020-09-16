@@ -64,7 +64,7 @@ MegaROMs can be created using z88dk - simply compile with `zcc +msx -subtype=rom
 
 Logically z88dk treats the memory map as being 16kb pages, transparently handling the fact that the ROM mapper may actually be an 8k mapper.
 
-To place functions into banks, you should use the `#pragma bank NN` directive, where NN is a decimal number between 1 and 31. Functions should be prototyped as `__banked __z88dk_params_offset(4)` to ensure that both the call to the function is passed through the trampoline and that parameters are found at the correct stack offset.
+To place functions into banks, you should use the `#pragma bank NN` directive, where NN is a decimal number between 1 and 31. 
 
 There is no default MegaROM mapper configured, to enable one, one of the following options need to be supplied to the zcc command line:
 
