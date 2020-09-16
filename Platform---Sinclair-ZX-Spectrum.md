@@ -75,7 +75,7 @@ The classic +zx supports using the 128k banks for either code or data. When plac
 c000 - ffff = banks are paged in here
 ```
 
-To place functions into banks, you should use the #pragma bank NN directive, where NN is a decimal number between 0 and 7. Functions should be prototyped as `__banked __z88dk_params_offset(4)` to ensure that both the call to the function is passed through the trampoline and that parameters are found at the correct stack offset.
+To place functions into banks, you should use the #pragma bank NN directive, where NN is a decimal number between 0 and 7.
 
 Take care when placing data/code into banks - some of the banks are already used in the regular 48k address space.
 
