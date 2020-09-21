@@ -48,6 +48,7 @@ subversion
 bison
 flex
 zlib1g-dev
+m4
 ```
 
 The following perl packages are required to run the z80asm unit tests:
