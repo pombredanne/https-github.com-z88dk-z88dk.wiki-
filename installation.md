@@ -38,6 +38,7 @@ This will create a populated z88dk directory in the current working directory.
 You will need the following libraries/packages installed to successfully build z88dk:
 
 ```
+build-essential
 dos2unix
 libboost-all-dev
 texinfo
