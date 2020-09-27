@@ -6,6 +6,14 @@ The nightly build should be preferred unless you have a reason to install an old
 
 **NOTE: Some users have reported problems with usage because they have other unrelated programs installed named "zcc" or "z80asm" earlier in their paths.  If you are having build or compile trouble, try putting z88dk/bin at the front of your path to see if the problems go away.**
 
+## Docker usage
+
+Nightly docker images are published, see [Docker Usage](Docker-Usage) for details.
+
+## Snapcraft usage
+
+A snap file is currently being prepared and awaiting approval. When available you should be able to pull `z88dk` from the snap store.
+
 ## Windows
 
 Download the latest nightly windows build and unzip it into the destination directory (we suggest to avoid spaces in the directory names).  This will create a tree rooted in a z88dk subdirectory.
@@ -62,9 +70,11 @@ This will build z88dk include the `zsdcc`. If you don't want to build `zsdcc` th
 
 You can run z88dk keeping it in the current location, all you need to do is to set the following environment variable:
 
-| Variable | Value              |
-| -------- | -----              |
-| ZCCCFG   | {z88dk}/lib/config |
+| Variable | Value               |
+| -------- | -----               |
+| `ZCCCFG` | `{z88dk}/lib/config`|
+
+Where `{z88dk}` is the path to the z88dk directory.
 
 Supposing you have `bash` (most likely it is your system default shell) and you want to keep z88dk in your local user environment (AKA 'home directory'), you can configure it permanently in this way:
     vi ~/.bash_profile
@@ -74,11 +84,9 @@ Modify the configuration as follows:
     export PATH=${PATH}:${HOME}/z88dk/bin
     export ZCCCFG=${HOME}/z88dk/lib/config
 
-A system install is not fully supported in this release.
+A system install is not fully supported at the moment, however if you wish to install z88dk and merge it with your default system environment, then edit 'z88dk/Makefile' and set your preferred destination position (default is /usr/local), then type: `make install` or alternatively on systems where /bin/sh is actually dash (eg Ubuntu) `make SHELL=/bin/bash install`. 
 
-Otherwise, if you wish to install z88dk and merge it with your default system environment, then edit 'z88dk/Makefile' and set your preferred destination position (default is /usr/local), then type: `make install` or alternatively on systems where /bin/sh is actually dash (eg Ubuntu) `make SHELL=/bin/bash install`. 
-
-The build above skips running many of the tests, to run them add the `-t` option to the build.sh invocation. In order to run the z80asm unit tests the following perl packages are required:
+The build detailed above skips running many of the tests, to run them add the `-t` option to the build.sh invocation. In order to run the z80asm unit tests the following perl packages are required:
 
 ```
 App::Prove Modern::Perl Capture::Tiny Capture::Tiny::Extended Path::Tiny File::Path Template Template::Plugin::YAML Test::Differences CPU::Z80::Assembler Test::HexDifferences Data::HexDump Object::Tiny::RW Regexp::Common List::Uniq
