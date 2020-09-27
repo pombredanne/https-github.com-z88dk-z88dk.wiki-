@@ -51,20 +51,14 @@ zlib1g-dev
 m4
 ```
 
-The following perl packages are required to run the z80asm unit tests:
-
-```
-App::Prove Modern::Perl Capture::Tiny Capture::Tiny::Extended Path::Tiny File::Path Template Template::Plugin::YAML Test::Differences CPU::Z80::Assembler Test::HexDifferences Data::HexDump Object::Tiny::RW Regexp::Common List::Uniq
-```
-
-More details can found in `.travis.yml` which defines the required packages for the Travis CI build.
-
-
 Then enter:
 
     cd z88dk
+    export BUILD_SDCC=1
     chmod 777 build.sh
     ./build.sh
+
+This will build z88dk include the `zsdcc`. If you don't want to build `zsdcc` then omit the `export BUILD_SDCC=1` line
 
 You can run z88dk keeping it in the current location, all you need to do is to set the following environment variable:
 
@@ -83,6 +77,16 @@ Modify the configuration as follows:
 A system install is not fully supported in this release.
 
 Otherwise, if you wish to install z88dk and merge it with your default system environment, then edit 'z88dk/Makefile' and set your preferred destination position (default is /usr/local), then type: `make install` or alternatively on systems where /bin/sh is actually dash (eg Ubuntu) `make SHELL=/bin/bash install`. 
+
+The build above skips running many of the tests, to run them add the `-t` option to the build.sh invocation. In order to run the z80asm unit tests the following perl packages are required:
+
+```
+App::Prove Modern::Perl Capture::Tiny Capture::Tiny::Extended Path::Tiny File::Path Template Template::Plugin::YAML Test::Differences CPU::Z80::Assembler Test::HexDifferences Data::HexDump Object::Tiny::RW Regexp::Common List::Uniq
+```
+
+More details can found in `.travis.yml` which defines the required packages for the Travis CI build.
+
+
 ## MacOS X
 
 The MacOS X build contains prebuilt binaries to simplify installation. Download the latest package and unzip to a directory:
