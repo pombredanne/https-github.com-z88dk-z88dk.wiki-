@@ -416,7 +416,7 @@ This section will highlight the most commonly used ones.
 
 *  **--fsigned-char** (sdcc) Make chars signed.  By default char is unsigned in sdcc.
 
-*  **-g** Generate a global definitions file that defines all publicly exported symbols (also related -gp, -gf regexfile, -gpf regexfile).
+*  **-g** Generate a global definitions file that defines all publicly exported symbols (also related -gp, -gf:regexfile, -gpf:regexfile).
 
 *  **-Idir** Add directory "dir" to the include search path.
 
