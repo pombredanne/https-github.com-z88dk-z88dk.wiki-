@@ -132,59 +132,7 @@ Open a terminal or command prompt, change to the directory where the test progra
 
 There should be no errors.
 
-# Installation of Support Tools (Optional)
-
-These tools are supplied by third parties.
-
-## m4
-
-[M4 Manual (v1.4.14)](https://www.gnu.org/software/m4/manual/m4-1.4.14/m4.html) /
-[Notes on the M4 Macro Language](http://mbreen.com/m4.html)
-
-m4 is the standard macro processor used on Linux and Unix machines.  It has now been adopted as an optional macro pre-processor in z88dk.  The nightly build and latest windows package downloadable at sourceforge now include the m4 binary for windows machines so that m4 is now available to all installs.
-
-zcc will pre-process source files ending in .m4 extension using m4.  The intention is to supply a macro pre-processing facility for files ending in .c.m4 / .asm.m4 / .inc.m4 / .h.m4 extensions.
-
-zcc will apply m4 and then immediately write a macro expanded file to its original source directory as .c / .asm / .inc or .h so that it is available in the current compile.  .c and .asm expanded files are then processed as normal by zcc.
-
-**Note that files in the form *.ext.m4 will result in a new file *.ext generated in the same directory, overwriting any file of the same name there.  Source files of the form *.ext.m4 should be understood to also reserve the name *.ext in the same directory.**
-
-m4 is also used by the new c library to generate its crts from macros.
-
-
-## sdcc
-
-[SDCC Main Page @ Sourceforge](https://sourceforge.net/projects/sdcc/) /
-[SDCC Nightly Build Page](http://sdcc.sourceforge.net/snap.php) /
-[SDCC Manual](http://sdcc.sourceforge.net/doc/sdccman.pdf)
-
-sdcc is an open source optimizing C compiler that can target the z80.  A patched version is compatible with z88dk and can be invoked by zcc when the appropriate flag is selected on the command line.  Besides making sdcc compatible with the z88dk toolchain, the patch also improves sdcc's generated code, addresses some of sdcc's code generation bugs and, being part of z88dk, grants sdcc access to z88dk's assembly language libraries and ready-made crts.
-
-### Windows
-
-The [z88dk nightly build](http://nightly.z88dk.org/) for windows is now self-contained and includes the zsdcc binary in z88dk/bin.  Separate installation of sdcc is no longer necessary.  [sdcc_z88dk_patch.zip](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/sdcc_z88dk_patch.zip) will often contain a more recent windows build of zsdcc that can be copied into z88dk/bin.
-
-### Mac OSX
-
-The [z88dk nightly build](http://nightly.z88dk.org/) for mac osx is now self-contained and includes the zsdcc binary in z88dk/bin.  Separate installation of sdcc is no longer necessary.
-
-### Linux / Unix 
-
-Running make from the top level will build sdcc and copy it into z88dk/bin.
-
-### Verify the zsdcc install
-
-"zsdcc" is the name of the patched sdcc executable and "zsdcpp" is the name of the sdcc C preprocessor that z88dk will invoke.
-
-Entering "zsdcc -v" and "zsdcpp --version" should print version information.  The version information for zsdcc should begin with "ZSDCC is a modification of SDCC for Z88DK".  If that is not the case, the system is executing an older version of zsdcc from the sdcc/bin directory rather than the new version in z88dk/bin.  The older version would have been installed by following an older version of these instructions.  Find the zsdcc executable in sdcc/bin and remove it.
-
-To verify that sdcc is usable from z88dk, try compiling [sudoku.c](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/_DEVELOPMENT/EXAMPLES/sudoku.c) for the cp/m target using sdcc:
-
-	
-	zcc +cpm -vn -SO3 -clib=sdcc_iy --max-allocs-per-node200000 sudoku.c -o sudoku -create-app
-
-
-## clang+llvm
+## (Optional) installation of clang+llvm
 
 (recent and not quite ready)
 
@@ -207,54 +155,5 @@ This process is not as wasteful as it sounds -- there is some indication that a 
 ** 3. Linux / Unix **
 
 (installation instructions coming; linux/unix users can perhaps follow the instructions in the toolchain link above but rename the binaries to zclang and zllvm-cbe; compiles use the new c library with sdcc command line switches and "-clib=clang_iy" or "-clib=clang_ix")
-
 	
 	zcc +z80 -vn -SO3 -clib=clang_iy --max-allocs-per-node200000 test.c -o test -create-app
-
-## Boost C++ Libraries
-
-### Windows Visual Studio
-
-Follow [Install Boost](https://docs.microsoft.com/en-us/visualstudio/test/how-to-use-boost-test-for-cpp?view=vs-2017#install-boost)
-
-or, condensed version, in an admin command prompt:
-
-	mkdir c:\src
-	cd c:\src
-	git clone https://github.com/Microsoft/vcpkg
-	cd vcpkg
-	bootstrap-vcpkg.bat   (Windows)
-	./bootstrap-vcpkg.sh  (Linux, MacOS)
-	vcpkg install boost
-	vcpkg integrate install
-
-- Add C:\src\vcpkg\installed\x86-windows\bin and C:\src\vcpkg\installed\x86-windows\debug\bin to the PATH
-- Add C:\src\vcpkg\installed\x86-windows\include to the Visual Studio Project->Properties->C++->Additional Include Directories
-- Add C:\src\vcpkg\installed\x86-windows\lib to the Visual Studio Project->Properties->Linker->Additional Library Directories in Release mode
-- Add C:\src\vcpkg\installed\x86-windows\debug\lib to the Visual Studio Project->Properties->Linker->Additional Library Directories in Debug mode
-- Add the required Boost libraries to the Visual Studio Project->Properties->Linker->Input->Additional Dependencies in Release mode, e.g. boost_program_options-vc140-mt.lib
-- Add the required Boost libraries to the Visual Studio Project->Properties->Linker->Input->Additional Dependencies in Debug mode, e.g. boost_program_options-vc140-mt-gd.lib (Note -gd for debug)
-
-### Windows MSYS
-
-Follow [Install Boost](https://gist.github.com/sim642/29caef3cc8afaa273ce6)
-
-or, condensed version, in a MSYS command line:
-
-	cd /c/src
-	unzip .../boost_1_68_0.zip
-	mkdir boost-build boost_1_68_0/build boost
-	cd /c/src/boost_1_68_0/tools/build
-	./bootstrap.sh
-	./b2 install --prefix=/c/src/boost-build
-	export PATH=$PATH:/c/src/boost-build/bin
-	cd /c/src/boost_1_68_0
-	b2 --build-dir=/c/src/boost_1_68_0/build --prefix=/c/src/boost toolset=gcc install
-
-- use -I/src/boost/include/boost-1_68 in CXXFLAGS in Makefiles  
-- use -L/src/boost/lib in LDFLAGS in Makefiles  
-- link the required libraries, i.e. -lboost_regex-mgw48-mt-1_68
-
-### On Ubuntu/Debian
-
-	sudo apt-get install libboost-all-dev
