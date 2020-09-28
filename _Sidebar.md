@@ -3,6 +3,7 @@
 * [Home](https://github.com/z88dk/z88dk/wiki)
 * [Installation](installation)
 * [Docker Usage](Docker-Usage)
+* [Snap usage](Snap-usage)
 * [Licence](license)
 
 ## Classic Library
