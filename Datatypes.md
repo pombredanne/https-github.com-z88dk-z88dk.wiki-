@@ -4,7 +4,7 @@ The most common surprise to C programmers used to programming 32- and 64-bit mac
 
 |          |  char  |  int  |  long  |  long long<sup>**(1)**</sup>  |  _Float16 | float<sup>**(2,4)**</sup>  |  double<sup>**(2,4)**</sup>  | void *  |
 |--|--|--|--|--|--|--|--|--|
-| SCCZ80   |  8     |  16   |  32    |  64         |  16       | 32/48/64                   |  48                          |  16<sup>**(5)**</sup>  |
+| SCCZ80   |  8     |  16   |  32    |  64         |  16       | 32/48/64                   |  32/48/64                    |  16<sup>**(5)**</sup>  |
 | SDCC     |  8     |  16   |  32    |  64         |  n/a      | 32<sup>**(3)**</sup>       |  32<sup>**(3)**</sup>        |  16  |
 
 
