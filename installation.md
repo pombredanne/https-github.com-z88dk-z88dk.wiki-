@@ -41,7 +41,9 @@ Download the latest nightly checked source package and unzip it:
     wget http://nightly.z88dk.org/z88dk-latest.tgz
     tar -xzf z88dk-latest.tgz
 
-This will create a populated z88dk directory in the current working directory.
+This will create a populated z88dk directory in the current working directory. Alternatively you could clone the GitHub repository (including submodules) using:
+
+    git clone  --recursive  https://github.com/z88dk/z88dk.git
 
 You will need the following libraries/packages installed to successfully build z88dk:
 
