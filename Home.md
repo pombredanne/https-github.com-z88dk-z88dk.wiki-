@@ -1,8 +1,5 @@
 ![](https://raw.githubusercontent.com/wiki/z88dk/z88dk/images/logo.gif)
 
-This is a WiP conversion and rewrite of the z88dk wiki. All information relating to the classic library is now on this wiki.
-
-The original content (in particular for the new library) is available at [http://www.z88dk.org/wiki](http://www.z88dk.org/wiki)
 
 # An Introduction to Z88DK
 
