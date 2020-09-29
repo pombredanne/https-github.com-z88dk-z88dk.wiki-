@@ -12,7 +12,7 @@ Nightly docker images are published, see [Docker Usage](Docker-Usage) for detail
 
 ## Snapcraft usage
 
-A snap file is currently being prepared and awaiting approval. When available you should be able to pull `z88dk` from the snap store. For more details see [Snap usage](Snap-usage).
+A snap file is available for certain Linux distributions. For more details see [Snap usage](Snap-usage).
 
 ## Windows
 
