@@ -1,7 +1,7 @@
 # Hardware summary
 
 * 8080 @ 2 Mhz
-* xxk RAM
+* xxk RAM (64k assumed)
 * Serial console only
 
 ## Classic library support (`+altair8800`)
@@ -31,7 +31,7 @@ _This target is very bare bones_
 
 # Compilation
 
-    zcc +altair world.c -create-app
+    zcc +altair8800 world.c -create-app
 
 This will create a .rom file suitable for loading into an emulator.
 
