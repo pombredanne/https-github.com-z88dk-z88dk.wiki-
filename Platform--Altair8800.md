@@ -37,7 +37,7 @@ This will create a .rom file suitable for loading into an emulator.
 
 # Adjusting the RAM size
 
-By default, the target places writable variables at address 0xc000 and the stack at the top of memory. To adjust these use the pragmas `-pragma-define:CRT_ORG_BSS=0xNNNN` and `-pragma-define:REGISTER_SP=0xNNNN`
+By default, the target places writable variables at address 0xc000 and the stack at the top of memory at 0xfd00. To adjust these use the pragmas `-pragma-define:CRT_ORG_BSS=0xNNNN` and `-pragma-define:REGISTER_SP=0xNNNN`
 
 # Notes
 
