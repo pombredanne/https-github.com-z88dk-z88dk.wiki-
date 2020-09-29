@@ -68,7 +68,7 @@ Then enter:
     chmod 777 build.sh
     ./build.sh
 
-This will build z88dk include the `zsdcc`. If you don't want to build `zsdcc` then omit the `export BUILD_SDCC=1` line. The source code for sdcc is downloaded from svn which can be slow, if it keeps failing the run the command: `export BUILD_SDCC_HTTP=1` before running `./build.sh` - this will download a source code tarball from the z88dk nightly website.
+This will build z88dk include `zsdcc`. If you don't want to build `zsdcc` then omit the `export BUILD_SDCC=1` line. The source code for sdcc is downloaded from svn which can be slow, if it keeps failing then run the command: `export BUILD_SDCC_HTTP=1` before prior to running `./build.sh` - this will download a source code tarball from the z88dk nightly website.
 
 You can run z88dk keeping it in the current location, all you need to do is to set the following environment variable:
 
