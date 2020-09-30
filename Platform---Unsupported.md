@@ -360,10 +360,6 @@ Peaturing the PIPS spreadsheed as operating system, optional ROM could be added.
 
 ### Tesla Ondra
 
-##### Ondra
-
-[https://sites.google.com/site/ondraspo186/](https://sites.google.com/site/ondraspo186/)
-
 ##### Orion
 
 ##### Orion PRO
