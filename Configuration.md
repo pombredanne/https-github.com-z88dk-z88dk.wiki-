@@ -71,6 +71,6 @@ To rebuild the z80 library, "Winmake z80" should be run.
   * Navigate to {z88dk}/libsrc/_DEVELOPMENT.
   * Invoke the Makefile with suitable target specified.
     * "`make all`" builds all target libraries
-    * "`make job-{target}`" builds a specific target's libraries
+    * "`make {target}`" builds a specific target's libraries
 
-To rebuild the z80 library, "make job-z80" should be run.
+For example, to rebuild the z80 libraries, "make z80" should be run.
