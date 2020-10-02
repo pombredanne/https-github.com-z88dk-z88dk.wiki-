@@ -34,6 +34,20 @@ _This target is in the process of being brought up_
 
 This will create a .wav file suitable for loading into Mame. A .tap file is also created that should be readable by other emulators.
 
+# Mame usage
+
+To load a tape, press return and then hit play on the tape
+
+# Ondra Keyboard
+
+The Ondra keyboard consists of 3 rows of keys, the numbers are obtained by a modifier key. The mappings for z88dk/mame are:
+
+* No modifier: Lower case letters
+* Left shift: Upper case letters (UPPER key)
+* Right shift: Symbols (SYMBOL key)
+* Right Alt: Number (NUMBER key)
+* Left Alt: Control (CS key)
+
 # Notes
 
 Drawing on the screen on this target is notoriously slow.
