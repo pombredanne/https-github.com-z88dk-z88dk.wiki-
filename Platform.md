@@ -86,7 +86,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Spectravideo SVI](Platform---Spectravideo)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 32x24 and 80x24 (SV-806)| 256x192 | No | 1 bit +PSG | GFXLIB by Rafael de Oliveira Jannone| 
 [Sprinter](Platform---Peters-Plus-Sprinter)| 80x35 | 80x35 (Colour)| 80x35 -default | No | Yes | No | Experimental port. Developed under the SPRINT emulator| 
 [Tatung Einstein](Platform---Tatung-Einstein)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) | 40x24 and 80x25 (TK-02)  | 256x192 | Yes | No | Extension library to CP/M.Most of GFXLIB by Rafael de Oliveira Jannone|
-[Tesla Ondra](Platform--Ondra-Vili) | Yes | No | Yes | No | 320x256 | No | |[TI82](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 
+[Tesla Ondra](Platform--Ondra-Vili) | 40x32 | No | 40x32 | 320x256 | No | No | |[TI82](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 
 [TI82](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 96x64[+graylib](library/graylib)| No | 1 bit| Grey graphics run on the VTI emulator but problems have been reported with the real hardware| 
 [TI83](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 96x64[+graylib](library/graylib)| No | 1 bit| Sound output via infrared port| 
 [TI83+](Platform---TI-Calculators)| 16x8 | 32x8 (B&W) | No | 128x64 [+graylib](library/graylib)| No | 1 bit| Sound output via infrared port|
