@@ -47,6 +47,8 @@ The Ondra keyboard consists of 3 rows of keys, the numbers are obtained by a mod
 * Right Alt: Number (NUMBER key)
 * Left Alt: Control (CS key)
 
+For want of a better place, the delete/backspace key is mapped to CS + RETURN
+
 # Notes
 
 Drawing on the screen on this target is notoriously slow.
