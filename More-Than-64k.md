@@ -135,6 +135,7 @@ You should also implement the following string.h functions which will make the u
 
 # __banked function calls (sccz80 and zsdcc)
 
+See https://github.com/z88dk/z88dk/tree/master/examples/banked for an example
 
 # Trampoline function calls (sccz80 and zsdcc)
 
