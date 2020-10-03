@@ -358,7 +358,6 @@ Peaturing the PIPS spreadsheed as operating system, optional ROM could be added.
 
 
 
-### Tesla Ondra
 
 ##### Orion
 
