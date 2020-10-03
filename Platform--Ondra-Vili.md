@@ -21,12 +21,11 @@
 * [ ] PSG sound
 * [ ] One bit sound
 * [x] Inkey driver
-* [ ] Hardware joystick
+* [x] Hardware joystick
 * [ ] File I/O
 * [ ] Interrupts
 * [ ] RS232
 
-_This target is in the process of being brought up_
 
 # Compilation
 
