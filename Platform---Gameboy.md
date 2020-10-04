@@ -5,6 +5,29 @@
 * 8k General purpose RAM
 * 32k cartridge + banked memory
 
+## Classic library support (`+gb`)
+
+* [x] Native console output (GBDK)
+* [x] Native console input (GBDK)
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font 
+    * [x] UDG support
+    * [ ] Paper colour
+    * [ ] Ink colour
+    * [ ] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
+* [x] Lores graphics
+* [x] Hires graphics (via gbdk calls)
+* [ ] PSG sound
+* [ ] One bit sound
+* [ ] Inkey driver
+* [x] Hardware joystick
+* [ ] File I/O
+* [x] Interrupts
+* [ ] RS232
+
 # Compilation
 
     zcc +gb -create-app [file.c]
@@ -19,7 +42,7 @@ The "standard" GBDK library is provided with z88dk. The standard library (printf
 
 The following screen modes are supported by the generic console:
 
-* "Text", mode 0, tile based, supports lores graphics and scrolling
+* "Text", mode 0, tile based, supports lores graphics (4x4 pixels) and scrolling
 * "Drawing", mode 1, APA mode, supports lores graphics (via z88dk) and pixel graphics (via gbdk)
 
 ## Limitations
