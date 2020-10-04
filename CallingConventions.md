@@ -54,6 +54,6 @@ vaargs functions).
 
 Return values are held in a subset of DEHL depending on the return value's bit width.  HL would hold an integer return value whereas DEHL would hold a long return value.  sccz80's 48-bit float / double is treated differently with the classic library returning its value in the "primary floating point accumulator" which is six bytes of static memory at address "fa" and the new c library returning by registers BCDEHL' in the exx set.  Note the same rules apply as for fastcall linkage where a single parameter is passed to a function via DEHL.
 
-Return of sdcc's 64-bit long long type is handled specially.  The compiler will pass a pointer to memory for the return value as the first parameter in the function call.  This parameter is not listed in the function prototype.  The called function must use that pointer to store the 64-bit value returned.
+Return of the 64-bit long long type is handled specially.  The compiler will pass a pointer to memory for the return value as the first parameter in the function call.  This parameter is not listed in the function prototype.  The called function must use that pointer to store the 64-bit value returned.
 
 
