@@ -13,8 +13,8 @@
 * [x] Generic console
     * [x] Redefinable font 
     * [x] UDG support
-    * [ ] Paper colour
-    * [ ] Ink colour
+    * [x] Paper colour
+    * [x] Ink colour
     * [ ] Inverse attribute
     * [ ] Bold attribute
     * [ ] Underline attribute
