@@ -8,7 +8,7 @@
 * 8k Bios ROM
 * SN76489 PSG
 
-## Classic library support (`+coleco`)
+## Classic library support (`+sms`)
 
 * [ ] Native console output
 * [ ] Native console input
@@ -41,9 +41,10 @@
 
 'program.sms' will be built
 
-## Generic console
 
-The generic console only supports the 3 modes in common with the [TMS99x8](Classic-TMS9918) chip.
+## Generic console
+
+The generic console only supports the 3 modes in common with the [TMS99x8](Classic-TMS9918) chip. Remember to add the `--generic-console` option to enable it.
 
 ## Emulators
 
