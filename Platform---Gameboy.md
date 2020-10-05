@@ -45,6 +45,8 @@ The following screen modes are supported by the generic console:
 * "Text", mode 0, tile based, supports lores graphics (4x4 pixels) and scrolling
 * "Drawing", mode 1, APA mode, supports lores graphics (via z88dk) and pixel graphics (via gbdk)
 
+In mode 0, the font and UDGs are copied to the into the tilemap, as a result you should set the font and graphics once the mode has been switched.
+
 ## Limitations
 
 * Graphics support is not complete
