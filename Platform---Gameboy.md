@@ -51,6 +51,7 @@ In mode 0, the font and UDGs are copied to the into the tilemap, as a result you
 
 The fonts within the z88dk library contain a header defining their size. If you use a custom font then you'll need to include the following [file](https://github.com/z88dk/z88dk/blob/master/libsrc/target/gb/fonts/lower.asm) before including your font as a binary blob. The linked file contains both a header and some additional graphics for lores graphics and the virtual keyboard.
 
+**Note:** UDGs which are set using `console_ioctl(IOCTL_GENCON_SET_UDGS,&param)` do not need the header.
 
 ## Limitations
 
