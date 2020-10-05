@@ -13,10 +13,10 @@
 * [x] Generic console
     * [x] Redefinable font 
     * [x] UDG support
-    * [x] Paper colour
-    * [x] Ink colour
-    * [ ] Inverse attribute
-    * [ ] Bold attribute
+    * [x] Paper colour (APA mode)
+    * [x] Ink colour (APA mode)
+    * [x] Inverse attribute (APA mode)
+    * [x] Bold attribute (APA mode)
     * [ ] Underline attribute
 * [x] Lores graphics
 * [x] Hires graphics (via gbdk calls)
