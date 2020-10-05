@@ -47,7 +47,7 @@ The z88dk classic library comprises of a fusion of the [TMS99x8](Classic-TMS9918
 
 ## Generic console
 
-The generic console only supports the 3 modes in common with the [TMS99x8](Classic-TMS9918) chip. Remember to add the `--generic-console` option to enable it.
+The generic console only supports the 3 modes in common with the [TMS99x8](Classic-TMS9918) chip. Remember to add the `--generic-console` option to enable it at compile time to switch screen mode before printing - the classic +sms target starts up in mode 4.
 
 ## Emulators
 
