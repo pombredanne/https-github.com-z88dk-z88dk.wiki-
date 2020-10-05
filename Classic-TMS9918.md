@@ -9,10 +9,12 @@ The TMS9918a/TMS9928a VDP chip is used by the following targets supported by z88
 * [Memotech MTX](Platform---Memotech-MTX)
 * [MSX](Platform---MSX)
 * [Nichibutsu My Vision](Platform---Nichibutsu-My-Vision)
+* [Sega Master System](Platform---SMS)
 * [Spectravideo](Platform---Spectravideo)
 * [Sord M5](Platform---Sord-M5)
 * [Samsung SPC-1000](Platform-Samsung-SPC-1000)
 * [Tatung Einstein](Platform---Tatung-Einstein)
+
 
 The classic library supplies a library, based on the Hitech-C library by Rafael de Oliveira Jannone. The library provides both high- and low-level access to the VDP chip. The following features are supported:
 
