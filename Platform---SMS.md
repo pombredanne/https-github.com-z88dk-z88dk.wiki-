@@ -41,6 +41,9 @@
 
 'program.sms' will be built
 
+## Library support
+
+The z88dk classic library comprises of a fusion of the [TMS99x8](Classic-TMS9918) with a donated custom library. This fusion allows the creation of either highly portable applications (using conio and the rest of the z88dk libraries) or applications leveraging the features of the SMS hardware.
 
 ## Generic console
 
