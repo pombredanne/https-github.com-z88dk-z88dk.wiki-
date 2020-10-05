@@ -12,7 +12,7 @@
 * [ ] ANSI vt100 engine
 * [x] Generic console
     * [x] Redefinable font 
-    * [x] UDG support
+    * [x] UDG support (64 UDGs available in mode 0)
     * [x] Paper colour (APA mode)
     * [x] Ink colour (APA mode)
     * [x] Inverse attribute (APA mode)
