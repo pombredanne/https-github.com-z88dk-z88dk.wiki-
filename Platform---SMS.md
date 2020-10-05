@@ -1,7 +1,38 @@
-
 ![](images/platform/sms.jpg)
 
-## Quick Stars
+## Hardware specs
+
+* Z80 @ 3.58Mhz
+* ~16k RAM
+* 16k VRAM (VDP like)
+* 8k Bios ROM
+* SN76489 PSG
+
+## Classic library support (`+coleco`)
+
+* [ ] Native console output
+* [ ] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font
+    * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute
+    * [x] Underline attribute
+* [ ] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [ ] Inkey driver
+* [ ] Hardware joystick
+* [ ] File I/O
+* [x] Interrupts
+* [ ] RS232
+
+
+## Quick Start
 
     zcc +sms -create-app -o program.bin program.c
 
@@ -10,18 +41,25 @@
 
 'program.sms' will be built
 
+## Generic console
+
+The generic console only supports the 3 modes in common with the [TMS99x8](Classic-TMS9918) chip.
 
 ## Emulators
 
-MEDNAFEN (https://mednafen.github.io/)
+* [Emulicious](https://emulicious.net)
+* MAME/MESS
+* [MEDNAFEN](https://mednafen.github.io/)
+
+
+### Example usage
 
     mednafen -force_module sms program.sms
     mednafen -force_module gg  program.sms
+    mame sms1 program.sms
+    mame gamegear program.sms
 
-MAME/MESS
 
-    mame sms -cart program.sms
-    mame gamegear -cart program.sms
 
 
 ## Links
