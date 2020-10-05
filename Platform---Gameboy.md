@@ -18,8 +18,8 @@
     * [x] Inverse attribute (APA mode)
     * [x] Bold attribute (APA mode)
     * [x] Underline attribute (APA mode)
-* [x] Lores graphics
-* [x] Hires graphics (via gbdk calls)
+* [x] Lores graphics (both modes, using z88dk API)
+* [x] Hires graphics (APA mode, using GBDK API)
 * [ ] PSG sound
 * [ ] One bit sound
 * [ ] Inkey driver
