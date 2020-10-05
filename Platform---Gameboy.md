@@ -47,6 +47,11 @@ The following screen modes are supported by the generic console:
 
 In mode 0, the font and UDGs are copied to the into the tilemap, as a result you should set the font and graphics once the mode has been switched.
 
+### Custom fonts
+
+The fonts within the z88dk library contain a header defining their size. If you use a custom font then you'll need to include the following [file](https://github.com/z88dk/z88dk/blob/master/libsrc/target/gb/fonts/lower.asm) before including your font as a binary blob. The linked file contains both a header and some additional graphics for lores graphics and the virtual keyboard.
+
+
 ## Limitations
 
 * Graphics support is not complete
