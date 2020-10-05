@@ -17,7 +17,7 @@
     * [x] Ink colour (APA mode)
     * [x] Inverse attribute (APA mode)
     * [x] Bold attribute (APA mode)
-    * [ ] Underline attribute
+    * [x] Underline attribute (APA mode)
 * [x] Lores graphics
 * [x] Hires graphics (via gbdk calls)
 * [ ] PSG sound
