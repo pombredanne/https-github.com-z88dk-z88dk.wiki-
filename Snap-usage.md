@@ -10,7 +10,7 @@ All commands within a snap are namespaced which means that by default to launch 
     sudo snap alias z88dk.z88dk-z80asm z88dk-z80asm
     sudo snap alias z88dk.z88dk-ticks z88dk-ticks
     sudo snap alias z88dk.z88dk-dis z88dk-dis
-    sudo snap alias z88dk.z88dk-appmake z88d-appmake
+    sudo snap alias z88dk.z88dk-appmake z88dk-appmake
 
 And so on, for all the commands that you want to use.
 
