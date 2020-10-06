@@ -19,6 +19,9 @@ Without specifying a `-o` option, a file called `a.com` is produced, this can be
 
 	zxcc a.com
 
+By default, z88dk will generate code suitable for running on a z80 based machine, to compile for an 8080 machine add the option `-clib=8080`:
+
+	zcc +cpm -clib=8080 -lm -lndos -o adventure.com adv_a.c
 
 ## Creating a disc
 
