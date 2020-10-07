@@ -1,4 +1,4 @@
-The following table shows the machines supported by the _classic_ library.
+The following table shows the machines supported by the **_classic_** library.
 
 _Not all columns are visible. Horizontal scroll to see them._
 
