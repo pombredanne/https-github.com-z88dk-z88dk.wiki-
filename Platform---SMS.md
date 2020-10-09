@@ -39,7 +39,7 @@
     zcc +sms -create-app -lgamegear -o program.bin program.c
 
 
-'program.sms' will be built
+The resulting file 'program.sms' can be loaded into an SMS emulator.
 
 ## Library support
 
