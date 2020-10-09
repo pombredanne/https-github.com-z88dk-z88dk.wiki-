@@ -42,12 +42,6 @@ _This target is currently being created_
 
 This will create a .cas image that's suitable for loading into the WinTVC emulator. Start emulator, press ALT-C (load CAS file directly).
 
-# Generic console modes
-
-* Mode 2 = 64x24 text, 640x240 graphics
-* Mode 4 = 32x24 text, 320x240 graphics
-* Mode 16 = 16x24 text, 160x240 graphics
-
 # Screenshots
 
 // TODO
