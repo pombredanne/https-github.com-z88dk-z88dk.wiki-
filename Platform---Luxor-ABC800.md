@@ -13,5 +13,14 @@ The ABC800 native console library is more generic than the ABC80 one and include
 
     zcc +abc800 -create-app -subtype=hex -zorg=49200 program.c
 
-..will produce an Intel HEX file valid on ABC80SIM emulator, but currently due to emulator limits it can be tested only in ABC80 mode.
+..will produce an Intel HEX file valid on ABC80SIM emulator.
+
+With the latest tools by H. Peter Alvin (https://www.zytor.com/pub/abc80/abcdisk/) it is possible to produce a .dsk image that can be used on both the ABC80SIM and ABCWin emulator.
+
+For example you may add this into your Makefile target:
+```
+	bin2bac2.exe a.bin progName.bac 49200
+	dosgen.exe $@.dsk 
+	doscopy.exe $@.dsk -b progName.bac
+```
 
