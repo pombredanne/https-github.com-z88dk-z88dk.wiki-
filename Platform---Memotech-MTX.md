@@ -28,10 +28,9 @@
 
 # Quick start
 
-
-### MTX 500 mode (32K):
-
     zcc +mtx -create-app -oadventure.bin adv_a.c
+
+An .mtx file is generated which can be loaded using MEMU. Additionally, a .wav file is generated which can be loaded into either Mame or the real hardware.
 
 This memory model works with the MTX512 too, but before loading the user must type:
 
@@ -40,20 +39,10 @@ This memory model works with the MTX512 too, but before loading the user must ty
 
 ### Extra options
 
-The binary converter (appmake) will create a file named "adventure.wav" (along with binary file in MtxEmu format, used also in older MESS versions).
-
-Other options for appmake include a 'turboload' mode (-Cz ––fast) and the MacTX MTB binary format (-Cz ––mtb).
-To automatically exclude the wav format and change the output file extension to ".mtx", it is possible to use the "subtype=mtx" option or to pass the directive directly to appmake (-Cz ––mtx).
-
-
-### ROM mode
-
-This is untested, add "-subtype=rom".
-
-
+Other options for appmake include a 'turboload' mode (-Cz ––fast) and the MacTX MTB binary format (-subtype=mtb).
 # Supported libraries
 
-Most of the [monochrome garphics](Library---monographics) lib and most of the [MSX](Platform---MSX) stuff are supported, but still experimental.
+Most of the [monochrome graphics](Library---monographics) lib and most of the [MSX](Platform---MSX) stuff are supported, but still experimental.
 
 ## Serial Port
 
@@ -93,18 +82,15 @@ This is an example command sequence to build and run the ANSI demo in 64 columns
 
 ### MEMU MTX emulator
 
-This is a very comfortable solution:
+This is probably the easiest way to develop and test for the MTX:
 
-    zcc +mtx  -subtype=mtx -lndos -create-app -oansitest.o -clib=ansi ansitest.c
+    zcc +mtx -create-app -oansitest.o -clib=ansi ansitest.c
     copy ansitest.mtx /memu/ansitest.mtx
     memu -v ansitest.mtx
     POKE 64122,0
     NEW
     LOAD ""
     RUN
-
-
-
 
 # Appmake extras
 
