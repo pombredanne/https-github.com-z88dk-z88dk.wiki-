@@ -37,6 +37,10 @@ This memory model works with the MTX512 too, but before loading the user must ty
     POKE 64122,0 
     NEW
 
+## MTX-512
+
+To produce a binary that only works on the MTX-512, add the option `-startup=2`. With this flag, an extra 16k of memory is available for your application.
+
 ### Extra options
 
 Other options for appmake include a 'turboload' mode (-Cz ––fast) and the MacTX MTB binary format (-subtype=mtb).
