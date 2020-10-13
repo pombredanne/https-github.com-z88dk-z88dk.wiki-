@@ -38,12 +38,6 @@ This memory model works with the MTX512 too, but before loading the user must ty
     POKE 64122,0 
     NEW
 
-
-### MTX 512 mode (64K and more):
-
-    zcc +mtx -create-app -startup=2 -oadventure.bin adv_a.c
-
-
 ### Extra options
 
 The binary converter (appmake) will create a file named "adventure.wav" (along with binary file in MtxEmu format, used also in older MESS versions).
