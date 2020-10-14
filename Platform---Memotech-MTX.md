@@ -18,7 +18,7 @@
     * [x] Underline attribute
 * [ ] Lores graphics
 * [x] Hires graphics
-* [x] PSG sound
+* [x] PSG sound (_In theory, but may not work_)
 * [ ] One bit sound
 * [ ] Inkey driver
 * [x] Hardware joystick
