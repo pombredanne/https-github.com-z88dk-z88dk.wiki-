@@ -11,6 +11,7 @@
 * [Overview](Classic-Overview)
   * [Screen output](Classic-GenericConsole)
   * [Graphics support](Classic-Monochrome-Graphics)
+  * [Audio support](Classic-Audio)
   * [Memory Allocation](Classic-allocation)
   * [Maths Libraries](Classic--Maths-Libraries)
 * [Platform List](Platform)
