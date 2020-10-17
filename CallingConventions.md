@@ -30,7 +30,11 @@ z88dk supports the following calling conventions:
 |--|--|
 | `__banked` | Allows a function to be called via the target specific `banked_call` function. The call is followed by a 32 bit address of the function. The first two bytes are the address, and the second two are the bank. Function examples of this calling convention can be found in the classic +zx, +msx and +gb ports. |
 | `__z88dk_shortcall(RR, VV)` |  Allows a function to be called via a rst RR trampoline. If VV < 256 then generated code is rst RR; defb VV, otherwise rst RR; defw VV. This can be used to access functions located in non-paged memory banks. |
+| `__z88dk_shortcall_hl(RR, VV)` * |  Same as above, except the generated trampoline would look like this: ld hl, VV; rst RR |
+| `__z88dk_hl_call(VV1, VV2)` * |  A spectranet-style trampoline: ld hl, VV1; call VV2 |
 | `__z88dk_params_offset(VV)` |  When called via a trampoline it is likely that the parameters for a function will not be located starting at sp+2. This annotation defines the additional offset required to reach the parameters.   | 
+
+`*` When combined with `__z88dk_fastcall`, the contents or HL that is needed for the fastcall will be copied over to BC and later replaced. It is the responsibility of the user to restore contents of HL when the trampoline has been processed on the receiving side.
 
 With `__z88dk_shortcall()` only direct calls will use the rst trampoline, calling via a function pointer will call as usual. Thus, when shipping a library or providing an interface you will need to provide a matching function stub which will call via the rst trampoline.
 
