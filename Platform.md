@@ -42,6 +42,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Kaypro](Platform---Kaypro) | 80x25 (ADM3) | No | No | 160x100('84) 80x50('83) | No | No | Extension library to the CP/M base| 
 [Kramer-MC](Platform--KramerMC) | 64x16 | No | 64x16 | 64x16 | No | No |
 [Lambda 8300](Platform---Lambda) | 32x24 (B&W)| 32x24 (TXT)| No | 64x48 |  No | 1 bit* | (via tape output) | 
+[LM-80C](Platform--LM80C)| No | Yes | 32x24 | 256x192 | No | PSG |
 [Osborne 1](Platform---Osborne)| 52x24 (*) | No | No | 104x48| No | No | Extension library to the CP/M base (* an official HW mod permitted higher resolutions)| 
 [Otrona Attachè](Platform---Otrona) | 80x25 (ADM3) | No | No |  320x240 | No | No | Extension library to the CP/M base| 
 [Camputers Lynx](Platform---Camputers-Lynx)| Yes | No | 32x32 | 64x64 | No | No | Support is at an initial stage| 
