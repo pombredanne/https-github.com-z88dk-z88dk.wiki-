@@ -50,4 +50,6 @@ http://ver0.sakura.ne.jp/doc/
 
 http://wwwhomes.uni-bielefeld.de/achim/pc-e220.html
 
+https://ashitani.jp/g850/docs/04_z88dk.html
+
 
