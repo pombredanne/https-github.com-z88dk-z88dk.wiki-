@@ -1,4 +1,6 @@
-# Tandy Radio Shack TRS-80 Model 100 Hardware summary
+# Tandy Radio Shack TRS-80 Model 
+
+## 100 Hardware summary
 
 * OKI 80C85 @ 2.4Mhz
 * 81C55 PIO
@@ -20,14 +22,32 @@ Model 102 is simply a slightly slimmed down, modernized, functionally compatible
 Other types of machines (including European Model 100), have differently laid out RAM areas and system ROMs, which is currently unsupported.
 
 ## Classic library support (`+m100`)
+
 * [x] Native console output
 * [x] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [ ] Redefinable font
+    * [ ] UDG support
+    * [ ] Paper colour
+    * [ ] Ink colour
+    * [ ] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
+* [ ] Lores graphics
+* [x] Hires graphics
+* [ ] PSG sound
 * [ ] One bit sound
+* [ ] Inkey driver
+* [ ] Hardware joystick
 * [ ] File I/O
+* [ ] Interrupts
 * [ ] RS232
 
-# Compilation
-## Machine code RAM-based program
+
+## Compilation
+
+### Machine code RAM-based program
 
     zcc +m100 -subtype=default program.c -create-app
 
@@ -46,7 +66,7 @@ Once the program is in memory, enter BASIC and give the following command:
 
 now the program can be loaded, either via the BASIC command `RUNM "A.CO` or by pressing F8 to get back to the menu and choosing it with the cursors.
 
-## Option ROM
+### Option ROM
 
     zcc +m100 -subtype=optrom program.c -create-app
 
@@ -63,8 +83,6 @@ Once the ROM is attached/loaded, it can be launched from BASIC using:
 
     CALL63012
 
-
-### Note about RAM availability 
 _**NOTE:** Only 320 bytes of RAM space is available directly for DATA and BSS section for option ROM software at the moment.
 CODE segment doesn't exist in RAM on this target, therefore space for other sections is not being reserved anymore by the mere presence of the entire program image in RAM. Absolute memory space for DATA and BSS segments would need to be claimed through interaction with OS, which is not implemented yet._
 Those 320 bytes are located in ALTLCD area and should not cause any unintended consequences to M100 OS
