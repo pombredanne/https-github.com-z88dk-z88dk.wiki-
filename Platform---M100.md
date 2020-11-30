@@ -1,6 +1,6 @@
-# Tandy Radio Shack TRS-80 Model 
+# Tandy Radio Shack TRS-80 Model 100
 
-## 100 Hardware summary
+## Hardware summary
 
 * OKI 80C85 @ 2.4Mhz
 * 81C55 PIO
