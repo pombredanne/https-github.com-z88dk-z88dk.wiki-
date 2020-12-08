@@ -39,6 +39,11 @@ A .prg file will be generated which can be dropped onto the emulator.
 
 # Support
 
+If your application does any screen printing then you will need to change the screen mode prior to printing. For example to switch to mode 2, insert the following lines towards the start of your program:
+
+    int mode = 2;
+    console_ioctl(IOCTL_GENCON_SET_MODE, &mode);
+
 The VDP used by the LM-80C is the same as the one in the MSX, as such many MSX examples will work. 
 
 The WYZ and VT2 PSG engines are supported by this target.
