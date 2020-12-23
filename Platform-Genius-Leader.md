@@ -68,14 +68,14 @@ _These targets are currently being brought up_
 
 # Compilation
 
-    zcc +primo program.c -create-app
+    zcc +gl -clib=gl2000 program.c -create-app
 
-A .pp file will be generated suitable for loading into Mame.
+A .rom file will be created suitable for loading into the Mame gl2000 target.
 
-# Keyboard and input
+    zcc +gl -clib=gl4000 program.c -create-app
 
-An inkey keyboard handler is supplied supporting concurrent keypresses. At present the keyboard mappings may not be correct.
+A .rom file will be created suitable for loading into the Mame gl4000 target.
 
-# Links
+    zcc +gl -clib=gl6000sl program.c -create-app
 
-* http://primo.homeserver.hu
+A .rom file will be created suitable for loading into the Mame gl6000sl target.
