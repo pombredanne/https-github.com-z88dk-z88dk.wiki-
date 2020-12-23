@@ -1,4 +1,4 @@
-**The Genius Leader is also supported under newlib using the +vgl target identifier. **
+**The Genius Leader is also supported under newlib using the +vgl target identifier.**
 
 # Hardware summary
 
