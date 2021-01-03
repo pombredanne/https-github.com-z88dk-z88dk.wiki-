@@ -49,6 +49,14 @@ A WAV audio file can be created too, with the following option:
 To run on a 16K machine, you need to move the code origin to the upper half.
 '-zorg=49200' should be a good option for you zcc command line.  Any working address for the 16k model will still work on the 32k models.
 
+### ROM cartridge
+
+A ROM cartridge can be generated with:
+
+    zcc  +svi -lm -create-app -subtype=rom program.c
+
+In this model, the firmware isn't available so to read the keyboard you must add the option `--hardware-keyboard` to redirect calls to the "inkey" keyboard reading routines.
+
 ### Autoboot floppy
 
 An auto booting disk can be generated with:
