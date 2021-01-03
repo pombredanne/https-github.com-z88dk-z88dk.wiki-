@@ -76,7 +76,7 @@ You'll need to start mame with the following options (this includes the floppy i
 
     ./mame64 svi328 -exp sv601 -exp:sv601:1 sv801 -exp:sv601:2 sv806
 
-Note, in this mode the standard `fgetc_cons()` driver appears to not work. So you'll need to switch to the inkey driver using: `-pragma-redirect:fgetc_cons=fgetc_cons_inkey`
+Note, in this mode the standard `fgetc_cons()` driver appears to not work. So you'll need to switch to the inkey driver using: `--hardware-keyboard`
 
 ## Serial port with the SV-805 RS232 expansion card
 
