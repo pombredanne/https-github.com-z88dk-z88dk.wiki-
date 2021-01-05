@@ -1,4 +1,4 @@
- ======  TRS 80  Platform ======
+
 
 ![](images/platform/trs80.gif)
 
