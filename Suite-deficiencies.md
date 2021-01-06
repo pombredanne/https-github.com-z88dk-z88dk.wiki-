@@ -30,6 +30,10 @@ It's a good coding practice to explicitly cast types where type conversion is re
 Expressions are evaluated left to right, and no folding is applied, as a result ''(1 + j + 3)'' will generate bulkier code than ''( j + 1 + 3 )''.
 
 
+### stdarg.h
+
+The default calling convention for sccz80 is `__smallc`. This makes dealing with variadic arguments tricky. For more details see https://github.com/z88dk/z88dk/issues/330#issuecomment-324791397 or alternatively define variadic functions as `__stdc` and define `__Z88DK_R2L_CALLING_CONVENTION` prior to inclusion of `<stdarg.h>`
+
 ## Compiler (zsdcc)
 
 ### --reserve-regs-iy__
