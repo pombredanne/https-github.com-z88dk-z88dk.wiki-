@@ -64,7 +64,7 @@ A good alternative to c1541 is "DirMaster":  http://style64.org/dirmaster
 
 The CP/M target is extended with C128 specific functions, grouped in the "c128cpm" library (add "-lc128cpm" to your zcc command).   "c128cpm" also contains a port of the SG Tools, permitting to use sound, tweaked text, graphics resolutions and more.
 
-z88dk style graphics libraries can be included by adding "-lgfx128", "-lgfx128hr" or "-gfx128hr480" (this last video mode is still untested and not supported by the current VICE emulator version).
+z88dk style graphics libraries can be included by adding "-lgfx128", "-lgfx128udg" (together with "-zorg=16384"), "-lgfx128hr" or "-gfx128hr480" (this last video mode is still untested and not supported by the current VICE emulator version).
 
 The above options are also listed in the [CP/M section](Platform---CPM#hardware-specific-extensions) in this Wiki.
 
@@ -73,7 +73,7 @@ A good option to transfer a CP/M program is the "[ctools04.zip](http://zimmers.n
 
 ### Graphics
 
-Graphics support libraries are available for three different resolution modes:  lorez (gfx128), hirez (gfx128hr) and ultra-hirez (gfx128hr480)
+Graphics support libraries are available for three different resolution modes:  lorez (gfx128, gfx128udg -zorg=16384), hirez (gfx128hr) and ultra-hirez (gfx128hr480)
 
 ![](images/platform/c128chess.jpg) ![](images/platform/c128rabbit.png)
 
