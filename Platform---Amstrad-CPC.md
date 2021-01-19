@@ -1,5 +1,29 @@
 ![](images/platform/amstrad_cpc.jpg)
 
+## Classic library support (`+cpc`)
+
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [x] Redefinable font
+    * [x] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
+* [ ] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [ ] One bit sound
+* [ ] Inkey driver
+* [x] Hardware joystick
+* [x] File I/O
+* [ ] Interrupts
+* [x] RS232
+
+_Warning: When running with the firmware enabled, the CPC reserves 40% of the register set for its own usage. z88dk installs handlers to allow compiled code to utilise all registers. This is essential when writing code that intends to be performant when using long, long long and floating point datatypes. Additionally, some sccz80 generated code will use the alternate register set._
 
 # Quick start
 
@@ -11,13 +35,11 @@ To create a tape file:
 
     zcc +cpc -lndos -lm -subtype=wav -create-app -o program adv_a.c
 
-Historically interrupts were disabled to improve the stability, now it is normally not necessary; by the way the old option can still be activated via the "-subtype=noint" parameter.
 
 '-subtype=fastwav' can shorten the loading time by producing a non standard audio format.
 
-# Misc notes on the CPC target
 
-#### Loading Addresses
+## Loading programs
 
 The code is compiled by default to address $1200, to load a tape file and run your application:
 
@@ -51,9 +73,26 @@ load"mybin",&400
 call &400
 ```
 
-#### Floating Point Support
 
-The CPC target supports a native maths library, this is selected using the -lmz switch when compiling.
+# Library support
+
+Library support for CPC is fairly complete 
+
+## Generic console
+
+The generic console supports all 3 official graphics modes. Switching using `console_ioctl()` will also change the pixel plotting mode. The modes are as follows:
+
+* Mode 0: 160×200 pixels with 16 colors (4 bpp)
+* Mode 1: 320×200 pixels with 4 colors (2 bpp)
+* Mode 2: 640×200 pixels with 2 colors (1 bpp)
+
+## CPC custom library
+
+z88dk incorporates [cpcrslib](https://github.com/z88dk/z88dk/blob/master/include/cpc.h) which provides a large amount of functionality out of the box.
+
+## Floating point
+
+In addition to supporting the [classic maths libraries](https://github.com/z88dk/z88dk/wiki/Classic--Maths-Libraries), the CPC target supports a native maths library which is selected my using the command line option `-lmz` when compiling.
 
 The library that is linked in by default supports 3 models of CPC - CPC464, CPC664 and CPC6128. 
 
@@ -64,10 +103,6 @@ zcc +cpc [...] -lmz -l6128_math
 ```
 
 or -l464_math or -l664_math which will save about 600 bytes of memory.
-
-The generic floating point functions are still available via the "-lm" flag.
-
-#### Additional functions
 
 The additional functions introduced with the development of the native CPC library, are now available in all the implementations; these are:
 
@@ -95,7 +130,7 @@ double pow10(int x);
 Returns 10^x
 
 
-#### File IO Library (fcntl driver)
+## File IO
 
 Support for file IO on the CPC has been added. This uses the CAS_ interface
 and as such as the limitation that only 2 files may be open at a time -
@@ -125,13 +160,19 @@ To link in the library supply the -lcpcfs flag to the compiler. If you do
 not require file IO in your program then supply the -lndos flag which 
 links in a dummy stub library that simply returns errors.
 
-#### Generic console and graphics
+## Calling the firmware
 
-The generic console supports all 3 official graphics modes. Switching using `console_ioctl()` will also change the pixel plotting mode. The modes are as follows:
+As a result of the CPC firmware hogging registers, all calls to the firmware should be made through the interposer:
 
-* Mode 0: 160×200 pixels with 16 colors (4 bpp)
-* Mode 1: 320×200 pixels with 4 colors (2 bpp)
-* Mode 2: 640×200 pixels with 2 colors (1 bpp)
+```
+EXTERN firmware
+; Load registers
+call firmware
+defw call_address
+```
+
+Failure to do so *will* result in crashes and other multicolour screen effects.
+
 
 # Tricks using the WinAPE emulator
 
@@ -166,7 +207,5 @@ When using the WinAPE Amstrad CPC emulator, if the opcode 0xED, 0xFF is executed
 [Grimware - CPC insights](http://www.grimware.org/doku.php)
 
 [CPC Sprite Library](http://www.amstrad.es/programacion/c/) (Amstrad CPC) cpcrslib is a C library containing routines and functions that allows the handling of sprites and tile-mapping on the Amstrad CPC. The library is written to be used with the z88dk compiler. cpcrslib also incorporates keyboard routines to redefine and to detect keys, as well as general routines to change to the screen mode or the colours.
-
-[cpcrslib v.2 - Amstrad CPC Library for z88dk.](http://code.google.com/p/cpcrslib/)
 
 [Crocolib](http://crococode.free.fr/pages/_crocolib.php) (Amstrad CPC/CPC+) Crocolib is a complete framework targeting Amstrad CPC computers, written in C using the z88dk C cross compiler. It allows the creation of rich programs featuring very low-level hardware support. Tools are also included to convert data to the target machine.
