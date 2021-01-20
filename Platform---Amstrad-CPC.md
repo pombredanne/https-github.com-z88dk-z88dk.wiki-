@@ -76,7 +76,7 @@ call &400
 
 # Library support
 
-Library support for CPC is fairly complete 
+Library support for CPC is fairly complete, the firmware interposer functionality allows usage of all z80 registers and z88dk's assembler written optimised standard library.
 
 ## Generic console
 
