@@ -33,6 +33,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Enterprise 64/128](Platform---Enterprise64) | 40x25| No | No | 336x243*, 672x243*| No | Yes | *GFX via EXOS | 
 [Excalibur 64](Platform---Excalibur64) | No | No | 40x25, 80x25 | No | No | No |
 [Galaksija](Platform---Galaksija)| 32x16 (B&W) | 32x16 (B&W) | 32x16 + 32x26 (Gal+) | 64x48 + 256x208 (Gal+)| No | 1 bit* | (via tape output) | 
+[Genius Leader](Platform-Genius-Leader)| No | No | 16x2,16x4 | No | No | No |
 [Hanimex Pencil II](Platform--Hanimex-Pencil-II)| No | Yes | 32x24 | 256x192 | No | PSG |
 [Homelab 2](Platform---Homelab2) | No | No | 40x25 | 80x50 | No | No |
 [Homelab 4](Platform---Homelab) | No | No | 64x32 | 128x64 | No | No |
