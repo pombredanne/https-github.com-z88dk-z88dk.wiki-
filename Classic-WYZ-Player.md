@@ -17,6 +17,7 @@ The following are busy loop only:
 
 - Multi 8 
 - PC6001
+- PC88
 
 ## Playing music
 
