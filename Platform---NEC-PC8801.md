@@ -30,8 +30,11 @@ It's complicated, see https://en.wikipedia.org/wiki/PC-8800_series for details
 
     zcc +pc88 -create-app -Cz--audio program.c
 
-
 This will generate three files, **a.bin** (a pure binary block), **a.t88** (a file valid on many emulators), and **a.wav**, never tested but meant to be loaded on the real hardware.
+
+    zcc +pc88 -subtype=disk program.c -create-app
+
+This will create a .d88 image suitable for booting in FD1 on a PC88 emulator.
 
 # Generic console modes
 
