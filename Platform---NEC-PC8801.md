@@ -18,11 +18,13 @@ It's complicated, see https://en.wikipedia.org/wiki/PC-8800_series for details
 * [x] Lores graphics
 * [x] Hires graphics
 * [x] PSG sound
+    * [x] WYZ Player
+    * [ ] Vortex tracker
 * [x] One bit sound
 * [ ] Inkey driver
 * [ ] Hardware joystick
 * [ ] File I/O
-* [ ] Interrupts
+* [x] Interrupts
 * [ ] RS232
 
 
