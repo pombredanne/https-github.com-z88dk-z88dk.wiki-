@@ -6,9 +6,11 @@
 * RAM: 32k
 * ROM: 32k
 
+The 64k model is also supported.
+
 ## Classic library support (`+lm80c`)
 
-* [ ] Native console output
+* [x] Native console output
 * [x] Native console input
 * [x] ANSI vt100 engine
 * [x] Generic console
@@ -37,9 +39,14 @@ _This target is still being brought up_
 
 A .prg file will be generated which can be dropped onto the emulator.
 
+The LM80C ROM is under constant development, with the result that addresses of ROM routines used by z88dk change between releases. To address this, the `-clib=` option is used to target the firmware version. To view the supported -clib options, run the command:
+
+    zcc +lm80c
+
+ 
 # Support
 
-If your application does any screen printing then you will need to change the screen mode prior to printing. For example to switch to mode 2, insert the following lines towards the start of your program:
+The target utilises the firmware printing by default. For finer grained control add the `--generic-console` option to switch to z88dk's generic console. When using it, you will need to select the screen mode prior to printing. For example to switch to mode 2, insert the following lines towards the start of your program:
 
     int mode = 2;
     console_ioctl(IOCTL_GENCON_SET_MODE, &mode);
@@ -51,7 +58,7 @@ The WYZ and VT2 PSG engines are supported by this target.
 
 # Keyboard
 
-The keyboard is supported by utilising the RAM addresses set by the firmware. At the moment the key-repeat is somewhat faster than desired.
+The keyboard is supported by utilising the RAM addresses set by the firmware.
 
 # Links
 
