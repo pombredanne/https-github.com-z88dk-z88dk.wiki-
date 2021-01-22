@@ -88,6 +88,7 @@ Some hardware specific functions have been adapted to run on both native platorm
 * (untested) **-lgfxep**, **-lgfxephr** ([Enterprise 64 / 128](Platform---Enterprise64))
 * (untested) **-lgfx9001**, **-lgfx9001krt** ([Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001))
 * `--vti -pragma-export:VTI_DISPLAY=0xc000` Support for display on the VTI graphics card. Change VTI_DISPLAY to the address configured with the hardware dip switches.
+* `--vio` Support for generic console and lores graphics on the VIO graphics card.
 
 Additionally, -create-app will create discs for the following machines:
 
@@ -101,6 +102,7 @@ Additionally, -create-app will create discs for the following machines:
 * `-subtype=bic` (A5105/BIC)
 * `-subtype=lynx` ([Camputers Lynx](Platform---Camputers-Lynx))
 * `-subtype=x1` ([Sharp X1](Platform---Sharp-X1))
+* `-subtype=z80pack` Z80pack emulator floppy format
 
 The new library also has a CP/M target, which can be reached by supplying `-subtype=new` for sccz80, or `-subtype=sdcc_ix`, or `-subtype=sdcc_iy` for sdcc compiler, respectively.
 
