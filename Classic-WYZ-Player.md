@@ -12,12 +12,12 @@ The following targets support interrupt based playing:
 - ZX Spectrum Next
 - Nichibutsu My Vision
 - Bandaivision SV8000 (untested)
+- PC88
 
 The following are busy loop only:
 
 - Multi 8 
 - PC6001
-- PC88
 
 ## Playing music
 
