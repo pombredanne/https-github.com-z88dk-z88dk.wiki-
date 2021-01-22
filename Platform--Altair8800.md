@@ -9,7 +9,7 @@
 * [x] Native console output
 * [x] Native console input
 * [ ] ANSI vt100 engine
-* [ ] Generic console
+* [x] Generic console (VTI S100 board)
     * [ ] Redefinable font 
     * [ ] UDG support
     * [ ] Paper colour
@@ -38,6 +38,14 @@ This will create a .rom file suitable for loading into an emulator.
 # Adjusting the RAM size
 
 By default, the target places writable variables at address 0xc000 and the stack at the top of memory at 0xfd00. To adjust these use the pragmas `-pragma-define:CRT_ORG_BSS=0xNNNN` and `-pragma-define:REGISTER_SP=0xNNNN`
+
+# Supporting the VTI S100 board
+
+Adding the options:
+
+    --vti -pragma-export:VTI_DISPLAY=0xc000
+
+Will enable support for the VTI display board. Change 0xc000 to match the addresses of dip switches on the hardware.
 
 # Notes
 
