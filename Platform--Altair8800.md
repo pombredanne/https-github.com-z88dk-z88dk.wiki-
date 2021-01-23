@@ -43,7 +43,7 @@ By default, the target places writable variables at address 0xc000 and the stack
 
 # Video boards
 
-## VTI 100 board
+## VTI S100 board
 
 Adding the options:
 
