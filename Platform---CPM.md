@@ -89,6 +89,7 @@ Some hardware specific functions have been adapted to run on both native platorm
 * (untested) **-lgfx9001**, **-lgfx9001krt** ([Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001))
 * `--vti -pragma-export:VTI_DISPLAY=0xc000` Support for display on the VTI graphics card. Change VTI_DISPLAY to the address configured with the hardware dip switches.
 * `--vio` Support for generic console and lores graphics on the VIO graphics card.
+* `--vdm` Support for generic console and very lores graphics on the Altair 8800 VDM-1 graphics card.
 
 Additionally, -create-app will create discs for the following machines:
 
