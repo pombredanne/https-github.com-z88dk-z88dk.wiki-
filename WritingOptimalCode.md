@@ -73,7 +73,7 @@ For the contrived example:
     } else {
        shift_count = 16;
     }
-    long <<= shift_count
+    value <<= shift_count
 
 will be faster if written:
 
