@@ -31,7 +31,8 @@ Support has been added for the (4 byte, 8 bit exponent, 24 bit mantissa) Microso
 * CCE MC-1000
 
 The library can be linked with the following options: `--math-mbf32`
-The library isn't distributed with z88dk, but can be downloaded, compiled and used on 8080 targets (See https://github.com/z88dk/z88dk/blob/master/libsrc/math/mbf32/z80/math_mbf32.asm for details).
+
+The source code to the maths subroutines aren't distributed with z88dk, but can be downloaded, compiled and used on any 8080 (or z80 etc) target (See https://github.com/z88dk/z88dk/blob/master/libsrc/math/mbf32/z80/math_mbf32.asm for details).
 
 ## DAI Math - (32 bit maths extracted from the DAI target) - 8080/z80/z180/z80n
 
