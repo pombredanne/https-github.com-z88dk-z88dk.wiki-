@@ -221,7 +221,7 @@ Notice that the function pointer is called with the parameter expected by in_Joy
 	// in_JoyKempston(), in_JoySinclair1(), in_JoySinclair2()
 	
 	uchar choice, dirs;
-	void *joyfunc;                // pointer to joystick function
+	uint (*joyfunc)(struct in_UDK *) __z88dk_fastcall;                // pointer to joystick function
 	char *joynames[] = {          // an array of joystick names
 	   "Keyboard QAOPM",
 	   "Kempston",
