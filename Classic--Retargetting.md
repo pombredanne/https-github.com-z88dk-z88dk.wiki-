@@ -8,7 +8,7 @@ A minimal port should consist of the following items:
 
 * A zcc configuration file
 * A crt0 file
-* An implementation of fputc_cons() and library
+* An implementation of fputc_cons_native(), fgetc_cons()
 * Appmake code to generate a file that can run on an emulator or on a real device
 
 ### ZCC configuration file
@@ -23,16 +23,21 @@ The crt0 file contains the entry point and is responsible for defining the memor
 
 Again, it's easiest just to copy the file from a similar target and adjust memory addresses, values to suit.
 
-### An implementation of fputc_cons()
+### An implementation of fputc_cons_native()
 
-`int fputc_cons(char c)` is the function that will output a character to the display device. The file should be located in `{z88dk}/libsrc/target/[machineid]/stdio/fputc_cons_native.asm`. Typically this routine will consist of a call to the machine's firmware.
+`int fputc_cons_native(char c)` is the function that will output a character to the display device. The file should be located in `{z88dk}/libsrc/target/[machineid]/stdio/fputc_cons_native.asm`. Typically this routine will consist of a call to the machine's firmware.
 
 Once you've got the function it's time to create a library file. The contents of a library file are (by convention) defined in `{z88dk}/libsrc/machineid.lst`. The minimal contents of that file would be:
 
     target/[machineid]/stdio/fputc_cons_native
-    @z80.lst
+    @stdio/stdio.lst
 
-The library file will be built by `{z88dk}/libsrc/Makefile`, so here you need to add `[machineid]_clib.lib` to the `all:` target and then define a rule:
+The library file will be built by `{z88dk}/libsrc/Makefile` so here you need to the following at the top:
+
+```
+TOCREATE += $(call check_target,machine,machine_clib.lib)
+```
+
 
 ```
 [machineid]_clib.lib:
@@ -61,15 +66,20 @@ Once you've done all of these steps, you should be able to compile and run a hel
 
 ## Adding keyboard support
 
-When keyboard input is required, the classic library will call the `fgetc_cons()` function. The implementation of this file should be in `{z88dk}/libsrc/target/[machineid]/stdio/fgetc_cons.asm`. Some parts of the library or examples require polling of the keyboarders using `getk()`, this file is located in `{z88dk}/libsrc/target/[machineid]/stdio/getk.asm`
+When keyboard input is required, the classic library will call the `fgetc_cons()` function. 
+
+Conventionally, if reading the keyboard relies on the firmware or if the hardware only supports reading a single key at a time, then it should be placed in `{z88dk}/libsrc/target/[machineid]/stdio/fgetc_cons.asm`. Some parts of the library or examples require polling of the keyboarders using `getk()`, this file is located in `{z88dk}/libsrc/target/[machineid]/stdio/getk.asm`
+
+Should the hardware support detection of multiple simultaneous keypresses, you can add an inkey driver (see below).
 
 ## Adding the generic console
+
 
 ...
 
 ## Adding PSG support
 
-z88dk contains drivers for the AY-3-8910 and SN76489.
+z88dk contains drivers for the AY-3-8910 and SN76489, for AY support take a look at libsrc/target/zx/psg for what is needed.
 
 ...
 
