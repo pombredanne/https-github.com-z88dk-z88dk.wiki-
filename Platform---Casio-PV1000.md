@@ -2,8 +2,8 @@
 
 * Z80 @ 3.579Mhz
 * 3k RAM, 0k ROM
-* VDP: D65010G031 (not supported)
-* Audio: On ports 0xf8, 0xf9, 0xfa - D65010G031
+* VDP: D65010G031
+* Audio: On ports 0xf8, 0xf9, 0xfa - D65010G031 (not supported)
 * Joysticks: 2x on 0xfd
 
 ## Compilation
