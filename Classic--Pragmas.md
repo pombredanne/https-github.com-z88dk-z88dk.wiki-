@@ -139,3 +139,33 @@ Example:
     #pragma scanf  = "%s %lx %lld %["  // enables %s, %lx, %lld, %[ only
 
 The converter string content is flexible. You can insert spaces, do away with quotes, include % signs and so on. ”%s%c”, “s c”, ”%0d %llx” are all valid. Digits and flag specifiers (+, -, *) have no effect on the new c library but the classic c library will distinguish between ”%0d” and ”%d” with the latter meaning use the simple %d without any formatting. 
+
+## Configuring rst $XX behaviour
+
+For ROM and RAM targets that generate code starting from address $0000 it is possible to configure the behaviour the z80 restarts at (0x08, 0x10, 0x18, 0x20, 0x28, 0x30), the im1 interrupt service routine at (0x38) and the nmi interrupt service routine at (0x66). 
+
+The default behaviour for the restarts is simply "ret". Either the im1 or the nmi will be hooked to provide a raster interrupt against which handlers can be registered with `add_raster_int()`. However, **suitably setting bits in CRT_ENABLE_RST and CRT_ENABLE_NMI will indicate to the crt that the program will implement one or more of these restarts or isrs.**  Where relevant bits are set, the crt will generate jumps to a user-supplied function implementing the restart or interrupt routine.
+
+| CRT CONFIG OPTION | BITMASK                   | C                      | ASM          | COMMENT                                                                                                                                |
+| --- | --- |--- |--- |--- |
+| CRT_ENABLE_RST    | 0x02                      | void z80_rst_08h(void) | _z80_rst_08h | User implements rst08h                                                                                                                 |
+|                   | 0x04                      | void z80_rst_10h(void) | _z80_rst_10h | User implements rst10h                                                                                                                 |
+|                   | 0x08                      | void z80_rst_18h(void) | _z80_rst_18h | User implements rst18h                                                                                                                 |
+|                   | 0x10                      | void z80_rst_20h(void) | _z80_rst_20h | User implements rst20h                                                                                                                 |
+|                   | 0x20                      | void z80_rst_28h(void) | _z80_rst_28h | User implements rst28h                                                                                                                 |
+|                   | 0x40                      | void z80_rst_30h(void) | _z80_rst_30h | User implements rst30h                                                                                                                 |
+|                   | 0x80                      | void z80_rst_38h(void) | _z80_rst_38h | User implements rst38h aka the im1 isr.  If used as an im1 isr the user routine must preserve register values and exit with "ei; reti" |
+|                   |                           |                        |              |                                                                                                                                        |
+| CRT_ENABLE_NMI    | 1                         | void z80_nmi(void)     | _z80_nmi     | User implements the nmi isr.  The user routine must preserve register values and exit with "retn"   
+
+These **restarts and isrs can be implemented in either C or asm using the function names shown** in the table.  
+
+**SDCC and sccz80 implement a C extension that allows C subroutines to be declared as interrupt service routines.**  The three examples below show how to implement the im1 and nmi isrs along with the generated code using this extension.
+
+| c code                                                                   | output asm                                                                           | comments                         |
+|---|---|---|
+| `void z80_rst_38h(void) __critical __interrupt(0)  {   ...   }` | _z80_rst_38h:  \\ push used-registers  \\ ...  \\ pop used-registers  \\ ei  \\ reti | im0, im1 or im2                  |
+| `void z80_rst_38h(void) __interrupt   {   ...   }`               | _z80_rst_38h:  \\ ei  \\ push used-registers  \\ ...  \\ pop used-registers  \\ reti | im2 with prioritized daisy chain |
+| `void z80_nmi(void) __critical __interrupt   {   ...   } `       | _z80_nmi:  \\ push used-registers  \\ ...  \\ pop used-registers  \\ retn            | nmi                              |
+
+**IMPORTANT NOTE:  The compiler generated routines only preserve the main register set and index registers. However the library takes full advantage of the z80 architecture, including the exx set, so if the isr calls a library function that modifies the exx set, the generated code will not preserve those registers. It may be tempting to inline some asm that will push and pop the exx set registers inside the function but this will not work if there are local variables present because this will alter their offsets on the stack without sdcc's knowledge.                                   |
