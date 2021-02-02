@@ -156,7 +156,7 @@ The default behaviour for the restarts is simply "ret". Either the im1 or the nm
 |                   | 0x40                      | void z80_rst_30h(void) | _z80_rst_30h | User implements rst30h                                                                                                                 |
 |                   | 0x80                      | void z80_rst_38h(void) | _z80_rst_38h | User implements rst38h aka the im1 isr.  If used as an im1 isr the user routine must preserve register values and exit with "ei; reti" |
 |                   |                           |                        |              |                                                                                                                                        |
-| CRT_ENABLE_NMI    | 1                         | void z80_nmi(void)     | _z80_nmi     | User implements the nmi isr.  The user routine must preserve register values and exit with "retn"   
+| CRT_ENABLE_NMI    | 0x02                      | void z80_nmi(void)     | _z80_nmi     | User implements the nmi isr.  The user routine must preserve register values and exit with "retn".
 
 These **restarts and isrs can be implemented in either C or asm using the function names shown** in the table.  
 
