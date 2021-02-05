@@ -1,6 +1,8 @@
 THE Z80 CROSS ASSEMBLER (z88dk)
 ===============================
 
+_This document is not completely up-to-date_
+
 Version: v2.6.1 (October 3rd, 2014)
 
 Thank you for purchasing a copy of this cross assembler. We have made an effort to program an easy user interface and efficient assembler source file compiling. The object file and library format is an invention of our own and has also been included in this documentation. We hope that you will enjoy your Z80 machine code programming with our assembler.
