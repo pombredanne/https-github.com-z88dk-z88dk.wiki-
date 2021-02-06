@@ -79,7 +79,7 @@ Some hardware specific functions have been adapted to run on both native platorm
 * `-subtype=zxplus3` ([Sinclair ZX Spectrum](Platform---Sinclair-ZX-Spectrum))
 * **-lgfxzcn** ([Amstrad NC-100/NC-200](Platform---Amstrad-NC)) 480x64 graphics on ZCN
 * `-subtype=kaypro83` ([Kaypro 83](Platform---Kaypro)) 
-* `-subtype=kaypro84` (Bondwell BW-12, [Kaypro 84](Platform---Kaypro))
+* `-subtype=kaypro84` ([Kaypro 84](Platform---Kaypro))
 * `-subtype=attache` ([Otrona Attachè](Platform---Otrona) 320x240 graphics)
 * `-subtype=adam` ([Colecovision Adam](Platform--Colecovision-Adam) 256x192 graphics)
 * `-subtype=nascom` ([Nascom](Platform---Nascom))
