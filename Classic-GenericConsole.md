@@ -82,6 +82,24 @@ The "default" font is only available on the ZX Spectrum/Timex - it simply refere
 
 Alternatively, this can be done at compile time using `console_ioctl(IOCTL_GENCON_SET_FONT32, &addr)` where addr is a font reference from `<font/font.h>`
 
+## Using external fonts
+
+DamienG has designed a large number of fonts and shares them on his webpage: https://damieng.com/typography/zx-origins/ - to use one of these you should download and extract the zip for your chosen font. Inside the archive there will be a `.ch8` file which should be copied into your project.
+
+The font can be included in your binary using a .asm file similar to the below:
+
+```
+SECTION rodata_user
+PUBLIC font
+PUBLIC _font
+
+font:
+   INCBIN "<font>.ch8"
+```
+
+You can then switch to the font with the following pragma: `-pragma-redirect:CRT_FONT=_font`
+
+
 ## Defining UDGs
 
 Characters > 128 are treated as UDGs on platforms that support them. The number available depends on the platform, but at present is either 128 or 32 (Jupiter Ace, Exidy). The address for these can be set programmatically using: `console_ioctl(IOCTL_GENCON_SET_UDGS, &addr)`
