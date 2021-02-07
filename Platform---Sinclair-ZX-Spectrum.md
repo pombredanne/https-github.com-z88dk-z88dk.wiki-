@@ -187,13 +187,21 @@ It should be noted that the ZX Maths libraries are of a lower precision than bot
 
 You can choose to link with a single library that implements file I/O functionality. 
 
-### Spectrum +3 or Residos
+### Spectrum +3 and Residos Support
 
-    zcc +zx file.c -lp3
+For plus3dos support use:
 
-or:
+    zcc +zx -lp3 file.c
 
-    zcc +zx -DRESIDOS file.c -lp3
+or for Residos support define RESIDOS as well:
+
+    zcc +zx -DRESIDOS-lp3 file.c
+
+### Esxdos Support
+
+Link with the esxdos library instead of ndos like so:
+
+    zcc +zx -lesxdos file.c
 
 ### Microdrive Support
 
