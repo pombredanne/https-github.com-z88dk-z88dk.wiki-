@@ -231,15 +231,17 @@ Basic routines can be called using the routines in the `[<spectrum.h>]`(zxbasic)
   
   Full details of this header are at [zxinterface1.h](LIBRARY-ZX-Interface-1-(zxinterface1.h))
 
-### Opus Discovery Support (<zxopus.h>)
+### Opus Discovery Support (`<zxopus.h>`)
 
   Provides functionality to interact with the capabilities of the Opus discovery.
   
-  Full details of zxopus.h are at [zxopus.h](LIBRARY-ZX-Opus-Discovery-(zxopus.h))
+  Full details of this header are at [zxopus.h](LIBRARY-ZX-Opus-Discovery-(zxopus.h))
 
-### Currah uSpeech Support
+### Currah uSpeech Support (`<zxcurrah.h>`)
 
-The Currah uSpeech is supported using the `[<zxcurrah.h>]`(zxcurrah) header file.
+  Provides functionality to interact with the Currah uSpeech.
+  
+  Full details of this header are at [zxcurrah.h](LIBRARY-ZX-Currah-uSpeech-(zxcurrah.h))
 
 ### Low resolution (32x48 or 64x48) Graphics
 
