@@ -1,5 +1,3 @@
-# ZX 81 LIBRARY (zx81.h)
-
     
     | Header     | [[https://raw.githubusercontent.com/z88dk/z88dk/master/include/zx81.h|{z88dk}/include/zx81.h]]  |
     | Source     | [[https://github.com/z88dk/z88dk/tree/master/libsrc/zx81/|{z88dk}/libsrc/zx81]]                 |
