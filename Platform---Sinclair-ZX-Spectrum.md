@@ -231,15 +231,11 @@ Basic routines can be called using the routines in the `[<spectrum.h>]`(zxbasic)
   
   Full details of this header are at [zxinterface1.h](LIBRARY-ZX-Interface-1-(zxinterface1.h))
 
-Opus Discovery Support (<zxopus.h>)
+### Opus Discovery Support (<zxopus.h>)
 
   Provides functionality to interact with the capabilities of the Opus discovery.
   
   Full details of zxopus.h are at [zxopus.h](LIBRARY-ZX-Opus-Discovery-(zxopus.h))
-
-### TRDOS/Betadisk support
-
-### ZXMMC Support
 
 ### Currah uSpeech Support
 
