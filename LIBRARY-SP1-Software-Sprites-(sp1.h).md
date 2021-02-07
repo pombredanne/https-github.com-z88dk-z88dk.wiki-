@@ -1,11 +1,12 @@
 
+ |            |                                 |
+ | ---------- | ------------------------------- |                                                 
  | Header     | [{z88dk}/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h)  |                                                   
- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------                                                   
  | Source     | [{z88dk}/libsrc/sprites/software/sp1](https://github.com/z88dk/z88dk/tree/master/libsrc/sprites/software/sp1)  |                                                                                                             
- | Include    | #include `<sprites/sp1.h>`                                                                                                |                                                                                                    
- | Linking    | -lsp1                                                                                                           |                                                                                                            
- | Compile    | make sp1 from {z88dk}/libsrc for instructions                                                                 |                                                                                                              
- | Supported  | [ts2068 512x192 mode](platform/ts2068), [zx spectrum](platform/zx), [zx81 true hi-res](platform/zx81)               |                                                                                                        
+ | Include    | #include `<sprites/sp1.h>`                                                                                     |                                                                                                    
+ | Linking    | -lsp1                                                                                                          |                                                                                                            
+ | Compile    | make sp1 from {z88dk}/libsrc for instructions                                                                  |                                                                                                              
+ | Supported  | [ts2068 512x192 mode](platform/ts2068), [zx spectrum](platform/zx), [zx81 true hi-res](platform/zx81)          |                                                                                                        
  | Comments   | **1.** The location of SP1's variables and the display size to manage are specified by editing a customization file prior to library compilation.  |                                                                         
  | | **2.** Library compilation places sp1.lib into the C libs directory and sp1.h into the include directory.  Only one version of the SP1 library can exist at a time.  |                                                                  
  | | **3.** The SP1 library implicitly allocates memory through functions the user program must supply.  See [library memory allocation](library/memory_allocation#memory_allocation_implicitly_performed_by_z88dk_libraries) for details.  |
