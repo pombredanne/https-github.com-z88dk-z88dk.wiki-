@@ -219,29 +219,33 @@ The files created with the **open** function are of the "PRINT" type, which mean
 
 To support the many other disc systems that are available for the Spectrum, a [generic basic driver](Platform-ZX-Basic-Driver) can also be linked in. To adapt this library for the target disc system a BASIC program will need to be written.
 
-## ZX Library Features
+## Library Features
 
-### Calling Basic
+### ZX Basic Interaction and Add-on Hardware Support (spectrum.h)
 
-Basic routines can be called using the routines in the `[<spectrum.h>]`(zxbasic) header file. 
+Provides functionality to interact with ZX Basic as well as to detect or interact with add-on hardware devices. This includes Kempston and AMX mice.
+
+However, some more complex add-on devices have their own separate header files (see the sections below)
+
+Full details of this header are at [spectrum.h](LIBRARY-ZX-Spectrum-(spectrum.h))
 
 ### Interface 1 Support (`<zxinterface1.h>`)
 
-  Provides functionality to interact with the capabilities of the Interface 1.
-  
-  Full details of this header are at [zxinterface1.h](LIBRARY-ZX-Interface-1-(zxinterface1.h))
+Provides functionality to interact with the capabilities of the Interface 1.
+
+Full details of this header are at [zxinterface1.h](LIBRARY-ZX-Interface-1-(zxinterface1.h))
 
 ### Opus Discovery Support (`<zxopus.h>`)
 
-  Provides functionality to interact with the capabilities of the Opus discovery.
-  
-  Full details of this header are at [zxopus.h](LIBRARY-ZX-Opus-Discovery-(zxopus.h))
+Provides functionality to interact with the capabilities of the Opus discovery.
+
+Full details of this header are at [zxopus.h](LIBRARY-ZX-Opus-Discovery-(zxopus.h))
 
 ### Currah uSpeech Support (`<zxcurrah.h>`)
 
-  Provides functionality to interact with the Currah uSpeech.
+Provides functionality to interact with the Currah uSpeech.
   
-  Full details of this header are at [zxcurrah.h](LIBRARY-ZX-Currah-uSpeech-(zxcurrah.h))
+Full details of this header are at [zxcurrah.h](LIBRARY-ZX-Currah-uSpeech-(zxcurrah.h))
 
 ### Low resolution (32x48 or 64x48) Graphics
 
@@ -251,12 +255,6 @@ librarified and the header file contains the implementation.
 ### SP1 Sprite Library
 
 The [sp1](sp1) sprite library is available in the classic library.
-
-### Mouse Support
-
-Direct access to both Kempston and AMX mouse hardware is defined in the `<spectrum.h>`  header file. 
-
-
 
 ## The 'appmake' tool
 
