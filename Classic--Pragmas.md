@@ -37,7 +37,11 @@ Applicable for ROM compiles only. The data section is copied from ROM into RAM o
 
 `-pragma-define:CRT_MODEL=2`
 
-Applicable for ROM compiles only. The data section is stored compressed in ROM and decompressed into RAM on program start.
+Applicable for ROM compiles only. The data section is stored compressed in ROM and decompressed into RAM on program start. The compression used is zx7.
+
+`-pragma-define:CRT_MODEL=3`
+
+Applicable for ROM compiles only. The data section is stored compressed in ROM and decompressed into RAM on program start. The compression used is zx0. zx0 yields better compression results than zx0.
 
 ## Controlling the output section names
 
