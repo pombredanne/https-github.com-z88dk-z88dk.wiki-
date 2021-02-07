@@ -215,7 +215,7 @@ When using this library the number of files that can be opened simultaneously is
 
 The files created with the **open** function are of the "PRINT" type, which means you can also use them with the BASIC OPEN command.
 
-### ZX Basic Abstraction
+### ZX Basic File IO
 
 To support the many other disc systems that are available for the Spectrum, a [generic basic driver](Platform-ZX-Basic-Driver) can also be linked in. To adapt this library for the target disc system a BASIC program will need to be written.
 
