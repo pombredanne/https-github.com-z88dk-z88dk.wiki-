@@ -1,5 +1,3 @@
-# ZX Spectrum Currah uSpeech API (zxcurrah.h)
-
 | | |
 |----|---|
 | Header     | [{z88dk}/include/zxcurrah.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/zxcurrah.h)    |
