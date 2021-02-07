@@ -205,22 +205,19 @@ Link with the esxdos library instead of ndos like so:
 
 ### Microdrive Support
 
-Interface 1 can be supported by both the [generic basic driver](Platform-ZX-Basic-Driver) and a lowlevel library that will talk to the Interface 1 directly.
+The Interface 1 is supported by both a low-level library that talks to the hardware directly and also the [generic basic driver](Platform-ZX-Basic-Driver). To use the low-level library, add -lzxmdv to the command line, like so:
 
+    zcc +zx -lzxmdv file.c 
 
-    zcc +zx file.c -lzxmdv
+The zxmdv.lib library is particularly powerful as it permits true random file access and the renaming of files. This includes the renaming of files which fill an entire cartridge.
 
-When using zxmdv.lib you'll have a very powerful tool, because the library talks to the Interface 1 at a very low level, permitting a true random access, and a real rename functionality (the only one we're aware of being able to rename files as big as the whole cartridge).
-The library has been tested on the real hardware.
+When using this library the number of files that can be opened simultaneously is limited only by the cartridge's capacity and available system memory, but to achieve this dynamically allocated memory is used (i.e. the malloc set of functions).
 
-The number of contemporairly open file is limited only by the tape and the memory available space, but to achieve this the _malloc_ functions is used (see documentation for malloc).
-
-The files created via the **open** function are of the so-called "PRINT" type, which means that you can create and edit them also with the BASIC OPEN command.
-
+The files created with the **open** function are of the "PRINT" type, which means you can also use them with the BASIC OPEN command.
 
 ### ZX Basic Abstraction
 
-To support the many disc systems that are available for the Spectrum, a [generic basic driver](Platform-ZX-Basic-Driver) can be linked in. You will have to implement the BASIC program yourself and adapt to your disc system.
+To support the many disc systems that are available for the Spectrum, a [generic basic driver](Platform-ZX-Basic-Driver) can be linked in. You will have to implement the BASIC program yourself to adapt it for the target disc system.
 
 ## ZX Library Features
 
