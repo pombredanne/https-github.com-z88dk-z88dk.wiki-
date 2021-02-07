@@ -1,4 +1,3 @@
-# ZX Spectrum LIBRARY (spectrum.h)
 
  | Header     | [{z88dk}/include/spectrum.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/spectrum.h)               | 
  | ---------------------------------------------------------------------------------------------------------------------------------- 
