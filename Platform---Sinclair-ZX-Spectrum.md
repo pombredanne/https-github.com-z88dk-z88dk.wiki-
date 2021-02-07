@@ -183,7 +183,7 @@ The ROM calculator is supported by use of the `-lmzx` library. A more compact ve
 It should be noted that the ZX Maths libraries are of a lower precision than both _genmath_ and _math48_ and are also less performant. As a trade off, the amount of memory used is much reduced.
 
 
-## Stdio File I/O
+## Generic File I/O
 
 You can choose to link with a single library that implements file I/O functionality, such as fopen, fread, etc. 
 
@@ -215,7 +215,7 @@ When using this library the number of files that can be opened simultaneously is
 
 The files created with the **open** function are of the "PRINT" type, which means you can also use them with the BASIC OPEN command.
 
-### ZX Basic File IO
+### ZX Basic I/O
 
 To support the many other disc systems that are available for the Spectrum, a [generic basic driver](Platform-ZX-Basic-Driver) can also be linked in. To adapt this library for the target disc system a BASIC program will need to be written.
 
