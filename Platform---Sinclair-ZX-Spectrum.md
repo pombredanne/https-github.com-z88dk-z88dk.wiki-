@@ -183,9 +183,9 @@ The ROM calculator is supported by use of the `-lmzx` library. A more compact ve
 It should be noted that the ZX Maths libraries are of a lower precision than both _genmath_ and _math48_ and are also less performant. As a trade off, the amount of memory used is much reduced.
 
 
-## File I/O
+## Stdio File I/O
 
-You can choose to link with a single library that implements file I/O functionality. 
+You can choose to link with a single library that implements file I/O functionality, such as fopen, fread, etc. 
 
 ### Spectrum +3 and Residos Support
 
@@ -217,7 +217,7 @@ The files created with the **open** function are of the "PRINT" type, which mean
 
 ### ZX Basic Abstraction
 
-To support the many disc systems that are available for the Spectrum, a [generic basic driver](Platform-ZX-Basic-Driver) can be linked in. You will have to implement the BASIC program yourself to adapt it for the target disc system.
+To support the many other disc systems that are available for the Spectrum, a [generic basic driver](Platform-ZX-Basic-Driver) can also be linked in. To adapt this library for the target disc system a BASIC program will need to be written.
 
 ## ZX Library Features
 
