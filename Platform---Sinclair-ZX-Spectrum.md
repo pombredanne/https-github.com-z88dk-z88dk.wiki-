@@ -231,39 +231,11 @@ Basic routines can be called using the routines in the `[<spectrum.h>]`(zxbasic)
   
   Full details of this header are at [zxinterface1.h](LIBRARY-ZX-Interface-1-(zxinterface1.h))
 
-### Opus Discovery (`<zxopus.h>`)
+Opus Discovery Support (<zxopus.h>)
 
-Support for the Opus Discovery is built into the zx library.
-
-#### Functions - Joystick
-
-`void set_kempston (int mode)`
-
-Sets the kempston emulation (1=on, 0=off)
-
-`int get_kempston ()`
-
-Gets the kempston emulation status (1=on, 0=off)
-
-#### Functions - Disk
-
-`int opus_getblocks (int drive)`
-
-Gets the number of sectors
-
-`int opus_getblocksize (int drive)`
-
-Gets the sector size
-
-#### Functions - Parallel Port
-
-`void opus_lptwrite (unsigned char databyte)`
-
-Sends a character to parallel port
-
-`unsigned char opus_lptread ()`
-
-Reads a character from the parallel port
+  Provides functionality to interact with the capabilities of the Opus discovery.
+  
+  Full details of zxopus.h are at [zxopus.h](LIBRARY-ZX-Opus-Discovery-(zxopus.h))
 
 ### TRDOS/Betadisk support
 
