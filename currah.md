@@ -35,7 +35,7 @@ Talk using the high level BASIC interface
 Talk using the allophone codes
 (see header file)
 
-# Example Code to interfacing with the Currah uSpeech
+# Sample Code
 
 ```
 
