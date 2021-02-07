@@ -32,7 +32,9 @@
 
     zcc +lviv program.c -create-app
 
-A .lvt file is created suitable for loading into an emulator.
+A .lvt file is created suitable for loading into an emulator. Alternatively for generating a snapshot that can be loaded into Mame:
+
+    zcc +lviv -subtype=snapshot program.c -create-app
 
 # Keyboard
 
