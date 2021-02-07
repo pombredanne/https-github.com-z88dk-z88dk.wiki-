@@ -221,7 +221,7 @@ To support the many other disc systems that are available for the Spectrum, a [g
 
 ## Library Features
 
-### ZX Basic Interaction and Add-on Hardware Support (spectrum.h)
+### ZX Basic Interaction and Add-on Hardware Support (`<spectrum.h>`)
 
 Provides functionality to interact with ZX Basic as well as to detect or interact with add-on hardware devices. This includes Kempston and AMX mice.
 
@@ -247,10 +247,11 @@ Provides functionality to interact with the Currah uSpeech.
   
 Full details of this header are at [zxcurrah.h](LIBRARY-ZX-Currah-uSpeech-(zxcurrah.h))
 
-### Low resolution (32x48 or 64x48) Graphics
+### Low resolution (32x48 or 64x48) Graphics (`<zxlowgfx.h>`)
 
-A low resolution colour graphics mode is available using the `[<zxlowgfx.h]`(zxlowgfx) header file. This feature is unfortunately not fully
-librarified and the header file contains the implementation.
+Provides low resolution (32x48 or 64x48) colour graphics capabilities in the header [<zxlowgfx.h](LIBRARY ZX Low-Res Colour Graphics (zxlowgfx.h)).
+  
+Unfortunately, this feature is implemented directly in the header file rather than as a linkable library.
 
 ### SP1 Sprite Library
 
