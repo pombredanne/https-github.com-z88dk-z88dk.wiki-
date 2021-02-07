@@ -195,7 +195,7 @@ For plus3dos support use:
 
 or for Residos support define RESIDOS as well:
 
-    zcc +zx -DRESIDOS-lp3 file.c
+    zcc +zx -DRESIDOS -lp3 file.c
 
 ### Esxdos Support
 
