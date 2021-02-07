@@ -1,6 +1,6 @@
 ### Interface 1 (`<zxinterface1.h`> `-lzxmdv`)
 
-Low level access to microdrives is available by linking to the `zxmdv` library. The library requires a working `malloc() heap.`
+Low level access to microdrives is available by linking to the `zxmdv` library. The library requires a working `malloc()` heap.
 
 ### Data Structures
 
