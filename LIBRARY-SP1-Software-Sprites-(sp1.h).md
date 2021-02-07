@@ -1,4 +1,3 @@
-# SP1 SOFTWARE SPRITE LIBRARY (sp1.h)
 
  | Header     | [{z88dk}/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h](https://raw.githubusercontent.com/z88dk/z88dk/master/libsrc/sprites/software/sp1/spectrum/spectrum-sp1.h)  |                                                   
  | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------                                                   
