@@ -221,7 +221,7 @@ To support the many other disc systems that are available for the Spectrum, a [g
 
 ## ZX Basic and Hardware Interaction
 
-### ZX Basic Interaction and Add-on Hardware Support (`<spectrum.h>`)
+### General Support (`<spectrum.h>`)
 
 Provides functionality to interact with ZX Basic as well as to detect or interact with add-on hardware devices. This includes Kempston and AMX mice.
 
