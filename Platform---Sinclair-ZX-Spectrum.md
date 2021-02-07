@@ -253,9 +253,11 @@ Provides low resolution (32x48 or 64x48) colour graphics capabilities in the hea
   
 Unfortunately, this feature is implemented directly in the header file rather than as a linkable library.
 
-### SP1 Sprite Library
+### SP1 Software Sprites (`<sp1.h>`)
 
-The [sp1](sp1) sprite library is available in the classic library.
+Provides facilities to use software sprites while using the classic library.
+  
+Full details of this header are at [sp1.h](LIBRARY-SP1-Software-Sprites-(sp1.h))
 
 ## The 'appmake' tool
 
