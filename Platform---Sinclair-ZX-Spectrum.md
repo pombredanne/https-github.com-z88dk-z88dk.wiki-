@@ -219,7 +219,7 @@ The files created with the **open** function are of the "PRINT" type, which mean
 
 To support the many other disc systems that are available for the Spectrum, a [generic basic driver](Platform-ZX-Basic-Driver) can also be linked in. To adapt this library for the target disc system a BASIC program will need to be written.
 
-## ZX Basic and Hardware Interaction
+## Interaction with ZX Basic and Add-On Hardware 
 
 ### General Support (`<spectrum.h>`)
 
