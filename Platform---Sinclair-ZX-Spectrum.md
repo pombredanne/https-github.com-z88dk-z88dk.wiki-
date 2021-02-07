@@ -249,7 +249,7 @@ Full details of this header are at [zxcurrah.h](LIBRARY-ZX-Currah-uSpeech-(zxcur
 
 ### Low resolution (32x48 or 64x48) Graphics (`<zxlowgfx.h>`)
 
-Provides low resolution (32x48 or 64x48) colour graphics capabilities in the header [<zxlowgfx.h](LIBRARY ZX Low-Res Colour Graphics (zxlowgfx.h)).
+Provides low resolution (32x48 or 64x48) colour graphics capabilities in the header [zxlowgfx.h](LIBRARY-ZX-Low-Res-Colour-Graphics-(zxlowgfx.h)).
   
 Unfortunately, this feature is implemented directly in the header file rather than as a linkable library.
 
