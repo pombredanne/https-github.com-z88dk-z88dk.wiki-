@@ -1,4 +1,3 @@
-# ZX Spectrum Low Resolution Colour Graphics (zxlowgfx.h)
 
  | Header     | [{z88dk}/include/zxlowgfx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/zxlowgfx.h)    |               
  | -----------------------------------------------------------------------------------------------------------------------               
