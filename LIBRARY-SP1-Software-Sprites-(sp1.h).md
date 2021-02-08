@@ -48,11 +48,12 @@ Because of its differential update nature (SP1 only redraws areas of the screen 
 
 SP1's predecessor was used to make the following ZX Spectrum programs:
 
- | [ Cannon Bubble](http://cezgs.computeremuzone.com/eng/card.php?id=14 ) | [ Minesweeper](http://www.geocities.com/aralbrec/spritepack/examples/minesweeper.zip ) |
- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------
- | {{library:sprites:cannon_bubble.gif}}                                  | {{library:sprites:minesweeper.gif}}                                                      | 
- | [ Moggy](http://cezgs.computeremuzone.com/eng/card.php?id=7 )          | [ Phantomas Infinity](http://cezgs.computeremuzone.com/eng/card.php?id=10 ) |           
- | {{library:sprites:moggy.gif}}                                          | {{library:sprites:infinity.gif}}                                                         | 
+|     |     |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| [Cannon Bubble](https://spectrumcomputing.co.uk/entry/17573/ZX-Spectrum/Cannon_Bubble) |  [Minesweeper](https://spectrumcomputing.co.uk/entry/25359/ZX-Spectrum/Minesweeper)   | 
+| ![Cannon Bubble](https://raw.githubusercontent.com/wiki/z88dk/z88dk/images/library/sprites/cannon_bubble.gif) |  ![Minesweeper](https://raw.githubusercontent.com/wiki/z88dk/z88dk/images/library/sprites/minesweeper.gif)   | 
+| [Moggy](https://spectrumcomputing.co.uk/entry/15106/ZX-Spectrum/Moggy)          | [Phantomas Infinity](https://spectrumcomputing.co.uk/entry/15743/ZX-Spectrum/Phantomas_Saga_Infinity)    |           
+| ![Moggy](https://raw.githubusercontent.com/wiki/z88dk/z88dk/images/library/sprites/moggy.gif)          | ![Phantomas Infinity](https://raw.githubusercontent.com/wiki/z88dk/z88dk/images/library/sprites/infinity.gif)   | 
 
 ##  Portability 
 
