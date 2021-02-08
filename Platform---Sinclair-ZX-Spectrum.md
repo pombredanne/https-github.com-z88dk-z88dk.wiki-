@@ -211,7 +211,7 @@ The Interface 1 is supported by both a low-level library that talks to the hardw
 
 The zxmdv.lib library is particularly powerful as it permits true random file access and the renaming of files. This includes the renaming of files which fill an entire cartridge.
 
-When using this library the number of files which can be opened simultaneously is limited only by the cartridge's capacity and available system memory, but to achieve this dynamically allocated memory is used (i.e. the malloc set of functions).
+When using this library the number of files which can be opened simultaneously is limited only by the cartridge's capacity and the available system memory, but to achieve this dynamically allocated memory is used (i.e. the malloc set of functions).
 
 The files created with the **open** function are of the "PRINT" type, which means you can also use them with the BASIC OPEN command.
 
