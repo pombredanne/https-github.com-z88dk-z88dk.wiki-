@@ -1,13 +1,12 @@
-    
-    |            |                                                                                                 |
-    | ---------- | ----------------------------------------------------------------------------------------------- |
-    | Header     | [[https://raw.githubusercontent.com/z88dk/z88dk/master/include/zx81.h|{z88dk}/include/zx81.h]]  |
-    | Source     | [[https://github.com/z88dk/z88dk/tree/master/libsrc/zx81/|{z88dk}/libsrc/zx81]]                 |
-    | Include    | #include <zx81.h>                                                                               |
-    | Linking    | n/a                                                                                             |
-    | Compile    | n/a                                                                                             |
-    | Supported  | [[platform:zx81|zx 81]]                                                                         |
-    | Comments   | n/a                                                                                             |
+|            |                                                                                                 |
+| ---------- | ----------------------------------------------------------------------------------------------- |
+| Header     | [[https://raw.githubusercontent.com/z88dk/z88dk/master/include/zx81.h|{z88dk}/include/zx81.h]]  |
+| Source     | [[https://github.com/z88dk/z88dk/tree/master/libsrc/zx81/|{z88dk}/libsrc/zx81]]                 |
+| Include    | #include <zx81.h>                                                                               |
+| Linking    | n/a                                                                                             |
+| Compile    | n/a                                                                                             |
+| Supported  | [[platform:zx81|zx 81]]                                                                         |
+| Comments   | n/a                                                                                             |
 
 The ZX 81 library contains functions specific to the Sinclair ZX81 / Timex 1000 family machines.
 
