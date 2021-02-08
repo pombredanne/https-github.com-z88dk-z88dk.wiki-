@@ -42,7 +42,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Jupiter Ace](Platform---Jupiter-Ace)| 32x24| 32x24 (B&W)| 32x24 - default| 64x48, 64x72| No | 1 bit| | 
 [Kaypro](Platform---Kaypro) | 80x25 (ADM3) | No | No | 160x100('84) 80x50('83) | No | No | Extension library to the CP/M base| 
 [Kramer-MC](Platform--KramerMC) | 64x16 | No | 64x16 | 64x16 | No | No |
-[Krokha (tiny)](Platform--Krokha) | No | No | 64x32 | 96x64 | No | No |
+[Krokha (tiny)](Platform--Krokha) | No | No | 48x32 | 96x64 | No | No |
 [Lambda 8300](Platform---Lambda) | 32x24 (B&W)| 32x24 (TXT)| No | 64x48 |  No | 1 bit* | (via tape output) | 
 [LM-80C](Platform--LM80C)| 32x24 | Yes | 32x24 | 256x192 | No | PSG |
 [Lviv/Lvov PK-01](Platform---Lviv)| Yes | Yes | 32x32 | 256x256 | No | No |
