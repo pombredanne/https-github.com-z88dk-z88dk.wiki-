@@ -14,6 +14,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Mattel Aquarius](Platform---Mattel-Aquarius)| Yes | 40x24| 40x24 | 80x72 | No | 1 bit +PSG | | 
 [Bandai RX-78](Platform-Bandai-RX-78) | Yes | No | 24x23 | 192x184 | No | PSG |
 [Bandai Supervision 8000](Platform-Bandai-Supervision-8000) | No | No | 32x16, 32x12 | 32x16,256x96| No | PSG | |
+[Bondwell 12/14](Platform---Bondwell) | Yes | No | 80x25 | 160x75 | No | 1 bit |Extension library to the CP/M base |
 [Knight 2000 (Aussie Byte)](Platform---Aussie) | Yes | 80x25| No | not yet | No | 1 bit| Untested and incomplete graphics lib| 
 [Canon X-07](Platform---Canon-X07) | Yes | No | No | No | No | No | Initial stage | 
 [Casio FP-1100](Platform---Casio-FP1000) | No | No | 40x25,80x25 | 640x200,320x200 | No | No |
@@ -47,7 +48,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [LM-80C](Platform--LM80C)| 32x24 | Yes | 32x24 | 256x192 | No | PSG |
 [Lviv/Lvov PK-01](Platform---Lviv)| Yes | Yes | 32x32 | 256x256 | No | No |
 [Osborne 1](Platform---Osborne)| 52x24 (*) | No | No | 104x48| No | No | Extension library to the CP/M base (* an official HW mod permitted higher resolutions)| 
-[Otrona Attachè](Platform---Otrona) | 80x25 (ADM3) | No | No |  320x240 | No | No | Extension library to the CP/M base| 
+[Otrona Attachè](Platform---Otrona) | 80x25 (ADM3) | No | No |  320x240 | No | No | Extension library to the CP/M base | 
 [Camputers Lynx](Platform---Camputers-Lynx)| Yes | No | 32x32 | 64x64 | No | No | Support is at an initial stage| 
 [Memotech MTX](Platform---Memotech-MTX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 32x24 | 256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone| 
 [MicroBee](Platform---Microbee)| Yes | 40x25, 80x25 | 40x25,64x16,80x24 | 80x50,128x32,160x48 and optional 640x275, 512x256, 320x275, 160x75 | No | 1 bit| Native console: 64x16 when in RUNM mode, 80x24 when used as an extension library to the CP/M base | 
