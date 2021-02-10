@@ -15,6 +15,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Bandai RX-78](Platform-Bandai-RX-78) | Yes | No | 24x23 | 192x184 | No | PSG |
 [Bandai Supervision 8000](Platform-Bandai-Supervision-8000) | No | No | 32x16, 32x12 | 32x16,256x96| No | PSG | |
 [Bondwell 12/14](Platform---Bondwell) | Yes | No | 80x25 | 160x75 | No | 1 bit |Extension library to the CP/M base |
+[Bondwell 2](Platform---Bondwell2) | Yes | No | No | 640x200 | No | No |Extension library to the CP/M base |
 [Knight 2000 (Aussie Byte)](Platform---Aussie) | Yes | 80x25| No | not yet | No | 1 bit| Untested and incomplete graphics lib| 
 [Canon X-07](Platform---Canon-X07) | Yes | No | No | No | No | No | Initial stage | 
 [Casio FP-1100](Platform---Casio-FP1000) | No | No | 40x25,80x25 | 640x200,320x200 | No | No |
