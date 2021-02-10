@@ -22,5 +22,5 @@ The command line options to boot CP/M and use the created disk image will be som
 
 After the CP/M boot, change the virtual floppy disk image (choose A.DSK).
 
-Alternatively, the Dunfield's tools can be used (TD02IMD and IMDU) to convert the CP/M system disk image into a RAW unencoded file, suitable to be altered with cpmtools.
+Alternatively, the Dunfield's tools can be used (TD2IMD, TD02IMD and IMDU) to convert the CP/M system disk image into a RAW unencoded file, suitable to be altered with cpmtools.
 The file A.COM is built together with the packaged A.DSK
