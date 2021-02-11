@@ -4,6 +4,7 @@ The Bondwell computers are CP/M compatible, so the [same base library](Platform-
 
 Library extras include the high resolution graphics support (640x200).
 
+![](https://user-images.githubusercontent.com/10224992/107541499-79240600-6bc7-11eb-956a-ec23608a0a71.jpg)
 
 ### Command Line
 
