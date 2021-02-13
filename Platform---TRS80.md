@@ -39,6 +39,15 @@ When the program is in memory, type '/' to run it.
 To speed-up the loading a bit in WAV mode you can modify the appmake options, just edit {z88dk}/lib/config/trs80.cfg and insert the '-Cz--fast' parameter in the wav subtype section.   If necessary the volume can be raised too, with the "-Cz--loud" option.
 
 
+## Optional graphics hardware
+
+### Micro-Tech Grafyx mod
+
+    -lgrafyx3
+    -lgrafix4
+
+grafyx3.lib and grafyx4.lib are respectively for the Model III and Model 4.
+Basing on the documentation, the Model III is expected to have a reduced display resolution of 512x192 pixels where the Model 4 got 640x240.
 
 ## Extra Support Tools
 
