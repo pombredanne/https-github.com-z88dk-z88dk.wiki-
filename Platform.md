@@ -69,6 +69,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Philips VG-5000](Platform----Philips-VG5000)| 40x24| 40x24| 40x24 | 80×72 | No | 1 bit| | 
 [PMD85](Platform---PMD85)| - | - | 48x32 | 288x256 | No | No | |
 [Primo](Platform---Primo)| - | - | 32x24 | 256x192 | No | 1 bit | |
+[Radio-86](Platform--Radio86) | 64x25 | No | 64x25 | 64x25 | No | No |
 [Rabbit Control Module](Platform---Rabbit) ||| | || |  |
 [Regnecentralen RC700](Platform-Regnecentralen-RC700)| 80x25| No | 80x25 | 80x25| No | No | CP/M base libraries| 
 [Robotron Z1013](Platform---Robotron-Z1013)| 32x32| 32x32| 32x32 - default|  64x64 | No | No | | 
