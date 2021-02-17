@@ -43,7 +43,7 @@ When loaded, the start + end addresses will be displayed on screen. To start the
 
 ## Keyboard handling
 
-By default, the port uses the firmware keyboard routines. This can be quite slow at recognising keypresses so you may end up with a better experience if you enabled the inkey terminal handling by supplying the option `--hardware-keyboard`
+By default, the port uses the firmware keyboard routines. This can be quite slow at recognising keypresses so you may end up with a better experience if you enable the inkey terminal handling by supplying the option `--hardware-keyboard`
 
 The delete/backspace key is mapped to the home key.
 
