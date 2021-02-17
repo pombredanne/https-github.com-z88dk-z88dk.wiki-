@@ -69,6 +69,6 @@ supported and the display is substandard due to the inter-row display gap.
 
 # Links
 
-* Hardware recreation including monitor call points: https://github.com/skiselev/radio-86rk
+* Hardware recreation (linked due to monitor entry points documentation): https://github.com/skiselev/radio-86rk
 * Emu80
 * Mame
