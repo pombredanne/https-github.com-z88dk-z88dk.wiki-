@@ -1,5 +1,29 @@
 #  Bondwell 12/14
 
+## Classic library support (`+cpm -subtype=bondwell`)
+
+* [x] Native console output
+* [x] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [ ] Redefinable font
+    * [ ] UDG support
+    * [ ] Paper colour
+    * [ ] Ink colour
+    * [ ] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
+* [x] Lores graphics
+* [ ] Hires graphics
+* [ ] PSG sound
+* [x] One bit sound
+* [ ] Inkey driver
+* [ ] Hardware joystick
+* [x] File I/O
+* [ ] Interrupts
+* [ ] RS232
+
+
 The Bondwell computers are CP/M compatible, so the [same base library](Platform---CPM) can be used, but extra functionalities are available.
 
 Library extras include the low resolution graphics support (160x75) and the 1bit sound functions.

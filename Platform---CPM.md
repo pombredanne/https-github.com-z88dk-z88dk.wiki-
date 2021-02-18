@@ -1,6 +1,34 @@
 
 ![](images/platform/cpm.jpg)
 
+## Classic library support (`+cpm`)
+
+* [x] Native console output
+* [x] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [ ] Redefinable font
+    * [ ] UDG support
+    * [ ] Paper colour
+    * [ ] Ink colour
+    * [ ] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
+* [ ] Lores graphics
+* [ ] Hires graphics
+* [ ] PSG sound
+* [ ] One bit sound
+* [ ] Inkey driver
+* [ ] Hardware joystick
+* [x] File I/O
+* [ ] Interrupts
+* [ ] RS232
+
+z88dk provides extra libraries for many CP/M machines that support accessing functionality
+such as sound, graphics etc
+
+The new library also has a CP/M target, which can be reached by supplying `-subtype=new` for sccz80, or `-subtype=sdcc_ix`, or `-subtype=sdcc_iy` for sdcc compiler, respectively.
+
 
 The CP/M platform is a surprisingly useful port when used in combination with [ZXCC](https://www.seasip.info/Unix/Zxcc/), the two together can easily test whether an algorithm works, or whether there's an issue in the compiled output code.
 
@@ -70,6 +98,8 @@ Some hardware specific functions have been adapted to run on both native platorm
 * **-laussie** ([Aussie Byte](Platform---Aussie))
 * **-lcpccpm** ([Amstrad CPC](Platform---Amstrad-CPC))
 * **-lc128cpm**, **-lgfx128**, **-lgfx128hr**, **-lgfx128hr480** ([Commodore 128](Platform---Commodore-c128))
+* `-subtype=bondwell` ([Bondwell 12/14](Platform---Bondwell))
+* `-subtype=bw2` ([Bondwell 2](Platform---Bondwell2))
 * `-subtype=einstein` ([Tatung Einstein](Platform---Tatung-Einstein))
 * `-subtype=px4` ([Epson PX4 (HC-40)](Platform---Epson-px4))
 * `-subtype=microbee` ([MicroBEE](Platform---Microbee))
@@ -87,12 +117,6 @@ Some hardware specific functions have been adapted to run on both native platorm
 * `-subtype=rc700` ([Regnecentralen RC700](Platform-Regnecentralen-RC700))
 * (untested) **-lgfxep**, **-lgfxephr** ([Enterprise 64 / 128](Platform---Enterprise64))
 * (untested) **-lgfx9001**, **-lgfx9001krt** ([Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001))
-* `--vti -pragma-export:VTI_DISPLAY=0xc000` Support for display on the VTI graphics card. Change VTI_DISPLAY to the address configured with the hardware dip switches.
-* `--vio` Support for generic console and lores graphics on the VIO graphics card.
-* `--vdm` Support for generic console and very lores graphics on the Altair 8800 VDM-1 graphics card.
-
-Additionally, -create-app will create discs for the following machines:
-
 * `-subtype=svi` ([Spectravideo SVI](Platform---Spectravideo))
 * `-subtype=qc10` (Epson QX-10/QC-10`
 * `-subtype=osborne1` (Osborne 1)
@@ -105,7 +129,13 @@ Additionally, -create-app will create discs for the following machines:
 * `-subtype=x1` ([Sharp X1](Platform---Sharp-X1))
 * `-subtype=z80pack` Z80pack emulator floppy format
 
-The new library also has a CP/M target, which can be reached by supplying `-subtype=new` for sccz80, or `-subtype=sdcc_ix`, or `-subtype=sdcc_iy` for sdcc compiler, respectively.
+Additionally, the following options support the following S100 video cards which were
+common additions to early 8080 machines such as the Altair 8800, IMSAI.
+
+* `--vti -pragma-export:VTI_DISPLAY=0xc000` Support for display on the VTI graphics card. Change VTI_DISPLAY to the address configured with the hardware dip switches.
+* `--vio` Support for generic console and lores graphics on the VIO graphics card.
+* `--vdm` Support for generic console and very lores graphics on the Altair 8800 VDM-1 graphics card.
+
 
 ## Program boot protection
 
@@ -121,6 +151,5 @@ Just add to your source program:
 
 ## CP/M related Links
 
-http://www.seasip.info/Cpm/index.html
-
-http://zxvgs.yarek.com/en-index.html   (ZXVGS is also natively supported)
+* http://www.seasip.info/Cpm/index.html
+* http://zxvgs.yarek.com/en-index.html   (ZXVGS is also natively supported)
