@@ -101,8 +101,8 @@ _Not all columns are visible. Horizontal scroll to see them._
 [TI86](Platform---TI-Calculators)| 21x8 | 32x8 (B&W) | No | 128x64| No | 1 bit| Sound output via infrared port| 
 [TIKI-100](Platform---Tiki100) | Yes | No | 128x32,64x32,32x32 | 1024x256 | No | PSG only | Extension library to the CP/M base| 
 [Toshiba Pasopia 7](Platform---Toshiba-Pasopia7) | No | No | 40x25 | 80x25 | No | No | |
-[TRS-80](Platform---TRS80) | 64x16 | No | 64x16 - default| 128x48| No | 1 bit| Sound output via cassette port|
-[TRS80 M100, & Kyotronic compatibles](Platform---M100) | 40x8 | No | No |  240X64 384x192 512x192 640x240| No | No | | 
+[TRS-80](Platform---TRS80) | 64x16 | No | 64x16 - default| 128x48 384x192 512x192 640x240 | No | 1 bit| Sound output via cassette port|
+[TRS80 M100, & Kyotronic compatibles](Platform---M100) | 40x8 | No | No |  240X64 | No | No | | 
 [TS2068](Platform---Timex-TS2068)| [32x24, 64x24, 128x24](Platform---Sinclair-ZX-Spectrum#the-standard-zx-spectrum-console-driver) | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | 32x24,64x24, 128x24* | 256x192 | No | 1 bit| Sprite Pack | 
 [Вектор-06Ц/Vector06c](Platform-Vector06c)| No | No | 32x32 | 256x256 | No | PSG |  |
 [Videoton TV Computer](Platform--TVC)| 16x24, 32x24 - default, 64x24 | No | No | No | No | No | |
