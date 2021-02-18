@@ -41,6 +41,14 @@ To speed-up the loading a bit in WAV mode you can modify the appmake options, ju
 
 ## Optional graphics hardware
 
+### HGR1 mod for the Model I
+
+    -lgfxhrg1
+
+The graphics resolution is 384x192.
+The SDLTRS emulator supports it, but it appears not being able to properly refresh the display.
+
+
 ### Micro-Tech Grafyx mod
 
     -lgrafyx3
