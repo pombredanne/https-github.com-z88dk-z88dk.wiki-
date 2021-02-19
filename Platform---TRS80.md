@@ -10,6 +10,29 @@ It has many features in common with the British NASCOM computers and the Swedish
 
 Many companies all around the world produced [clones of such system](http://www.trs-80.com/wordpress/trs-80-computer-line/clones/); most of them will work with the current z88dk port.
 
+## Classic library support (`+trs80`)
+
+* [x] Native console output
+* [x] Native console input
+* [ ] ANSI vt100 engine
+* [x] Generic console
+    * [ ] Redefinable font
+    * [ ] UDG support
+    * [ ] Paper colour
+    * [ ] Ink colour
+    * [ ] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
+* [x] Lores graphics
+* [x] Hires graphics
+* [x] PSG sound
+* [x] One bit sound
+* [x] Inkey driver
+* [ ] Hardware joystick
+* [x] File I/O
+* [ ] Interrupts
+* [ ] RS232
+
 
 ## Building applications
 
