@@ -80,16 +80,6 @@ The SDLTRS emulator supports it, but it appears not being able to properly refre
 grafyx3.lib and grafyx4.lib are respectively for the Model III and Model 4.
 Basing on the documentation, the Model III is expected to have a reduced display resolution of 512x192 pixels where the Model 4 got 640x240.
 
-## Extra Support Tools
-
-#### cmd2cas
-
-This is a GNU licensed program able to get a TRS-80 compatible cassette file.
-
-It is no longer necessary, appmake now embeds the same functionality.
-
-
-
 
 
 ## Links
