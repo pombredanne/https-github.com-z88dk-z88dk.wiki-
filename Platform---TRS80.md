@@ -74,10 +74,13 @@ The SDLTRS emulator supports it, but it appears not being able to properly refre
 
 ### Micro-Tech Grafyx mod and Tandy HR
 
-512x192, uTech board version 'model 4' installed on Model III, or Tandy HR board '26-1125'
+####512x192, uTech board version 'model 4' installed on Model III, or Tandy HR board '26-1125'
+
     -lgrafyx4_3
 
-640x240, uTech board version 'model 4' installed on Model IV, or Tandy HR board '26-1126'
+
+####640x240, uTech board version 'model 4' installed on Model IV, or Tandy HR board '26-1126'
+
     -lgrafyx4
 
 
