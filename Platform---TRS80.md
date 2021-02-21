@@ -74,10 +74,10 @@ The SDLTRS emulator supports it, but it appears not being able to properly refre
 
 ### Micro-Tech Grafyx mod
 
-    -lgrafyx3
+    -lgrafyx4_3
     -lgrafyx4
 
-grafyx3.lib and grafyx4.lib are respectively for the Model III and Model 4.
+grafyx4_3.lib and grafyx4.lib are 2 versions of the last hrg board respectively configured for the Model III and Model 4.
 Basing on the documentation, the Model III is expected to have a reduced display resolution of 512x192 pixels where the Model 4 got 640x240.
 
 
