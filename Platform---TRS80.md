@@ -72,14 +72,13 @@ The graphics resolution is 384x192.
 The SDLTRS emulator supports it, but it appears not being able to properly refresh the display.
 
 
-### Micro-Tech Grafyx mod
+### Micro-Tech Grafyx mod and Tandy HR
 
+512x192, uTech board version 'model 4' installed on Model III, or Tandy HR board '26-1125'
     -lgrafyx4_3
+
+640x240, uTech board version 'model 4' installed on Model IV, or Tandy HR board '26-1126'
     -lgrafyx4
-
-grafyx4_3.lib and grafyx4.lib are 2 versions of the last hrg board respectively configured for the Model III and Model 4.
-Basing on the documentation, the Model III is expected to have a reduced display resolution of 512x192 pixels where the Model 4 got 640x240.
-
 
 
 ## Links
