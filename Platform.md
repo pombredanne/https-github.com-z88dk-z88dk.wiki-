@@ -22,6 +22,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Casio PV-1000](Platform---Casio-PV1000) | No | No | 28x24 | 56x48 | No | No |
 [Casio PV-2000](Platform---Casio-PV2000) | No | Yes | 32x24 | 256x192 | No | PSG |
 [Cambridge Z88](Platform---Cambridge-Z88)| Yes | Yes | No | 256x64| Yes | 1 bit| Far memory support, ZSock + many other features | 
+[Camputers Lynx](Platform---Camputers-Lynx)| Yes | No | 32x32 | 64x64 | No | No | Support is at an initial stage| 
 [Colecovision](Platform--Colecovision)| No | Yes | 32x24 | 256x192 | No | PSG |
 [Colecovision Adam](Platform--Colecovision-Adam)| No | Yes | 32x24 | 256x192 | CP/M only | PSG | CP/M extension
 [Commodore 128 (z80)](Platform--Commodore-c128)| No | 40x25| No | 80x50, 80x75, 640x200, 640x480 | CP/M only | SID + PSG + 1 bit| [Steve Goldsmith tools](library/c128/sgtools) are supported | 
@@ -50,7 +51,6 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Lviv/Lvov PK-01](Platform---Lviv)| Yes | Yes | 32x32 | 256x256 | No | No |
 [Osborne 1](Platform---Osborne)| 52x24 (*) | No | No | 104x48| No | No | Extension library to the CP/M base (* an official HW mod permitted higher resolutions)| 
 [Otrona Attachè](Platform---Otrona) | 80x25 (ADM3) | No | No |  320x240 | No | No | Extension library to the CP/M base | 
-[Camputers Lynx](Platform---Camputers-Lynx)| Yes | No | 32x32 | 64x64 | No | No | Support is at an initial stage| 
 [Memotech MTX](Platform---Memotech-MTX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 32x24 | 256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone| 
 [MicroBee](Platform---Microbee)| Yes | 40x25, 80x25 | 40x25,64x16,80x24 | 80x50,128x32,160x48 and optional 640x275, 512x256, 320x275, 160x75 | No | 1 bit| Native console: 64x16 when in RUNM mode, 80x24 when used as an extension library to the CP/M base | 
 [Mikro 80](Platform--Mikro80) | 64x32 | No | 64x32 | 128x64 | No | No |
