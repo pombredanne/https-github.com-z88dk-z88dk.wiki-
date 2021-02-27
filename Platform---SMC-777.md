@@ -10,7 +10,7 @@
 
 _This port is under development_
 
-This machine can run both CP/M and S-OS and hence applications compiled for either OS will work. The target specific library can be used under either OS but testing has mostly taken place under CP/M.
+As well as producing native binaries, this machine can run both CP/M and S-OS and hence applications compiled for either OS will work. The target specific library can be used under either OS but testing has mostly taken place under CP/M.
 
 
 ## Classic library support
@@ -27,19 +27,21 @@ This machine can run both CP/M and S-OS and hence applications compiled for eith
 * [ ] One bit sound
 * [ ] Inkey driver
 * [x] Hardware joystick
-* [x] File I/O
+* [x] File I/O (CP/M)
 * [ ] Interrupts
 * [ ] RS232
 
 ## Compilation
 
+    zcc +smc777 file.c -create-app
+
+Will generate a disc that can be booted by the IPL. In this mode, the application can use all the memory within the machine.
+
+Generating a CP/M binary provides more functionality such as file handling:
+
     zcc +cpm file.c -subtype=smc777 -create-app
 
 This command will create a .dsk image suitable for use in emulators.
-
-## Running compiled code
-
-The target is a CP/M derivative, so you will need to boot into CP/M and launch the application from the secondary drive.
 
 ## Emulators
 
