@@ -9,6 +9,11 @@ The following targets are 8080 only:
 * [Mikro 80](Platform--Mikro80)
 * [Specialist](Platform-Special)
 * [DAI](Platform---Dai)
+* [Radio 86](Platform--Radio86)
+* [Altair 8800](Platform--Altair8800)
+* [LVIV](Platform---Lviv)
+* [Krokha](Platform--Kroka)
+* [TRS80 Model 100](Platform---M100) (8085)
 
 Additionally, the CP/M target can generate 8080 binaries. To do so, add the option `-clib=8080` to the command line. For example:
 
@@ -38,7 +43,7 @@ The following features from `<stdlib.h>`are not available in the 8080 library:
 
 ### `<math.h>`
 
-There are two maths libraries that run on the 808- daimath32 and mbf32. Daimath32 is contained within the repository, however for mbf32, we only ship the bindings with z88dk not the implementation.
+There are two maths libraries that run on the 8080: daimath32 and mbf32. Daimath32 is contained within the repository, however for mbf32, we only ship the bindings with z88dk not the implementation.
 
 ### z88dk extension libraries
 
