@@ -13,7 +13,7 @@ In general, the ANSI driver will prefer using a graphics mode which may well be 
 
 On the other hand, the VT52/gencon terminal is a smaller alternative, and allows both text and hires graphics screen modes to be used to display text and, where possible UDGs.
 
-##  Control codes
+#  Generic console
 
 The generic console supports both ZX style and an extended VT52 control set.
 
@@ -131,3 +131,32 @@ On return, `caps` will be a bitset of the following capabilities (an updated lis
     #define CAP_GENCON_BOLD         32
     #define CAP_GENCON_UNDERLINE    64
 
+# VT100 Terminal
+
+The VT100 terminal is enabled using the `-clib=ansi` flag and supports standard VT100 codes.
+
+The terminal works with a 256 character font, so UDGs have to part of the font
+
+## Font configuration
+
+For bitmapped displays, z88dk auto-configures the required font. This auto-configuration can be disabled (on certain platforms) using the following options:
+
+    -pragma-define:ansifont=XXXX -pragma-define:ansifont_is_packed=0
+
+The packed flag indicates that for fonts smaller than 4 pixels wide, two separate characters are included in each 8x8 character cell. The ANSI terminal works with a 256 character font, so UDGs must be included within the font. The address given should correspond to character 0x20/32/SPACE within the font.
+
+## Console width
+
+The number of columns shown on screen can be configured with:
+
+    -pragma-define:ansicolumns=XXX
+
+Where XXX is machine dependent and more information can be found on the relevant target page. 
+
+## Combining with the generic console
+
+In general, the ANSI screen drivers contain self-modifying code and such cannot be placed into the ROM. If your application is dependent on VT100 codes then you utilise the VT100 frontend with the gencon backend with the following option:
+
+   -pragma-define:CLIB_ANSITERMINAL_BRIDGE=1
+
+When using this option, sub-character width fonts (eg 80/85 columns on a 256 pixel display) are not yet supported.
