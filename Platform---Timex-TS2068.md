@@ -4,7 +4,7 @@ This port is an improvement of the ZX Spectrum one, which already includes some 
 
 Most of the extra functionalities permit to take benefit of the extended video mode for text and graphics.
 
-Please refer to the [ZX Spectrum platform](platform/zx) docs for further information about most of the available features (appmake, etc).
+Please refer to the [ZX Spectrum platform](Platform---Sinclair-ZX-Spectrum) docs for further information about most of the available features (appmake, etc).
 
 
 
@@ -34,6 +34,9 @@ The ROM calculator is supported by use of the `-lm2068` library.
 
 It should be noted that the ZX Maths libraries are of a lower precision than both _genmath_ and _math48_ and are also less performant. As a trade off, the amount of memory used is much reduced.
 
+## ANSI Terminal
+
+Using the ANSI terminal forces the use of hires mode. You may want to consider using the ANSI/gencon bridge to facilitate screen mode handling.
 
 ## Generic console screen modes
 
