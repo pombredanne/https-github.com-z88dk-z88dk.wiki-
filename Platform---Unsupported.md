@@ -732,6 +732,11 @@ OS:  OS/M, IS/M and UDOS on the 8Bit U880 CPU
 build in: 1989
 price:  172.000 Mark
 
+### Microlog
+
+Baby Blue Z80 coprocessor card for the IBM PC
+[Baby Blue II](http://www.retrocmp.de/hardware/babyblue2/babyblue2.htm)
+
 ### NorthStar Advantage
 
 This one had an optional i8088 add-in board and nice CP/M graphics extensions.
