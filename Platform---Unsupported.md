@@ -710,6 +710,8 @@ Already supported as CP/M and S-OS systems but deserving specific extras.
 
 Z80 coprocessor ISA card for the IBM PC
 
+[UNIDOS](http://www.retrocmp.de/software/microsolution/unidos.htm)
+
 ### NCR Decision Mate V
 
 This is, in its base version, a CP/M system.   By the way many extensions are available: more RAM, 8086 or Motorola CPUa and high rez vector graphics engine (μPD7220).
@@ -735,6 +737,7 @@ price:  172.000 Mark
 ### Microlog
 
 Baby Blue Z80 coprocessor card for the IBM PC
+
 [Baby Blue II](http://www.retrocmp.de/hardware/babyblue2/babyblue2.htm)
 
 ### NorthStar Advantage
