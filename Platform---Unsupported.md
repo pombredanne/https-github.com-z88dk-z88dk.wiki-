@@ -706,6 +706,9 @@ Not to be confused with the PX-16 (which in turn is a NEC V20 MSDOS only system)
 
 Already supported as CP/M and S-OS systems but deserving specific extras.
 
+### Micro Solutions
+
+Z80 coprocessor ISA card for the IBM PC
 
 ### NCR Decision Mate V
 
