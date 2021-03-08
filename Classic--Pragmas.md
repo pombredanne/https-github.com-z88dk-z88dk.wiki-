@@ -63,7 +63,7 @@ Disable zero initialisation of the BSS memory. This can save a small amount of m
 
 The classic library keeps a stack of function pointers registered with `atexit()`, depending on the target this may consume up-to 64 bytes of stack memory. If you don't use atexit() then it's quite safe to add the option `-pragma-define:CLIB_EXIT_STACK_SIZE=0` to disable it.
 
-`-pragma-define:CRT_ENABLED_STDIO=0`
+`-pragma-define:CRT_ENABLE_STDIO=0`
 
 stdio is enabled by default for all targets. Enabling stdio reserves some memory for the file descriptors (stdout, stdin etc) and also utilises some memory to close all open files when the program exits. If you don't use stdio then this is a waste of memory.
 
