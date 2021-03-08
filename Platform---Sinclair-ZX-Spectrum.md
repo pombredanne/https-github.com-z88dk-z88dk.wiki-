@@ -81,6 +81,8 @@ Take care when placing data/code into banks - some of the banks are already used
 
 z88dk supports generating .TAP files containing banked data in addition to +3 disc images.
 
+Due to technical reasons, the loader is always present within the crt0 (even when it is inert), to remove this code if you are tight for space add the option: `-pragma-define:CRT_DISABLELOADER=1`
+
 # Library support
 
 ## Console driver modes
