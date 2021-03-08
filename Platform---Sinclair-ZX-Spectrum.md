@@ -79,7 +79,7 @@ To place functions into banks, you should use the #pragma bank NN directive, whe
 
 Take care when placing data/code into banks - some of the banks are already used in the regular 48k address space.
 
-z88dk supports generating .TAP files container banked data in addition to +3 disc images.
+z88dk supports generating .TAP files containing banked data in addition to +3 disc images.
 
 # Library support
 
