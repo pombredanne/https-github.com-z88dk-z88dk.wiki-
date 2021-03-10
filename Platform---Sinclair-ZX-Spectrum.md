@@ -209,11 +209,11 @@ Link with the esxdos library instead of ndos like so:
 
 The Interface 1 is supported by both a low-level library that talks to the hardware directly and also the [generic basic driver](Platform-ZX-Basic-Driver). To use the low-level library, add -lzxmdv to the command line, like so:
 
-    zcc +zx -lzxmdv file.c 
+    zcc +zx -lzxmdv -DAMALLOC file.c 
 
-The zxmdv.lib library is particularly powerful as it permits true random file access and the renaming of files. This includes the renaming of files which fill an entire cartridge.
+The zxmdv.lib library is particularly powerful as it permits true random file access.   The rename function doesn't need spare space to work.
 
-When using this library the number of files which can be opened simultaneously is limited only by the cartridge's capacity and the available system memory, but to achieve this dynamically allocated memory is used (i.e. the malloc set of functions).
+When using this library the number of files which can be opened simultaneously is limited only by the cartridge's capacity and the available system memory, but to achieve this the malloc() function is used (z88dk default number of files is 10, see 'FOPEN_MAX' in stdio.h).
 
 The files created with the **open** function are of the "PRINT" type, which means you can also use them with the BASIC OPEN command.
 
