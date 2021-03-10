@@ -29,11 +29,15 @@ _Warning: When running with the firmware enabled, the CPC reserves 40% of the re
 
 To create a disk image:
 
-    zcc +cpc -lndos -lm -subtype=dsk -create-app -o program adv_a.c
+    zcc +cpc -lcpcfs -lm -subtype=dsk -create-app -o program program.c
+
+To create a CP/M disk image:
+
+    zcc +cpm -subtype=cpc -create-app -lm -o program program.c
 
 To create a tape file:
 
-    zcc +cpc -lndos -lm -subtype=wav -create-app -o program adv_a.c
+    zcc +cpc -lndos -lm -subtype=wav -create-app -o program program.c
 
 
 '-subtype=fastwav' can shorten the loading time by producing a non standard audio format.
