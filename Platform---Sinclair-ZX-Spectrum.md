@@ -211,7 +211,7 @@ The Interface 1 is supported by both a low-level library that talks to the hardw
 
     zcc +zx -lzxmdv -DAMALLOC file.c 
 
-The zxmdv.lib library is particularly powerful as it permits true random file access and the number of files that can potentially be opened simultaneously is limited only by the cartridge's capacity and the available system memory. However, by default z88dk limits the number of open files to 10, see 'FOPEN_MAX' in `stdio.h`. To achieve all this the malloc() function is used internally, but the `rename` function does not need any dynamically allocated memory.
+The zxmdv.lib library is particularly powerful as it permits true random file access and the number of files that can potentially be opened simultaneously is limited only by the cartridge's capacity and the available system memory. However, by default z88dk limits the number of open files to 10, see 'FOPEN_MAX' in `stdio.h`. To achieve all this the malloc() function is used internally, but the rename() function does not need any dynamically allocated memory.
 
 The files created with the **open** function are of the "PRINT" type, which means you can also use them with the BASIC OPEN command.
 
