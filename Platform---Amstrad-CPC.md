@@ -31,10 +31,6 @@ To create a disk image:
 
     zcc +cpc -lndos -lm -subtype=dsk -create-app -o program adv_a.c
 
-To create a disk image (system format):
-
-    zcc +cpc -lndos -lm -subtype=sysdsk -create-app -o program adv_a.c
-
 To create a tape file:
 
     zcc +cpc -lndos -lm -subtype=wav -create-app -o program adv_a.c
