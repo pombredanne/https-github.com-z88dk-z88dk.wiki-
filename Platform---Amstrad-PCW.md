@@ -14,8 +14,7 @@
     * [ ] Bold attribute
     * [ ] Underline attribute
 * [x] Hires graphics
-* [ ] PSG sound
-* [ ] One bit sound
+* [ ] PSG sound (DK'Tronics)
 * [ ] Inkey driver
 * [ ] Hardware joystick
 * [x] File I/O
