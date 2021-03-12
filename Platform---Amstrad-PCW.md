@@ -38,18 +38,31 @@ A .dsk disc image (and a .COM file) will be created as a result.
 
 ### Emulator hints
 
+#### MAME
+
 [MAME](http://www.mamedev.org/) supports the pcw models mostly in single drive configuration, the virtual disk must be configured after starting the emulator.
 
-In example, to run a program for on the PCW9256, an 80 tracks disk image must be built (-subtype=pcw40)
+In example, to run a program for on the PCW9256, an 80 tracks disk image must be built (-subtype=pcw40).
+
 After getting the '.dsk' file for your program, MUST must boot CP/M:
 
     mame64 pcw9256 -flop1 cpm3.td0
 
 After the CP/M boot, enable the second disk controller and issue a "reset" command on MAME.
+
 Then, enter the disk menu and configure "a.dsk" for the second floppy drive.   "reset" again.
+
 Now the system should identify the disk format properly, type:  "b:a.com"  to load and run your program.
 
 
 The file A.COM is built together with the packaged A.DSK for customized file transfer processes.
 
+
+#### JOYCE
+
+Depending on the machine configuration, a valid disk image will need to be either 40 or 80 tracks.
+
+Please note that the disk menu can be misleading, be sure to confirm your choice ("OK") on exit.
+
+Under some circumstance (mostly with the 40T format) the created disk will be readable only on the same drive used to boot.
 
