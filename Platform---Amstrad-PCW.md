@@ -5,14 +5,14 @@
 * [x] Native console output
 * [x] Native console input
 * [ ] ANSI vt100 engine
-* [x] Generic console
-    * [x] Redefinable font
-    * [x] UDG support
+* [ ] Generic console
+    * [ ] Redefinable font
+    * [ ] UDG support
     * [ ] Paper colour
     * [ ] Ink colour
-    * [x] Inverse attribute
-    * [x] Bold attribute
-    * [x] Underline attribute
+    * [ ] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
 * [x] Hires graphics
 * [ ] PSG sound
 * [ ] One bit sound
