@@ -11,10 +11,11 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Amstrad CPC](Platform---Amstrad-CPC)| Yes | Yes | Yes | 640x200[+graylib](library/graylib)| Yes | No | CPCRSlib partially imported (no tiles) |
 [Amstrad NC100/NC150](Platform---Amstrad-NC) | Yes | No | No | 480x64| No | No | | 
 [Amstrad NC200](Platform---Amstrad-NC) | Yes | No | No | 480x128 | No | No | | 
+[Amstrad PCW](Platform---Amstrad-PCW) | Yes | No | No | 720x256 | No | No |Extension library to the CP/M base |
 [Mattel Aquarius](Platform---Mattel-Aquarius)| Yes | 40x24| 40x24 | 80x72 | No | 1 bit +PSG | | 
 [Bandai RX-78](Platform-Bandai-RX-78) | Yes | No | 24x23 | 192x184 | No | PSG |
 [Bandai Supervision 8000](Platform-Bandai-Supervision-8000) | No | No | 32x16, 32x12 | 32x16,256x96| No | PSG | |
-[Bondwell 12/14](Platform---Bondwell) | Yes | No | 80x25 | 160x75 | No | 1 bit |Extension library to the CP/M base |
+[Bondwell 12/14](Platform---Bondwell) | Yes | No | 80x25 | 160x75 | No | 1 bit, 4 bit |Extension library to the CP/M base |
 [Bondwell 2](Platform---Bondwell2) | Yes | No | No | 640x200 | No | No |Extension library to the CP/M base |
 [Knight 2000 (Aussie Byte)](Platform---Aussie) | Yes | 80x25| No | not yet | No | 1 bit| Untested and incomplete graphics lib| 
 [Canon X-07](Platform---Canon-X07) | Yes | No | No | No | No | No | Initial stage | 
