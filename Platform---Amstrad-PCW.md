@@ -40,7 +40,7 @@ A .dsk disc image (and a .COM file) will be created as a result.
 
 #### MAME
 
-[MAME](http://www.mamedev.org/) supports the pcw models mostly in single drive configuration, the virtual disk must be configured after starting the emulator.
+[MAME](http://www.mamedev.org/) keeps the pcw models mostly in single drive configuration at startup, the virtual disk must be configured after starting the emulator.
 
 In example, to run a program for on the PCW9256, an 80 tracks disk image must be built (-subtype=pcw40).
 
