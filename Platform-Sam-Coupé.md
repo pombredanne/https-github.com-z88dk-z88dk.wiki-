@@ -12,9 +12,9 @@
 
 # Emulator notes
 
-Use the [SimCoupé](http://sourceforge.net/projects/simcoupe/) emulator, press F3 and you can now import any binary in the file system to any given address of the SAM Coupé.  When returning to BASIC you can **CALL** [address] as usual.
+Use the [SimCoupé](http://www.simcoupe.org/) emulator or the [latest development builds](https://github.com/simonowen/simcoupe), press F4 and you can import any binary in the file system to any given BASIC address of the SAM Coupé.  For example, use 32768 as the import address and when returning to BASIC you can just CALL 32768 to run the code.
 
-The SAM Coupe port has also been tested on the [SAMEMU](http://www.inf.upol.cz/~keprta/sam/samemu/welcome.html) emulator.
+The SAM Coupé port has also been tested on the [SAMEMU](http://www.inf.upol.cz/~keprta/sam/samemu/welcome.html) emulator.
 This emulator can load a file in ram (at address 32768) by pressing F1:
 
 * compile the program (zcc +sam hello.c  --or--  zcc +sam -clib=ansi hello.c  )
