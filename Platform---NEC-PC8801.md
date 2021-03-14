@@ -36,7 +36,7 @@ This will generate three files, **a.bin** (a pure binary block), **a.t88** (a fi
 
     zcc +pc88 -subtype=disk program.c -create-app
 
-This will create a .d88 image suitable for booting in FD1 on a PC88 emulator.
+This will create a .d88 image suitable for booting in FD1 on a PC88 emulator. With this model, allram mode is used, resulting in about 48k of usable space. As a downside, the firmware is not available.
 
 # Generic console modes
 
