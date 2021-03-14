@@ -94,3 +94,7 @@ The audio file can be slightly accelerated with the -Cz--fast build option.
 Appmake can be also run in 'dumb mode' to convert any T88 file to wav:
 
     appmake -b program.t88 --audio --fast --dumb
+
+# Links
+
+http://www.geocities.jp/retro_zzz/machines/nec/index.html
