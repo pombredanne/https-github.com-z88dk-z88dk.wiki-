@@ -29,6 +29,12 @@
 * [x] Interrupts
 * [ ] RS232
 
+
+Of the same family:
+* Chuang Zao Zhe (50, Dina, Professional Arcade)
+* Spectravideo SVI 603 - Coleco game adapter
+
+
 # Compilation
 
     zcc +coleco world.c -create-app
