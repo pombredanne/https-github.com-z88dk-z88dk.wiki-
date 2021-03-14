@@ -97,4 +97,7 @@ Appmake can be also run in 'dumb mode' to convert any T88 file to wav:
 
 # Links
 
-http://www.geocities.jp/retro_zzz/machines/nec/index.html
+[PC-8801 on Wikipedia](http://en.wikipedia.org/wiki/PC-8801)
+
+https://web.archive.org/web/20190130002453/http://www.geocities.jp/retro_zzz/machines/nec/index.html
+
