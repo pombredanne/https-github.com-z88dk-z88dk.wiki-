@@ -29,6 +29,10 @@
 
 _This target is incomplete_
 
+
+A Z80 clone existed too, the model name was "Erik"
+
+
 # Compilation
 
     zcc +special program.c -create-app
@@ -51,4 +55,4 @@ the program by entering:
 
 * [Emu80](http://emu80.org) - information and emulators
 
-* [Erik, a Z80 based clone of the "Specialist"](http://micko-wip.blogspot.it/2008_03_01_archive.html)
+* [Micko's WIP blog](http://micko-wip.blogspot.it/2008_03_01_archive.html)
