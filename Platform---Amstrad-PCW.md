@@ -65,3 +65,7 @@ Please note that the disk menu can be misleading, be sure to confirm your choice
 
 Under some circumstance (mostly with the 40T format) the created disk will be readable only on the same drive used to boot.
 
+#LINKS
+
+http://www.fvempel.nl/basic.html
+
