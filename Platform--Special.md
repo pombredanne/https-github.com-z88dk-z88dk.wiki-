@@ -51,4 +51,4 @@ the program by entering:
 
 * [Emu80](http://emu80.org) - information and emulators
 
-* [Erik, a Z80 based clone of the "Specialist"] (http://micko-wip.blogspot.it/2008_03_01_archive.html)
+* [Erik, a Z80 based clone of the "Specialist"](http://micko-wip.blogspot.it/2008_03_01_archive.html)
