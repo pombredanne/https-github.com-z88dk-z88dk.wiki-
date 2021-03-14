@@ -42,20 +42,33 @@ This will create a .d88 image suitable for booting in FD1 on a PC88 emulator.
 
 The screen mode can be switched using the `console_ioctl()` function. The following modes are supported:
 
-* Mode 0: 80x25 
-* Mode 1: 40x25
-* Mode 2: 80x25 (bitmap characters)
+* Mode 0: 80x25, 640x200 graphics
+* Mode 1: 40x25, 640x200 graphics
+* Mode 2: 80x25 (bitmap characters), 640x200 graphics
+* Mode 32: 80x25, 160x100 semigraphics
+* Mode 33: 840x24, broken graphics
+* Mode 34: 80x25 (bitmap characters), 160x100 semigraphics
 
-Mode 0 and 1 do not (at present) support setting a text attributes using gencon.
+The targets starts up in mode 0. It's recommended that mode 2 is used for applications: it provides more functionality and is hardware accelerated so is actually faster.
 
-# Graphics libraries
+## Text Modes
 
-Two graphics libraries are available:
+Mode 0 (32) and 1 (33) support setting attributes for both colour and for character decoration. However, due to the way the attributes are handled on the PC8800 it does feel slower than text mode on other targets.
 
- - 160x100,  use the '-lgfxpc88' library inclusion
- - 640x200, use the '-lgfxpc88hr200' library inclusion
+## Graphics modes
 
-Target specific extras are listed in the <pc88.h> header file
+The PC-8800 target supports two different graphic modes:
+
+- 640x200 multicolour pixels
+- 160x100 semi-graphics.
+
+As a result of the text attribute handling, text based graphics are slower than that implemented on other targets. As such it is recommended that multicolour graphics is used: as a result it is the default graphics mode. 
+
+The multicolour graphics library by default takes advantage of the ALU and as such is "hardware accelerated", to disable the acceleration use the option `-clib=v1` or `-pragma-define:CLIB_PC8800_V2_ENABLED=0`.
+
+# Advanced library usage
+
+Target specific extras are listed in the <pc88.h> header file along with `__sfr` and documentation for the PC88 hardware.
 
 # Emulator notes
 
