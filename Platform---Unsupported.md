@@ -46,10 +46,6 @@ Great Graphical OS: 'Roseanne'
 
 Great Graphical OS: 'Roseanne'
 
-##### PCW 8256 / 8512, PCW 9256 / 9512 / 10
-
-CP/M OS,  High Resolution Graphics capabilities
-
 
 ##### PDA 600
 
