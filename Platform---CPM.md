@@ -98,6 +98,8 @@ Some hardware specific functions have been adapted to run on both native platorm
 * **-laussie** ([Aussie Byte](Platform---Aussie))
 * **-lcpccpm** ([Amstrad CPC](Platform---Amstrad-CPC))
 * **-lc128cpm**, **-lgfx128**, **-lgfx128hr**, **-lgfx128hr480** ([Commodore 128](Platform---Commodore-c128))
+* `-subtype=pcw40` ([Amstrad PCW 8256](Platform---Amstrad-PCW))
+* `-subtype=pcw80` ([Amstrad PCW 9512](Platform---Amstrad-PCW))
 * `-subtype=bondwell` ([Bondwell 12/14](Platform---Bondwell))
 * `-subtype=bw2` ([Bondwell 2](Platform---Bondwell2))
 * `-subtype=einstein` ([Tatung Einstein](Platform---Tatung-Einstein))
