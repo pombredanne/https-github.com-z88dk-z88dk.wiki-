@@ -18,7 +18,7 @@
     * [x] Redefinable font
     * [x] UDG support
     * [x] Paper colour
-    * [x] Ink colour (8 bit colour mod)
+    * [x] Ink colour
     * [x] Inverse attribute
     * [x] Bold attribute
     * [x] Underline attribute
