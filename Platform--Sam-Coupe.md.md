@@ -11,8 +11,8 @@
 
 ## Classic library support (`+sam`)
 
-* [ ] Native console output
-* [ ] Native console input
+* [x] Native console output
+* [x] Native console input
 * [x] ANSI vt100 engine
 * [x] Generic console
     * [x] Redefinable font
