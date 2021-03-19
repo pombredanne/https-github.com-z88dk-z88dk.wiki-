@@ -49,8 +49,8 @@ it auto.bin and use the command line:
 
 # Memory models
 
-`-subtype=highram` (default) Loads the program to C+D, screen into A+B
-`-subtype=basic` Uses MODE 1 from a BASIC environment (this subtype has much reduced functionality)
+* `-subtype=highram` (default) Loads the program to C+D, screen into A+B
+* `-subtype=basic` Uses MODE 1 from a BASIC environment (this subtype has much reduced functionality)
 
 # Screen modes
 
