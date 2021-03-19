@@ -26,8 +26,8 @@
 * [x] Hires graphics
 * [ ] PSG sound
 * [x] One bit sound
-* [ ] Inkey driver
-* [ ] Hardware joystick
+* [x] Inkey driver
+* [x] Hardware joystick
 * [ ] File I/O
 * [x] Interrupts
 * [ ] RS232
@@ -37,7 +37,7 @@ _This platform is currently getting some long overdue love, the state of the rep
 
 # Quick start
 
-    zcc +sam -lm application.c -startup=3 -create-app
+    zcc +sam -lm application.c -create-app
 
 A .MGT disc image will be created suitable for insertion into an emulator
 or writing to a physical disc.
@@ -49,11 +49,8 @@ it auto.bin and use the command line:
 
 # Memory models
 
--startup=3: Loads the program to C+D, screen into A+B
--startup=2: Will load the program to A+B, screen into C+D
--startup=1: Uses MODE 1 from a BASIC environment
-
-It is intended that banked calls will be available.
+`-subtype=highram` (default) Loads the program to C+D, screen into A+B
+`-subtype=basic` Uses MODE 1 from a BASIC environment (this subtype has much reduced functionality)
 
 # Screen modes
 
