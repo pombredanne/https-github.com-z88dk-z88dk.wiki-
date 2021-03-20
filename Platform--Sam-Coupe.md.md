@@ -40,15 +40,14 @@ _This platform is currently getting some long overdue love, the state of the rep
     zcc +sam -lm application.c -create-app
 
 A .MGT disc image will be created suitable for insertion into an emulator
-or writing to a physical disc. 
+or writing to a physical disc. The disc will autoboot and the application will
+start automatically.
 
-To add the required SAMDOS file to disc, obtain a copy of it and add the option
-in the line below.
+The process will automatically insert a version of SAMDOS onto the disc, to override
+it with an alternate DOS file the `-Cz--dosfile option can be used`:
 
-    zcc +sam -lm application.c -startup=3 -create-app -Cz--dosfile=/path/to/SAMDOS2
+    zcc +sam -lm application.c -create-app -Cz--dosfile=/path/to/dosfile
 
-When a disc is created in this way, it will auto boot and the application will start
-automatically.
 
 # Memory models
 
