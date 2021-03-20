@@ -75,15 +75,17 @@ The screen modes are presented as they are for SAM Basic, that is
 with mode=1 representing the +zx compatible mode and 4 being the
 high colour screen mode.
 
-_An alternative method of setting the screen mode will be added_
+## Palette/CLUT mapping
 
-# Graphics support
+The Sam Coupe has a user definable palette and thus palette mapping does not take place for gencon modes 2,3,4. The mapping that does take place or mode 1 may be incorrect if you have redefined the palette.
+
+## Graphics support
 
 Pixel based operations and primitive drawing is supported.
 
-# Emulator notes
+# Hardware support 
 
-Use the [SimCoupé](http://www.simcoupe.org/) emulator or the [latest development builds](https://github.com/simonowen/simcoupe), press F4 and you can import any binary in the file system to any given BASIC address of the SAM Coupé.  For example, use 32768 as the import address and when returning to BASIC you can just CALL 32768 to run the code.
+The file [<arch/sam.h>](https://github.com/z88dk/z88dk/blob/master/include/arch/sam.h) defines additional functions and features for controlling the hardware of the target.
 
 
 # Real Hardware
