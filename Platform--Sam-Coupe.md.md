@@ -24,7 +24,7 @@
     * [x] Underline attribute
 * [ ] Lores graphics
 * [x] Hires graphics
-* [ ] PSG sound
+* [x] PSG sound (etracker player available)
 * [x] One bit sound
 * [x] Inkey driver
 * [x] Hardware joystick
