@@ -56,7 +56,16 @@ it with an alternate DOS file the `-Cz--dosfile option can be used`:
 
 # Screen modes
 
-All 4 screen modes on the SAM are supported, to switch between them
+The Sam Coupe hardware provides the following screen modes:
+
+| Screen Mode | Colours | Text Resolution | Graphics Resolution | Memory Used | Notes |
+|-|-|-|-|-|-|
+| 1 | 8 | 32x24/64x32 | 256x192 | 6.75k | Lowers the effect clock speed to ~3.5MHz. Colour resolution is 32x24 |
+| 2 | 8 | 32x24 | 256x192 | 12k | Colour resolution is 32x192 |
+| 3 | 4 | 64x24 | 512x192 | 24k | Colour resolution is 512x192 |
+| 4 | 16| 32x24 | 256x192 | 24k | Colour resolution is 256x192 |
+
+All 4 screen modes on the SAM are supported by z88dk, to switch between them
 use the following code:
 
     int  mode = 2;
