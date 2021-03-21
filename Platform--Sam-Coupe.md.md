@@ -1,4 +1,4 @@
-# Sam Coupe 
+# SAM Coupé
 
 ![](images/platform/sam.jpg)
 
@@ -55,7 +55,7 @@ it with an alternate DOS file the `-Cz--dosfile option can be used`:
 
 # Screen modes
 
-The Sam Coupe hardware provides the following screen modes:
+The SAM Coupé hardware provides the following screen modes:
 
 | Screen Mode | Colours | Text Resolution | Graphics Resolution | Memory Used | Notes |
 |-|-|-|-|-|-|
@@ -75,7 +75,7 @@ high colour screen mode.
 
 ## Palette/CLUT mapping
 
-The Sam Coupe has a user definable palette and thus palette mapping does not take place for gencon modes 2,3,4. The mapping that does take place in mode 1 may be incorrect if you have redefined the palette.
+The SAM Coupé has a user definable palette and thus palette mapping does not take place for gencon modes 2,3,4. The mapping that does take place in mode 1 may be incorrect if you have redefined the palette.
 
 The default palette seems to match +zx, and can be seen in the coloured mandelbrot below:
 
