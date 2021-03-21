@@ -64,8 +64,7 @@ The Sam Coupe hardware provides the following screen modes:
 | 3 | 4 | 64x24 | 512x192 | 24k | Colour resolution is 512x192 |
 | 4 | 16| 32x24 | 256x192 | 24k | Colour resolution is 256x192 |
 
-All 4 screen modes on the SAM are supported by z88dk, to switch between them
-use the following code:
+All 4 screen modes on the SAM are supported by z88dk, to switch to mode 2 for example, use the following code snippet:
 
     int  mode = 2;
     console_ioctl(IOCTL_GENCON_SET_MODE,&mode);
@@ -76,7 +75,7 @@ high colour screen mode.
 
 ## Palette/CLUT mapping
 
-The Sam Coupe has a user definable palette and thus palette mapping does not take place for gencon modes 2,3,4. The mapping that does take place or mode 1 may be incorrect if you have redefined the palette.
+The Sam Coupe has a user definable palette and thus palette mapping does not take place for gencon modes 2,3,4. The mapping that does take place in mode 1 may be incorrect if you have redefined the palette.
 
 ## Graphics support
 
