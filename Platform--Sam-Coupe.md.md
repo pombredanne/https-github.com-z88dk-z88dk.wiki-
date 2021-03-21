@@ -76,6 +76,8 @@ The screen modes are presented as they are for SAM Basic, that is
 with mode=1 representing the +zx compatible mode and 4 being the
 high colour screen mode.
 
+Note: The examples within z88dk will need the screen mode setting initially before anything can be displayed on screen.
+
 ## Palette/CLUT mapping
 
 The Sam Coupe has a user definable palette and thus palette mapping does not take place for gencon modes 2,3,4. The mapping that does take place or mode 1 may be incorrect if you have redefined the palette.
