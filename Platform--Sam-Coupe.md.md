@@ -77,6 +77,10 @@ high colour screen mode.
 
 The Sam Coupe has a user definable palette and thus palette mapping does not take place for gencon modes 2,3,4. The mapping that does take place in mode 1 may be incorrect if you have redefined the palette.
 
+The default palette seems to match +zx, and can be seen in the coloured mandelbrot below:
+
+![charset](images/platform/samcoupe_mandel.png)
+
 ## Graphics support
 
 Pixel based operations and primitive drawing is supported.
