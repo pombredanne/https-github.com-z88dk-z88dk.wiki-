@@ -32,8 +32,6 @@
 * [x] Interrupts
 * [ ] RS232
 
-_This platform is currently getting some long overdue love, the state of the repo and this page may be out of sync_
-
 
 # Quick start
 
@@ -75,8 +73,6 @@ use the following code:
 The screen modes are presented as they are for SAM Basic, that is
 with mode=1 representing the +zx compatible mode and 4 being the
 high colour screen mode.
-
-Note: The examples within z88dk will need the screen mode setting initially before anything can be displayed on screen.
 
 ## Palette/CLUT mapping
 
