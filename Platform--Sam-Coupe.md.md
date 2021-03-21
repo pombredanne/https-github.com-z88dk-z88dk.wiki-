@@ -51,6 +51,7 @@ it with an alternate DOS file the `-Cz--dosfile option can be used`:
 
 # Memory models
 
+* `-subtype=allram` (default) Loads the program to A+B+C+D, screen paged on demand into C+D
 * `-subtype=highram` (default) Loads the program to C+D, screen into A+B
 * `-subtype=basic` Uses MODE 1 from a BASIC environment (this subtype has much reduced functionality)
 
@@ -87,6 +88,26 @@ Pixel based operations and primitive drawing is supported.
 
 The file [<arch/sam.h>](https://github.com/z88dk/z88dk/blob/master/include/arch/sam.h) defines additional functions and features for controlling the hardware of the target.
 
+## Interrupts
+
+The line and frame interrupts are distinguished and ISRs can be registered for each trigger using the following two functions:
+
+    #include <arch/sam.h>
+    add_raster_int(func);
+    sam_install_line_isr(func);
+
+In the default allram subtype, NMI handlers can be registered with:
+
+    #include <interrupt.h>
+    nmi_install_isr(func)
+
+## Audio support
+
+The beeper is supported via the functions in `<games.h>`, etracker module supports is available via `<psg/etracker.h>`
+
+## The stack
+
+In the default `allram` subtype, an area for the stack is reserved in segments B+D, by default 1024 bytes are made available, this can increased or decreased using the option `-pragma-define:CRT_STACK_SIZE=nnnn` where `nnnn` is the required size.
 
 # Real Hardware
 
