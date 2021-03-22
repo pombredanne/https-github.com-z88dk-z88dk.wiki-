@@ -160,3 +160,5 @@ In general, the ANSI screen drivers contain self-modifying code and such cannot 
    -pragma-define:CLIB_ANSITERMINAL_BRIDGE=1
 
 When using this option, sub-character width fonts (eg 80/85 columns on a 256 pixel display) are not yet supported.
+
+The reset attribute escape code `\e[m` also doesn't reset the colours in this mode.
