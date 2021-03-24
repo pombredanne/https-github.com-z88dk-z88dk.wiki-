@@ -1,3 +1,31 @@
+# Hardware Summary
+
+* Z80A @ 4MHz
+* 32k RAM (default), 24kb ROM
+* Additional 1 line VF display
+
+## Classic library support (+multi8)
+
+* [x] Native console output
+* [x] Native console input
+* [ ] ANSI vt100 engine
+* [ ] Generic console
+    * [ ] Redefinable font
+    * [ ] UDG support
+    * [ ] Paper colour
+    * [ ] Ink colour
+    * [ ] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
+* [ ] Lores graphics
+* [ ] Hires graphics
+* [ ] PSG sound
+* [ ] One bit sound
+* [ ] Inkey driver
+* [ ] Hardware joystick
+* [x] File I/O
+* [ ] Interrupts
+* [ ] RS232
 
 ## Introduction
 
