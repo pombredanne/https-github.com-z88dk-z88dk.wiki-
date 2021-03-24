@@ -67,6 +67,9 @@ The available options are:
 
 ## NewBrain specific functions
 
+Additional, NewBrain specific functions and variables are provided in `<newbrain.h>`
+
+
 ```
 /*
  *	Example of advanced use of the NewBrain specific functions
