@@ -57,9 +57,9 @@ The SAM Coupé hardware provides the following screen modes:
 
 | Screen Mode | Colours | Text Resolution | Graphics Resolution | Memory Used | Notes |
 |-|-|-|-|-|-|
-| 1 | 8 + 7 bright | 32x24/64x32 | 256x192 | 6.75k | Lowers the effect clock speed to ~3.5MHz. Colour resolution is 32x24 |
-| 2 | 8 + 7 bright | 32x24 | 256x192 | 12k | Colour resolution is 32x192 |
-| 3 | 4 | 64x24 (CSIZE 8x8)/80x24 (CSIZE 8x6) | 512x192 | 24k | Colour resolution is 512x192 |
+| 1 | 16 | 32x24/64x32 | 256x192 | 6.75k | Lowers the effect clock speed to ~3.5MHz. Colour resolution is 32x24 with ZX 'BRIGHT' colours simulated by upper palette entries|
+| 2 | 16 | 32x24 | 256x192 | 12k | Colour resolution is 32x192 |
+| 3 | 4 | 64x24 (CSIZE 8x8) / 85x24 (CSIZE 8x6) | 512x192 | 24k | Colour resolution is 512x192 |
 | 4 | 16| 32x24 | 256x192 | 24k | Colour resolution is 256x192 |
 
 All 4 screen modes on the SAM are supported by z88dk, to switch to mode 2 for example, use the following code snippet:
@@ -81,14 +81,14 @@ The default palette in modes 1,2 & 4 matches the +zx, and can be seen in the col
 
 Mode 3 also currently has the ZX palette so will usually require pot position 3 to be reassigned to bright white (value 127) to match the default on the SAM Coupé.
 
-Palette changes can be made through functions:
+Palette changes can be made through the following functions:
 
     #include <arch/sam.h>
 
     // Set single pot
     sam_set_palette(unsigned char index, unsigned char value);
     
-    // Set full palette at once with 
+    // Set full palette at once with string of data
     sam_load_palette(unsigned char *data)
         
 
