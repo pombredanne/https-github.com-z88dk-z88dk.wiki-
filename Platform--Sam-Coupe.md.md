@@ -61,7 +61,7 @@ The SAM Coupé hardware provides the following screen modes:
 |-|-|-|-|-|-|
 | 1 | 8 + 7 bright | 32x24/64x32 | 256x192 | 6.75k | Lowers the effect clock speed to ~3.5MHz. Colour resolution is 32x24 |
 | 2 | 8 + 7 bright | 32x24 | 256x192 | 12k | Colour resolution is 32x192 |
-| 3 | 4 | 64x24 | 512x192 | 24k | Colour resolution is 512x192 |
+| 3 | 4 | 64x24 (CSIZE 8x8)/80x24 (CSIZE 8x6) | 512x192 | 24k | Colour resolution is 512x192 |
 | 4 | 16| 32x24 | 256x192 | 24k | Colour resolution is 256x192 |
 
 All 4 screen modes on the SAM are supported by z88dk, to switch to mode 2 for example, use the following code snippet:
