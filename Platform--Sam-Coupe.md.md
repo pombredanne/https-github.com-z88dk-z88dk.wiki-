@@ -5,7 +5,7 @@
 # Hardware
 
 * Z80B @ 6Mhz
-* 256/512kb RAM + extensions
+* 256/512kb RAM + 1-4Mb external expansion
 * SAA1099 sound generator
 
 
@@ -37,12 +37,10 @@
 
     zcc +sam -lm application.c -create-app
 
-A .MGT disc image will be created suitable for insertion into an emulator
-or writing to a physical disc. The disc will autoboot and the application will
-start automatically.
+A .MGT disc image will be created suitable for insertion into an emulator or writing to a physical disc. The disc will autoboot and the application will start automatically.
 
 The process will automatically insert a version of SAMDOS onto the disc, to override
-it with an alternate DOS file the `-Cz--dosfile option can be used`:
+it with an alternate DOS file such as MasterDOS/B-DOS the `-Cz--dosfile` option can be used:
 
     zcc +sam -lm application.c -create-app -Cz--dosfile=/path/to/dosfile
 
@@ -69,9 +67,7 @@ All 4 screen modes on the SAM are supported by z88dk, to switch to mode 2 for ex
     int  mode = 2;
     console_ioctl(IOCTL_GENCON_SET_MODE,&mode);
 
-The screen modes are presented as they are for SAM Basic, that is
-with mode=1 representing the +zx compatible mode and 4 being the
-high colour screen mode.
+The screen modes are presented as they are for SAM Basic, that is with mode=1 representing the +zx compatible mode and 4 being the high colour screen mode.
 
 ## Palette/CLUT mapping
 
@@ -113,3 +109,35 @@ In the default `allram` subtype, an area for the stack is reserved in segments B
 # Real Hardware
 
 You can use the *dskman* utility to save your files to a dsk-image which can be written out to a DD floppy and read by a real SAM Coupé.  
+
+# Emulation
+
+The currently maintained [SimCoupé](https://github.com/simonowen/simcoupe/releases/) can easily be used when called with the `-autoload` command.
+
+A very basic workflow could look like this:
+```
+@echo off
+REM
+REM Windows Batch file for launching ZCC to compile SAM Coupé executables
+REM and lauch them in SimCoupe via an MGT disk image.
+
+REM NOTE: Filename without .c extension
+
+set FILE=helloworld
+set EMUPATH="C:\Program Files (x86)\SimCoupe\simcoupe.exe"
+
+echo Compiling %FILE%.c... 
+zcc +sam %FILE%.c -lm -v -o %FILE% -create-app
+IF NOT %ERRORLEVEL% == 0  GOTO FAIL
+
+echo Launching %FILE%.mgt with SimCoupe...
+call %EMUPATH% %FILE%.mgt -autoload 1> nul 2> nul
+IF NOT %ERRORLEVEL% == 0  GOTO FAIL
+
+GOTO END
+
+:FAIL
+Echo  ^^ %FILE% failed, press a key.
+pause 1> nul 2> nul
+:END
+```
