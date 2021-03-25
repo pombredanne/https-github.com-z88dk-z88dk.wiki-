@@ -48,7 +48,7 @@ it with an alternate DOS file such as MasterDOS/B-DOS the `-Cz--dosfile` option 
 # Memory models
 
 * `-subtype=allram` (default) Loads the program to A+B+C+D, screen paged on demand into C+D
-* `-subtype=highram` (default) Loads the program to C+D, screen into A+B
+* `-subtype=highram` Loads the program to C+D, screen into A+B
 * `-subtype=basic` Uses MODE 1 from a BASIC environment (this subtype has much reduced functionality)
 
 # Screen modes
@@ -64,6 +64,8 @@ The SAM Coupé hardware provides the following screen modes:
 
 All 4 screen modes on the SAM are supported by z88dk, to switch to mode 2 for example, use the following code snippet:
 
+    #include <sys/ioctl.h>
+    
     int  mode = 2;
     console_ioctl(IOCTL_GENCON_SET_MODE,&mode);
 
@@ -71,11 +73,24 @@ The screen modes are presented as they are for SAM Basic, that is with mode=1 re
 
 ## Palette/CLUT mapping
 
-The SAM Coupé has a user definable palette and thus palette mapping does not take place for gencon modes 2,3,4. The mapping that does take place in mode 1 may be incorrect if you have redefined the palette.
+The SAM Coupé has a user definable palette and thus palette mapping does not take place for gencon modes 2,3,4.
 
-The default palette seems to match +zx, and can be seen in the coloured mandelbrot below:
+The default palette in modes 1,2 & 4 matches the +zx, and can be seen in the coloured mandelbrot below:
 
 ![charset](images/platform/samcoupe_mandel.png)
+
+Mode 3 also currently has the ZX palette so will usually require pot position 3 to be reassigned to bright white (value 127) to match the default on the SAM Coupé.
+
+Palette changes can be made through functions:
+
+    #include <arch/sam.h>
+
+    // Set single pot
+    sam_set_palette(unsigned char index, unsigned char value);
+    
+    // Set full palette at once with 
+    sam_load_palette(unsigned char *data)
+        
 
 ## Graphics support
 
