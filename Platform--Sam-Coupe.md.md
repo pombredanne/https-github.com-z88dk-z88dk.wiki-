@@ -49,7 +49,7 @@ it with an alternate DOS file such as MasterDOS/B-DOS the `-Cz--dosfile` option 
 
 * `-subtype=allram` (default) Loads the program to A+B+C+D, screen paged on demand into C+D
 * `-subtype=highram` Loads the program to C+D, screen into A+B
-* `-subtype=basic` Uses MODE 1 from a BASIC environment (this subtype has much reduced functionality)
+* `-subtype=basic` Uses MODE 1 from a BASIC environment (this subtype has much reduced functionality and use isn't recommended).
 
 # Screen modes
 
@@ -88,13 +88,13 @@ Palette changes can be made through the following functions:
     // Set single pot
     sam_set_palette(unsigned char index, unsigned char value);
     
-    // Set full palette at once with string of data
+    // Set full palette at once with array of data from entry 0 to entry 15
     sam_load_palette(unsigned char *data)
         
 
 ## Graphics support
 
-Pixel based operations and primitive drawing is supported.
+Graphic support is available in all 4 modes. The current `textcolor()` value is applied to the plotted pixels. This is particular useful in mode 3/4 where there is no attribute clash. Pixel based operations, primitive drawing, stencils and profiles are supported. The bk* routines for saving and restoring background are not currently available.
 
 # Hardware support 
 
