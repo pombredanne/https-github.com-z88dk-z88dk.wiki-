@@ -90,10 +90,9 @@ The font can be included in your binary using a .asm file similar to the below:
 
 ```
 SECTION rodata_user
-PUBLIC font
 PUBLIC _font
 
-font:
+_font:
    INCBIN "<font>.ch8"
 ```
 
