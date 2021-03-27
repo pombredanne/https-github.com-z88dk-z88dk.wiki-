@@ -71,6 +71,10 @@ All 4 screen modes on the SAM are supported by z88dk, to switch to mode 2 for ex
 
 The screen modes are presented as they are for SAM Basic, that is with mode=1 representing the +zx compatible mode and 4 being the high colour screen mode.
 
+## Screen Fonts
+
+Alternative SAM Coupé fonts can be loaded using .asm files as per the guide in the [Generic Console](https://github.com/z88dk/z88dk/wiki/Classic-GenericConsole) instructions, CH8 format is the same format as used on the SAM (768 bytes for ASCII set, 1096 bytes for extended set).
+
 ## Palette/CLUT mapping
 
 The SAM Coupé has a user definable palette and thus palette mapping does not take place for gencon modes 2,3,4.
@@ -91,7 +95,6 @@ Palette changes can be made through the following functions:
     // Set full palette at once with array of data from entry 0 to entry 15
     sam_load_palette(unsigned char *data)
         
-
 ## Graphics support
 
 Graphic support is available in all 4 modes. The current `textcolor()` value is applied to the plotted pixels. This is particular useful in mode 3/4 where there is no attribute clash. Pixel based operations, primitive drawing, stencils and profiles are supported. The bk* routines for saving and restoring background are not currently available.
@@ -115,7 +118,9 @@ In the default allram subtype, NMI handlers can be registered with:
 
 ## Audio support
 
-The beeper is supported via the functions in `<games.h>`, etracker module supports is available via `<psg/etracker.h>`
+The beeper is supported via the functions in `<games.h>`, E-tracker module support is available via `<psg/etracker.h>`
+
+Note that E-tracker tunes must be loaded without the player code which is usually attached to the start of the file, this can be done in an editor by finding the string 'ETracker (C) BY ESI', moving 10 bytes back and removing everything before that point.
 
 ## The stack
 
