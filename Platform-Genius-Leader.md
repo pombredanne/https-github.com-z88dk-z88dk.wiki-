@@ -58,7 +58,7 @@ Genius Leader 6000sl
 * [x] Hires graphics
 * [ ] PSG sound
 * [ ] One bit sound
-* [ ] Inkey driver
+* [x] Inkey driver
 * [ ] Hardware joystick
 * [ ] File I/O
 * [ ] Interrupts
