@@ -134,7 +134,7 @@ You can use the *dskman* utility to save your files to a dsk-image which can be 
 
 [Sam C](https://www.worldofsam.org/products/sam-c) was the Small C compiler available for the SAM Coupé in 1995.
 
-To aid conversion the libraries and functions provided in Sam C are listed here in the [SAM Coupé Library Reference](https://github.com/z88dk/z88dk/wiki/SAM-Coup%C3%A9-Library-Reference) (under construction)
+To aid conversion the libraries and functions provided in Sam C are listed here in the [SAM Coupé Library Reference](https://github.com/z88dk/z88dk/wiki/SAM-Coup%C3%A9-Library-Reference)
 
 # Emulation
 
