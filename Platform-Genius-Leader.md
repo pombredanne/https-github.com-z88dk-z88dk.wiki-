@@ -18,7 +18,7 @@ Genius Leader 6000sl
 * 240x100px LCD
 
 
-## Classic library support (`+gl`) (2000/4000)
+## Classic library support (`+gl -clib=gl2000`, `+gl -clib=gl4000`) (2000/4000)
 
 * [ ] Native console output
 * [x] Native console input
@@ -41,7 +41,7 @@ Genius Leader 6000sl
 * [ ] Interrupts
 * [ ] RS232
 
-## Classic library support (`+gl`) (6000sl)
+## Classic library support (`+gl -clib=gl6000sl`) (6000sl)
 
 * [ ] Native console output
 * [x] Native console input
@@ -55,10 +55,10 @@ Genius Leader 6000sl
     * [x] Bold attribute
     * [x] Underline attribute
 * [ ] Lores graphics
-* [ ] Hires graphics (only plot)
+* [x] Hires graphics
 * [ ] PSG sound
 * [ ] One bit sound
-* [ ] Inkey driver
+* [x] Inkey driver
 * [ ] Hardware joystick
 * [ ] File I/O
 * [ ] Interrupts
