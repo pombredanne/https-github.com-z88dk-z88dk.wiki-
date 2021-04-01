@@ -130,6 +130,12 @@ In the default `allram` subtype, an area for the stack is reserved in segments B
 
 You can use the *dskman* utility to save your files to a dsk-image which can be written out to a DD floppy and read by a real SAM Coupé.  
 
+# Porting code from Sam C
+
+[Sam C](https://www.worldofsam.org/products/sam-c) was the Small C compiler available for the SAM Coupé in 1995.
+
+To aid conversion the libraries and functions provided in Sam C are listed here in the [SAM Coupé Library Reference](https://github.com/z88dk/z88dk/wiki/SAM-Coup%C3%A9-Library-Reference) (under construction)
+
 # Emulation
 
 The currently maintained [SimCoupé](https://github.com/simonowen/simcoupe/releases/) can easily be used when called with the `-autoload` command.
