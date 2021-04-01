@@ -7,17 +7,17 @@ Features that are particular to the platform are called out, not all of these ma
   | SAM C Library | Type | Function | Sam Specific | Description | Z88DK Function | Z88DK Library | Comments | 
   | ------------- | ---- | -------- | ------------ | ----------- | -------------- | ------------- | -------- |  
   | system.h | int  | avail(); | ? | Free memory |  |  |  |  
-  | system.h | void | disable(); | ? | Disable interrupts | intrinsic_di() | intrinsic.h |  |  
+  | system.h | void | disable(); |  | Disable interrupts | intrinsic_di() | intrinsic.h |  |  
   | system.h | int | dpeek(unsigned a); | ? | Double PEEK |  |  |  |  
   | system.h | void | dpoke(unsigned a, int b); | ? | Double POKE |  |  |  |  
-  | system.h | void | enable(); | ? | Enable interrupts | intrinsic_ei() | intrinsic.h |  |  
+  | system.h | void | enable(); |  | Enable interrupts | intrinsic_ei() | intrinsic.h |  |  
   | system.h | int | getsp(); | ? | Get Stack pointer |  |  |  |  
   | system.h | int | gettime(); | ? | Return frame counter |  |  |  |  
-  | system.h | void | pause(int c); | ? | Wait for frame interrupt(s) | intrinsic_halt() | intrinsic.h | Equivelent of pause(1); |  
+  | system.h | void | pause(int c); |  | Wait for frame interrupt(s) | intrinsic_halt() | intrinsic.h | Equivelent of pause(1); |  
   | system.h | int  | callcode (int a,int b,int d,int h,unsigned adr); | Y | Call machine code routine |  |  |  |  
   | system.h | int | escape(); | Y | Detect Escape |  |  |  |  
-  | system.h | unsigned  | inp(unsigned p); | Y | Read IN port | intrinsic_ini | intrinsic.h |  |  
-  | system.h | unsigned  | outp(unsigned p,int v); | Y | Write OUT port | intrinsic_outi | intrinsic.h |  |  
+  | system.h | unsigned  | inp(unsigned p); |  | Read IN port | intrinsic_ini | intrinsic.h |  |  
+  | system.h | unsigned  | outp(unsigned p,int v); |  | Write OUT port | intrinsic_outi | intrinsic.h |  |  
   | system.h | char | peek(unsigned a); |  | PEEK |  |  |  |  
   | system.h | void | poke(unsigned a, char b); |  | POKE |  |  |  |  
   | misc.h | int | blitz(...); | Y | BASIC Blitz  |  |  |  |  
