@@ -17,6 +17,8 @@ Both classic and newlib libraries support storing the data sections compressed i
 
 Source site: https://github.com/einar-saukas/ZX0
 
+Available: z80, z80n, Rabbit
+
 ZX0 is an optimal data compressor for a custom LZ77/LZSS based compression format, that provides a tradeoff between high compression ratio, and extremely simple fast decompression.
 
 C wrappers, including `__z88dk_callee` variants are available for all of the decompressor variants include the +zx centric [RCS](https://github.com/einar-saukas/RCS) routines for ZX Spectrum screens.
@@ -26,6 +28,8 @@ This is the recommended compression algorithm that new applications use.
 ## ZX1 Decompression `<compress/zx1.h>`
 
 Source site: https://github.com/einar-saukas/ZX1
+
+Available: gbz80, z80, z80n, Rabbit (not all variants available on gbz80)
 
 ZX1 is a simpler but faster version of ZX0 that sacrifices about 1.5% compression to run about 15% faster. 
 
@@ -38,12 +42,17 @@ The compression tool is not supplied with z88dk, so you'll need to download and 
 
 Source site: https://github.com/einar-saukas/ZX2
 
+Available: gbz80, z80, z80n, Rabbit
+
+
 ZX2 is a minimalist version of ZX1. It's intended to help compressing programs and data blocks so small that saving a few bytes in the decompressor itself can make a difference (for instance to create 1Kb demos).
 
 The compression tool is not supplied with z88dk, so you'll need to download and compile it from the upstream site linked above.
 
 
 ## ZX7 Decompression `<compress/zx7.h>`
+
+Available: gbz80, z80, z80n, Rabbit (not all variants available on gbz80)
 
 C wrappers, including `__z88dk_callee` variants are available for all of the decompressor variants include the +zx centric [RCS](https://github.com/einar-saukas/RCS) routines for ZX Spectrum screens.
 
