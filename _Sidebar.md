@@ -44,6 +44,7 @@
 * [Benchmarks](Benchmarks)
 * [Datatypes](Datatypes)
 * [Debugging](debugging)
+* [Decompression](Decompression)
 * [More than 64k](More-Than-64k)
 * [Deficiencies](Suite-deficiencies)
 * [Compiling Larger Applications](Compiling-Larger-Applications)
