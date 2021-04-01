@@ -6,7 +6,7 @@ Features that are particular to the platform are called out, not all of these ma
 
   | SAM C Library | Type | Function | Sam Specific | Description | Z88DK Function | Z88DK Library | Comments | 
   | ------------- | ---- | -------- | ------------ | ----------- | -------------- | ------------- | -------- |  
-  | system.h | int  | avail(); | ? | Free memory |  |  |  |  
+  | system.h | int  | avail(); | ? | Return free memory |  |  |  |  
   | system.h | void | disable(); |  | Disable interrupts | intrinsic_di() | intrinsic.h |  |  
   | system.h | int | dpeek(unsigned a); | ? | Double PEEK |  |  |  |  
   | system.h | void | dpoke(unsigned a, int b); | ? | Double POKE |  |  |  |  
@@ -15,19 +15,19 @@ Features that are particular to the platform are called out, not all of these ma
   | system.h | int | gettime(); | ? | Return frame counter |  |  |  |  
   | system.h | void | pause(int c); |  | Wait for frame interrupt(s) | intrinsic_halt() | intrinsic.h | Equivelent of pause(1); |  
   | system.h | int  | callcode (int a,int b,int d,int h,unsigned adr); | Y | Call machine code routine |  |  |  |  
-  | system.h | int | escape(); | Y | Detect Escape |  |  |  |  
+  | system.h | int | escape(); | Y | Detect Escape key pressed |  |  |  |  
   | system.h | unsigned  | inp(unsigned p); |  | Read IN port | intrinsic_ini | intrinsic.h |  |  
   | system.h | unsigned  | outp(unsigned p,int v); |  | Write OUT port | intrinsic_outi | intrinsic.h |  |  
   | system.h | char | peek(unsigned a); |  | PEEK |  |  |  |  
   | system.h | void | poke(unsigned a, char b); |  | POKE |  |  |  |  
-  | misc.h | int | blitz(...); | Y | BASIC Blitz  |  |  |  |  
-  | misc.h | int | button(void ); | Y | Mouse Button |  |  |  |  
-  | misc.h | int | getgraphmode(void ); | Y | Return current mode |  |  |  |  
-  | misc.h | int | mdriver(void ); | Y | Mouse driver loaded? |  |  |  |  
+  | misc.h | int | blitz(...); | Y | BASIC Blitz command  |  |  |  |  
+  | misc.h | int | button(void ); | Y | Mouse Button status|  |  |  |  
+  | misc.h | int | getgraphmode(void ); | Y | Return current screen mode |  |  |  |  
+  | misc.h | int | mdriver(void ); | Y | Is mouse driver loaded? |  |  |  |  
   | misc.h | void | outtextxy(int x, int y, char *s); | Y | Print string at x,y |  |  |  |  
   | misc.h | void | setpalette(int num, int color); | Y | Duplicate of palette? | sam_set_palette | sam.h |  |  
-  | misc.h | int | xmouse(void ); | Y | Mouse X |  |  |  |  
-  | misc.h | int | ymouse(void ); | Y | Mouse Y |  |  |  |  
+  | misc.h | int | xmouse(void ); | Y | Mouse X coordinates |  |  |  |  
+  | misc.h | int | ymouse(void ); | Y | Mouse Y coordinates |  |  |  |  
   | misc.h | void | circle(int x, int y, int radius); |  | Duplicate from graphics.c |  |  |  |  
   | misc.h | enum | GCode { PLOT=1, DRAWTO, CIRCLE, OVER, PEN, CLS, PAUSE }; |  |  |  |  |  |  
   | misc.h | int | getpixel(int x, int y); |  | POINT command |  |  |  |  
