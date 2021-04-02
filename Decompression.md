@@ -52,6 +52,8 @@ The compression tool is not supplied with z88dk, so you'll need to download and 
 
 ## ZX7 Decompression `<compress/zx7.h>`
 
+Source site: https://spectrumcomputing.co.uk/entry/27996/ZX-Spectrum/ZX7
+
 Available: gbz80, z80, z80n, Rabbit (not all variants available on gbz80)
 
 C wrappers, including `__z88dk_callee` variants are available for all of the decompressor variants include the +zx centric [RCS](https://github.com/einar-saukas/RCS) routines for ZX Spectrum screens.
