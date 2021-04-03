@@ -4,8 +4,6 @@
  | -----------|-------------------------------------------------------------------------------------------------------------          
  | Source     | [{z88dk}/libsrc/adt](https://github.com/z88dk/z88dk/tree/master/libsrc/adt)                                 |         
  | Include    | #include `<adt.h>`                                                                                                |     
- | Linking    | -ladt                                                                                                           |     
- | Compile    | from {z88dk}/libsrc : make adt.lib ; make install                                                                    |
  | Comments   | **1.** Some of the data structures in this library need to allocate memory implicitly in the course of          |     
  | | performing their functions.  All z88dk libraries that need to perform this implicit memory allocation           |                
  | | do so through user-supplied functions as documented on the [memory allocation](library/memory allocation) page.  |               
