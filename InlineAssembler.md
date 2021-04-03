@@ -8,4 +8,4 @@ The preferred way to implement assembly subroutines called from C is that protot
 
 Despite all of that should you wish to inline assembler then you should surround it with `#asm`, `#endasm`. zcc/zpragma will take care of translating the common syntax into a syntax suitable for use with either backend compiler.
 
-Embedding assembler in macros needs some care, using the pseudo function `asm("")` (sccz80) or `__asm()` (sdcc) is better solution than using #asm/#endasm.
+Embedding assembler in macros needs some care, using the pseudo function `__asm__("")` is better solution than using #asm/#endasm. 
