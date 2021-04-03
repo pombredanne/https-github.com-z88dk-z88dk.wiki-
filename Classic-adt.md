@@ -1,7 +1,7 @@
 # ABSTRACT DATA TYPES LIBRARY (adt.h, adt.lib)
 
  | Header     | [{z88dk}/include/adt.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/adt.h)                |          
- | -------------------------------------------------------------------------------------------------------------------------          
+ | -----------|-------------------------------------------------------------------------------------------------------------          
  | Source     | [{z88dk}/libsrc/adt](https://github.com/z88dk/z88dk/tree/master/libsrc/adt)                                 |         
  | Include    | #include `<adt.h>`                                                                                                |     
  | Linking    | -ladt                                                                                                           |     
