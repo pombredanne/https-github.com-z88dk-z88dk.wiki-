@@ -6,6 +6,8 @@ A series of routines are being written to test these functions and any deviation
 
 Missing functions are rated in priority, low priority functions may exist as part of other libraries or easily replicated using other functions.
 
+Original compiler and assembler source available [Sam C on GitHub](https://github.com/mkrivos/samcoupecode), [SAM C manual](http://www.samcoupe-pro-dos.co.uk) and copies of the [demos, headers and most libraries](https://github.com/dandoore/samclibs).
+
 | SAM C Library | Type | Function | Sam Specific | Addional Details | Matching | Matching Lib | Priority | Status | 
 | ------------- | ---- | -------- | ------------ | ---------------- | -------- | ------------ | -------- | ------ |
 | conio.h | void | blocks(int b); | Y | BASIC Blocks toggle UDG Graphics for foreign chars(1=on/0=off) |  |  | 1 - High | MISSING |  
