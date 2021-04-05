@@ -21,8 +21,15 @@ z88dk supports the following calling conventions:
 |`__z88dk_callee` | The function being called (callee) is responsible for cleaning up the stack. |
 |`__z88dk_fastcall` | At most a single parameter is passed in registers. For __smallc it will be the rightmost parameter. For `__stdc` and `__z88dk_sdccdecl` it will be the only parameter. The register used is always a subset of DEHL depending on the parameter bit width.  So, for example, an integer would be passed in the HL register and a long in DEHL.  sccz80's floats / doubles are 48-bit and are treated a little differently.  They are passed via the "primary floating point accumulator".  In the classic C library this is six bytes of static memory labelled "fa".  In the new C library this is the registers BCDEHL' in the exx set.  This means the classic C library's floating point implementation is not re-entrant whereas the new C library's is.  sdcc's 64-bit long long type cannot be passed using fastcall linkage.|
 |`__z88dk_saveframe`|Valid for sccz80 generated code only. The sdcc framepointer (ix) will be saved on entry to the function. This is required if it is expected that this function will be called from sdcc compiled code and it uses either longs or floating point.
-|`__critical`| The interrupt state is saved on entry to the function and restore on exit. |
+|`__critical`| The interrupt state is saved on entry to the function and restored on exit. |
+|`__interrupt(n)` | Saves the primary registers and index register on entry, restore on exit. Returns with reti/retn as appropriate. The behaviour adopted by z88dk is the same as sdcc and it is "quite confusing". |
 |`__naked`|Used for assembler functions to ensure that the function prologue and epilogue is not generated. |
+
+#### `__interrupt __critical` interactions:
+
+* `void func() __critical  __interrupt` - Saves registers, returns with retn (eg for NMIs)
+* `void func() __interrupt` - `ei`, saves registers, returns with reti (eg for im2)
+* `void func() __critical __interrupt(0)` - Saves registers, returns with `ei; reti` (eg for im1)
 
 ### Banked calling convention modifiers
 
