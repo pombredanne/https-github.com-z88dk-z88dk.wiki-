@@ -65,7 +65,7 @@ The classic library keeps a stack of function pointers registered with `atexit()
 
 `-pragma-define:CRT_ENABLE_STDIO=0`
 
-stdio is enabled by default for all targets. Enabling stdio reserves some memory for the file descriptors (stdout, stdin etc) and also utilises some memory to close all open files when the program exits. If you don't use stdio then this is a waste of memory.
+stdio is enabled by default for all targets. Enabling stdio reserves some memory for the file descriptors (stdout, stdin etc) and also utilises some memory to close all open files when the program exits. If you don't use stdio then this is a waste of memory. If you don't need any conio screen output (for example if you're using the SP1 print routines) then `-pragma-define:fputc_cons=0` will be useful to prevent a screen printer being included.
 
 NB. If the only part of stdio that you use is printf(), then you can utilise printk() which will avoid the stdio memory overhead. There are similar functions that bypass stdin for reading keypresses
 
@@ -126,6 +126,7 @@ On targets that support different numbers of columns, this option will allow com
 `-pragma-define:ansifont_is_packed=0`
 
 A font will be automatically configured, but if you wish to change it then you can use this pragma. Unless you have packed the font, then you should also supply the option `-pragma-define:ansifont_is_packed=0`
+
 
 ## Configuring printf and scanf converters
 
