@@ -6,7 +6,7 @@ A series of routines are being written to test these functions and any deviation
 
 Missing functions are rated in priority, low priority functions may exist as part of other libraries or easily replicated using other functions.
 
-Original compiler and assembler source available [Sam C on GitHub](https://github.com/mkrivos/samcoupecode), [SAM C manual](http://www.samcoupe-pro-dos.co.uk) and copies of the [demos, headers and most libraries](https://github.com/dandoore/samclibs).
+Original compiler and assembler source available [Sam C on GitHub](https://github.com/mkrivos/samcoupecode), [SAM C manual](http://www.samcoupe-pro-dos.co.uk/othersammanuals.html) and copies of the [demos, headers and most libraries](https://github.com/dandoore/samclibs).
 
 | SAM C Library | Type | Function | Sam Specific | Addional Details | Matching | Matching Lib | Priority | Status | 
 | ------------- | ---- | -------- | ------------ | ---------------- | -------- | ------------ | -------- | ------ |
