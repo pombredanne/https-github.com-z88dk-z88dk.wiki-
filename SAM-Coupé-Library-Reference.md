@@ -10,7 +10,7 @@ Original compiler and assembler source available [Sam C on GitHub](https://githu
 
 Total functions: 158
 
-Missing: 63
+Missing/Unaccounted for: 63
 
 **Note:** Do not update this table, it is generated off-site.
 
