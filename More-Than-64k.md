@@ -6,7 +6,7 @@ Quite early on it was realised that this simply isn't enough address space to im
 
 The solution to this is quite straightforward, have more ROM/RAM in the system and page it in when required. This trick isn't just used on the Z80 but also for the 6500 processors.
 
-# Named address spaces (sccz80 and zsdcc)
+# Named address spaces (classic/newlib sccz80 and zsdcc)
 
 Both sccz80 and sdcc support a subset of the Embedded C standard named address spaces. Both of them use them for implementing bank switching. Some examples follow:
 
@@ -21,7 +21,15 @@ spaceb1 int ∗y;         // A pointer to an int in address space spaceb1
 spaceb0 int ∗spaceb1 z; // A pointer in address space spaceb1 that points to an int in address space spaceb0
 ```
 
-# Far Memory (sccz80)
+A functioning example for the +zx is in the [classic examples directory](https://github.com/z88dk/z88dk/tree/master/examples/named-address-spaces) - although the idea is valid for newlib as well.
+
+# __banked function calls (classic sccz80 and zsdcc)
+
+The named address space feature allows the data address space of the z80 to be extended to >64k, where as `__banked` functions allow the creation of projects that contain more than 64k code. 
+
+The general principle behind the feature is that the memory space is divided into a common area containing library and other support routines and a pageable segment where code and const data is paged in. An example implementation for (classic) +msx +gb +zx +sms can be found in the [classic examples directory](https://github.com/z88dk/z88dk/tree/master/examples/banked).
+
+# Far Memory (classic - sccz80)
 
 ## Abstracted Handling
 
@@ -133,9 +141,7 @@ You should also implement the following string.h functions which will make the u
 	extern far char *strrchr_far(far unsigned char *, unsigned char);
 	extern far char *strdup_far(far char *);
 
-# __banked function calls (sccz80 and zsdcc)
 
-See https://github.com/z88dk/z88dk/tree/master/examples/banked for an example
 
 # Trampoline function calls (sccz80 and zsdcc)
 
