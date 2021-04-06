@@ -19,7 +19,7 @@ Original compiler and assembler source available [Sam C on GitHub](https://githu
 | graphics.h | void | scroll(int x, int y, int width, int length, int direct, int size); | Y | SCROLL  command - scroll section of the screen no wrapping |  |  | 1 - High | MISSING |  
 | graphics.h | void | setover(int m); | Y | Graphics writing mode (0 -Normal, 1-XOR, 2-OR, 3-AND) |  |  | 1 - High | MISSING |  
 | misc.h | int | button(void ); |  | Read Mouse Button value (left/right/both) |  |  | 1 - High | MISSING - Add to input.h | 
-| misc.h | int | getpixel(int x, int y); |  | POINT command, return pixel pot colour from x,y or 1/0 from MODE1/2 like ZX | point() | graphics.h | 1 - High | SAM point(x,y) needs to return pot colour of pixel in high colour modes, not just binary set/not set |  
+| misc.h | int | getpixel(int x, int y); |  | POINT command, return pixel pot colour from x,y or 1/0 from MODE1/2 like ZX | point() | graphics.h | 1 - High | #1748 SAM point(x,y) needs to return pot colour of pixel in high colour modes, not just binary set/not set |  
 | misc.h | int | mdriver(void ); |  | Mouse Init /init (return false if no driver) |  |  | 1 - High | MISSING - Add to input.h |  
 | misc.h | int | xmouse(void ); |  | Read Mouse X |  |  | 1 - High | MISSING - Add to input.h |  
 | misc.h | int | ymouse(void ); |  | Read Mouse Y |  |  | 1 - High | MISSING - Add to input.h |  
