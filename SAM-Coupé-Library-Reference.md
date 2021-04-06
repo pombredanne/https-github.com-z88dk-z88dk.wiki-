@@ -8,6 +8,10 @@ Missing functions are rated in priority, low priority functions may exist as par
 
 Original compiler and assembler source available [Sam C on GitHub](https://github.com/mkrivos/samcoupecode), [SAM C manual](http://www.samcoupe-pro-dos.co.uk/othersammanuals.html) and copies of the [demos, headers and Z80 assembler source of most libraries](https://github.com/dandoore/samclibs).
 
+Total functions: 158
+
+Missing: 63
+
 **Note:** Do not update this table, it is generated off-site.
 
 | SAM C Library | Type | Function | Sam Specific | Addional Details | Matching | Matching Lib | Priority | Status | 
