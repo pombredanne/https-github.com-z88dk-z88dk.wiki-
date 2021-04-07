@@ -106,7 +106,7 @@ Characters greater than 127 are interpreted as udgs in 32 column mode.
 
 It is recommended that the utility functions in `<conio.h>` are used to change text colours etc. Colours are indexed as per the colours in `<conio.h>`, to switch to native colour indices you can add the following option to the compile: `-pragma-define:CLIB_CONIO_NATIVE_COLOUR=1`
 
-The screen scrolls when line 24 is "hit", the routine used is in the 48k ROM.
+The screen scrolls when line 24 is "hit", the routine used is at address 3582 in the 48k ROM. To synchronise the colours between BASIC and a z88dk program, add the option `-pragma-export:__zx_console_attr=0x5C8D`
 
 #### Fonts
 
