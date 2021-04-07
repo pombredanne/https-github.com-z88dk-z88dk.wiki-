@@ -24,8 +24,8 @@ The generic console supports both ZX style and an extended VT52 control set.
 
 8,9,11    - Move in x and y as you would expect
 12        - Form feed - clears the screen and moves print posn to 0,0
-10        - Carriage return - advances y and sets x to 0
-13        - Moves down a row
+10        - Line feed - advances y and sets x to 0
+13        - Carriage return - sets x to 0
 16,n      - Set the ink colour (*)
 17,n      - Set the paper colour (*)
 20,n      - Enable/disable inverse video (*)
