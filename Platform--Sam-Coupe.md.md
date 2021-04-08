@@ -124,7 +124,7 @@ Note that E-tracker tunes must be loaded without the player code which is usuall
 
 ## The stack
 
-In the default `allram` subtype, an area for the stack is reserved in segments B+D, by default 1024 bytes are made available, this can increased or decreased using the option `-pragma-define:CRT_STACK_SIZE=nnnn` where `nnnn` is the required size.
+In the default `allram` subtype, an area for the stack is reserved in segments A+B, by default 1024 bytes are made available, this can increased or decreased using the option `-pragma-define:CRT_STACK_SIZE=nnnn` where `nnnn` is the required size.
 
 # Real Hardware
 
