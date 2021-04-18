@@ -134,6 +134,11 @@ Clear the screen and (if necessary for the platform) enter in graphics mode.
 
 Clear the given screen area.
 
+ 
+### `void xorclga(int tlx, int tly, int width, int height)`
+
+Invert the given screen area.
+
 ### `void fill(int x, int y)`
 
 *This function may not work correctly on all platforms since it uses a lot of stack space*
