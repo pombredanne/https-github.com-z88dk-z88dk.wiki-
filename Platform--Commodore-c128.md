@@ -31,7 +31,7 @@ Load the BASIC kickstarter (but a simple SYS jump could also work):
 ..run the thing !
 	RUN
 
-The code is built by default at $3000, different locations can be specified (e.g. '-zorg=16384).
+The code is built by default at $5000, different locations can be specified (e.g. '-zorg=16384).
 
 Specific audio conversion tools can be used to transfer the ".T64" file (e.g. [WAV-PRG](https://sourceforge.net/projects/wav-prg/)).
 
@@ -59,6 +59,12 @@ Then do the following steps:
 The code is built by default at $3000, different locations can be specified (e.g. '-zorg=16384).
 
 A good alternative to c1541 is "DirMaster":  http://style64.org/dirmaster
+
+## Default memory map
+
+* $2000 - Text screen
+* $3000 - Custom font/udgs (if configured)
+* $5000 - Start address of program
 
 ## Using CP/M
 
