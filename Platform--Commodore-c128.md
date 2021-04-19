@@ -60,7 +60,8 @@ The code is built by default at $3000, different locations can be specified (e.g
 
 A good alternative to c1541 is "DirMaster":  http://style64.org/dirmaster
 
-## Default memory map
+
+## Default memory map
 
 * $2000 - Text screen
 * $3000 - Custom font/udgs (if configured)
