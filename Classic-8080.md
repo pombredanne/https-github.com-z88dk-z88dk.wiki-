@@ -33,6 +33,7 @@ The following features from `<stdio.h>` are not available in the 8080 library:
 
 * `funopen()` and stdio pluggable device support
 * The `scanf` family. This can be restored if required.
+* `fwrite()`/`fread()`
 
 ### `<stdlib.h>`
 
