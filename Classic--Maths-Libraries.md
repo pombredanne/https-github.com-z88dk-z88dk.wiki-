@@ -122,12 +122,11 @@ Library                  | Compiler | Value 1       | Value 2       | Ticks
 correct values           | -->      | -0.169075164  | -0.169087605
 genmath                  | sccz80   | -0.169075164  | -0.169087605  | 3_652_736_949
 mbf32 (gbz80)            | sccz80   | -0.169075083  | -0.169086337  | 2_555_855_304
-math48                   | sccz80   | -0.169075164  | -0.169087605  | 2_402_023_498
+math48                   | sccz80   | -0.169075164  | -0.169087605  | 2_377_856_525
 mbf32 (z80)              | sccz80   | -0.169075083  | -0.169086337  | 1_936_249_932
 daimath32                | sccz80   | -0.1690751    | -0.1690863    | 1_899_271_269
 bbcmath                  | sccz80   | -0.16907516   | -0.16908760   | 1_655_789_776
-math32                   | sccz80   | -0.1690752    | -0.1690867    | 1_398_993_950 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
-~~math32_fast~~          | sccz80   | -0.1690752    | -0.1690867    | 1_198_780_765 [*](https://github.com/z88dk/z88dk/commit/efdd07c2e2229cac7cfef97ec01f478004846e39)
+math32                   | sccz80   | -0.1690752    | -0.1690867    | 1_006_879_853 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
 math32_z80n  (integrated)| sccz80   | -0.1690752    | -0.1690867    | 0_576_942_516 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
 math32_z180  (integrated)| sccz80   | -0.1690752    | -0.1690867    | 0_563_700_933 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
 
@@ -139,7 +138,6 @@ correct value            | -->      | 1.274219991
 genmath                  | sccz80   | 1.274219989   | 14_817_735_124
 math32                   | zsdcc    | 1.274219      | 14_504_079_532
 math32                   | sccz80   | 1.274219      | 13_508_416_688
-~~math32_fast~~          | sccz80   | 1.274219      | 12_069_049_285[*](https://github.com/z88dk/z88dk/commit/efdd07c2e2229cac7cfef97ec01f478004846e39)
 math48                   | sccz80   | 1.274219989   | 09_035_519_932
 bbcmath                  | sccz80   | 1.27421999    | 08_017_859_189
 mbf32 (gbz80)            | sccz80   | 1.274220      | 07_941_220_888
@@ -153,10 +151,10 @@ math32_z180  (integrated)| sccz80   | 1.274219      | 06_120_760_761
 Library                  | Compiler | Ticks
 -|-|-
 genmath                  | sccz80   | 3_589_992_847
-math48                   | sccz80   | 3_323_285_174
-math48                   | zsdcc    | 3_205_062_412
-math32                   | zsdcc    | 1_519_179_081
-math32                   | sccz80   | 1_517_530_881 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
+math48                   | zsdcc    | 3_766_086_833
+math48                   | sccz80   | 3_266_168_305
+math32                   | zsdcc    | 1_414_728_459
+math32                   | sccz80   | 1_137_834_777 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
 math16                   | sccz80   | 1_103_113_465
 math32_z80n  (integrated)| sccz80   | 0_922_658_537 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
 math32_z180  (integrated)| sccz80   | 0_892_842_610 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
