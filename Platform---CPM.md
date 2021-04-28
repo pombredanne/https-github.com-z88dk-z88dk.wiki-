@@ -79,6 +79,10 @@ A hardware agnostic generic console that maps into ADM-3A control codes is avail
 
 Where X and Y are replaced with the size of the screen. The maximum supported screen size is 80x25.
 
+## File access
+
+The classic CP/M target supports file access and distinguishes between text and binary files. However, it should be noted that reading and writing is not buffered and as such text mode operations and writing in sizes smaller than a record (128 byte) are fairly inefficient.
+
 ## Optimization
 
 There are a couple of #pragma commands which might be used to cut down the size of the resultant executable:
