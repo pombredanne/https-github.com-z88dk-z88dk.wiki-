@@ -139,12 +139,12 @@ Useful symplectic integrators are freely available, for example the HNBody Sympl
 | Hitech-C Z80 v7.50 |	4121	| DISQ   	|                 |
 | IAR Z80 V4.06A     |	4084	| 2,331,516,019	| 9 min 43 sec    |
 | SDCC	             |  9233	| 5,306,393,684	| 22 min 07 sec   |
-| Z88DK/SCCZ80_CLASSIC|	3814	| 3,624,577,433	| 15 min 06 sec   |
-| Z88DK/SCCZ80_NEW  |	__3608__	| 2,372,283,755	| 9 min 53 sec    |
-| Z88DK/SCCZ80_NEW/MATH32|	5264	| 1,025,105,884	| __4 min 16 sec__  |
+| Z88DK/SCCZ80_CLASSIC|	4493	| 3,658,052,111	| 15 min 14 sec   |
+| Z88DK/SCCZ80_NEW  |	__3363__	| 2,376,486,525	| 9 min 53 sec    |
+| Z88DK/SCCZ80_NEW/MATH32|	5149	| 762,845,940	| __3 min 11 sec__  |
 | Z88DK/SCCZ80_NEW/MATH16|	3227	| 0,384,230,543	| __1 min 36 sec__  |
-| Z88DK/SDCC_CLASSIC|   4770	| 2,253,531,346	| 9 min 23 sec    |
-| Z88DK/SDCC_NEW    |   4356	| 2,247,600,377	| 9 min 22 sec    |
+| Z88DK/SDCC_CLASSIC|   5246	| 2,253,709,929	| 9 min 23 sec    |
+| Z88DK/SDCC_NEW    |   4332	| 2,247,889,896	| 9 min 22 sec    |
 
 Notes:
 
@@ -222,12 +222,12 @@ Floating point performance depends strongly on the number of mantissa bits in th
 | Hitech-C Z80 v7.50  |	32	 | 24	  | 6872  | fail          |              |        |
 | IAR Z80 V4.06A      |	32	 | 24	  | 6524  | 732,360,277   | 183.0901 sec | 5.4618 |
 | SDCC	              | 32	 | 24	  | 14379 | 2,184,812,093 | 546.2030 sec | 1.8308 |
-| Z88DK/SCCZ80_CLASSIC| 48	 | 40	  | 5744  | 1,280,818,856 | 320.2047 sec | 3.1230 |
-| Z88DK/SCCZ80_NEW    |	48	 | 40	  | __5388__  | 973,210,939   | 243.3027 sec | 4.1101 |
-| Z88DK/SCCZ80/MATH32 | 32 	 | 24     | 8823  | 653,436,776   | 163.3592 sec | __6.1215__ |
-| Z88DK/SDCC_CLASSIC  | 32(48)	 | 24(40) | 7045  | 921,228,352   | 230.3071 sec | 4.3420 |
-| Z88DK/SDCC_NEW      | 32(48)	 | 24(40) | 6234  | 916,707,945   | 229.1770 sec | 4.3634 |
-| Z88DK/SDCC/MATH32   | 32 	 | 24     | 9681  | 663,018,211   | 165.7546 sec | 6.0330 |
+| Z88DK/SCCZ80_CLASSIC| 48	 | 40	  | 6359  | 1,283,271,893 | 320.8179 sec | 3.1170 |
+| Z88DK/SCCZ80_NEW    |	48	 | 40	  | __5362__  | 972,899,568   | 243.2248 sec | 4.1114 |
+| Z88DK/SCCZ80/MATH32 | 32 	 | 24     | 8927  | 561,121,915   | 140.2804 sec | __7.1285__ |
+| Z88DK/SDCC_CLASSIC  | 32(48)	 | 24(40) | 7588  | 920,781,972   | 230.1954 sec | 4.3441 |
+| Z88DK/SDCC_NEW      | 32(48)	 | 24(40) | 6221  | 914,412,771   | 228.6031 sec | 4.3743 |
+| Z88DK/SDCC/MATH32   | 32 	 | 24     | 9794  | 568,841,475   | 142.2103 sec | 7.0318 |
 
 Notes:
 
