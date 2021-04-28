@@ -127,8 +127,8 @@ mbf32 (z80)              | sccz80   | -0.169075083  | -0.169086337  | 1_936_249_
 daimath32                | sccz80   | -0.1690751    | -0.1690863    | 1_899_271_269
 bbcmath                  | sccz80   | -0.16907516   | -0.16908760   | 1_655_789_776
 math32                   | sccz80   | -0.1690752    | -0.1690867    | 1_006_879_853 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
-math32_z80n  (integrated)| sccz80   | -0.1690752    | -0.1690867    | 0_576_942_516 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
-math32_z180  (integrated)| sccz80   | -0.1690752    | -0.1690867    | 0_563_700_933 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
+math32_z80n              | sccz80   | -0.1690752    | -0.1690867    | 0_576_942_516 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
+math32_z180              | sccz80   | -0.1690752    | -0.1690867    | 0_563_700_933 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#n-body)
 
 ## [spectral-norm](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/spectral-norm)
 
@@ -143,8 +143,8 @@ bbcmath                  | sccz80   | 1.27421999    | 08_017_859_189
 mbf32 (gbz80)            | sccz80   | 1.274220      | 07_941_220_888
 daimath32                | sccz80   | 1.274220      | 07_483_466_471
 mbf32 (z80)              | sccz80   | 1.274220      | 06_754_491_551
-math32_z80n  (integrated)| sccz80   | 1.274219      | 06_396_544_633
-math32_z180  (integrated)| sccz80   | 1.274219      | 06_120_760_761
+math32_z80n              | sccz80   | 1.274219      | 06_396_544_633
+math32_z180              | sccz80   | 1.274219      | 06_120_760_761
 
 ## [mandelbrot](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/EXAMPLES/benchmarks/mandelbrot)
 
@@ -156,5 +156,5 @@ math48                   | sccz80   | 3_266_168_305
 math32                   | zsdcc    | 1_414_728_459
 math32                   | sccz80   | 1_137_834_777 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
 math16                   | sccz80   | 1_103_113_465
-math32_z80n  (integrated)| sccz80   | 0_922_658_537 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
-math32_z180  (integrated)| sccz80   | 0_892_842_610 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
+math32_z80n              | sccz80   | 0_922_658_537 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
+math32_z180              | sccz80   | 0_892_842_610 [*](https://github.com/z88dk/z88dk/blob/master/libsrc/_DEVELOPMENT/math/float/math32/readme.md#mandelbrot)
