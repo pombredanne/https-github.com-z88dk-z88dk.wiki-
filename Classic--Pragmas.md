@@ -80,7 +80,7 @@ Changes the number of FILE structures that are allocated. The default value is 1
 
 `-pragma-define:CLIB_OPEN_MAX=xx`
 
-When generating CP/M and MSXDOS1 applications configures the number of FCBs allocated by the program. This defaults to CLIB_FOPEN_MAX but in most cases can be easily reduced. If set to 0, then it's recommended that `-lndos` is added to the command line.
+When generating CP/M and MSXDOS1 applications configures the number of FCBs allocated by the program. This defaults to 3. If set to 0, then it's recommended that `-lndos` is added to the command line.
 
 `-pragma-define:CRT_ENABLE_COMMANDLINE=0`
 
