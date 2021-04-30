@@ -73,6 +73,18 @@ NB. If the only part of stdio that you use is printf(), then you can utilise pri
 
 Changes the number of FILE structures that are allocated. The default value is 10, for systems without a storage driver this can be reduced to 3 with no ill effects.
 
+`-pragma-define:CLIB_OPEN_MAX=xx`
+
+When generating CP/M and MSXDOS1 applications configures the number of FCBs allocated by the program. This defaults to CLIB_FOPEN_MAX but in most cases can be easily reduced. If set to 0, then it's recommended that `-lndos` is added to the command line.
+
+`-pragma-define:CRT_ENABLE_COMMANDLINE=0`
+
+Disables gathering argc and argv for main on that targets that support command line arguments. When this pragma is supplied, argc and argv are garbage and should not be used.
+
+`-pragma-define:CRT_COMMANDLINE_REDIRECTION=0`
+
+Disables the file redirection ('<', '>') behaviour when parsing command line arguments. 
+
 ## Generic console (VT52) behaviour
 
 `-pragma-redirect:fputc_cons=fputc_cons_generic` or `--generic-console`
