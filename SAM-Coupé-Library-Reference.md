@@ -40,7 +40,7 @@ Missing/Unaccounted for: 63
 | graphics.h | void | close_scr(int scr); | Y | Close screen (number) |  |  | 2 - Med | MISSING |  
 | graphics.h | void | cls(int a); | Y | CLS different screen areas (0=screen/1=window) |  |  | 2 - Med | MISSING |  
 | graphics.h | void | display(int scr); | Y | Display screen (number) |  |  | 2 - Med | MISSING |  
-| graphics.h | void | fatpix(int a); | Y | FATPIX mode for MODE 3 pixels (also sets xrg to 256) |  |  | 2 - Med | MISSING |  
+| graphics.h | void | fatpix(int a); | Y | FATPIX mode for MODE 3 pixels (also sets xrg to 256) |  |  | 2 - Med | MISSING - #1772|  
 | graphics.h | void | open_scr(int scr, int mode); | Y | Open new screen (number, MODE) |  |  | 2 - Med | MISSING |  
 | stdio.h | char | * fgets(char *string, int max, int stream); |  | Crippled FileIO - only works for streams in SAMC | *fgets() | stdio.h | 2 - Med | No FileIO yet |  
 | stdio.h | int | fgetc(int strm); |  | Crippled FileIO - only works for streams in SAMC | fgetc() | stdio.h | 2 - Med | No FileIO yet |  
