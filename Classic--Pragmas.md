@@ -79,7 +79,7 @@ When generating CP/M and MSXDOS1 applications configures the number of FCBs allo
 
 `-pragma-define:CRT_ENABLE_COMMANDLINE=0`
 
-Disables gathering argc and argv for main on that targets that support command line arguments. When this pragma is supplied, argc and argv are garbage and should not be used.
+Disables gathering argc and argv for main on that targets that support command line arguments. When this pragma is supplied, argc=0 and argv=NULL are supplied to the main function.
 
 `-pragma-define:CRT_COMMANDLINE_REDIRECTION=0`
 
