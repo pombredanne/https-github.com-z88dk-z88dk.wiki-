@@ -6,6 +6,11 @@ These pragmas are written to a file (temporary) "zcc_opt.def" as assembler defin
 
 This file is started afresh for each invocation of zcc, so if you are using a single line compilation then you can write pragmas within source files. However, when using a makefile the project is normally split into many source files that are individually compiled to object files, as a result it's recommended that all `#pragma` statements should be located into a single file, say `zpragma.inc` and an linker option added: `-pragma-include:zpragma.inc`.
 
+The pragmas below are in the format specified on the command line, to place them in a source file, apply the following syntax:
+
+* `#pragma define NAME = value`
+* `#pragma redirect NAME = value`
+
 ## Controlling the memory map
 
 `-pragma-define:CRT_ORG_CODE=xxx`
