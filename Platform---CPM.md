@@ -87,13 +87,11 @@ The classic CP/M target supports file access and distinguishes between text and 
 
 There are a couple of #pragma commands which might be used to cut down the size of the resultant executable:
 
-**#pragma output nostreams**      - No stdio disc files
+* `-pragma-define:CRT_ENABLE_COMMANDLINE=0` - Disable command line argument parsing
+* `-pragma-define:CRT_COMMANDLINE_REDIRECTION=0` - Disable command line argument redirection ('<', '>')
+* `-pragma-define:CRT_OPEN_MAX=0` - Disable file support, you will link with `-lndos`
+* `#pragma output noprotectmsdos` - strip the [MS-DOS protection header](platform/cpm#program_boot_protection)
 
-**#pragma output nofileio**       - No fileio at all
-
-**#pragma output noprotectmsdos** - strip the [MS-DOS protection header](platform/cpm#program_boot_protection)
-
-**#pragma output noredir**        - do not insert the file redirection option while parsing the command line arguments (useless if "nostreams" is set)
 
 ## Hardware specific extensions
 
