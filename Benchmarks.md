@@ -26,19 +26,19 @@ sdcc is a current open source C cross compiler targetting several small CPUs inc
 
 ## Z88DK/SCCZ80_CLASSIC
 
-(Nightly build 20 April 2020) z88dk's native C compiler sccz80 using the classic C library in z88dk. sccz80 is a derivative of small C with most small C limitations eliminated. Its primary feature is a comprehensive (classic) C library written in assembly language.
+(Nightly build 28 April 2021) z88dk's native C compiler sccz80 using the classic C library in z88dk. sccz80 is a derivative of small C with most small C limitations eliminated. Its primary feature is a comprehensive (classic) C library written in assembly language.
 
 ## Z88DK/SDCC_CLASSIC
 
-(Nightly build 20 April 2020) sdcc 4.0.0 #11566 is used to translate C code with z88dk supplying its (classic) C library and startup code for targets.
+(Nightly build 28 April 2021) sdcc 4.1.4 #12250 is used to translate C code with z88dk supplying its (classic) C library and startup code for targets.
 
 ## Z88DK/SCCZ80_NEW
 
-(Nightly build 20 April 2020) z88dk's native C compiler sccz80 using the new C library in z88dk. sccz80 is a derivative of small C with most small C limitations eliminated. Its primary feature is a comprehensive (new) C library written in assembly language.
+(Nightly build 28 April 2021) z88dk's native C compiler sccz80 using the new C library in z88dk. sccz80 is a derivative of small C with most small C limitations eliminated. Its primary feature is a comprehensive (new) C library written in assembly language.
 
 ## Z88DK/SDCC_NEW
 
-(Nightly build 20 April 2020) sdcc 4.0.0 #11566 is used to translate C code with z88dk supplying its (new) C library and startup code for targets.
+(Nightly build 28 April 2021) sdcc 4.1.4 #12250 is used to translate C code with z88dk supplying its (new) C library and startup code for targets.
 
 # Binary-Trees
 
@@ -141,7 +141,7 @@ Useful symplectic integrators are freely available, for example the HNBody Sympl
 | SDCC	             |  9233	| 5,306,393,684	| 22 min 07 sec   |
 | Z88DK/SCCZ80_CLASSIC|	4493	| 3,658,052,111	| 15 min 14 sec   |
 | Z88DK/SCCZ80_NEW  |	__3363__	| 2,376,486,525	| 9 min 53 sec    |
-| Z88DK/SCCZ80_NEW/MATH32|	5149	| 762,845,940	| __3 min 11 sec__  |
+| Z88DK/SCCZ80_NEW/MATH32|	5149	| 754,266,702	| __3 min 8 sec__  |
 | Z88DK/SCCZ80_NEW/MATH16|	3227	| 0,384,230,543	| __1 min 36 sec__  |
 | Z88DK/SDCC_CLASSIC|   5246	| 2,253,709,929	| 9 min 23 sec    |
 | Z88DK/SDCC_NEW    |   4332	| 2,247,889,896	| 9 min 22 sec    |
@@ -224,10 +224,10 @@ Floating point performance depends strongly on the number of mantissa bits in th
 | SDCC	              | 32	 | 24	  | 14379 | 2,184,812,093 | 546.2030 sec | 1.8308 |
 | Z88DK/SCCZ80_CLASSIC| 48	 | 40	  | 6359  | 1,283,271,893 | 320.8179 sec | 3.1170 |
 | Z88DK/SCCZ80_NEW    |	48	 | 40	  | __5362__  | 972,899,568   | 243.2248 sec | 4.1114 |
-| Z88DK/SCCZ80/MATH32 | 32 	 | 24     | 8927  | 561,121,915   | 140.2804 sec | __7.1285__ |
+| Z88DK/SCCZ80/MATH32 | 32 	 | 24     | 8921  | 567,396,426   | 141.8491 sec | __7.0497__ |
 | Z88DK/SDCC_CLASSIC  | 32(48)	 | 24(40) | 7588  | 920,781,972   | 230.1954 sec | 4.3441 |
 | Z88DK/SDCC_NEW      | 32(48)	 | 24(40) | 6221  | 914,412,771   | 228.6031 sec | 4.3743 |
-| Z88DK/SDCC/MATH32   | 32 	 | 24     | 9794  | 568,841,475   | 142.2103 sec | 7.0318 |
+| Z88DK/SDCC/MATH32   | 32 	 | 24     | 10113 | 576,187,434   | 144.0468 sec | 6.9421 |
 
 Notes:
 
