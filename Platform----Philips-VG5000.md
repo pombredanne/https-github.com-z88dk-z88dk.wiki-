@@ -10,7 +10,7 @@ The Philips VG-5000 was a computer marketed mostly in France, about 70000 machin
 ## Classic library support (`+pmd85`)
 
 * [ ] Native console output
-* [ ] Native console input
+* [x] Native console input
 * [x] ANSI vt100 engine
 * [x] Generic console
     * [x] Redefinable font 
@@ -23,9 +23,9 @@ The Philips VG-5000 was a computer marketed mostly in France, about 70000 machin
 * [x] Lores graphics
 * [ ] Hires graphics (only plot)
 * [ ] PSG sound
-* [ ] One bit sound
+* [x] One bit sound
 * [x] Inkey driver
-* [ ] Hardware joystick
+* [x] Hardware joystick
 * [ ] File I/O
 * [ ] Interrupts
 * [ ] RS232
