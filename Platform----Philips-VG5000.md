@@ -21,7 +21,7 @@ The Philips VG-5000 was a computer marketed mostly in France, about 70000 machin
     * [ ] Bold attribute
     * [ ] Underline attribute
 * [x] Lores graphics
-* [ ] Hires graphics (only plot)
+* [ ] Hires graphics
 * [ ] PSG sound
 * [x] One bit sound
 * [x] Inkey driver
