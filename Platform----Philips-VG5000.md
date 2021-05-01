@@ -2,7 +2,7 @@
 
 The Philips VG-5000 was a computer marketed mostly in France, about 70000 machines were sold.
 
-* Z80 @ $Mhz
+* Z80 @ 4Mhz
 * 16kb ROM
 * 24kb RAM
 * EF9345 video processor, 25x40 columns
