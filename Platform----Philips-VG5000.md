@@ -7,7 +7,7 @@ The Philips VG-5000 was a computer marketed mostly in France, about 70000 machin
 * 24kb RAM
 * EF9345 video processor, 25x40 columns
 
-## Classic library support (`+pmd85`)
+## Classic library support (`+vg5k`)
 
 * [ ] Native console output
 * [x] Native console input
