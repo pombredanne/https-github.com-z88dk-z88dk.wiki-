@@ -1,4 +1,4 @@
-## Hardware summary
+## Hardware summary
 
 The Philips VG-5000 was a computer marketed mostly in France, about 70000 machines were sold.
 
