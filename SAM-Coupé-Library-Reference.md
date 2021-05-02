@@ -10,11 +10,11 @@ Original compiler and assembler source available [Sam C on GitHub](https://githu
 
 Total functions: 158
 
-Missing/Unaccounted for: 63
+Missing/Unaccounted for: 62
 
 **Note:** Do not update this table, it is generated off-site.
 
-| SAM C Library | Type | Function | Sam Specific | Addional Details | Matching | Matching Lib | Priority | Status | 
+| SAM C Library | Type | Function | Sam Specific | Addional Details | Matching | Matching Lib | Priority | Status |  
 | ------------- | ---- | -------- | ------------ | ---------------- | -------- | ------------ | -------- | ------ |
 | conio.h | void | blocks(int b); | Y | BASIC Blocks toggle UDG Graphics for foreign chars(1=on/0=off) |  |  | 1 - High | MISSING |  
 | conio.h | void | csize(int x,int y); | Y | BASIC CSIZE (x can be 6 or 8, y can be 8,9 or 16) |  |  | 1 - High | MISSING |  
@@ -25,7 +25,7 @@ Missing/Unaccounted for: 63
 | graphics.h | void | scroll(int x, int y, int width, int length, int direct, int size); | Y | SCROLL  command - scroll section of the screen no wrapping |  |  | 1 - High | MISSING |  
 | graphics.h | void | setover(int m); | Y | Graphics writing mode (0 -Normal, 1-XOR, 2-OR, 3-AND) |  |  | 1 - High | MISSING |  
 | misc.h | int | button(void ); |  | Read Mouse Button value (left/right/both) |  |  | 1 - High | MISSING - Add to input.h | 
-| misc.h | int | getpixel(int x, int y); |  | POINT command, return pixel pot colour from x,y or 1/0 from MODE1/2 like ZX | point() | graphics.h | 1 - High | #1748 SAM point(x,y) needs to return pot colour of pixel in high colour modes, not just binary set/not set |  
+| misc.h | int | getpixel(int x, int y); |  | POINT command, return pixel pot colour from x,y or attribute from MODE1/2 | point() | graphics.h | 1 - High | #1748 SAM point(x,y) needs to return pot colour of pixel in high colour modes, not just binary set/not set |  
 | misc.h | int | mdriver(void ); |  | Mouse Init /init (return false if no driver) |  |  | 1 - High | MISSING - Add to input.h |  
 | misc.h | int | xmouse(void ); |  | Read Mouse X |  |  | 1 - High | MISSING - Add to input.h |  
 | misc.h | int | ymouse(void ); |  | Read Mouse Y |  |  | 1 - High | MISSING - Add to input.h |  
@@ -38,9 +38,8 @@ Missing/Unaccounted for: 63
 | conio.h | void | inverse(int i); |  | Invert text pen/paper (1=on/0=off) |  |  | 2 - Med | MISSING - refactor zx_setattrinverse(b) ? |  
 | conio.h | void | window(int a,int b,int c,int d); | ? | Text Window create |  |  | 2 - Med | MISSING |  
 | graphics.h | void | close_scr(int scr); | Y | Close screen (number) |  |  | 2 - Med | MISSING |  
-| graphics.h | void | cls(int a); | Y | CLS different screen areas (0=screen/1=window) |  |  | 2 - Med | MISSING |  
+| graphics.h | void | cls(int a); | Y | CLS different screen areas (0=screen/1=window) |  |  | 2 - Med | MISSING - Support for clearing text window |  
 | graphics.h | void | display(int scr); | Y | Display screen (number) |  |  | 2 - Med | MISSING |  
-| graphics.h | void | fatpix(int a); | Y | FATPIX mode for MODE 3 pixels (also sets xrg to 256) |  |  | 2 - Med | MISSING - #1772|  
 | graphics.h | void | open_scr(int scr, int mode); | Y | Open new screen (number, MODE) |  |  | 2 - Med | MISSING |  
 | stdio.h | char | * fgets(char *string, int max, int stream); |  | Crippled FileIO - only works for streams in SAMC | *fgets() | stdio.h | 2 - Med | No FileIO yet |  
 | stdio.h | int | fgetc(int strm); |  | Crippled FileIO - only works for streams in SAMC | fgetc() | stdio.h | 2 - Med | No FileIO yet |  
@@ -48,25 +47,23 @@ Missing/Unaccounted for: 63
 | stdio.h | void | fputc(int c, int strm); |  | Crippled FileIO - only works for streams in SAMC | fputc() | stdio.h | 2 - Med | No FileIO yet |  
 | stdio.h | void | fputs(char *s, int strm); |  | Crippled FileIO - only works for streams in SAMC | fputs() | stdio.h | 2 - Med | No FileIO yet |  
 | stdio.h | int | fscanf(...); |  | Crippled FileIO - only works for streams in SAMC | fscanf() | stdio.h | 2 - Med | No FileIO yet |  
-| stdio.h | void | print(char *s); |  | Crippled FileIO - only works for streams in SAMC | fputs() | stdio.h | 2 - Med | No FileIO yet |  
 | stdio.h | void | stream(int stream); | Y | Crippled FileIO - only works for streams in SAMC |  |  | 2 - Med | No FileIO yet |  
 | conio.h | void | tab(int t); | Y | Move text cursor position right by tab value t |  |  | 3 - Low | MISSING |  
 | graphics.h | void | fill(int x, int y, int mode); |  | Fill area - Does not support fill with pattern | fill() | graphics.h | 3 - Low | Missing Fill support |  
 | graphics.h | int | setpattern(int p); | Y | Fill pattern |  |  | 3 - Low | MISSING | 
-| graphics.h | void | triangle(int x0, int y0, int x1, int y1, int x2, int y2); | ? | Pointless? |  |  | 3 - Low | MISSING |  
+| graphics.h | void | triangle(int x0, int y0, int x1, int y1, int x2, int y2); | ? | Pointless - can be replicated in vanilla C |  |  | 3 - Low | MISSING |  
 | misc.h | int | blitz(...); | Y | BASIC Blitz function |  |  | 3 - Low | MISSING |  
 | misc.h | int | getgraphmode(void ); | Y | Return current MODE value |  |  | 3 - Low | MISSING IOCTL_GENCON_GET_MODE needed? | 
-| misc.h | void | outtextxy(int x, int y, char *s); | ? | Print string at x,y |  |  | 3 - Low | MISSING |  
-| misc.h | extern  | REGS regs; | ? | ? |  |  | 3 - Low | MISSING |  
+| misc.h | void | outtextxy(int x, int y, char *s); | ? | Print string at x,y - Code does a gotoxy() followed |  |  | 3 - Low | MISSING |  
+| misc.h | extern  | REGS regs; | ? | What is this? |  |  | 3 - Low | MISSING |  
 | misc.h | int | user(unsigned addr); | ? | What is this? |  |  | 3 - Low | MISSING |  
 | stdio.h | char | * input(int line, int column, int max); | Y | BASIC INPUT at x,y of length (non standard) |  |  | 3 - Low | MISSING |  
 | stdio.h | char | * MEMPTR_;    // pointer to first free byte | ? | Pointer used by malloc and calloc? Same as free? |  |  | 3 - Low | MISSING |  
 | stdio.h | char | * skip(char *string); |  | Skip whitespace in string? Not in manual |  |  | 3 - Low | MISSING |  
-| stdio.h | const unsigned  | heaplen_; | ? | Return Heap length |  |  | 3 - Low | MISSING |  
-| stdio.h | const unsigned  | stklen_; | ? | Return Stack Length |  |  | 3 - Low | MISSING |  
+| stdio.h | const unsigned  | heaplen_; | ? | Holds Heap length |  |  | 3 - Low | MISSING |  
+| stdio.h | const unsigned  | stklen_; | ? | Holds Stack Length |  |  | 3 - Low | MISSING |  
 | stdlib.h | void | gdump(); |  | Bitmap output entire screen to printer |  |  | 3 - Low | MISSING - Refactor zx_hardcopy()? |  
 | stdlib.h | int | outprn(int c); |  | Text output value to printer |  |  | 3 - Low | MISSING - Refactor zx_lprintc() |  
-| stdlib.h | void | swap(unsigned width, unsigned from, unsigned to); |  | Swaps memory blocks over? |  |  | 3 - Low | MISSING |  
 | stdlib.h | void | tdump(); |  | Text output entire screen to printer |  |  | 3 - Low | MISSING - Refactor zx_print_buf()? |  
 | string2.h | char | * itod(int nbr, char *str, int sz); | ? | Convert integer number as string to decimal as string - needed? |  |  | 3 - Low | MISSING |  
 | string2.h | char | * itoo(int nbr, char *str, int sz); | ? | Convert integer number as string to octal as string - needed? |  |  | 3 - Low | MISSING |  
@@ -87,26 +84,27 @@ Missing/Unaccounted for: 63
 | ctype.h | char | isalnum(int c); |  |  | isalnum(int) | ctype.h |  |  | 
 | ctype.h | char | isalpha(int c); |  |  | isalpha(int) | ctype.h |  |  |  
 | ctype.h | char | isascii(int c); |  |  | isascii(int) | ctype.h |  |  |  
-| ctype.h | char | iscntrl(int c); |  |  | isgraph(int) | ctype.h |  |  |  
-| ctype.h | char | isgraph(int c); |  |  | isupper(int) | ctype.h |  |  |  
+| ctype.h | char | iscntrl(int c); |  |  | iscntrl(int) | ctype.h |  |  |  
+| ctype.h | char | isgraph(int c); |  |  | isgraph(int) | ctype.h |  |  |  
 | ctype.h | char | islower(int c); |  |  | islower(int) | ctype.h |  |  |  
 | ctype.h | char | isprint(int c); |  |  | isprint(int) | ctype.h |  |  |  
 | ctype.h | char | ispunct(int c); |  |  | ispunct(int) | ctype.h |  |  |  
-| ctype.h | char | isupper(int c); |  |  | toupper(int) | ctype.h |  |  |  
+| ctype.h | char | isupper(int c); |  |  | isupper(int) | ctype.h |  |  |  
 | ctype.h | char | isxdigit(int c); |  |  | isxdigit(int) | ctype.h |  |  |  
 | ctype.h | char | toascii(int c); |  |  | toascii(int) | ctype.h |  |  |  
 | ctype.h | char | tolower(int c); |  |  | tolower(int) | ctype.h |  |  |  
 | ctype.h | char | toupper(int c); |  |  | toupper(int) | ctype.h |  |  |  
-| graphics.h | void | allpalette(int pal); |  | Set all palette entries | sam_load_palette | sam.h |  |  |  
+| graphics.h | void | allpalette(int pal); |  | Set all palette entries | sam_load_palette | arch/sam.h |  |  |  
 | graphics.h | void | box(int x, int y, int w, int l); |  | Draw an unfilled box | drawb() | graphics.h |  |  |  
 | graphics.h | void | circle(int x, int y, int r); |  | Draw a circle | circle() | graphics.h |  |  |  
 | graphics.h | void | drawto(int x, int y); |  | Draw from current position to x,y | drawto() | graphics.h |  |  |  
+| graphics.h | void | fatpix(int a); | Y | FATPIX mode for MODE 3 pixels (also sets xrg to 256) | sam_fatpix | arch/sam.h |  | Request #1772 |  
 | graphics.h | int | getx(); |  | Current X graphics position | getx() | graphics.h |  |  |  
 | graphics.h | int | gety(); |  | Current Y graphics position | gety() | graphics.h |  |  |  
 | graphics.h | void | line(int x0, int y0, int x1, int y1); |  | Draw linefrom x1,y1 to x2,y2 | draw() | graphics.h |  |  |  
 | graphics.h | void | mode(int m); |  | Set screen MODE (MODE) | console_ioctl() | ioctl.h |  |  |  
 | graphics.h | void | moveto(int x, int y); |  | Move graphics plot position | setpos() | graphics.h |  |  |  
-| graphics.h | void | palette(int pos, int col); |  | Set palette entries (pot, value) | sam_set_palette | sam.h |  |  | 
+| graphics.h | void | palette(int pos, int col); |  | Set palette entries (pot, value) | sam_set_palette | arch/sam.h |  |  | 
 | graphics.h | void | plot(int x, int y); |  | Plot pixel at x,y | plot() | graphics.h |  |  | 
 | stdio.h | #define |  clrscr() clscr() |  |  | clrscr() | conio.h |  |  |  
 | stdio.h | void | * calloc(unsigned n, unsigned size); |  |  | *calloc() | malloc.h |  |  |  
@@ -126,6 +124,7 @@ Missing/Unaccounted for: 63
 | stdio.h | int | isdigit(int c); |  |  | isdigit(int) | ctype.h |  |  |  
 | stdio.h | int | isspace(int c); |  |  | isspace(int) | ctype.h |  |  |  
 | stdio.h | int | kbhit( void ); |  |  | kbhit() | conio.h |  |  |  
+| stdio.h | void | print(char *s); |  | printf() a string | printf() | stdio.h |  | No FileIO yet |  
 | stdio.h | int | printf(...);   // this six functions are variable !!! |  |  | printf() | stdio.h |  |  |  
 | stdio.h | void | putc(int c); |  | Put character diretcly onto stdout | putc() | stdio.h |  |  |  
 | stdio.h | void | putchar(int c); |  |  | putchar() | stdio.h |  |  |  
@@ -143,6 +142,7 @@ Missing/Unaccounted for: 63
 | stdlib.h | int | rand(); |  | Return Random Number  | rand() | stdlib.h |  |  |  
 | stdlib.h | void | sort(char *base,int offset, int size, int items, int (*comp)(), int (*swap)()); |  | Sort function | qsort_sccz80() | stdlib.h |  |  |  
 | stdlib.h | void | srand(int seed); |  | Set random seed | srand() | stdlib.h |  |  |  
+| stdlib.h | void | swap(unsigned width, unsigned from, unsigned to); |  | Swaps characters - part of sort routine | qsort_sccz80() | stdlib.h |  |  |  
 | string.h | char | * memchr(char *s, int c, unsigned width); |  |  | *memchr() | string.h |  |  |  
 | string.h | void | * memcpy(char *a,char *b,unsigned c); |  |  | *memcpy() | string.h |  |  |  
 | string.h | void | * memset(char *a,int b,unsigned c); |  |  | *memset() | string.h |  |  |  
