@@ -81,7 +81,9 @@ Where X and Y are replaced with the size of the screen. The maximum supported sc
 
 ## File access
 
-The classic CP/M target supports file access and distinguishes between text and binary files. However, it should be noted that reading and writing is not buffered and as such text mode operations and writing in sizes smaller than a record (128 byte) are fairly inefficient.
+The classic CP/M target supports file access and distinguishes between text and binary files. A sector cache is implemented at the fcntl to speed up byte-orientated read and write operations.
+
+The default configuration provides space for 3 FCBs, to configure more use the pragma: `-pragma-define:CLIB_OPEN_FILE=nn`
 
 ## Optimization
 
