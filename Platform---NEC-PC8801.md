@@ -46,7 +46,7 @@ The screen mode can be switched using the `console_ioctl()` function. The follow
 * Mode 1: 40x25, 640x200 graphics
 * Mode 2: 80x25 (bitmap characters), 640x200 graphics
 * Mode 32: 80x25, 160x100 semigraphics
-* Mode 33: 840x24, broken graphics
+* Mode 33: 40x25, broken graphics
 * Mode 34: 80x25 (bitmap characters), 160x100 semigraphics
 
 The targets starts up in mode 0. It's recommended that mode 2 is used for applications: it provides more functionality and is hardware accelerated so is actually faster.
