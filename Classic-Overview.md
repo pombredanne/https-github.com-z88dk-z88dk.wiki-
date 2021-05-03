@@ -9,6 +9,7 @@ The classic library can be used with both _sccz80_ and _zsdcc_ and the final bin
 Originally, the classic library and new library were completely different code bases, however over time they have converged with the result that the only differences are as follows:
 
 * Classic supports many more targets and has different way of implementing the crt0 startup file
+* Classic uses the same library for both _sccz80_ and _sdcc_ compiles
 * `<stdio.h>` is a different implementation that supports file io
 * Classic supports multiple floating point libraries for pure _sccz80_ compilations
 * Classic provides the cross platform libraries detailed below
@@ -58,9 +59,14 @@ The classic library additionally provides [named heap](Classic-allocation) and [
 
 The classic library supports both a 1 bit [`<sound.h>`](Classic-1-bit-sound) and a PSG [`<psg.h>`](Classic---PSG-Library) based sound interface. 
 
+The 1 bit library defines a collection of sound effects in addition to a tone generator.
+
 Certain targets with an AY chip additionally support [WYZ Player](Classic-WYZ-Player) and VortexTracker II for playing music and sound effects.
 
-The 1 bit library defines a collection of sound effects in addition to a tone generator.
+Targets with a sn76489 have access to PSGLib.
+
+Targets with a SAA1099 (at the moment just the SAM Coupé) have access etracker
+
 
 # Input Library
 
@@ -74,8 +80,8 @@ Targets generally support at least some form of joystick support. Polling of the
 
 There are the following effective levels of support:
 
-* Two keyboard joysticks using ROM functions: Only a single direction can be registered at once
-* Multiple keyboard joysticks using inkey driver: Multiple directions supported
+* Keyboard joysticks using ROM functions: Only a single direction can be registered at once
+* Keyboard joysticks using inkey driver: Multiple directions supported
 * Hardware joystick support: Multiple directions supported
 
 # Debug Library
@@ -111,7 +117,7 @@ The library provides functionality to implement general purpose [interrupts](int
 
 ## Preemptive multitasking
 
-A simple preemptive multitasking driver is available in `[<threading/preempt.h>` this allows multiple tasks to concurrently execute (for example
+A simple preemptive multitasking driver is available in `<threading/preempt.h>` this allows multiple tasks to concurrently execute (for example
 a game simulation and the user interaction) without the need to implement coroutines.
 
 
