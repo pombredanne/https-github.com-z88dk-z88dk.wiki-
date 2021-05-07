@@ -267,14 +267,14 @@ The appmake tool can be run in “dumb” mode to generate the corresponding aud
 
 In example:
 
-	appmake +zx -b cassette.tap --audio --fast --dumb
+	z88dk-appmake +zx -b cassette.tap --audio --fast --dumb
 
 Builds the audio track for the given '.tap' file.
 The optional ”fast” flag will produce a non-standard audio track which, even if faster, should be still loadable by the real computer. 
 
 An advanced feature can glue together binary blocks to get a ready made package; in example:
 
-	appmake +zx -b program.bin --org 32752 --screen screen.scr --fast --extreme -o program.tap
+	z88dk-appmake +zx -b program.bin --org 32752 --screen screen.scr --fast --extreme -o program.tap
 
 
 The screen can be passed in 'tap' or 'tzx' format too.
