@@ -71,6 +71,10 @@ All 4 screen modes on the SAM are supported by z88dk, to switch to mode 2 for ex
 
 The screen modes are presented as they are for SAM Basic, that is with mode=1 representing the +zx compatible mode and 4 being the high colour screen mode.
 
+### Startup mode
+
+The pragma `-pragma-define:CLIB_DEFAULT_SCREEN_MODE=XX` (where XX is one of: 1,2,3,4,-1) can be used to configure the startup mode. By default the target will startup in mode 4, but if XX=-1 then the screen mode isn't changed.
+
 ## Screen Fonts
 
 Alternative SAM Coupé fonts can be loaded using .asm files as per the guide in the [Generic Console](https://github.com/z88dk/z88dk/wiki/Classic-GenericConsole) instructions, CH8 format is the same format as used on the SAM (768 bytes for ASCII set, 1096 bytes for extended set).
@@ -121,6 +125,8 @@ In the default allram subtype, NMI handlers can be registered with:
 The beeper is supported via the functions in `<games.h>`, E-tracker module support is available via `<psg/etracker.h>`
 
 Note that E-tracker tunes must be loaded without the player code which is usually attached to the start of the file, this can be done in an editor by finding the string 'ETracker (C) BY ESI', moving 10 bytes back and removing everything before that point.
+
+The +sam target also includes AY emulation and WYZ tracker support is available, this can help when creating portable games however it does come with approximately 8k cost in terms of memory usage.
 
 ## The stack
 
