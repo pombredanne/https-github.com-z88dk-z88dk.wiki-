@@ -26,6 +26,11 @@ After the program being loaded (#L adva.obj), the user can pass the parameters i
 
 The program location can be changed with the "-zorg=" option
 
+A fixed program name for argv[0] can be set with the following #pragma directive:
+    #pragma string name <application name>
+
+
+
 ### Existing S-OS versions
 
 Wikipedia lists the following machines being supported:
