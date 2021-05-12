@@ -65,7 +65,7 @@ Certain targets with an AY chip additionally support [WYZ Player](Classic-WYZ-Pl
 
 Targets with a sn76489 have access to PSGLib.
 
-Targets with a SAA1099 (at the moment just the SAM Coupé) have access etracker
+Targets with a SAA1099 (at the moment just the SAM Coupé) have access to etracker in addition to AY emulation code that allows use of [WYZ Player].
 
 
 # Input Library
