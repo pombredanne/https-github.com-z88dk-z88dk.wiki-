@@ -81,7 +81,7 @@ Alternative SAM Coupé fonts can be loaded using .asm files as per the guide in 
 
 ## Palette/CLUT mapping
 
-The SAM Coupé has a user definable palette and thus palette mapping does not take place for gencon modes 2,3,4.
+The SAM Coupé has a user definable palette and thus palette mapping does not take place for gencon modes 3 and 4.
 
 The default palette in modes 1,2 & 4 matches the +zx, and can be seen in the coloured mandelbrot below:
 
