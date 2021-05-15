@@ -128,9 +128,9 @@ Configures the `getk()` to use the inkey() method rather than the platform firmw
 
 Configures the `fgets_cons()` function to not print it's soft cursor (`_`) - you may need to set this if you're using firmware routines that implement their own cursor (for example on CP/M, MSX).
 
-`-pragma-define:CLIB_KBHIT_NOSTORE=1`
+`-pragma-define:CLIB_KBHIT_DELAY=nnn`
 
-This option prevents the caching of the keypress detected by `kbhit()` it can be useful on targets where the keyboard routines used for `kbhit()/getch()` aren't debounced.
+Depending on how they are used, the kbhit/getch combination may return the same key in quick succession. This option is useful for slowing down the sequence, particularly on targets where the keyboard routines are `in_Inkey` based.
 
 ## ANSI (vt100) terminal
 
