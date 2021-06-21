@@ -29,11 +29,15 @@ Z88dk can be used to create a z88 [Applications](z88_applications) that can be r
 
 ### Command Line
 
-	zcc +z88 -create-app ...
+	zcc +z88 -subtype=app -create-app ...
 
 The output of this command will be a .epr file (suitable for insertion into Emulators) and .63 (.62, .61, .60) files representing the individual banks.
 
+To generate files suitable for Installation with OZ4.5+ and OZ5 use -subtype=installer. Both 4 and 5 installer files will be created, (.app, .apX for OZ4.x and .a5p for OZ5).
+
 ## Z88 Packages
+
+_Only useful for OZ3.x and OZ4.0_
 
 Z88dk can create [Packages](z88_packages) (shared libraries) that allow code to be shared between applications. [ZSock](http://www.rst38.org.uk/zsock) was built using this technique to provide TCP/IP services for the z88.
 
@@ -77,8 +81,6 @@ Z80asm can include a relocator to the head of a generated binary. This will caus
 
 	
 	zcc +z88 -clib=net
-
-
 
 
 ### Links
