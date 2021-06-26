@@ -84,7 +84,7 @@ Where X and Y are replaced with the size of the screen. The maximum supported sc
 
 The classic CP/M target supports file access and distinguishes between text and binary files. A sector cache is implemented at the fcntl to speed up byte-orientated read and write operations.
 
-The default configuration provides space for 3 FCBs, to configure more use the pragma: `-pragma-define:CLIB_OPEN_FILE=nn`
+The default configuration provides space for 3 FCBs, to configure more use the pragma: `-pragma-define:CLIB_OPEN_MAX=nn`
 
 'stdin' and 'stdout' redirection is supported also at startup, by passing the "<filein" or ">fileout" command arguments, this will impact on the FCB usage.
 
