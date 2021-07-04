@@ -55,7 +55,7 @@ mbf64 can be used with sccz80.
 
 math32 provides a 32 bit floating point format that is mostly compliant with IEEE-754, which is also the native floating point format of sdcc. The library can be used with both sccz80 and zsdcc.
 
-`math32` supports the z180 and ZX Spectrum Next z80n hardware multiply instructions, providing accelerated performance for both these platforms. The z80 CPU is supported through emulation of the hardware multiply format `16_8x8`, and also provides good performance.
+`math32` supports the z180 and ZX Spectrum Next z80n `16_8x8` hardware multiply instructions, providing accelerated performance for both these platforms. The z80 CPU is supported through `24_16x8` and `32_16x16` unrolled mantissa multiply routines which provide good performance.
 
 The intrinsic functions are written in assembler. The higher level functions (trigonometric, exp, pow) are implemented by C functions extracted from the Cephes Maths Library and the Hi-Tech C Floating point library.
 
@@ -65,7 +65,7 @@ More details on the library can be found within the [repository](https://github.
 
 math16 provides a 16 bit floating point format that is mostly compliant with IEEE-754. The library can be used with both sccz80 and zsdcc.
 
-`math16` supports the z180 and ZX Spectrum Next z80n hardware multiply instructions, providing accelerated performance for both these platforms. The z80 CPU is supported through emulation of the hardware multiply format `16_8x8`, and also provides good performance.
+`math16` supports the z180 and ZX Spectrum Next z80n hardware multiply instructions, providing accelerated performance for both these platforms. The z80 CPU is supported through `32_16x16` unrolled mantissa multiply routines which provide good performance.
 
 The IEEE 16 bit floating point standard supports a maximum of 3.5 significant digits of accuracy, but it is very fast.
 It is useful for graphics, as per this Cambridge Z88 example comparing the IEEE16 library with the standard maths library.
