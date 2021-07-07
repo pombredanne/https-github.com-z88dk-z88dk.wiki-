@@ -53,8 +53,11 @@ The z88 shell is a unix-like shell providing command line file manipulation on t
 
 ### Command Line
 
-    zcc +z88 -subtype=z88shell -create-app
+    zcc +z88 -subtype=z88shell -create-app cmd.c
 
+The above command line will create commands that run under the Forth shell written by Garry Lancaster for OZ3. For the shell built into OZ5 use the following commands:
+
+    zcc +z88 -subtype=z88shell5 -create-app cmd.c
 
 
 ## ZSock Devices
@@ -64,15 +67,6 @@ ZSock devices can be compiled with z88dk, these are raw binary blobs that sit at
 ### Command Line
 
     zcc +z88 -subtype=zsockdev
-
-## Relocatable Code Snippets
-
-Z80asm can include a relocator to the head of a generated binary. This will cause the code to be relocated to the address that it is loaded at and then run.
-
-### Command Line
-
-	
-	zcc +z88 -subtype=reloc
 
 
 ## z88net library
