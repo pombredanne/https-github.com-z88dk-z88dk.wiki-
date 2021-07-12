@@ -8,17 +8,6 @@ https://www.docker.com/what-docker
 * Docker for Mac requires OS X El Capitan 10.11 or newer macOS release running on a 2010 or newer Mac, with Intel’s hardware support for MMU virtualization. The app runs on 10.10.3 Yosemite, but with limited support.
 * Docker for Ubuntu, Debian, CentOS or Redhat need the 64-bit version of the OS.
 
-# Dockerhub image
-
-A new image is produced by the nightly build as available on dockerhub. It can be downloaded with the following command:
-
-    docker pull z88dk/z88dk:nightly
-
-Or to obtain the latest release:
-
-    docker pull z88dk/z88dk:latest
-
-
 
 ## Run the container
 
