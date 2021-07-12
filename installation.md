@@ -8,7 +8,7 @@ The nightly build should be preferred unless you have a reason to install an old
 
 ## Docker usage
 
-Nightly docker images are published, see [Docker Usage](Docker-Usage) for details.
+See [Docker Usage](Docker-Usage) for details - due to changes at dockerhub nightly builds are not available.
 
 ## Snapcraft usage
 
