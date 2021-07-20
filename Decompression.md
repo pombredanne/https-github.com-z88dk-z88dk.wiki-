@@ -60,6 +60,9 @@ C wrappers, including `__z88dk_callee` variants are available for all of the dec
 
 ## APLib Decompression `<compress/aplib.h>`
 
+Available: 8080, gbz80, z80, z80n
+
+
 [APLib](https://www.ibsensoftware.com/products_aPLib.html) is a general-purpose compression library written by Jørgen Ibsen, based on his aPACK executable compressor.
 
 This decompressor is particularly useful on the +sms platform due to the 
