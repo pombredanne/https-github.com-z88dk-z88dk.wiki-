@@ -14,7 +14,7 @@ Two tracker players are supported by the 819x based machines:
 
 ## SN76489
 
-The SN76489 have a port of [PSGLib](https://github.com/sverx/PSGlib) available via `</psg/PSGlib.h>`. [Example](https://github.com/z88dk/z88dk/tree/master/examples/sound/psglib)
+The SN76489 have a port of [PSGLib](https://github.com/sverx/PSGlib) available via `<psg/PSGlib.h>`. [Example](https://github.com/z88dk/z88dk/tree/master/examples/sound/psglib)
 
 ## SAA1099
 
