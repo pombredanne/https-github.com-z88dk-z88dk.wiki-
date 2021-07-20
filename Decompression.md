@@ -17,7 +17,7 @@ Both classic and newlib libraries support storing the data sections compressed i
 
 Source site: https://github.com/einar-saukas/ZX0
 
-Available: z80, z80n, Rabbit
+Available: 8080, z80, z80n, Rabbit (not all variants available on 8080)
 
 ZX0 is an optimal data compressor for a custom LZ77/LZSS based compression format, that provides a tradeoff between high compression ratio, and extremely simple fast decompression.
 
@@ -29,7 +29,7 @@ This is the recommended compression algorithm that new applications use.
 
 Source site: https://github.com/einar-saukas/ZX1
 
-Available: gbz80, z80, z80n, Rabbit (not all variants available on gbz80)
+Available: 8080, gbz80, z80, z80n, Rabbit (not all variants available on 8080 & gbz80)
 
 ZX1 is a simpler but faster version of ZX0 that sacrifices about 1.5% compression to run about 15% faster. 
 
