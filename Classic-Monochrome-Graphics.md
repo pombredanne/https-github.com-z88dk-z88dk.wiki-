@@ -58,6 +58,10 @@ Get the maximum X coordinate value for the current target. On targets with multi
 
 Get the maximum Y coordinate value for the current target. On targets with multiple screen modes this returns the value for the currently selected mode.
 
+### `void gfx_set_fatpix(int)`
+
+Some targets support graphics resolutions such as 640x200 or 512x192 which result in vertically stretched pixels being drawn. Calling this function adjusts the graphics plotting functions so that lines and shapes are drawn using two horizontal pixels, effectively halving the horizontal resolution.
+
 ### `int multipoint(int hv, int length, int x, int y)`
 
 *This function might not work correctly on all the platforms*
