@@ -66,6 +66,8 @@ As a result of the text attribute handling, text based graphics are slower than 
 
 The multicolour graphics library by default takes advantage of the ALU and as such is "hardware accelerated", to disable the acceleration use the option `-clib=v1` or `-pragma-define:CLIB_PC8800_V2_ENABLED=0`.
 
+The 640x200 graphics mode presents non-square pixels, the function `gfx_set_fatpix(1)` switches to square pixels for line/shape drawing with the resolution being reduced to 320x200.
+
 # Advanced library usage
 
 Target specific extras are listed in the <pc88.h> header file along with `__sfr` and documentation for the PC88 hardware.
