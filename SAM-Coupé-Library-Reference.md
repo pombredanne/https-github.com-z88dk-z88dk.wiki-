@@ -98,7 +98,7 @@ Missing/Unaccounted for: 62
 | graphics.h | void | box(int x, int y, int w, int l); |  | Draw an unfilled box | drawb() | graphics.h |  |  |  
 | graphics.h | void | circle(int x, int y, int r); |  | Draw a circle | circle() | graphics.h |  |  |  
 | graphics.h | void | drawto(int x, int y); |  | Draw from current position to x,y | drawto() | graphics.h |  |  |  
-| graphics.h | void | fatpix(int a); | Y | FATPIX mode for MODE 3 pixels (also sets xrg to 256) | sam_fatpix | arch/sam.h |  | Request #1772 |  
+| graphics.h | void | fatpix(int a); | Y | FATPIX mode for MODE 3 pixels (also sets xrg to 256) | gfx_set_fatpix | graphics.h |  | Request #1772 |  
 | graphics.h | int | getx(); |  | Current X graphics position | getx() | graphics.h |  |  |  
 | graphics.h | int | gety(); |  | Current Y graphics position | gety() | graphics.h |  |  |  
 | graphics.h | void | line(int x0, int y0, int x1, int y1); |  | Draw linefrom x1,y1 to x2,y2 | draw() | graphics.h |  |  |  
