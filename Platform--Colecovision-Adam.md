@@ -6,10 +6,11 @@
 * RAM: 64k 
 * ROM: 32k
 
-## Classic library support (`+cpm -subtype=adam`)
 
-* [x] Native console output
-* [x] Native console input
+## Classic library support (`+coleco -subtype=adam`)
+
+* [ ] Native console output
+* [ ] Native console input
 * [x] ANSI vt100 engine
 * [x] Generic console
     * [x] Redefinable font
@@ -23,11 +24,21 @@
 * [x] Hires graphics
 * [x] PSG sound
 * [ ] One bit sound
-* [x] Inkey driver
+* [ ] Inkey driver
 * [x] Hardware joystick
-* [x] File I/O
-* [ ] Interrupts
+* [ ] File I/O
+* [x] Interrupts
 * [ ] RS232
+
+The Colecovision Adam supports the generation of EOS programs: 
+
+    zcc +coleco program.c -subtype=adam -create-app
+
+Will generate a ddp image that allows full use of the 64k RAM within the Adam.
+
+Apart from keyboard reading, no EOS facilities are supported by z88dk at present.
+
+### CP/M support
 
 The Colecovision Adam is supported when running CP/M:
 
@@ -35,14 +46,14 @@ The Colecovision Adam is supported when running CP/M:
 
 Will create a 40 track SSDD disk image that can be inserted as drive b: and your application started
 
-## Extensions
+#### CP/M Extensions
 
 - Generic console
 - ANSI terminal
 - MSX graphics library
 - PSG support
 
-### VDP interrupt
+#### VDP interrupt
 
 On the Adam, the VDP interrupt is raised using NMI. As a result of address $66 falling within the CP/M FCB block, VDP interrupts are disabled on the Adam.
 
