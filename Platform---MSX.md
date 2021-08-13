@@ -68,9 +68,9 @@ To place functions into banks, you should use the `#pragma bank NN` directive, w
 
 There is no default MegaROM mapper configured, to enable one, one of the following options need to be supplied to the zcc command line:
 
-- `-pragma-define:MAPPER_ASCII16` - Emables the ASCII16 mapper
-- `-pragma-define:MAPPER_ASCII8` - Emables the ASCII8 mapper
-- `-pragma-define:MAPPER_KONAMI` - Emables the Konami without SCC mapper
+- `-pragma-define:MAPPER_ASCII16` - Enables the ASCII16 mapper
+- `-pragma-define:MAPPER_ASCII8` - Enables the ASCII8 mapper
+- `-pragma-define:MAPPER_KONAMI` - Enables the Konami without SCC mapper
 
 From a C usage perspective there's no difference between the various mappers. Different mappers may be cheaper to build in hardware, or support more memory.
 
