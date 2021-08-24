@@ -74,7 +74,7 @@ The final example program will flash the diodes on the Rabbit 3000 dev boards, l
 
 ### Rabbit development boards
 
-There are a number of evaluation and developement boards available.
+There are a number of evaluation and development boards available.
 If you need info, lookup www.rabbitsemiconductor.com
 
 
@@ -85,9 +85,9 @@ The download cable converts between the hosts rs232 line to logic levels suitabl
 
 **Build your own stuff**
 
-Just by taking a Core module and some 0.1" adapter wings it is quite simple for the average home-electronic-hobbyist.
+Just by taking a Core module and some 0.1" adaptor wings it is quite simple for the average home-electronic-hobbyist.
 
-Just solder together the adapter wings that convert from the Core modules 1.0 mm spacing to 0.1" suitable for a breadbord.
+Just solder together the adaptor wings that convert from the Core modules 1.0 mm spacing to 0.1" suitable for a breadboard.
 
 The only pins on the breadboard that need connecting for the Core module to start is the VCC and GND pins (and the programming cable of course ;-) )
 
@@ -114,7 +114,9 @@ Also the interrupt handling mnemonics etc are not handled in the assembler.
 
 #### Native multiplication etc. support
 
-The Rabbit has a number of nice features not found in the Z80 series, (at least not in the offical version), such as multiplication.  This is not still used since it requires alterations to the compiler.
+The Rabbit has a number of nice features not found in the Z80 series, (at least not in the official version), such as multiplication.  This is not still used since it requires alterations to the compiler.
+
+Several differences between the R2000 and Z80/Z180 opcodes exist. Summarised by Section 19 in [this document](https://github.com/z88dk/techdocs/blob/master/rabbit/r2k-0190069_p.pdf).
 
 #### Persistent storage (flash)
 
@@ -122,7 +124,7 @@ When using the almost-native compiler, Dynamic-C, for the Rabbit boards, it auto
 
 #### >64k memory model
 
-The Rabbit processors are capable of adressing 1M of total memory using an efficient bank-switching scheme.  This is not used currently and the programs are limited to max 64k.
+The Rabbit processors are capable of addressing 1M of total memory using an efficient bank-switching scheme.  This is not used currently and the programs are limited to max 64k.
 See the www.rabbitsemiconductor.com site for more documentation on the segment registers.
 
 #### Drivers
