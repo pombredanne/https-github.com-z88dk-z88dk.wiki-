@@ -70,5 +70,6 @@
 * [Object and Library file Manipulator (*zobjcopy*)](Tool-zobjcopy)
 * [*copt*](Tool---copt)
 * [*ticks* emulator](Tool---ticks)
+* [z88dk-gdb debugger](Tool-z88dk-gdb)
 * [Disassembler](Tool-z88dk-dis)
 * [Various tools](tools)
