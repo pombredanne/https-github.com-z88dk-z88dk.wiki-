@@ -11,11 +11,11 @@ z88dk-ticks supports C (and assembler) line by line debugging, local variable in
 
 The +test target supports the z88dk-ticks "hardware", to compile with debugging information:
 
-   zcc +test -debug [files]
+    zcc +test -debug [files]
 
 The debugger can then be invoked with:
 
-   z88dk-tics -x a.map -debug a.bin
+    z88dk-ticks -x a.map -debug a.bin
 
 Once the debugger has launched, the "help" command can be used to discover commands.
 
