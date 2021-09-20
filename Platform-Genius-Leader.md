@@ -1,5 +1,3 @@
-**The Genius Leader is also supported under newlib using the +vgl target identifier.**
-
 # Hardware summary
 
 Genius Leader 2000/4000
