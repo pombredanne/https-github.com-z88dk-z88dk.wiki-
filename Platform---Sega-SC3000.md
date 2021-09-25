@@ -28,7 +28,7 @@ In this case we are preparing an object file for the SF-7000 extension, position
 
     zcc +sc3000 -subtype=rom -omyrom.sc program.c
 
-The ROM should also be compatible with the Sega SG-1000.
+The ROM produced is compatible for the SG-1000 and SC-3000. This means that it assumes only 1k of memory and places the stack accordingly. A SC-3000 only ROM can produced by moving the stack pointer with the option: `-pragma-define:REGISTER_SP=0xc7f0`
 
 # Supported libraries
 
