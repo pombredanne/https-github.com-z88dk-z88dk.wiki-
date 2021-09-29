@@ -15,6 +15,13 @@ The following targets are 8080 only:
 * [Krokha](Platform--Kroka)
 * [TRS80 Model 100](Platform---M100) (8085)
 
+The following targets are 8085 only:
+
+ * RC2014 using the 8085 CPU Module
+```
+zcc +rc2014 -subtype=basic85 myfile.c -o myhexfile -create-app
+```
+
 Additionally, the CP/M target can generate 8080 binaries. To do so, add the option `-clib=8080` to the command line. For example:
 
 ```
