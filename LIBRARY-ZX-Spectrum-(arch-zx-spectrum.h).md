@@ -1,6 +1,6 @@
  |            |                                                                                                                     | 
  | ---------- | ------------------------------------------------------------------------------------------------------------------- | 
- | Header     | [{z88dk}/arch/zx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/arch/zx.h)               | 
+ | Header     | [{z88dk}/arch/zx/spectrum.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/arch/zx/spectrum.h)               | 
  | Source     | [{z88dk}/libsrc/target/zx](https://github.com/z88dk/z88dk/tree/master/libsrc/target/zx/)                              | 
  | Include    | #include `<arch/zx.h>`                                                                                             |
  | Linking    | n/a                                                                                                                 |
