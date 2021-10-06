@@ -1,8 +1,8 @@
  |            |                                                                                                                     | 
  | ---------- | ------------------------------------------------------------------------------------------------------------------- | 
- | Header     | [{z88dk}/include/spectrum.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/spectrum.h)               | 
- | Source     | [{z88dk}/libsrc/spectrum](https://github.com/z88dk/z88dk/tree/master/libsrc/spectrum/)                              | 
- | Include    | #include `<spectrum.h>`                                                                                             |
+ | Header     | [{z88dk}/arch/zx.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/arch/zx.h)               | 
+ | Source     | [{z88dk}/libsrc/target/zx](https://github.com/z88dk/z88dk/tree/master/libsrc/target/zx/)                              | 
+ | Include    | #include `<arch/zx.h>`                                                                                             |
  | Linking    | n/a                                                                                                                 |
  | Compile    | n/a                                                                                                                 |
  | Supported  | [ZX Spectrum](platform/zx), [TS 2068](platform/ts2068) (partially)                                                  |  
