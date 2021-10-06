@@ -221,13 +221,13 @@ To support the many other disc systems that are available for the Spectrum, a [g
 
 ## Interaction with ZX Basic and Add-On Hardware 
 
-### General Support (`<spectrum.h>`)
+### General Support (`<arch/zx.h>`)
 
 Provides functionality to interact with ZX Basic as well as to detect or interact with add-on hardware devices. This includes Kempston and AMX mice.
 
 However, some more complex add-on devices have their own separate header files (see the sections below)
 
-Full details of this header are at [spectrum.h](LIBRARY-ZX-Spectrum-(spectrum.h))
+Full details of this header are at [arch/zx.h](LIBRARY-ZX-Spectrum-(spectrum.h))
 
 ### Interface 1 Support (`<zxinterface1.h>`)
 
