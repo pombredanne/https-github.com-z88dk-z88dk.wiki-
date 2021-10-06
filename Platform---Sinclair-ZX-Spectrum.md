@@ -227,7 +227,7 @@ Provides functionality to interact with ZX Basic as well as to detect or interac
 
 However, some more complex add-on devices have their own separate header files (see the sections below)
 
-Full details of this header are at [arch/zx.h](LIBRARY-ZX-Spectrum-(spectrum.h))
+Full details of this header are at [arch/zx.h](LIBRARY-ZX-Spectrum-(arch-zx.h))
 
 ### Interface 1 Support (`<zxinterface1.h>`)
 
