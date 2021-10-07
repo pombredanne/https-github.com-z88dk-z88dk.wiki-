@@ -1,4 +1,3 @@
-======= The ZX 80 platform =======
 
 ![](images/platform/zx80.gif)
 
@@ -16,6 +15,28 @@ This will create a ''.o'' file and a ''.wav'' file.
 
 
 # ZX80 peculiarities
+
+## Character code translation
+
+The ZX80 character set is not ASCII, thus ASCII needs to translated to the ZX80 character set. z88dk allows the mapping to configured at link time:
+
+`-pragma-define:ZX_CHAR_XLATE_MODE=0` (default)
+
+* ASCII upper -> Inverse
+* ASCII lower -> Upper
+
+`-pragma-define:ZX_CHAR_XLATE_MODE=1`
+
+* ASCII upper -> Upper
+* ASCII lower -> Inverse
+
+`-pragma-define:ZX_CHAR_XLATE_MODE=2`
+
+* ASCII upper -> Upper
+* ASCII lower -> Upper
+
+
+## Display visibility
 
 The ZX80 runs in FAST mode only.
 This means that the sceen will be normally visible only during the fgetc_cons() calls.
