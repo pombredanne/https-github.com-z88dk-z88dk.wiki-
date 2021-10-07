@@ -245,6 +245,25 @@ Good values for "ansicolumns" is between 24 and 42, (please refer to the list ab
     -pragma-define:ansifont=0 -pragma-define:ansifont_is_packed=0 -pragma-define:ansicolumns=36
 
 
+# Character code translation
+
+The ZX81 character set is not ASCII, thus ASCII needs to translated to the ZX81 character set. z88dk allows the mapping to configured at link time:
+
+`-pragma-define:ZX_CHAR_XLATE_MODE=0` (default)
+
+* ASCII upper -> Inverse
+* ASCII lower -> Upper
+
+`-pragma-define:ZX_CHAR_XLATE_MODE=1`
+
+* ASCII upper -> Upper
+* ASCII lower -> Inverse
+
+`-pragma-define:ZX_CHAR_XLATE_MODE=2`
+
+* ASCII upper -> Upper
+* ASCII lower -> Upper
+
 # Appmake extras
 
 The appmake tool can be run in "dumb" mode to generate the corresponding audio track of some external program.
