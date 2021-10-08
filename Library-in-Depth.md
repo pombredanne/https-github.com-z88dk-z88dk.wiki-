@@ -889,4 +889,13 @@ There are three character device drivers your driver can inherit from:  **charac
 
 ## Floating Point Math
 
+`sccz80` expects floats to be returned in the FA (floating point accumulator)
+
+What the FA is depends on what the maths library is:
+
+* alt registers (math48)
+* A block of memory (genmath, bbcmath, mbf64)
+* Main set `dehl` (math32, dai, mbf32)
+* Main set `hl` (math16)
+
 ## Memory Allocation
