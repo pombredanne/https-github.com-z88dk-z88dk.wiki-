@@ -20,6 +20,9 @@ math48 can be used with both sccz80 and zsdcc compilers, and is marginally faste
 
 The BBC maths library provides a 32 bit mantissa and 8 bit exponent. It's the same library as the native maths library on the z88. It can be linked with the options: `--math-bbc`. It can be used on ix/iy switched platforms with `-fp-mode=z88 -lbbc_math_iy`.
 
+__BBC Maths can only be used with the sccz80 compiler.__
+
+
 ## MBF32 - (32 bit maths from Microsoft) - 8080/gbz80/z80/z180/z80n
 
 Support has been added for the (4 byte, 8 bit exponent, 24 bit mantissa) Microsoft single precision library. This is available for machines that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported:
@@ -34,11 +37,16 @@ The library can be linked with the following options: `--math-mbf32` or `--math-
 
 The source code to the maths subroutines aren't distributed with z88dk, but can be downloaded, compiled and used on any 8080 (or z80 etc) target (See https://github.com/z88dk/z88dk/blob/master/libsrc/math/mbf32/z80/math_mbf32.asm for details).
 
-## DAI Math - (32 bit maths extracted from the DAI target) - 8080/z80/z180/z80n
+__MBF32 can only be used with the sccz80 compiler.__
+
+
+## DAI Maths - (32 bit maths extracted from the DAI target) - 8080/z80/z180/z80n
 
 This maths library was extracted from the DAI computer, it offers, a 4 byte, 7 bit exponent, 24 bit mantissa floating point number. It's of particular interest since the whole library is shipped with z88dk and provides an 8080 library.
 
 The library can be linked with the following options: `--math-dai32` or `--math-dai32_8080`
+
+__DAI maths can only be used with the sccz80 compiler.__
 
 
 ## MBF64 - (64 bit maths from Microsoft) - z80
@@ -87,6 +95,8 @@ More details on the library can be found within the [repository](https://github.
 * `-lcpcmath` 6 bytes. 8 bit exponent, 32 bit mantissa. Amstrad CPC
 
 All of these libraries use the floating point package located in the machine's ROM. This can result in a compact binary
+
+__These libraries can only be used with the sccz80 compiler.__
 
 # Maths library aliases
 
