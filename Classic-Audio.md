@@ -18,7 +18,9 @@ The SN76489 have a port of [PSGLib](https://github.com/sverx/PSGlib) available v
 
 ## SAA1099
 
-For the SAA1099, tracker is available via `<psg/etracker.h>`. [Example](https://github.com/z88dk/z88dk/tree/master/examples/sound/etracker)
+For the SAA1099, etracker is available via `<psg/etracker.h>`. [Example](https://github.com/z88dk/z88dk/tree/master/examples/sound/etracker)
+
+Additionally, [WYZ Player](Classic-WYZ-Player) `<psg/wyz.h>` is available via emulation.
 
 ## One bit sound
 
