@@ -30,7 +30,7 @@ When called with the ```-b``` option, **z80asm** links the object files together
 z80asm -xlibrary.lib [options] file...
 ```
 
-When called with the ```-x``` option, **z80asm** builds a library containing all the object files passed as argument. That library can then be used during linking by specifying it with the ```-i``` option.
+When called with the ```-x``` option, **z80asm** builds a library containing all the object files passed as argument. That library can then be used during linking by specifying it with the ```-l``` option.
 
 ## Contents
 
