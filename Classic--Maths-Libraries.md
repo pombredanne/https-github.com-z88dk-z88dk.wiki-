@@ -4,13 +4,13 @@ The classic library supports applications being compiled with different maths li
 
 When compiling with zsdcc a float is always allocated 4 bytes in the C code. However with sccz80, the size of a float depends on which maths library is being used. Traditionally, sccz80 has always allocated a 6 byte block for representing floats, but some maths libraries support a 4 byte (32 bit) float.
 
-## `-lm` - (48 bit genmath) - z80/z80n
+## 48 bit genmath - z80/z80n - `-lm`
 
 Genmath is z88dk's traditional maths library. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises a single index register and runs on all of classic's targets (subject to memory). It should be noted that the library makes extensive use of the ixh and ixy registers and as such cannot be used on the Z180 or clones that do not support them,
 
 __Genmath can only be used with the sccz80 compiler.__
 
-## `-lmath48` - (48 bit maths by Anders Hejlsberg) - z80/z180/z80n
+## 48 bit maths by Anders Hejlsberg - z80/z180/z80n - `-lmath48`
 
 math48 has been imported into classic from the newlib. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises the alternate register set and therefore can't run on all classic targets.
 
@@ -51,7 +51,7 @@ Support has been added for the (8 byte, 8 bit exponent, 56 bit mantissa) Microso
 
 mbf64 can be used with sccz80.
 
-## `-lmath32` - (32 bit maths using IEEE-754 format) - z80/z180/z80n
+## 32 bit maths using IEEE-754 format - z80/z180/z80n - `--math32`
 
 math32 provides a 32 bit floating point format that is mostly compliant with IEEE-754, which is also the native floating point format of sdcc. The library can be used with both sccz80 and zsdcc.
 
@@ -61,7 +61,7 @@ The intrinsic functions are written in assembler. The higher level functions (tr
 
 More details on the library can be found within the [repository](https://github.com/z88dk/z88dk/tree/master/libsrc/_DEVELOPMENT/math/float/math32).
 
-## `-lmath16` - (16 bit maths using IEEE-754 format) - z80/z180/z80n
+## 16 bit maths using IEEE-754 format - z80/z180/z80n - `--math16`
 
 math16 provides a 16 bit floating point format that is mostly compliant with IEEE-754. The library can be used with both sccz80 and zsdcc.
 
