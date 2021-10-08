@@ -8,7 +8,7 @@ When compiling with zsdcc a float is always allocated 4 bytes in the C code. How
 
 Genmath is z88dk's traditional maths library. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises a single index register and runs on all of classic's targets (subject to memory). It should be noted that the library makes extensive use of the ixh and ixy registers and as such cannot be used on the Z180 or clones that do not support them,
 
-Genmath can only be used with the sccz80 compiler.
+__Genmath can only be used with the sccz80 compiler.__
 
 ## `-lmath48` - (48 bit maths by Anders Hejlsberg) - z80/z180/z80n
 
