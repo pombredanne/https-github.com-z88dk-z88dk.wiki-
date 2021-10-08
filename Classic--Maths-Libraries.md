@@ -14,7 +14,7 @@ __Genmath can only be used with the sccz80 compiler.__
 
 math48 has been imported into classic from the newlib. It provides a 48 bit number, with an 8 bit exponent and a 40 bit mantissa. It utilises the alternate register set and therefore can't run on all classic targets.
 
-math48 can be used with both sccz80 and zsdcc and is marginally faster than genmath.
+math48 can be used with both sccz80 and zsdcc compilers, and is marginally faster than genmath.
 
 ## BBC Maths - (40 bit maths from BBC BASIC for z80) - z80/z180/z80n
 
@@ -49,11 +49,11 @@ Support has been added for the (8 byte, 8 bit exponent, 56 bit mantissa) Microso
 * TRS80/Color Genie
 
 
-mbf64 can be used with sccz80.
+__mbf64 can only be used with the sccz80 compiler.__
 
 ## 32 bit maths using IEEE-754 format - z80/z180/z80n - `--math32`
 
-math32 provides a 32 bit floating point format that is mostly compliant with IEEE-754, which is also the native floating point format of sdcc. The library can be used with both sccz80 and zsdcc.
+math32 provides a 32 bit floating point format that is mostly compliant with IEEE-754, which is also the native floating point format of zsdcc. The library can be used with both sccz80 and zsdcc.
 
 `math32` supports the z180 and ZX Spectrum Next z80n `16_8x8` hardware multiply instructions, providing accelerated performance for both these platforms. The z80 CPU is supported through `24_16x8` and `32_16x16` unrolled mantissa multiply routines which provide good performance.
 
