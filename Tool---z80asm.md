@@ -43,6 +43,7 @@ linking by specifying it with the ```-l``` option.
 
 ## Contents
 
+* [z80asm Environment](Tool---z80asm---environment)
 * [z80asm Input Format](Tool---z80asm---input-format)
 * [z80asm Object File Format](Tool---z80asm---object-file-format)
 * [z80asm Old Manual](Tool---z80asm---old-manual)
@@ -50,8 +51,7 @@ linking by specifying it with the ```-l``` option.
 ## Copyright
 
 The original z80asm module assembler was written by Gunther Strube. 
-It was converted from QL SuperBASIC version 0.956, initially ported to Lattice 
-C, and then to C68 on QDOS.
+It was converted from QL SuperBASIC version 0.956, initially ported to Lattice C, and then to C68 on QDOS.
 
 It has been maintained since 2011 by Paulo Custodio.
 

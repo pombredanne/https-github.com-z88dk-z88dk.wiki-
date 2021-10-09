@@ -410,10 +410,7 @@ option allows specification of several library files. For each library
 reference in an application module, all library files will be scanned for that 
 particular module. The filename (inclusive directory path) of the library may 
 be specified explicitly on the command line immediately after the -l 
-identifier. If you omit the filename, a default library filename will be used 
-by the assembler. This default filename is defined by creating the environment 
-variable "Z80\_STDLIB=<library-file>. Please refer to your operating system 
-documentation on how to create environment variables.
+identifier.
 
 Library files are recognised by the ".lib" extension.
 
@@ -431,12 +428,9 @@ A library file is composed of object files surrounded by a few file structures.
 The library file format (and object file format) may be found at the end of 
 this documentation. A library is simply a set of independent routines (that may
 refer to each other) put together in a sequential form. You may only specify a
-single -x option on the command line. A filename may be explicitly defined 
+single -x option on the command line. A filename must be explicitly defined 
 (including device and path information) to determine the storage location of 
-the library. As in -l you may omit the filename to use the default filename 
-identified by the "Z80\_STDLIB" environment variable. A library routine must be
-defined using a simple XLIB directive with an identical address name label 
-definition. Please refer to further information later in this documentation. 
+the library. Please refer to further information later in this documentation. 
 The "Z80lib.zip" contains the standard library with all corresponding source 
 files. Have a look at them - they clearly displays how to compose a library 
 routine.
@@ -689,81 +683,6 @@ from your source file modules. Documentation of the library file format is
 included in this documentation. At command line infinite number of libraries 
 may be specified. All will be searched during linking of your object modules 
 for referenced library routines.
-
-3\. Executing the cross assembler and environment variables
------------------------------------------------------------
-
-The following text describes how to execute the assembler and defining the 
-environment variables used by the assembler.
-
-### 3.1. The environment variables
-
-The assembler uses two environment variables:
-
-*   "Z80\_STDLIB" define the default filename of the standard library filename.
-
-### 3.2. Running in the QDOS/SMSQ operating system environment
-
-z80asm may be compiled using the C68 compiler developed by the Walker brothers.
-You also need the 'env\_bin' file. This is necessary to install into the 
-operating system before using the assembler. It contains the environment 
-variable facility integrated on UNIX, MS-DOS and many other operating systems. 
-Include the following line into your BOOT upstart program:
-
-    LRESPR win1_ext_env_bin
-
-The device and path 'win1\_ext\_' is just an example of where to store your 
-system extension file. You may have it on your BOOT disk as well. If you don't 
-have ToolKit 2 on your system use the following line in your BOOT program:
-
-    envext=RESPR(1024):LBYTES win1_ext_env_bin,envext:CALL envext
-
-Use the following in your BOOT file to set the environment variables:
-
-    SETENV "Z80_STDLIB=win1_z80_standard_lib"
-
-The example file names are only a demonstration. Change them as necessary.
-
-### 3.3. Running in the LINUX/UNIX operating system environment
-
-This program can be executed on the LINUX operating system and any other UNIX. 
-The sources are strictly ANSI C and uses only library calls that are described 
-in Brian W. Kernighan and Dennis M. Ritchie C books. The important thing to 
-remember before compiling it under UNIX, is in which direction the integers are
-stored by the processor architecture; the famous Big Endian and Little endian 
-concept. The config.h file uses a "ENDIAN" definition when z80asm must 
-interpret integers in big endian order. Please set this definition according to
-your system's processor architecture. Most people uses the Intel processor 
-when running Linux - this is a little endian architecture (so you don't need 
-the ENDIAN define...).
-
-You can compile z80asm using GNU C compiler simply by entering the following on
-your command line:
-
-    gcc -o z80asm -O2 *.c
-
-The environment variables needed by z80asm are easily added in your accounts 
-login script, ".profile" or ".bash\_profile" in your home directory.
-
-### 3.4. Running in the MS-DOS operating system environment
-
-This program can be executed on all MSDOS operating systems using the INTEL 
-8086 processor up to high speed 80386/80486/Pentium processors on IBM & 
-compatible computers. Add the source files to your favorite C compiler system 
-in MSDOS or Windows (here you need to specify compilation options o a console 
-application).
-
-The environment variables are easily put into your AUTOEXEC.BAT file. Simply 
-specify:
-
-    SET Z80_STDLIB=C:\Z80\STANDARD.LIB
-
-Choose your own settings if you like.
-
-If you want the assembler to be accessible in any path, add the path location 
-of the assembler in the PATH search line:
-
-    SET PATH=%PATH%;C:\Z80
 
 4\. Z80 module assembler file types
 -----------------------------------
@@ -1187,8 +1106,7 @@ directive. Please note that a library routine creates the module name itself
 routines in a library.  
     
 3.  The command line contains the -x option immediately followed by your 
-filename. If you don't specify a filename, the default standard filename is 
-used (defined by the Z80\_STDLIB environment variable). Then you need to 
+filename. Then you need to 
 specify your project filename preceded by '@'.
 
 For example:
@@ -1695,133 +1613,6 @@ changelog.txt at the root of the z88dk project).
 This directive is obsolete. It has been replaced by the EXTERN directive (See 
 changelog.txt at the root of the z88dk project). 
 
-8\. Run time error messages
----------------------------
-
-The following error messages will be written toe the error files corresponding 
-to each source file, and also to stderr. Each error message will contain the 
-name of the source file and a line number where the error occurred in the file.
-
-*   "File open/read error"  
-You have tried to access a file that either was not found, already opened by 
-other resources, or the assembler wasn't able to create output files (object 
-file, listing-, symbol-, map- or executable binary file).  
-
-*   "Syntax error"  
-This is a message used by many routines - hence the general but descriptive 
-message. You have tried to use illegal registers in Z80 mnemonic instructions, 
-specified an illegal parameter type (string instead of integer), omitted a 
-parameter (DEFB without constant).  
-
-*   "Symbol not defined"  
-This error is given if you are referring to an identifier (usually in an 
-address reference) that was not declared. Either a label definition is missing 
-in the current module or you have forgotten to declare an identifier as 
-external using the XREF directive.  
-
-*   "Not enough memory" / "No room in Z88"  
-Well, well. It seems that there wasn't enough room to hold the internal data 
-structures during parsing or linking your code. Delete any unnecessary running 
-applications/jobs then try again. If you got the message on the Z88, try also 
-to delete unnecessary files from the filing system of your current RAM card.  
-
-*   "Integer out of range"  
-You have an expression which evaluates into a constant that are beyond the 
-legal integer range (e.g. trying to store a 16-bit value into an 8-bit 
-parameter).  
-
-*   "Syntax error in expression"  
-Quite clearly you have made an illegal expression, e.g. specifying two 
-following operands without an operator to separate them, used an illegal 
-constant specifier or using illegal characters that aren't a legal identifier.  
-
-*   "Right bracket missing"  
-Your expression is using brackets and is not properly balanced, i.e. too many 
-beginning brackets or too few ending brackets.  
-
-*   "Source filename missing"  
-There has not been specified any source file modules or project file to start a
-compilation.  
-
-*   "Illegal option"  
-The command line parser couldn't recognise the -option. Remember to specify 
-your option in EXACT case size. You have probably used a space between an 
-option and a filename parameter.  
-
-*   "Unknown identifier"  
-The parser expected a legal identifier, i.e. a directive or Z80 mnemonic. You 
-have probably omitted the '.' in front of a label definition, misspelled a name
-or used a comment without a leading ';'.  
-
-*   "Illegal identifier"  
-you have been trying to use a name that is either not known to the parser or an
-illegal identifier. this might happen if you try to use a register that is not
-allowed in a ld instruction, e.g. ld a,f .  
-
-*   "Max. code size reached"  
-Is that really possible? Very interesting code of yours! Z80 machine code 
-program tend to be in the 32K range (at least on the Z88)... Well, the Z80 
-processor cannot address more than 64K. Start changing your code to a smaller 
-size!  
-
-*   "errors occurred during assembly"  
-Status error message displayed on the screen when the assembler has completed 
-its parsing on all modules. You have one or more errors to correct in your 
-source files before the assembler continues with linking the next time.  
-
-*   "Symbol already defined"  
-In the current source file, you have tried to create two identical address 
-label definitions, or other name identifier creators (using DEFC, DEFVARS, 
-DEFGROUP).  
-
-*   "Module name already defined"  
-You have used the MODULE directive more than once in your source file, or used 
-both a MODULE and XLIB directive (library modules only need an XLIB).  
-
-*   "Symbol already declared local"  
-You have tried to declare a symbol as XREF, but it was already defined local, 
-eg. using a ".lbaddr" in your source.  
-
-*   "Illegal source filename"  
-You have tried to specify an option after having begun to specify filenames. 
-Options must always be specified before filenames or project files.  
-
-*   "Symbol declared global in another module"  
-You have two identical XDEF definitions in separate modules. One of them should
-probably be an XREF instead.  
-
-*   "Re-declaration not allowed"  
-You are trying to specify an XDEF for a name that has already been XREF'ed in 
-the same module (or the other way around).  
-
-*   "ORG already defined"  
-Only one ORG statement is allowed per section.  
-
-*   "Relative jump address must be local"  
-You have tried to JR to a label address that is declared as external (with XREF
-or LIB). JR must be performed in the current source file module.  
-
-*   "Not a relocatable file" / "Not an object file"  
-The assembler opened a supposed object file (with the proper ".obj" extension) 
-but realised it wasn't conforming to the Z80 assembler standard object file 
-format.  
-
-*   "Couldn't open library file"  
-The library file was found but couldn't be opened (probably already opened by 
-another application resource)  
-
-*   "Not a library file"  
-Your library file is not a library file (at least is not of the correct file 
-format used by this assembler). Have you maybe used another "library" file? The
-Z80 library file could also be corrupted (at least in the header).  
-
-*   "Environment variable not defined"  
-The assembler reports either the "Z80\_STDLIB" environment variable wasn't 
-found when used by options -x and -l.  
-
-*   "Cannot include file recursively"  
-A file was tried to be included which was already included at a previous 
-include level. INCLUDE "a.h" cannot contain an INCLUDE "a.h".
 
 9\. File formats
 ----------------
