@@ -16,14 +16,6 @@ A single star in a file name (```*```) expands to the list of all files/director
 
 The assembler parses source files with any of the common end-of-line termination sequences (CR, LF or CR-LF). Each line starts with an optional label and can contain assembly directives (i.e. instructions to the assembler), assembly instructions (i.e. code to be translated into object code for the specific processor) or blanks and comments.
 
-[TO-DO] A single backslash character (```\```) may be used to separate multiple statements in a single line.
-
-```
-  org 0				; assembly directive	        
-  start: push bc\pop hl 	; define a label and add two assembly opcodes            
-  ret                   	; assembly opcode can be at the first column    
-```
-
 Differently to most other assemblers, white space is not significant, i.e. a label can be defined after white space, and an opcode can be written at column 1.
 
 ### Comments
@@ -49,10 +41,6 @@ The assembler accepts numbers in decimal, hexadecimal, octal and binary. Differe
 
 All expressions are computed as signed integers with the host platform's integer size (32-bit or 64-bit in the most common platforms).
 
-[TO-DO] The underscore can be used to separate groups of digits to help readability, e.g. ```0xFFFF_FFFF``` is the same as ```0xFFFFFFFF```.
-
-[TO-DO] Floating point numbers can be supplied with the ```FLOAT``` directive, that encodes them in the current floating point format in the object code.
-
 **Decimal** numbers are a sequence of decimal digits (```0..9```), optionally followed by a ```d``` or ```D``` - all prefixes and suffixes are case-insensitive. Leading zeros are insignificant - note the difference from C, where a leading zero means octal.
 
 ```
@@ -65,29 +53,14 @@ All expressions are computed as signed integers with the host platform's integer
 
 ```
   ld a, $FF
-  ld a, #FF   [TO-DO]
-  ld a, &hFF  [TO-DO]
-  ld a, &xFF  [TO-DO]
-  ld a, &FF   [TO-DO]
   ld a, 0xFF
   ld a, 0FFh
-```
-
-**Octal** numbers are a sequence of octal digits (```0..7```), either prefixed or suffixed with an octal marker. 
-```
-  ld a, &o77   [TO-DO]
-  ld a, &q77   [TO-DO]
-  ld a, 0o77   [TO-DO]
-  ld a, 0q77   [TO-DO]
-  ld a, 77o    [TO-DO]
-  ld a, 77q    [TO-DO]
 ```
 
 **Binary** numbers are a sequence of binary digits (```0..1```), either prefixed or suffixed with a binary marker. 
 ```
   ld a, %11
   ld a, @11
-  ld a, &b11   [TO-DO]
   ld a, 0b11
   ld a, 11b
 ```
