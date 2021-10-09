@@ -65,9 +65,9 @@
 ## Tools
 
 * [The Compiler Frontend (*zcc*)](Tool---zcc)
-* [The Assembler / Linker (*z80asm*)](Tool-z80asm)
-* [Object and Library file Dumper (*z80nm*)](Tool-z80nm)
-* [Object and Library file Manipulator (*zobjcopy*)](Tool-zobjcopy)
+* [The Assembler / Linker (*z80asm*)](Tool---z80asm)
+* [Object and Library file Dumper (*z80nm*)](Tool---z80nm)
+* [Object and Library file Manipulator (*zobjcopy*)](Tool---zobjcopy)
 * [*copt*](Tool---copt)
 * [*ticks* emulator](Tool---ticks)
 * [z88dk-gdb debugger](Tool-z88dk-gdb)

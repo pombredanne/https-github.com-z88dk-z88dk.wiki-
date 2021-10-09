@@ -1,5 +1,6 @@
 THE Z80 CROSS ASSEMBLER (z88dk)
 ===============================
+[[Top](Tool---z80asm)]
 
 _This document is not completely up-to-date_
 

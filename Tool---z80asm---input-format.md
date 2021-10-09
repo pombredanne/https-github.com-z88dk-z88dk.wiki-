@@ -1,5 +1,5 @@
 ## Input Files
-[[Top](Tool-z80asm)]
+[[Top](Tool---z80asm)]
 
 **z80asm** reads text files in the syntax supported by the specific processor being assembled for (see -m option) and produces the corresponding object files.
 
