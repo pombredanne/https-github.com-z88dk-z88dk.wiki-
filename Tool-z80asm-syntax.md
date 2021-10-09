@@ -51,7 +51,6 @@ The assembler writes a certain amount of information to its program window (or o
 #### 1.3.3. -e\<ext\> : Use alternative source file extension
 
 The default assembler source file extension is ".asm". Using this option, you force the assembler to use another default extension, like ".opt" or ".as" for the source file.
-
   
 The extension is specified without the ".". Only three letters are accepted - the rest is discarded.
 
@@ -59,7 +58,6 @@ The extension is specified without the ".". Only three letters are accepted - th
 
 The default assembler object file extension is ".obj". Using this option, you force the assembler to use another default extension, like ".o" as the object file name extension.
 
-  
 The extension is specified without the ".". Only three letters are accepted - the rest is discarded.
 
 #### 1.3.5. -l : Create listing file output
@@ -266,7 +264,7 @@ A compilation may be split into individual source files that either can be linke
 
 ### 2.6. Scope of symbols in source modules
 
-All source modules may refer to each others symbols by using XREF directives. This means that you refer to external information outside the current source module. The opposite of an external module reference is to declare symbols globally available using a XDEF directive, i.e. making symbols available to other source modules. Finally it is possible to have local symbols that is not known to other source modules than the current. A label or constant that has not been declared with XREF, XDEF or XLIB is local to the module.
+All source modules may refer to each others symbols by using EXTERN directives. This means that you refer to external information outside the current source module. The opposite of an external module reference is to declare symbols globally available using a PUBLIC directive, i.e. making symbols available to other source modules. Finally it is possible to have local symbols that are not known to other source modules than the current. A label or constant that has not been declared with EXTERN, PUBLIC or GLOBAL is local to the module.
 
 ### 2.7. Using arithmetic and relational expressions
 
@@ -346,7 +344,6 @@ The following text describes how to execute the assembler and defining the envir
 The assembler uses two environment variables:
 
 *   "Z80\_STDLIB" define the default filename of the standard library filename.
-*   "Z80\_OZFILES" define the default path of the standard Z88 OZ system headers.
 
 ### 3.2. Running in the QDOS/SMSQ operating system environment
 
@@ -360,7 +357,6 @@ The device and path 'win1\_ext\_' is just an example of where to store your syst
 
 Use the following in your BOOT file to set the environment variables:
 
-    SETENV "Z80_OZFILES=win1_z80_src_oz_"  
     SETENV "Z80_STDLIB=win1_z80_standard_lib"
 
 The example file names are only a demonstration. Change them as necessary.
@@ -381,7 +377,6 @@ This program can be executed on all MSDOS operating systems using the INTEL 8086
 
 The environment variables are easily put into your AUTOEXEC.BAT file. Simply specify:
 
-    SET Z80_OZFILES=C:\Z80\OZ\
     SET Z80_STDLIB=C:\Z80\STANDARD.LIB
 
 Choose your own settings if you like.
@@ -532,19 +527,19 @@ The main reason for using an assembler is to be able to determine symbolical add
     ; *****************  
     ; routine definition  
     .mainmenu call xxx   ; a label is preceded with '.'
-    endmain:  ret                ; or followed by '.'
+    endmain:  ret        ; or followed by ':'
 
 It is not allowed to position two labels on the same line. However, you may place as many label after each other - even though no code is between them. They just receive the same assembler address.
 
 It is not allowed to specify two identical address labels in the same source file.
 
-If you want to declare an address globally accessible to other modules, then use XDEF for the address label definition, otherwise the label definition will be interpreted as a local address label.
+If you want to declare an address globally accessible to other modules, then use PUBLIC for the address label definition, otherwise the label definition will be interpreted as a local address label.
 
-    XDEF mainmenu  
+    PUBLIC mainmenu  
     ...  
-    .mainmenu ; label accessible from other modules with XREF
+    .mainmenu ; label accessible from other modules through PUBLIC directive
 
-You may use before or after the label - z80asm automatically handles the scope resolution as long as you use XDEF to define it as globally accessible.
+You may use it before or after the label - z80asm automatically handles the scope resolution as long as you use PUBLIC to define it as globally accessible.
 
 ### 5.9. Writing Z80 mnemonic instructions
 
@@ -616,7 +611,7 @@ Creating libraries is an inbuilt feature of the assembler. The following steps a
     
 2.  Each library source module uses the XLIB directive to define the name of the routine. The same name must be used for the address label definition. If your library uses other library routines then declare them with the LIB directive. Please note that a library routine creates the module name itself (performed by XLIB automatically). The module name is used to search for routines in a library.  
     
-3.  The command line contains the -x option immediately followed by your filename. If you don't specify a filename, the default standard filename is used (defined by the Z80\_STDLIB environment variable). Then you need to specify your project filename preceded by ‘@’.
+3.  The command line contains the -x option immediately followed by your filename. If you don't specify a filename, the default standard filename is used (defined by the Z80\_STDLIB environment variable). Then you need to specify your project filename preceded by '@'.
 
 For example:
 
@@ -782,7 +777,15 @@ Defines a symbol identifier as logically true (integer <> 0). The symbol will be
 
 ### 7.10. DEFS \<size\>{, \<fill-byte\>}
 
-DEFS allocates a storage area of the given size with the given fill-byte. The fill-byte defaults to zero if not supplied. Both expressions need to be constants.
+DEFS allocates a storage area of the given size with the given fill-byte. The fill-byte defaults to zero if not supplied. Both expressions need to be constants. The default can be changed with the command line option "-f{value}".
+
+### 7.10a. DEFS \<size\>, "string"
+
+Create a fixed-length string, filling the remaining space, if any, with the filler byte (default zero).
+
+e.g.
+	DEFS 10, "hello" => "hello", 0,0,0,0,0
+
 
 ### 7.11. DEFVARS \<16-bit expression\> '{' \[<name>\] \[\<storage\_size\> \<size\_multiplier\>\] '}'
 
@@ -847,6 +850,10 @@ Some of the symbols will look like this:
     GGG = $0003  
     JJJ = $40D4
 
+### 7.12. EXTERN name {, name}
+
+This declares symbols as external to the current module. Such a symbol must have been defined as PUBLIC in another module for the current module to be able to use the symbol (it will be linked during the linking phase).
+
 ### 7.12. FPP \<8-bit expression\>
 
 Interface call to the Z88 operating systems' floating point library. This is easier than writing:
@@ -855,6 +862,10 @@ Interface call to the Z88 operating systems' floating point library. This is eas
     DEFB mnemonic
 
 This is an advanced RST 18H instruction which automatically allocates space for the specified parameter. All Z88 floating point call mnemonics are defined in the "fpp.def" file.
+
+### 7.14. GLOBAL name {, name}
+
+The GLOBAL directive defines a symbol PUBLIC if it has been defined locally or EXTERN otherwise.
 
 ### 7.13. IF \<logical expression\> ... \[ELSE\] ... ENDIF
 
@@ -882,7 +893,7 @@ Special CALL instruction for the Ti83 calculator; it is coded as a RST 28H follo
 
 ### 7.18. LIB name {,name}
 
-LIB declares symbol as external to the current module. The symbol name will be defined as the name of a library routine which will be automatically linked into the application code from a library during the linking/relocation phase of the compilation process (if a library has been specified at the command line with the -i option).
+This directive is obsolete. It has been replaced by the EXTERN directive (See changelog.txt at the root of the z88dk project).
 
 ### 7.19. LINE \<32-bit expr\>
 
@@ -908,17 +919,21 @@ When assembling programs with multiple sections, a section without an ORG will b
 
 A section may contain ORG -1 to tell the linker to split the binary file of this section, but continue the addresses sequence from the previous section.
 
+### 7.26. PUBLIC name {, name}
+
+This directive declares symbols publicly available for other modules during the linking phase of the compilation process.
+
 ### 7.24. XDEF name {, name}
 
-This declares symbol globally available to other specified source file modules during the linking phase of the compilation process.
+This directive is obsolete. It has been replaced by the PUBLIC directive (See changelog.txt at the root of the z88dk project).
 
 ### 7.25. XLIB name
 
-When you need to create a library routine, it is necessary to declare the routine with XLIB. In functionality it declares the name globally available to all other modules in project, but also serves as a searchable item in libraries. A library routine does not contain a MODULE directive, since the XLIB name is also identified as the module name (you only specify one library routine per module).
+This directive is obsolete. It has been replaced by the PUBLIC directive (See changelog.txt at the root of the z88dk project).
 
 ### 7.26. XREF name {, name}
 
-This declares symbol as external to the current module. The name must have been defined as XDEF in another module to let this module reach the value of the symbol during the linking phase.
+This directive is obsolete. It has been replaced by the EXTERN directive (See changelog.txt at the root of the z88dk project). 
 
 8\. Run time error messages
 ---------------------------
