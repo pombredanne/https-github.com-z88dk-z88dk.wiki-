@@ -194,9 +194,9 @@ A project file only contains file names. Each file name is separated by a newlin
 
 Project files are easily created using a simple text editor.
 
-#### 1.3.17. -i\<library-file\> : Include library modules during linking/relocation
+#### 1.3.17. -l\<library-file\> : Include library modules during linking/relocation
 
-This option allows compilation time linking of external machine code, better known as library routines. Much, much programming time can be saved by producing a set of standard routines compiled into library files. These may then be included later in application project compilations. The command line option allows specification of several library files. For each library reference in an application module, all library files will be scanned for that particular module. The filename (inclusive directory path) of the library may be specified explicitly on the command line immediately after the -i identifier. If you omit the filename, a default library filename will be used by the assembler. This default filename is defined by creating the environment variable "Z80\_STDLIB=<library-file>. Please refer to your operating system documentation on how to create environment variables.
+This option allows compilation time linking of external machine code, better known as library routines. Much, much programming time can be saved by producing a set of standard routines compiled into library files. These may then be included later in application project compilations. The command line option allows specification of several library files. For each library reference in an application module, all library files will be scanned for that particular module. The filename (inclusive directory path) of the library may be specified explicitly on the command line immediately after the -l identifier. If you omit the filename, a default library filename will be used by the assembler. This default filename is defined by creating the environment variable "Z80\_STDLIB=<library-file>. Please refer to your operating system documentation on how to create environment variables.
 
 Library files are recognised by the ".lib" extension.
 
@@ -210,7 +210,7 @@ Tells the assembler where to look for INCLUDE files.
 
 #### 1.3.20. -x : Create a library
 
-A library file is composed of object files surrounded by a few file structures. The library file format (and object file format) may be found at the end of this documentation. A library is simply a set of independent routines (that may refer to each other) put together in a sequential form. You may only specify a single -x option on the command line. A filename may be explicitly defined (including device and path information) to determine the storage location of the library. As in -i you may omit the filename to use the default filename identified by the "Z80\_STDLIB" environment variable. A library routine must be defined using a simple XLIB directive with an identical address name label definition. Please refer to further information later in this documentation. The "Z80lib.zip" contains the standard library with all corresponding source files. Have a look at them - they clearly displays how to compose a library routine.
+A library file is composed of object files surrounded by a few file structures. The library file format (and object file format) may be found at the end of this documentation. A library is simply a set of independent routines (that may refer to each other) put together in a sequential form. You may only specify a single -x option on the command line. A filename may be explicitly defined (including device and path information) to determine the storage location of the library. As in -l you may omit the filename to use the default filename identified by the "Z80\_STDLIB" environment variable. A library routine must be defined using a simple XLIB directive with an identical address name label definition. Please refer to further information later in this documentation. The "Z80lib.zip" contains the standard library with all corresponding source files. Have a look at them - they clearly displays how to compose a library routine.
 
 One very important aspect of libraries is the time that the assembler spends searching through them. To optimize the search you should place your routines in a "topological" order, i.e. routines that access other library routines should be placed first. In most situations you avoid redundant sequential searching through the library.
 
@@ -443,7 +443,7 @@ The extension for global address label definition files is 'def'. The base file 
 
 #### 4.3.9. The library file extension, lib
 
-Library files are identified with the 'lib' extension. Library files may be created using the -x option. Library may be included into application code during linking of object modules with the -i option.
+Library files are identified with the 'lib' extension. Library files may be created using the -x option. Library may be included into application code during linking of object modules with the -l option.
 
 5\. Compiling files
 -------------------
@@ -594,7 +594,7 @@ Except for the SLL instruction all have bugs related to an interrupt being able 
 
 ### 5.12. Referencing library routines
 
-When you need to use a library routine in your application code, you need to do two things; include a library file at the assembler command line with the -i option and refer to the library routine in your source file using the LIB directive followed by the name of the library routine, e.g.
+When you need to use a library routine in your application code, you need to do two things; include a library file at the assembler command line with the -l option and refer to the library routine in your source file using the LIB directive followed by the name of the library routine, e.g.
 
     LIB malloc, free
 
@@ -1014,7 +1014,7 @@ The following error messages will be written toe the error files corresponding t
     Your library file is not a library file (at least is not of the correct file format used by this assembler). Have you maybe used another "library" file? The Z80 library file could also be corrupted (at least in the header).  
     
 *   "Environment variable not defined"  
-    The assembler reports either the "Z80\_STDLIB" environment variable wasn't found when used by options -x and -i.  
+    The assembler reports either the "Z80\_STDLIB" environment variable wasn't found when used by options -x and -l.  
     
 *   "Cannot include file recursively"  
     A file was tried to be included which was already included at a previous include level. INCLUDE "a.h" cannot contain an INCLUDE "a.h".

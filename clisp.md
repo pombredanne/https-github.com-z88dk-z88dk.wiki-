@@ -232,7 +232,7 @@ A short asm program at address 0 can uncompress this image and start it:
 
 	
 	; FILE "clisp_if2.asm"
-	; z80asm -b -ic:\z88dk\libsrc\_DEVELOPMENT\lib\sccz80\zx.lib clisp_if2.asm
+	; z80asm -b -lc:\z88dk\libsrc\_DEVELOPMENT\lib\sccz80\zx.lib clisp_if2.asm
 	
 	org 0
 	
@@ -262,7 +262,7 @@ The program is very simple.  Interrupts are disabled because it's not known whet
 To assemble this program run:
 
 	
-	z80asm -b -ic:\z88dk\libsrc\_DEVELOPMENT\lib\sccz80\zx.lib clisp_if2.asm
+	z80asm -b -lc:\z88dk\libsrc\_DEVELOPMENT\lib\sccz80\zx.lib clisp_if2.asm
 
 
 "asm_dzx7_standard" is a library routine so the assembler must be told where to find the library.  You may need to change the path if z88dk was installed in a directory other than "c:\z88dk".
