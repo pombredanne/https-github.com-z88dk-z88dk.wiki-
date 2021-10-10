@@ -4,27 +4,6 @@
 **z80asm** reads text files in the syntax supported by the specific processor 
 being assembled for (see -m option) and produces the corresponding object files.
 
-An input file with a ```.o``` extension is assumed to be already in object file
-format and is just read by the linker. Any other extension is considered an 
-assembly source file (conventionally ```.asm```).
-
-A project list file may be supplied in the command line prefixed by the at-sign
-(e.g. ```@project.lst```). The list file contains one input file name per 
-line, or another project list prefixed with an at-sign, which is opened 
-recursively. Hash signs (```#```) and semi-colons (```;```) may be used at the 
-start of lines in the list files to include comments.
-
-Both the command line and the list files support wild-cards to expand all the 
-files that match the given pattern.  
-
-*Note* that the Operating System may do its own wildcard expansion and the 
-pattern may need to be quoted in the command line.
-
-A single star in a file name (```*```) expands to the list of all 
-files/directories that match the complete pattern, where the star represents 
-any sequence of characters. A double-star in a directory name (```**```) 
-expands to the complete directory sub-tree, when searched recursively.
-
 ## Input Lines
 
 The assembler parses source files with any of the common end-of-line 

@@ -44,6 +44,7 @@ linking by specifying it with the ```-l``` option.
 ## Contents
 
 * [z80asm Environment](Tool---z80asm---environment)
+* [z80asm Command Line](Tool---z80asm---command-line)
 * [z80asm Input Format](Tool---z80asm---input-format)
 * [z80asm Object File Format](Tool---z80asm---object-file-format)
 * [z80asm Old Manual](Tool---z80asm---old-manual)
