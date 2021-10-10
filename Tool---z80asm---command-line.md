@@ -4,7 +4,7 @@
 *z80asm* is invoked with:
 
 ```
-  z80asm [options]... [files|@project]...
+  z80asm [options]... {file|@project}...
 ```
 
 Command line options start with the dash `-`. The option name and the argument,
