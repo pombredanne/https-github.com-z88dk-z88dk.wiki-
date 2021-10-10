@@ -19,3 +19,5 @@ DK-1610 Kobenhavn V
 Denmark  
 e-mail [gbs@image.dk](mailto:gbs@image.dk)
 
+[remainder of the manual removed as it was not up-to-date]
+
