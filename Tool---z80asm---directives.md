@@ -3,12 +3,15 @@
 
 *z80asm* accepts the following assembly directives.
 
-### ALIGN expression
+### ALIGN expression[, filler]
 
-Tells the linker to reserve some space before the start of this section so that 
-the section start address is a multiple of the constant *expression*.
+The first `ALIGN` statement in a section tells the linker to reserve space 
+before the start of the section so that the section start address is a multiple 
+of the constant *expression*.
 
-### BINARY "filename"
+A subsequent `ALIGN` statement is translated into `DEFS`.
+
+### BINARY|INCBIN "filename"
 
 Loads a binary file at the current location in the object file.
 
@@ -16,14 +19,24 @@ Loads a binary file at the current location in the object file.
 
 Calls the Z88 operating system. The *expression* is a 16-bit expression and must 
 evaluate to a constant. This is assembled as follows:
-
-    RST $20  
-    DEFB x ; 8-bit parameter
-
+```
+RST $20  
+DEFB x ; 8-bit parameter
+```
 or
+```
+RST $20  
+DEFW x ; 16-bit parameter
+```
 
-    RST $20  
-    DEFW x ; 16-bit parameter
+### CALL\_PKG expression
+
+Calls the Z88 operating system. The *expression* is a 16-bit expression and must 
+evaluate to a constant and be different from zero. This is assembled as follows:
+```
+RST $08  
+DEFW expression
+```
 
 ### DEFB|DB|DEFM|DM|BYTE expression|"string"[,...]
 
@@ -67,7 +80,7 @@ at the current location.
 Expressions may be computed at the link phase, i.e. they may refer to external 
 or address symbols.
 
-### DEFC name = expression
+### DEFC|DC name = expression, ...
 
 Define a symbol variable that may either be a constant or an expression.
 
@@ -100,7 +113,7 @@ where *size* and *fill_byte* are constant expressions.
 If the *fill_byte* is not supplied, it defaults to zero or to the value
 supplied in the command line `-fVALUE` option.
 
-### DEFS size, "string"
+### DEFS|DS size, "string"
 
 Create a fixed-length string, filling the remaining space, if any, with the 
 filler byte (default zero or the value of the `-fVALUE` option), e.g.
@@ -174,23 +187,32 @@ Calls the Z88 operating system floating point library. The *expression* is a
 Declares symbols `PUBLIC` if they are defined locally in the module or 
 `EXTERN` otherwise.
 
-### IF expression ... [ELSE] ... ENDIF
+### IF expression ... [ELIF expression] ... [ELSE] ... ENDIF
 
 Evaluate the constant *expression* and assembles the lines up to the `ELSE`
 clause if it is true (i.e. not zero), or the lines from `ELSE` to `ENDIF`
 otherwise. The `ELSE` clause is optional. This structure may be nested.
 
-### IFDEF name ... [ELSE] ... ENDIF
+Optional `ELIF` clauses may be added to check for other conditions if the 
+previous conditions failed.
+
+### IFDEF name ... [ELIFDEF name] ... [ELSE] ... ENDIF
 
 Check if the give symbol name is defined and assembles the lines up to the `ELSE`
 clause if true (i.e. defined), or the lines from `ELSE` to `ENDIF` otherwise. 
 The `ELSE` clause is optional. This structure may be nested.
 
-### IFNDEF \<name\> ... \[ELSE\] ... ENDIF
+Optional `ELIFDEF`|`ELINDEF` clauses may be added to check for other symbols 
+if the previous conditions failed.
+
+### IFNDEF name ... [ELIFNDEF name] ... [ELSE] ... ENDIF
 
 Check if the give symbol name is defined and assembles the lines up to the `ELSE`
 clause if false (i.e. not defined), or the lines from `ELSE` to `ENDIF` 
 otherwise. The `ELSE` clause is optional. This structure may be nested.
+
+Optional `ELIFDEF`|`ELINDEF` clauses may be added to check for other symbols 
+if the previous conditions failed.
 
 ### INCLUDE "filename"
 
@@ -242,9 +264,34 @@ this section, but continue the addresses sequence from the previous section.
 
 With the option `-split-bin` all sections generate their own `file_section.bin`.
 
+### PHASE expression ... DEPHASE
+
+Assemble a group of code at the current position, but resolve all the addresses
+as if `ORG expression` had been called. Allows code to be stored at an address 
+and to be copied by the runtime to another address.
+
 ### PUBLIC|XDEF|XLIB name,...
 
 Declares symbols as exported from the current module. These symbols are 
 available to be used from other modules by declaring them `EXTERN` and the 
 references are resolved during linking.
+
+### SECTION name
+
+Starts a new section with the given `name`.
+
+Sections allow the code to be mapped to the target architecture memory map 
+by the linker. The linker lays out the sections in the order it sees them
+in the object modules being linked, and joins together code from different
+modules with the same section name. It considers the `ORG` and `ALIGN`
+attributes of the section when laying out the code in the memory map.
+
+A C-compiler may define a set of sections in its `crt` (e.g. `text`, `data`
+and `bss`). As long as the `crt` module is first in the list of linked object
+modules, then all the text, data and bss object code will be laid together
+in that order. 
+
+### UNDEFINE name,...
+
+Removes the definition of a set of symbols, if they exist.
 
