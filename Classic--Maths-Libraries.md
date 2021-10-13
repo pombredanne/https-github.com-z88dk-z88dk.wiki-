@@ -25,7 +25,9 @@ __BBC Maths can only be used with the sccz80 compiler.__
 
 ## MBF32 - (32 bit maths from Microsoft) - 8080/gbz80/z80/z180/z80n
 
-Support has been added for the (4 byte, 8 bit exponent, 24 bit mantissa) Microsoft single precision library. This is available for machines that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported:
+Support has been added for the (4 byte, 8 bit exponent, 24 bit mantissa) Microsoft single precision library. 
+
+This library can be used in two ways. As a self-contained maths library that can run on any of the supported processors and as stub library that utilises the ROM code for targets that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported for this usecase:
 
 * VTech Laser 500
 * Mitsubishi Multi 8 (10k mode only)
