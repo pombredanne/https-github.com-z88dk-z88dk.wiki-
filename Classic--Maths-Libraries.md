@@ -93,6 +93,7 @@ More details on the library can be found within the [repository](https://github.
 * `-lmathz88 -fp-mode=z88` 6 bytes. 8 bit exponent, 32 bit mantissa. Cambridge z88
 * `-lmz` 6 bytes. 8 bit exponent, 32 bit mantissa. ZX Spectrum, ZX81 
 * `-lcpcmath` 6 bytes. 8 bit exponent, 32 bit mantissa. Amstrad CPC
+* `--math-mbf32`, as noted above. Various Microsoft BASIC machines.
 
 All of these libraries use the floating point package located in the machine's ROM. This can result in a compact binary
 
