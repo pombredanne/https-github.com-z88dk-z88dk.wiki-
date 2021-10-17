@@ -23,11 +23,11 @@ The BBC maths library provides a 32 bit mantissa and 8 bit exponent. It's the sa
 __BBC Maths can only be used with the sccz80 compiler.__
 
 
-## MBF32 - (32 bit maths from Microsoft) - 8080/gbz80/z80/z180/z80n
+## MBF32 - (32 bit maths from Microsoft) - 8080/8085/gbz80/z80/z180/z80n
 
 Support has been added for the (4 byte, 8 bit exponent, 24 bit mantissa) Microsoft single precision library. 
 
-This library can be used in two ways. As a self-contained maths library that can run on any of the supported processors and as stub library that utilises the ROM code for targets that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported for this usecase:
+This library can be used in two ways. As a self-contained maths library that can run on any of the supported processors and as stub library that utilises the ROM code for targets that run Microsoft BASIC and the appropriate entry points have been located. To date, the following machines are supported for this use case:
 
 * VTech Laser 500
 * Mitsubishi Multi 8 (10k mode only)
@@ -36,6 +36,8 @@ This library can be used in two ways. As a self-contained maths library that can
 * CCE MC-1000
 
 The library can be linked with the following options: `--math-mbf32` or `--math-mbf32_8080`
+
+Some basic optimisation for the 8085 (using undocumented instructions) and z80 has been undertaken. Mainly this involves more effective load and store routines, and improved register shift processes.
 
 __MBF32 can only be used with the sccz80 compiler.__
 
