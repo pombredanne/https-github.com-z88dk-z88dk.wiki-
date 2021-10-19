@@ -35,7 +35,7 @@ This library can be used in two ways. As a self-contained maths library that can
 * TRS80/Color Genie
 * CCE MC-1000
 
-The library can be linked with the following options: `--math-mbf32` or `--math-mbf32_8080`
+The library can be linked with the following options: `--math-mbf32`, `--math-mbf32_8080`, `--math-mbf32_8085`, or  `--math-mbf32_GBZ80`, depending on the target CPU.
 
 Some basic optimisation for the 8085 (using undocumented instructions) and z80 has been undertaken. Mainly this involves more effective load and store routines, and improved register shift processes.
 
