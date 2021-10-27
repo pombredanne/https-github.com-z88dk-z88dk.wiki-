@@ -2,7 +2,7 @@ After a few decades of not supporting 8080 code generation, z88dk can once again
 
 ## Supported targets
 
-The following targets are 8080 only:
+### 8080 CPU targets
 
 * [PMD85](Platform---PMD85)
 * [Vector06c](Platform-Vector06c)
@@ -15,13 +15,6 @@ The following targets are 8080 only:
 * [Krokha](Platform--Kroka)
 * [TRS80 Model 100](Platform---M100) (8085)
 
-The following targets are 8085 only:
-
- * RC2014 using the 8085 CPU Module
-```
-zcc +rc2014 -subtype=basic85 myfile.c -o myhexfile -create-app
-```
-
 Additionally, the CP/M target can generate 8080 binaries. To do so, add the option `-clib=8080` to the command line. For example:
 
 ```
@@ -29,6 +22,23 @@ zcc +cpm -clib=8080 adv_a.c
 ```
 
 A .bin file will be generated that should run on 8080 based CP/M machines.
+
+### 8085 CPU Targets
+
+ * RC2014 using the [8085 CPU Module](https://feilipu.me/2021/08/15/8085-cpu-on-the-z80-bus/)
+
+The RC2014-8085 support consists of two subtypes specifically for use with the 8085 CPU Module.
+
+The `basic85` subtype produces a HEX file for use with the [Microsoft Basic ROM](https://gitlab.com/feilipu/NASCOM_BASIC) (either with or without the APU Module), and can be uploaded to the RC2014 using the `HLOAD` Basic keyword.
+
+Additionally, both the RC2014 `basic` and `basic85` subtypes are supported by the `z88dk-ticks` emulator. Where the resulting binary just needs to be titled `rc2014.bin`, and emulated with the correct machine type.
+```
+zcc +rc2014 -subtype=basic85 my_c_file.c my_asm_file.asm -o my_hex_file -create-app
+```
+The `acia85` subtype produces a HEX ROM file that provides serial interfaces using the RC2014 ACIA Serial Module.
+```
+zcc +rc2014 -subtype=acia85 my_c_file.c my_asm_file.asm -o my_hex_rom_file -create-app
+```
 
 ## Limitations
 
@@ -50,7 +60,7 @@ The following features from `<stdlib.h>`are not available in the 8080 library:
 
 ### `<math.h>`
 
-There are two maths libraries that run on the 8080: daimath32 and mbf32. Daimath32 is contained within the repository, however for mbf32, we only ship the bindings with z88dk not the implementation.
+There are two [maths libraries](Classic--Maths-Libraries) that run on the 8080/8085: `daimath32`, extracted from the [DAI](Platform---Dai) ROM, and `mbf32` Microsoft Basic Floating Point, extracted from Microsoft Basic 4.7 and optimised for the 8080, 8085,and z80 CPUs.
 
 ### z88dk extension libraries
 
