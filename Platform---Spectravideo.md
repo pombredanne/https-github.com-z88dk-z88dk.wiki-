@@ -51,11 +51,17 @@ To run on a 16K machine, you need to move the code origin to the upper half.
 
 ### ROM cartridge
 
-A ROM cartridge can be generated with:
+A ROM cartridge for the SVI-328 can be generated with:
 
     zcc  +svi -lm -create-app -subtype=rom program.c
 
-In this model, the firmware isn't available so to read the keyboard you must add the option `--hardware-keyboard` to redirect calls to the "inkey" keyboard reading routines.
+and similarly for the SVI-318 as follows:
+
+    zcc  +svi -lm -create-app -subtype=rom318 program.c
+
+It should be noted that the SVI-318 has a different memory layout to the SVI-328.
+
+When generating ROMs, the firmware isn't available so to read the keyboard you must add the option `--hardware-keyboard` to redirect calls to the "inkey" keyboard reading routines.
 
 ### Autoboot floppy
 
