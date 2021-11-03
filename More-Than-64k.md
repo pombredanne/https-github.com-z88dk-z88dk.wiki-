@@ -27,7 +27,7 @@ A functioning example for the +zx is in the [classic examples directory](https:/
 
 The named address space feature allows the data address space of the z80 to be extended to >64k, where as `__banked` functions allow the creation of projects that contain more than 64k code. 
 
-The general principle behind the feature is that the memory space is divided into a common area containing library and other support routines and a pageable segment where code and const data is paged in. An example implementation for (classic) +msx +gb +zx +sms can be found in the [classic examples directory](https://github.com/z88dk/z88dk/tree/master/examples/banked).
+The general principle behind the feature is that the memory space is divided into a common area containing library and other support routines and a pageable segment where code and const data is paged in. An example implementation for (classic) +msx +gb +zx +sms +cpc can be found in the [classic examples directory](https://github.com/z88dk/z88dk/tree/master/examples/banked).
 
 # Far Memory (classic - sccz80)
 
