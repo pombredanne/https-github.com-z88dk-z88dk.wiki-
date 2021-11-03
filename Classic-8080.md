@@ -13,7 +13,6 @@ After a few decades of not supporting 8080 code generation, z88dk can once again
 * [Altair 8800](Platform--Altair8800)
 * [LVIV](Platform---Lviv)
 * [Krokha](Platform--Kroka)
-* [TRS80 Model 100](Platform---M100) (8085)
 
 Additionally, the CP/M target can generate 8080 binaries. To do so, add the option `-clib=8080` to the command line. For example:
 
@@ -25,6 +24,7 @@ A .bin file will be generated that should run on 8080 based CP/M machines.
 
 ### 8085 CPU Targets
 
+ * [TRS80 Model 100](Platform---M100)
  * RC2014 using the [8085 CPU Module](https://feilipu.me/2021/08/15/8085-cpu-on-the-z80-bus/)
 
 The RC2014-8085 support consists of two subtypes specifically for use with the 8085 CPU Module.
