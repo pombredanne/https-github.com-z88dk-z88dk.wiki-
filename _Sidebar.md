@@ -16,7 +16,7 @@
   * [Maths Libraries](Classic--Maths-Libraries)
 * [Platform List](Platform)
 * [Unsupported Platforms](Platform---Unsupported)
-* [8080 Support](Classic-8080)
+* [i8080/5 Support](Classic-8080)
 * [Retargetting](Classic--Retargetting)
 * [Building the libraries](Classic-Building-the-libraries)
 * [Pragmas](Classic--Pragmas)
