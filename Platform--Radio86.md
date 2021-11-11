@@ -4,7 +4,7 @@
 * Upto 32k RAM
 * 2k firmware ROM
 
-## Classic library support (`+krokha`)
+## Classic library support (`+radio86`)
 
 * [x] Native console output
 * [x] Native console input
