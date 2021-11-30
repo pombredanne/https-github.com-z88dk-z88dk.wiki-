@@ -56,7 +56,7 @@ This is a quick overview of the tools included in Z88DK.
 
 * **Z88DK-ZX0** and **Z88DK-ZX7** are PC side data compression tools with companion decompression functions in the z80 library.
 
-* **Z88DK-ZX0** and **Z88DK-ZX7** are  PC-side decompressor counterpartys to the z88dk-zx0 and z88dk-zx7.
+* **Z88DK-ZX0** and **Z88DK-ZX7** are  PC-side decompressor counterparts to the z88dk-zx0 and z88dk-zx7.
 These tools are not normally directly invoked by the user:
 
 * **M4** acts as z88dk's macro preprocessor and can optionally process files ahead of the c preprocessor or assembler.
