@@ -13,8 +13,7 @@ assembly instructions (i.e. code to be translated into object code for the
 specific processor) or blanks and comments.
 
 Differently to most other assemblers, white space is not significant, i.e. a 
-label can be defined after white space, and an opcode can be written at column 
-1.
+label can be defined after white space, and an opcode can be written at column 1.
 
 ### Continuation Lines
 

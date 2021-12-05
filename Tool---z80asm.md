@@ -46,6 +46,7 @@ linking by specifying it with the ```-l``` option.
 * [z80asm Environment](Tool---z80asm---environment)
 * [z80asm Command Line](Tool---z80asm---command-line)
 * [z80asm Input Format](Tool---z80asm---input-format)
+* [z80asm Preprocessor](Tool---z80asm---preprocessor)
 * [z80asm Expressions](Tool---z80asm---expressions)
 * [z80asm Directives](Tool---z80asm---directives)
 * [z80asm Object File Format](Tool---z80asm---object-file-format)
