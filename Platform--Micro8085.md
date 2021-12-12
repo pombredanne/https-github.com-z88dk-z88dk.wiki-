@@ -1,4 +1,4 @@
-Hardware summary
+## Hardware summary
 
 Home brew hardware with:
 
@@ -6,7 +6,9 @@ Home brew hardware with:
 * 32k ROM/32k RAM
 * Intel 8155 IO & timer
 * Intel 8251 UART
-* Support for additional components
+* Support for SPI bus, serial 32k e2prom, ADC, DAC
+
+Target has no built in monitor software or other 'OS' for program download. User program location is straight into ROM.
 
 ## Classic library support (`+micro8085`)
 
