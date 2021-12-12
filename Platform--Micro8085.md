@@ -4,9 +4,11 @@ Home brew hardware with:
 
 * Intel 8085
 * 32k ROM/32k RAM
+* Intel 8155 IO & timer
+* Intel 8251 UART
 * Support for additional components
 
-## Classic library support (`+mikro80`)
+## Classic library support (`+micro8085`)
 
 * [x] Native console output
 * [x] Native console input
@@ -31,7 +33,7 @@ Home brew hardware with:
 
 # Compilation
 
-    zcc +micro85 program.c -create-app
+    zcc +micro8085 program.c -o output.bin -create-app
 
 A .ihx file is produced suitable for burning to ROM.
 
