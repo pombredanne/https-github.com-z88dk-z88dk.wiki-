@@ -53,6 +53,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Osborne 1](Platform---Osborne)| 52x24 |  No | 104x48| No | No | Extension library to the CP/M base (* an official HW mod permitted higher resolutions)| 
 [Otrona Attachè](Platform---Otrona) | 80x25 (ADM3) | No |  320x240 | No | No | Extension library to the CP/M base | 
 [Memotech MTX](Platform---Memotech-MTX)| 40x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone| 
+[Micro 8085](Platform--Micro8085) | - |  - | - | No | No |
 [MicroBee](Platform---Microbee)| Yes |  40x25,64x16,80x24 | 80x50,128x32,160x48 and optional 640x275, 512x256, 320x275, 160x75 | No | 1 bit| Native console: 64x16 when in RUNM mode, 80x24 when used as an extension library to the CP/M base | 
 [Mikro 80](Platform--Mikro80) | 64x32 |  64x32 | 128x64 | No | No |
 [Mitsubishi Multi8](Platform---Mitsubishi-Multi8)| Yes |  40x25, 80x25 | 640x200 | No | PSG |
