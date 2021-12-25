@@ -3,6 +3,10 @@
 
 *z80asm* accepts the following assembly directives.
 
+### ASSERT expression
+
+Evaluate the constant expression and abort assembly with an assertion failure error if the expression is false. 
+
 ### ALIGN expression[, filler]
 
 The first `ALIGN` statement in a section tells the linker to reserve space 
