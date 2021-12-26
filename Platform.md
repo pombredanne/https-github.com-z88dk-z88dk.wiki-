@@ -1,5 +1,7 @@
 The following table shows the machines supported by the **_classic_** library.
 
+Many features can be tested programmatically using `<features.h>` which is generated from the spreadsheet: [features.csv](https://github.com/z88dk/z88dk/blob/master/doc/features/features.csv)
+
 _Not all columns are visible. Horizontal scroll to see them._
 
  | Machine | Native Console I/O | [Portable Console](Classic-GenericConsole) | [Monochrome Graphics](library/monographics) | [File I/O](library/stdio) | [Sound](library/sound) | Other features / notes | 
