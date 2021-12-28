@@ -1,5 +1,7 @@
 The following table shows the machines supported by the **_classic_** library.
 
+Many features can be tested programmatically using `<features.h>` which is generated from the spreadsheet: [features.csv](https://github.com/z88dk/z88dk/blob/master/doc/features/features.csv)
+
 _Not all columns are visible. Horizontal scroll to see them._
 
  | Machine | Native Console I/O | [Portable Console](Classic-GenericConsole) | [Monochrome Graphics](library/monographics) | [File I/O](library/stdio) | [Sound](library/sound) | Other features / notes | 
@@ -108,7 +110,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [TS2068](Platform---Timex-TS2068)| [32x24, 64x24, 128x24](Platform---Sinclair-ZX-Spectrum#the-standard-zx-spectrum-console-driver) | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | 256x192 | No | 1 bit| Sprite Pack | 
 [Вектор-06Ц/Vector06c](Platform-Vector06c)| No  | 32x32 | 256x256 | No | PSG |  |
 [Videoton TV Computer](Platform--TVC)| 16x24, 32x24 - default, 64x24 | No  | No | No | No | |
-[VTech Laser 350/500/700](Platform--Laser-350-500-700) | 40x24  | 40x24 and 80x24 | 80x48,160x48,320x192 | No | No | |
+[VTech Laser 350/500/700](Platform--Laser-350-500-700) | 40x24  | 40x24 and 80x24 | 80x48,160x48,320x192 | No | 1 bit | |
 [VZ/Laser 200](Platform---VZ200) | 32x16| 32x12 (B&W)| 128x64 + 64x32| No | 1 bit| | 
 [Xircom Rex 6000](Platform---Xircom-REX6000) | No  | No | No | No | No | Graham Cobb's stdio library was due to be integrated into z88dk v1.6. The Rex supplies has its own library mostly divergent from the standard z88dk library | 
 [Z80 TV Game](Platform--Z80TVGame) | No  | 21x26 | 168x208 | no | 1bit | |
