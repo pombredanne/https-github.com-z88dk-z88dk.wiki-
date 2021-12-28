@@ -13,6 +13,39 @@ is pasted in place in the new value.
     DEFL var = var+1    ; var is now "+1"
     DEFL var = var+1    ; var is now "+1+1"
 
+Alternative syntax:
+
+    var DEFL var+1
+
+### LOCAL
+
+Used inside macros to declare the following symbols as local to the macro
+invocation, i.e. they are replaced by a unique identifier on each invocation.
+
+    MACRO abc
+    LOCAL l1,l2
+    l1:                 ; replaced by l1__<n> unique identifier
+    l2:                 ; replaced by l2__<n> unique identifier
+    ENDM
+
+### MACRO
+
+Define a new macro.
+
+    MACRO name [arg1,...]
+    text
+    ENDM
+
+Creates a macro that is expanded when referred to in the opcode field of an 
+instruction. The formal parameters are assigned to the actual arguments before
+the expansion.
+
+Alternative syntax:
+
+    name MACRO [arg1,...]
+    text
+    ENDM
+
 ### #define
 
 `#define` works like in the C preprocessor and allows the definition of
@@ -29,7 +62,6 @@ Example:
         push bc \ \
         push de \ \
         push hl
-    
     pushall                 ; pushes bc, de and hl
 
 Note the double role of the backslash, as a line continuation, and as a line 
