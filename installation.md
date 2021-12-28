@@ -6,6 +6,16 @@ The nightly build should be preferred unless you have a reason to install an old
 
 **NOTE: Some users have reported problems with usage because they have other unrelated programs installed named "zcc" or "z80asm" earlier in their paths.  If you are having build or compile trouble, try putting z88dk/bin at the front of your path to see if the problems go away.**
 
+## Building from sources
+
+To build z88dk from sources, the following tools are needed:
+- gcc version 8 (supporting C++17 and std::filesystem)
+- Ragel State Machine Compiler version 6.10
+- re2c 1.3 - tool for generating fast C-based recognizers
+- Perl 5
+
+The tools required for the CI environment are listed in .github/workflows/c-cpp.yml
+
 ## Docker usage
 
 See [Docker Usage](Docker-Usage) for details - due to changes at dockerhub nightly builds are not available.
