@@ -14,7 +14,7 @@ To build z88dk from sources, the following tools are needed:
 - re2c 1.3 - tool for generating fast C-based recognizers
 - Perl 5
 
-The tools required for the CI environment are listed in .github/workflows/c-cpp.yml
+The tools required for the CI environment are listed in https://github.com/z88dk/z88dk/blob/master/.github/workflows/c-cpp.yml
 
 ## Docker usage
 
