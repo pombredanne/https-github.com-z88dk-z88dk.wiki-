@@ -27,6 +27,7 @@ To build z88dk from sources, the following tools are needed. The indicated versi
 The build environment and test tools use Perl and the following modules:
 
 | Ubuntu package               | CPAN package  | Min version | Description |
+|---                           |---            |---          |---          |
 | liblocal-lib-perl            | local::lib    | 2.000024    | module to use a local path for Perl modules
 | libyaml-perl                 | YAML          | 1.30        | YAML Ain't Markup Language
 | libmodern-perl-perl          | Modern::Perl  | 1.20200211  | module for enabling all of the features of Modern Perl
