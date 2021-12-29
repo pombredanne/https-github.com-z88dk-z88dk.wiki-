@@ -15,7 +15,7 @@
     * [ ] UDG support
     * [ ] Paper colour
     * [ ] Ink colour
-    * [ ] Inverse attribute
+    * [x] Inverse attribute
     * [ ] Bold attribute
     * [ ] Underline attribute
 * [ ] Lores graphics
