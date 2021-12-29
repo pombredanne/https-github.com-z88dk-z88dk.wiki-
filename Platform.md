@@ -90,7 +90,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Sharp X1](Platform---Sharp-X1)| No | 40(80)x25|  320(640)x200  | No | PSG only | | 
 [S1MP3](Platform---S1MP3)| No | Yes | No | No | No | | 
 [Exidy Sorcerer](Platform---Sorcerer)| 64x30| 64x30 | 128x60| No | No | '--300bps' extra mode in appmake| 
-[Sol20](Platform---Sol20)| 64x16| 64x16 | No | No | No | | 
+[Sol20](Platform---Sol20)| No | 64x16 | 64x16 | No | No | | 
 [Sony SMC-70/SMC-777](Platform---SMC-777)| 80x24| 40x25 + 80x25 | 80x50 + 160x50 | Yes | PSG | Extension library to CP/M.|
 [SORD M5](Platform---Sord-M5)| 32x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 256x192 | No | PSG (+ 1 bit) | Most of GFXLIB by Rafael de Oliveira Jannone | 
 [S-OS (The Sentinel)](Platform---SOS)| OS calls | No  | No |  Yes | No | Multi platform OS published in a Japanese PC magazine | 
