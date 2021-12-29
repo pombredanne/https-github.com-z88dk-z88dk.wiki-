@@ -1,6 +1,6 @@
 # Sol20 Hardware summary
 
-* 8085 @ ~2Mhz
+* 8080 @ ~2Mhz
 * S-100 bus
 * Upto 48k contiguous RAM
 * VDM1 graphics board
@@ -43,7 +43,7 @@ Using the Solace emulator, load the .ENT file using File->Load Program. Then ent
 to start the program:
 
 ```
-EXEC 0000
+EX 0
 ```
 
 
