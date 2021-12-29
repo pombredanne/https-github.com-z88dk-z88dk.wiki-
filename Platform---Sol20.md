@@ -33,9 +33,9 @@
 
     zcc +sol20 program.c -create-app
 
-An .ent file is created suitable for loading into an emulator. Alternatively a tape file can be created:
+An .ent file is created suitable for loading into an emulator. Alternatively an audio file for use on real hardware can be created with:
 
-    zcc +sol20 -subtype=cas program.c -create-app
+    zcc +sol20 -subtype=wav program.c -create-app
 
 # Emulation usage
 
