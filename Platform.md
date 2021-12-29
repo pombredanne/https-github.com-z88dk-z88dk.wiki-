@@ -39,7 +39,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Enterprise 64/128](Platform---Enterprise64) | 40x25| No | 336x243*, 672x243*| No | Yes | *GFX via EXOS | 
 [Excalibur 64](Platform---Excalibur64) | No | 40x25, 80x25 | No | No | No |
 [Galaksija](Platform---Galaksija)| 32x16 (B&W) | 32x16 + 32x26 (Gal+) | 64x48 + 256x208 (Gal+)| No | 1 bit* | (via tape output) | 
-[Genius Leader](Platform-Genius-Leader)| No | 20x2,20x4,30x12 | No | No | No |
+[Genius Leader](Platform-Genius-Leader)| No | 20x2,20x4,30x12 | 240x100 (6000SL)| No | No |
 [Hanimex Pencil II](Platform--Hanimex-Pencil-II)| No |32x24 | 256x192 | No | PSG |
 [Homelab 2](Platform---Homelab2) | No | 40x25 | 80x50 | No | No |
 [Homelab 4](Platform---Homelab) | No |  64x32 | 128x64 | No | No |
@@ -81,7 +81,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [(Robotron) VEB Mikroelektronik HC-900, KC85/2..KC85/5](Platform---KC) | 40x32| 40x32 | 320x256 | No | No | Model variants: HC-900 KC85/2..KC85/5 | 
 [SAM Coupé](Platform--Sam-Coupe.md)| 32x24| [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) |  No | No | PSG (SA1099 eTracker)+1 bit| Sprite Pack. Music might play at a higher pitch due to CPU frequency. | 
 [Samsung SPC-1000](Platform-Samsung-SPC-1000)| 32x16 | 32x16 + 32x24 | 64x32 + 256x192 | No | Yes | VDP extension is supported
-[Sega Master System](Platform---SMS) / (Game Gear) | 32x24 (20x16) | 32x24| || PSG (+ 1 bit) | |
+[Sega Master System](Platform---SMS) / (Game Gear) | 32x24 (20x16) | 32x24| 256x192 || PSG (+ 1 bit) | |
 [Sega SC-3000/Sega SG-1000](Platform---Sega-SC3000) | 40x24 | [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) |  256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone | 
 [Sharp PC-G8xx, PC-E2xx](Platform---Sharp-PC)| No | 24x4 *(24x6 / 36x8)|  | 143x47 (G850 only) | No | 1 bit** | *(-clib=g850b / -clib=g850) **HW required |
 [Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| 80x50 | No | PSG (+ 1 bit)  | Many appmake extras | 
