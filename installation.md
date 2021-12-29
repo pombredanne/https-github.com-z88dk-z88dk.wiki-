@@ -9,10 +9,14 @@ The nightly build should be preferred unless you have a reason to install an old
 ## Building from sources
 
 To build z88dk from sources, the following tools are needed:
-- gcc version 8 (supporting C++17 and std::filesystem)
+|Ubuntu package|Description|
+|---|---|
+| gcc-8 | GNU C compiler version 8, supporting C++17 and std::filesystem
+
 - Ragel State Machine Compiler version 6.10
 - re2c 1.3 - tool for generating fast C-based recognizers
 - Perl 5
+- BOOST C++ library
 
 The tools required for the CI environment are listed in https://github.com/z88dk/z88dk/blob/master/.github/workflows/c-cpp.yml
 
