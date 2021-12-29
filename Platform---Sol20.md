@@ -18,7 +18,7 @@
     * [x] Inverse attribute
     * [ ] Bold attribute
     * [ ] Underline attribute
-* [ ] Lores graphics
+* [x] Lores graphics (64x16)
 * [ ] Hires graphics
 * [ ] PSG sound
 * [ ] One bit sound
