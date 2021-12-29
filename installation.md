@@ -8,15 +8,42 @@ The nightly build should be preferred unless you have a reason to install an old
 
 ## Building from sources
 
-To build z88dk from sources, the following tools are needed:
-|Ubuntu package|Description|
-|---|---|
-| gcc-8 | GNU C compiler version 8, supporting C++17 and std::filesystem
+To build z88dk from sources, the following tools are needed. The indicated version is a minimum requirement, e.g. gcc version 9 can be used instead of version 8:
 
-- Ragel State Machine Compiler version 6.10
-- re2c 1.3 - tool for generating fast C-based recognizers
-- Perl 5
-- BOOST C++ library
+| Ubuntu package   | Min version | Description |
+|---               |---          |---          |
+| gcc-8            | 8           | GNU C compiler version 8, supporting C++17 and std::filesystem
+| libboost-all-dev | 1.71        | Boost C++ Libraries development files
+| perl             | 5.30        | Larry Wall's Practical Extraction and Report Language
+| ragel            | 6.10        | State Machine Compiler, compiles finite state machines into code in various languages
+| re2c             | 1.3         | tool for generating fast C-based recognizers
+| ccache           | 3.7         | Compiler cache for fast recompilation of C/C++ code
+| dos2unix         | 7.4         | convert text file line endings between CRLF and LF
+| texinfo          | 6.7         | Documentation system for on-line information and printed output
+| texi2html        | 1.82        | Convert Texinfo files to HTML
+| curl             | 7.68        | command line tool for transferring data with URL syntax
+| cpanminus        | 1.7044      | script to get, unpack, build and install modules from CPAN
+
+The build environment and test tools use Perl and the following modules:
+
+| Ubuntu package               | CPAN package  | Min version | Description |
+| liblocal-lib-perl            | local::lib    | 2.000024    | module to use a local path for Perl modules
+| libyaml-perl                 | YAML          | 1.30        | YAML Ain't Markup Language
+| libmodern-perl-perl          | Modern::Perl  | 1.20200211  | module for enabling all of the features of Modern Perl
+| libtemplate-perl             | Template      | 2.27        | "Template Toolkit" template processing system in Perl
+| libtemplate-plugin-yaml-perl | Template::Plugin::YAML| 1.23| simple Template Toolkit Plugin Interface to the YAML module
+| libcapture-tiny-perl         | Capture::Tiny | 0.48        | module to capture STDOUT and STDERR
+| libpath-tiny-perl            | Path::Tiny    | 0.108       | file path utility
+| libtest-differences-perl     | Test::Differences| 0.67     | Perl module to test string and data structure differences
+| libtext-table-perl           | Text::Table   | 1.132       | Create tables that adapt to alignment requirements
+| libdata-hexdump-perl         | Data::HexDump | 0.02        | hexadecimal dumper
+| libregexp-common-perl        | Regexp::Common| 2017060201  | module with common regular expressions
+| libclone-perl                | Clone         | 0.43        | module for recursively copying Perl datatypes
+
+The following additional Perl modules have to be installed via CPAN:
+```
+cpanm App::Prove Capture::Tiny::Extended File::Path  CPU::Z80::Assembler Test::Cmd::Common Test::HexDifferences Object::Tiny::RW List::Uniq
+```
 
 The tools required for the CI environment are listed in https://github.com/z88dk/z88dk/blob/master/.github/workflows/c-cpp.yml
 
