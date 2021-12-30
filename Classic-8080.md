@@ -13,6 +13,7 @@ After a few decades of not supporting 8080 code generation, z88dk can once again
 * [Altair 8800](Platform--Altair8800)
 * [LVIV](Platform---Lviv)
 * [Krokha](Platform--Kroka)
+* [Sol20](Platform---Sol20)
 
 Additionally, the CP/M target can generate 8080 binaries. To do so, add the option `-clib=8080` to the command line. For example:
 
@@ -25,6 +26,7 @@ A .bin file will be generated that should run on 8080 based CP/M machines.
 ### 8085 CPU Targets
 
  * [TRS80 Model 100](Platform---M100)
+ * [Micro85](Platform--Micro8085)
  * RC2014 using the [8085 CPU Module](https://feilipu.me/2021/08/15/8085-cpu-on-the-z80-bus/)
 
 The RC2014-8085 support consists of two subtypes specifically for use with the 8085 CPU Module.
@@ -42,18 +44,18 @@ zcc +rc2014 -subtype=acia85 my_c_file.c my_asm_file.asm -o my_hex_rom_file -crea
 
 ## Limitations
 
-The 8080 CPU implements a subset of the z80 instruction set that the compilers and libraries within z88dk have traditionally targeted. As a result not all features are available. If you use a feature that is not available then your program will fail to link.
+The 8080/5 CPU implements a subset of the z80 instruction set that the compilers and libraries within z88dk have traditionally targeted. As a result not all features are available. If you use a feature that is not available then your program will fail to link.
 
 ### `<stdio.h>`
 
-The following features from `<stdio.h>` are not available in the 8080 library:
+The following features from `<stdio.h>` are not available in the 8080/5 library:
 
 * `funopen()` and stdio pluggable device support
 * The `scanf` family. This can be restored if required.
 
 ### `<stdlib.h>`
 
-The following features from `<stdlib.h>`are not available in the 8080 library:
+The following features from `<stdlib.h>`are not available in the 8080/5 library:
 
 * `qsort` and `bsearch`
 * z88dk extensions: `inp`, `outp`, `extract_bits`
@@ -64,7 +66,7 @@ There are two [maths libraries](Classic--Maths-Libraries) that run on the 8080/8
 
 ### z88dk extension libraries
 
-The following extension libraries are not available in the 8080 library:
+The following extension libraries are not available in the 8080/5 library:
 
 * Allocation: balloc
 * Algorithm/adt: All
