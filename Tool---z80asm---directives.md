@@ -315,15 +315,15 @@ Sets the floating point format used by subsequent `FLOAT` statements. The `type`
 |---    |---            |---            |---
 |genmath|-float=genmath |-l             |Classic z80 mode 48-bit format; this is the default
 |math48 |-float=math48	|-lmath48       |Same format as genmath
-|ieee16 |-float=ieee16  |--math16       |16 bit IEEE-754
+|ieee16 |-float=ieee16  |--math16 <br> -fp-mode=ieee |16 bit IEEE-754
 |ieee32 |-float=ieee32  |--math32       |32 bit IEEE-754
 |ieee64 |-float=ieee64  |&nbsp;         |64 bit ieee-754
 |z80    |-float=z80     |-fp-mode=z80   |Classic z80 mode with 48 bits
 |zx81   |-float=zx81    |&nbsp;         |ZX-81 40 bit format
 |zx     |-float=zx      |&nbsp;         |ZX-Spectrum 40 bit format
-|z88    |-float=z88     |-math-z88      |40 bit format for Z88
+|z88    |-float=z88     |-math-z88 <br> -fp-mode=z88 |40 bit format for Z88, stored with a leading zero byte
 |mbfs   |-float=mbfs    |-fp-mode=mbf32 |32 bit Microsoft single precision
-|mbf40  |-float=mbf40   |-fp-mode=mbf40 |40 bit Microsoft
+|mbf40  |-float=mbf40   |-fp-mode=mbf40 |40 bit Microsoft, stored with a following zero byte
 |mbf64  |-float=mbf64   |-fp-mode=mbf64 |64 bit Microsoft double precision
 |am9511 |-float=am9511  |-fp-mode=am9511|AM9511 math processor format
 
