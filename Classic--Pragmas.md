@@ -48,7 +48,7 @@ The following are only available in sccz80 (see [Issue #156](https://github.com/
 | `-pragma-define:CLIB_OPEN_MAX=xx`. | When generating CP/M and MSXDOS1 applications configures the number of FCBs allocated by the program. This defaults to 3. If set to 0, then it's recommended that `-lndos` is added to the command line. |
 | `-pragma-define:CRT_ENABLE_COMMANDLINE=0` | Disables gathering argc and argv for main on that targets that support command line arguments. When this pragma is supplied, argc=0 and argv=NULL are supplied to the main function. |
 | `-pragma-define:CRT_COMMANDLINE_REDIRECTION=0` | Disables the file redirection ('<', '>') behaviour when parsing command line arguments.  |
-| `-pragma-define:CLIB_DEFAULT_SCREEN_MODE=n | Sets the startup screen mode, not available for all platforms |
+| `-pragma-define:CLIB_DEFAULT_SCREEN_MODE=n` | Sets the startup screen mode, not available for all platforms |
 
 ## Generic console (VT52) behaviour
 
