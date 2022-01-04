@@ -32,7 +32,7 @@ Specify `-x [map file]` is optional, however specifying it allows symbolic debug
 
 ### Hotspot detection
 
-Ticks can also report hotspots for code execution, launch the debugger, type `hotspots on` and then `continue`, on exiting a file called `hotspots` will be written in the current directory. This file reports the number of times an address has been executed along with a disassembly of that line. To order this in terms of frequency you can use the standard sort tool. For example:
+Ticks can also report hotspots for code execution, launch the debugger, type `hotspot on` and then `cont`, on exiting a file called `hotspots` will be written in the current directory. This file reports the number of times an address has been executed along with a disassembly of that line. To order this in terms of frequency you can use the standard sort tool. For example:
 
     sort -nr hotspots
 
