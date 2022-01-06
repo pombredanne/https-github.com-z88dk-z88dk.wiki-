@@ -101,6 +101,11 @@ bison
 flex
 zlib1g-dev
 m4
+libtemplate-perl
+libtemplate-plugin-yaml-perl
+libfile-slurp-perl
+ragel
+re2c
 ```
 
 Then enter:
