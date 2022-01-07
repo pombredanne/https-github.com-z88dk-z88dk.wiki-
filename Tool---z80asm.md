@@ -1,4 +1,4 @@
-## Z80 module assembler / linker / librarian (z80asm)
+## Z80 macro assembler / linker / librarian (z80asm)
 
 **z80asm** is part of the [z88dk](http://www.z88dk.org/) project and is used as
 the back-end of the z88dk C compilers. It is not to be confused with other 
