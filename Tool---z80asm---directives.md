@@ -239,7 +239,7 @@ recursively include the same file.
 ### INVOKE expression
 
 Special CALL instruction for the TI83 calculator; it is coded as a `RST 28H` 
-followed by the expression if the `-mti83plus` option is given, or as a normal 
+followed by the 16 bit expression if the `-mti83plus` option is given, or as a normal 
 `CALL` instruction if the `-mti83` option is given.
 
 Issues an illegal opcode error if not assembling for one of the TI83 machines.
