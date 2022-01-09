@@ -94,6 +94,10 @@ For Mame usage, start with:
 
 Which will boot an SVI floppy containing your application. You can connect to the serial port by telnetting to port 25233
 
+## Keyboard handling
+
+When z88dk uses the firmware to read the keyboard, to disable the click emitted when a key is pressed add the following pragma: `-pragma-define:CLIB_FIRMWARE_KEYBOARD_CLICK=0`.
+
 ## The TMS9918a library
 
 z88dk provides a [TMS9918a](Classic-TMS9918) library that allows hardware access to the VDP chip. All graphical functionality supplied by z88dk uses these functions and such is hardware independent.
