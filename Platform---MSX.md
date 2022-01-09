@@ -126,6 +126,9 @@ On the MSX you can switch to the ROM font by specifying the following options to
 
     -pragma-define:ansifont=7359 -pragma-define:ansifont_is_packed=0 -pragma-define:ansicolumns=32
 
+### Keyboard handling
+
+z88dk relies on the firmware to implement keyboard reading, to disable the click emitted when a key is pressed add the following pragma: `-pragma-define:CLIB_FIRMWARE_KEYBOARD_CLICK=0`.
 
 ### External Links
 
