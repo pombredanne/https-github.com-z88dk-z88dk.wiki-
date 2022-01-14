@@ -4,7 +4,7 @@ Many features can be tested programmatically using `<features.h>` which is gener
 
 _Not all columns are visible. Horizontal scroll to see them._
 
- | Machine | Native Console I/O | [Portable Console](Classic-GenericConsole) | [Monochrome Graphics](library/monographics) | [File I/O](library/stdio) | [Sound](library/sound) | Other features / notes | 
+ | Machine | Native Console I/O | [Portable Console](Classic-GenericConsole) | ["Monochrome" Graphics](library/monographics) | [File I/O](library/stdio) | [Sound](library/sound) | Other features / notes | 
  |---|---|---|---|---|---|---|
 [ABC80](Platform---Luxor-ABC80) | Yes | 40x24 | 78x72 | No | No | 
 [ABC800](Platform---Luxor-ABC800)| Yes | No | No | No | No | Untested |
@@ -91,7 +91,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [S1MP3](Platform---S1MP3)| No | Yes | No | No | No | | 
 [Exidy Sorcerer](Platform---Sorcerer)| 64x30| 64x30 | 128x60| No | No | '--300bps' extra mode in appmake| 
 [Sol20](Platform---Sol20)| No | 64x16 | 64x16 | No | No | | 
-[Sony SMC-70/SMC-777](Platform---SMC-777)| 80x24| 40x25 + 80x25 | 80x50 + 160x50 | Yes | PSG | Extension library to CP/M.|
+[Sony SMC-70/SMC-777](Platform---SMC-777)| 80x24| 40x25 + 80x25 | 80x50, 160x50, 320x200, 640x200 | Yes | PSG | Extension library to CP/M.|
 [SORD M5](Platform---Sord-M5)| 32x24| [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour)| 256x192 | No | PSG (+ 1 bit) | Most of GFXLIB by Rafael de Oliveira Jannone | 
 [S-OS (The Sentinel)](Platform---SOS)| OS calls | No  | No |  Yes | No | Multi platform OS published in a Japanese PC magazine | 
 [Специалист/Specialist](Platform--Special)| 48x32  | 48x32 | 384x256 | No | No |  |
