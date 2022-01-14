@@ -101,7 +101,15 @@ You can then switch to the font with the following pragma: `-pragma-redirect:CRT
 
 ## Defining UDGs
 
-Characters > 128 are treated as UDGs on platforms that support them. The number available depends on the platform, but at present is either 128 or 32 (Jupiter Ace, Exidy). The address for these can be set programmatically using: `console_ioctl(IOCTL_GENCON_SET_UDGS, &addr)`
+Characters > 128 are treated as UDGs on platforms that support them. The number available depends on the platform, but at present is either 128 or 32 (Jupiter Ace, Exidy). The address for these can be set programmatically using: `console_ioctl(IOCTL_GENCON_SET_UDGS, &addr)`. For example:
+
+```
+unsigned char udgs[] = { .... }
+
+void *param = &udgs;
+console_ioctl(IOCTL_GENCON_SET_UDGS, &param);
+```
+
 
 ## Text attributes
 
