@@ -67,6 +67,11 @@ To switch to hires mode:
     int mode = 1;
     console_ioctl(IOCTL_GENCON_SET_MODE, &mode);
 
+To switch to hires mode (with alternate colours):
+
+    int mode = 1 + 32;
+    console_ioctl(IOCTL_GENCON_SET_MODE, &mode);
+
 To switch to colour mode:
 
     int mode = 2;
