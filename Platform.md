@@ -39,7 +39,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Enterprise 64/128](Platform---Enterprise64) | 40x25| No | 336x243*, 672x243*| No | Yes | *GFX via EXOS | 
 [Excalibur 64](Platform---Excalibur64) | No | 40x25, 80x25 | No | No | No |
 [Galaksija](Platform---Galaksija)| 32x16 (B&W) | 32x16 + 32x26 (Gal+) | 64x48 + 256x208 (Gal+)| No | 1 bit* | (via tape output) | 
-[Genius Leader](Platform-Genius-Leader)| No | 20x2,20x4,30x12 | 240x100 (6000SL)| No | No |
+[Genius Leader](Platform-Genius-Leader)| No | 20x2,20x4,30x12 | 240x100 (6000SL)| No | Yes (2000/4000) |
 [Hanimex Pencil II](Platform--Hanimex-Pencil-II)| No |32x24 | 256x192 | No | PSG |
 [Homelab 2](Platform---Homelab2) | No | 40x25 | 80x50 | No | No |
 [Homelab 4](Platform---Homelab) | No |  64x32 | 128x64 | No | No |
@@ -84,7 +84,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Sega Master System](Platform---SMS) / (Game Gear) | 32x24 (20x16) | 32x24| 256x192 || PSG (+ 1 bit) | |
 [Sega SC-3000/Sega SG-1000](Platform---Sega-SC3000) | 40x24 | [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) |  256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone | 
 [Sharp PC-G8xx, PC-E2xx](Platform---Sharp-PC)| No | 24x4 *(24x6 / 36x8)|  | 143x47 (G850 only) | No | 1 bit** | *(-clib=g850b / -clib=g850) **HW required |
-[Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| 80x50 | No | PSG (+ 1 bit)  | Many appmake extras | 
+[Sharp MZ (80,700,800)](Platform---Sharp-MZ) | 40x25| 40x25| 80x50 | No | PSG | Many appmake extras | 
 [Sharp OZ](Platform---Sharp-OZ700) | Yes | No  | 239x80| No | No | Experimental| 
 [Sharp MZ2500](Platform---Sharp-MZ2500) | 40(80)x25 | 40x24, 80x24 | No | No | No  | Initial support, max 24kb | 
 [Sharp X1](Platform---Sharp-X1)| No | 40(80)x25|  320(640)x200  | No | PSG only | | 
