@@ -8,10 +8,6 @@ There is very little software for it;  maybe the Z88DK will help !
 
 # Quick start
 
-
-The J.ACE port comes with a newer version of appmake tool capable of creating 'tap' and 'wav' files.
-See the "Older emulator hints" chapter to use z88dk with the VACE or ACE32 emulators.
-
 This newer release has been developed with the aid of the EightyOne emulator and tested on the real computer.
 To compile a program (with 'a.bin' as the default program name), type:
 
@@ -41,7 +37,7 @@ Two graphics libraries are provided:
     -lgfxace      64x48
     -lgfxaceudg   64x72, currently limited to 64x71 due to a bug
 
-
+Both graphic modes coexist with the generic console, 64x48 uses UDGs/character codes 17 to 23.
 
 
 Experimental support for the ZX Printer is provided, we supposed it could be attached to the Jupiter ACE via a 3rd party adapter:
