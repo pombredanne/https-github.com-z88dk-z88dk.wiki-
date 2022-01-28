@@ -1,5 +1,36 @@
+# Hardware summary
 
-# Quick start
+* Z80 @ 3.5Mhz
+* 4kb RAM (expandable to 28kb)
+* 8kb ROM (Microsoft BASIC)
+* 40x24 character mapped display
+* Optional AY8192
+
+
+# Classic library support (`+aquarius`)
+
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine
+* [x] Generic console
+    * [ ] Redefinable font
+    * [ ] UDG support
+    * [x] Paper colour
+    * [x] Ink colour
+    * [ ] Inverse attribute
+    * [ ] Bold attribute
+    * [ ] Underline attribute
+* [x] Lores graphics (80x72 and 80x48)
+* [ ] Hires graphics
+* [x] PSG sound
+* [x] One bit sound  (on the keyboard speaker)
+* [x] Inkey driver
+* [ ] Hardware joystick
+* [ ] File I/O (MSXDOS + MSXDOS2)
+* [ ] Interrupts
+* [ ] RS232
+
+## Quick start
 
     zcc +aquarius -lm -create-app -o adventure adv_a.c
 
@@ -13,7 +44,7 @@ The binary converter (appmake) will create two files: _adventure.caq and adventu
 The first one is the BASIC loader, and the second one is the binary block.
 They should be loaded in sequence; type **CLOAD**, play the first file, then type **RUN** and play the second one.
 
-# Building ROM images
+### Building ROM images
 
 z88dk supports building 8k ROM images for the Aquarius:
 
@@ -23,7 +54,11 @@ The ROM file can then be inserted using the emulator. Depending on the emulator,
 
 _Note_ mame loads ROMs by default without expanded RAM. The memory configuration z88dk chooses for the stack causes issues with the ROM screen printer. If you print to console then you must use `-pragma-redirect:fputc_cons=fputc_cons_generic` to switch to the generic console.
 
-# Emulator notes
+## Library support
+
+Lores graphics by default is 80x72, a more evenly sized 80x48 graphical mode is available by linking `-lgfxaq48`
+
+## Emulator notes
 
 Tested under the "Virtual Aquarius" emulator, by James the Animal Tamer.
 
