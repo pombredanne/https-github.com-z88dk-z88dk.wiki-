@@ -51,7 +51,7 @@ The 8080/5 CPU implements a subset of the z80 instruction set that the compilers
 The following features from `<stdio.h>` are not available in the 8080/5 library:
 
 * `funopen()` and stdio pluggable device support
-* The `scanf` family. This can be restored if required.
+* The floating point support for the `scanf` family
 
 ### `<stdlib.h>`
 
