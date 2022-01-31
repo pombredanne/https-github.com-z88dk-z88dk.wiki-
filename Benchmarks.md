@@ -11,9 +11,9 @@ To put the current compilers and libraries for z88dk into context, the benchmark
 Hitech-C (CP/M-80) v 3.09 
 Hitech's last CPM C compiler. One of the most capable native C compilers for CP/M. Runs under CP/M 2.2 and implements a large subset of C89. This compiler represents the best z80 native code generator. Hitech made this available for free many years ago.
 
-## HITECH-C Z80 v7.80 Patch Level 2
+## HITECH-C MSDOS v7.80 Patch Level 2
 
-The last z80 compiler from Hi-Tech, cross compiles z80 and z180 code from MSDOS. Supports banking into the z180 address space. Seems to be near complete compliance with C89. Has both integrated development environment `HPDZ` and command line `ZC` options.
+The last z80 compiler from Hi-Tech, cross compiles z80 and z180 code from MSDOS (and Linux). Supports banking into the full z180 address space. Seems to be near complete compliance with C89. Has both integrated development environment `HPDZ` and command line `ZC` options.
 Compiler kindly provided by [@artrag](https://github.com/artrag).
 
 ## IAR Z80 V4.06A
@@ -22,7 +22,7 @@ IAR's last z80 compiler running under windows. Although it's not currently liste
 
 ## SDCC
 
-sdcc 3.5.5 #9392 __UPDATE WITH 4.0.0 #11566__ (MINGW64) 
+sdcc 3.5.5 #9392 __TO DO: UPDATE WITH 4.1.6 #12555__ (MINGW64) 
 sdcc is a current open source C cross compiler targetting several small CPUs including the z80. Its primary feature is that it supports a large subset of modern C standards (C89, C99, C11).
 
 ## Z88DK/SCCZ80_CLASSIC
@@ -31,7 +31,7 @@ sdcc is a current open source C cross compiler targetting several small CPUs inc
 
 ## Z88DK/SDCC_CLASSIC
 
-(Nightly build 28 April 2021) sdcc 4.1.4 #12250 is used to translate C code with z88dk supplying its (classic) C library and startup code for targets.
+(Nightly build 28 April 2021) sdcc 4.1.6 #12555 is used to translate C code with z88dk supplying its (classic) C library and startup code for targets.
 
 ## Z88DK/SCCZ80_NEW
 
@@ -39,7 +39,7 @@ sdcc is a current open source C cross compiler targetting several small CPUs inc
 
 ## Z88DK/SDCC_NEW
 
-(Nightly build 28 April 2021) sdcc 4.1.4 #12250 is used to translate C code with z88dk supplying its (new) C library and startup code for targets.
+(Nightly build 28 April 2021) sdcc 4.1.6 #12555 is used to translate C code with z88dk supplying its (new) C library and startup code for targets.
 
 # Binary-Trees
 
@@ -50,7 +50,7 @@ The work is to create binary trees - composed only of tree nodes all the way dow
 |                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
 |--------------------|----------|---------------|-----------------|
 | Hitech-C CPM v3.09 |	4165	| DISQ  	|                 |
-| Hitech-C Z80 v7.50 |	4121	| 243,708,728	| 60.93 sec       |
+| Hitech-C Z80 v7.80 |	4247	| 240,336,355	| 60.09 sec       |
 | IAR Z80 V4.06A     |	4525	| 7,358,336,547	| 30 min 40 sec   |
 | SDCC	             |  8626	| 203,788,182	| 50.95 sec       |
 | Z88DK/SCCZ80_CLASSIC|	2924    | 153,408,086	| 38.52 sec       |
@@ -72,7 +72,7 @@ The benchmark package is available for download.
 |                   | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| DHRYSTONES/S| DMIPS  |
 |-------------------|-----------|---------------|-----------------|-------------|--------|
 |Hitech-C CPM v3.09 | 7471	| 354,120,220	| 88.53 sec	| 225.91	| 0.1286 |
-|Hitech-C Z80 v7.50 | __7002__	| 288,200,126	| 72.05 sec	| 277.58	| 0.1580 |
+|Hitech-C Z80 v7.80 | __7002__	| 280,100,135	| 70.02 sec	| 285.61	| 0.1625 |
 |IAR Z80 V4.06A     | 7371	| 306,860,580	| 76.72 sec	| 260.70	| 0.1484 |
 |SDCC	            | 7013	| 292,880,320	| 73.22 sec	| 273.15	| 0.1554 |							
 |Z88DK/SDCC_CLASSIC | 7344	| 248,080,263	| 62.02 sec	| __322.48__	| 0.1835 |
@@ -81,7 +81,7 @@ The benchmark package is available for download.
 Notes:
 
 * Hitech-C CPM v3.09 binary size is over-estimated as it will contain some stdio structures for cp/m.
-* Hitech-C Z80 v7.50 must be compiled with global optimizer set to two; higher causes the program to hang.
+* Hitech-C Z80 v7.80 must be compiled with global optimizer set to two; higher causes the program to hang.
 * Dhrystone 2.1 is deprecated because optimizing compilers can eliminate redundant statements that were intended to add to execution time. However many z80-era compilers ran this benchmark so it is also available in the z88dk repository.
 # Fannkuch
 
@@ -90,7 +90,7 @@ The fannkuch benchmark is defined by programs in Performing Lisp Analysis of the
 |                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
 |--------------------|----------|---------------|-----------------|
 | Hitech-C CPM v3.09 |	1218	| 56,667,034  	| 14.17 sec       |
-| Hitech-C Z80 v7.50 |	__716__	| 49,858,382	| __12.46 sec__   |
+| Hitech-C Z80 v7.80 |	__868__	| 51,982,515	| __12.99 sec__   |
 | IAR Z80 V4.06A     |	1347	| 56,708,022	| 14.18 sec       |
 | SDCC	             |  1196	| 67,174,167	| 16.79 sec       |
 | Z88DK/SCCZ80_CLASSIC|	1178	| 77,386,481	| 19.34 sec       |
@@ -110,7 +110,7 @@ The program should:
 |                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
 |--------------------|----------|---------------|-----------------|
 | Hitech-C CPM v3.09 |	4056	| 188,751,954  	| 47.19 sec       |
-| Hitech-C Z80 v7.50 |	4121	| DISQ   	|                 |
+| Hitech-C Z80 v7.80 |	4121	| DISQ   	|                 |
 | IAR Z80 V4.06A     |	6041	| 223,805,149	| 55.95 sec       |
 | SDCC	             |  6947	| 488,970,702	| 122.24 sec      |
 | Z88DK/SCCZ80_CLASSIC|	3291	| 243,021,012	| 60.76 sec       |
@@ -122,7 +122,7 @@ The program should:
 
 Notes:
 
-* Hitech-C Z80 v7.50 produces incorrect results on all optimization levels.
+* Hitech-C Z80 v7.80pl2 produces incorrect results on all optimization levels.
 * SDCC's performance is hurt by a floating point package implemented in C.
 * Z88DK/SCCZ80_CLASSIC uses the `genmath` float library while the other Z88DK compiles use `math48`.
 * Z88DK/SDCC uses a 48-bit float internally but this is converted to 32-bit at the compiler-library interface since sdcc only understands a 32-bit float type.
@@ -137,7 +137,7 @@ Useful symplectic integrators are freely available, for example the HNBody Sympl
 |                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
 |--------------------|----------|---------------|-----------------|
 | Hitech-C CPM v3.09 |	4056	| DISQ  	|                 |
-| Hitech-C Z80 v7.50 |	4121	| DISQ   	|                 |
+| Hitech-C Z80 v7.80 |	3736	| 1,600,543,903 | 6 min 40 sec    |
 | IAR Z80 V4.06A     |	4084	| 2,331,516,019	| 9 min 43 sec    |
 | SDCC	             |  9233	| 5,306,393,684	| 22 min 07 sec   |
 | Z88DK/SCCZ80_CLASSIC|	4493	| 3,658,052,111	| 15 min 14 sec   |
@@ -150,7 +150,6 @@ Useful symplectic integrators are freely available, for example the HNBody Sympl
 Notes:
 
 * Hitech-C CPM v3.09 can't compile the source code.
-* Hitech-C Z80 v7.50 produces incorrect results on all optimization levels.
 * SDCC's performance is hurt by a floating point package implemented in C.
 * Z88DK/SCCZ80_CLASSIC uses the `genmath` float library while the other Z88DK compiles use `math48`.
 * Z88DK/SDCC uses a 48-bit float internally but this is converted to 32-bit at the compiler-library interface since sdcc only understands a 32-bit float type.
@@ -170,7 +169,7 @@ The first set of numbers are without the use of __ldiv()__ and the second with u
 |                      |Size  | Z80 Cycles    |Wall Clock @4Mhz| Size | Z80 Cycles    | Wall Clock @4MHz
 |----------------------|------|---------------|----------------|------|---------------|---------------|
 | Hitech-C CPM v3.09   | 6793 |	5,531,933,581 |	23 min 03 sec  |      |               |               |				
-| Hitech-C Z80 v7.50   | 6337 |	5,520,768,427 |	23 min 00 sec  | 6473 |	5,884,343,627 |	24 min 31 sec |
+| Hitech-C Z80 v7.80   | 6593 |	5,528,979,464 |	23 min 02 sec  | 6728 |	5,892,567,264 |	24 min 33 sec |
 | IAR Z80 V4.06A       | 6789 |	8,762,223,085 |	36 min 31 sec  | 7006 |	8,799,503,282 |	36 min 40 sec |
 | SDCC		       | 6844 |	8,700,157,418 |	36 min 15 sec  |      |		      |	              |
 | Z88DK/SCCZ80_CLASSIC | 6508 |	4,012,440,830 |	16 min 43 sec  |      |	              |	              |
@@ -183,7 +182,7 @@ The first set of numbers are without the use of __ldiv()__ and the second with u
 Notes:
 
 * The HITECH-C CPM v3.09 binary size is over-estimated as it will contain some stdio structures for cp/m.
-* Although HITECH-C Z80 v7.50 supplies ldiv(), it still performs two divisions to get quotient and remainder.
+* Although HITECH-C Z80 v7.80 supplies ldiv(), it still performs two divisions to get quotient and remainder.
 * SDCC's performance is hurt by having its 32-bit math routines implemented in C.
 * Z88DK's small integer math library demotes long multiplies to integer where possible.
 * Z88DK's fast integer math library is able to reduce most 32-bit divides to 16-bit divides. The loop unrolling option is not enabled.
@@ -197,9 +196,9 @@ This is a popular benchmark for small machine compilers because just about every
 |                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
 |--------------------|----------|---------------|-----------------|
 | Hitech-C CPM v3.09 |	8725	| 4,547,538	| 1.1369 sec      |
-| Hitech-C Z80 v7.50 | __8243__	| 3,672,107	| 0.9180 sec      |
+| Hitech-C Z80 v7.80 |  8472	| 3,885,436	| 0.9713 sec      |
 | IAR Z80 V4.06A     |	8772	| 3,714,152	| 0.9285 sec      |
-| SDCC	             |  8263	| 4,701,570	| 1.1754 sec      |
+| SDCC	             | __8263__	| 4,701,570	| 1.1754 sec      |
 | Z88DK/SCCZ80_CLASSIC|	8589	| 4,957,733	| 1.2394 sec      |
 | Z88DK/SCCZ80_NEW  |	8362	| 4,957,733	| 1.2394 sec      |
 | Z88DK/SDCC_CLASSIC|   8558	| 4,510,806	| 1.1277 sec      |
@@ -220,7 +219,7 @@ Floating point performance depends strongly on the number of mantissa bits in th
 |                     |Float Size|Mantissa| Bytes| Z80 Cycles | Wall Clock @4MHz | KWIPS |
 |---------------------|----------|--------|------|------------|------------------|-------|
 | Hitech-C CPM v3.09  |	32	 | 24	  | 7605  | 639,413,871   | 159.8535 sec | 6.2557 |
-| Hitech-C Z80 v7.50  |	32	 | 24	  | 6872  | fail          |              |        |
+| Hitech-C Z80 v7.80  |	32	 | 24	  | 6919  | 614,748,605   | 153.6871 sec | 6.5067 |
 | IAR Z80 V4.06A      |	32	 | 24	  | 6524  | 732,360,277   | 183.0901 sec | 5.4618 |
 | SDCC	              | 32	 | 24	  | 14379 | 2,184,812,093 | 546.2030 sec | 1.8308 |
 | Z88DK/SCCZ80_CLASSIC| 48	 | 40	  | 6359  | 1,283,271,893 | 320.8179 sec | 3.1170 |
@@ -234,7 +233,6 @@ Notes:
 
 * Hitech-C CPM v3.09 produces two results with excessive error.
 * Hitech-C CPM v3.09 binary size is over-estimated as it will contain some stdio structures for cp/m.
-* Hitech-C Z80 v7.50 produces incorrect results on all optimization levels.
 * SDCC's performance is hurt by a floating point package implemented in C.
 * Z88DK/SCCZ80_CLASSIC uses the `genmath` float library while the other Z88DK compiles use `math48`.
 * Z88DK/SCCZ80/MATH32 uses the `math32` 32-bit IEEE-754 floating point package.
