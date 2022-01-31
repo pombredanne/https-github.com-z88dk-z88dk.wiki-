@@ -11,9 +11,10 @@ To put the current compilers and libraries for z88dk into context, the benchmark
 Hitech-C (CP/M-80) v 3.09 
 Hitech's last CPM C compiler. One of the most capable native C compilers for CP/M. Runs under CP/M 2.2 and implements a large subset of C89. This compiler represents the best z80 native code generator. Hitech made this available for free many years ago.
 
-## HITECH-C Z80 v7.50
+## HITECH-C Z80 v7.80 Patch Level 2
 
-The second last z80 compiler from Hitech (v7.80 was their last), cross compiles z80 code from MSDOS. Seems to be near complete compliance with C89.
+The last z80 compiler from Hi-Tech, cross compiles z80 and z180 code from MSDOS. Supports banking into the z180 address space. Seems to be near complete compliance with C89. Has both integrated development environment `HPDZ` and command line `ZC` options.
+Compiler kindly provided by [@artrag](https://github.com/artrag).
 
 ## IAR Z80 V4.06A
 
