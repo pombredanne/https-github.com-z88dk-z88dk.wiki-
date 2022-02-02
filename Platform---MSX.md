@@ -64,7 +64,7 @@ MegaROMs can be created using z88dk - simply compile with `zcc +msx -subtype=rom
 
 Logically z88dk treats the memory map as being 16kb pages, transparently handling the fact that the ROM mapper may actually be an 8k mapper.
 
-To place functions into banks, you should use the `#pragma bank NN` directive, where NN is a decimal number between 1 and 31. 
+To place functions into banks, you should use the `#pragma bank NN` directive, where NN is a decimal number between 1 and 255. 
 
 There is no default MegaROM mapper configured, to enable one, one of the following options need to be supplied to the zcc command line:
 
@@ -99,6 +99,22 @@ Will create a .img file containing a binary that uses BDOS calls to access files
         zcc +msx -create-app -subtype=msxdos2 adv_a.c
 
 Creates a .img containing a binary that uses MSXDOS2 API calls. Additional functionality such as `mkdir()`, `chdir()` is available when compiling with the msxdos2 subtype.
+
+### Experimental MSXDOS2 banking
+
+Support for creating banked programs that run under MSXDOS2 is available. This feature is experimental and may be rewritten in the future. 
+
+        zcc +msx -create-app -subtype=msxdos2 adv_a.c -pragma-define:CRT_DISABLELOADER=0
+
+The memory organisation is assumed to be as follows:
+
+```
+- 0x0100 - 0x7fff = Fixed area, will contain crt0, z88dk library routines
+- 0x8000 - 0xbfff = Paged area, treated as 16k chunks
+- 0xc000 - 0xffff = BDOS/BIOS, stack etc
+```
+
+To place functions into banks, you should use the `#pragma bank NN` directive, where NN is a decimal number between 1 and 255. 
 
 
 ### The TMS9918a library
