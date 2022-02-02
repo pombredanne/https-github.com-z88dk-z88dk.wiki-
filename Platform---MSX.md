@@ -104,7 +104,7 @@ Creates a .img containing a binary that uses MSXDOS2 API calls. Additional funct
 
 Support for creating banked programs that run under MSXDOS2 is available. This feature is experimental and may be rewritten in the future. 
 
-        zcc +msx -create-app -subtype=msxdos2 adv_a.c -pragma-define:CRT_DISABLELOADER=0
+        zcc +msx -create-app -subtype=msxdos2 -pragma-define:CRT_DISABLELOADER=0 [files]
 
 The memory organisation is assumed to be as follows:
 
