@@ -29,7 +29,7 @@ sccz80 makes no assumptions about registers that need to be preserved, however t
 
 passing two 8-bit values share a 16-bit stack location.
 
-    void myfunc(char x, char y)
+    void myfunc(char x, char y) __stdc
     {
       #asm
       
