@@ -8,8 +8,8 @@ sccz80 makes no assumptions about registers that need to be preserved, however t
 
 **Example**:  accessing local variables from assembler embedded in a C function.
 
-   int myfunc(char b, unsigned char *p)
-   {
+    int myfunc(char b, unsigned char *p)
+    {
       #asm
       
       ld hl,2
@@ -25,12 +25,12 @@ sccz80 makes no assumptions about registers that need to be preserved, however t
       ld hl,1                ; hl is the return parameter
       
       #endasm
-   }
+    }
 
 passing two 8-bit values share a 16-bit stack location.
 
-   void myfunc(char x, char y)
-   {
+    void myfunc(char x, char y)
+    {
       #asm
       
       ld hl,2
@@ -41,7 +41,7 @@ passing two 8-bit values share a 16-bit stack location.
       ...
             
       #endasm
-   }
+    }
 
 At the call location the sp is manipulated as follows:
 
@@ -70,8 +70,8 @@ A "long" parameter takes 4 bytes on the stack; the following example could be us
 z88dk's special `__z88dk_fastcall` qualifier can be used if the C function has just one parameter.
 In that case, the parameter is passed in the HL register pair instead of being allocated on the stack.
 
-   int myfunc(unsigned char *p) __z88dk_fastcall __naked
-   {
+    int myfunc(unsigned char *p) __z88dk_fastcall __naked
+    {
       #asm
       
       ; hl = p
@@ -81,7 +81,7 @@ In that case, the parameter is passed in the HL register pair instead of being a
       ; return value in hl
       
       #endasm
-   }
+    }
 
 
 #### Floating Point numbers
