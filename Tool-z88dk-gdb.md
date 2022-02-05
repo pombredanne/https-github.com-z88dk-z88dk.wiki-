@@ -6,8 +6,18 @@ Compile your application with the -debug option:
 
     zcc +zx -debug main.c -create-app -m
 
-## Running
+## Run On Mame emulator
 
     ./mame spectrum -window -nomaximize -resolution0 768x576 -debug -debugger gdbstub -debugger_port 1337
+
+## Run on [Fuse emulator fork](https://github.com/speccytools/fuse/releases/tag/gdbserver)
+
+Start Fuse, select "GDBServer...", select "Enabled"
+
+## Run on physical hardware
+
+Install [spectranet-gdbserver](https://github.com/speccytools/spectranet-gdbserver) (requires Spectranet), connect to port 1667
+
+## Connecting
 
     z88dk-gdb -h <connect host> -p <connect port> -x <debug symbols> 
