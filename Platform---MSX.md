@@ -100,6 +100,11 @@ Will create a .img file containing a binary that uses BDOS calls to access files
 
 Creates a .img containing a binary that uses MSXDOS2 API calls. Additional functionality such as `mkdir()`, `chdir()` is available when compiling with the msxdos2 subtype.
 
+### ASMLIB
+
+ASMLIB is a library created to access MSX BIOS routines, MSX-DOS functions and UNAPI implementations, but can be used to execute any arbitrary assembler code. More information is available at [ASMLIB](ASMLIB)
+
+
 ### Experimental MSXDOS2 banking
 
 Support for creating banked programs that run under MSXDOS2 is available. This feature is experimental and may be rewritten in the future. 
