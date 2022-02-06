@@ -13,7 +13,7 @@ ASMLIB is provided as a ready to use library for the SDCC compiler, but the sour
 
 Using ASMLIB in your C programs is easy. All you have to do is:
 
-- Add a #include "asm.h" line to your source code.
+- Add a `#include "asm.h"` line to your source code.
 
 - Use the library functions as appropriate in your program.
 
@@ -25,7 +25,7 @@ Using ASMLIB in your C programs is easy. All you have to do is:
 The data structures explained here are defined in the file asm.h.
 
 
-### 3.1. The Z80 registers structure (Z80_registers)
+### 3.1 The Z80 registers structure (Z80_registers)
 
 The ASMLIB functions allow to specify the values of the Z80 registers before executing assembler code, and also to retrieve the register values after the code execution. A data structure named Z80_registers that holds the registers values is used for this.
 
@@ -39,7 +39,7 @@ Z80_registers has members to specify the values of registers AF, BC, DE, HL, IX 
 Note that all four structs actually refer to the same data, so for example doing "regs.Bytes.H=0x11; regs.Bytes.L=0x22;" is the same as doing "regs.Words.HL=0x1122;".
 
 
-### 3.2. The Z80 registers usage enumeration (register_usage)
+### 3.2 The Z80 registers usage enumeration (register_usage)
 
 When invoking assembler code, not all registers may be always needed to pass parameters in and out. The register_usage enumeration is used to specify which registers must be passed from Z80_registers to the executed code, and which registers must be retrieved back to Z80_registers. Four register usage levels are available:
 
@@ -51,7 +51,7 @@ When invoking assembler code, not all registers may be always needed to pass par
 When invoking an assembler routine repeatedly in a loop, specifying a restricted register usage level can make a slight difference on execution time.
 
 
-### 3.3. The UNAPI code block (unapi_code_block)
+### 3.3 The UNAPI code block (unapi_code_block)
 
 This structure is used when interacting with UNAPI implementations.
 
@@ -67,7 +67,7 @@ The contents of the unapi_code_block structure for a given UNAPI implementation 
 
 ## 4. Functions reference
 
-### 4.1. AsmCall
+### 4.1 AsmCall
 
 ```
   void AsmCall(
@@ -84,7 +84,7 @@ The routine is invoked with the registers in the state specified by the register
 After the assembler routine returns, the state of the Z80 registers is copied back to "regs"; this time, which registers are actually copied back is specified by the "outRegistersDetail" parameter.
 
 
-### 4.2. DosCall
+### 4.2 DosCall
 
 ```
   void DosCall(
@@ -101,7 +101,7 @@ If inRegistersDetail is REGS_NONE or REGS_AF, it will be converted to REGS_MAIN 
 Note that if you want to execute MSX-DOS functions from within the MSX-BASIC environment, you can't use DosCall. Instead, you need to manually set the function number in register C ("regs.Bytes.C=function;"), and then use AsmCall to invoke the DOS entry point at address 0xF37D.
 
 
-### 4.3. BiosCall
+### 4.3 BiosCall
 
 ```
   void BiosCall(
@@ -117,7 +117,7 @@ There is no parameter for specifying the input registers usage level. This is be
 Note that when running in the MSX-BASIC environment you don't need to use this function, you can use AsmCall directly instead.
 
 
-### 4.4. UnapiGetCount
+### 4.4 UnapiGetCount
 
 ```
   int UnapiGetCount(
@@ -129,7 +129,7 @@ This function returns the number of UNAPI implementations of a given UNAPI speci
 implIdentifier is a pointer to a standard C string. It can be an inline string, for example: UnapiGetCount("ETHERNET");
 
 
-### 4.5. UnapiBuildCodeBlock
+### 4.5 UnapiBuildCodeBlock
 
 ```
   void UnapiBuildCodeBlock(
@@ -145,7 +145,7 @@ implIdentifier is a pointer to a standard C string. It can be an inline string, 
 The behavior of this function when an invalid UNAPI implementation is referenced (implIndex is zero or greater than the number of implementations available for the given implIdentifier) is undefined.
 
 
-### 4.6. UnapiParseCodeBlock
+### 4.6 UnapiParseCodeBlock
 
 ```
   void UnapiParseCodeBlock(
@@ -168,7 +168,7 @@ The obtained information must be interpreted according to the UNAPI rules, that 
 The data returned by this function when codeBlock has not been properly built is undefined.
 
 
-### 4.7. UnapiGetRamHelper
+### 4.7 UnapiGetRamHelper
 
 ```
   void UnapiGetRamHelper(
@@ -183,7 +183,7 @@ This function will simply return the location of the RAM helper jump table addre
 If only the jump table address is needed and we don't care about the mapper table address, then "mapperTableAddress" can be NULL, and vice versa.
 
 
-### 4.8. UnapiCall
+### 4.8 UnapiCall
 
 ```
   void UnapiCall(
@@ -201,7 +201,7 @@ If inRegistersDetail is REGS_NONE, it will be converted to REGS_AF prior to invo
 If codeBlock has not been previously initialized with UnapiBuildCodeBlock, the result is unpredictable.
 
 
-### 4.9. UnapiRead
+### 4.9 UnapiRead
 
 ```
   byte UnapiRead(
