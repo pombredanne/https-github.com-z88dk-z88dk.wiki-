@@ -1,23 +1,17 @@
 # ASMLIB - SDCC library for assembler and UNAPI interop v1.0
-By Konamiman, 2/2010
+Originally by Konamiman, 2/2010
 
 
 ## 1. Introduction
 
 ASMLIB is a C library that allows to execute Z80 assembler code from C applications. It is mainly intended for accessing MSX BIOS routines, MSX-DOS functions and UNAPI implementations, but can be used to execute any arbitrary assembler code.
 
-ASMLIB is provided as a ready to use library for the SDCC compiler, but the source code is provided as well so that it can be adapted for other C compilers as well.
+ASMLIB is provided as a ready to use library for the SDCC compiler, but the source code is provided as well so that it can be adapted for other C compilers as well. This includes Z88DK's Classic SCCZ80 compiler. 
 
 
 ## 2. Usage
 
-Using ASMLIB in your C programs is easy. All you have to do is:
-
-- Add a `#include "asm.h"` line to your source code.
-
-- Use the library functions as appropriate in your program.
-
-- When compiling your program, link to the library file ASM.LIB.
+Using ASMLIB in your C programs is easy. All you have to do is add an `#include <arch/z80.h>` line to your source code.
 
 
 ## 3. Data structures reference
@@ -229,9 +223,7 @@ Note that these samples need to be compiled by using the alternate startup code 
 
 For more information about the UNAPI specification in general and about the Ethernet UNAPI specification, and to find more great (huh?) MSX software, please visit Konamiman's MSX page at: http://www.konamiman.com
 
-To get the SDCC compiler go to the SDCC project page: http://sdcc.sourceforge.net
-
-To get a handful of useful resourcers for MSX development using SDCC, visit Avelino Herrera's MSX page at: http://msx.atlantes.org/index_en.html
+To get a handful of useful resources for MSX development using SDCC, visit Avelino Herrera's MSX page at: http://msx.atlantes.org/index_en.html
 
 And of course, you can contact me at: konamiman@konamiman.com
 
