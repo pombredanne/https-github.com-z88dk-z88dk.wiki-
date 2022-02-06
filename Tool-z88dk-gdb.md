@@ -10,9 +10,13 @@ Compile your application with the -debug option:
 
     ./mame spectrum -window -nomaximize -resolution0 768x576 -debug -debugger gdbstub -debugger_port 1337
 
-## Run on [Fuse emulator fork](https://github.com/speccytools/fuse/releases/tag/gdbserver)
+## Run on [Fuse fork for Windows](https://github.com/speccytools/fuse/releases/tag/gdbserver)
 
 Start Fuse, select "GDBServer...", select "Enabled"
+
+## Run on [Fuse fork for Mac](https://github.com/speccytools/fuse-for-macosx/releases)
+
+Start Fuse, select "Preferences", select "Debugger", select "Enable GDBServer"
 
 ## Run on physical hardware
 
