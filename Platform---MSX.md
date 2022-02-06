@@ -102,7 +102,7 @@ Creates a .img containing a binary that uses MSXDOS2 API calls. Additional funct
 
 ### ASMLIB
 
-ASMLIB is a library created to access MSX BIOS routines, MSX-DOS functions and UNAPI implementations, but can be used to execute any arbitrary assembler code. More information is available at [ASMLIB](ASMLIB)
+ASMLIB is a library created by Konamiman to access MSX BIOS routines, MSX-DOS functions and UNAPI implementations, but can be used to execute any arbitrary assembler code. More information is available at [ASMLIB](ASMLIB)
 
 
 ### Experimental MSXDOS2 banking
