@@ -100,6 +100,8 @@ Will create a .img file containing a binary that uses BDOS calls to access files
 
 Creates a .img containing a binary that uses MSXDOS2 API calls. Additional functionality such as `mkdir()`, `chdir()` is available when compiling with the msxdos2 subtype.
 
+Additional files can be added to the disc using the option `-Cz--add-file=hostfile` for example `-Cz--add-file=MU.COM` will copy MU.COM to the disc. If you wish the name of the file to be changed, then this form can be used: `-Cz--add-file=hostfile:msxfile`
+
 ### ASMLIB
 
 ASMLIB is a library created by Konamiman to access MSX BIOS routines, MSX-DOS functions and UNAPI implementations, but can be used to execute any arbitrary assembler code. More information is available at [ASMLIB](ASMLIB)
