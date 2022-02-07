@@ -1,12 +1,13 @@
 # STANDARD LIBRARY (stdlib.h)
 
+ | | |
+ | -----------|------------------------------------------------------------------------------------------------------------|       
  | Header     | [{z88dk}/include/stdlib.h](https://raw.githubusercontent.com/z88dk/z88dk/master/include/stdlib.h)          |       
- | -------------------------------------------------------------------------------------------------------------------------       
- | Source     | [{z88dk}/libsrc/stdlib](https://github.com/z88dk/z88dk/tree/master/libsrc/stdlib/)                           |     
- | Include    | #include `<stdlib.h>`                                                                                             |  
- | Linking    | n/a                                                                                                             |  
- | Compile    | n/a                                                                                                             |  
- | Comments   | These library functions are compiled as part of each target’s implicit library.                                 |
+ | Source     | [{z88dk}/libsrc/stdlib](https://github.com/z88dk/z88dk/tree/master/libsrc/stdlib/)                         |     
+ | Include    | #include `<stdlib.h>`                                                                                      |  
+ | Linking    | n/a                                                                                                        |  
+ | Compile    | n/a                                                                                                        |  
+ | Comments   | These library functions are compiled as part of each target’s implicit library.                            |
 
 These are utility functions defined as part of the C standard.  Some functions have been modified to better suit the z80 and some functions have been added that are useful specifically on z80 machines.  The set of standard functions is nearly complete, with the float/double to string conversions missing.
 
