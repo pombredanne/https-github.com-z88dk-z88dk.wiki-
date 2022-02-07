@@ -16,7 +16,7 @@ Using ASMLIB in your C programs is easy. All you have to do is add an `#include 
 
 ## 3. Data structures reference
 
-The data structures explained here are defined in the file asm.h.
+The data structures explained here are defined in the file `arch/z80.h`.
 
 
 ### 3.1 The Z80 registers structure (Z80_registers)
