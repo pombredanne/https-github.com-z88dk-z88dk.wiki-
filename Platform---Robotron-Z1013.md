@@ -1,7 +1,25 @@
+## Classic library support (`+z1013`)
 
-
-![](images/platform/z1013.jpg)
-
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine (text only)
+* [x] Generic console
+    * [x] Redefinable font (KRT)
+    * [x] UDG support (KRT)
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute (KRT)
+    * [x] Underline attribute (KRT)
+* [x] Lores graphics (64x64)
+* [x] Hires graphics (KRT - 256x256)
+* [ ] PSG sound
+* [ ] One bit sound 
+* [ ] Inkey driver
+* [ ] Hardware joystick
+* [ ] File I/O
+* [ ] Interrupts
+* [ ] RS232
 
 # Quick start
 
@@ -13,17 +31,16 @@
 
 This command will build a file called "adventure.z80", a binary file suitable to be run on the existing emulators.
 
-It is possible to choose between a full VT/ANSI emulation and a tiny console support.
-The ANSI version of the library depends a bit less on the ROM because the video memory is addressed directly.
-16x16 text resolution is not supported in ANSI mode.
 
-You can also change the program location with the "-zorg=" option.  The default position is at address $100.
+# Generic console modes
+
+* Mode 0 = 32x32 text
+* Mode 1 = 32x32, 256x256px KRT graphics
 
 
+# JKCEMU emulator
 
-# J1013 emulator
-
-Download and build from http://www.jens-mueller.org/j1013
+Download and build from http://www.jens-mueller.org/jkcemu
 
 To run a ".z80" program use the "Datei/Laden" menu, pick your file and click on "Starten".
 
