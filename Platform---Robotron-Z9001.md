@@ -1,6 +1,28 @@
 # Robotron Z9001, KC85/1 and KC87
 
 
+## Classic library support (`+z9001`)
+
+* [x] Native console output
+* [x] Native console input
+* [x] ANSI vt100 engine (text only)
+* [x] Generic console
+    * [x] Redefinable font (KRT)
+    * [x] UDG support (KRT)
+    * [x] Paper colour
+    * [x] Ink colour
+    * [x] Inverse attribute
+    * [x] Bold attribute (KRT)
+    * [x] Underline attribute (KRT)
+* [x] Lores graphics (80x48)
+* [x] Hires graphics (KRT - 320x192)
+* [ ] PSG sound
+* [ ] One bit sound 
+* [ ] Inkey driver
+* [x] Hardware joystick
+* [ ] File I/O
+* [ ] Interrupts
+* [ ] RS232
 
 # Quick start
 
@@ -13,23 +35,14 @@
 
 This command will build a file called "ADVENTURE.TAP", a binary file suitable to be run on the existing emulators.
 
-It is possible to choose between a fast VT/ANSI color emulation and a tiny console support based on BIOS calls.
+## Stack location
 
+By default, the binary is located at $1000 with stack set to $0ffe
 
-You can also change the program location with the "-zorg=" option.
+# Generic console modes
 
-
-The default position is at address $2000, please note that the stack is positioned just before the program location (by default the stack is at $1FFD), so changing the program position will affect the stack size.
-
-
-# Build options
-
-
-*  **-clib=ansi**  -  enable support for the full color ANSI VT emulation
-
-*  **-subtype=kcc**  -  appmake variant to create a '.KCC' file rather than using the '.TAP' format
-
-*  **-lgfx9001krt**  -  link the High Resolution library for the KRT video adapter. The low-resolution library is built in.
+* Mode 0 = 40x24 text
+* Mode 1 = 40x24, 320x192px KRT graphics
 
 
 # JKCEMU emulator
