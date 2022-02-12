@@ -133,8 +133,7 @@ double pow10(int x);
 
 Returns 10^x
 
-
-## File IO
+## File IO
 
 Support for file IO on the CPC has been added. This uses the CAS_ interface
 and as such as the limitation that only 2 files may be open at a time -
