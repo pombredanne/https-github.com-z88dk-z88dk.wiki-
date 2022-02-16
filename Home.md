@@ -25,11 +25,13 @@ The [classic library](Classic-Overview) is z88dk's traditional library and is wr
 
 ### Supported Platforms
 
-The classic library supports over [90 platforms](Platform) and provides many extensions (graphics, sound etc) as well as broadly supporting the C library standard.
+The classic library supports over [100 platforms](Platform) and provides many extensions (graphics, sound etc) as well as broadly supporting the C library standard.
 
 ## Newlib
 
-The new C library aims to implement as large a subset of C11 as is reasonable on an 8-bit target. The library does not confine itself to the standard and adds many non-standard functions drawn from BSD and GNU, as well as libraries aiming to support text, graphics and sound among other things. The library is still under development but it is already extensive featuring more than 700 functions.
+The new C library aims to implement as large a subset of C11 as is reasonable on an 8-bit target. The library does not confine itself to the standard and adds many non-standard functions drawn from BSD and GNU, as well as libraries aiming to support text, graphics and sound among other things. The library is slowly being merged into the classic library.
+
+
 ### Supported Platforms
 
 The [new library](https://github.com/z88dk/z88dk/wiki/Introduction) supports a restricted number of targets, and notably doesn't (yet) support file I/O. The supported targets are: +cpm, +hbios, +rc2014, +scz180, +sms, +yaz180, +z80, +z180, +zx, +zxn
