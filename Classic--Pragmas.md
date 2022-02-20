@@ -55,8 +55,8 @@ The following are only available in sccz80 (see [Issue #156](https://github.com/
 | Option | Description |
 |-|-|
 | `-pragma-redirect:fputc_cons=fputc_cons_generic` or `--generic-console` | If not the default for a target, supply this pragma to enable support for the [Generic Console](Classic-GenericConsole). The following command line alias may prove easier to type: `--generic-console` |
-| `-pragma-redirect:CRT_FONT=llll` | On platforms that support it, using this pragma will allow the 32 column font used by the console to be reconfigured. |
-| `-pragma-redirect:CRT_FONT_64=llll` | On platforms that support it, using this pragma will allow the 64 column font used by the console to be reconfigured. |
+| `-pragma-redirect:CRT_FONT=llll` | On platforms that support it, using this pragma will allow the 8x8 pixel font used by the console to be reconfigured. |
+| `-pragma-redirect:CRT_FONT_64=llll` | On platforms that support it, using this pragma will allow the 4x8 pixel font used by the console to be reconfigured. |
 | `-pragma-define:CLIB_CONIO_NATIVE_COLOUR=1` | On platforms that support it, using this pragma will disable the mapping that takes place between VT52 colour sequences and the native palette. As a result, all colour parameters will refer to the native palette colour index. |
 
 ## Console input
