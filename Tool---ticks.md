@@ -22,6 +22,11 @@ Ticks supports emulating the z80 (default), z180 (-mz180), ZX Next z80 extension
 
 When emulating the ZX Next cpu, ZX Next style MMU paging is available.
 
+## CP/M Emulation
+
+Ticks supports a limit number of BDOS calls launching it to run a .COM file will enable this mode and can allow some CP/M programs to run.
+
+
 ## Debugging
 
 Ticks provides a command line debugger, this can be launched as follows:
