@@ -93,7 +93,7 @@ The fannkuch benchmark is defined by programs in Performing Lisp Analysis of the
 | Hitech-C CPM v3.09 |	1218	| 56,667,034  	| 14.17 sec       |
 | Hitech-C Z80 v7.80 |	__868__	| 51,982,515	| __12.99 sec__   |
 | IAR Z80 V4.06A     |	1347	| 56,708,022	| 14.18 sec       |
-| SDCC	             |  1193	| 70,681,811	| 17.67 sec       |
+| SDCC	             |  962	| 57,325,388	| 14.33 sec       |
 | Z88DK/SCCZ80_CLASSIC|	1178	| 77,386,481	| 19.34 sec       |
 | Z88DK/SCCZ80_NEW  |	957	| 77,386,481	| 19.35 sec       |
 | Z88DK/SDCC_CLASSIC|   1304	| 59,756,269	| 14.94 sec       |
@@ -222,7 +222,7 @@ Floating point performance depends strongly on the number of mantissa bits in th
 | Hitech-C CPM v3.09  |	32	 | 24	  | 7605  | 639,413,871   | 159.8535 sec | 6.2557 |
 | Hitech-C Z80 v7.80  |	32	 | 24	  | 6919  | 614,748,605   | 153.6871 sec | 6.5067 |
 | IAR Z80 V4.06A      |	32	 | 24	  | 6524  | 732,360,277   | 183.0901 sec | 5.4618 |
-| SDCC	              | 32	 | 24	  | 11720 | 1,493,517,892 | 373.3795 sec | 2.6782 |
+| SDCC	              | 32	 | 24	  | 10935 | 1,491,668,242 | 372.9170 sec | 2.6816 |
 | Z88DK/SCCZ80_CLASSIC| 48	 | 40	  | 6359  | 1,283,271,893 | 320.8179 sec | 3.1170 |
 | Z88DK/SCCZ80_NEW    |	48	 | 40	  | __5362__  | 972,899,568   | 243.2248 sec | 4.1114 |
 | Z88DK/SCCZ80/MATH32 | 32 	 | 24     | 8921  | 567,396,426   | 141.8491 sec | __7.0497__ |
