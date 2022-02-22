@@ -22,8 +22,8 @@ IAR's last z80 compiler running under windows. Although it's not currently liste
 
 ## SDCC
 
-sdcc 3.5.5 #9392 __TO DO: UPDATE WITH 4.1.6 #12555__ (MINGW64) 
-sdcc is a current open source C cross compiler targetting several small CPUs including the z80. Its primary feature is that it supports a large subset of modern C standards (C89, C99, C11).
+sdcc 4.2.0 #13050 Linux
+sdcc is a current open source C cross compiler targetting several small CPUs including the z80. Its primary feature is that it supports a large subset of modern C standards (C89, C99, C11, C23).
 
 ## Z88DK/SCCZ80_CLASSIC
 
@@ -52,7 +52,7 @@ The work is to create binary trees - composed only of tree nodes all the way dow
 | Hitech-C CPM v3.09 |	4165	| DISQ  	|                 |
 | Hitech-C Z80 v7.80 |	4247	| 240,336,355	| 60.09 sec       |
 | IAR Z80 V4.06A     |	4525	| 7,358,336,547	| 30 min 40 sec   |
-| SDCC	             |  8626	| 203,788,182	| 50.95 sec       |
+| SDCC	             |  7158	| 188,126,191	| 47.03 sec       |
 | Z88DK/SCCZ80_CLASSIC|	2924    | 153,408,086	| 38.52 sec       |
 | Z88DK/SCCZ80_NEW  |	2711	| 6,582,763,903	| 27 min 25 sec   |
 | Z88DK/SDCC_CLASSIC|   2978	| 150,508,687	| __37.63 sec__   |
@@ -74,8 +74,8 @@ The benchmark package is available for download.
 |Hitech-C CPM v3.09 | 7471	| 354,120,220	| 88.53 sec	| 225.91	| 0.1286 |
 |Hitech-C Z80 v7.80 | __7002__	| 280,100,135	| 70.02 sec	| 285.61	| 0.1625 |
 |IAR Z80 V4.06A     | 7371	| 306,860,580	| 76.72 sec	| 260.70	| 0.1484 |
-|SDCC	            | 7013	| 292,880,320	| 73.22 sec	| 273.15	| 0.1554 |							
-|Z88DK/SDCC_CLASSIC | 7344	| 248,080,263	| 62.02 sec	| __322.48__	| 0.1835 |
+|SDCC	            | 6825	| 225,522,684	| 56.38 sec	| __354.73__	| 0.2019 |							
+|Z88DK/SDCC_CLASSIC | 7344	| 248,080,263	| 62.02 sec	| 322.48	| 0.1835 |
 |Z88DK/SDCC_NEW     | 7163	| 257,100,263	| 62.28 sec	| 311.16	| 0.1771 |
 
 Notes:
@@ -83,6 +83,7 @@ Notes:
 * Hitech-C CPM v3.09 binary size is over-estimated as it will contain some stdio structures for cp/m.
 * Hitech-C Z80 v7.80 must be compiled with global optimizer set to two; higher causes the program to hang.
 * Dhrystone 2.1 is deprecated because optimizing compilers can eliminate redundant statements that were intended to add to execution time. However many z80-era compilers ran this benchmark so it is also available in the z88dk repository.
+
 # Fannkuch
 
 The fannkuch benchmark is defined by programs in Performing Lisp Analysis of the FANNKUCH Benchmark, Kenneth R. Anderson and Duane Rettig. FANNKUCH is an abbreviation for the German word Pfannkuchen, or pancakes, in analogy to flipping pancakes. The conjecture is that the maximum count is approximated by n*log(n) when n goes to infinity.
@@ -92,7 +93,7 @@ The fannkuch benchmark is defined by programs in Performing Lisp Analysis of the
 | Hitech-C CPM v3.09 |	1218	| 56,667,034  	| 14.17 sec       |
 | Hitech-C Z80 v7.80 |	__868__	| 51,982,515	| __12.99 sec__   |
 | IAR Z80 V4.06A     |	1347	| 56,708,022	| 14.18 sec       |
-| SDCC	             |  1196	| 67,174,167	| 16.79 sec       |
+| SDCC	             |  1193	| 70,681,811	| 17.67 sec       |
 | Z88DK/SCCZ80_CLASSIC|	1178	| 77,386,481	| 19.34 sec       |
 | Z88DK/SCCZ80_NEW  |	957	| 77,386,481	| 19.35 sec       |
 | Z88DK/SDCC_CLASSIC|   1304	| 59,756,269	| 14.94 sec       |
@@ -112,7 +113,7 @@ The program should:
 | Hitech-C CPM v3.09 |	4056	| 188,751,954  	| 47.19 sec       |
 | Hitech-C Z80 v7.80 |	4121	| DISQ   	|                 |
 | IAR Z80 V4.06A     |	6041	| 223,805,149	| 55.95 sec       |
-| SDCC	             |  6947	| 488,970,702	| 122.24 sec      |
+| SDCC	             |  5835	| 373,202,979	| 93.30 sec       |
 | Z88DK/SCCZ80_CLASSIC|	3291	| 243,021,012	| 60.76 sec       |
 | Z88DK/SCCZ80_CLASSIC/MATH32|	3978	| 136,057,474	| 34.01 sec       |
 | Z88DK/SCCZ80_NEW  |	__2998__	| 204,281,085	| 51.07 sec       |
@@ -139,7 +140,7 @@ Useful symplectic integrators are freely available, for example the HNBody Sympl
 | Hitech-C CPM v3.09 |	4056	| DISQ  	|                 |
 | Hitech-C Z80 v7.80 |	3736	| 1,600,543,903 | 6 min 40 sec    |
 | IAR Z80 V4.06A     |	4084	| 2,331,516,019	| 9 min 43 sec    |
-| SDCC	             |  9233	| 5,306,393,684	| 22 min 07 sec   |
+| SDCC	             |  7141	| 3,163,137,393	| 13 min 11 sec   |
 | Z88DK/SCCZ80_CLASSIC|	4493	| 3,658,052,111	| 15 min 14 sec   |
 | Z88DK/SCCZ80_NEW  |	__3363__	| 2,376,486,525	| 9 min 53 sec    |
 | Z88DK/SCCZ80_NEW/MATH32|	5149	| 754,266,702	| __3 min 8 sec__  |
@@ -171,7 +172,7 @@ The first set of numbers are without the use of __ldiv()__ and the second with u
 | Hitech-C CPM v3.09   | 6793 |	5,531,933,581 |	23 min 03 sec  |      |               |               |				
 | Hitech-C Z80 v7.80   | 6593 |	5,528,979,464 |	23 min 02 sec  | 6728 |	5,892,567,264 |	24 min 33 sec |
 | IAR Z80 V4.06A       | 6789 |	8,762,223,085 |	36 min 31 sec  | 7006 |	8,799,503,282 |	36 min 40 sec |
-| SDCC		       | 6844 |	8,700,157,418 |	36 min 15 sec  |      |		      |	              |
+| SDCC		       | 6591 |	6,649,404,381 |	27 min 42 sec  |      |		      |	              |
 | Z88DK/SCCZ80_CLASSIC | 6508 |	4,012,440,830 |	16 min 43 sec  |      |	              |	              |
 | Z88DK/SCCZ80_NEW     | 6269 |	4,012,440,735 |	16 min 43 sec  | 6182 |	2,576,381,983 |	10 min 44 sec |
 | Z88DK/SCCZ80_NEW_FAST| 8999 |	1,696,878,309 |	__7 min 04 sec__   | 9131 |	1,301,832,933 |	__5 min 25 sec__  |
@@ -198,7 +199,7 @@ This is a popular benchmark for small machine compilers because just about every
 | Hitech-C CPM v3.09 |	8725	| 4,547,538	| 1.1369 sec      |
 | Hitech-C Z80 v7.80 |  8472	| 3,885,436	| 0.9713 sec      |
 | IAR Z80 V4.06A     |	8772	| 3,714,152	| 0.9285 sec      |
-| SDCC	             | __8263__	| 4,701,570	| 1.1754 sec      |
+| SDCC	             | __8278__	| 4,219,481	| 1.0548 sec      |
 | Z88DK/SCCZ80_CLASSIC|	8589	| 4,957,733	| 1.2394 sec      |
 | Z88DK/SCCZ80_NEW  |	8362	| 4,957,733	| 1.2394 sec      |
 | Z88DK/SDCC_CLASSIC|   8558	| 4,510,806	| 1.1277 sec      |
@@ -221,7 +222,7 @@ Floating point performance depends strongly on the number of mantissa bits in th
 | Hitech-C CPM v3.09  |	32	 | 24	  | 7605  | 639,413,871   | 159.8535 sec | 6.2557 |
 | Hitech-C Z80 v7.80  |	32	 | 24	  | 6919  | 614,748,605   | 153.6871 sec | 6.5067 |
 | IAR Z80 V4.06A      |	32	 | 24	  | 6524  | 732,360,277   | 183.0901 sec | 5.4618 |
-| SDCC	              | 32	 | 24	  | 14379 | 2,184,812,093 | 546.2030 sec | 1.8308 |
+| SDCC	              | 32	 | 24	  | 11720 | 1,493,517,892 | 373.3795 sec | 2.6782 |
 | Z88DK/SCCZ80_CLASSIC| 48	 | 40	  | 6359  | 1,283,271,893 | 320.8179 sec | 3.1170 |
 | Z88DK/SCCZ80_NEW    |	48	 | 40	  | __5362__  | 972,899,568   | 243.2248 sec | 4.1114 |
 | Z88DK/SCCZ80/MATH32 | 32 	 | 24     | 8921  | 567,396,426   | 141.8491 sec | __7.0497__ |
