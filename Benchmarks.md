@@ -22,7 +22,7 @@ IAR's last z80 compiler running under windows. Although it's not currently liste
 
 ## SDCC
 
-sdcc 4.2.0 #13050 Linux
+sdcc 4.2.0 RC1 #13053 Linux
 sdcc is a current open source C cross compiler targetting several small CPUs including the z80. Its primary feature is that it supports a large subset of modern C standards (C89, C99, C11, C23).
 
 ## Z88DK/SCCZ80_CLASSIC
