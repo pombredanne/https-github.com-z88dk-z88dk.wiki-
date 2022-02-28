@@ -13,8 +13,7 @@ Hitech's last CPM C compiler. One of the most capable native C compilers for CP/
 
 ## HITECH-C MSDOS v7.80 Patch Level 2
 
-The last z80 compiler from Hi-Tech, cross compiles z80 and z180 code from MSDOS (and Linux). Supports banking into the full z180 address space. Seems to be near complete compliance with C89. Has both integrated development environment `HPDZ` and command line `ZC` options.
-Compiler kindly provided by [@artrag](https://github.com/artrag).
+The last z80 compiler from Hi-Tech, cross compiles z80 and z180 code from MSDOS (and Linux). Supports banking into the full z180 address space. Seems to be near complete compliance with C89. Has both an integrated development environment `HPDZ` and command line `ZC` options.<br>Compiler kindly provided by [@artrag](https://github.com/artrag).
 
 ## IAR Z80 V4.06A
 
@@ -22,8 +21,8 @@ IAR's last z80 compiler running under windows. Although it's not currently liste
 
 ## SDCC
 
-sdcc 4.2.0 RC1 #13053 Linux
-sdcc is a current open source C cross compiler targetting several small CPUs including the z80. Its primary feature is that it supports a large subset of modern C standards (C89, C99, C11, C23). In these tests the new register based calling convention `__sdcccall(1)` is enabled.
+sdcc 4.2.0 (Linux)
+sdcc is a current open source C cross compiler targeting several small CPUs including the z80. Its primary feature is that it supports a large subset of modern C standards (C89, C99, C11, C23).<br>In these tests the new register based calling convention `__sdcccall(1)` is enabled.
 
 ## Z88DK/SCCZ80_CLASSIC
 
@@ -31,7 +30,7 @@ sdcc is a current open source C cross compiler targetting several small CPUs inc
 
 ## Z88DK/SDCC_CLASSIC
 
-(Nightly build 28 April 2021) sdcc 4.1.6 #12555 is used to translate C code with z88dk supplying its (classic) C library and startup code for targets.
+(Nightly build 28 April 2021) sdcc 4.1.6 #12555 is used to translate C code with z88dk supplying its (classic) C library and startup code for targets.<br>In these tests the traditional calling conventions `__sdcccall(0)`, with `__z88dk_callee` and `__z88dk_fastcall`, are enabled.
 
 ## Z88DK/SCCZ80_NEW
 
@@ -39,7 +38,7 @@ sdcc is a current open source C cross compiler targetting several small CPUs inc
 
 ## Z88DK/SDCC_NEW
 
-(Nightly build 28 April 2021) sdcc 4.1.6 #12555 is used to translate C code with z88dk supplying its (new) C library and startup code for targets.
+(Nightly build 28 April 2021) sdcc 4.1.6 #12555 is used to translate C code with z88dk supplying its (new) C library and startup code for targets.<br>In these tests the traditional calling conventions `__sdcccall(0)`, with `__z88dk_callee` and `__z88dk_fastcall`, are enabled.
 
 # Binary-Trees
 
