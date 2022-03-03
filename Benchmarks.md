@@ -11,6 +11,8 @@ To put the current compilers and libraries for z88dk into context, the benchmark
 Hitech-C (CP/M-80) v 3.09 
 Hitech's last CPM C compiler. One of the most capable native C compilers for CP/M. Runs under CP/M 2.2 and implements a large subset of C89. This compiler represents the best z80 native code generator. Hitech made this available for free many years ago.
 
+[Efforts to maintain the v3.09 compiler](https://github.com/agn453/HI-TECH-Z80-C) are being made. Some benchmarks were run using Release 12, containing patches back ported from v7.808pl2.
+
 ## HITECH-C MSDOS v7.80 Patch Level 2
 
 The last z80 compiler from Hi-Tech, cross compiles z80 and z180 code from MSDOS (and Linux). Supports banking into the full z180 address space. Seems to be near complete compliance with C89. Has both an integrated development environment `HPDZ` and command line `ZC` options.<br>Compiler kindly provided by [@artrag](https://github.com/artrag).
@@ -48,7 +50,7 @@ The work is to create binary trees - composed only of tree nodes all the way dow
 
 |                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
 |--------------------|----------|---------------|-----------------|
-| Hitech-C CPM v3.09 |	4165	| DISQ  	|                 |
+| Hitech-C CPM v3.09 |	16515	| 298,449,848  	| 74.61 sec       |
 | Hitech-C Z80 v7.80 |	4247	| 240,336,355	| 60.09 sec       |
 | IAR Z80 V4.06A     |	4525	| 7,358,336,547	| 30 min 40 sec   |
 | SDCC	             |  7158	| 188,126,191	| 47.03 sec       |
