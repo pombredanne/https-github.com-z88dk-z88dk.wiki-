@@ -64,7 +64,7 @@ The following features from `<stdlib.h>`are not available in the 8080/5 library:
 
 ### `<math.h>`
 
-There are two [maths libraries](Classic--Maths-Libraries) that are available for the 8080/8085: `daimath32`, extracted from the [DAI](Platform---Dai) ROM, and `mbf32` Microsoft Basic Floating Point, extracted from Microsoft Basic 4.7 and optimised for the 8080, 8085, gbz80, and z80 CPUs. 
+There are two [maths libraries](Classic--Maths-Libraries) that are available for the 8080/8085: `dai32`, extracted from the [DAI](Platform---Dai) ROM, and `mbf32` Microsoft Basic Floating Point, extracted from Microsoft Basic 4.7 and optimised for the 8080, 8085, gbz80, and z80 CPUs. 
 
 The RC2014 8085 has access to the `am9511_8085` maths library when it is equipped with an APU Module. This maths library supports `long` and `float` operations with the APU, and provides a substantial performance gain over software floating point support.
 
