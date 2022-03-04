@@ -42,7 +42,7 @@ Some basic optimisation for the 8085 (using undocumented instructions) and z80 h
 __MBF32 can only be used with the sccz80 compiler.__
 
 
-## DAI Maths - (32 bit maths extracted from the DAI target) - 8080/z80/z180/z80n
+## DAI32 Maths - (32 bit maths extracted from the DAI target ROM) - 8080/z80/z180/z80n
 
 This maths library was extracted from the DAI computer, it offers, a 4 byte, 7 bit exponent, 24 bit mantissa floating point number. It's of particular interest since the floating point format is compatible with the AM9511.
 
@@ -107,12 +107,15 @@ Aliases are provided to make usage of maths libraries straight forward. Includin
 
 ## classic
 
-* __`--math-mbf32`__ is alias for `-lmbf32 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -D__MATH_MBF32`
-* __`--math-mbf32_8080`__ is alias for `-lmbf32_8080 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -D__MATH_MBF32`
+* __`--math-mbf32`__ is alias for `-Cc-fp-mode=mbf32-lmbf32 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -Ca-D__MATH_MBF32 -D__MATH_MBF32`
+* __`--math-mbf32_8080`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32_8080 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -Ca-D__MATH_MBF32 -D__MATH_MBF32`
+* __`--math-mbf32_8085`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32_8085 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -Ca-D__MATH_MBF32 -D__MATH_MBF32`
+* __`--math-mbf32_gbz80`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32_gbz80 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -Ca-D__MATH_MBF32 -D__MATH_MBF32`
 * __`--math-mbf64`__ is alias for `-Cc-fp-mode=mbf64 -lmbf64`
 * __`--math-bbc`__ is alias for `-Cc-fp-mode=z88 -lbbc_math`
-* __`--math-dai32`__ is alias for `-Cc-fp-mode=am9511 -ldaimath32 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_DAI32 -D__MATH_DAI32`
-* __`--math-dai32_8080`__ is alias for `-ldaimath32_8080 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_DAI32 -D__MATH_DAI32`
+* __`--math-dai32`__ is alias for `-Cc-fp-mode=am9511 -ldaimath32 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_DAI32 -Ca-D__MATH_DAI32 -D__MATH_DAI32`
+* __`--math-dai32_8080`__ is alias for `-Cc-fp-mode=am9511 -ldaimath32_8080 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_DAI32 -Ca-D__MATH_DAI32 -D__MATH_DAI32`
+* __`--math-am9511_8085`__ is alias for `-Cc-fp-mode=ieee -lam9511_8085 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_AM9511 -Ca-D__MATH_AM9511 -D__MATH_AM9511`
 
 ## classic + newlib
 
