@@ -107,15 +107,15 @@ Aliases are provided to make usage of maths libraries straight forward. Includin
 
 ## classic
 
-* __`--math-mbf32`__ is alias for `-Cc-fp-mode=mbf32-lmbf32 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -Ca-D__MATH_MBF32 -D__MATH_MBF32`
-* __`--math-mbf32_8080`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32_8080 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -Ca-D__MATH_MBF32 -D__MATH_MBF32`
-* __`--math-mbf32_8085`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32_8085 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -Ca-D__MATH_MBF32 -D__MATH_MBF32`
-* __`--math-mbf32_gbz80`__ is alias for `-Cc-fp-mode=mbf32 -lmbf32_gbz80 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -Ca-D__MATH_MBF32 -D__MATH_MBF32`
-* __`--math-mbf64`__ is alias for `-Cc-fp-mode=mbf64 -lmbf64`
-* __`--math-bbc`__ is alias for `-Cc-fp-mode=z88 -lbbc_math`
-* __`--math-dai32`__ is alias for `-Cc-fp-mode=am9511 -ldaimath32 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_DAI32 -Ca-D__MATH_DAI32 -D__MATH_DAI32`
-* __`--math-dai32_8080`__ is alias for `-Cc-fp-mode=am9511 -ldaimath32_8080 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_DAI32 -Ca-D__MATH_DAI32 -D__MATH_DAI32`
-* __`--math-am9511_8085`__ is alias for `-Cc-fp-mode=ieee -lam9511_8085 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_AM9511 -Ca-D__MATH_AM9511 -D__MATH_AM9511`
+* __`--math-mbf32`__ is alias for<br>`-Cc-fp-mode=mbf32-lmbf32 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -Ca-D__MATH_MBF32 -D__MATH_MBF32`
+* __`--math-mbf32_8080`__ is alias for<br>`-Cc-fp-mode=mbf32 -lmbf32_8080 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -Ca-D__MATH_MBF32 -D__MATH_MBF32`
+* __`--math-mbf32_8085`__ is alias for<br>`-Cc-fp-mode=mbf32 -lmbf32_8085 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -Ca-D__MATH_MBF32 -D__MATH_MBF32`
+* __`--math-mbf32_gbz80`__ is alias for<br>`-Cc-fp-mode=mbf32 -lmbf32_gbz80 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MBF32 -Ca-D__MATH_MBF32 -D__MATH_MBF32`
+* __`--math-mbf64`__ is alias for<br>`-Cc-fp-mode=mbf64 -lmbf64`
+* __`--math-bbc`__ is alias for<br>`-Cc-fp-mode=z88 -lbbc_math`
+* __`--math-dai32`__ is alias for<br>`-Cc-fp-mode=am9511 -ldaimath32 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_DAI32 -Ca-D__MATH_DAI32 -D__MATH_DAI32`
+* __`--math-dai32_8080`__ is alias for<br>`-Cc-fp-mode=am9511 -ldaimath32_8080 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_DAI32 -Ca-D__MATH_DAI32 -D__MATH_DAI32`
+* __`--math-am9511_8085`__ is alias for<br>`-Cc-fp-mode=ieee -lam9511_8085 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_AM9511 -Ca-D__MATH_AM9511 -D__MATH_AM9511`
 
 ## classic + newlib
 
@@ -123,8 +123,9 @@ The `--math16` and `--math32` aliases are supported across z80, z180, and z80n (
 
 The `math16` library uses 16-bit (integer) memory moves extensively, and therefore optimising code by in-lining memory get and put subroutines has a positive impact on performance, without increasing program size substantially.
 
-* __`--math32`__ is alias for `-Cc-D__MATH_MATH32 -D__MATH_MATH32 -Cc-fp-mode=ieee -pragma-define:CLIB_32BIT_FLOATS=1 -lmath32`
-* __`--math16`__ is alias for `-Cc-D__MATH_MATH16 -D__MATH_MATH16 --opt-code-speed=inlineints -lmath16`
+* __`--math16`__ is alias for<br>`-lmath16 --opt-code-speed=inlineints -Cc-D__MATH_MATH16 -Ca-D__MATH_MATH16 -D__MATH_MATH16`
+* __`--math32`__ is alias for<br>`-Cc-fp-mode=ieee    -lmath32 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_MATH32 -Ca-D__MATH_MATH32 -D__MATH_MATH32`
+* __`--am9511`__ is alias for<br>`-Cc-fp-mode=ieee    -lam9511 -pragma-define:CLIB_32BIT_FLOATS=1 -Cc-D__MATH_AM9511 -Ca-D__MATH_AM9511 -D__MATH_AM9511`
 
 # Benchmarks
 
