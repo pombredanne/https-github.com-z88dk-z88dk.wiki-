@@ -38,7 +38,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Epson PX-8/HC-80/HC-88](Platform---Epson-PX8) | 80x8 (80x9*) | 60x10 | 480x64 | No | No | *use the "LCD_7LINES;" macro |  
 [Enterprise 64/128](Platform---Enterprise64) | 40x25| No | 336x243*, 672x243*| No | Yes | *GFX via EXOS | 
 [Excalibur 64](Platform---Excalibur64) | No | 40x25, 80x25 | No | No | No |
-[Galaksija](Platform---Galaksija)| 32x16 (B&W) | 32x16 + 32x26 (Gal+) | 64x48 + 256x208 (Gal+)| No | 1 bit* | (via tape output) | 
+[Galaksija](Platform---Galaksija)| 32x16 (B&W) | 32x16 + 32x26 (Gal+) | 64x48 + 256x208 (Gal+)| No | 1 bit* + PSG (Gal+) | *via tape output | 
 [Genius Leader](Platform-Genius-Leader)| No | 20x2,20x4,30x12 | 240x100 (6000SL)| No | Yes (2000/4000) |
 [Hanimex Pencil II](Platform--Hanimex-Pencil-II)| No |32x24 | 256x192 | No | PSG |
 [Homelab 2](Platform---Homelab2) | No | 40x25 | 80x50 | No | No |
