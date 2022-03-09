@@ -49,7 +49,7 @@ The hires screen of the Plus model is supported by both the generic console and 
 
 Galaksija Plus support is enabled in the libraries by specifying the option `-subtype=galaxyp`
 
-For text output in mode 1, an [external font](https://github.com/z88dk/z88dk/wiki/Classic-GenericConsole#defining-a-custom-font) must be provided, otherwise garbage instead of characters will appear.
+For text output in mode 1, a [custom font](https://github.com/z88dk/z88dk/wiki/Classic-GenericConsole#defining-a-custom-font) must be provided, otherwise garbage instead of characters will appear.
 
 ## Compact graphics library
 
@@ -57,7 +57,7 @@ For low memory compiles where the generic console isn't used, the original lores
 
 ## Audio output
 
-[1-bit sound](https://www.z88dk.org/wiki/doku.php?id=library:sound) is provided via tape output. This is fully functional, although its usability is limited because the Galaksija turns off the screen while playing tape output sounds. Currently (as of 2022), 1-bit sound can only be tested on the real hardware, because both emulators and the ZX-Uno core do not emulate tape output sound.
+[1-bit sound](https://www.z88dk.org/wiki/doku.php?id=library:sound) is provided via tape output. This is fully functional, although its usability is limited because the Galaksija turns off the screen while playing tape output sounds. Currently (as of 2022), 1-bit sound can only be tested on the real hardware, because both emulators and the ZX-Uno core do not reproduce tape output sound.
 
 PSG sound for the galaxyp subtarget is functional, albeit imperfect. This can be tested in MAME on the galaxyp system, or on the ZX-Uno Galaksija core. The galaksija.net online emulator does not provide AY sound emulation yet.
 
