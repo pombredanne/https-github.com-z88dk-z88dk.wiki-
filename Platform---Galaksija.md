@@ -49,17 +49,31 @@ The hires screen of the Plus model is supported by both the generic console and 
 
 Galaksija Plus support is enabled in the libraries by specifying the option `-subtype=galaxyp`
 
+For text output in mode 1, an [external font](https://github.com/z88dk/z88dk/wiki/Classic-GenericConsole#defining-a-custom-font) must be provided, otherwise garbage instead of characters will appear.
+
 ## Compact graphics library
 
 For low memory compiles where the generic console isn't used, the original lores graphics library can be linked in using `-lgfxgaltext` 
 
-# Emulator notes
+## Audio output
 
-The current version (1.9) has been tested on the "MESS" emulator; the sound library hasn't been tested.
+[1-bit sound](https://www.z88dk.org/wiki/doku.php?id=library:sound) is provided via tape output. This is fully functional, although its usability is limited because the Galaksija turns off the screen while playing tape output sounds. Currently (as of 2022), 1-bit sound can only be tested on the real hardware, because both emulators and the ZX-Uno core do not emulate tape output sound.
+
+PSG sound for the galaxyp subtarget is functional, albeit imperfect. This can be tested in MAME on the galaxyp system, or on the ZX-Uno Galaksija core. The galaksija.net online emulator does not provide AY sound emulation yet.
+
+# Emulator and FPGA notes
 
 After attaching the tape file, type the command "OLD", in the Galaksija BASIC dialect it means "LOAD".
 Start the virtual tape transfer, and just type "RUN" at the prompt when LOADing is finished.
 
+## MAME
+Attach the WAV tape file, type OLD and start the tape. You can now press Escape twice and then F10 to speed up emulation. Press F10 again to return to normal speed when loading is finished.
+
+## GALe Online Emulator
+Open [the online emulator](http://galaksija.net/) in your browser. Click "Tape" and then "File" to attach a GTP tape file, then load the tape as described above. Loading happens instantly, so you can immediately type RUN afterwards.
+
+## ZX-Uno
+On the [ZX-Uno](https://zxuno.speccy.org/), GTP files can be loaded from mass storage. Follow the instructions described [here](https://www.zxuno.com/forum/viewtopic.php?f=65&t=1942).
 
 # Links
 
