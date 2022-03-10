@@ -32,7 +32,7 @@ sdcc is a current open source C cross compiler targeting several small CPUs incl
 
 ## Z88DK/SDCC_CLASSIC
 
-(Nightly build 28 April 2021) sdcc 4.1.6 #12555 is used to translate C code with z88dk supplying its (classic) C library and startup code for targets.<br>In these tests the traditional calling conventions `__sdcccall(0)`, with `__z88dk_callee` and `__z88dk_fastcall`, are enabled.
+(Nightly build 10 March 2022) sdcc 4.2.0 r13131 is used to translate C code with z88dk supplying its (classic) C library and startup code for targets.<br>In these tests the traditional calling conventions `__sdcccall(0)`, with `__z88dk_callee` and `__z88dk_fastcall`, are enabled.
 
 ## Z88DK/SCCZ80_NEW
 
@@ -40,7 +40,7 @@ sdcc is a current open source C cross compiler targeting several small CPUs incl
 
 ## Z88DK/SDCC_NEW
 
-(Nightly build 28 April 2021) sdcc 4.1.6 #12555 is used to translate C code with z88dk supplying its (new) C library and startup code for targets.<br>In these tests the traditional calling conventions `__sdcccall(0)`, with `__z88dk_callee` and `__z88dk_fastcall`, are enabled.
+(Nightly build 10 March 2022) sdcc 4.2.0 r13131 is used to translate C code with z88dk supplying its (new) C library and startup code for targets.<br>In these tests the traditional calling conventions `__sdcccall(0)`, with `__z88dk_callee` and `__z88dk_fastcall`, are enabled.
 
 # Binary-Trees
 
@@ -76,8 +76,8 @@ The benchmark package is available for download.
 |Hitech-C Z80 v7.80 | 7002	| 280,100,135	| 70.02 sec	| 285.61	| 0.1625 |
 |IAR Z80 V4.06A     | 7371	| 306,860,580	| 76.72 sec	| 260.70	| 0.1484 |
 |SDCC	            | __6825__	| 225,522,684	| 56.38 sec	| __354.73__	| 0.2019 |							
-|Z88DK/SDCC_CLASSIC | 7344	| 248,080,263	| 62.02 sec	| 322.48	| 0.1835 |
-|Z88DK/SDCC_NEW     | 7163	| 257,100,263	| 62.28 sec	| 311.16	| 0.1771 |
+|Z88DK/SDCC_CLASSIC | 7882	| 251,880,052	| 62.97 sec	| 317.61	| 0.1808 |
+|Z88DK/SDCC_NEW     | 7072	| 254,720,052	| 63.68 sec	| 314.07	| 0.1787 |
 
 Notes:
 
