@@ -70,7 +70,7 @@ Start the virtual tape transfer, and just type "RUN" at the prompt when LOADing 
 Attach the WAV tape file, type OLD and start the tape. You can now press Escape twice and then F10 to speed up emulation. Press F10 again to return to normal speed when loading is finished.
 
 ## GALe Online Emulator
-Open [the online emulator](http://galaksija.net/) in your browser. Click "Tape" and then "File" to attach a GTP tape file, then load the tape as described above. Loading happens instantly, so you can immediately type RUN afterwards.
+Open [the online emulator](http://galaksija.net/?i=1) in your browser. Click "Tape" and then "File" to attach a GTP tape file, then load the tape as described above. Loading happens instantly, so you can immediately type RUN afterwards.
 
 ## ZX-Uno
 On the [ZX-Uno](https://zxuno.speccy.org/), GTP files can be loaded from mass storage. Follow the instructions described [here](https://www.zxuno.com/forum/viewtopic.php?f=65&t=1942).
