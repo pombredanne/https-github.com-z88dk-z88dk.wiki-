@@ -51,6 +51,8 @@ Galaksija Plus support is enabled in the libraries by specifying the option `-su
 
 For text output in mode 1, a [custom font](https://github.com/z88dk/z88dk/wiki/Classic-GenericConsole#defining-a-custom-font) must be provided, otherwise garbage instead of characters will appear.
 
+The option `-pragma-define:CLIB_DEFAULT_SCREEN_MODE=1` will make the program start in graphics mode 1 by adding the command GRAPH to the BASIC loader.
+
 ## Compact graphics library
 
 For low memory compiles where the generic console isn't used, the original lores graphics library can be linked in using `-lgfxgaltext` 
@@ -78,3 +80,5 @@ On the [ZX-Uno](https://zxuno.speccy.org/), GTP files can be loaded from mass st
 # Links
 
 http://www.tablix.org/~avian/blog/archives/2008/12/galaksija_gets_a_c_compiler/
+
+http://emulator.galaksija.org/MagScans/index.html
