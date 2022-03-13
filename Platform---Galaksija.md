@@ -74,6 +74,9 @@ Attach the WAV tape file, type OLD and start the tape. You can now press Escape 
 ## GALe Online Emulator
 Open [the online emulator](http://galaksija.net/?i=1) in your browser. Click "Tape" and then "File" to attach a GTP tape file, then load the tape as described above. Loading happens instantly, so you can immediately type RUN afterwards.
 
+## JSGalMin Online Emulator
+This is another [online emulator](http://galaksija.epizy.com/Galaksija/jsgalmin_lite.html), this one also emulates AY sound.
+
 ## ZX-Uno
 On the [ZX-Uno](https://zxuno.speccy.org/), GTP files can be loaded from mass storage. Follow the instructions described [here](https://www.zxuno.com/forum/viewtopic.php?f=65&t=1942).
 
@@ -82,3 +85,5 @@ On the [ZX-Uno](https://zxuno.speccy.org/), GTP files can be loaded from mass st
 http://www.tablix.org/~avian/blog/archives/2008/12/galaksija_gets_a_c_compiler/
 
 http://emulator.galaksija.org/MagScans/index.html
+
+http://galaksija.epizy.com/
