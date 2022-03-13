@@ -59,9 +59,9 @@ For low memory compiles where the generic console isn't used, the original lores
 
 ## Audio output
 
-[1-bit sound](https://www.z88dk.org/wiki/doku.php?id=library:sound) is provided via tape output. This is fully functional, although its usability is limited because the Galaksija turns off the screen while playing tape output sounds. Currently (as of 2022), 1-bit sound can only be tested on the real hardware, because both emulators and the ZX-Uno core do not reproduce tape output sound.
+[1-bit sound](https://www.z88dk.org/wiki/doku.php?id=library:sound) is provided via tape output. This is fully functional, although its usability is limited because the Galaksija turns off the screen while playing tape output sounds. Currently (as of 2022), 1-bit sound can only be tested on the real hardware, because the available emulators and the ZX-Uno core do not reproduce tape output sound.
 
-PSG sound for the galaxyp subtarget is functional, albeit imperfect. This can be tested in MAME on the galaxyp system, or on the ZX-Uno Galaksija core. The galaksija.net online emulator does not provide AY sound emulation yet.
+PSG sound for the optional AY-3-8910 extension is functional, albeit imperfect. This can be tested in MAME on the galaxyp system, in the JSGalMin emulator or on the ZX-Uno Galaksija core. The galaksija.net online emulator does not provide AY sound emulation yet.
 
 # Emulator and FPGA notes
 
