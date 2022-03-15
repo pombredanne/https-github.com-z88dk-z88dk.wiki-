@@ -18,11 +18,13 @@
 * [x] Lores graphics
 * [x] Hires graphics (`-subtype=galaxyp`)
 * [x] PSG sound
+    * [x] WYZ Player
+    * [x] Vortex tracker
 * [x] One bit sound
 * [x] Inkey driver
 * [x] Hardware joystick
 * [ ] File I/O
-* [ ] Interrupts
+* [x] Interrupts
 * [ ] RS232
 
 # Quick start
