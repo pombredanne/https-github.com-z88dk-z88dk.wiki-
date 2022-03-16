@@ -76,6 +76,8 @@ Attach the WAV tape file, type OLD and start the tape. You can now press Escape 
 ## GALe Online Emulator
 Open [the online emulator](http://galaksija.net/?i=1) in your browser. Click "Tape" and then "File" to attach a GTP tape file, then load the tape as described above. Loading happens instantly, so you can immediately type RUN afterwards.
 
+Alternatively, you can drag and drop a GTP file into the emulation screen, it will be started automatically. Dropping the file onto the "Tape" button will only insert the tape.
+
 ## JSGalMin Online Emulator
 This is another [online emulator](http://galaksija.epizy.com/Galaksija/jsgalmin_lite.html), this one also emulates AY sound.
 
