@@ -138,7 +138,7 @@ Useful symplectic integrators are freely available, for example the HNBody Sympl
 
 |                    | SIZE	| Z80 Cycles    | Wall Clock @4Mhz| 
 |--------------------|----------|---------------|-----------------|
-| Hitech-C CPM v3.09 |	4056	| DISQ  	|                 |
+| Hitech-C CPM v3.09 |	16492	| 1,593,755,080 | 6 min 38 sec    |
 | Hitech-C Z80 v7.80 |	3736	| 1,600,543,903 | 6 min 40 sec    |
 | IAR Z80 V4.06A     |	4084	| 2,331,516,019	| 9 min 43 sec    |
 | SDCC	             |  7141	| 3,163,137,393	| 13 min 11 sec   |
