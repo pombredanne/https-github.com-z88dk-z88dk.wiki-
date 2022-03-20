@@ -151,7 +151,7 @@ Useful symplectic integrators are freely available, for example the HNBody Sympl
 
 Notes:
 
-* Hitech-C CPM v3.09 can't compile the source code.
+* The HITECH-C CPM v3.09 binary size is over-estimated as it will contain some stdio structures for cp/m.
 * SDCC's performance is hurt by a floating point package implemented in C.
 * Z88DK/SCCZ80_CLASSIC uses the `genmath` float library while the other Z88DK compiles use `math48`.
 * Z88DK/SDCC uses a 48-bit float internally but this is converted to 32-bit at the compiler-library interface since sdcc only understands a 32-bit float type.
