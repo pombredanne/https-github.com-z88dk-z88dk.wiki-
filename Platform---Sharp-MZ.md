@@ -117,3 +117,4 @@ If you experience problems, try running the program under a different emulator o
 
 [Using z88dk to get MZ-700 compatible code](http://www.randomorbit.co.uk/?cat=37)
 
+[z88dk on the MZ-1500 (japanese)](https://sites.google.com/view/mz1500page/tips/z88dk%E3%82%92%E4%BD%BF%E3%81%86)
