@@ -23,11 +23,30 @@ This group of systems features a different way to access to the I/O devices (the
 
 At the moment the differences are managed by the 'appmake tool', by patching the resulting code and encoding the audio output in the proper way:
 
-    zcc +mz -create-app -Cz--audio -Cz--mz80b -Cz--src -Cz700 -Cz--dst -Cz80b adv_a.c
 
-To load the program the SB-1510 monitor must be in memory, this is normally part of the BASIC boot tape, just enter the 'MONIT' command to activate it, load the program with the 'L' command, then type 'J' to jump (default address is 1200 hexadecimal).
+    zcc +mz -create-app -startup=2 -Cz--audio -Cz--mz80b -Cz--src -Cz700 -Cz--dst -Cz80b program.c
+
+-- or -- (to produce only the intermediate file)
+
+    zcc +mz -create-app -startup=2 -zorg=24576 -Cz--dst=80B program.c
+
+
+To load the program the SB-1510 monitor must be in memory, this is normally part of the BASIC boot tape, just enter the 'MON' (or 'MONIT') command to activate it, load the program with the 'L' command, then type 'J' to jump (default address is 1200 hexadecimal).
+A valid alternative for '-zorg' is 24576, in this case use 6000 hex for 'J'.
 
 Note that only the WAV audio version will be altered by the patching process, the intermediate .MZT file will not work with the MZ80B.
+
+
+# Sharp MZ-800 / MZ-1500
+
+As for the MZ80B, when not set to MZ-700 mode, those systems require a to boot BASIC first.
+No special patches are required, since the key entry points are present in the original monitor, (but the ansi library won't work):
+
+    zcc +mz -create-app -startup=2 -zorg=24576 program.c
+
+To run the program, first load the MZ-5009 interpreter (or a compatible one) and enter 'BYE' to activate the MONITOR.
+To get the program from tape, use the 'L' command, followed by 'G6000' to run it.
+
 
 # Appmake extras
 
@@ -100,7 +119,8 @@ Overview:
 	Info: Patching location 32c3, opcode 'cd', address $1fd0->$871
 
 
-Many thanks to Fabrizio Freudiger for his help testing the appmake results on the real computers.
+Many thanks to Fabrizio Freudiger for testing the appmake results on the real computers.
+
 
 # Hints on the Sharp MZ emulators
 
@@ -110,7 +130,6 @@ If you experience problems, try running the program under a different emulator o
 
 # Links
 
-
 [Disk image editor](http://web.archive.org/web/query?q=wayback_server%3A25+type%3Aurlquery+url%3Ahttp%253A%252F%252Fwww.geocities.co.jp%252FSiliconValley-Sunnyvale%252F2521%252Fbin%252Fdownload%252Fmzd88ctl.zip&count=150000&start_page=1)
 
 [Andy Collins' random jottings: Retrochallenge 2015 with the MZ-700 and z88dk](http://www.randomorbit.co.uk/?cat=97)
@@ -118,3 +137,4 @@ If you experience problems, try running the program under a different emulator o
 [Using z88dk to get MZ-700 compatible code](http://www.randomorbit.co.uk/?cat=37)
 
 [z88dk on the MZ-1500 (japanese)](https://sites.google.com/view/mz1500page/tips/z88dk%E3%82%92%E4%BD%BF%E3%81%86)
+
