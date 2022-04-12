@@ -32,7 +32,7 @@ The ROM produced is compatible for the SG-1000 and SC-3000. This means that it a
 
 # Supported libraries
 
-Most of the [monochrome graphics](library/monographics) lib and most of the [MSX](library/msx) functions are supported. Due to the different BASIC ROMs available, the library does not depend on any ROM routines.
+Most of the [monochrome graphics](Classic-Monochrome-Graphics) lib and most of the [MSX](library/msx) functions are supported. Due to the different BASIC ROMs available, the library does not depend on any ROM routines.
 
 # Emulator hints
 
