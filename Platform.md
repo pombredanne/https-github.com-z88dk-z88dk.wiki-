@@ -108,7 +108,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Toshiba Pasopia 7](Platform---Toshiba-Pasopia7) | No | 40x25 | 80x25 | No | No | |
 [TRS-80](Platform---TRS80) | 64x16  | 64x16 - default| 128x48 384x192 512x192 640x240 | No | 1 bit| Sound output via cassette port|
 [TRS80 M100, & Kyotronic compatibles](Platform---M100) | 40x8  | No |  240X64 | No | No | | 
-[TS2068](Platform---Timex-TS2068)| [32x24, 64x24, 128x24](Platform---Sinclair-ZX-Spectrum#the-standard-zx-spectrum-console-driver) | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | 256x192 | No | 1 bit| Sprite Pack | 
+[TS2068](Platform---Timex-TS2068)| [32x24, 64x24, 128x24](Platform---Sinclair-ZX-Spectrum#the-standard-zx-spectrum-console-driver) | [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) | 256x192 512x192 | No | 1 bit| Sprite Pack | 
 [Вектор-06Ц/Vector06c](Platform-Vector06c)| No  | 32x32 | 256x256 | No | PSG |  |
 [Videoton TV Computer](Platform--TVC)| 16x24, 32x24 - default, 64x24 | No  | No | No | No | |
 [VTech Laser 350/500/700](Platform--Laser-350-500-700) | 40x24  | 40x24 and 80x24 | 80x48,160x48,320x192 | No | 1 bit | |
