@@ -79,7 +79,7 @@ _Not all columns are visible. Horizontal scroll to see them._
 [Robotron Z1013](Platform---Robotron-Z1013)| 32x32| 32x32 - default|  64x64,256x256 | No | No | | 
 [Robotron Z9001, KC85/1, KC87](Platform---Robotron-Z9001)| 40x24| 40x24 | 80x48, 320x192| No | 1 bit| Model variants: KC85/1, KC87| 
 [(Robotron) VEB Mikroelektronik HC-900, KC85/2..KC85/5](Platform---KC) | 40x32| 40x32 | 320x256 | No | No | Model variants: HC-900 KC85/2..KC85/5 | 
-[SAM Coupé](Platform--Sam-Coupe.md)| 32x24| [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) |  No | No | PSG (SA1099 eTracker)+1 bit| Sprite Pack. Music might play at a higher pitch due to CPU frequency. | 
+[SAM Coupé](Platform--Sam-Coupe.md)| 32x24| [24..85x24](Platform---Sinclair-ZX-Spectrum#the-vtansi-console-driver) (Colour) |  256x192 512x192  | No | PSG (SA1099 eTracker)+1 bit| Sprite Pack. Music might play at a higher pitch due to CPU frequency. | 
 [Samsung SPC-1000](Platform-Samsung-SPC-1000)| 32x16 | 32x16 + 32x24 | 64x32 + 256x192 | No | Yes | VDP extension is supported
 [Sega Master System](Platform---SMS) / (Game Gear) | 32x24 (20x16) | 32x24| 256x192 || PSG (+ 1 bit) | |
 [Sega SC-3000/Sega SG-1000](Platform---Sega-SC3000) | 40x24 | [24..85x24](Platform---MSX#the-vtansi-console-driver) (Colour) |  256x192 | No | PSG (+ 1 bit)  | Most of GFXLIB by Rafael de Oliveira Jannone | 
